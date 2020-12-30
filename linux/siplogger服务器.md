@@ -40,5 +40,18 @@ r代表可读权限，w代表可写权限，x代表可执行权限。
 
 
 
-5.
+5.数据源接入：
+
+```
+1.管道的配置文件位置
+cd /home/fantom/apps/agent2/var/run/logstash-config/pipelines
+查看配置文件.cfg后缀，就是储存配置设置的可以用文本编辑器打开的
+```
+
+```
+2.py脚本的位置
+cd /home/fantom/apps/agent2/bin/collector/script
+```
+
+6.
 
