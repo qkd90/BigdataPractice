@@ -1,5 +1,7 @@
-#### logger日志查询参考，在测试接口的时候，同时查看日志，能够发现一些被吞掉的错误信息。
-***
+#### logger日志查询参考
+
+在测试接口的时候，同时查看日志，能够发现一些被吞掉的错误信息。
+
 #### 如何查看页面对应的后台日志？
 - 日志路径：/var/log
 - 业务日志路径: /var/log/today 
@@ -26,8 +28,7 @@
 - 查看后台进程运行状态
         
         python /home/fantom/fantom.py sv status 
-        #注意，这些进程大多作为服务的代理，状态在running中，并不意味着相应
-        #的业务进程已经起来。
+        #注意，这些进程大多作为服务的代理，状态在running中，并不意味着相应的业务进程已经起来。
         正常的结果如下：
         
         /home/fantom/apps/agent2/bin/device_predict/main.py                   
@@ -42,10 +43,10 @@
     
     
     ​    
-#### 前端页面无法访问（443端口访问失败）？
+#### 前端页面无法访问（443端口访问失败）
 - fantom.httpd 没启动成功
         
-    
+  
         查看日志： /var/log/apache/error-20xx-xx-xx.log
 - fantom.httped 启动成功，仍然无法访问
 
