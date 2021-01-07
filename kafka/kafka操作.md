@@ -40,14 +40,14 @@
 
 ```shell
 kafka生产者客户端命令
-./kafka-console-producer.sh --broker-list localhost:9092 --topic <TOPIC>
+./kafka-console-producer.sh --broker-list 10.60.215.10:9092 --topic siplogger
 
 kafka消费者客户端命令
-kafka-console-consumer.sh -zookeeper localhost:2181 --from-beginning --topic <TOPIC>
+./kafka-console-consumer.sh --bootstrap-server 10.60.215.10:9092 --from-beginning --topic siplogger
 
 查看consumer组内消费的offset
 ./kafka-run-class.sh kafka.tools.ConsumerOffsetChecker --zookeeper localhost:2181 --group test --topic testKJ1
-./kafka-consumer-offset-checker.sh --zookeeper 192.168.0.201:12181 --group group1 --topic group1
+./kafka-consumer-offset-checker.sh --zookeeper 10.60.215.10:12181 --group group1 --topic group1
 
 ```
 
