@@ -22,7 +22,7 @@
 - 首先查看mongo服务是否起来（identifier 依赖于mongo）
       systemctl status mongod #查看mongo服务
         tailf /var/log/mongodb/mongodb.log #查看mongo日志
-    
+  
 - 查看identifier服务是否起来（大多数程序依赖idt,主要提供资产相关的服务） 
   
         systemctl status identifier # 查看id是否起来 
@@ -40,8 +40,8 @@
     fantom.httpd                                                          
     fantom.scheduler                                                      
     logstash_manager                                                      
-    ```
-    
+  ```
+  
 - 前端页面无法访问（443端口访问失败）
 
 ```shell
