@@ -63,7 +63,6 @@ inux系统中有两种时钟：
 
 ```
 date -s "2021-01-11 10:25:55"
-
 ```
 
 7.
@@ -120,13 +119,17 @@ tar
 这条命令是解出all.tar包中所有文件，-x是解开的意思 
 ```
 
-3.sudo service sshd status  
+3.
+
+```
+sudo service sshd status  
 
 查看服务器的ssh服务状态
 
 sudo service sshd start
 
 打开ssh服务
+```
 
 \4. scp /Documents/test.txt optadmin@服务器名:/home/optadmin/tmp/ 
 
@@ -200,7 +203,9 @@ kill -9 pid编号
 
 14.开启ngsoc.target任务
 
+```
 systemctl start ngsoc.target
+```
 
 15.ll和ls
 
