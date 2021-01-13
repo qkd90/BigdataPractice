@@ -1,7 +1,5 @@
 一、MongoDB：
 
-进入到对应的库中就可以进行查询了，不要在use表了
-
 ```
 1.
 mongod.sh mongo
