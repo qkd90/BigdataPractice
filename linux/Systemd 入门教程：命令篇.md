@@ -1,4 +1,4 @@
-# Systemd 入门教程：命令篇
+#### Systemd 入门教程：命令篇
 
 
 
@@ -6,7 +6,7 @@ Systemd 是 Linux 系统工具，用来启动[守护进程](http://www.ruanyifen
 
 本文介绍它的基本用法，分为上下两篇。今天介绍它的主要命令，[下一篇](http://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html)介绍如何用于实战。
 
-## 一、由来
+#### 一、由来
 
 历史上，[Linux 的启动](http://www.ruanyifeng.com/blog/2013/08/linux_boot_process.html)一直采用[`init`](https://en.wikipedia.org/wiki/Init)进程。
 
@@ -24,7 +24,7 @@ Systemd 是 Linux 系统工具，用来启动[守护进程](http://www.ruanyifen
 
 二是启动脚本复杂。`init`进程只是执行启动脚本，不管其他事情。脚本需要自己处理各种情况，这往往使得脚本变得很长。
 
-## 二、Systemd 概述
+##### 二、Systemd 概述
 
 使用了 Systemd，就不需要再用`init`了。Systemd 取代了`initd`，成为系统的第一个进程（PID 等于 1），其他进程都是它的子进程。
 
@@ -38,11 +38,11 @@ Systemd 的优点是功能强大，使用方便，缺点是体系庞大，非常
 
 ![img](http://www.ruanyifeng.com/blogimg/asset/2016/bg2016030703.png)
 
-## 三、系统管理
+#### 三、系统管理
 
 Systemd 并不是一个命令，而是一组命令，涉及到系统管理的方方面面。
 
-### 3.1 systemctl
+##### 3.1 systemctl
 
 `systemctl`是 Systemd 的主命令，用于管理系统。
 

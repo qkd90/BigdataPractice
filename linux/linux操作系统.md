@@ -1,11 +1,11 @@
 1.sh命令：
 
 ```shell
-bash [options] [file]
+sh [options] [file]
 -c string：命令从-c后的字符串读取。
 -i：实现脚本交互。
--n：进行shell脚本的语法检查。
--x：实现shell脚本逐条语句的跟踪。
+-n：进行脚本的语法检查。
+-x：实现脚本逐条语句的跟踪。
 ```
 
 2.systemctl enable httpd

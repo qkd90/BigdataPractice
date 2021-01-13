@@ -2,8 +2,9 @@
 
 进入到对应的库中就可以进行查询了，不要在use表了
 
-1.mongod.sh mongo
-
+```
+1.
+mongod.sh mongo
 连接数据库
 
 2.show dbsuse
@@ -39,6 +40,7 @@ db.Vm_vulnerability.update({'data_type':'loophole'},{$set:{'last_time':ISODate("
 switched to db admin
 
 \> db.createUser({user:"root",pwd:"password",roles:["userAdminAnyDatabase"]})
+```
 
 8.导入：
 
