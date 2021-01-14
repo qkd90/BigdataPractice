@@ -10,7 +10,7 @@
 
 - 然后重启大屏服务
 
-  ```shell
+  ```
   supervisorctl -c /virus/supervisor/supervisord.conf
   ```
 
@@ -45,4 +45,6 @@ curl -XPUT "http://10.222.10.73:9200/label_log-v0-2020_11_19d" -H 'Content-Type:
 curl -XDELETE "http://10.58.11.201:9200/label_log-v0-2020_11_18d"
 curl -XPUT "http://10.58.11.201:9200/label_log-v0-2020_11_18d"
 ```
+
+
 
