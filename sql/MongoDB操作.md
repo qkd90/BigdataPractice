@@ -1,31 +1,35 @@
 一、MongoDB：
 
-```
-1.
+1.查看数据库相关信息
+
+```shell
 mongod.sh mongo
 连接数据库
 
-2.show dbsuse
-
+show dbs
 展示所有的数据库
 
-3.show tables 
-
+show tables 
 展示库中所有的表
+```
 
-4.db.Vm_vulnerability.findOne().pretty()
+2.查询一条实例
 
-查看对应的表中的一条数据
-
+```
+db.Vm_vulnerability.find().pretty()
 pretty则是格式化显示数据
+db.Vm_vulnerability.findOne()
+查看对应的表中的一条数据
+```
 
-5.db.students.update({name:"chenzhou"},{$set:{age:5}})
+3.
 
- db.Vm_vulnerability.update({'last_time':ISODate("2020-07-31T11:27:39Z")},{$set:{'last_time':ISODate("2020-09-03T11:27:39Z")}})
-
+```sh
+db.students.update({name:"chenzhou"},{$set:{age:5}})
+db.Vm_vulnerability.update({'last_time':ISODate("2020-07-31T11:27:39Z")},{$set:{'last_time':ISODate("2020-09-03T11:27:39Z")}})
 db.Vm_vulnerability.update({'data_type':'loophole'},{$set:{'last_time':ISODate("2020-09-03T11:27:39Z")}},false,true)
 
-更新
+```
 
 6.db.system.users.find()
 
@@ -33,32 +37,38 @@ db.Vm_vulnerability.update({'data_type':'loophole'},{$set:{'last_time':ISODate("
 
 7.新建用户
 
-\> use admin
-
+```shell
+use admin
 switched to db admin
-
-\> db.createUser({user:"root",pwd:"password",roles:["userAdminAnyDatabase"]})
+db.createUser({user:"root",pwd:"password",roles:["userAdminAnyDatabase"]})
 ```
 
-8.导入：
+8.导入导出数据：
+
+```
+mongoexport -d dbname -c collectionname -o file --type json/csv -f field
+
+参数说明：
+-d ：数据库名
+-c ：collection名
+-o ：输出的文件名
+--type ： 输出的格式，默认为json
+-f ：输出的字段，如果-type为csv，则需要加上-f "字段名"
+```
 
 使用mongodb自带导入工具mongoimport ，在bin目录下面
 
+```
 mongoimport -d dbname -c collectionname --file filename --headerline --type json/csv -f field --jsonArray
 
 参数说明：         
-
 -d ：数据库名           
-
 -c ：collection名          
-
 --file ：要导入的文件
-
 --type ： 导入的格式，默认为json          
-
 -f ：输出的字段，如果-type为csv，则需要加上-f "字段名"
-
 --jsonArray:支持数组,如果出现Failed: error unmarshaling bytes on document #0: JSON decoder out of sync - data changing underfoot?使用这个参数试试
+```
 
  
 
