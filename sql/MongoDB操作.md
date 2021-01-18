@@ -16,7 +16,7 @@ show tables
 2.查询一条实例
 
 ```
-db.Vm_vulnerability.find().pretty()
+db.Vm_vulnerability.find().pretty()+
 pretty则是格式化显示数据
 db.Vm_vulnerability.findOne()
 查看对应的表中的一条数据
@@ -25,10 +25,7 @@ db.Vm_vulnerability.findOne()
 3.
 
 ```sh
-db.students.update({name:"chenzhou"},{$set:{age:5}})
-db.Vm_vulnerability.update({'last_time':ISODate("2020-07-31T11:27:39Z")},{$set:{'last_time':ISODate("2020-09-03T11:27:39Z")}})
 db.Vm_vulnerability.update({'data_type':'loophole'},{$set:{'last_time':ISODate("2020-09-03T11:27:39Z")}},false,true)
-
 ```
 
 6.db.system.users.find()
