@@ -215,4 +215,17 @@ ll：罗列出当前文件或目录的详细信息，含有时间、读写权限
 
 history 
 
-17.
+17.查找文件
+
+```shell
+find   path   -option   [   -print ]   [ -exec   -ok   command ]   {} \;
+
+将当前目录及其子目录下所有文件后缀为 .c 的文件列出来:
+find . -name "*.c"
+
+查找系统中所有文件长度为 0 的普通文件，并列出它们的完整路径：
+find / -type f -size 0 -exec ls -l {} \;
+
+
+```
+

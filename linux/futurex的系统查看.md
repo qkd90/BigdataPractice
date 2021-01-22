@@ -1,0 +1,11 @@
+#### futurex的系统查看
+
+1.
+
+```shell
+cat /app/appversion
+# 查看版本
+# 其他的版本位置在：
+/etc/ngsoc
+```
+

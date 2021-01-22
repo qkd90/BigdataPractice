@@ -6,3 +6,19 @@ futurex打入数据失败排查
 tail -f /data/log/20210113/alarm_branch/log/alarm_branch_0_message.log
 ```
 
+2.因为序列号导致脚本运行成功，但是前段页面没有数据
+
+```
+mss_supervisorctl
+```
+
+
+
+
+
+
+
+
+
+
+
