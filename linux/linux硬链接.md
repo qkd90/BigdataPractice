@@ -64,7 +64,7 @@ ln \-s log2013.log link2013
 输出：
 
 ```
-\[root@localhost test\]# ll \-rw\-r\--r\--  1 root bin 61  11\-13  06:03 log2013.log \[root@localhost test\]# ln \-s log2013.log link2013 \[root@localhost test\]# ll
+[root@localhost test\]# ll \-rw\-r\--r\--  1 root bin 61  11\-13  06:03 log2013.log \[root@localhost test\]# ln \-s log2013.log link2013 \[root@localhost test\]# ll
 lrwxrwxrwx 1 root root 11  12\-07  16:01 link2013 \-> log2013.log \-rw\-r\--r\--  1 root bin 61  11\-13  06:03 log2013.log
 ```
 
