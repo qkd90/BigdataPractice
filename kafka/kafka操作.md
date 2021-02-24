@@ -1,6 +1,6 @@
 
 
-1.futurex 的kafka工具位置
+1.  kafka
 
 ```shell
 /usr/share/kafka_2.11-2.3.0/bin/
