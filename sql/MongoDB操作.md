@@ -16,7 +16,7 @@ show tables
 2.查询一条实例
 
 ```
-db.Vm_vulnerability.find().pretty()+
+db.Vm_vulnerability.find().pretty()
 pretty则是格式化显示数据
 db.Vm_vulnerability.findOne()
 查看对应的表中的一条数据
