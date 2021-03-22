@@ -226,7 +226,7 @@ collect[]:
 
 ```text
 wget https://dl.grafana.com/oss/release/grafana-7.2.2-1.x86_64.rpm
-sudo yum install grafana-7.2.2-1.x86_64.rpm
+sudo yum install grafana-7.4.5-1.x86_64.rpm
 ```
 
 - 准备service 文件：
