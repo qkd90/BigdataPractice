@@ -30,6 +30,23 @@ agent端，prometheus官方提供的诸多exporter中的一种，安装与各监
 
 默认监听端口： 9100
 
+##### 1.1上传文件准备
+
+```
+#上传到新建的rq文件夹，我有一个压缩包会包括所有的安装包
+cd /usr/local/rq
+
+#权限问题
+cd /usr/local
+sudo chmod -R 777 rq
+
+#上传服务文件
+cd /usr/lib/systemd/system/
+
+```
+
+
+
 #### 2.prometheus-server
 
 ##### 2.1基本信息：
@@ -39,19 +56,11 @@ agent端，prometheus官方提供的诸多exporter中的一种，安装与各监
 
 ##### 2.2 安装 prometheus server
 
-linux（centos7） 下载安装，以2.25.1为例
-
-```text
-在GitHub下载prometheus-2.25.1.linux-amd64.tar.gz这个安装包
- tar -xf prometheus-2.14.0.linux-amd64.tar.gz  -C /home/monitor/
- cd /usr/monitor
- ln -sv prometheus-2.14.0.linux-amd64 prometheus
-```
-
 - 创建unit file，让systemd 管理prometheus
 
 ```shell
- vim /usr/lib/systemd/system/prometheus.service    
+ cd /usr/lib/systemd/system
+ 上传prometheus.service这个文件
  [Unit]
  Description=The Prometheus 2 monitoring system and time series database.
  Documentation=https://prometheus.io
@@ -77,6 +86,7 @@ linux（centos7） 下载安装，以2.25.1为例
 ```text
 systemctl daemon-reload
 systemctl start prometheus.service
+systemctl status prometheus.service
 ```
 
 - 注意开启防火墙端口：
@@ -107,6 +117,10 @@ firewall-cmd --zone=public --add-port=80-90/tcp --permanent
 
 ```
 
+##### 2.3问题排查
+
+
+
 #### 3.node_exporter
 
 ##### 3.1基本
@@ -120,10 +134,8 @@ prometheus官方提供了很多不同类型的exporter，列表地址： https:/
 - 下载并解压
 
 ```text
-在GitHub下载node_exporter-0.18.1.linux-amd64.tar.gz
-tar xf node_exporter-0.18.1.linux-amd64.tar.gz -C /usr/local/
 cd /usr/local
-ln -sv node_exporter-0.18.1.linux-amd64/ node_exporter
+
 ```
 
 - 启动服务：
@@ -131,6 +143,7 @@ ln -sv node_exporter-0.18.1.linux-amd64/ node_exporter
 ```text
 systemctl daemon-reload
 systemctl start node_exporter.service
+systemctl status node_exporter.service
 ```
 
 - 可以手动测试是否可以获取metrics信息：
@@ -225,8 +238,9 @@ collect[]:
 - 下载并安装
 
 ```text
-wget https://dl.grafana.com/oss/release/grafana-7.2.2-1.x86_64.rpm
-sudo yum install grafana-7.4.5-1.x86_64.rpm
+cd /usr/local/rq/
+yum clean all
+yum --installroot=/usr/local/rq localinstall –y --skip-broken ./* grafana-7.4.5-1.x86_64.rpm
 ```
 
 - 准备service 文件：
@@ -291,7 +305,7 @@ http://ip:port
 
 - 使用流程：
 
-- 添加数据源
+- 添加数据源:   http://localhost:9090
 
 - 添加dashboard，配置图形监控面板，也可在官网下载对应服务的dashboard模板，下载地址：[https://grafana.com/grafana/download/](https://link.zhihu.com/?target=https%3A//grafana.com/grafana/download/)
 
@@ -657,4 +671,3 @@ target_match:
 equal: ['alertname', 'dev', 'instance']
 ```
 
-抑制相关配置
