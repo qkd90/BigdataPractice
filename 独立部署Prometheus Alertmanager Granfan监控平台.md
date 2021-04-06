@@ -1,4 +1,4 @@
-### 独立部署Prometheus Alertmanager Granfan监控平台
+### 部署Prometheus Alertmanager Granfan监控平台
 
 #### 1.安装组件基本介绍：
 
@@ -29,6 +29,10 @@ agent端，prometheus官方提供的诸多exporter中的一种，安装与各监
 负责抓取主机及系统各项信息，如cpu，mem ,disk,networtk.filesystem，...等等各项基本指标，非常全面。并将抓取到的各项指标metrics 通过http协议对方发布，供prometheus server端抓取。
 
 默认监听端口： 9100
+
+
+
+**oracle_exporter:**
 
 ##### 1.1上传文件准备
 
@@ -98,6 +102,10 @@ firewall-cmd --zone=public --add-port=9090/tcp --permanent
 firewall-cmd --reload
 查看所有打开端口
 firewall-cmd  --list-ports
+
+firewall-cmd --zone=external --add-forward-port=port=9001:proto=tcp:toport=9100:toaddr=192.168.1.30 --permanent
+
+
 ```
 
 - 浏览器访问：
@@ -114,7 +122,8 @@ http://IP:PORT
 #–permanent 永久生效，没有此参数重启后失效
 #多个端口:
 firewall-cmd --zone=public --add-port=80-90/tcp --permanent
-
+#查看端口是否被占用
+lsof -i:9100
 ```
 
 ##### 2.3问题排查
@@ -660,14 +669,9 @@ send_resolved: <boolean> | default = false   # 故障恢复之后，是否发送
   微信API官方文档 https://work.weixin.qq.com/api/doc#90002/90151/90854 
 ```
 
-企业微信告警配置
+###### 5.6.2配置企业微信告警
 
 ```text
-  inhibit_rules:
- - source_match:
-  severity: 'critical'
-target_match:
-  severity: 'warning'
-equal: ['alertname', 'dev', 'instance']
+
 ```
 
