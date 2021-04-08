@@ -675,3 +675,28 @@ send_resolved: <boolean> | default = false   # 故障恢复之后，是否发送
 
 ```
 
+#### 6.oracle-explorer
+
+1.运行oracle exporter
+
+```
+nohup ./oracledb_exporter &
+
+碰到 pinging oracle: empty dsn
+export DATA_SOURCE_NAME="C##test/123456@//192.168.18.203:1521/ORCLCDB"
+
+
+
+```
+
+2.orcle相关操作
+
+
+
+
+
+```
+
+
+```
+
