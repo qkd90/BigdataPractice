@@ -689,12 +689,12 @@ export DATA_SOURCE_NAME="C##test/123456@//192.168.18.203:1521/ORCLCDB"
 
 同时需要在oracle目录配置 .bash_profile,使用我配置好的文件
 
-
-nohup ./oracledb_exporter &
+添加
+然后使用脚本运行：
+sh oracle_exporter.sh
 
 碰到 pinging oracle: empty dsn
 export DATA_SOURCE_NAME="C##test/123456@//192.168.18.203:1521/ORCLCDB"
-
 
 
 ```
@@ -704,6 +704,8 @@ export DATA_SOURCE_NAME="C##test/123456@//192.168.18.203:1521/ORCLCDB"
 ```
 Oracle用户下输入
 sqlplus / as sysdba
+连接test账户
+conn test/123456
 ```
 
 
