@@ -1,4 +1,4 @@
-### 部署Prometheus Alertmanager Granfan监控平台
+### Prometheus+Alertmanager+Granfan监控告警平台
 
 #### 1.安装组件基本介绍：
 
@@ -6,11 +6,9 @@
 
 server端守护进程，负责拉取各个终端exporter收集到metrics（监控指标数据），并记录在本身提供的tsdb时序记录数据库中，默认保留天数15天，可以通过启动参数自行设置数据保留天数。
 
-prometheus官方提供了多种exporter,
+prometheus官方提供了多种exporter,对外提供web图形查询页面，以及数据库查询访问接口。配置监控规则rules（需自行手动配置），并将触发规则的告警发送至alertmanager ，并由alertmanager中配置的告警媒介向外发送告警。
 
-默认监听9090端口，对外提供web图形查询页面，以及数据库查询访问接口。
-
-配置监控规则rules（需自行手动配置），并将触发规则的告警发送至alertmanager ，并由alertmanager中配置的告警媒介向外发送告警。
+默认监听9090端口
 
 **grafana：**
 
@@ -30,17 +28,17 @@ agent端，prometheus官方提供的诸多exporter中的一种，安装与各监
 
 默认监听端口： 9100
 
-
-
 **oracle_exporter:**
 
-##### 1.1上传文件准备
+适用于Oracle的Prometheus导出器，以MySQL导出器为模型。我不是DBA或经验丰富的Go开发人员，因此PR绝对受到欢迎。
+
+##### 1.1通用准备工作
 
 ```
 #上传到新建的rq文件夹，我有一个压缩包会包括所有的安装包
 cd /usr/local/rq
 
-#权限问题
+#权限问题，每次添加了文件之后记得赋予权限
 cd /usr/local
 sudo chmod -R 777 rq
 
@@ -679,7 +677,19 @@ send_resolved: <boolean> | default = false   # 故障恢复之后，是否发送
 
 1.运行oracle exporter
 
+解压安装文件到 /usr/local/rq
+
+在启动之前，请确保正确设置了环境变量DATA_SOURCE_NAME。DATA_SOURCE_NAME应该采用Oracle EZCONNECT格式：
+
+https://docs.oracle.com/en/database/oracle/oracle-database/19/netag/configuring-naming-methods.html#GUID-B0437826-43C1-49EC-A94D-B650B6A4A6EE
+
 ```
+直接运行命令：
+export DATA_SOURCE_NAME="C##test/123456@//192.168.18.203:1521/ORCLCDB"
+
+同时需要在oracle目录配置 .bash_profile,使用我配置好的文件
+
+
 nohup ./oracledb_exporter &
 
 碰到 pinging oracle: empty dsn
@@ -691,7 +701,10 @@ export DATA_SOURCE_NAME="C##test/123456@//192.168.18.203:1521/ORCLCDB"
 
 2.orcle相关操作
 
-
+```
+Oracle用户下输入
+sqlplus / as sysdba
+```
 
 
 
