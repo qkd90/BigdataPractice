@@ -366,7 +366,7 @@ http://ip:port
 
 ##### 5.2 安装alertmanager
 
-###### 5.2.1 linux（centos7）安装：
+linux（centos7）安装：
 
 - 下载地址： [https://github.com/prometheus/alertmanager](https://link.zhihu.com/?target=https%3A//github.com/prometheus/alertmanager)
 - 下载并安装：
@@ -382,15 +382,6 @@ cd /usr/local && ln -sv alertmanager-0.20.0.linux-amd64/ alertmanager && cd aler
 
 ```text
 nohup ./alertmanager --config.file="alertmanager.yml" --storage.path="data/ --web.listen-address=":9093" &
-```
-
-###### 5.2.2 docker安装：
-
-- image： prom/alertmanager
-- docker run
-
-```text
-docker run -dit --name monitor-alertmanager -v ./alertmanager/db/:/alertmanager -v ./alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml ./alertmanager/templates/:/etc/alertmanager/templates -p 9093:9093 --restart always --privileged true prom/alertmanager --config.file="/etc/alertmanager/alertmanager.yml" --storage.path="/alertmanager --web.listen-address=":9093"
 ```
 
 ##### 5.3 核心概念
@@ -675,7 +666,7 @@ send_resolved: <boolean> | default = false   # 故障恢复之后，是否发送
 
 #### 6.oracle-explorer
 
-1.运行oracle exporter
+##### 6.1 运行oracle exporter
 
 解压安装文件到 /usr/local/rq
 
@@ -704,7 +695,7 @@ export DATA_SOURCE_NAME="C##test/123456@//192.168.18.203:1521/ORCLCDB"
 
 ```
 
-2.orcle相关操作
+##### 6.2 orcle相关操作
 
 ```
 Oracle用户下输入
@@ -714,9 +705,4 @@ conn test/123456
 ```
 
 
-
-```
-
-
-```
 
