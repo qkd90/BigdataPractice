@@ -95,7 +95,7 @@ systemctl status prometheus.service
 
 ```text
 #新增开放一个端口号
-firewall-cmd --zone=public --add-port=9090/tcp --permanent
+firewall-cmd --zone=public --add-port=9100/tcp --permanent
 重启防火墙
 firewall-cmd --reload
 查看所有打开端口
@@ -684,8 +684,13 @@ send_resolved: <boolean> | default = false   # 故障恢复之后，是否发送
 https://docs.oracle.com/en/database/oracle/oracle-database/19/netag/configuring-naming-methods.html#GUID-B0437826-43C1-49EC-A94D-B650B6A4A6EE
 
 ```
+新建一个oracle账户
+create user monitor identified by monitor;
+赋予账户权限
+ grant connect, resource to monitor;
+
 直接运行命令：
-export DATA_SOURCE_NAME="C##test/123456@//192.168.18.203:1521/ORCLCDB"
+export DATA_SOURCE_NAME="monitor/monitor@//192.168.0.185:1521/orcl"
 
 同时需要在oracle目录配置 .bash_profile,使用我配置好的文件
 
