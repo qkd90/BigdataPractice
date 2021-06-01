@@ -37,12 +37,6 @@ public class DemoController {
         this.restTemplate = restTemplate;
     }
 
-    public static void main(String[] args) {
-        System.out.println(DemoController.encryptToMD5("admin"));
-        System.out.println(DemoController.encryptToMD5("admin").length());
-        System.out.println(readFileContent("phone.txt"));
-        System.out.println(encryptToMD5("南华大学附属第一医院mediNhfy@69124517508418876移动改变生活T5CpUU2FB"));
-    }
 
     @RequestMapping("send")
     public String sendSms(@RequestBody String requestInfo) {
@@ -56,7 +50,6 @@ public class DemoController {
         }
         log.info("问题是：{}", content);
         String url = "http://112.35.1.155:1992/sms/norsubmit";
-//        String url = "http://112.35.10.201:1999/smsservice?wsdl";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
         log.info("正在发送");
@@ -107,12 +100,12 @@ public class DemoController {
     }
     public String getSmsParam(String content,String mobile) {
         Submit submit = new Submit();
-        submit.setEcName("南华大学附属第一医院");
-        submit.setApId("medi");
-        submit.setSecretKey("Nhfy@691245");
+        submit.setEcName("xxx");
+        submit.setApId("xxx");
+        submit.setSecretKey("xxx");
         submit.setMobiles(mobile);
         submit.setContent(content);
-        submit.setSign("T5CpUU2FB");
+        submit.setSign("xxx");
         submit.setAddSerial("");
 
         //md5加密
