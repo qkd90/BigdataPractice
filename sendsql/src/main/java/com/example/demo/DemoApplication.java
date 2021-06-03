@@ -14,7 +14,9 @@ import javax.annotation.Resource;
  */
 @SpringBootApplication
 @Slf4j
+
 public class DemoApplication {
+
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
