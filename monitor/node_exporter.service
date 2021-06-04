@@ -1,0 +1,10 @@
+﻿[Unit]
+Description=node_exporter
+After=network.target
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/local/rq/node_exporter/node_exporter
+
+[Install]
+WantedBy=multi-user.target

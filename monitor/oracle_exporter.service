@@ -1,0 +1,11 @@
+[Unit]
+Description=Service for oracle telemetry client
+After=network.target
+[Service]
+Type=oneshot
+Environment="DATA_SOURCE_NAME=C##test/123456@//192.168.18.203:1521/ORCLCDB"
+Environment="LD_LIBRARY_PATH=/opt/oracle/product/19c/dbhome_1/lib"
+Environment="ORACLE_HOME=/opt/oracle/product/19c/dbhome_1"
+ExecStart=/bin/bash /usr/local/rq/oracledb_exporter/oracle_exporter.sh
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+﻿[Unit]
+Description=granfana
+After=network.target 
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/local/rq/grafana/bin/grafana-server -homepath /usr/local/rq/grafana/
+
+[Install]
+WantedBy=multi-user.target

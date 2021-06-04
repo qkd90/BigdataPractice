@@ -1,0 +1,11 @@
+[Unit]
+Description=alertmanager
+After=network.target prometheus.service
+
+[Service]
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/local/rq/alertmanager/alertmanager --config.file=/usr/local/rq/alertmanager/alertmanager.yml
+
+[Install]
+WantedBy=multi-user.target
