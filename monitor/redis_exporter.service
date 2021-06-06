@@ -1,0 +1,10 @@
+﻿[Unit]
+Description=redis_exporter
+After=network.target
+
+[Service]
+Restart=on-failure
+ExecStart=/usr/local/src/redis_exporter/redis_exporter
+
+[Install]
+WantedBy=multi-user.target
