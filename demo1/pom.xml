@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.frxs.demo</groupId>
+    <artifactId>demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>demo-web</module>
+        <module>demo-service</module>
+        <module>demo-dal</module>
+        <module>demo-api</module>
+        <module>dubbo-provider</module>
+        <module>dubbo-consume</module>
+        <module>demo-event</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <module.version>1.0-SNAPSHOT</module.version>
+        <demo-api.version>1.1-SNAPSHOT</demo-api.version>
+        <org.mapstruct.version>1.3.0.Final</org.mapstruct.version>
+        <dubbo.version>2.6.2</dubbo.version>
+        <lombok.version>1.16.18</lombok.version>
+        <thymeleaf.version>2.0.0.RELEASE</thymeleaf.version>
+        <sharding.version>2.0.3</sharding.version>
+        <frxsframework.integration.version>1.0.5.2</frxsframework.integration.version>
+        <slf4j.version>1.7.25</slf4j.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.0.4.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.frxs.demo</groupId>
+                <artifactId>demo-api</artifactId>
+                <version>${demo-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.frxs.demo</groupId>
+                <artifactId>demo-dal</artifactId>
+                <version>${module.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.frxs.demo</groupId>
+                <artifactId>demo-service</artifactId>
+                <version>${module.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.frxs.demo</groupId>
+                <artifactId>demo-web</artifactId>
+                <version>${module.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.1.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>3.1.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>1.1.17</version>
+            </dependency>
+
+
+
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>1.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${org.mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.rocketmq</groupId>
+                <artifactId>rocketmq-client</artifactId>
+                <version>4.3.0</version>
+            </dependency>
+
+            <!-- Dubbo dependencies -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo-dependencies-bom</artifactId>
+                <version>${dubbo.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Dubbo Spring Boot Starter -->
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>0.2.1.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <!-- Dubbo Spring Boot end -->
+
+            <!-- 模板引擎 代码生成 -->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity</artifactId>
+                <version>1.7</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <!--网页模板-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                <version>${thymeleaf.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.shardingjdbc</groupId>
+                <artifactId>sharding-jdbc-core</artifactId>
+                <version>${sharding.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.shardingsphere</groupId>
+                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+                <version>3.1.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.frxs.framework</groupId>
+                <artifactId>frxsframework-integration</artifactId>
+                <version>${frxsframework.integration.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.frxs.demo</groupId>
+                <artifactId>demo-api</artifactId>
+                <version>${demo.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.frxs.demo</groupId>
+                <artifactId>demo-event</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <!-- 环境配置 -->
+    <profiles>
+    <!-- 开发环境 -->
+    <profile>
+        <id>dev</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            <!-- 业务系统 api -->
+            <demo.api.version>1.0.0-SNAPSHOT</demo.api.version>
+        </properties>
+        <repositories>
+            <repository>
+                <id>nexus-dev</id>
+                <name>Snapshot Repository</name>
+                <url>http://nexus.xsyxsc.com/repository/maven-snapshots/</url>
+                <snapshots>
+                    <enabled>true</enabled>
+                    <updatePolicy>always</updatePolicy>
+                </snapshots>
+            </repository>
+        </repositories>
+    </profile>
+    </profiles>
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source> <!-- depending on your project -->
+                    <target>1.8</target> <!-- depending on your project -->
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${org.mapstruct.version}</version>
+                        </path>
+                        <!-- other annotation processors -->
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+<!--                    <plugin>-->
+<!--                        <groupId>org.mybatis.generator</groupId>-->
+<!--                        <artifactId>mybatis-generator-maven-plugin</artifactId>-->
+<!--                        <version>1.3.2</version>-->
+<!--                        <configuration>-->
+<!--                            &lt;!&ndash;配置文件的位置&ndash;&gt;-->
+<!--                            <configurationFile>/demo-dal/src/main/resources/generatorConfig.xml</configurationFile>-->
+<!--                            <verbose>true</verbose>-->
+<!--                            <overwrite>true</overwrite>-->
+<!--                        </configuration>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>Generate MyBatis Artifacts</id>-->
+<!--                                <goals>-->
+<!--                                    <goal>generate</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                        <dependencies>-->
+<!--                            <dependency>-->
+<!--                                <groupId>org.mybatis.generator</groupId>-->
+<!--                                <artifactId>mybatis-generator-core</artifactId>-->
+<!--                                <version>1.3.2</version>-->
+<!--                            </dependency>-->
+<!--                        </dependencies>-->
+<!--                    </plugin>-->
+
+
+        </plugins>
+    </build>
+
+    <!-- repository -->
+    <repositories>
+        <repository>
+            <id>nexus-public</id>
+            <name>Public Repository</name>
+            <url>http://nexus.xsyxsc.com/repository/maven-public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+        </repository>
+
+        <!-- rc仓库没有被public仓库代理，所以这里要单独配置 -->
+        <repository>
+            <id>nexus-rc</id>
+            <name>Release Candidate Repository</name>
+            <url>http://nexus.xsyxsc.com/repository/maven-release-candidate/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+        </repository>
+    </repositories>
+
+    <!-- pluginRepository -->
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus-public</id>
+            <name>Public Repository</name>
+            <url>http://nexus.xsyxsc.com/repository/maven-public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <name>Release Repository</name>
+            <url>http://nexus.xsyxsc.com/repository/maven-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>Snapshot Repository</name>
+            <url>http://nexus.xsyxsc.com/repository/maven-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
