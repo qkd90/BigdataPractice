@@ -1,0 +1,3 @@
+1： sout  (System.out.println)
+2:  psvm  (main方法)
+3:  光标放在子类的任意位置，按快捷键 Ctrl+o（查父类方法，并进行重写）

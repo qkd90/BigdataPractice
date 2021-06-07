@@ -32,7 +32,7 @@ public class MysqlImpl implements Mysql{
         log.info("uuidStr: {}", uuidStr);
         String sql = "INSERT INTO `tbl_sms_outbox` " +
                 "(`sismsid`,`extcode`, `destaddr`, `messagecontent`, `msgsta`,`reqdeliveryreport`, `requesttime`,`mac`,`msgstatus`,`flag`) " +
-                "VALUE(?,'NHYYGJ','15768909468',?,1,1,?,'18684715138',0,0)";
+                "VALUE(?,'NHYYGJ','15768909468',?,1,1,?,'172.25.101.100',0,0)";
         int ans = jdbcTemplate.update(sql,uuidStr,content,time);
         log.info("ans: {}", ans);
         return "success";

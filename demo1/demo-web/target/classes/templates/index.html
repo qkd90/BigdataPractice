@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+<h1>Hello World</h1>
+
+<table border="1px">
+    <tr>
+        <th>name</th>
+        <th>bizName</th>
+        <th>indexPrefix</th>
+        <th>queryInterval</th>
+        <th>ERROR</th>
+        <th>startTime</th>
+    </tr>
+    <tr th:each="item : ${trackWatcherDTO}">
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.bizName}"></td>
+        <td th:text="${item.indexPrefix}"></td>
+        <td th:text="${item.queryInterval}"></td>
+        <td th:text="${item.errorCode}"></td>
+        <td th:text="${item.startTime}"></td>
+        <td><button type="button">查询</button></td>
+        <td><button  type="button">修改</button></td>
+        <td><button  type="button">删除</button></td>
+
+    </tr>
+</table>
+
+
+</body>
+</html>
