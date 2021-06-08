@@ -1,0 +1,15 @@
+[Unit]
+Description=elasticsearch 
+After=network.target
+[Service]
+User=elastic   # 服务启动的用户
+Group=elastic
+ExecStart=/usr/local/efk/elasticsearch-7.13.1/bin/elasticsearch
+# 停止和重启命令缺省
+LimitNOFILE=65536
+LimitNPROC=4096
+Restart=always
+RestartSec=15s
+
+[Install]
+WantedBy=multi-user.target

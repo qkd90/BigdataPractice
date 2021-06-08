@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "4.6.2"
+      "version": "7.5.7"
     },
     {
       "type": "panel",
@@ -48,11 +48,12 @@
       }
     ]
   },
+  "description": "ElasticSearch cluster stats.\r\n\r\nRevision 1 of this dashboard is the same as the Infinity Dashboard Revision 4 (https://grafana.com/dashboards/2322)\r\n\r\nThis is a cleaned up copy with all control characters removed from the dashboard file.  When downloading version 4 of the original Infinity elasticsearch dashboard via curl, the resulting file is corrupted with a missing final curly brace.\r\n",
   "editable": true,
-  "gnetId": 2322,
+  "gnetId": 6483,
   "graphTooltip": 1,
-  "hideControls": false,
   "id": null,
+  "iteration": 1623136564672,
   "links": [
     {
       "asDropdown": true,
@@ -100,1410 +101,1569 @@
       "type": "dashboards"
     }
   ],
-  "refresh": false,
-  "rows": [
+  "panels": [
     {
-      "collapse": false,
-      "height": null,
-      "panels": [
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": true,
-          "colors": [
-            "#d44a3a",
-            "rgba(237, 129, 40, 0.89)",
-            "#299c46"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "id": 53,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": true,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "tableColumn": "__name__",
-          "targets": [
-            {
-              "expr": "elasticsearch_cluster_health_status{cluster=\"$cluster\",color=\"red\"}==1 or (elasticsearch_cluster_health_status{cluster=\"$cluster\",color=\"green\"}==1)+4 or (elasticsearch_cluster_health_status{cluster=\"$cluster\",color=\"yellow\"}==1)+22",
-              "format": "time_series",
-              "instant": true,
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "refId": "A"
-            }
-          ],
-          "thresholds": "2,4",
-          "title": "Cluster health",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            },
-            {
-              "op": "=",
-              "text": "Green",
-              "value": "5"
-            },
-            {
-              "op": "=",
-              "text": "Yellow",
-              "value": "3"
-            },
-            {
-              "op": "=",
-              "text": "Red",
-              "value": "1"
-            }
-          ],
-          "valueName": "avg"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": true,
-          "colors": [
-            "#299c46",
-            "rgba(237, 129, 40, 0.89)",
-            "#d44a3a"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "decimals": null,
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "id": 81,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 1,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": true,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "tableColumn": "__name__",
-          "targets": [
-            {
-              "expr": "count(elasticsearch_breakers_tripped{cluster=\"$cluster\",name=~\"$name\"}>0)",
-              "format": "time_series",
-              "instant": true,
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "refId": "A"
-            }
-          ],
-          "thresholds": "1,2",
-          "title": "Tripped for breakers",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "0",
-              "value": "N/A"
-            },
-            {
-              "op": "=",
-              "text": "0",
-              "value": "no value"
-            },
-            {
-              "op": "=",
-              "text": "0",
-              "value": "null"
-            }
-          ],
-          "valueName": "avg"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": true,
-          "colors": [
-            "rgba(50, 172, 45, 0.97)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(245, 54, 54, 0.9)"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "editable": true,
-          "error": false,
-          "format": "percent",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "id": 51,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": false
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "sum (elasticsearch_process_cpu_percent{cluster=\"$cluster\",name=~\"$name\"} ) / count (elasticsearch_process_cpu_percent{cluster=\"$cluster\",name=~\"$name\"} )",
-              "format": "time_series",
-              "instant": true,
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 60
-            }
-          ],
-          "thresholds": "70,80",
-          "title": "CPU usage Avg.",
-          "transparent": false,
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "current"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": true,
-          "colors": [
-            "rgba(50, 172, 45, 0.97)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(245, 54, 54, 0.9)"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "editable": true,
-          "error": false,
-          "format": "percent",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "id": 50,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": false
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "sum (elasticsearch_jvm_memory_used_bytes{cluster=\"$cluster\",name=~\"$name\"}) / sum (elasticsearch_jvm_memory_max_bytes{cluster=\"$cluster\",name=~\"$name\"}) * 100",
-              "format": "time_series",
-              "instant": true,
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 60
-            }
-          ],
-          "thresholds": "70,80",
-          "title": "JVM memory used Avg.",
-          "transparent": false,
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "current"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "description": "Number of nodes in the cluster",
-          "editable": true,
-          "error": false,
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "id": 10,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 1,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": false
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "elasticsearch_cluster_health_number_of_nodes{cluster=\"$cluster\"}",
-              "format": "time_series",
-              "instant": true,
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 60
-            }
-          ],
-          "thresholds": "",
-          "title": "Nodes",
-          "transparent": false,
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "current"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "description": "Number of data nodes in the cluster",
-          "editable": true,
-          "error": false,
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "id": 9,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 1,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": false
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "elasticsearch_cluster_health_number_of_data_nodes{cluster=\"$cluster\"}",
-              "format": "time_series",
-              "instant": true,
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 60
-            }
-          ],
-          "thresholds": "",
-          "title": "Data nodes",
-          "transparent": false,
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "current"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": true,
-          "colors": [
-            "rgba(50, 172, 45, 0.97)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(245, 54, 54, 0.9)"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "description": "Cluster level changes which have not yet been executed",
-          "editable": true,
-          "error": false,
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "hideTimeOverride": true,
-          "id": 16,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 1,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": false,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "elasticsearch_cluster_health_number_of_pending_tasks{cluster=\"$cluster\"}",
-              "format": "time_series",
-              "instant": true,
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 60
-            }
-          ],
-          "thresholds": "1,5",
-          "title": "Pending tasks",
-          "transparent": false,
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "current"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(50, 172, 45, 0.97)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(245, 54, 54, 0.9)"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "editable": true,
-          "error": false,
-          "format": "short",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "id": 89,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": true,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": false
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "sum (elasticsearch_process_open_files_count{cluster=\"$cluster\",name=~\"$name\"})",
-              "format": "time_series",
-              "instant": true,
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "metric": "",
-              "refId": "A",
-              "step": 60
-            }
-          ],
-          "thresholds": "",
-          "title": "Open file descriptors per cluster",
-          "transparent": false,
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [],
-          "valueName": "current"
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 90,
+      "panels": [],
       "title": "KPI",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": false,
-      "height": null,
-      "panels": [
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#d44a3a",
+        "rgba(237, 129, 40, 0.89)",
+        "#299c46"
+      ],
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 0,
+        "y": 1
+      },
+      "height": "50",
+      "id": 53,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
         {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "description": "The number of primary shards in your cluster. This is an aggregate total across all indices.",
-          "editable": true,
-          "error": false,
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "id": 11,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "minSpan": 2,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "repeat": "shard_type",
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": true,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "elasticsearch_cluster_health_active_primary_shards{cluster=\"$cluster\"}",
-              "format": "time_series",
-              "instant": true,
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 60
-            }
-          ],
-          "thresholds": "",
-          "title": "Active primary shards",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "current"
+          "name": "value to text",
+          "value": 1
         },
         {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "description": "Aggregate total of all shards across all indices, which includes replica shards",
-          "editable": true,
-          "error": false,
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "id": 39,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "minSpan": 2,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": true,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "elasticsearch_cluster_health_active_shards{cluster=\"$cluster\"}",
-              "format": "time_series",
-              "instant": true,
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 60
-            }
-          ],
-          "thresholds": "",
-          "title": "Active shards",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "current"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "description": "Count of shards that are being freshly created",
-          "editable": true,
-          "error": false,
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "id": 40,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "minSpan": 2,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": true,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "elasticsearch_cluster_health_initializing_shards{cluster=\"$cluster\"}",
-              "format": "time_series",
-              "instant": true,
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 60
-            }
-          ],
-          "thresholds": "",
-          "title": "Initializing shards",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "current"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "description": "The number of shards that are currently moving from one node to another node.",
-          "editable": true,
-          "error": false,
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "id": 41,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "minSpan": 2,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": true,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "elasticsearch_cluster_health_relocating_shards{cluster=\"$cluster\"}",
-              "format": "time_series",
-              "instant": true,
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 60
-            }
-          ],
-          "thresholds": "",
-          "title": "Relocating shards",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "current"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "description": "Shards delayed to reduce reallocation overhead",
-          "editable": true,
-          "error": false,
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "id": 42,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "minSpan": 2,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": true,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "elasticsearch_cluster_health_delayed_unassigned_shards{cluster=\"$cluster\"} ",
-              "format": "time_series",
-              "instant": true,
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 60
-            }
-          ],
-          "thresholds": "",
-          "title": "Delayed shards",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "current"
-        },
-        {
-          "cacheTimeout": null,
-          "colorBackground": false,
-          "colorValue": false,
-          "colors": [
-            "rgba(245, 54, 54, 0.9)",
-            "rgba(237, 129, 40, 0.89)",
-            "rgba(50, 172, 45, 0.97)"
-          ],
-          "datasource": "${DS_PROMETHEUS}",
-          "description": "The number of shards that exist in the cluster state, but cannot be found in the cluster itself",
-          "editable": true,
-          "error": false,
-          "format": "none",
-          "gauge": {
-            "maxValue": 100,
-            "minValue": 0,
-            "show": false,
-            "thresholdLabels": false,
-            "thresholdMarkers": true
-          },
-          "height": "50",
-          "id": 82,
-          "interval": null,
-          "links": [],
-          "mappingType": 1,
-          "mappingTypes": [
-            {
-              "name": "value to text",
-              "value": 1
-            },
-            {
-              "name": "range to text",
-              "value": 2
-            }
-          ],
-          "maxDataPoints": 100,
-          "minSpan": 2,
-          "nullPointMode": "connected",
-          "nullText": null,
-          "postfix": "",
-          "postfixFontSize": "50%",
-          "prefix": "",
-          "prefixFontSize": "50%",
-          "rangeMaps": [
-            {
-              "from": "null",
-              "text": "N/A",
-              "to": "null"
-            }
-          ],
-          "span": 2,
-          "sparkline": {
-            "fillColor": "rgba(31, 118, 189, 0.18)",
-            "full": true,
-            "lineColor": "rgb(31, 120, 193)",
-            "show": true
-          },
-          "tableColumn": "",
-          "targets": [
-            {
-              "expr": "elasticsearch_cluster_health_unassigned_shards{cluster=\"$cluster\"} ",
-              "format": "time_series",
-              "instant": true,
-              "intervalFactor": 2,
-              "legendFormat": "",
-              "refId": "A",
-              "step": 60
-            }
-          ],
-          "thresholds": "",
-          "title": "Unassigned shards",
-          "type": "singlestat",
-          "valueFontSize": "80%",
-          "valueMaps": [
-            {
-              "op": "=",
-              "text": "N/A",
-              "value": "null"
-            }
-          ],
-          "valueName": "current"
+          "name": "range to text",
+          "value": 2
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "elasticsearch_cluster_health_status{instance=\"$instance\",cluster=\"$cluster\",color=\"red\"}==1 or (elasticsearch_cluster_health_status{instance=\"$instance\",cluster=\"$cluster\",color=\"green\"}==1)+4 or (elasticsearch_cluster_health_status{instance=\"$instance\",cluster=\"$cluster\",color=\"yellow\"}==1)+22",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "2,4",
+      "title": "Cluster health",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        },
+        {
+          "op": "=",
+          "text": "Green",
+          "value": "5"
+        },
+        {
+          "op": "=",
+          "text": "Yellow",
+          "value": "3"
+        },
+        {
+          "op": "=",
+          "text": "Red",
+          "value": "1"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 4,
+        "y": 1
+      },
+      "height": "50",
+      "id": 81,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "__name__",
+      "targets": [
+        {
+          "expr": "count(elasticsearch_breakers_tripped{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}>0)",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "1,2",
+      "title": "Tripped for breakers",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "0",
+          "value": "N/A"
+        },
+        {
+          "op": "=",
+          "text": "0",
+          "value": "no value"
+        },
+        {
+          "op": "=",
+          "text": "0",
+          "value": "null"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": null,
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 6,
+        "y": 1
+      },
+      "height": "50",
+      "id": 51,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "sum (elasticsearch_process_cpu_percent{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"} ) / count (elasticsearch_process_cpu_percent{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"} )",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "metric": "",
+          "refId": "A",
+          "step": 60
+        }
+      ],
+      "thresholds": "70,80",
+      "title": "CPU usage Avg.",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": null,
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 10,
+        "y": 1
+      },
+      "height": "50",
+      "id": 50,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "sum (elasticsearch_jvm_memory_used_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}) / sum (elasticsearch_jvm_memory_max_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}) * 100",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "metric": "",
+          "refId": "A",
+          "step": 60
+        }
+      ],
+      "thresholds": "70,80",
+      "title": "JVM memory used Avg.",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": null,
+      "description": "Number of nodes in the cluster",
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 14,
+        "y": 1
+      },
+      "height": "50",
+      "id": 10,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "elasticsearch_cluster_health_number_of_nodes{instance=\"$instance\",cluster=\"$cluster\"}",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "metric": "",
+          "refId": "A",
+          "step": 60
+        }
+      ],
+      "thresholds": "",
+      "title": "Nodes",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": null,
+      "description": "Number of data nodes in the cluster",
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 16,
+        "y": 1
+      },
+      "height": "50",
+      "id": 9,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "elasticsearch_cluster_health_number_of_data_nodes{instance=\"$instance\",cluster=\"$cluster\"}",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "metric": "",
+          "refId": "A",
+          "step": 60
+        }
+      ],
+      "thresholds": "",
+      "title": "Data nodes",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": true,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": null,
+      "description": "Cluster level changes which have not yet been executed",
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 18,
+        "y": 1
+      },
+      "height": "50",
+      "hideTimeOverride": true,
+      "id": 16,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "elasticsearch_cluster_health_number_of_pending_tasks{instance=\"$instance\",cluster=\"$cluster\"}",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "metric": "",
+          "refId": "A",
+          "step": 60
+        }
+      ],
+      "thresholds": "1,5",
+      "title": "Pending tasks",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(50, 172, 45, 0.97)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(245, 54, 54, 0.9)"
+      ],
+      "datasource": null,
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "short",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 20,
+        "y": 1
+      },
+      "height": "50",
+      "id": 89,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "sum (elasticsearch_process_open_files_count{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"})",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "metric": "",
+          "refId": "A",
+          "step": 60
+        }
+      ],
+      "thresholds": "",
+      "title": "Open file descriptors per cluster",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [],
+      "valueName": "current"
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 4
+      },
+      "id": 91,
+      "panels": [],
       "title": "Shards",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": false,
-      "height": null,
-      "panels": [
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": null,
+      "description": "The number of primary shards in your cluster. This is an aggregate total across all indices.",
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 0,
+        "y": 5
+      },
+      "height": "50",
+      "id": 11,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
         {
-          "aliasColors": {},
-          "bars": false,
-          "dashLength": 10,
-          "dashes": false,
-          "datasource": "${DS_PROMETHEUS}",
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {},
-          "height": "400",
-          "id": 7,
-          "legend": {
-            "alignAsTable": true,
-            "avg": true,
-            "current": true,
-            "hideEmpty": false,
-            "hideZero": false,
-            "max": true,
-            "min": true,
-            "rightSide": false,
-            "show": true,
-            "sort": "avg",
-            "sortDesc": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "spaceLength": 10,
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "irate(elasticsearch_jvm_gc_collection_seconds_count{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
-              "format": "time_series",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "{{name}} - {{gc}}",
-              "metric": "",
-              "refId": "A",
-              "step": 10
-            }
-          ],
-          "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "GC count",
-          "tooltip": {
-            "msResolution": false,
-            "shared": true,
-            "sort": 2,
-            "value_type": "cumulative"
-          },
-          "transparent": false,
-          "type": "graph",
-          "xaxis": {
-            "buckets": null,
-            "mode": "time",
-            "name": null,
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "short",
-              "label": "GCs",
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": false
-            }
-          ]
+          "name": "value to text",
+          "value": 1
         },
         {
-          "aliasColors": {},
-          "bars": false,
-          "dashLength": 10,
-          "dashes": false,
-          "datasource": "${DS_PROMETHEUS}",
-          "editable": true,
-          "error": false,
-          "fill": 1,
-          "grid": {},
-          "height": "400",
-          "id": 27,
-          "legend": {
-            "alignAsTable": true,
-            "avg": true,
-            "current": true,
-            "hideEmpty": false,
-            "hideZero": false,
-            "max": true,
-            "min": true,
-            "rightSide": false,
-            "show": true,
-            "sort": "avg",
-            "sortDesc": true,
-            "total": false,
-            "values": true
-          },
-          "lines": true,
-          "linewidth": 1,
-          "links": [],
-          "nullPointMode": "connected",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "spaceLength": 10,
-          "span": 6,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "irate(elasticsearch_jvm_gc_collection_seconds_sum{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
-              "format": "time_series",
-              "interval": "",
-              "intervalFactor": 2,
-              "legendFormat": "{{name}} - {{gc}}",
-              "metric": "",
-              "refId": "A",
-              "step": 10
-            }
-          ],
-          "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "GC time",
-          "tooltip": {
-            "msResolution": false,
-            "shared": true,
-            "sort": 2,
-            "value_type": "cumulative"
-          },
-          "transparent": false,
-          "type": "graph",
-          "xaxis": {
-            "buckets": null,
-            "mode": "time",
-            "name": null,
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "s",
-              "label": "Time",
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": false
-            }
-          ]
+          "name": "range to text",
+          "value": 2
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
-      "title": "JVM Garbage Collection",
-      "titleSize": "h6"
+      "maxDataPoints": 100,
+      "maxPerRow": 6,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "repeat": "shard_type",
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "elasticsearch_cluster_health_active_primary_shards{instance=\"$instance\",cluster=\"$cluster\"}",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "refId": "A",
+          "step": 60
+        }
+      ],
+      "thresholds": "",
+      "title": "Active primary shards",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": null,
+      "description": "Aggregate total of all shards across all indices, which includes replica shards",
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 4,
+        "y": 5
+      },
+      "height": "50",
+      "id": 39,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "maxPerRow": 6,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "elasticsearch_cluster_health_active_shards{instance=\"$instance\",cluster=\"$cluster\"}",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "refId": "A",
+          "step": 60
+        }
+      ],
+      "thresholds": "",
+      "title": "Active shards",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": null,
+      "description": "Count of shards that are being freshly created",
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 8,
+        "y": 5
+      },
+      "height": "50",
+      "id": 40,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "maxPerRow": 6,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "elasticsearch_cluster_health_initializing_shards{instance=\"$instance\",cluster=\"$cluster\"}",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "refId": "A",
+          "step": 60
+        }
+      ],
+      "thresholds": "",
+      "title": "Initializing shards",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": null,
+      "description": "The number of shards that are currently moving from one node to another node.",
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 12,
+        "y": 5
+      },
+      "height": "50",
+      "id": 41,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "maxPerRow": 6,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "elasticsearch_cluster_health_relocating_shards{instance=\"$instance\",cluster=\"$cluster\"}",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "refId": "A",
+          "step": 60
+        }
+      ],
+      "thresholds": "",
+      "title": "Relocating shards",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": null,
+      "description": "Shards delayed to reduce reallocation overhead",
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 16,
+        "y": 5
+      },
+      "height": "50",
+      "id": 42,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "maxPerRow": 6,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "elasticsearch_cluster_health_delayed_unassigned_shards{instance=\"$instance\",cluster=\"$cluster\"} ",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "refId": "A",
+          "step": 60
+        }
+      ],
+      "thresholds": "",
+      "title": "Delayed shards",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "datasource": null,
+      "description": "The number of shards that exist in the cluster state, but cannot be found in the cluster itself",
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 20,
+        "y": 5
+      },
+      "height": "50",
+      "id": 82,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "maxPerRow": 6,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": true
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "expr": "elasticsearch_cluster_health_unassigned_shards{instance=\"$instance\",cluster=\"$cluster\"} ",
+          "format": "time_series",
+          "instant": true,
+          "intervalFactor": 2,
+          "legendFormat": "",
+          "refId": "A",
+          "step": 60
+        }
+      ],
+      "thresholds": "",
+      "title": "Unassigned shards",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 8
+      },
+      "id": 92,
+      "panels": [],
+      "title": "JVM Garbage Collection",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "grid": {},
+      "gridPos": {
+        "h": 11,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
+      "height": "400",
+      "hiddenSeries": false,
+      "id": 7,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "avg",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "irate(elasticsearch_jvm_gc_collection_seconds_count{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "{{name}} - {{gc}}",
+          "metric": "",
+          "refId": "A",
+          "step": 10
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "GC count",
+      "tooltip": {
+        "msResolution": false,
+        "shared": true,
+        "sort": 2,
+        "value_type": "cumulative"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": "GCs",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 1,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "editable": true,
+      "error": false,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "grid": {},
+      "gridPos": {
+        "h": 11,
+        "w": 12,
+        "x": 12,
+        "y": 9
+      },
+      "height": "400",
+      "hiddenSeries": false,
+      "id": 27,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "sort": "avg",
+        "sortDesc": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "connected",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.7",
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "irate(elasticsearch_jvm_gc_collection_seconds_sum{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 2,
+          "legendFormat": "{{name}} - {{gc}}",
+          "metric": "",
+          "refId": "A",
+          "step": 10
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "GC time",
+      "tooltip": {
+        "msResolution": false,
+        "shared": true,
+        "sort": 2,
+        "value_type": "cumulative"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "s",
+          "label": "Time",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "format": "short",
+          "logBase": 1,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 20
+      },
+      "id": 93,
       "panels": [
         {
           "aliasColors": {},
@@ -1512,6 +1672,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 12,
+            "x": 0,
+            "y": 25
+          },
           "id": 77,
           "legend": {
             "alignAsTable": true,
@@ -1534,12 +1700,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(elasticsearch_indices_translog_operations{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_translog_operations{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}",
@@ -1547,8 +1712,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Total translog operations",
           "tooltip": {
             "shared": true,
@@ -1557,27 +1720,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -1589,6 +1744,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 12,
+            "x": 12,
+            "y": 25
+          },
           "id": 78,
           "legend": {
             "alignAsTable": true,
@@ -1611,12 +1772,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(elasticsearch_indices_translog_size_in_bytes{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_translog_size_in_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}",
@@ -1624,8 +1784,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Total translog size in bytes",
           "tooltip": {
             "shared": true,
@@ -1634,42 +1792,37 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Translog",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 21
+      },
+      "id": 94,
       "panels": [
         {
           "aliasColors": {},
@@ -1678,6 +1831,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 26
+          },
           "id": 79,
           "legend": {
             "alignAsTable": true,
@@ -1687,8 +1846,6 @@
             "min": true,
             "rightSide": true,
             "show": true,
-            "sort": null,
-            "sortDesc": null,
             "total": false,
             "values": true
           },
@@ -1702,12 +1859,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_breakers_tripped{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_breakers_tripped{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: {{breaker}}",
@@ -1715,8 +1871,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Tripped for breakers",
           "tooltip": {
             "shared": true,
@@ -1725,27 +1879,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -1757,6 +1903,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 33
+          },
           "id": 80,
           "legend": {
             "alignAsTable": true,
@@ -1766,8 +1918,6 @@
             "min": true,
             "rightSide": true,
             "show": true,
-            "sort": null,
-            "sortDesc": null,
             "total": false,
             "values": true
           },
@@ -1781,19 +1931,18 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_breakers_estimated_size_bytes{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_breakers_estimated_size_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: {{breaker}}",
               "refId": "A"
             },
             {
-              "expr": "elasticsearch_breakers_limit_size_bytes{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_breakers_limit_size_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: limit for {{breaker}}",
@@ -1801,8 +1950,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Estimated size in bytes of breaker",
           "tooltip": {
             "shared": true,
@@ -1811,42 +1958,37 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Breakers",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 22
+      },
+      "id": 95,
       "panels": [
         {
           "aliasColors": {},
@@ -1858,6 +2000,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 0,
+            "y": 34
+          },
           "height": "400",
           "id": 30,
           "legend": {
@@ -1885,12 +2033,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_os_load1{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_os_load1{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "instant": false,
               "interval": "",
@@ -1901,7 +2048,7 @@
               "step": 20
             },
             {
-              "expr": "elasticsearch_os_load5{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_os_load5{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "instant": false,
               "interval": "",
@@ -1912,7 +2059,7 @@
               "step": 20
             },
             {
-              "expr": "elasticsearch_os_load15{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_os_load15{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "instant": false,
               "interval": "",
@@ -1924,8 +2071,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Load average",
           "tooltip": {
             "msResolution": false,
@@ -1936,9 +2081,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -1953,10 +2096,7 @@
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -1971,6 +2111,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 12,
+            "y": 34
+          },
           "height": "400",
           "id": 88,
           "legend": {
@@ -1998,12 +2144,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_process_cpu_percent{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_process_cpu_percent{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "instant": false,
               "interval": "",
@@ -2015,8 +2160,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "CPU usage",
           "tooltip": {
             "msResolution": false,
@@ -2027,9 +2170,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -2044,10 +2185,7 @@
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -2062,6 +2200,12 @@
           "error": false,
           "fill": 0,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 0,
+            "y": 41
+          },
           "height": "400",
           "id": 31,
           "legend": {
@@ -2089,12 +2233,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_jvm_memory_used_bytes{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_jvm_memory_used_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -2104,7 +2247,7 @@
               "step": 20
             },
             {
-              "expr": "elasticsearch_jvm_memory_max_bytes{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_jvm_memory_max_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}} max: {{area}}",
@@ -2112,7 +2255,7 @@
               "step": 20
             },
             {
-              "expr": "elasticsearch_jvm_memory_pool_peak_used_bytes{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_jvm_memory_pool_peak_used_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}} peak used pool: {{pool}}",
@@ -2121,8 +2264,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "JVM memory usage",
           "tooltip": {
             "msResolution": false,
@@ -2133,9 +2274,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -2144,16 +2283,12 @@
               "format": "bytes",
               "label": "Memory",
               "logBase": 1,
-              "max": null,
               "min": 0,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -2168,6 +2303,12 @@
           "error": false,
           "fill": 0,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 12,
+            "y": 41
+          },
           "height": "400",
           "id": 54,
           "legend": {
@@ -2195,12 +2336,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_jvm_memory_committed_bytes{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_jvm_memory_committed_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}} committed: {{area}}",
@@ -2208,7 +2348,7 @@
               "step": 20
             },
             {
-              "expr": "elasticsearch_jvm_memory_max_bytes{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_jvm_memory_max_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}} max: {{area}}",
@@ -2217,8 +2357,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "JVM memory committed",
           "tooltip": {
             "msResolution": false,
@@ -2229,9 +2367,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -2240,31 +2376,30 @@
               "format": "bytes",
               "label": "Memory",
               "logBase": 1,
-              "max": null,
               "min": 0,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "CPU and Memory",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": null,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 23
+      },
+      "id": 96,
       "panels": [
         {
           "aliasColors": {},
@@ -2276,6 +2411,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 0,
+            "y": 42
+          },
           "height": "400",
           "id": 32,
           "legend": {
@@ -2303,12 +2444,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "1-(elasticsearch_filesystem_data_available_bytes{cluster=\"$cluster\",name=~\"$name\"}/elasticsearch_filesystem_data_size_bytes{cluster=\"$cluster\",name=~\"$name\"})",
+              "expr": "1-(elasticsearch_filesystem_data_available_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}/elasticsearch_filesystem_data_size_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"})",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -2334,8 +2474,6 @@
               "value": 0.9
             }
           ],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Disk usage",
           "tooltip": {
             "msResolution": false,
@@ -2346,9 +2484,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -2363,10 +2499,7 @@
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -2381,6 +2514,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 12,
+            "y": 42
+          },
           "height": "400",
           "id": 47,
           "legend": {
@@ -2413,12 +2552,11 @@
             }
           ],
           "spaceLength": 10,
-          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(elasticsearch_transport_tx_size_bytes_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_transport_tx_size_bytes_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: sent ",
@@ -2426,7 +2564,7 @@
               "step": 20
             },
             {
-              "expr": "-irate(elasticsearch_transport_rx_size_bytes_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "-irate(elasticsearch_transport_rx_size_bytes_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: received",
@@ -2435,8 +2573,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Network usage",
           "tooltip": {
             "msResolution": false,
@@ -2447,9 +2583,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -2458,31 +2592,30 @@
               "format": "Bps",
               "label": "Bytes/sec",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "pps",
               "label": "",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Disk and Network",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": "",
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 24
+      },
+      "id": 97,
       "panels": [
         {
           "aliasColors": {},
@@ -2495,6 +2628,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 0,
+            "y": 43
+          },
           "height": "400",
           "id": 1,
           "legend": {
@@ -2522,12 +2661,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": true,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_indices_docs{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_indices_docs{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -2538,8 +2676,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Documents count on node",
           "tooltip": {
             "msResolution": false,
@@ -2550,9 +2686,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -2562,16 +2696,11 @@
               "format": "short",
               "label": "",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -2586,6 +2715,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 12,
+            "y": 43
+          },
           "height": "400",
           "id": 24,
           "legend": {
@@ -2611,12 +2746,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": true,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(elasticsearch_indices_indexing_index_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_indexing_index_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -2627,8 +2761,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Documents indexed rate",
           "tooltip": {
             "msResolution": false,
@@ -2639,9 +2771,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -2650,16 +2780,11 @@
               "format": "short",
               "label": "index calls/s",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -2675,6 +2800,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 8,
+            "x": 0,
+            "y": 50
+          },
           "height": "400",
           "id": 25,
           "legend": {
@@ -2702,12 +2833,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 4,
           "stack": true,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(elasticsearch_indices_docs_deleted{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_docs_deleted{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -2718,8 +2848,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Documents deleted rate",
           "tooltip": {
             "msResolution": false,
@@ -2730,9 +2858,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -2741,16 +2867,11 @@
               "format": "short",
               "label": "Documents/s",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -2766,6 +2887,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 8,
+            "x": 8,
+            "y": 50
+          },
           "height": "400",
           "id": 26,
           "legend": {
@@ -2791,12 +2918,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 4,
           "stack": true,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_indices_merges_docs_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_merges_docs_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -2807,8 +2933,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Documents merged rate",
           "tooltip": {
             "msResolution": false,
@@ -2819,9 +2943,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -2831,16 +2953,11 @@
               "format": "short",
               "label": "Documents/s",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -2855,6 +2972,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 8,
+            "x": 16,
+            "y": 50
+          },
           "height": "400",
           "id": 52,
           "legend": {
@@ -2880,12 +3003,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 4,
           "stack": true,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(elasticsearch_indices_merges_total_size_bytes_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_merges_total_size_bytes_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -2896,8 +3018,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Documents merged bytes",
           "tooltip": {
             "msResolution": false,
@@ -2908,43 +3028,38 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
-              "decimals": null,
               "format": "decbytes",
               "label": "Bytes/s",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Documents",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": "",
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 25
+      },
+      "id": 98,
       "panels": [
         {
           "aliasColors": {},
@@ -2956,6 +3071,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 0,
+            "y": 51
+          },
           "height": "400",
           "id": 33,
           "legend": {
@@ -2981,12 +3102,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(elasticsearch_indices_search_query_time_seconds{cluster=\"$cluster\",name=~\"$name\"}[$interval]) ",
+              "expr": "irate(elasticsearch_indices_search_query_time_seconds{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval]) ",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -2997,8 +3117,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Query time",
           "tooltip": {
             "msResolution": false,
@@ -3009,9 +3127,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -3020,16 +3136,11 @@
               "format": "s",
               "label": "Time",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -3044,6 +3155,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 12,
+            "y": 51
+          },
           "height": "400",
           "id": 5,
           "legend": {
@@ -3069,12 +3186,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(elasticsearch_indices_indexing_index_time_seconds_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_indexing_index_time_seconds_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -3085,8 +3201,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Indexing time",
           "tooltip": {
             "msResolution": false,
@@ -3097,9 +3211,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -3108,16 +3220,11 @@
               "format": "s",
               "label": "Time",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -3132,6 +3239,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 0,
+            "y": 58
+          },
           "height": "400",
           "id": 3,
           "legend": {
@@ -3159,12 +3272,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(elasticsearch_indices_merges_total_time_seconds_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_merges_total_time_seconds_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -3175,8 +3287,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Merging time",
           "tooltip": {
             "msResolution": false,
@@ -3187,9 +3297,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -3198,16 +3306,11 @@
               "format": "s",
               "label": "Time",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -3222,6 +3325,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 12,
+            "y": 58
+          },
           "height": "400",
           "id": 87,
           "legend": {
@@ -3249,12 +3358,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(elasticsearch_indices_store_throttle_time_seconds_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_store_throttle_time_seconds_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -3265,8 +3373,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Throttle time for index store",
           "tooltip": {
             "msResolution": false,
@@ -3277,9 +3383,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -3288,31 +3392,29 @@
               "format": "s",
               "label": "Time",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Times",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 26
+      },
+      "id": 99,
       "panels": [
         {
           "aliasColors": {},
@@ -3324,6 +3426,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 24,
+            "x": 0,
+            "y": 59
+          },
           "height": "400",
           "id": 48,
           "legend": {
@@ -3351,12 +3459,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": true,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_indices_indexing_index_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_indexing_index_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -3366,7 +3473,7 @@
               "step": 10
             },
             {
-              "expr": "rate(elasticsearch_indices_search_query_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_search_query_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: query",
@@ -3374,7 +3481,7 @@
               "step": 10
             },
             {
-              "expr": "rate(elasticsearch_indices_search_fetch_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_search_fetch_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: fetch",
@@ -3382,7 +3489,7 @@
               "step": 10
             },
             {
-              "expr": "rate(elasticsearch_indices_merges_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_merges_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: merges",
@@ -3390,7 +3497,7 @@
               "step": 10
             },
             {
-              "expr": "rate(elasticsearch_indices_refresh_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_refresh_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: refresh",
@@ -3398,7 +3505,7 @@
               "step": 10
             },
             {
-              "expr": "rate(elasticsearch_indices_flush_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_flush_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: flush",
@@ -3406,7 +3513,7 @@
               "step": 10
             },
             {
-              "expr": "rate(elasticsearch_indices_get_exists_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_get_exists_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: get_exists",
@@ -3414,7 +3521,7 @@
               "step": 10
             },
             {
-              "expr": "rate(elasticsearch_indices_get_missing_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_get_missing_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: get_missing",
@@ -3422,7 +3529,7 @@
               "step": 10
             },
             {
-              "expr": "rate(elasticsearch_indices_get_tota{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_get_tota{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: get",
@@ -3430,7 +3537,7 @@
               "step": 10
             },
             {
-              "expr": "rate(elasticsearch_indices_indexing_delete_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_indexing_delete_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: indexing_delete",
@@ -3439,8 +3546,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Total Operations  rate",
           "tooltip": {
             "msResolution": false,
@@ -3451,9 +3556,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -3462,16 +3565,11 @@
               "format": "short",
               "label": "Operations/s",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -3486,6 +3584,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 24,
+            "x": 0,
+            "y": 66
+          },
           "height": "400",
           "id": 49,
           "legend": {
@@ -3513,12 +3617,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(elasticsearch_indices_indexing_index_time_seconds_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_indexing_index_time_seconds_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -3528,7 +3631,7 @@
               "step": 10
             },
             {
-              "expr": "irate(elasticsearch_indices_search_query_time_seconds{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_search_query_time_seconds{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: query",
@@ -3536,7 +3639,7 @@
               "step": 10
             },
             {
-              "expr": "irate(elasticsearch_indices_search_fetch_time_seconds{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_search_fetch_time_seconds{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: fetch",
@@ -3544,7 +3647,7 @@
               "step": 10
             },
             {
-              "expr": "irate(elasticsearch_indices_merges_total_time_seconds_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_merges_total_time_seconds_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: merges",
@@ -3552,7 +3655,7 @@
               "step": 10
             },
             {
-              "expr": "irate(elasticsearch_indices_refresh_time_seconds_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_refresh_time_seconds_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: refresh",
@@ -3560,7 +3663,7 @@
               "step": 10
             },
             {
-              "expr": "irate(elasticsearch_indices_flush_time_seconds{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_flush_time_seconds{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: flush",
@@ -3568,7 +3671,7 @@
               "step": 10
             },
             {
-              "expr": "irate(elasticsearch_indices_get_exists_time_seconds{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_get_exists_time_seconds{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: get_exists",
@@ -3576,7 +3679,7 @@
               "step": 10
             },
             {
-              "expr": "irate(elasticsearch_indices_get_time_seconds{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_get_time_seconds{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: get_time",
@@ -3584,7 +3687,7 @@
               "step": 10
             },
             {
-              "expr": "irate(elasticsearch_indices_get_missing_time_seconds{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_get_missing_time_seconds{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: get_missing",
@@ -3592,7 +3695,7 @@
               "step": 10
             },
             {
-              "expr": "irate(elasticsearch_indices_indexing_delete_time_seconds_total{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_indexing_delete_time_seconds_total{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: indexing_delete",
@@ -3600,7 +3703,7 @@
               "step": 10
             },
             {
-              "expr": "irate(elasticsearch_indices_get_time_seconds{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_indices_get_time_seconds{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: get",
@@ -3609,8 +3712,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Total Operations time",
           "tooltip": {
             "msResolution": false,
@@ -3621,9 +3722,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -3632,31 +3731,29 @@
               "format": "s",
               "label": "Time",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Total Operations stats",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 728,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 27
+      },
+      "id": 100,
       "panels": [
         {
           "aliasColors": {},
@@ -3667,6 +3764,12 @@
           "editable": true,
           "error": false,
           "fill": 1,
+          "gridPos": {
+            "h": 20,
+            "w": 6,
+            "x": 0,
+            "y": 67
+          },
           "id": 45,
           "legend": {
             "alignAsTable": true,
@@ -3676,8 +3779,6 @@
             "max": true,
             "min": true,
             "show": true,
-            "sort": null,
-            "sortDesc": null,
             "total": false,
             "values": true
           },
@@ -3691,12 +3792,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 3,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(elasticsearch_thread_pool_rejected_count{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_thread_pool_rejected_count{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: {{ type }}",
@@ -3705,8 +3805,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Thread Pool operations rejected",
           "tooltip": {
             "msResolution": false,
@@ -3716,27 +3814,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             }
           ]
@@ -3750,6 +3840,12 @@
           "editable": true,
           "error": false,
           "fill": 1,
+          "gridPos": {
+            "h": 20,
+            "w": 6,
+            "x": 6,
+            "y": 67
+          },
           "id": 46,
           "legend": {
             "alignAsTable": true,
@@ -3774,12 +3870,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 3,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_thread_pool_active_count{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_thread_pool_active_count{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: {{ type }}",
@@ -3788,8 +3883,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Thread Pool operations queued",
           "tooltip": {
             "msResolution": false,
@@ -3799,27 +3892,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             }
           ]
@@ -3833,6 +3918,12 @@
           "editable": true,
           "error": false,
           "fill": 1,
+          "gridPos": {
+            "h": 20,
+            "w": 6,
+            "x": 12,
+            "y": 67
+          },
           "height": "",
           "id": 43,
           "legend": {
@@ -3858,12 +3949,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 3,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_thread_pool_active_count{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_thread_pool_active_count{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: {{ type }}",
@@ -3872,8 +3962,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Thread Pool threads active",
           "tooltip": {
             "msResolution": false,
@@ -3883,27 +3971,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             }
           ]
@@ -3917,6 +3997,12 @@
           "editable": true,
           "error": false,
           "fill": 1,
+          "gridPos": {
+            "h": 20,
+            "w": 6,
+            "x": 18,
+            "y": 67
+          },
           "id": 44,
           "legend": {
             "alignAsTable": true,
@@ -3941,12 +4027,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 3,
           "stack": false,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "irate(elasticsearch_thread_pool_completed_count{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "irate(elasticsearch_thread_pool_completed_count{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}: {{ type }}",
@@ -3955,8 +4040,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Thread Pool operations completed",
           "tooltip": {
             "msResolution": false,
@@ -3966,42 +4049,37 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Thread Pool",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": null,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 28
+      },
+      "id": 101,
       "panels": [
         {
           "aliasColors": {},
@@ -4013,6 +4091,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 0,
+            "y": 68
+          },
           "height": "400",
           "id": 4,
           "legend": {
@@ -4040,12 +4124,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": true,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_indices_fielddata_memory_size_bytes{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_indices_fielddata_memory_size_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -4056,8 +4139,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Field data memory size",
           "tooltip": {
             "msResolution": false,
@@ -4068,9 +4149,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -4079,16 +4158,11 @@
               "format": "bytes",
               "label": "Memory",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -4103,6 +4177,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 12,
+            "y": 68
+          },
           "height": "400",
           "id": 34,
           "legend": {
@@ -4130,12 +4210,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 6,
           "stack": true,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_indices_fielddata_evictions{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_fielddata_evictions{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -4146,8 +4225,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Field data evictions",
           "tooltip": {
             "msResolution": false,
@@ -4158,9 +4235,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -4169,16 +4244,11 @@
               "format": "short",
               "label": "Evictions/s",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -4193,6 +4263,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 8,
+            "x": 0,
+            "y": 75
+          },
           "height": "400",
           "id": 35,
           "legend": {
@@ -4220,12 +4296,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 4,
           "stack": true,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_indices_query_cache_memory_size_bytes{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_indices_query_cache_memory_size_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -4236,8 +4311,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Query cache size",
           "tooltip": {
             "msResolution": false,
@@ -4248,9 +4321,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -4259,16 +4330,11 @@
               "format": "bytes",
               "label": "Size",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -4283,6 +4349,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 8,
+            "x": 8,
+            "y": 75
+          },
           "height": "400",
           "id": 36,
           "legend": {
@@ -4310,12 +4382,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 4,
           "stack": true,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_indices_query_cache_evictions{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_query_cache_evictions{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -4326,8 +4397,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Query cache evictions",
           "tooltip": {
             "msResolution": false,
@@ -4338,9 +4407,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -4349,16 +4416,11 @@
               "format": "short",
               "label": "Evictions/s",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -4373,6 +4435,12 @@
           "error": false,
           "fill": 1,
           "grid": {},
+          "gridPos": {
+            "h": 11,
+            "w": 8,
+            "x": 16,
+            "y": 75
+          },
           "height": "400",
           "id": 84,
           "legend": {
@@ -4400,12 +4468,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 4,
           "stack": true,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_indices_filter_cache_evictions{cluster=\"$cluster\",name=~\"$name\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_filter_cache_evictions{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -4416,8 +4483,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Evictions from filter cache",
           "tooltip": {
             "msResolution": false,
@@ -4428,9 +4493,7 @@
           "transparent": false,
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
@@ -4439,31 +4502,29 @@
               "format": "short",
               "label": "Evictions/s",
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Caches",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 29
+      },
+      "id": 102,
       "panels": [
         {
           "aliasColors": {},
@@ -4472,6 +4533,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 76
+          },
           "id": 85,
           "legend": {
             "alignAsTable": true,
@@ -4496,12 +4563,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": true,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_indices_segments_count{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_indices_segments_count{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}",
@@ -4509,8 +4575,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Count of index segments",
           "tooltip": {
             "shared": true,
@@ -4519,27 +4583,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -4551,6 +4607,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 83
+          },
           "id": 86,
           "legend": {
             "alignAsTable": true,
@@ -4575,12 +4637,11 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": true,
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_indices_segments_memory_bytes{cluster=\"$cluster\",name=~\"$name\"}",
+              "expr": "elasticsearch_indices_segments_memory_bytes{instance=\"$instance\",cluster=\"$cluster\",name=~\"$name\"}",
               "format": "time_series",
               "intervalFactor": 2,
               "legendFormat": "{{name}}",
@@ -4588,8 +4649,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Current memory size of segments in bytes",
           "tooltip": {
             "shared": true,
@@ -4598,42 +4657,37 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Segments",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 30
+      },
+      "id": 103,
       "panels": [
         {
           "aliasColors": {},
@@ -4642,6 +4696,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 84
+          },
           "id": 75,
           "legend": {
             "alignAsTable": true,
@@ -4666,7 +4726,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -4679,8 +4738,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Count of documents with only primary shards",
           "tooltip": {
             "shared": true,
@@ -4689,27 +4746,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -4721,6 +4770,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 91
+          },
           "id": 83,
           "legend": {
             "alignAsTable": true,
@@ -4745,7 +4800,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -4758,8 +4812,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Total size of stored index data in bytes with only primary shards on all nodes",
           "tooltip": {
             "shared": true,
@@ -4768,27 +4820,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -4800,6 +4844,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 98
+          },
           "id": 76,
           "legend": {
             "alignAsTable": true,
@@ -4824,7 +4874,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -4837,8 +4886,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Total size of stored index data in bytes with all shards on all nodes",
           "tooltip": {
             "shared": true,
@@ -4847,42 +4894,37 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Indices: Count of documents and Total size",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 31
+      },
+      "id": 104,
       "panels": [
         {
           "aliasColors": {},
@@ -4891,6 +4933,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 99
+          },
           "id": 61,
           "legend": {
             "alignAsTable": true,
@@ -4916,7 +4964,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -4929,8 +4976,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Index writer with only primary shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -4939,27 +4984,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -4971,6 +5008,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 106
+          },
           "id": 62,
           "legend": {
             "alignAsTable": true,
@@ -4996,7 +5039,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -5009,8 +5051,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Index writer with all shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -5019,42 +5059,37 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Indices: Index writer",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 32
+      },
+      "id": 105,
       "panels": [
         {
           "aliasColors": {},
@@ -5063,6 +5098,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 107
+          },
           "id": 55,
           "legend": {
             "alignAsTable": true,
@@ -5072,8 +5113,6 @@
             "min": true,
             "rightSide": true,
             "show": true,
-            "sort": null,
-            "sortDesc": null,
             "total": false,
             "values": true
           },
@@ -5087,7 +5126,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -5100,8 +5138,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Segments with only primary shards on all nodes",
           "tooltip": {
             "shared": true,
@@ -5110,27 +5146,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             }
           ]
@@ -5142,6 +5170,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 114
+          },
           "id": 56,
           "legend": {
             "alignAsTable": true,
@@ -5166,7 +5200,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -5179,8 +5212,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Segments with all shards on all nodes",
           "tooltip": {
             "shared": true,
@@ -5189,27 +5220,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             }
           ]
@@ -5221,6 +5244,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 121
+          },
           "id": 65,
           "legend": {
             "alignAsTable": true,
@@ -5245,7 +5274,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -5258,8 +5286,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Size of segments with only primary shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -5268,27 +5294,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -5300,6 +5318,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 128
+          },
           "id": 66,
           "legend": {
             "alignAsTable": true,
@@ -5324,7 +5348,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -5337,8 +5360,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Size of segments with all shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -5347,42 +5368,37 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Indices: Segments",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 33
+      },
+      "id": 106,
       "panels": [
         {
           "aliasColors": {},
@@ -5391,6 +5407,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 129
+          },
           "id": 57,
           "legend": {
             "alignAsTable": true,
@@ -5415,7 +5437,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -5428,8 +5449,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Doc values with only primary shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -5438,27 +5457,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -5470,6 +5481,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 136
+          },
           "id": 58,
           "legend": {
             "alignAsTable": true,
@@ -5494,7 +5511,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -5507,8 +5523,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Doc values with all shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -5517,42 +5531,37 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Indices: Doc values",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 34
+      },
+      "id": 107,
       "panels": [
         {
           "aliasColors": {},
@@ -5561,6 +5570,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 137
+          },
           "id": 59,
           "legend": {
             "alignAsTable": true,
@@ -5585,7 +5600,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -5598,8 +5612,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Size of fields with only primary shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -5608,27 +5620,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -5640,6 +5644,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 144
+          },
           "id": 60,
           "legend": {
             "alignAsTable": true,
@@ -5664,7 +5674,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -5677,8 +5686,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Size of fields with all shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -5687,42 +5694,37 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Indices: Fields",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 35
+      },
+      "id": 108,
       "panels": [
         {
           "aliasColors": {},
@@ -5731,6 +5733,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 145
+          },
           "id": 63,
           "legend": {
             "alignAsTable": true,
@@ -5755,7 +5763,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -5768,8 +5775,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Size of fixed bit with only primary shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -5778,27 +5783,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -5810,6 +5807,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 152
+          },
           "id": 64,
           "legend": {
             "alignAsTable": true,
@@ -5834,7 +5837,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -5847,8 +5849,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Size of fixed bit with all shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -5857,42 +5857,37 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Indices: Fixed bit",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 36
+      },
+      "id": 109,
       "panels": [
         {
           "aliasColors": {},
@@ -5901,6 +5896,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 153
+          },
           "id": 67,
           "legend": {
             "alignAsTable": true,
@@ -5925,7 +5926,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -5938,8 +5938,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Size of norms with only primary shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -5948,27 +5946,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -5980,6 +5970,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 160
+          },
           "id": 68,
           "legend": {
             "alignAsTable": true,
@@ -6004,7 +6000,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -6017,8 +6012,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Size of norms with all shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -6027,42 +6020,37 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Indices: Norms",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 37
+      },
+      "id": 110,
       "panels": [
         {
           "aliasColors": {},
@@ -6071,6 +6059,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 161
+          },
           "id": 69,
           "legend": {
             "alignAsTable": true,
@@ -6095,7 +6089,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -6108,8 +6101,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Size of points with only primary shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -6118,27 +6109,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -6150,6 +6133,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 168
+          },
           "id": 70,
           "legend": {
             "alignAsTable": true,
@@ -6174,7 +6163,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -6187,8 +6175,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Size of points with all shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -6197,42 +6183,37 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Indices: Points",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 38
+      },
+      "id": 111,
       "panels": [
         {
           "aliasColors": {},
@@ -6241,6 +6222,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 169
+          },
           "id": 71,
           "legend": {
             "alignAsTable": true,
@@ -6265,7 +6252,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -6278,8 +6264,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Size of terms with only primary shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -6288,27 +6272,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -6320,6 +6296,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 176
+          },
           "id": 72,
           "legend": {
             "alignAsTable": true,
@@ -6344,7 +6326,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -6357,8 +6338,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Number of terms with all shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -6367,42 +6346,37 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Indices: Terms",
-      "titleSize": "h6"
+      "type": "row"
     },
     {
-      "collapse": true,
-      "height": 250,
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 39
+      },
+      "id": 112,
       "panels": [
         {
           "aliasColors": {},
@@ -6411,6 +6385,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 177
+          },
           "id": 73,
           "legend": {
             "alignAsTable": true,
@@ -6436,7 +6416,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -6449,8 +6428,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Size of version map with only primary shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -6459,27 +6436,19 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
@@ -6491,6 +6460,12 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
+          "gridPos": {
+            "h": 7,
+            "w": 24,
+            "x": 0,
+            "y": 184
+          },
           "id": 74,
           "legend": {
             "alignAsTable": true,
@@ -6516,7 +6491,6 @@
           "renderer": "flot",
           "seriesOverrides": [],
           "spaceLength": 10,
-          "span": 12,
           "stack": false,
           "steppedLine": false,
           "targets": [
@@ -6529,8 +6503,6 @@
             }
           ],
           "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
           "title": "Size of version map with all shards on all nodes in bytes",
           "tooltip": {
             "shared": true,
@@ -6539,41 +6511,30 @@
           },
           "type": "graph",
           "xaxis": {
-            "buckets": null,
             "mode": "time",
-            "name": null,
             "show": true,
             "values": []
           },
           "yaxes": [
             {
               "format": "bytes",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": true
             },
             {
               "format": "short",
-              "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
               "show": false
             }
           ]
         }
       ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": true,
       "title": "Indices: Version map",
-      "titleSize": "h6"
+      "type": "row"
     }
   ],
-  "schemaVersion": 14,
+  "refresh": false,
+  "schemaVersion": 27,
   "style": "dark",
   "tags": [
     "elasticsearch",
@@ -6586,9 +6547,12 @@
         "auto_count": 30,
         "auto_min": "10s",
         "current": {
+          "selected": false,
           "text": "auto",
-          "value": "$__auto_interval"
+          "value": "$__auto_interval_interval"
         },
+        "description": null,
+        "error": null,
         "hide": 0,
         "label": "Interval",
         "name": "interval",
@@ -6596,7 +6560,7 @@
           {
             "selected": true,
             "text": "auto",
-            "value": "$__auto_interval"
+            "value": "$__auto_interval_interval"
           },
           {
             "selected": false,
@@ -6651,25 +6615,33 @@
         ],
         "query": "5m,10m,30m,1h,6h,12h,1d,7d,14d,30d",
         "refresh": 2,
+        "skipUrlSync": false,
         "type": "interval"
       },
       {
         "allValue": null,
         "current": {},
         "datasource": "${DS_PROMETHEUS}",
+        "definition": "",
+        "description": null,
+        "error": null,
         "hide": 0,
         "includeAll": false,
-        "label": "Сluster",
+        "label": "Cluster",
         "multi": false,
         "name": "cluster",
         "options": [],
-        "query": "label_values(elasticsearch_indices_docs,cluster)",
+        "query": {
+          "query": "label_values(elasticsearch_indices_docs,cluster)",
+          "refId": "Prometheus-cluster-Variable-Query"
+        },
         "refresh": 1,
         "regex": "",
+        "skipUrlSync": false,
         "sort": 1,
-        "tagValuesQuery": null,
+        "tagValuesQuery": "",
         "tags": [],
-        "tagsQuery": null,
+        "tagsQuery": "",
         "type": "query",
         "useTags": false
       },
@@ -6677,19 +6649,26 @@
         "allValue": null,
         "current": {},
         "datasource": "${DS_PROMETHEUS}",
+        "definition": "",
+        "description": null,
+        "error": null,
         "hide": 0,
         "includeAll": true,
         "label": "Node name",
         "multi": true,
         "name": "name",
         "options": [],
-        "query": "label_values(elasticsearch_indices_docs{cluster=\"$cluster\", name!=\"\"},name)",
+        "query": {
+          "query": "label_values(elasticsearch_indices_docs{instance=\"$instance\",cluster=\"$cluster\", name!=\"\"},name)",
+          "refId": "Prometheus-name-Variable-Query"
+        },
         "refresh": 1,
         "regex": "",
+        "skipUrlSync": false,
         "sort": 1,
-        "tagValuesQuery": null,
+        "tagValuesQuery": "",
         "tags": [],
-        "tagsQuery": null,
+        "tagsQuery": "",
         "type": "query",
         "useTags": false
       },
@@ -6697,19 +6676,26 @@
         "allValue": null,
         "current": {},
         "datasource": "${DS_PROMETHEUS}",
+        "definition": "",
+        "description": null,
+        "error": null,
         "hide": 0,
         "includeAll": false,
         "label": "Source of metrics",
         "multi": false,
         "name": "instance",
         "options": [],
-        "query": "label_values(elasticsearch_indices_docs{cluster=\"$cluster\", name!=\"\"},instance)",
+        "query": {
+          "query": "label_values(elasticsearch_indices_docs{cluster=\"$cluster\", name!=\"\"},instance)",
+          "refId": "Prometheus-instance-Variable-Query"
+        },
         "refresh": 1,
         "regex": "",
+        "skipUrlSync": false,
         "sort": 1,
-        "tagValuesQuery": null,
+        "tagValuesQuery": "",
         "tags": [],
-        "tagsQuery": null,
+        "tagsQuery": "",
         "type": "query",
         "useTags": false
       }
@@ -6746,6 +6732,6 @@
   },
   "timezone": "browser",
   "title": "ElasticSearch",
-  "version": 106,
-  "description": "ElasticSearch cluster stats"
+  "uid": "Ks6U7H6Gz",
+  "version": 2
 }
