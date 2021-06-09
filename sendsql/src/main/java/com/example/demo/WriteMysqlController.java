@@ -41,7 +41,7 @@ public class WriteMysqlController{
     public String updateSms() {
         String mobiles = "";
         log.info("开始更新电话号码");
-        log.debug("alert notify  params: {}",mobiles);
+        log.info("alert notify  mobiles: {}",mobiles);
         mobiles = readFileContent("phone.txt");
         mobile = mobiles;
         return "修改成功";
