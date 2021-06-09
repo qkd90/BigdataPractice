@@ -97,6 +97,7 @@ public class DemoController {
         }
         return sbf.toString();
     }
+
     public String getSmsParam(String content,String mobile) {
         Submit submit = new Submit();
         submit.setEcName("xxx");

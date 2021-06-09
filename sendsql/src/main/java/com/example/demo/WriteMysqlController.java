@@ -5,10 +5,12 @@ import com.alibaba.fastjson.JSONObject;
 import com.example.demo.dao.MysqlImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 /**
  * @author rq
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("sql")
 public class WriteMysqlController{
 
+    public static String mobile = "";
     @Autowired
     private MysqlImpl mysqlImpl;
 
@@ -34,7 +37,43 @@ public class WriteMysqlController{
         return flag;
     }
 
+    @GetMapping("update")
+    public String updateSms() {
+        String mobiles = "";
+        log.info("开始更新电话号码");
+        log.debug("alert notify  params: {}",mobiles);
+        mobiles = readFileContent("phone.txt");
+        mobile = mobiles;
+        return "修改成功";
+    }
 
+    private static String readFileContent(String filename) {
+        log.info("目录地址："+System.getProperty("user.dir"));
+        File file = new File(System.getProperty("user.dir"), filename);
+        BufferedReader reader = null;
+        StringBuilder sbf = new StringBuilder();
+        try {
+            reader = new BufferedReader(new FileReader(file));
+            String tempStr;
+            while ((tempStr = reader.readLine()) != null) {
+                sbf.append(tempStr);
+                sbf.append(",");
+            }
+            reader.close();
+            return sbf.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }
+        }
+        return sbf.toString();
+    }
 }
 
 
