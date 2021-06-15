@@ -1,0 +1,12 @@
+[Unit]
+Description=filebeat
+After=network-online.target
+
+[Service]
+User=elastic
+ExecStart=/usr/local/efk/filebeat/filebeat -e -c /usr/local/efk/filebeat/filebeat.yml
+# 设置为掉线自动重启，进程强制杀掉后会自动重新启动
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

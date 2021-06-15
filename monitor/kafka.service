@@ -1,0 +1,13 @@
+[Unit]
+Description=Kafka server
+Documentation=http://kafka.apache.org/documentation.html
+Requires=network.target
+After=network.target kafka-zookeeper.service
+
+[Service]
+Type=on-failure
+ExecStart=/usr/local/kafka/kafka/bin/kafka-server-start.sh /usr/local/kafka/kafka/config/server.properties
+ExecStop=/usr/local/kafka/kafka/bin/kafka-server-stop.sh
+
+[Install]
+WantedBy=multi-user.target

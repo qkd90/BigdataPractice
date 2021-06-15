@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.example.demo.dao.MysqlImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.BufferedReader;
@@ -21,8 +20,11 @@ import java.io.IOException;
 public class WriteMysqlController{
 
     public static String mobile = "";
-    @Autowired
-    private MysqlImpl mysqlImpl;
+    private final MysqlImpl mysqlImpl;
+
+    public WriteMysqlController(MysqlImpl mysqlImpl) {
+        this.mysqlImpl = mysqlImpl;
+    }
 
     @PostMapping("send")
     public String sendSql(@RequestBody String requestInfo) {
@@ -42,14 +44,14 @@ public class WriteMysqlController{
         String mobiles = "";
         log.info("开始更新电话号码");
         log.info("alert notify  mobiles: {}",mobiles);
-        mobiles = readFileContent("phone.txt");
+        mobiles = readFileContent();
         mobile = mobiles;
         return "修改成功";
     }
 
-    private static String readFileContent(String filename) {
+    private static String readFileContent() {
         log.info("目录地址："+System.getProperty("user.dir"));
-        File file = new File(System.getProperty("user.dir"), filename);
+        File file = new File(System.getProperty("user.dir"), "phone.txt");
         BufferedReader reader = null;
         StringBuilder sbf = new StringBuilder();
         try {

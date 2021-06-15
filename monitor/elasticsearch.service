@@ -1,8 +1,10 @@
 [Unit]
 Description=elasticsearch 
 After=network.target
+
 [Service]
-User=elastic   # 服务启动的用户
+# 服务启动的用户
+User=elastic   
 Group=elastic
 ExecStart=/usr/local/efk/elasticsearch-7.13.1/bin/elasticsearch
 # 停止和重启命令缺省

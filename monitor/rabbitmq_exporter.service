@@ -1,0 +1,11 @@
+﻿[Unit]
+Description=rabbitmq_exporter
+Documentation=https://prometheus.io/
+After=network.target
+[Service]
+ExecStart=/usr/local/src/rabbitmq_exporter/rabbitmq_exporter -config-file config.example.json
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

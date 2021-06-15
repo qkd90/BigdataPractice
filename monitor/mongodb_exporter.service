@@ -1,0 +1,8 @@
+﻿[Unit]
+Description=MongoDB Exporter
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/local/rq/mongodb_exporter/mongodb_exporter  --mongodb.uri=mongodb://storage:chengying%40storage@127.0.0.1:7009/chengying-storage?ssl=true
+[Install]
+WantedBy=multi-user.target
