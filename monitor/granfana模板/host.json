@@ -66,7 +66,7 @@
   "gnetId": 8919,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1624332776141,
+  "iteration": 1624345252322,
   "links": [],
   "panels": [
     {
@@ -109,7 +109,7 @@
         {
           "$$hashKey": "object:1808",
           "alias": "主机名",
-          "align": "auto",
+          "align": "center",
           "colorMode": null,
           "colors": [
             "rgba(245, 54, 54, 0.9)",
@@ -123,6 +123,7 @@
           "linkUrl": "",
           "mappingType": 1,
           "pattern": "nodename",
+          "preserveFormat": false,
           "thresholds": [],
           "type": "string",
           "unit": "bytes",
@@ -140,7 +141,7 @@
           ],
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
           "decimals": 2,
-          "link": true,
+          "link": false,
           "linkTargetBlank": false,
           "linkTooltip": "浏览主机明细",
           "linkUrl": "",
@@ -3777,7 +3778,7 @@
         "allValue": null,
         "current": {},
         "datasource": "${DS_PROMETHEUS}",
-        "definition": "label_values(node_uname_info{job=~\"$job\",nodename=~\"$hostname\"},instance)",
+        "definition": "label_values(node_uname_info{domainName=~\"$domainName\",job=~\"$job\",nodename=~\"$hostname\"},instance)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -3788,7 +3789,7 @@
         "name": "node",
         "options": [],
         "query": {
-          "query": "label_values(node_uname_info{job=~\"$job\",nodename=~\"$hostname\"},instance)",
+          "query": "label_values(node_uname_info{domainName=~\"$domainName\",job=~\"$job\",nodename=~\"$hostname\"},instance)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -4055,5 +4056,5 @@
   "timezone": "browser",
   "title": "host",
   "uid": "9CWBz0bik",
-  "version": 27
+  "version": 34
 }

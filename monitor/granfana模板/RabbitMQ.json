@@ -54,7 +54,7 @@
   "gnetId": 4279,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1624332204027,
+  "iteration": 1624349751253,
   "links": [],
   "panels": [
     {
@@ -960,6 +960,7 @@
         "name": "datasource",
         "options": [],
         "query": "prometheus",
+        "queryValue": "",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -1022,8 +1023,8 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": null,
-        "definition": "label_values({job=~\"$job\",instance=~\"$instance\"},domainName)",
+        "datasource": "${DS_PROMETHEUS}",
+        "definition": "label_values(rabbitmq_running{job=~\"$job\",instance=~\"$instance\"}, domainName)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -1033,7 +1034,7 @@
         "name": "domainName",
         "options": [],
         "query": {
-          "query": "label_values({job=~\"$job\",instance=~\"$instance\"},domainName)",
+          "query": "label_values(rabbitmq_running{job=~\"$job\",instance=~\"$instance\"}, domainName)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -1080,5 +1081,5 @@
   "timezone": "browser",
   "title": "RabbitMQ",
   "uid": "Wu4xkdEZk",
-  "version": 17
+  "version": 19
 }

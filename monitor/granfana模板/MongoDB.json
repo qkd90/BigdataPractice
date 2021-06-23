@@ -58,7 +58,7 @@
   "gnetId": 7353,
   "graphTooltip": 1,
   "id": null,
-  "iteration": 1624332125526,
+  "iteration": 1624349658565,
   "links": [],
   "panels": [
     {
@@ -750,19 +750,19 @@
         "allFormat": "blob",
         "allValue": null,
         "current": {},
-        "datasource": null,
-        "definition": "label_values(mongodb_connections,job)",
+        "datasource": "${DS_PROMETHEUS}",
+        "definition": "label_values(mongodb_connections, job)",
         "description": null,
         "error": null,
         "hide": 0,
-        "includeAll": true,
+        "includeAll": false,
         "label": "job",
         "multi": false,
         "multiFormat": "glob",
         "name": "job",
         "options": [],
         "query": {
-          "query": "label_values(mongodb_connections,job)",
+          "query": "label_values(mongodb_connections, job)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -779,8 +779,8 @@
         "allFormat": "glob",
         "allValue": null,
         "current": {},
-        "datasource": null,
-        "definition": "label_values(mongodb_connections{job=\"$job\"},instance)",
+        "datasource": "${DS_PROMETHEUS}",
+        "definition": "label_values(mongodb_connections{job=~\"$job\"}, instance)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -791,7 +791,7 @@
         "name": "instance",
         "options": [],
         "query": {
-          "query": "label_values(mongodb_connections{job=\"$job\"},instance)",
+          "query": "label_values(mongodb_connections{job=~\"$job\"}, instance)",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
@@ -807,7 +807,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": null,
+        "datasource": "${DS_PROMETHEUS}",
         "definition": "label_values(mongodb_connections{job=~\"$job\",instance=~\"$instance\"}, domainName)",
         "description": null,
         "error": null,
@@ -867,5 +867,5 @@
   "timezone": "browser",
   "title": "MongoDB",
   "uid": "6Lk9wMHik",
-  "version": 25
+  "version": 28
 }
