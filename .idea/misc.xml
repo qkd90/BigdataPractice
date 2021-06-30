@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/SendSms/pom.xml" />
+        <option value="$PROJECT_DIR$/SendSql/pom.xml" />
+        <option value="$PROJECT_DIR$/ChengYing/pom.xml" />
+        <option value="$PROJECT_DIR$/RqProject/sendsms/pom.xml" />
+        <option value="$PROJECT_DIR$/RqProject/sendsql/pom.xml" />
+        <option value="$PROJECT_DIR$/cityerrorcode/pom.xml" />
+        <option value="$PROJECT_DIR$/chengyingbackend/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" default="true" project-jdk-name="openjdk-16" project-jdk-type="JavaSDK" />
+</project>
