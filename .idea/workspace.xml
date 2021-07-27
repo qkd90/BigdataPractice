@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="196c10bc-4b58-4a97-9f03-c0465cd68bb6" name="Default Changelist" comment="6-30">
-      <change beforePath="$PROJECT_DIR$/RqProject/installation/elasticsearch.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RqProject/installation/grafana.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RqProject/installation/prometheus.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +14,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\apache-maven-3.8.1\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.8.1" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.8.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1ueJTeE3U5WlYsdnnXE7bA61qth" />
   <component name="ProjectViewState">
@@ -28,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -78,6 +85,9 @@
       <workItem from="1625020150813" duration="701000" />
       <workItem from="1625020872455" duration="384000" />
       <workItem from="1625021280282" duration="314000" />
+      <workItem from="1627227286282" duration="320000" />
+      <workItem from="1627279943533" duration="668000" />
+      <workItem from="1627281439365" duration="1861000" />
     </task>
     <task id="LOCAL-00001" summary="6-30">
       <created>1625020219634</created>
