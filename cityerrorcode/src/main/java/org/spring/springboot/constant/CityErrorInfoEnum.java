@@ -20,10 +20,12 @@ public enum CityErrorInfoEnum implements ErrorInfoInterface {
         this.message = message;
     }
 
+    @Override
     public String getCode(){
         return this.code;
     }
 
+    @Override
     public String getMessage(){
         return this.message;
     }

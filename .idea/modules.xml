@@ -4,7 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Bigdata-Practice.iml" filepath="$PROJECT_DIR$/.idea/Bigdata-Practice.iml" />
       <module fileurl="file://$PROJECT_DIR$/ChengYing/ChengYing.iml" filepath="$PROJECT_DIR$/ChengYing/ChengYing.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chengyingbackend/ChengYing (1).iml" filepath="$PROJECT_DIR$/chengyingbackend/ChengYing (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChengYing/ChengYing (1).iml" filepath="$PROJECT_DIR$/ChengYing/ChengYing (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/chengyingbackend/ChengYing (2).iml" filepath="$PROJECT_DIR$/chengyingbackend/ChengYing (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/demo1/demo.iml" filepath="$PROJECT_DIR$/demo1/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo1/demo-api/demo-api.iml" filepath="$PROJECT_DIR$/demo1/demo-api/demo-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo1/demo-dal/demo-dal.iml" filepath="$PROJECT_DIR$/demo1/demo-dal/demo-dal.iml" />
@@ -15,7 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/demo1/dubbo-provider/dubbo-provider.iml" filepath="$PROJECT_DIR$/demo1/dubbo-provider/dubbo-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/cityerrorcode/springboot-validation-over-json.iml" filepath="$PROJECT_DIR$/cityerrorcode/springboot-validation-over-json.iml" />
       <module fileurl="file://$PROJECT_DIR$/SendSms/web-demo.iml" filepath="$PROJECT_DIR$/SendSms/web-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SendSql/web-demo (1).iml" filepath="$PROJECT_DIR$/SendSql/web-demo (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/sendsql/web-demo (1).iml" filepath="$PROJECT_DIR$/sendsql/web-demo (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/RqProject/sendsms/web-demo (2).iml" filepath="$PROJECT_DIR$/RqProject/sendsms/web-demo (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/RqProject/sendsql/web-demo (3).iml" filepath="$PROJECT_DIR$/RqProject/sendsql/web-demo (3).iml" />
     </modules>
