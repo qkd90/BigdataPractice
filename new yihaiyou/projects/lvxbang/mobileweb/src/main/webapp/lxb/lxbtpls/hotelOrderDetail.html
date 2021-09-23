@@ -1,0 +1,241 @@
+<header class="header-box fixed" id="header">
+    <a href="javascript:history.go(-1)">
+            <span class="header-back">
+                <i class="icon-title-back effect-active"></i>
+            </span>
+    </a>
+
+    <h1>订单详情</h1>
+</header>
+<div class="wrapper" ng-controller="hotelOrderDetailCtrl">
+    <div id="detail" class="pb-60">
+
+        <!-- 订单状态 -->
+        <div class="orderDetail-status">
+            <h4 class="statu">{{order.status}}</h4>
+        </div>
+        <!-- /订单状态 -->
+        <!-- 酒店信息 -->
+        <div class="orderDetail-mod">
+            <div class="orderDetail-mod-bd">
+                <div class="hotel-info">
+                    <h3 class="name">{{order.name}}</h3>
+
+                    <p class="address">
+                        <span>地址：</span>
+                        <span>{{order.address}}</span>
+                    </p>
+
+                    <p class="tel">
+                        <span>电话：</span>
+                        <span>400-0131-770</span>
+                    </p>
+
+                    <p class="roomtype">
+                        <span>房型：</span>
+                        <span>{{order.roomName}}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- /酒店信息 -->
+        <!-- 团期 -->
+
+        <div class="orderDetail-mod">
+            <div class="orderDetail-mod-bd">
+                <div class="detail-data">
+                    <a href="javascript:;" class="detail-checkin" id="detail-checkin">
+                        <em>入住</em>
+
+                        <p><span class="data-inout">{{order.startDate}}</span></p>
+                    </a>
+                    <a href="javascript:;" class="detail-nights" id="detail-nights">
+                        <span>共{{day}}晚</span>
+
+                        <p></p>
+                    </a>
+                    <a href="javascript:;" class="detail-checkout" id="detail-checkout">
+                        <em>离店</em>
+
+                        <p><span class="data-inout">{{order.endDate}}</span></p>
+                    </a>
+
+                    <a href="javascript:;" class="detail-arrivetime" id="detail-arrivetime">
+                        最晚到店时间
+                        <span>{{order.startDate}} 22:00</span>
+                    </a>
+
+                </div>
+                <div class="detail-warm-notice">
+                    <h3>温馨提示：</h3>
+
+                    <p style="color:#999;">如您在14:00前到店，可能需要等待方能入住，具体以酒店安排为准</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- /团期 -->
+        <!-- 钟点房团期 -->
+
+        <!-- /钟点房团期 -->
+        <!-- 操作 -->
+        <div class="orderDetail-action">
+
+            <div class="action-btn order-again" ng-if="order.orderDetailStatus != 'BOOKING'"
+                 ui-sref="hotelDetail({hotelId: order.hotelId})">再次预订
+            </div>
+            <div class="action-btn order-again disabled" ng-if="order.orderDetailStatus == 'BOOKING'">再次预订</div>
+
+            <!--    <div class="action-btn">取消订单</div>-->
+
+        </div>
+        <!-- /操作 -->
+        <!--取消规则-->
+        <div class="cost-preferential">
+            <div class="orderDetail-mod-hd">费用及优惠</div>
+            <div class="orderDetail-mod-bd">
+                <p><span ng-if="order.priceStatus == 'GUARANTEE'">在线担保</span><span
+                        ng-if="order.priceStatus != 'GUARANTEE'">到店支付</span>：<span class="price">￥<em>{{totalPrice *
+                    order.num}}</em></span></p>
+
+                <div class="details" ng-click="showDetail()">明细</div>
+            </div>
+        </div>
+
+
+        <!-- /费用及优惠 -->
+        <!-- 订单信息 -->
+        <div class="orderDetail-mod">
+            <div class="orderDetail-mod-bd">
+                <div class="orderDetail-info">
+                    <h3 class="title">订单信息</h3>
+
+                    <div class="orderDetail-infoTable toggle" simple-show-more show-height="44" show-class="up">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <th>订单号：</th>
+                                <td>{{order.orderNo}}</td>
+                            </tr>
+                            <tr>
+                                <th>下单时间：</th>
+                                <td>{{order.orderDate}}</td>
+                            </tr>
+
+                            <tr>
+                                <th>房间数：</th>
+                                <td>{{order.num}}间</td>
+                            </tr>
+
+
+                            <tr ng-repeat="tourist in order.tourists">
+                                <th>房间{{$index + 1}}：</th>
+                                <td>{{tourist.name}}</td>
+                            </tr>
+
+
+                            <tr>
+                                <th>联系人：</th>
+                                <td>{{order.contact.name}}</td>
+                            </tr>
+
+
+                            <tr>
+                                <th>手机号：</th>
+                                <td>{{order.contact.telephone}}</td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /订单信息 -->
+        <!-- 发票信息 -->
+        <div class="orderDetail-mod">
+            <div class="orderDetail-mod-bd">
+                <div class="orderDetail-info">
+                    <h3 class="title">发票信息</h3>
+
+                    <div class="orderDetail-infoTable">
+
+
+                        如需开具发票，请到酒店前台领取
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 发票信息 -->
+        <!-- 你可继续操作 -->
+        <!-- /你可继续操作 -->
+        <!-- 在线支付 -->
+        <!--现付非担保的订单不展示-->
+
+        <!--<div class="online-pay" ng-if="order.orderStatus == 'WAIT'">-->
+        <!--<span class="pay-total-price">-->
+        <!--<div class="show_price">-->
+        <!--<div class="pay_name">在线担保:&nbsp;<span class="price">￥<em>{{totalPrice * order.num}}</em></span>-->
+        <!--</div>-->
+        <!--<div class="pay_name" style="font-size: 1rem;color: #776F6F;">到店支付:&nbsp;<span class="price"-->
+        <!--style="font-size: 1rem;">￥<em-->
+        <!--style="font-size: 1rem;">{{totalPrice * order.num}}</em></span></div>-->
+        <!--</div>-->
+        <!--<span class="detail day-detail" ng-click="showDetail()">明细</span>-->
+        <!--</span>-->
+        <!--<span class="submit-btn submit-btn-guarantee" id="submit">去担保</span>-->
+        <!--</div>-->
+
+
+        <!-- /在线支付 -->
+        <!-- 费用明细 -->
+        <div class="details-model" ng-click="showDetail()">
+            <div class="details-model-bd">
+                <h3 class="details-title">费用明细</h3>
+                <dl class="details-list">
+                    <dt>
+
+
+                        到店支付
+
+
+          <span class="price">
+            ￥<em>{{totalPrice * order.num}}</em>
+          </span>
+                    </dt>
+
+                    <dd ng-repeat="calendar in order.calendarList">
+                <span class="day">
+                {{calendar.showDate}}
+<!--                <span>无早</span>-->
+                </span>
+                        <span class="rate-plan">￥<em>{{calendar.member}}</em>×<em>{{order.num}}</em>间</span>
+                    </dd>
+                </dl>
+
+                <dl class="details-list">
+
+
+              <span class="fr" ng-if="order.priceStatus == 'GUARANTEE'">
+              在线担保:￥<em>{{totalPrice * order.num}}</em>
+              </span>
+
+
+                </dl>
+
+            </div>
+        </div>
+        <!-- /费用明细 -->
+    </div>
+    <div id="feedback"></div>
+    <div class="help-mask hide whats-mask" id="invoiceHelp">
+        <div class="helpWrapper">
+            <h1>发票说明</h1>
+
+            <p class="content">发票金额不包含旅游券、优惠码、立减优惠等活动支付的金额。发票将在您离店后的5个工作日内为您免费寄出。</p>
+        </div>
+    </div>
+</div>

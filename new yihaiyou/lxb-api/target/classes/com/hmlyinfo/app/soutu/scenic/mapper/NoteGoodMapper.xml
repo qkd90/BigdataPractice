@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.NoteGoodMapper">
+    <insert id="insert" parameterType="NoteGood">
+        insert into tb_note_good
+        (
+        id,
+        note_image_id,
+        user_id,
+        modify_time,
+        create_time
+        )
+        values
+        (
+        #{id},
+        #{noteImageId},
+        #{userId},
+        #{modifyTime},
+        #{createTime}
+        )
+    </insert>
+
+    <update id="update" parameterType="NoteGood">
+        update tb_note_good
+        <set>
+            <if test="noteImageId != null and '' != noteImageId"> note_image_id = #{noteImageId},</if>
+            <if test="userId != null and '' != userId"> user_id = #{userId},</if>
+            <if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+        </set>
+        where
+        id = #{id}
+    </update>
+
+    <delete id="del" parameterType="NoteGood">
+        delete from
+        tb_note_good
+        where
+        id = #{id}
+    </delete>
+
+    <select id="selById" resultType="NoteGood">
+        select
+        *
+        from
+        tb_note_good
+        where
+        id = #{id}
+    </select>
+
+    <select id="count" resultType="int">
+        select
+        count(*)
+        <include refid="byProperty"/>
+    </select>
+
+    <select id="list" resultType="NoteGood">
+        select
+        *
+        <include refid="byProperty"/>
+    </select>
+
+    <sql id="byProperty">
+        from
+        tb_note_good
+        <where>
+            <if test="id != null and '' != id"> and id = #{id} </if>
+            <if test="noteImageId != null and '' != noteImageId"> and note_image_id = #{noteImageId} </if>
+            <if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+            <if test="ids != null">
+                and id in ( <if test="ids.size() == 0">-1000</if>
+                <foreach collection="ids" item="item" index="index" separator=",">#{item}
+                </foreach>
+                )
+            </if>
+        </where>
+    </sql>
+</mapper>

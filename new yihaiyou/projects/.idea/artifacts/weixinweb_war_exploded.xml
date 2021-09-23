@@ -1,0 +1,30 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="weixinweb:war exploded">
+    <output-path>$PROJECT_DIR$/weixin/weixinweb/target/weixinweb-0.0.1-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="weixinweb" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="weixinservice-0.0.1-SNAPSHOT.jar">
+            <element id="module-output" name="weixinservice" />
+          </element>
+          <element id="library" level="project" name="Maven: com.data.data:common:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:lineservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:userservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:areaservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:wechatservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:frame:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:userweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:shopcartweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:payweb:classes:0.0.1-SNAPSHOT" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/weixin/weixinweb/target/weixinweb-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="weixinweb/web/Web" />
+    </root>
+  </artifact>
+</component>

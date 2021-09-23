@@ -1,0 +1,88 @@
+.advert {
+    width: 100%;
+    height: 255px;
+    position: relative;
+    font-family: '微软雅黑';
+    border-top: 2px solid #3996fa;
+}
+
+.advert img {
+    width: 100%;
+    height: 255px;
+    /*min-width: 1900px;*/
+}
+
+.personal_nav {
+    width: 100%;
+    height: 60px;
+    background:#3996fa;
+}
+
+.personal_nav .nav_center {
+    height: 100%;
+    margin: auto;
+    width: 1180px;
+    font-family: '微软雅黑';
+}
+
+.nav_center .personal_face {
+    float: left;
+    width: 180px;
+    height: 100%;
+    margin-left: 130px;
+    position: relative;
+    background: #ff8800;
+    text-align: center;
+}
+
+.personal_face .face {
+    top: -27px;
+    left: -98px;
+    width: 104px;
+    height: 100px;
+    overflow: hidden;
+    border-radius:50%;
+    position: absolute;
+    border:4px solid #fff;
+}
+
+.personal_face .face img {
+    width: 100%;
+    height:100%;
+}
+
+.personal_face .name {
+    color: #fff;
+    height: 100%;
+    font-size: 14px;
+    line-height: 60px;
+}
+
+.personal_face .face img.req-login,
+.personal_face span.req-login {
+    cursor: pointer;
+}
+
+.nav_center ul {
+    float: right;
+}
+
+.nav_center ul li {
+    float: left;
+    color: #fff;
+    width: 132px;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 60px;
+    text-align: center;
+}
+
+.nav_center ul li a {
+    display: block;
+    color: #fff;
+    font-size:16px;
+}
+
+.nav_center .per_active {
+    background: #2c6dea;
+}

@@ -1,0 +1,83 @@
+<div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+  <ul>
+    <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">编辑游记</a></li>
+    <li class="pull-right">
+      <button type="button" class="fabu btn" data-toggle="modal" data-target="#jinggao">发布</button></li>
+  </ul>
+</div>
+<div id="subcontainer" class="clearfix">
+  <div class="xie-title yjbox col-xs-12">
+    <p><input type="text" class="form-control" id="youjititle" value="游记标题"></p>
+  </div>
+  <div class="col-xs-12 yjbox yjoneday detail">
+    <h2 class="title clearfix"><span class="pull-left">第一天</span><span class="pull-right trash"><a onclick="deleteRowOne($(this));" class="img-circle"><img src="images/ico/trash.png" /></a></span></h2>
+    <div class="clearfix youjicontent"><button type="text" class="form-control" id="youjititle" >写写第一天经历与感受吧</button></div>
+    <div class="clearfix deleterow">
+    <h2 class="jingdian icobg">鼓浪屿<span class="pull-right trash"><a onclick="deleteRow($(this));" class="img-circle"><img src="images/ico/trash.png" /></a></span></h2>
+         <div class="content-text">
+           <p>文艺青年自助游。屌丝朋友群游必达之地！东西有点贵喔。很多吃的很多好看好玩的。</p>
+           <p><img src="images/youji/m1.jpg" class="img-responsive" /></p>
+           <p><img src="images/youji/m2.jpg" class="img-responsive" /></p>
+           <p><a href="#" class="center-block text-center"><img src="images/ico/my-xie-jia.jpg" /></a></p>
+         </div>
+    </div>
+    <div class="clearfix deleterow">
+    <h2 class="jiudian icobg">酒店<span class="pull-right trash"><a onclick="deleteRow($(this));" class="img-circle"><img src="images/ico/trash.png" /></a></span></h2>
+         <div class="content-text">
+           <p>文艺青年自助游。屌丝朋友群游必达之地！东西有点贵喔。很多吃的很多好看好玩的。</p>
+           <p><img src="images/youji/m3.jpg" class="img-responsive" /></p>
+           <p><img src="images/youji/m4.jpg" class="img-responsive" /></p>
+           <p><a href="#" class="center-block text-center"><img src="images/ico/my-xie-jia.jpg" /></a></p>
+         </div>
+    </div>
+    <div class="meishiinfo deleterow">
+    <h2 class="meishi icobg">美食<span class="pull-right trash"><a onclick="deleteRow($(this));" class="img-circle"><img src="images/ico/trash.png" /></a></span></h2>
+         <div class="content-text">
+           <p>文艺青年自助游。屌丝朋友群游必达之地！东西有点贵喔。很多吃的很多好看好玩的。</p>
+           <p><img src="images/youji/m5.jpg" class="img-responsive" /></p>
+           <p><img src="images/youji/m6.jpg" class="img-responsive" /></p>
+           <p><a href="#" class="center-block text-center"><img src="images/ico/my-xie-jia.jpg" /></a></p>
+         </div>
+    </div>
+  </div>
+  <div class="col-xs-12 yjbox yjoneday detail">
+    <h2 class="title clearfix"><span class="pull-left">第二天</span><span class="pull-right trash"><a onclick="deleteRowOne($(this));" class="img-circle"><img src="images/ico/trash.png" /></a></span></h2>
+    <div class="clearfix youjicontent"><input type="text" class="form-control" id="youjititle" value="写写第一天经历与感受吧 "></div>
+    <div class="clearfix deleterow">
+    <h2 class="jingdian icobg">鼓浪屿<span class="pull-right trash"><a onclick="deleteRow($(this));" class="img-circle"><img src="images/ico/trash.png" /></a></span></h2>
+         <div class="content-text">
+           <p>文艺青年自助游。屌丝朋友群游必达之地！东西有点贵喔。很多吃的很多好看好玩的。</p>
+           <p><img src="images/youji/m1.jpg" class="img-responsive" /></p>
+           <p><img src="images/youji/m2.jpg" class="img-responsive" /></p>
+           <p><a href="#" class="center-block text-center"><img src="images/ico/my-xie-jia.jpg" /></a></p>
+         </div>
+    </div>
+    <div class="clearfix deleterow">
+    <h2 class="jiudian icobg">酒店<span class="pull-right trash"><a onclick="deleteRow($(this));" class="img-circle"><img src="images/ico/trash.png" /></a></span></h2>
+         <div class="content-text">
+           <p>文艺青年自助游。屌丝朋友群游必达之地！东西有点贵喔。很多吃的很多好看好玩的。</p>
+           <p><img src="images/youji/m3.jpg" class="img-responsive" /></p>
+           <p><img src="images/youji/m4.jpg" class="img-responsive" /></p>
+           <p><a href="#" class="center-block text-center"><img src="images/ico/my-xie-jia.jpg" /></a></p>
+         </div>
+    </div>
+    <div class="meishiinfo deleterow">
+    <h2 class="meishi icobg">美食<span class="pull-right trash"><a onclick="deleteRow($(this));" class="img-circle"><img src="images/ico/trash.png" /></a></span></h2>
+         <div class="content-text">
+           <p>文艺青年自助游。屌丝朋友群游必达之地！东西有点贵喔。很多吃的很多好看好玩的。</p>
+           <p><img src="images/youji/m5.jpg" class="img-responsive" /></p>
+           <p><img src="images/youji/m6.jpg" class="img-responsive" /></p>
+           <p><a href="#" class="center-block text-center"><img src="images/ico/my-xie-jia.jpg" /></a></p>
+         </div>
+    </div>
+  </div>
+</div>
+<script>
+//删除
+function deleteRow(obj) {
+    obj.parents(".deleterow").remove();
+}
+function deleteRowOne(obj) {
+    obj.parents(".yjoneday").remove();
+}
+</script>

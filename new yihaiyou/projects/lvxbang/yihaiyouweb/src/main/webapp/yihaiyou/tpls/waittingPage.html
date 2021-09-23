@@ -1,0 +1,20 @@
+<style>
+    .waittingPage img {
+        width:300px;
+    }
+</style>
+<div class="waittingPage">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        ***
+    </div>
+    <img class="img" src="/yihaiyou/image/waittingPage.png">
+</div>
+
+<script>
+    var m_top = (window.screen.height - 233)/2 - 30;
+    var m_left = (window.screen.width - 300)/2;
+    var height = window.screen.height;
+    console.info();
+        $('.waittingPage .img').css({'marginTop':m_top,'marginLeft':m_left});
+</script>

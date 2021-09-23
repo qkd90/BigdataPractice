@@ -1,0 +1,927 @@
+.secnav{
+	width: 100%;
+	height: 40px;
+	border-bottom:1px solid #c2c2c2;
+	box-shadow: 0 1px 2px #c2c2c2;
+	background-color: #3c3c3c;
+	border-top:1px solid #555;
+}
+
+.secnav_list{
+	width:1200px;
+	margin:auto;
+}
+
+.secnav_list ul {
+	width:405px;
+	float:right;
+	margin-right:555px;
+}
+
+.secnav_list ul li{
+	width:100px;
+	height:40px;
+	float:left;
+	font-size:12px;
+	text-align:center;
+	line-height:40px;
+	color:#888;
+	cursor: pointer;
+	font-weight: 600
+}
+
+.secnav_list .HSsec_active{
+	border-bottom:4px solid #bbb;
+	color:#999!important;
+	height:38px;
+}
+
+.roomset{
+	display:none;
+}
+
+.yhy-form-control, .roomPrice,.roomBaseMess,.roomType {
+	width: 1200px;
+	margin:14px auto 0 auto;
+	background-color: #fff;
+	position: relative;
+}
+#hotelInfoForm .has-feedback .form-control-feedback {
+    top: 0px;
+    right: -30px;
+}
+
+#hotelInfoForm .has-feedback .service .form-control-feedback {
+	top: 0px;
+	right: -366px;
+}
+
+#hotelInfoForm .has-feedback .help-block {
+    margin-left: 128px;
+}
+#hotelRoomTypeForm .has-feedback .form-control-feedback {
+    top: 0px;
+    right: -30px;
+}
+#hotelRoomTypeForm .has-feedback .help-block {
+    margin-left: 120px;
+}
+
+.roomBaseMess {
+    padding-top: 1px;
+	padding-bottom: 1px;
+	border:1px solid #dcdedf;
+}
+
+.roomPrice ul {
+	margin-bottom:0;
+}
+
+.selectBar {
+	height:66px;
+	clear: both;
+	background: url(/images/yhy/background.png) repeat 0 0;
+	background-size: 1px 1px;
+}
+
+.selectBar .selectBar_1{
+	width:auto;
+	float:right;
+	margin-top:16px;
+}
+
+.selectBar .selectBar_1 div{
+	float:left;
+	box-shadow: 0 1px 1px #ddd;
+}
+
+.selectBar .dropdown {
+	margin-right:20px;
+}
+
+.selectBar .input-group {
+	border-radius:4px;
+	margin-right:20px;
+}
+
+.selectBar .input-group .form-control {
+	width: 200px;
+	height:30px;
+	border-radius:4px!important;
+}
+
+.selectBar .roomemess {
+	display: block;
+	float:left;
+	height:30px;
+	line-height:30px;
+	margin-right:8px;
+	font-size:12px;
+	color: #333;
+}
+
+.selectBar .btn-group .btn a {
+	color:#fff!important;
+}
+
+.selectBar .dropdown .dropdown-menu{
+	min-width:100px;
+}
+
+.roomPrice .messageList_header {
+	width:1200px;
+	background: url(/images/yhy/background.png) repeat 0 0;
+	background-size: 1px 1px;
+}
+
+.roomPrice .messageList_header ul li{
+	float:left;
+	text-align: center;
+	line-height:50px;
+	font-size: 14px;
+	color:#333;
+}
+
+.roomPrice .messageList_header .roomName {
+	width:238px;
+}
+
+.roomPrice .messageList_header .roomDescribe {
+	width:270px;
+}
+
+
+.roomPrice .messageList_header .pri_describ {
+	width: 250px;
+}
+
+.roomPrice .messageList_header .pri_operate {
+	width: 244px!important;
+}
+
+.roomPrice .messageList_header .pri_operate span {
+	width:25%!important;
+}
+
+
+.roomPrice .messageList_header .roomAmount {
+    width: 100px;
+}
+.roomPrice .messageList_header .roomNum {
+	width:218px;
+	text-align:left;
+}
+
+.roomPrice .messageList_header .roomLive {
+	width:100px;
+}
+
+.roomPrice .messageList_header .roomState {
+	width:126px;
+}
+
+.roomPrice .messageList_header .roomOperate {
+	width:224px;
+	text-align: left;
+}
+
+.roomPrice .messageList_header .roomSort {
+	width:100px;
+}
+
+.roomPrice .messageList_header .roomState {
+	width:126px;
+}
+
+.roomPrice .messageList_header table {
+	margin-bottom: 0;
+}
+
+.roomPrice .messageList_header table tr td {
+	vertical-align: middle;
+	text-align:center;
+	font-size: 12px;
+	color: #666;
+	line-height: 18px;
+	border-right:1px solid #ddd;
+	padding:0;
+}
+
+/*.roomType tbody tr td:last-child {*/
+	/*width: 246px;*/
+/*}*/
+
+.roomPrice .messageList_header .roomOperate span {
+	width: 25%;
+	line-height: 40px;
+	color: #118ed1;
+	text-align: center;
+	display: block;
+	float:left;
+	cursor:pointer;
+}
+
+.roomPrice .messageList_header .roomOperate span:hover {
+	text-decoration: underline;
+}
+.link-span:hover {
+    text-decoration: underline;
+}
+
+.roomPrice .messageList_header .roomOperate .detail {
+	width:100%;
+}
+
+.roomPrice .messageList_header span.delete {
+	float:right;
+}
+
+
+/*民宿管理/基础信息*/
+
+.roomMine .messageList_header .roomName {
+	width:238px;
+}
+
+.roomMine .messageList_header .roomDescribe {
+	width:310px;
+}
+
+.roomMine .messageList_header .roomContact {
+	width: 167px;
+	/*padding: 0 13px;*/
+}
+
+.roomMine .messageList_header .roomPhone {
+	width: 167px;
+}
+
+.roomMine .messageList_header .roomState {
+	width: 126px;
+}
+
+.roomMine .messageList_header .roomOperate {
+	width: 334px;
+}
+
+.roomMine .messageList_header .roomOperate span {
+	width: 33%;
+}
+
+
+.roomBaseMess .leftTitle{
+	display: block;
+	float: left;
+	margin-right:15px;
+	line-height:30px;
+	color: #000;
+	font-size:14px;
+	margin-left:60px!important;
+	font-weight:600;
+    margin-bottom: 0px;
+    max-width: none;
+}
+.roomBaseMess .rightTitle {
+    display: inline;
+    margin-left: 6px;
+    /*zoom: 1;*/
+    font-weight: normal;
+}
+
+
+.roomBaseMess .starColor ,
+.price-calendar-info .starColor {
+	color: #ff4444;
+	font-size: 25px;
+	line-height: 40px;
+	display: block;
+	float: left;
+	width: 10px;
+	height: 30px;
+}
+
+.roomBaseMess .starColor_white {
+	color: #fff;
+	font-size: 25px;
+	line-height: 40px;
+	display: block;
+	float: left;
+	width: 10px;
+	height: 30px;
+}
+
+.roomBaseMess .input-group {
+	float:left;
+	border-radius:4px;
+}
+
+.roomBaseMess .outDiv {
+	margin-top:16px;
+	position: relative;
+}
+.roomBaseMess .homestayName {
+	width:300px;
+}
+
+.roomBaseMess .homestayLevel {
+    height:30px;
+    font-size:12px;
+    color:#333;
+    width: 150px;
+    text-align:left;
+    padding: 0 0 0 6px;
+    line-height:30px;
+}
+.roomBaseMess .homestayLevel span.caret {
+    float: right;
+    margin: 13px 12px;
+}
+.roomBaseMess .homestayAddress {
+	font-size:12px;
+	width:300px;
+	/*height:30px;*/
+	/*line-height:30px;*/
+	color: #333;
+	border-radius:5px;
+	float:left;
+    background-color: #fff;
+}
+.roomBaseMess .homestayAddress.readonly {
+	background-color: #eee;
+}
+
+/*地址选择框  开始  */
+
+.roomBaseMess .addressSel {
+	width:300px;
+	position: absolute;
+	left: 126.82px;
+	top: 30px;
+    /**left: 126.82px;*/
+    /*left: 126.82px\0;*/
+	z-index: 10;
+	background-color: #fff;
+	display: none;
+}
+
+.roomBaseMess .addressSel .titleUl {
+	border:1px solid #d1d1d1;
+	margin-bottom:0;
+	background-color: #f5f5f5;
+}
+
+.roomBaseMess .addressSel .titleUl .active {
+	color: #f60;
+	background-color: #fff;
+}
+.roomBaseMess .addressSel .selbox {
+    padding: 5px;
+}
+.roomBaseMess .addressSel ul li {
+	width: 74px;
+	float:left;
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.roomBaseMess .addressSel ul .titleLi {
+	border-right:1px solid #d1d1d1;
+}
+
+.addressSel .province,.addressSel .city,.addressSel .area,.addressSel .street {
+	width:300px;
+    min-height: 120px;
+	border:1px solid #d1d1d1;
+	border-top:none;
+	box-shadow: 0 0 4px 1px #dfdfdf;
+	display: none;
+}
+
+.addressSel .province span {
+	display: block;
+	float: left;
+	width: 48px;
+	line-height:35px;
+	height: 30px;
+	text-align: center;
+}
+
+.addressSel .province ul {
+	width: 250px;
+	float: left;
+}
+
+.addressSel .province ul li{
+	width: 50px;
+	float: left;
+	height: 30px;
+	text-align: center;
+	font-size: 13px;
+	cursor: pointer;
+	line-height:30px;
+}
+.roomBaseMess .addressSel div.selbox ul li.selected {
+    color: #fff;
+    background: #292929;
+}
+.roomBaseMess .addressSel .provinceUl li:hover,
+.roomBaseMess .addressSel .city li:hover,
+.roomBaseMess .addressSel .area li:hover,
+.roomBaseMess .addressSel .street li:hover
+ {
+	color: #f60;
+}
+.roomBaseMess .addressSel .provinceUl li.selected:hover,
+.roomBaseMess .addressSel .city li.selected:hover,
+.roomBaseMess .addressSel .area li.selected:hover,
+.roomBaseMess .addressSel .street li.selected:hover
+{
+    color: #fff;
+}
+.addressSel .city ul li,.addressSel .area ul li {
+	width: 50px;
+	height:30px;
+	line-height:30px;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+.addressSel .area ul li,.addressSel .street ul li {
+	width: 50px;
+	height:30px;
+	line-height:30px;
+	font-size: 13px;
+	cursor: pointer;
+}
+/*地址选择框  结束  */
+
+
+.yhy-form-group .writLimit {
+	position: absolute;
+    top: -17px;
+	right:0px;
+    margin-left: 5px;
+	font-size:10px;
+	color: #9d9eae
+}
+
+.roomBaseMess .outDiv .remind_service,.roomBaseMess .outDiv .remind_policy,.outDiv .remind_describ,.outDiv .remind_beKnow {
+	position:absolute;
+	left:720px;
+	top: 10px;
+	font-size:12px;
+	background-color: #f5f5f5;
+	width:200px;
+	height:100px;
+	border-radius:10px;
+	padding:12px;
+	letter-spacing: 1px;
+	line-height: 17px;
+	color: #333;
+	display: none;
+}
+
+.roomBaseMess .outDiv .service {
+	width:750px;
+	/*height:180px;*/
+	border:1px solid #d1d1d1;
+	border-radius:5px;
+	float:left;
+	padding:10px;
+}
+
+.roomBaseMess .service .checkbox-inline {
+	color: #333;
+	font-size:12px;
+	margin:5px 10px;
+	width:120px;
+	height: 30px;
+	line-height:30px;
+	font-family: SimSum;
+}
+.roomBaseMess .outDiv .service.readonly .checkbox-inline {
+	cursor: default;
+}
+
+.roomBaseMess .service .checkbox-inline input {
+	width:16px;
+	height:16px;
+	margin-top: 7px;
+}
+
+.roomBaseMess .photo {
+	float:left;
+	width:800px;
+	border:1px solid #d1d1d1;
+	border-radius:5px;
+	padding: 20px 10px 20px 0!important;
+	margin-left:1px;
+	position: relative;
+}
+
+.roomBaseMess .photo .col-md-3 {
+	text-align: center;
+	padding:0;
+}
+
+.roomBaseMess .photo .col-md-3 img {
+	width: 168px;
+	height:180px;
+	border-radius:5px;
+}
+
+.roomBaseMess .submitBT {
+	width: 100px;
+	height:40px;
+	border-radius:5px;
+	color: #fff;
+	font-size:16px;
+	text-align:center;
+	background-color:#478ff1;
+	line-height:40px;
+	margin:30px auto;
+}
+
+.roomBaseMess .photo .col-md-3 {
+	height:180px;
+	position:relative;
+}
+
+.roomBaseMess .photo .addPhoto {
+	background-color: #f5f5f5;
+	width: 168px;
+	height:180px;
+	margin:0 auto 0 auto;
+	padding-top:1px;
+	border-radius:5px;
+}
+
+.roomBaseMess .photo .addPhoto p.line1 {
+	font-size:12px;
+	color: #666;
+	margin: 17px 0 2px 0;
+	font-family: AdobeInvisFont;
+}
+
+.roomBaseMess .photo .addPhoto div.line2 {
+	width: 100%;
+	height:71px;
+	background: url(/images/yhy/addpic.png) no-repeat center center;
+	background-size:55px 43px;
+}
+.roomBaseMess .photo .addPhoto p.line3 {
+	font-size:20px;
+	color: #4790ee;
+	font-family: MicrosoftYaHei;
+}
+
+.roomBaseMess .photo .addPhoto p.line4 {
+	font-size: 14px;
+	color:#009666;
+	font-family: AdobeInvisFont;
+}
+
+.roomBaseMess .photo .faceDel {
+	position: absolute;
+	left:12.67px;
+	bottom: 0;
+	border-radius:0 0 5px 5px;
+	background-color: rgba(0,0,0,0.5);
+	width: 168px;
+	height: 40px;
+}
+
+.roomBaseMess .photo .faceDel p span {
+	color: #fff;
+	font-family: AdobeInvisFont;
+	text-align: center;
+	display: block;
+	float: left;
+	line-height: 40px;
+}
+
+.roomBaseMess .photo .faceDel p span.font {
+	font-size: 12px;
+	width: 48%;
+}
+
+.roomBaseMess .photo .faceDel p span.border {
+	font-size: 16px;
+	width: 4%;
+}
+
+.roomBaseMess .photo img.biaoqian {
+	position: absolute;
+	top: 0;
+	left: 13.57px;
+	width: 50px;
+	height: 50px;
+}
+
+.roomBaseMess .roomNumber input{
+	width:100px;
+}
+.yhy-form-group .room-number-group {
+    max-width: 600px;
+    display: inline-block;
+}
+.yhy-form-group .room-number-group .room-number-item {
+    float: left;
+    padding-top: 5px;
+}
+.yhy-form-group .room-number-group .room-number-item.readonly {
+	padding-top: 0px;
+}
+.yhy-form-group .room-number-group .room-number-item.readonly + .room-number-item.readonly {
+	margin-left: 5px;
+}
+.yhy-form-ctrl.room-number {
+    width: 100px;
+}
+.roomBaseMess .yhy-form-group .delRoom {
+	float:left;
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 20px;
+	border:1px solid #d1d1d1;
+	margin:5px 20px 5px 10px;
+    cursor: pointer;
+}
+.roomBaseMess .yhy-form-group .delRoom:hover {
+    background-color: #f77;
+    color: #fff;
+    border: none;
+}
+
+.roomType .addRommBT {
+	width: 80px;
+	height: 24px;
+	float: left;
+    clear: both;
+	border:1px solid #d1d1d1;
+	border-radius:10px;
+	margin-top:3px;
+    cursor: pointer;
+    margin-left: 127px;
+}
+.roomType .addRommBT:hover {
+    background-color: #e8e8e8;
+}
+
+.roomType .addRommBT span {
+	display: block;
+	line-height: 24px;
+	float: left;
+	color: #333;
+}
+
+.roomType .addRommBT span.jia {
+	font-size: 16px;
+	text-align: center;
+	font-weight: 600;
+	width: 45%;
+	text-indent: 5px;
+}
+
+.roomType .addRommBT span.fangjian {
+	font-size: 12px;
+	text-align: left;
+	width: 55%;
+	font-family: AdobeInvisFont;
+}
+
+.roomType .outDiv .cludBreak {
+	float: left;
+	line-height: 30px;
+}
+
+.roomType .outDiv .cludBreak span {
+	padding:0 23px;
+	display: block;
+	float: left;
+	cursor: pointer;
+	background:url(/images/yhy/icon-NO.png) no-repeat left center;
+	background-size:16px;
+}
+
+.roomType .outDiv .cluSure span {
+	padding:0 25px;
+}
+
+.roomType .outDiv .cludBreak .selected {
+	background:url(/images/yhy/icon-YES.png) no-repeat left center;
+	background-size:16px;
+}
+
+.Shadow {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	display: none;
+}
+textarea.yhy-form-ctrl.addressDe {
+    width:300px;
+    height:60px;
+    padding:5px 12px;
+    font-size: 12px;
+    line-height:20px;
+    background-color:#f5f5f5;
+}
+textarea.yhy-form-ctrl.hotel-intro {
+    width: 650px;
+    padding:5px 12px;
+    height:200px;
+    font-size:12px;
+    color:#333;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+}
+textarea.yhy-form-ctrl.hotel-policy {
+    width: 650px;
+    padding:5px 12px;
+    height:200px;
+    font-size:12px;
+    color:#333;
+    line-height: 22px;
+}
+textarea.yhy-form-ctrl.hotel-room-des {
+    width: 600px;
+    padding:6px 12px;
+    height:200px;
+    font-size:12px;
+    color:#333;
+    line-height: 22px;
+}
+textarea.yhy-form-ctrl.hotel-change-rule {
+    width: 600px;
+    padding:6px 12px;
+    height:200px;
+    font-size:12px;
+    color:#333;
+    line-height: 22px;
+}
+.roomPrice .selectBar .addmore {
+	margin:16px 0 0 0;
+}
+
+.roomBaseMess .btn1 {
+	 width: 100px;
+	 height:40px;
+	 font-size: 16px;
+	 color: #333;
+	 font-family: SimSum;
+	 box-shadow: 0 2px 2px #ccc;
+	 float:left;
+ }
+
+.roomBaseMess .btn2 {
+	width: 100px;
+	height:40px;
+	font-size: 16px;
+	color: #fff;
+	font-family: SimSum;
+	background-color: #4790ee;
+	border: none;
+	box-shadow: 0 2px 2px #ccc;
+	float:right;
+}
+
+.roomBaseMess .btn1:hover {
+	background-color: #f5f5f5;
+	color: #555;
+}
+
+.roomBaseMess .btn2:hover {
+	background-color: #2681f0;
+	color: #fff;
+}
+
+
+/*.roomPrice .messageList_header .roomOperate span.delete {*/
+	/*float: right;*/
+/*}*/
+
+/*.roomPrice .messageList_header .roomOperate span.detail {*/
+	/*width: 100%;*/
+/*}*/
+
+/*.operationBox .modal-dialog {*/
+	/*width:280px;*/
+	/*margin-top:250px;*/
+/*}*/
+
+/*.operationBox .modal-dialog .modal-body {*/
+	/*text-align: center;*/
+	/*font-size:15px;*/
+	/*color: #333;*/
+	/*line-height:50px;*/
+/*}*/
+
+/*.operationBox .modal-dialog .modal-footer button.btn {*/
+	/*width:65px;*/
+	/*height:30px;*/
+	/*font-size:13px;*/
+	/*padding: 0;*/
+	/*box-shadow:0 1px 2px #ccc;*/
+/*}*/
+
+/*.operationBox .modal-dialog .modal-footer .btn-primary {*/
+	/*float: left;*/
+	/*margin-left:50px;*/
+	/*background-color:#478ff1;*/
+	/*background-image:none;*/
+	/*border:1px solid #478ff1;*/
+/*}*/
+
+/*.operationBox .modal-dialog .modal-footer .btn-default {*/
+	/*float: right;*/
+	/*margin-right:50px*/
+/*}*/
+
+.roomBaseMess .mineBtn {
+	width: 250px;
+	height: 40px;
+	margin: 30px auto;
+}
+
+table.dataTable thead tr {
+	height:50px;
+	background: linear-gradient( #f9f9f9 0%, #f0f0f0 100%);
+	border: 1px solid #ddd;
+}
+
+table.dataTable thead th {
+	border-bottom:0;
+	padding: 15px 18px;
+}
+
+.detail_header {
+	width:110px;
+	position:absolute;
+	top:25px;
+	right:40px;
+}
+
+.detail_header .return {
+	float: right;
+	width: 106px;
+	height: 28px;
+	line-height: 28px;
+	background:url(/images/yhy/icon-return.png) no-repeat center center;
+	background-size:100%;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.detail_header .return:hover {
+	background:url(/images/yhy/icon-return01.png) no-repeat center center;
+	background-size:100%;
+}
+
+/*.roomType tbody tr td:last-child {*/
+	/*width:246px;*/
+/*}*/
+
+.roomType tbody tr td:last-child a {
+	width:25%;
+}
+
+.roomMine tbody tr td:last-child a {
+	width:25%;
+}
+
+.outDiv .photo .advice {
+	width:330px;
+	font-family: '微软雅黑';
+	position:absolute;
+	right:0;
+	bottom:30px;
+	color:#aaa;
+}
+
+.up,.down {
+	float:right;
+	width:20px;
+	height:20px;
+	cursor: pointer;
+}
+
+.up {
+	background: url(/images/yhy/icon-ace.png) no-repeat center center;
+}
+
+.down {
+	background: url(/images/yhy/icon-dace.png) no-repeat center center;
+}

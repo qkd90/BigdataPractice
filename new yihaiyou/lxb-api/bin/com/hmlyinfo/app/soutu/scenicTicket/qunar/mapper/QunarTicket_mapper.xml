@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenicTicket.qunar.mapper.QunarTicketMapper">
+	<insert id="insert" parameterType="QunarTicket" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_ticket_qunar
+			(
+				id,
+				product_id,
+				product_name,
+				ticket_type_name,
+				scenic_id,
+				sight_id_list,
+				sight_name_list,
+				pay_way,
+				status,
+				delay_pay_time,
+				need_contact_mobile,
+				need_contact_name,
+				need_contact_pinyin,
+				need_contact_email,
+				need_contact_postal_info,
+				passenger_info_per_num,
+				need_traveller_info,
+				need_passenger_name,
+				need_passenger_pinyin,
+				need_passenger_IDCard,
+				need_passenger_passport,
+				need_passenger_taiwan_permit,
+				need_passenger_HKAndMacau_permit,
+				need_passenger_user_definedI,
+				need_passenger_user_definedII,
+				passenger_user_definedI,
+				passenger_user_definedII,
+				limit_enter_type,
+				advance_day,
+				advance_time,
+				enter_after_book_hour,
+				team_type,
+				can_use_date,
+				accurate_dayofweek,
+				limit_use_time_range,
+				use_time_range_start,
+				use_time_range_end,
+				use_description,
+				fee_description,
+				can_refund,
+				refund_advance_day,
+				refund_advance_time,
+				refund_poundage_type,
+				refund_poundage,
+				refund_description,
+				supplier_name,
+				supplier_tel_phone,
+				publish_time,
+				expire_time,
+				primary_flag,
+				season_ticket_flag,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{productId},
+				#{productName},
+				#{ticketTypeName},
+				#{scenicIds},
+				#{sightIdList},
+				#{sightNameList},
+				#{payWay},
+				#{status},
+				#{delayPayTime},
+				#{needContactMobile},
+				#{needContactName},
+				#{needContactPinyin},
+				#{needContactEmail},
+				#{needContactPostalInfo},
+				#{passengerInfoPerNum},
+				#{needTravellerInfo},
+				#{needPassengerName},
+				#{needPassengerPinyin},
+				#{needPassengerIDCard},
+				#{needPassengerPassport},
+				#{needPassengerTaiwanPermit},
+				#{needPassengerHKAndMacauPermit},
+				#{needPassengerUserDefinedI},
+				#{needPassengerUserDefinedII},
+				#{passengerUserDefinedI},
+				#{passengerUserDefinedII},
+				#{limitEnterType},
+				#{advanceDay},
+				#{advanceTime},
+				#{enterAfterBookHour},
+				#{teamType},
+				#{canUseDate},
+				#{accurateDayofweek},
+				#{limitUseTimeRange},
+				#{useTimeRangeStart},
+				#{useTimeRangeEnd},
+				#{useDescription},
+				#{feeDescription},
+				#{canRefund},
+				#{refundAdvanceDay},
+				#{refundAdvanceTime},
+				#{refundPoundageType},
+				#{refundPoundage},
+				#{refundDescription},
+				#{supplierName},
+				#{supplierTelPhone},
+				#{publishTime},
+				#{expireTime},
+				#{primaryFlag},
+				#{seasonTicketFlag},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="QunarTicket">
+		update tb_ticket_qunar
+		<set>
+			<if test="productId != null"> product_id = #{productId},</if>
+			<if test="productName != null"> product_name = #{productName},</if>
+			<if test="ticketTypeName != null"> ticket_type_name = #{ticketTypeName},</if>
+			<if test="scenicIds != null"> scenic_id = #{scenicIds},</if>
+			<if test="sightIdList != null"> sight_id_list = #{sightIdList},</if>
+			<if test="sightNameList != null"> sight_name_list = #{sightNameList},</if>
+			<if test="payWay != null"> pay_way = #{payWay},</if>
+			<if test="status != null"> status = #{status},</if>
+			<if test="delayPayTime != null"> delay_pay_time = #{delayPayTime},</if>
+			<if test="needContactMobile != null"> need_contact_mobile = #{needContactMobile},</if>
+			<if test="needContactName != null"> need_contact_name = #{needContactName},</if>
+			<if test="needContactPinyin != null"> need_contact_pinyin = #{needContactPinyin},</if>
+			<if test="needContactEmail != null"> need_contact_email = #{needContactEmail},</if>
+			<if test="needContactPostalInfo != null"> need_contact_postal_info = #{needContactPostalInfo},</if>
+			<if test="passengerInfoPerNum != null"> passenger_info_per_num = #{passengerInfoPerNum},</if>
+			<if test="needTravellerInfo != null"> need_traveller_info = #{needTravellerInfo},</if>
+			<if test="needPassengerName != null"> need_passenger_name = #{needPassengerName},</if>
+			<if test="needPassengerPinyin != null"> need_passenger_pinyin = #{needPassengerPinyin},</if>
+			<if test="needPassengerIDCard != null"> need_passenger_IDCard = #{needPassengerIDCard},</if>
+			<if test="needPassengerPassport != null"> need_passenger_passport = #{needPassengerPassport},</if>
+			<if test="needPassengerTaiwanPermit != null"> need_passenger_taiwan_permit = #{needPassengerTaiwanPermit},</if>
+			<if test="needPassengerHKAndMacauPermit != null"> need_passenger_HKAndMacau_permit = #{needPassengerHKAndMacauPermit},</if>
+			<if test="needPassengerUserDefinedI != null"> need_passenger_user_definedI = #{needPassengerUserDefinedI},</if>
+			<if test="needPassengerUserDefinedII != null"> need_passenger_user_definedII = #{needPassengerUserDefinedII},</if>
+			<if test="passengerUserDefinedI != null"> passenger_user_definedI = #{passengerUserDefinedI},</if>
+			<if test="passengerUserDefinedII != null"> passenger_user_definedII = #{passengerUserDefinedII},</if>
+			<if test="limitEnterType != null"> limit_enter_type = #{limitEnterType},</if>
+			<if test="advanceDay != null"> advance_day = #{advanceDay},</if>
+			<if test="advanceTime != null"> advance_time = #{advanceTime},</if>
+			<if test="enterAfterBookHour != null"> enter_after_book_hour = #{enterAfterBookHour},</if>
+			<if test="teamType != null"> team_type = #{teamType},</if>
+			<if test="canUseDate != null"> can_use_date = #{canUseDate},</if>
+			<if test="accurateDayofweek != null"> accurate_dayofweek = #{accurateDayofweek},</if>
+			<if test="limitUseTimeRange != null"> limit_use_time_range = #{limitUseTimeRange},</if>
+			<if test="useTimeRangeStart != null"> use_time_range_start = #{useTimeRangeStart},</if>
+			<if test="useTimeRangeEnd != null"> use_time_range_end = #{useTimeRangeEnd},</if>
+			<if test="useDescription != null"> use_description = #{useDescription},</if>
+			<if test="feeDescription != null"> fee_description = #{feeDescription},</if>
+			<if test="canRefund != null"> can_refund = #{canRefund},</if>
+			<if test="refundAdvanceDay != null"> refund_advance_day = #{refundAdvanceDay},</if>
+			<if test="refundAdvanceTime != null"> refund_advance_time = #{refundAdvanceTime},</if>
+			<if test="refundPoundageType != null"> refund_poundage_type = #{refundPoundageType},</if>
+			<if test="refundPoundage != null"> refund_poundage = #{refundPoundage},</if>
+			<if test="refundDescription != null"> refund_description = #{refundDescription},</if>
+			<if test="supplierName != null"> supplier_name = #{supplierName},</if>
+			<if test="supplierTelPhone != null"> supplier_tel_phone = #{supplierTelPhone},</if>
+			<if test="publishTime != null"> publish_time = #{publishTime},</if>
+			<if test="expireTime != null"> expire_time = #{expireTime},</if>
+			<if test="primaryFlag != null"> primary_flag = #{primaryFlag},</if>
+			<if test="seasonTicketFlag != null"> season_ticket_flag = #{seasonTicketFlag},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="QunarTicket">
+		delete from
+			tb_ticket_qunar
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="QunarTicket">
+		select
+			*
+		from
+			tb_ticket_qunar
+		where
+			id = #{id}
+	</select>
+	
+	<select id="listSeasonTicket" resultType="QunarTicket">
+		select 	a.id, a.team_type, a.product_name, a.product_id, c.scenic_id
+		from 	tb_ticket_qunar a, 
+				tb_qunar_sight_ticket_relation b,
+		        tb_qunar_sight c
+		where 	a.product_id = b.product_id
+		and		c.id = b.sight_id
+		and		a.season_ticket_flag = 'T'
+		and		a.status = 'on sale'
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="QunarTicket">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_ticket_qunar
+		<where>
+			status = 'on sale'
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="productId != null and '' != productId"> and product_id = #{productId} </if>
+			<if test="productName != null and '' != productName"> and product_name = #{productName} </if>
+			<if test="ticketTypeName != null and '' != ticketTypeName"> and ticket_type_name = #{ticketTypeName} </if>
+			<if test="scenicIds != null"> and scenic_id = #{scenicIds} </if>
+			<if test="sightIdList != null and '' != sightIdList"> and sight_id_list = #{sightIdList} </if>
+			<if test="sightId != null and '' != sightId"> and sight_id_list like '%${sightId}%' </if>
+			<if test="sightNameList != null and '' != sightNameList"> and sight_name_list = #{sightNameList} </if>
+			<if test="payWay != null and '' != payWay"> and pay_way = #{payWay} </if>
+			<if test="status != null and '' != status"> and status = #{status} </if>
+			<if test="delayPayTime != null and '' != delayPayTime"> and delay_pay_time = #{delayPayTime} </if>
+			<if test="needContactMobile != null and '' != needContactMobile"> and need_contact_mobile = #{needContactMobile} </if>
+			<if test="needContactName != null and '' != needContactName"> and need_contact_name = #{needContactName} </if>
+			<if test="needContactPinyin != null and '' != needContactPinyin"> and need_contact_pinyin = #{needContactPinyin} </if>
+			<if test="needContactEmail != null and '' != needContactEmail"> and need_contact_email = #{needContactEmail} </if>
+			<if test="needContactPostalInfo != null and '' != needContactPostalInfo"> and need_contact_postal_info = #{needContactPostalInfo} </if>
+			<if test="passengerInfoPerNum != null and '' != passengerInfoPerNum"> and passenger_info_per_num = #{passengerInfoPerNum} </if>
+			<if test="needTravellerInfo != null and '' != needTravellerInfo"> and need_traveller_info = #{needTravellerInfo} </if>
+			<if test="needPassengerName != null and '' != needPassengerName"> and need_passenger_name = #{needPassengerName} </if>
+			<if test="needPassengerPinyin != null and '' != needPassengerPinyin"> and need_passenger_pinyin = #{needPassengerPinyin} </if>
+			<if test="needPassengerIDCard != null and '' != needPassengerIDCard"> and need_passenger_IDCard = #{needPassengerIDCard} </if>
+			<if test="needPassengerPassport != null and '' != needPassengerPassport"> and need_passenger_passport = #{needPassengerPassport} </if>
+			<if test="needPassengerTaiwanPermit != null and '' != needPassengerTaiwanPermit"> and need_passenger_taiwan_permit = #{needPassengerTaiwanPermit} </if>
+			<if test="needPassengerHKAndMacauPermit != null and '' != needPassengerHKAndMacauPermit"> and need_passenger_HKAndMacau_permit = #{needPassengerHKAndMacauPermit} </if>
+			<if test="needPassengerUserDefinedI != null and '' != needPassengerUserDefinedI"> and need_passenger_user_definedI = #{needPassengerUserDefinedI} </if>
+			<if test="needPassengerUserDefinedII != null and '' != needPassengerUserDefinedII"> and need_passenger_user_definedII = #{needPassengerUserDefinedII} </if>
+			<if test="passengerUserDefinedI != null and '' != passengerUserDefinedI"> and passenger_user_definedI = #{passengerUserDefinedI} </if>
+			<if test="passengerUserDefinedII != null and '' != passengerUserDefinedII"> and passenger_user_definedII = #{passengerUserDefinedII} </if>
+			<if test="limitEnterType != null and '' != limitEnterType"> and limit_enter_type = #{limitEnterType} </if>
+			<if test="advanceDay != null and '' != advanceDay"> and advance_day = #{advanceDay} </if>
+			<if test="advanceTime != null and '' != advanceTime"> and advance_time = #{advanceTime} </if>
+			<if test="enterAfterBookHour != null and '' != enterAfterBookHour"> and enter_after_book_hour = #{enterAfterBookHour} </if>
+			<if test="teamType != null and '' != teamType"> and team_type = #{teamType} </if>
+			<if test="canUseDate != null and '' != canUseDate"> and can_use_date = #{canUseDate} </if>
+			<if test="accurateDayofweek != null and '' != accurateDayofweek"> and accurate_dayofweek = #{accurateDayofweek} </if>
+			<if test="limitUseTimeRange != null and '' != limitUseTimeRange"> and limit_use_time_range = #{limitUseTimeRange} </if>
+			<if test="useTimeRangeStart != null and '' != useTimeRangeStart"> and use_time_range_start = #{useTimeRangeStart} </if>
+			<if test="useTimeRangeEnd != null and '' != useTimeRangeEnd"> and use_time_range_end = #{useTimeRangeEnd} </if>
+			<if test="useDescription != null and '' != useDescription"> and use_description = #{useDescription} </if>
+			<if test="feeDescription != null and '' != feeDescription"> and fee_description = #{feeDescription} </if>
+			<if test="canRefund != null and '' != canRefund"> and can_refund = #{canRefund} </if>
+			<if test="refundAdvanceDay != null and '' != refundAdvanceDay"> and refund_advance_day = #{refundAdvanceDay} </if>
+			<if test="refundAdvanceTime != null and '' != refundAdvanceTime"> and refund_advance_time = #{refundAdvanceTime} </if>
+			<if test="refundPoundageType != null and '' != refundPoundageType"> and refund_poundage_type = #{refundPoundageType} </if>
+			<if test="refundPoundage != null and '' != refundPoundage"> and refund_poundage = #{refundPoundage} </if>
+			<if test="refundDescription != null and '' != refundDescription"> and refund_description = #{refundDescription} </if>
+			<if test="supplierName != null and '' != supplierName"> and supplier_name = #{supplierName} </if>
+			<if test="supplierTelPhone != null and '' != supplierTelPhone"> and supplier_tel_phone = #{supplierTelPhone} </if>
+			<if test="publishTime != null and '' != publishTime"> and publish_time = #{publishTime} </if>
+			<if test="expireTime != null and '' != expireTime"> and expire_time = #{expireTime} </if>
+			<if test="primaryFlag != null and '' != primaryFlag"> and primary_flag = #{primaryFlag} </if>
+			<if test="seasonTicketFlag != null and '' != seasonTicketFlag"> and season_ticket_flag = #{seasonTicketFlag} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; # {ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; # {tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+			</if>
+		<if test="scenicIds != null">
+			and scenic_id in
+			<if test="scenicIds.size() == 0">(-1)</if>
+			<if test="scenicIds.size() > 0">
+			<foreach item="item" index="index" collection="scenicIds" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+		</if>
+		<if test="productIds != null">
+			and product_id in
+			<if test="productIds.size() == 0">(-1)</if>
+			<if test="productIds.size() > 0">
+			<foreach item="item" index="index" collection="productIds" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+	</sql>
+</mapper>

@@ -1,0 +1,468 @@
+.youlun .yl_header, .youlunlist .yl_header, .takeorder .yl_header {
+    width: 100%;
+    height: 45px;
+    background-color: #3996fa !important;
+    line-height: 45px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index:999;
+}
+
+.youlun .yl_header span, .youlunlist .yl_header span, .takeorder .yl_header span {
+    display: block;
+    width: 50px;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.youlun .yl_header span img, .youlunlist .yl_header span img, .takeorder .yl_header span img {
+    width: 10px;
+    height: 16px;
+    margin: 15px auto;
+}
+.youlun .content .low_line .low_c a span:nth-child(2){line-height:20px;}
+
+.youlunlist .view-info {
+    overflow: hidden;
+
+}
+
+.youlunlist .putdown {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #4f4f4f;
+    font-size: 1.2rem;
+}
+
+.youlunlist .listbar {
+    width: 100%;
+    height: 45px;
+    background-color: #fcfcfc;
+    position: relative;
+}
+
+.youlunlist .listbar ul {
+    width: 100%;
+}
+
+.youlunlist .listbar ul li {
+    width: 33%;
+    height: 45px;
+    line-height: 45px;
+    float: left;
+    font-size: 16px;
+    text-align: center;
+    color: #5f5f5f;
+    font-weight: 600;
+}
+
+.youlunlist .listbar ul li:nth-child(1) {
+    color: #007eff
+}
+
+.youlunlist .listbar .sliderbar {
+    width: 33%;
+    height: 3px;
+    background-color: #007eff;
+    position: absolute;
+    left: 0;
+    top: 42px;
+}
+
+.bgblue {
+    color: #007eff;
+}
+
+.youlun_list .filter-line, .youlun_list .filter-ships, .youlun_list .filter-sub, .youlun_list .filter-sort {
+    margin-top: 1px;
+}
+
+.youlun_list .shadow {
+    width: 100%;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 900;
+}
+
+.youlun_list .con_r p:nth-child(1) span:nth-child(2) {
+    margin-top: 5px;
+}
+
+.youlun_list .con_r p:nth-child(2) {
+    /*margin-top: 10px;*/
+}
+
+.youlun_list .yl_list_search a {
+    width: 100%;
+    height: 30px !important;
+    line-height: 20px;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.youlun_list .goodlist {
+
+}
+
+.youlun_list .filter-box {
+
+}
+
+.youlun_list .filter-sub .fsub-option {
+    height: 20.704rem !important;
+}
+
+.youlun_list .filter-sub .fsub-btn a {
+    height: 30px;
+    width: 10.14rem !important;
+}
+
+.youlun_list .filter-sub .fsub-selected span {
+    height: 20px;
+}
+.youlun_list .filter-wrap .search-box{
+    position:static
+}
+.youlun_list .filter-wrap .filter-box .filter-title{
+    padding:1.1rem 0;
+}
+
+.youlunlist .content .screen_first .top {
+    width: 100%;
+    height: 200px;
+}
+
+.youlunlist .boat_list.boat_img {
+    width: 100%;
+    height: 180px !important;
+}
+.youlun_list .pro2 .shipslists:nth-child(1){margin-top:97px;}
+.youlun_list .search .search-ipt{margin-top:10px;}
+.youlun_list .search .search-ipt input{padding-left:0!important;margin-top:0;text-indent:33px!important;}
+.youlun_list .search .search-ipt a.search-back{right:-4.214rem!important;}
+.youlun_list .page .search .search-history{left:0;top:3.4285rem!important;}
+.youlun_list .module-route .route-list{position:static!important;}
+.youlun_list .page .search .search-rs {left:0;top:45px;}
+.youlun_list .page .search .search-history ul li{margin-left:0;}
+.youlun_list .page .search .search-history ul li a{text-indent:15px;}
+.youlun_list #loadmsg{width:100%;height:35px;line-height:35px;text-align:center;}
+.youlunlist .content{margin-top:45px;}
+
+.youlunlist .cangfang{
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 45px;
+    z-index: 101;
+    overflow: auto;
+    background: rgba(0,0,0,0.8);
+    padding-bottom: 60px;
+}
+.youlunlist .cangfangzehzhao1{
+
+    width:92%;
+    /*position: fixed;*/
+    left: 10px;
+    top: 80px;
+    z-index: 101;
+    margin: 10px auto;
+    background-color: #fff;
+    overflow: auto;
+    border-radius: 8px;
+
+}
+.youlunlist .cangfang h3{line-height:35px;font-size:16px;text-align:center;position:relative;}
+.youlunlist .cangfang h3 img{float:right;width:21px;height:21px;position:absolute;right:15px;top:7px;}
+.youlunlist .cangfang .cangfangpic{width:100%;}
+.youlunlist .cangfang .cangfangpic img{width:100%;}
+.youlunlist .cangfang .cangfangmess{width:100%;}
+.youlunlist .cangfang .cangfangmess ul li{width:100%;height:30px;line-height:30px;text-indent:40px;font-size:13px;}
+.youlunlist .cangfang .cangfangintro{width:100%;margin-bottom:50px;}
+.youlunlist .cangfang .cangfangintro h3{line-height:35px;font-size:13px;font-weight:600;text-indent:15px;text-align:left;}
+.youlunlist .cangfang .cangfangintro p{line-height:15px;font-size:12px;color:#aaa;padding-left:15px;padding-bottom:55px;}
+
+    /*��������ҳ����ʽ*/
+.youlunSearch {
+    width: 100%;
+}
+
+.youlunSearch .yl_header {
+    width: 100%;
+    height: 50px;
+    background-color: #007eff !important;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.youlunSearch .yl_header span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.youlunSearch .yl_header span img {
+    width: 13px;
+    height: 20px;
+    margin: 15px auto;
+}
+
+.youlunSearch .searchbox {
+    height: 30px;
+    padding: 10px 15px;
+}
+
+.youlunSearch .searchbox .searchbox_in {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-indent: 30px;
+    font-size: 15px;
+    color: #777;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: #ededed url(/yihaiyou/image/icon-sousuo_gray.png) no-repeat 10px center;
+    background-size: 15px 15px;
+    letter-spacing: 1px;
+}
+
+.youlunSearch .searchlist {
+    padding: 8px 15px;
+    margin-top: 15px;
+}
+
+.youlunSearch .searchlist ul li {
+    width: calc(33% - 8px);
+    height: 32px;
+    line-height: 32px;
+    float: left;
+    margin-right: 12px;
+    font-size: 15px;
+    text-align: center;
+    box-shadow: 0 0 3px #aaa;
+    color: #333;
+    border-radius: 4px;
+    font-family: arial, sans-serif;
+}
+
+.youlunSearch .searchlist ul li:nth-child(3n) {
+    margin-right: 0;
+    width: calc(34% - 8px);
+}
+
+.youlunSearch .searchlist ul li:nth-child(n+4) {
+    margin-top: 10px;
+}
+
+.youlunSearch .moresearch {
+    height: 50px;
+    line-height: 50px;
+    font-size: 17px;
+    color: #35bf5e;
+    text-align: center;
+}
+
+.youlunSearch .searchhistory {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 95px;
+    width: 100%;
+    min-height: 300px;
+}
+
+.youlunSearch .searchhistory ul {
+    padding-left: 15px;
+}
+
+.youlunSearch .searchhistory ul li {
+    width: 100%;
+    height: 45px;
+    line-height: 44px;
+    font-size: 16px;
+    background: url(/yihaiyou/image/historybell.jpg) no-repeat 5px center;
+    background-size: 20px 20px;
+}
+
+.youlunSearch .searchhistory ul li span {
+    width: calc(100% - 30px);
+    display: block;
+    height: 44px;
+    float: right;
+    border-bottom: 1px solid #f5f5f5;
+    text-indent: 10px;
+}
+
+/*
+
+
+
+ */
+
+.youlunSearch .searchhistory ul li span img {
+    width: 12px;
+    height: 12px;
+    margin-right: 15px;
+    float: right;
+
+    margin: 15px 23px;
+}
+
+.youlunSearch .searchhistory .consolehistory {
+    height: 48px;
+    line-height: 48px;
+    font-size: 18px;
+    color: #6f6f6f;
+    text-align: center;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.youlunSearch .searchhistory .consolehistory img {
+    width: 18px;
+    height: 20px;
+    margin: 0 5px -3px 0;
+}
+
+.youlunSearch .searchresult {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 95px;
+    width: 100%;
+    min-height: 300px;
+}
+
+.youlunSearch .searchresult ul {
+}
+
+.youlunSearch .searchresult ul li {
+    width: 100%;
+    height: 45px;
+    line-height: 44px;
+    font-size: 14px;
+    border-bottom: 1px solid #f5f5f5;
+    text-indent: 25px;
+    color: #46be5d;
+}
+
+.takeorder .content.contact_box input{
+    line-height: 30px!important;
+}
+.takeorder .content{
+    margin-top:45px;
+}
+.youlun .pro_featured .pro_list{
+    padding:0!important;
+}
+.youlun .pro_featured .pro_list .p_content .p_l .p_add{
+    line-height:30px;
+    font-size:14px;
+}
+.youlun .pro_featured .pro_list .p_content .p_l .p_time {
+    line-height:25px;
+    font-size:12px;
+    margin-top:0;
+}
+.youlun .pro_featured .pro_list .p_content .p_l .cruisdate{
+    line-height:20px;
+    font-size:12px;
+    margin-top:0;
+}
+.youlun .pro_featured .pro_list .p_content .p_img{
+    width:80px;height:80px;
+}
+.youlun .content .low_line{
+    margin-top:45px;
+}
+.youlun_list .search .search-history .clearHistory{
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    font-size:1.4rem;
+}
+.youlun_list .search .search-history .clearHistory img{
+    width:1.4rem;
+    height:1.6rem;
+    margin-right:5px;
+    margin-bottom:4px;
+}
+
+.youlun_list .pro_list .rp_title .title {
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width:100%;
+}
+
+.shadowkefu {
+    width: 100%;
+    height: 1000px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 900;
+}
+
+.kefu_phone {
+    width:75%;
+    max-width:320px;
+    height:100px;
+    background:#fff;
+    border:1px solid #ccc;
+    position:absolute;
+    left:40px;
+    top:100px;
+    z-index:901;
+}
+
+.kefu_phone .phonenumber {
+    font-size:18px;
+    line-height:40px;
+    text-indent:10px;
+    color:#333;
+    border-bottom:1px solid #999;
+}
+
+.kefu_phone .callphone {
+    font-size:18px;
+    color:#3996fa;
+    line-height:60px;
+    text-align:center;
+}
+
+.stopscroll {
+    position:fixed;
+    left:0;
+    top:0;
+}
+
+.wordlist a p {
+    font-size:1.3rem;
+}
+
+.youlun_list .brand_p,.youlun_list .time_pri_day a,.youlun_list .betterace a {
+    font-size:1.3rem;
+}
+
+.youlun_list .time_pri_days a,.youlun_list .al_cruise a {
+    font-size:1.2rem;
+}

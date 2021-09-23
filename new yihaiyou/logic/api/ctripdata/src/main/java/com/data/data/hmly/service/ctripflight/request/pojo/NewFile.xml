@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Request>
+	<Header AllianceID="22422" SID="456399" TimeStamp="1449207507"
+		Signature="C01FB95C69EDED60F1925D18DBA71134" RequestType="OTA_FlightSearch"
+		AsyncRequest="false" Timeout="0" MessagePriority="3" />
+	<HotelRequest>
+		<RequestBody>
+			<FlightSearchRequest>
+				<SearchType>S</SearchType>
+				<Routes>
+					<FlightRoute>
+						<DepartCity>SHA</DepartCity>
+						<ArriveCity>BJS</ArriveCity>
+						<DepartDate>2015-12-21</DepartDate>
+						<AirlineDibitCode>CA</AirlineDibitCode>
+						<EarliestDepartTime>2015-12-21T00:00:00</EarliestDepartTime>
+						<LatestDepartTime>2015-12-21T12:00:00</LatestDepartTime>
+					</FlightRoute>
+				</Routes>
+				<SendTicketCity>SHA</SendTicketCity>
+				<IsSimpleResponse>false</IsSimpleResponse>
+				<IsLowestPrice>false</IsLowestPrice>
+				<PriceTypeOptions>
+					<string>NormalPrice</string>
+				</PriceTypeOptions>
+				<OrderBy>DepartTime</OrderBy>
+				<Direction>ASC</Direction>
+			</FlightSearchRequest>
+		</RequestBody>
+	</HotelRequest>
+</Request>

@@ -1,0 +1,78 @@
+<div class="personal_myWallet personal_mySelection" ng-controller="personalSelectionCtrl" screenheight>
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        <span class="save" ng-click="showDeleteBox()" ng-if="state == 0">删除</span>
+        <span class="save" ng-click="hideDeleteBox()" ng-if="state == 1">取消</span>
+        我的收藏
+    </div>
+    <div class="product" ng-click="showmylist()">{{director}}<img src="/yihaiyou/image/personal/icon-down.png"></div>
+    <div class="myproductlist" ng-show="myproductlist">
+        <ul>
+            <li ng-repeat="dir in directorList" ng-click="dirTag(dir)">{{dir.name}}</li>
+        </ul>
+    </div>
+    <div class="hotlinelist" infinite-scroll="listSelection()" infinite-scroll-distance="1"
+         infinite-scroll-disabled='loading'>
+        <div ng-repeat="collect in collecList" ng-click="detail(collect)">
+            <div class="listone" ng-if='collect.targetType == "cruiseship"'>
+                <div class="deletebox" ng-show="delbox"
+                     ng-class="{fortrue: collect.selected,forfalse: !collect.selected}"
+                     ng-click="changeBox(collect)"></div>
+                <div class="list_left"><img bn-lazy-src="{{collect.cover}}"></div>
+                <div class="list_right">
+                    <ul class="clearfix">
+                        <li>{{collect.title}}</li>
+                        <li><span><span class="rmb">¥</span>{{collect.price}}</span>起</li>
+                        <li>{{collect.startDate}} 出发</li>
+                        <li>{{collect.score}}分</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="listone hotel" ng-if='collect.targetType == "hotel"'>
+                <div class="deletebox" ng-show="delbox"
+                     ng-class="{fortrue: collect.selected,forfalse: !collect.selected}"
+                     ng-click="changeBox(collect)"></div>
+                <div class="list_left"><img bn-lazy-src="{{collect.cover}}"></div>
+                <div class="list_right">
+                    <ul class="clearfix">
+                        <li>{{collect.title}}</li>
+                        <!--<li>{{collect.title}}</li>-->
+                        <li><span><span class="rmb">¥</span>{{collect.price}}</span>起</li>
+                        <!--<li>满意度{{collect.score}}%</li>-->
+                        <li>{{collect.score}}分</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="listone scenic" ng-if='collect.targetType == "scenic" || collect.targetType == "sailboat"'>
+                <div class="deletebox" ng-show="delbox"
+                     ng-class="{fortrue: collect.selected,forfalse: !collect.selected}"
+                     ng-click="changeBox(collect)"></div>
+                <div class="list_left"><img bn-lazy-src="{{collect.cover | getImgUrl}}"></div>
+                <div class="list_right">
+                    <ul class="clearfix">
+                        <li>{{collect.title}}</li>
+                        <li><span><span class="rmb">¥</span>{{collect.price}}</span>起</li>
+                        <!--<li>满意度{{collect.score}}%</li>-->
+                        <li>{{collect.score}}分</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="listone scenic" ng-if='collect.targetType == "recplan"'>
+                <div class="deletebox" ng-show="delbox"
+                     ng-class="{fortrue: collect.selected,forfalse: !collect.selected}"
+                     ng-click="changeBox(collect)"></div>
+                <div class="list_left"><img bn-lazy-src="{{collect.cover | getImgUrl}}"></div>
+                <div class="list_right">
+                    <ul class="clearfix">
+                        <li>{{collect.title}}</li>
+                        <!--<li><span><span class="rmb">¥</span>{{collect.price}}</span>起</li>-->
+                        <!--<li>满意度{{collect.score}}%</li>-->
+                        <!--<li>{{collect.score}}分</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="deleout" ng-show="delBotton"><div class="deletAll" ng-click="delete()">删除</div></div>
+    <div class="shadow" ng-show="shadow" ng-click="hideshadow()"></div>
+</div>

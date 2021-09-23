@@ -1,0 +1,10 @@
+-noverify
+       -Drebel.spring_plugin=true
+       -Drebel.aspectj_plugin=true
+       -Drebel.struts2_plugin=true
+       -Drebel.hibernate_plugin=true
+       -Drebel.jackson_plugin=true
+       -Drebel.log4j-plugin=true
+       -Xmx1g -Xms1g -XX:MaxPermSize=256m 
+       -javaagent:D:\jrebel.jar
+       -Drebel.dirs=E:/mywork/code/zuiping/analysis/target/classes

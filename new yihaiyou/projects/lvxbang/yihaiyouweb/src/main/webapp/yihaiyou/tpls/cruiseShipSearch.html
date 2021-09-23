@@ -1,0 +1,33 @@
+<div class="youlunSearch" ng-controller="cruiseShipSearchCtrl">
+    <div class="yl_header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        邮轮
+    </div>
+    <div class="searchbox">
+        <input class="searchbox_in" type="text" placeholder="搜索热门航线或者邮轮公司" ng-click="showHistory($event)"
+               ng-keyup="showSearchResult($event)" ng-model="name">
+    </div>
+    <div class="searchlist">
+        <ul class="clearfix">
+            <li ng-repeat="route in hotRoutes" ng-click="toList2(route.id, 'route')">{{route.name}}</li>
+            <li ng-repeat="brand in hotBrands" ng-click="toList2(brand.id, 'brand')">{{brand.name}}</li>
+        </ul>
+    </div>
+    <div class="moresearch" ui-sref="cruiseShipList">更多热门搜索>></div>
+    <div class="searchhistory" ng-show="showhistory" ng-click="hideHistory()">
+        <ul>
+            <li ng-repeat="place in searchHistory track by $index" ng-click="toList1(place)"><span>{{place}}<img
+                    src="/yihaiyou/image/hisclose.png" ng-click="deleteHistory($index, $event)"></span></li>
+        </ul>
+        <div class="consolehistory" ng-if="searchHistory.length > 0" ng-click="clearHistory()"><img
+                src="/yihaiyou/image/garbage.jpg">清除历史记录
+        </div>
+        <div class="consolehistory" ng-if="searchHistory.length == 0"><img src="/yihaiyou/image/garbage.jpg">暂无历史记录
+        </div>
+    </div>
+    <div class="searchresult" ng-show="showresult" ng-click="hideSearch()">
+        <ul>
+            <li ng-repeat="suggestion in suggestions" ng-click="toList1(suggestion.name)">{{suggestion.name}}</li>
+        </ul>
+    </div>
+</div>

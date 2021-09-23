@@ -1,0 +1,39 @@
+*{margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;-moz-overflow-scrolling:touch;-o-overflow-scrolling:touch;overflow-scrolling:touch;font-size: 10px;}
+ol,ul,li{list-style:none}}
+input,select,textarea {font-family:"arial","微软雅黑";}
+.clear{clear: both;}
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both; }
+.clearfix { *zoom:1;}
+
+.Qdate_main{min-width: 320px;max-width: 640px;margin:0 auto;background-color: #eee;}
+.Qdate_header{width:100%;height: 45px;background-color: #43c475;text-align:center;line-height:45px;color: white;font-size: 1.6rem;position: fixed;left: 0;top: 0;z-index:10}
+.Qdate_header span{display:block;width:45px;height:45px;position:absolute;left:0;top:0;}
+.Qdate_header span img{width:80%;height:80%;margin:10% 10%;}
+.Qmonth{width: 100%;height:30px;background-color: #eee;font-size: 1.5rem;text-align: center;line-height: 30px;margin-top: 45px;}
+.Qweek{width: 100%;height: 25px;background-color: #888;}
+.Qweek ul{width: 100%;height: 25px;}
+.Qweek ul li{width: 14%;height: 25px;float: left;color: white;text-align: center;line-height: 25px;font-size: 1.3rem;}
+.Qweek ul li:nth-child(n+2){border-left: 1px solid #f3f3f3;};
+.Qday{width: 100%;height: 45px;}
+.Qday ul {width: 100%;height: 45px;border-bottom: 1px solid #bbb;}
+.Qday ul li{width: 14%;height: 45px;float: left;text-align: center;background-color: white;}
+.Qday ul li:nth-child(n+2){border-left: 1px solid white;}
+.Qday ul li span{font-size: 1.5rem;line-height: 25px}
+.Qday ul li p{line-height: 20px;font-size: 1.0rem;overflow: hidden;height: 20px;color: orange}
+.Qdate_describe{width: 94%;background-color: #f3f3f3;padding: 10px 3%;}
+.Qdate_describe span{height: 25px;line-height: 25px;font-size: 1.2rem;color:#666;}
+.Qdate_footer{width: 100%;height: 45px;background-color: orange;font-size: 1.5rem;position: fixed;bottom: 0;left: 0;}
+.Qdate_footer p{height: 22px;line-height: 22px;text-align: center;color: white;}
+.Qdate_ticket{width: 100%;height: 70px;position: fixed;bottom: 45px;left: 0;background-color: white;}
+.Qdate_adult{width:50%;float: left;}
+.Qdate_child{width:50%;float: right;}
+.Qdate_totalprice{display: block;width: 100%;height: 20px;line-height: 20px;text-align: center;margin-top:5px;}
+.Qdate_totalprice span{color: orange;}
+.Qdate_num{width: 80px;height: 22px;text-align: center;line-height: 22px;margin: 10px auto;}
+.Qdate_updown{width: 22px;height: 20px;background-color: #43c475;color: white;}
+.Qdate_updown.disabled{background-color: #ccc;cursor: default;}
+.Qdate_num_minus{float: left;}
+.Qdate_num_add{float: right;}
+.Qdate_number{float: left;width: 36px;height:20px;background-color: #f3f3f3;}
+.icon-color{color:white!important;}

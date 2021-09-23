@@ -1,0 +1,90 @@
+<div ng-controller="shipList">
+    <div class="y-listsort-header">
+        <a href="#" class="back" ui-sref="cruiseShipList"></a>
+        邮轮
+        <!--<a href="#" class="glasses"></a>-->
+    </div>
+    <div class="y-listsort-nav clearBoth">
+    <span class="pull-left" ng-click="showList(3, 'id', 'desc')" ng-class="{active:listNum == 3}">
+        推荐
+    </span>
+    <span class="pull-left" ng-click="showList(1, 'minSalePrice', 'asc')" ng-class="{active: listNum == 1}">
+        价格
+        <i ng-class="{'sort-up':'sort-default sort-up','sort-down':'sort-default sort-down'}[sortArr[0].classStatus]"></i>
+    </span>
+    <span class="pull-left" ng-click="showList(2, 'date', 'asc')" ng-class="{active: listNum == 2}">
+        航期
+        <i ng-class="{'sort-up':'sort-default sort-up','sort-down':'sort-default sort-down'}[sortArr[1].classStatus]"></i>
+    </span>
+        <i class="sort-line pull-left"></i>
+    <span class="sort-pop pull-left" ng-click="switchPop()">
+        筛选
+        <i class="sort-funnel"></i>
+    </span>
+    </div>
+    <ul class="y-cruiseSort-list" infinite-scroll="shipList()" infinite-scroll-distance='1' infinite-scroll-disabled='loading'>
+        <li class="clearBoth" ng-repeat="ship in cruiseList">
+            <div class="y-cruiseSort-img pull-left">
+                <img src={{ship.coverImage}}>
+            </div>
+            <div class="y-cruiseSort-txt pull-left">
+                <h5>{{ship.name}}</h5>
+                <div class="y-cruise-star clearBoth">
+                    <i class="y-star y-star4 pull-left"></i>
+                    <span class="pull-left">4.5分</span>
+                </div>
+                <div class="y-cruise-price">
+                    <sup>￥</sup>{{ship.date.minSalePrice}}<sub>/人</sub>
+                </div>
+                <div class="y-cruise-port">
+                    <span>{{ship.startCity}}</span>
+                </div>
+                <a href="#" class="y-cruiseSort-reserve">
+                    <span ui-sref="cruiseDetails({dateId: ship.date.id})">在线预订</span>
+                </a>
+            </div>
+        </li>
+        <div id="loadmsg" class="data-loader" ng-show="loading"><span>正在加载数据</span></div>
+        <div id="loadmsg" class="data-loader" ng-show="nomore"><span>无更多数据</span></div>
+    </ul>
+
+    <!--弹窗-->
+    <div class="y-cruiseSort-pop" ng-show="popStatus">
+        <div class="y-sortpop-wrap">
+            <div class="y-sortpop-header clearBoth">
+                <span class="pull-left" ng-click="switchPopN()">取消</span>
+                <span class="pull-right" ng-click="switchPopY()">确认</span>
+            </div>
+            <div class="y-sortpop-body clearBoth">
+                <div class="y-sortpop-nav pull-left">
+                    <span class="y-sortpop-nav-group" ng-click="switchTab(1)" ng-class="{'active':routerStatus}">航线</span>
+                    <span class="y-sortpop-nav-group" ng-click="switchTab(2)" ng-class="{'active':brandStatus}">品牌</span>
+                    <span class="y-sortpop-nav-group" ng-click="switchTab(3)" ng-class="{'active':departTimeStatus}">开航日期</span>
+                </div>
+                <div class="y-sortpop-content pull-left">
+                    <!--航线-->
+                    <div class="y-sortpop-content-group" ng-show="routercontent">
+                        <ul>
+                            <!--<li ng-repeat="item in routerList" class="{{item.status}}" data-value="{{item.id}}" ng-click="chooseRouter(item.id)">{{item.value}}</li>-->
+                            <li ng-repeat="route in routes" a ng-click="showlist1(route.id)"
+                                ng-class="{active: routeId == route.id}">{{route.name}}</li>
+                        </ul>
+                    </div>
+                    <!--品牌-->
+                    <div class="y-sortpop-content-group" ng-show="brandContent">
+                        <ul>
+                            <!--<li ng-repeat="item in brandList" class="{{item.status}}" data-value="{{item.id}}" ng-click="chooseBrand(item.id)">{{item.value}}</li>-->
+                            <li ng-repeat="brand in brands" ng-click="showlist2(brand.id)"
+                                ng-class="{active: brandId == brand.id}">{{brand.name}}</li>
+                        </ul>
+                    </div>
+                    <!--开航日期-->
+                    <div class="y-sortpop-content-group" ng-show="departTimeContent">
+                        <input id="time" type="text" placeholder="请选择日期"  readonly ng-model="startTime" data-lcalendar=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

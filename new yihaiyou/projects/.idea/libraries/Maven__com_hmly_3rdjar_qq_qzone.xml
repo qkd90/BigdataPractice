@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.hmly.3rdjar:qq:qzone">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hmly/3rdjar/qq/qzone/qq-qzone.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hmly/3rdjar/qq/qzone/qq-qzone-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hmly/3rdjar/qq/qzone/qq-qzone-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

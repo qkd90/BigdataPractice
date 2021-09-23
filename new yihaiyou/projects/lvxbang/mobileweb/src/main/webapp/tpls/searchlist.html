@@ -1,0 +1,52 @@
+<div class="searchform topbg col-xs-12 fixtop">
+  <form class="form-inline">
+    <div class="input-group">
+      <input type="text" class="form-control" id="project" placeholder="游记、目的地、用户">
+      <span class="input-group-btn">
+        <button class="btn btn-default btn-search" type="button">搜索</button>
+      </span> </div>
+  </form>
+</div>
+<div id="subcontainer" class="clearfix">
+  <div class="content yxlist" ng-controller="HomeCtrl">
+    <div class="clearfix" ng-repeat="data in yxlists.yinxiang"> <a ui-sref="yxdetail"> <img src="{{data.image }}" class="img-responsive">
+      <div class="info">
+        <h2 class="name clearfix"><span class="pull-left">{{ data.title }}</span><span class="pull-right"><span class="view">{{data.view}}</span><span class="time">{{data.time }}</span></span></h2>
+        <p class="text">{{data.description }}</p>
+      </div>
+      </a> </div>
+  </div>
+  <div class="content yjlist" ng-controller="YoujiListCtrl">
+    <div class="clearfix" ng-repeat="data in yjlists.youji"> <a ui-sref="yjdetail"> <img src="{{ data.image }}" class="img-responsive">
+      <div class="info">
+        <h2 class="name clearfix">{{ data.title }}</h2>
+        <p class="other"><span class="pull-right"><span class="view">{{ data.view }}</span><span class="time">{{ data.time }}</span></span></p>
+      </div>
+      </a> </div>
+  </div>
+</div>
+    <div class="search-list searchxiala col-xs-12 hidden">
+      <ul>
+        <li class="ico1"><a href="#"><b>鼓</b>浪屿</a></li>
+        <li class="ico2"><a href="#">石<b>鼓</b>山</a></li>
+        <li class="ico1"><a href="#">大<b>鼓</b>山</a></li>
+        <li class="ico2"><a href="#"><b>鼓</b>浪屿</a></li>
+        <li class="ico1"><a href="#"><b>鼓</b>浪屿</a></li>
+        <li class="ico2"><a href="#">石<b>鼓</b>山</a></li>
+        <li class="ico1"><a href="#">大<b>鼓</b>山</a></li>
+        <li class="ico2"><a href="#"><b>鼓</b>浪屿</a></li>
+      </ul>
+    </div>
+<script>
+$("#project").bind("input propertychange",function(){
+$('.search-list').removeClass("hidden");
+$('.btn-search').removeClass("hidden");
+$('.btn-qx').addClass("hidden");
+if (document.getElementById('project').value=='')
+            {
+                $('.search-list').addClass("hidden");
+                $('.btn-search').addClass("hidden");
+				$('.btn-qx').removeClass("hidden");
+            }
+});
+</script>

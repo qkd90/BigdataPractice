@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.RecommendPlanDayMapper">
+	<insert id="insert" parameterType="RecommendPlanDay">
+		insert into tb_recommend_plan_day
+			(
+				id,
+				recommend_plan_id,
+				plan_day_id,
+				city_name,
+				recommend_topic,
+				recommend_hotel,
+				recommend_delicacy,
+				create_time,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{recommendPlanId},
+				#{planDayId},
+				#{cityName},
+				#{recommendTopic},
+				#{recommendHotel},
+				#{recommendDelicacy},
+				#{createTime},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="RecommendPlanDay">
+		update tb_recommend_plan_day
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="recommendPlanId != null and '' != recommendPlanId"> recommend_plan_id = #{recommendPlanId},</if>
+			<if test="planDayId != null and '' != planDayId"> plan_day_id = #{planDayId},</if>
+			<if test="cityName != null and '' != cityName"> city_name = #{cityName},</if>
+			<if test="recommendTopic != null and '' != recommendTopic"> recommend_topic = #{recommendTopic},</if>
+			<if test="recommendHotel != null and '' != recommendHotel"> recommend_hotel = #{recommendHotel},</if>
+			<if test="recommendDelicacy != null and '' != recommendDelicacy"> recommend_delicacy = #{recommendDelicacy},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="RecommendPlanDay">
+		delete from
+			tb_recommend_plan_day
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="RecommendPlanDay">
+		select
+			*
+		from
+			tb_recommend_plan_day
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="RecommendPlanDay">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_recommend_plan_day
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="recommendPlanId != null and '' != recommendPlanId"> and recommend_plan_id = #{recommendPlanId} </if>
+			<if test="planDayId != null and '' != planDayId"> and plan_day_id = #{planDayId} </if>
+			<if test="cityName != null and '' != cityName"> and city_name = #{cityName} </if>
+			<if test="recommendTopic != null and '' != recommendTopic"> and recommend_topic = #{recommendTopic} </if>
+			<if test="recommendHotel != null and '' != recommendHotel"> and recommend_hotel = #{recommendHotel} </if>
+			<if test="recommendDelicacy != null and '' != recommendDelicacy"> and recommend_delicacy = #{recommendDelicacy} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				# {item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+</mapper>

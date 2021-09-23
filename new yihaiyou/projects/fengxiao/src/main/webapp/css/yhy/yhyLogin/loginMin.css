@@ -1,0 +1,304 @@
+body {
+    /*padding-top: 40px;*/
+    /*padding-bottom: 40px;*/
+    /*background-color: #eee;*/
+    background: none;
+}
+
+.form-signin {
+    /*max-width: 300px;*/
+    /*padding: 15px;*/
+    /*margin: 2% 0 0 60%;*/
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-signin .checkbox {
+    font-weight: normal;
+}
+
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[name="yhyAccount"] {
+    /*margin-bottom: -1px;*/
+    /*border-bottom-right-radius: 0;*/
+    /*border-bottom-left-radius: 0;*/
+}
+.form-signin input[name="yhyPassword"] {
+    /*margin-bottom: -1px;*/
+    /*border-radius: 0;*/
+}
+
+.form-signin input[name="yhyValidateCode"] {
+    /*border-top-left-radius: 0;*/
+    /*border-top-right-radius: 0;*/
+    /*border-bottom-right-radius: 0;*/
+    /*float: left;*/
+    /*width: 70%;*/
+}
+.yhy-login-btn {
+    background-image: linear-gradient(to bottom, #414141 0%, #383838 100%);
+    margin-top: 20px;
+}
+.yhy-login-btn:hover, .yhy-login-btn:focus{
+    background: #333;
+    background-position: 0 -15px;
+}
+.yhy-from-group {
+    margin-bottom: 0px;
+}
+.yhy-validateCode-img {
+    width: 66px;
+    height: 36px;
+    vertical-align:top;
+    float:right;
+    border-radius:0 3px 3px 0;
+    /*border-bottom-right-radius: 4px;*/
+    /*border-bottom: 1px solid rgb(204,204,204);*/
+    /*border-right: 1px solid rgb(204,204,204);*/
+}
+#yhyLoginForm .has-feedback .form-control-feedback {
+    top: 0;
+    right: 0px;
+}
+#yhyLoginForm .has-feedback .help-block {
+    /*margin-left: 0px;*/
+    padding-left: 25px;
+    height: 16px;
+    line-height: 16px;
+}
+*{
+    margin:0;
+    padding:0;
+}
+/*@font-face {*/
+    /*font-family: "华康俪金黑体";*/
+    /*src: url("/css/yhy/yhyCommon/lijin.TTF");*/
+    /*src: url("/css/yhy/yhyCommon/lijin.TTF") format("embedded-opentype"),*/
+    /*url("/css/yhy/yhyCommon/lijin.TTF") format("truetype"),*/
+    /*url("/css/yhy/yhyCommon/lijin.TTF") format("svg");*/
+    /*font-style: normal;*/
+    /*font-weight: normal*/
+/*}*/
+.clear {
+    clear: both;
+}
+.clearfix:after {
+    content:"\200B"; display:block; height:0; clear:both;
+}
+.clearfix {
+    *zoom:1;
+}
+
+.mainBox {
+
+}
+
+.headerBox {
+    width: 100%;
+    height:88px;
+    line-height:88px;
+    min-width: 1200px;
+    background: linear-gradient(#414141, #383838, #2f2f2f);
+    border-bottom: 1px solid #000;
+    font-family: '微软雅黑';
+}
+
+.headerBox .header {
+    width: 1200px;
+    height:100%;
+    margin:0 auto;
+    font-size: 38px;
+    color: #fff;
+    line-height:88px;
+    letter-spacing: 5px;
+    /*font-family: '华康俪金黑体';*/
+    text-indent: 170px;
+    font-weight:bold;
+    background:url(/images/yhy/logo.png) no-repeat 90px center;
+    background-size:54px 80px;
+    border-bottom:none;
+}
+
+.bodyBox {
+    width:1200px;
+    margin:0 auto;
+}
+
+.bodyBox .bodyLbox {
+    width: 650px;
+    height: 100%;
+    float: left;
+    /*background:url(/images/yhy/loginpicture.png) no-repeat 80% center;*/
+    /*background-size:560px 333px;*/
+}
+
+.bodyBox .bodyLbox img {
+    width:560px;
+    height:333px;
+    display: block;
+    margin:auto;
+}
+
+.bodyBox .bodyRbox {
+    width: 550px;
+    height: 100%;
+    float: left;
+}
+
+.loginBox {
+    width: 350px;
+    height: 340px;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: inset 0 -1px 3px #414141;
+}
+
+.loginBox .loginhead {
+    background: linear-gradient(#414141, #383838, #2f2f2f);
+    width: 100%;
+    height:48px;
+    font-size: 26px;
+    color: #fff;
+    font-weight:600;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 5px 5px 0 0;
+}
+
+.loginBox .account {
+    width: 270px;
+    height: 40px;
+    border: 2px solid #2f2f2f;
+    border-radius:5px;
+    line-height: 36px;
+    margin:25px auto 0 auto;
+    font-family: 微软雅黑;
+    text-indent: 40px;
+    background:url(/images/yhy/icon-account.png) no-repeat 16px 54%;
+    background-size:20px 21px;
+}
+
+.loginBox .account input {
+    display: inline-block;
+    width: 170px;
+    height:25px;
+    font-size: 15px;
+    padding:3px 5px;
+    border:none;
+    color: #000;
+    outline: none;
+    box-shadow: none;
+}
+
+.loginBox .account input:-webkit-autofill {
+    background-color:#fff;
+    font-size: 14px;
+}
+
+.loginBox .account input::-webkit-input-placeholder {
+    font-size:16px;
+}
+
+.loginBox .loginpswrd {
+    background:url(/images/yhy/icon-password.png) no-repeat 16px 54%;
+    background-size:20px 21px;
+}
+
+.loginBox .logincode {
+    background:url(/images/yhy/icon-code.png) no-repeat 16px 54%;
+    background-size:20px 21px;
+}
+
+.loginBox .logincode input {
+    width:90px;
+}
+
+.loginBox .account .border {
+    color: #414141;
+    padding:0 20px 0 10px;
+    font-size: 16px;
+}
+
+.pswrdoperat {
+    width: 333px;
+    height: 54px;
+    line-height: 54px;
+    margin:30px auto 0 auto;
+    font-family: 微软雅黑;
+}
+
+.pswrdoperat span {
+    float: left;
+    font-size: 16px;
+    color: #666;
+    font-family: 微软雅黑;
+}
+
+.pswrdoperat span.checkbox {
+    width: 22px;
+    height: 22px;
+    border:1px solid #444;
+    margin:16px 20px 0 0;
+    box-shadow: inset 0 0 2px #444;
+}
+
+.loginBox .save {
+    background:url(/images/yhy/icon-savepaswrd.png) no-repeat center center;
+    background-size:15px 15px;
+}
+
+.pswrdoperat span.getpswrd {
+
+}
+
+.pswrdoperat span.forgetpswrd {
+    float: right;
+    font-family: 微软雅黑;
+    color: #000;
+}
+
+.loginBtn {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #111;
+    border-radius:5px;
+    line-height: 18px;
+    font-size: 20px;
+    margin:25px auto 18px;
+    font-family: 微软雅黑;
+    color: #fff;
+    text-align: center;
+    display: block;
+    outline: none;
+}
+
+.footerBox {
+    width: 100%;
+    height: 11%;
+    padding-top:2%;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    font-family: 微软雅黑;
+    position: fixed;
+    left:0;
+    bottom:0;
+}
+

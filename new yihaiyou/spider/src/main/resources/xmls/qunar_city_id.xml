@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<var-def name="html">
+		<http url="${url}" charset="utf-8"/>
+	</var-def>
+	<var-def name="content">
+		<html-to-xml>
+			<var name="html" />
+		</html-to-xml>
+	</var-def>
+	<var-def name="products">
+		<xpath expression="//li[@class='list_item clrfix shortcut']/a/@href">
+			<var name="content" />
+		</xpath>
+		<!-- <xpath expression="//div[@id='lemma-content']/div[@class='img-box']/a/img/@src">
+			<var name="content" />
+		</xpath> -->
+	</var-def>
+	<!-- <file action="write" charset="utf-8" path="d:\s.xml">
+		<var name="products"></var>
+	</file> -->
+</config>

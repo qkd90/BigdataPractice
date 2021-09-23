@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.weixin.mapper.WxReplyLogMapper">
+	<insert id="insert" parameterType="WxReplyLog" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_wx_reply_log
+			(
+				id,
+				event,
+				type,
+				open_id,
+				content,
+				status,
+				exception,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{event},
+				#{type},
+				#{openId},
+				#{content},
+				#{status},
+				#{exception},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="WxReplyLog">
+		update tb_wx_reply_log
+		<set>
+			<if test="id != null"> id = #{id},</if>
+			<if test="event != null"> event = #{event},</if>
+			<if test="type != null"> type = #{type},</if>
+			<if test="openId != null"> open_id = #{openId},</if>
+			<if test="content != null"> content = #{content},</if>
+			<if test="status != null"> status = #{status},</if>
+			<if test="exception != null"> exception = #{exception},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="WxReplyLog">
+		delete from
+			tb_wx_reply_log
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="WxReplyLog">
+		select
+			*
+		from
+			tb_wx_reply_log
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="WxReplyLog">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">$ {item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_wx_reply_log
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="event != null and '' != event"> and event = #{event} </if>
+			<if test="type != null and '' != type"> and type = #{type} </if>
+			<if test="openId != null and '' != openId"> and open_id = #{openId} </if>
+			<if test="content != null and '' != content"> and content = #{content} </if>
+			<if test="status != null and '' != status"> and status = #{status} </if>
+			<if test="exception != null and '' != exception"> and exception = #{exception} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				# {item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+
+	<!--<select id="KeyReplyList" resultType="map">-->
+		<!--select content,count(content) as counts,type-->
+		<!--from tb_wx_reply_log-->
+		<!--<where>-->
+			<!--and event = 'text'-->
+		<!--<if test="createTimeStart != null and '' != createTimeStart"> and create_time &gt;= #{createTimeStart} </if>-->
+		<!--<if test="createTimeEnd != null and '' != createTimeEnd"> and create_time &lt; date_add(#{createTimeEnd}, INTERVAL 1 day) </if>-->
+		<!--</where>-->
+		 <!--GROUP BY content-->
+	<!--</select>-->
+
+	<select id="keyReplyList" resultType="WxReplyLog">
+		select content,count(content) as counts,type
+		from tb_wx_reply_log
+		<where>
+			and event = 'text'
+			<if test="createTimeStart != null and '' != createTimeStart"> and create_time &gt;= #{createTimeStart} </if>
+			<if test="createTimeEnd != null and '' != createTimeEnd"> and create_time &lt; date_add(#{createTimeEnd}, INTERVAL 1 day) </if>
+		</where>
+		GROUP BY content
+		order by counts desc
+	</select>
+
+	<select id="fansCountList" resultType="map">
+		select a.dd,IFNULL(b.addFans,0) as addFans,IFNULL(c.decFans,0) as decFans,IFNULL((b.addFans),0)-IFNULL(c.decFans,0) as incFans  from
+		(SELECT DATE_FORMAT(ADDDATE(#{createTimeStart}, day-1),'%Y-%m-%d') as dd
+		FROM tb_day_data
+		WHERE day &lt;= TIMESTAMPDIFF(DAY,#{createTimeStart},#{createTimeEnd})+1
+		ORDER BY dd) a  LEFT JOIN
+		(select DATE_FORMAT(create_time,'%Y-%m-%d') as date, count(event)  as addFans from tb_wx_reply_log where event = 'subscribe' GROUP BY date) b
+		on a.dd = b.date left JOIN
+		(select DATE_FORMAT(create_time,'%Y-%m-%d') as date, count(event)  as decFans from tb_wx_reply_log where event = 'un' GROUP BY date) c
+		on a.dd=c.date
+	</select>
+</mapper>

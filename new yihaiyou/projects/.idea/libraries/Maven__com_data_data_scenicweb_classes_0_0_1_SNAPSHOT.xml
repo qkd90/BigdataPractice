@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.data.data:scenicweb:classes:0.0.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/data/data/scenicweb/0.0.1-SNAPSHOT/scenicweb-0.0.1-SNAPSHOT-classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/data/data/scenicweb/0.0.1-SNAPSHOT/scenicweb-0.0.1-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/data/data/scenicweb/0.0.1-SNAPSHOT/scenicweb-0.0.1-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

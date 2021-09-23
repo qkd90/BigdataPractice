@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.CityMapper">
+	<insert id="insert" parameterType="City">
+		insert into tb_city
+			(
+				id,
+				name,
+				city_code,
+				father,
+				modify_time,
+				create_time,
+				level,
+				hour
+			)
+		values
+			(
+				#{id},
+				#{name},
+				#{cityCode},
+				#{father},
+				#{modifyTime},
+				#{createTime},
+				#{level},
+				#{hour}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="City">
+		update tb_city
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="name != null and '' != name"> name = #{name},</if>
+			<if test="cityCode != null and '' != cityCode"> city_code = #{cityCode},</if>
+			<if test="father != null and '' != father"> father = #{father},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="level != null and '' != level"> level = #{level},</if>
+			<if test="hour != null and '' != hour"> hour = #{hour},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="City">
+		delete from
+			tb_city
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="City">
+		select
+			*
+		from
+			tb_city
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="City">
+		select 
+			*
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_city
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="name != null and '' != name"> and name like '%${name}%' </if>
+			<if test="cityCode != null and '' != cityCode"> and city_code = #{cityCode}</if>
+			<if test="father != null and '' != father"> and father = #{father} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="level != null and '' != level"> and level = #{level} </if>
+			<if test="ids != null and '' != ids">
+                and id in (
+                <foreach collection="ids" index="index" item="id" separator=",">
+                    #{id}
+                </foreach>
+                )
+            </if>
+			<if test="cityCodes != null and '' != cityCodes">
+                and city_code in (
+                <foreach collection="cityCodes" index="index" item="cityCode" separator=",">
+                    #{cityCode}
+                </foreach>
+                )
+            </if>
+		</where>
+        <choose>
+            <when test="orderColumn != null and '' != orderColumn">
+                ORDER BY ${orderColumn}
+                <if test="orderType != null and '' != orderType">
+                    ${orderType}
+                </if>
+            </when>
+            <otherwise>
+                ORDER BY name
+            </otherwise>
+
+        </choose>
+	</sql>
+</mapper>

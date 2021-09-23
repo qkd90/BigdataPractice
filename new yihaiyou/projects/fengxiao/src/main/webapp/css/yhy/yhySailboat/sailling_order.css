@@ -1,0 +1,243 @@
+.orderList {
+	width: 1200px;
+	margin: 10px auto 0 auto;
+	background-color: #fff;
+	padding-top:0.1px;
+}
+
+table {
+	margin-bottom:0!important;
+}
+
+.selectBar {
+	height:60px;
+	clear: both;
+}
+
+.selB_1 {
+	float: left;
+	margin-top:16px;
+}
+
+.messageList_header>div.dataTables_wrapper>div.dataTables_length, .sailPrice .messageList_header>div.dataTables_wrapper>div.dataTables_length, .financeList .financeTable>div.dataTables_wrapper>div.dataTables_length {
+	position: absolute;
+	bottom: 2px;
+	right: 0px;
+	width: 160px;
+}
+.messageList_header>div.dataTables_wrapper>div.dataTables_length label, .sailPrice .messageList_header>div.dataTables_wrapper>div.dataTables_length label, .financeList .financeTable>div.dataTables_wrapper>div.dataTables_length label {
+	font-weight: normal;
+	margin-bottom: 0px;
+}
+.messageList_header>div.dataTables_wrapper>div.dataTables_processing, .sailPrice .messageList_header>div.dataTables_wrapper>div.dataTables_processing, .financeList .financeTable>div.dataTables_wrapper>div.dataTables_processing {
+	width: 15%;
+	height: 50px;
+	padding: 0px;
+	margin-left: -6%;
+	margin-top: -38px;
+	line-height: 50px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background: rgba(18, 18, 18, 0.7);
+	background: #121212\0;
+	color: #fff;
+}
+
+.selB_1 .form-control {
+	height: 30px;
+	font-size:12px;
+	color: #333;
+	border:1px solid #d1d1d1;
+	border-radius:5px!important;
+}
+
+.orderList .businesOrderNum {
+	width:152px;
+}
+
+.orderList .businesOrderNum .form-control {
+	width: 150px;
+}
+
+.orderList .orderTime {
+	width:300px;
+}
+
+.orderList .orderTime div.form-group {
+	float:left;
+}
+
+.orderList .orderTime span {
+	display: block;
+	float:left;
+	line-height:30px;
+	font-size: 12px;
+	color: #333;
+	text-align: center;
+	font-family: AdobeInvisFont;
+}
+
+.orderList .orderTime span.orderTime_1 {
+	width: 70px;
+}
+
+.orderList .orderTime span.orderTime_2 {
+	width: 30px;
+}
+
+.orderList .orderTime .form-control {
+	width: 100px;
+}
+
+.orderList .orderState {
+	width: 220px;
+}
+
+.orderList .orderState .orderState_1 {
+	width: 70px;
+	float: left;
+	display: block;
+	line-height: 30px;
+	font-size:12px;
+	text-align: center;
+}
+
+.orderList .orderState .dropdown {
+	float: left;
+}
+
+.orderList .orderState .dropdown button {
+	width: 130px;
+	text-align: left;
+	font-size: 12px;
+	color: #666;
+}
+
+.orderList .orderState .dropdown .caret {
+	float: right;
+	margin-top: 7px;
+}
+
+.orderList .orderState .dropdown ul li,.orderList .orderState .dropdown ul {
+	min-width: 130px;
+}
+
+.orderList .orderState .form-control {
+	width: 130px;
+}
+
+.orderList .search {
+	float: right;
+}
+
+.orderList .search .btn {
+	background-color: #478ff1;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	box-shadow: 0 1px 2px #ccc;
+}
+
+
+.orderList .orderTable {
+	width: 100%;
+	background: url(/images/yhy/background.png) repeat 0 0;
+	background-size: 1px 1px;
+}
+
+.orderList .orderTable .table tr th,.orderList .orderTable .table tr td {
+	text-align: center;
+	padding: 15px 18px;
+	border-bottom: none;
+}
+
+.orderList .orderTable .table tr th {
+	color: #333!important;
+}
+
+.orderList .orderTable .table tr td {
+	color: #666;
+	border-right:1px solid #ddd;
+	padding:0;
+	line-height:40px;
+	font-size:12px;
+}
+
+.orderList .orderTable .table tr td.orderNum {
+	border-left:1px solid #ddd;
+}
+
+.orderList .orderTable .table tr td a {
+	display: block;
+	text-decoration: none;
+	color: #478ff1;
+}
+
+.orderList .orderTable .headTr {
+	background-color: #f0f0f0;
+}
+
+.orderList .orderTable .orderNum {
+	width: 158px;
+}
+
+.orderList .orderTable .orderHost {
+	width: 200px;
+}
+
+.orderList .orderTable .telNum {
+	width: 80px;
+}
+
+.orderList .orderTable .orderTime {
+	width: 110px;
+}
+
+.orderList .orderTable .orderDate {
+	width: 134px;
+}
+
+.orderList .orderTable .leaveDate {
+	width: 120px;
+}
+
+.orderList .orderTable .leaveDate p {
+	line-height: 18px;
+	margin-bottom: 0;
+}
+
+.orderList .orderTable .leaveDate p.firstP {
+	margin-top:8px;
+}
+
+.orderList .orderTable .roomType {
+	width: 100px;
+}
+
+.orderList .orderTable .orderState {
+	width: 100px;
+}
+
+.orderList .orderTable .operator {
+	width: 100px;
+	color: #478ff1!important;
+}
+
+.orderList .orderTable .operation {
+	width: 95px;
+	color: #478ff1!important;
+}
+
+.selectBar .btn-group button span.caret {
+	float:right;
+	margin-top: 7px;
+}
+
+table.dataTable thead tr {
+	height: 50px;
+	background: linear-gradient( #f9f9f9 0%, #f0f0f0 100%);
+	border: 1px solid #ddd;
+}

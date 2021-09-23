@@ -1,0 +1,46 @@
+<div ng-controller="xingjiaotonginfoCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">班次详情</a></li>
+        </ul>
+    </div>
+    <div id="subcontainer" class="clearfix">
+        <div class="banciinfo clearfix text-center">
+            <div class="col-xs-4 time">
+                <p>{{traffics.startStation}}</p>
+                <p class="fromtime">{{traffics.startTime}}</p>
+                <p>{{traffics.leaveDate}}</p>
+            </div>
+            <div class="col-xs-4 banci">{{traffics.trafficCode}}</div>
+            <div class="col-xs-4 time">
+                <p>{{traffics.endStation}}</p>
+                <p class="fromtime">{{traffics.endTime}}</p>
+                <p>{{traffics.leaveDate}}</p>
+            </div>
+        </div>
+        <!--<div class="prevnextday clearfix">
+            <span class="col-xs-4"><button type="button" class="prev">前一天</button></span>
+            <span class="col-xs-4"><span class="rili"><input type="text" id="datepicker"
+                                                             value="2016-04-25"></span></span>
+            <span class="col-xs-4"><button type="button" class="next pull-right">后一天</button></span>
+        </div>-->
+        <div class="bancilist clearfix">
+            <ul>
+                <li class="col-xs-12" ng-repeat="price in traffics.prices">
+                    <span class="name pull-left">{{price.seatName}}</span><span class="price pull-right">
+                    ￥{{price.price}}<button type="button" ng-click="replace(this)">选定</button></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--<script src="http://jqueryui.com/resources/demos/datepicker/jquery.ui.datepicker-zh-TW.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker($.datepicker.regional["zh-TW"]);
+            $("#locale").change(function () {
+                $("#datepicker").datepicker("option",
+                        $.datepicker.regional[$(this).val()]);
+            });
+        });
+    </script>-->
+</div>

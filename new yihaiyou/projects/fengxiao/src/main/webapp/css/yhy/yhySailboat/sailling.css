@@ -1,0 +1,272 @@
+.roomset{
+	display:none;
+}
+
+.sailPrice,.sailBaseMess,.sailMine {
+	width: 1200px;
+	margin: 10px auto 0 auto;
+	background-color: #fff;
+	padding-top:0.1px;
+}
+
+.selectBar {
+	height:70px;
+	clear: both;
+}
+
+.selectBar .selectBar_1{
+	width:auto;
+	float:right;
+	margin-top:16px;
+}
+
+.selectBar .selectBar_1 div{
+	float:left;
+	box-shadow: 0 1px 1px #ddd;
+}
+
+.selectBar .dropdown {
+	width:100px;
+	height:30px;
+	margin-right:25px;
+}
+
+.selectBar .dropdown .btn {
+	width:100px;
+	height:30px;
+	line-height:16px;
+	text-align:left;
+	font-size: 12px;
+}
+
+.selectBar .form-group {
+	border-radius:4px;
+	margin-right:25px;
+}
+
+.selectBar .form-group .form-control {
+	width: 200px;
+	height:30px;
+	border-radius:4px!important;
+}
+
+.selectBar .roomemess {
+	display: block;
+	float:left;
+	height:30px;
+	line-height:30px;
+	margin-right:8px;
+	font-size:12px;
+	color: #333;
+}
+
+.selectBar .dropdown .dropdown-menu{
+	min-width:100px;
+}
+
+.selectBar .addmore {
+    margin: 16px 0 0 0;
+}
+
+.sailPrice .messageList_header {
+	width:1200px;
+	background: url(/images/yhy/background.png) repeat 0 0;
+	background-size: 1px 1px;
+}
+
+.sailPrice .messageList_header ul {
+	margin-bottom:0;
+}
+
+.sailPrice .messageList_header ul li{
+	float:left;
+	text-align: center;
+	line-height:50px;
+	font-size: 14px;
+	color:#333;
+}
+
+.sailPrice .messageList_header .proName {
+	width:210px;
+}
+
+.sailPrice .messageList_header .proType {
+	width:110px;
+}
+
+.sailPrice .messageList_header .proAddress {
+	width:200px;
+}
+
+.sailPrice .messageList_header .proContact {
+	width:120px;
+}
+
+.sailPrice .messageList_header .proPhone {
+	width:150px;
+}
+
+.sailPrice .messageList_header .proState {
+	width:122px;
+}
+
+.sailPrice .messageList_header .proOperate {
+	width:284px;
+	padding-left: 1%
+}
+
+
+.sailPrice .messageList_header .roomName {
+	width:278px;
+}
+
+.sailPrice .messageList_header .roomDescribe {
+	width:150px;
+}
+
+.sailPrice .messageList_header .roomNum {
+	width:190px;
+}
+
+.sailPrice .messageList_header .roomLive {
+	width:130px;
+}
+
+.sailPrice .messageList_header .roomState {
+	width:204px;
+}
+
+.sailPrice .messageList_header .roomOperate {
+	width:244px;
+	padding-left: 1%
+}
+
+.sailPrice .messageList_header .roomSort {
+	width:100px;
+}
+
+.sailPrice .messageList_header table {
+	margin-bottom: 0;
+}
+
+.table.dataTable thead th {
+	border-bottom: 0px none;
+	padding:15px 18px;
+}
+
+.sailPrice .messageList_header table tr td {
+	text-align:center;
+	font-size: 12px;
+	color: #666;
+	line-height: 40px;
+	border-right:1px solid #ddd;
+	padding:0;
+}
+
+.sailPrice .messageList_header .proOperate span {
+	width: 33%;
+	line-height: 40px;
+	color: #118ed1;
+	text-align: center;
+	display: block;
+	float:left;
+}
+
+.sailPrice .messageList_header .roomOperate span {
+	width: 25%;
+	line-height: 40px;
+	color: #118ed1;
+	text-align: center;
+	display: block;
+	float:left;
+	cursor: pointer;
+}
+
+.sailPrice .messageList_header .proOperate span.proDetail,.sailPrice .messageList_header .roomOperate span.proDetail {
+	float:right;
+}
+
+.sailPrice .addmore .btn a {
+	color: #fff!important;
+	display: block;
+	text-decoration: none;
+}
+
+.secnav{
+	width: 100%;
+	height: 40px;
+	border-bottom:1px solid #c2c2c2;
+	box-shadow: 0 1px 2px #c2c2c2;
+	background-color: #3c3c3c;
+	border-top:1px solid #666;
+}
+
+.secnav_list{
+	width:1200px;
+	margin:auto;
+}
+
+.secnav_list ul {
+	width:217px;
+	float:right;
+	margin-right:742px;
+}
+
+.secnav_list ul li{
+	width:100px;
+	height:40px;
+	float:left;
+	font-size:12px;
+	text-align:center;
+	line-height:40px;
+	color:#888;
+	cursor: pointer;
+	font-weight: 600
+}
+
+.secnav_list .HSsec_active{
+	border-bottom:4px solid #bbb;
+	color:#999!important;
+}
+
+.sailMine  tbody tr td:last-child a {
+	width: 33%;
+	display: block;
+	float: left;
+}
+
+.sailPrice  tbody tr td:last-child a {
+	width: 25%;
+	display: block;
+	float: left;
+}
+.price-calendar-info .starColor {
+	color: #ff4444;
+	font-size: 25px;
+	line-height: 40px;
+	display: block;
+	float: left;
+	width: 10px;
+	height: 30px;
+}
+
+table.dataTable thead tr {
+	height: 50px;
+	background: linear-gradient( #f9f9f9 0%, #f0f0f0 100%);
+	border: 1px solid #ddd;
+}
+
+.up,.down {
+	float:right;
+	width:20px;
+	height:20px;
+	cursor: pointer;
+}
+
+.up {
+	background: url(/images/yhy/icon-ace.png) no-repeat center center;
+}
+
+.down {
+	background: url(/images/yhy/icon-dace.png) no-repeat center center;
+}

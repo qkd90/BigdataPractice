@@ -1,0 +1,89 @@
+/*!
+ * 订单 v0.1
+ * Author Jeffrey.
+ * Copyright 2011-2015.
+ */
+
+/*顶部*/
+#top{background:#f7f7f7; border-bottom:1px solid #ededed; height:36px; line-height:36px;}
+.toplinks a{margin-left:20px; float:left;}
+.toplinks a.top-wx{background:url(/images/top-wx.png) center center no-repeat; width:30px; height:36px; line-height:36px;}
+.toplinks a.top-wb{background:url(/images/top-wb.png) center center no-repeat; width:30px; height:36px; line-height:36px;}
+.toplinks a.top-qq{background:url(/images/top-qq.png) center center no-repeat; width:30px; height:36px; line-height:36px;}
+/*头部*/
+#header{padding-top:10px; padding-bottom:10px;}
+#header .city{margin:20px 0 0 10px; }
+#header .city a.curr{color:#1c96d9; padding-left:10px;background:url(../images/header-city.jpg) no-repeat; width:88px; height:29px; line-height:29px; display:block;}
+  .subcity{width:424px; background:#fff; border:1px solid #e9e9e9; padding:10px; position:absolute; margin-left:180px; margin-top:50px; z-index:9999;}
+  .subcity h5{color:#1c96d9;}
+  .hotcity a{width:43px; display:inline-block; color:#a2a2a2;}
+  .hotcity a.red{color:#ff6a00;}
+  .startcity{background:#f4f4f4; color:#b4b4b4; padding:12px 10px; margin:10px auto;}
+  .startcity input{width:275px; background:#fff; border:1px solid #b4b4b4; margin-left:10px;}
+  #othercity .nav-tabs{border:none;}
+  #othercity .nav > li > a{padding:8px 15px;border-radius:0;}
+  #othercity .nav > li > a:hover{border:none;background:#1c96d9; color:#fff;}
+  #othercity .nav-tabs > li.active > a, #othercity .nav-tabs > li.active > a:focus, #othercity .nav-tabs > li.active > a:hover{border:none; background:#1c96d9; color:#fff;}
+  #othercity .tab-bg{background:#f4f4f4;}
+  #othercity .citylist{padding:10px 5px;}
+  #othercity .citylist span{color:#1c96d9; font-size:18px; width:50px;}
+  #othercity .citylist a{margin-left:10px; color:#a2a2a2;}
+  .topsearch{color:#a2a2a2; margin-top:20px;}
+  .topsearch dt{font-weight:normal; color:#a2a2a2; margin-bottom:10px;}
+  .topsearch input{float:left;}
+  .topsearch .search-kw{background:#fcfcfc url(../images/top-search.png) 5px center no-repeat; width:500px; border:1px solid #c9c9c9; border-right:none; height:35px; line-height:35px; padding-left:40px;}
+  .topsearch .search-bt{background:#ff7700; border:none; color:#fff; font-size:16px; height:35px; line-height:35px; display:block; width:75px;}
+/*导航*/
+#topnav{background:#1c96d9; height:45px; line-height:45px;}
+.mainnav a{color:#fff; font-size:16px; display:inline-block; padding:0 30px; margin-right:10px;}
+.mainnav a:hover,.mainnav a.curr{background:#265aa5;}
+.mainnav span.cart{background:url(../images/cart.png) center center no-repeat; width:40px; height:45px;}
+
+/*订单列表*/
+#orderlist h1.title{font-size:24px;}
+#orderlist h1.title span{margin-right:20px; display:inline-block;}
+#orderlist h1.title span.sku{background:url(../images/sku-bg.jpg) no-repeat; width:87px; height:31px; line-height:31px; color:#fff; font-size:14px;}
+#orderlist .info{background:#fffcf7; border:2px solid #ffebd0; padding:20px 10px;}
+#orderlist .info span{display:inline-block; margin-right:20px;}
+
+.box-order{background:#ededef; padding:15px; margin:10px auto;}
+.box-order h4{background:url(../images/order-title-line.jpg) left center no-repeat; padding-left:10px; margin-bottom:20px;}
+.box-order h4 small{color:#6b6b6c; font-size:14px;}
+.box-order h4 small a{color:#1c96d9;}
+.box-order h5 small{color:#1c96d9; font-size:14px;}
+.box-order h5 a.order-info{background:url(../images/ico.jpg) right center no-repeat; padding-right:20px;}
+.box-order-content{background:#fff; padding:15px; margin:10px auto; color:#666;}
+.price-list span.price{color:#ffa113;}
+.price-list span input{display:inline-block; height:25px;}
+.price-list span input.minus{background:#f0f0f0; border:none;}
+.price-list span input.plus{background:#f0f0f0; border:none;}
+.price-list span input.num{background:#fff; border:1px solid #f0f0f0; width:40px; text-align:center;}
+#kehu input{width:100px;}
+#kehu label i,.yewu label i{color:#f00;}
+.tijiao{padding:20px;}
+.tijiao input.btn{width:300px; height:50px; font-size:16px; font-weight:bold;}
+.tijiao span{display:block; color:#666; padding-top:10px;}
+.tixing{line-height:200%;}
+
+/*费用清单*/
+#qd{color:#897152;}
+#qd h4{background:#ffcc76; color:#897152; padding:20px; border-radius:5px 5px 0 0; margin-bottom:0;}
+#qd .buylist,#qd .buylist h5{font-size:16px;}
+#qd .buylist{background:#fff9ee; border-top:1px solid #ffcc76; padding:10px 0 20px 0;}
+#qd .buylist span.price{color:#1c96d9;}
+#qd .total{background:#ffebcb; font-size:18px; color:#897152; padding:20px 30px 20px 0;}
+#qd .total>span{display:block;}
+#qd .total span.buytotal{font-size:24px; font-weight:bold;}
+#qd .total span.buytotal b{color:#f00;}
+#qd .total-sm{background:#fff9ee; padding:20px; border-radius: 0 0 5px 5px;}
+#qd .total-sm input,.total-payment input{width:275px; height:50px; font-size:16px; font-weight:bold;}
+
+.total-payment{padding:30px;}
+h4.order-info{color:#ff7a19; padding:15px 0;}
+
+.box-order-content .media-body{line-height:120%;}
+.box-order-content .media-body span{color:#ff7a19;}
+
+#order-ok{background:#fff url(../images/ok.jpg) 180px center no-repeat; padding:50px; font-size:30px;}
+#order-ok p{margin-left:280px;}
+#order-ok p a{color:#1c96d9; font-size:14px;}

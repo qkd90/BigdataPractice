@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.NoteMapper">
+	<insert id="insert" parameterType="Note">
+		insert into tb_note
+			(
+				id,
+				plan_id,
+				user_id,
+				title,
+				content,
+				cost,
+				days,
+				mileage,
+				travel_time,
+				scenics,
+				publish_time,
+				last_edit_time,
+				good,
+				status,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{planId},
+				#{userId},
+				#{title},
+				#{content},
+				#{cost},
+				#{days},
+				#{mileages},
+				#{travelTime},
+				#{scenics},
+				#{publishTime},
+				#{lastEditTime},
+				#{good},
+				#{status},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="Note">
+		update tb_note
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="planId != null and '' != planId"> plan_id = #{planId},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="title != null and '' != title"> title = #{title},</if>
+			<if test="content != null and '' != content"> content = #{content},</if>
+			<if test="cost != null and '' != cost"> cost = #{cost},</if>
+			<if test="days != null and '' != days"> days = #{days},</if>
+			<if test="mileage != null and '' != mileage"> mileage = #{mileage},</if>
+			<if test="travelTime != null and '' != travelTime"> travel_time = #{travelTime},</if>
+			<if test="scenics != null and '' != scenics"> scenics = #{scenics},</if>
+			<if test="publishTime != null and '' != publishTime"> publish_time = #{publishTime},</if>
+			<if test="lastEditTime != null and '' != lastEditTime"> last_edit_time = #{lastEditTime},</if>
+			<if test="good != null and '' != good"> good = #{good},</if>
+			<if test="status != null and '' != status"> status = #{status},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="Note">
+		delete from
+			tb_note
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="Note">
+		select
+			*
+		from
+			tb_note
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="Note">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_note
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="planId != null and '' != planId"> and plan_id = #{planId} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="title != null and '' != title"> and title = #{title} </if>
+			<if test="content != null and '' != content"> and content = #{content} </if>
+			<if test="cost != null and '' != cost"> and cost = #{cost} </if>
+			<if test="days != null and '' != days"> and days = #{days} </if>
+			<if test="mileage != null and '' != mileage"> and mileage = #{mileage} </if>
+			<if test="travelTime != null and '' != travelTime"> and travel_time = #{travelTime} </if>
+			<if test="needTravelTime != null"> and travel_time is not null </if>
+			<if test="scenics != null and '' != scenics"> and scenics = #{scenics} </if>
+			<if test="publishTime != null and '' != publishTime"> and publish_time = #{publishTime} </if>
+			<if test="lastEditTime != null and '' != lastEditTime"> and last_edit_time = #{lastEditTime} </if>
+			<if test="good != null and '' != good"> and good = #{good} </if>
+			<if test="status != null and '' != status"> and status = #{status} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ids != null">
+			and id in ( <if test="ids.size() == 0">-1000</if>
+            <foreach collection="ids" item="item" index="index" separator=",">#{item}
+            </foreach>
+            )
+		</if>
+		</where>
+	</sql>
+</mapper>

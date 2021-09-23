@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.PlanUrbanTrafficRelMapper">
+	<insert id="insert" parameterType="PlanUrbanTrafficRel" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_plan_urban_traffic_rel
+			(
+				id,
+				plan_id,
+				urban_traffic_id,
+				start_trip_type,
+				end_trip_type,
+				start_trip_id,
+				end_trip_id,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{planId},
+				#{urbanTrafficId},
+				#{startTripType},
+				#{endTripType},
+				#{startTripId},
+				#{endTripId},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="PlanUrbanTrafficRel">
+		update tb_plan_urban_traffic_rel
+		<set>
+			<if test="id != null"> id = #{id},</if>
+			<if test="planId != null"> plan_id = #{planId},</if>
+			<if test="urbanTrafficId != null"> urban_traffic_id = #{urbanTrafficId},</if>
+			<if test="startTripType != null"> start_trip_type = #{startTripType},</if>
+			<if test="endTripType != null"> end_trip_type = #{endTripType},</if>
+			<if test="startTripId != null"> start_trip_id = #{startTripId},</if>
+			<if test="endTripId != null"> end_trip_id = #{endTripId},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="PlanUrbanTrafficRel">
+		delete from
+			tb_plan_urban_traffic_rel
+		where
+			id = #{id}
+	</delete>
+	
+	<delete id="delScenicRel" parameterType="PlanUrbanTrafficRel">
+		delete 	from tb_plan_urban_traffic_rel 
+		where 	start_trip_type &lt;&gt; 3 
+		and 	end_trip_type &lt;&gt; 3 
+		and		plan_id = #{planId}
+	</delete>
+	
+	<delete id="delHotelRel" parameterType="PlanUrbanTrafficRel">
+		delete 	from tb_plan_urban_traffic_rel 
+		where 	(start_trip_type = 3 or end_trip_type= 3)
+		and		plan_id = #{planId}
+	</delete>
+	
+	<select id="selById" resultType="PlanUrbanTrafficRel">
+		select
+			*
+		from
+			tb_plan_urban_traffic_rel
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="PlanUrbanTrafficRel">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">$ {item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_plan_urban_traffic_rel
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="planId != null and '' != planId"> and plan_id = #{planId} </if>
+			<if test="urbanTrafficId != null and '' != urbanTrafficId"> and urban_traffic_id = #{urbanTrafficId} </if>
+			<if test="startTripType != null and '' != startTripType"> and start_trip_type = #{startTripType} </if>
+			<if test="endTripType != null and '' != endTripType"> and end_trip_type = #{endTripType} </if>
+			<if test="startTripId != null and '' != startTripId"> and start_trip_id = #{startTripId} </if>
+			<if test="endTripId != null and '' != endTripId"> and end_trip_id = #{endTripId} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; # {ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; # {tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				# {item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+	</sql>
+</mapper>

@@ -1,0 +1,23 @@
+/*!
+ * 登录页面 v0.1
+ * Author Jeffrey.
+ * Copyright 2011-2015.
+ */
+#login-bg{background:url(../images/login-bg.jpg) center top no-repeat; height:518px;}
+.login{background:url(../images/login-bg-1.png) no-repeat; width:357px; height:386px; margin-top:58px; padding-top:82px;}
+.login span{display:block; margin-left:65px;}
+.login span.no-margin-left{margin-left:0;}
+.login input.text{background:none; border:none; height:52px; line-height:52px; margin-bottom:25px; width:172px; color:#b2b2b2;}
+.login input.login-bt{background:url(../images/login-bt-1.png) no-repeat; width:310px; height:52px; border:none; margin-top:20px;}
+.login span.no-margin-left input{margin-bottom:5px;}
+.autologin{margin-bottom:25px;}
+.autologin span.pull-left{margin-left:25px;}
+.autologin span.pull-right{margin-right:25px;}
+.autologin input.checkbox{float:left;}
+.login span.reg{margin-left:30px;}
+.login span.reg a{color:#ff8106;}
+
+/*footer*/
+#footer-login{padding-top:15px; padding-bottom:15px;}
+#footer-login a{padding:0 20px; color:#333;}
+#footer-login .copyright{padding-top:15px;}

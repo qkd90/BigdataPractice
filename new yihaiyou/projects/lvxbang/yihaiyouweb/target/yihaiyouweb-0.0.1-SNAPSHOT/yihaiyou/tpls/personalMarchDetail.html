@@ -1,0 +1,55 @@
+<div class="diymarch_detail" ng-controller="personalMarchDetail" style="margin-bottom:0">
+    <div class="header">
+        <a ui-sref="personalMarchList"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        {{plan.name}}
+    </div>
+    <div class="diymar_mainmessage">
+        <p>行程共<span class="num">{{plan.days.length}}</span>天<span class="apart">|</span><span class="num">{{plan.scenicNum}}</span>个景点<span
+                class="apart">|</span>大约花费<span class="fare"> ¥{{plan.price}}</span></p>
+    </div>
+    <div class="apart_detail"></div>
+    <section class="aday" ng-repeat="day in plan.days">
+        <div class="aday_mainmess">
+            <h3>第{{day.day}}天</h3>
+
+            <p>游玩<span class="num">{{day.playTime}}</span>小时<span class="apart">|</span><span
+                    class="num">{{day.scenics.length}}</span>个景点<span
+                    class="apart">|</span>大约花费<span class="fare"> ¥{{day.price}}</span></p>
+        </div>
+        <!--<div class="addTicket" ng-if="day.needShip"><img src="/yihaiyou/image/plan/icon-add.png">还没添加船票，点击添加</div>-->
+        <div class="apart_detail"></div>
+        <div ng-repeat="scenic in day.scenics">
+            <div class="submarienpart">
+                <div class="sub_title clearfix">
+                    <div class="left">{{$index + 1}}</div>
+                    <div class="right"><p>{{scenic.name}}</p></div>
+                    <!--<p>9:00</p>-->
+                </div>
+                <div class="hotelpic"><img
+                        bn-lazy-src="{{scenic.cover}}"><span>建议游玩{{scenic.adviceDate}}小时</span></div>
+            </div>
+            <div class="hotelpart_sel">
+                <ul>
+                    <li ui-sref="planScenicDetail({params: scenic.id + '-3'})"><img
+                            src="/yihaiyou/image/plan/icon-detail.png">景点详情
+                    </li>
+                    <!--<li><img src="/yihaiyou/image/plan/icon-out.png">到这里去</li>-->
+                    <li><img src="/yihaiyou/image/plan/icon-sdf.png">更多功能</li>
+                </ul>
+            </div>
+            <div class="grayBlank" style="background:#f0f0f0;width:100%;height:10px;"></div>
+        </div>
+    </section>
+    <div class="mytravel" ng-show="mytravel" ng-click="showMytravel()">行程单</div>
+    <div style="position: relative;">
+        <div class="travelList" style="height: 100%;">
+            <h3>行程总览</h3>
+            <ul ng-repeat="day in plan.days">
+                <li>第{{day.day}}天</li>
+                <li ng-if="planDemand.needHotel && day.hotel != null">{{day.hotel.name}}</li>
+                <li ng-repeat="scenic in day.scenics">{{scenic.name}}</li>
+            </ul>
+            <div class="hidetravelList" ng-show="hidebutton" ng-click="hidetravelList()">>></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.account.mapper.UserMapper">
+	<insert id="insert" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_user
+		(
+		id,
+		username,
+		password,
+		email,
+		nickname,
+		sex,
+		type,
+		userface,
+		birthday,
+		hometown,
+		location,
+		profession,
+		hobbies,
+		emotion_status,
+		phone,
+		phone_public,
+		qq,
+		age,
+		lat,
+		lng,
+		loc_modify_time,
+		last_addr,
+		description,
+		login_time,
+		login_ip,
+		status,
+		apply_time,
+		modify_time
+		)
+		values
+		(
+		#{id},
+		#{username},
+		#{password},
+		#{email},
+		#{nickname},
+		#{sex},
+		#{type},
+		#{userface},
+		#{birthday},
+		#{hometown},
+		#{location},
+		#{profession},
+		#{hobbies},
+		#{emotionStatus},
+		#{phone},
+		#{phonePublic},
+		#{qq},
+		#{age},
+		#{lat},
+		#{lng},
+		#{locModifyTime},
+		#{lastAddr},
+		#{description},
+		#{loginTime},
+		#{loginIp},
+		#{status},
+		#{applyTime},
+		#{modifyTime}
+		)
+	</insert>
+
+	<update id="update" parameterType="User">
+		update tb_user
+		<set>
+			<if test="username != null and '' != username"> username = #{username},</if>
+			<if test="email != null and '' != email"> email = #{email},</if>
+			<if test="nickname != null and '' != nickname"> nickname = #{nickname},</if>
+			<if test="type != null and '' != type"> type = #{type},</if>
+			<if test="sex != null"> sex = #{sex},</if>
+			<if test="userface != null"> userface = #{userface},</if>
+			<if test="birthday != null and '' != birthday" > birthday = #{birthday},</if>
+			<if test="hometown != null and '' != hometown"> hometown = #{hometown},</if>
+			<if test="location != null and '' != location"> location = #{location},</if>
+			<if test="profession != null and '' != profession"> profession = #{profession},</if>
+			<if test="hobbies != null and '' != hobbies"> hobbies = #{hobbies},</if>
+			<if test="emotionStatus != null and '' != emotionStatus"> emotion_status = #{emotionStatus},</if>
+			<if test="phone != null and '' != phone"> phone = #{phone},</if>
+			<if test="phonePublic != null and '' != phonePublic"> phone_public = #{phonePublic},</if>
+			<if test="qq != null and '' != qq"> qq = #{qq},</if>
+			<if test="age != null and '' != age"> age = #{age},</if>
+			<if test="lat != null and '' != lat"> lat = #{lat},</if>
+			<if test="lng != null and '' != lng"> lng = #{lng},</if>
+			<if test="locModifyTime != null and '' != locModifyTime"> loc_modify_time = #{locModifyTime},</if>
+			<if test="lastAddr != null and '' != lastAddr"> last_addr = #{lastAddr},</if>
+			<if test="description != null and '' != description"> description = #{description},</if>
+			<if test="loginTime != null and '' != loginTime"> login_time = #{loginTime},</if>
+			<if test="loginIp != null and '' != loginIp"> login_ip = #{loginIp},</if>
+			<if test="status != null and '' != status"> status = #{status},</if>
+			<if test="applyTime != null and '' != applyTime"> apply_time = #{applyTime},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where id = #{id}
+	</update>
+
+    <update id="updatePassword" parameterType="User">
+        update tb_user set password=#{password} where id = #{id}
+    </update>
+
+	<delete id="del" parameterType="User">
+		delete from
+		tb_user
+		where id = #{id}
+	</delete>
+	
+	<select id="summaryinfo" resultType="User">
+		select id, nickname, userface from tb_user where id = #{id}
+	</select>
+	
+	<select id="selById" resultType="User">
+		select
+		id,
+		username,
+        email,
+        nickname,
+        userface,
+        sex,
+        birthday,
+        hometown,
+        location,
+        profession,
+        hobbies,
+        emotion_status,
+        phone,
+        phone_public,
+        qq,
+        description,
+        login_time,
+        login_ip,
+        lat,
+        lng,
+        loc_modify_time,
+        status,
+        apply_time,
+        modify_time,
+        create_time
+		from
+		tb_user
+		where id = #{id}
+	</select>
+
+	<select id="count" resultType="int">
+		select
+		count(*)
+		<include refid="byProperty" />
+	</select>
+
+	<select id="list" resultType="User">
+		select
+			*
+		<include refid="byProperty" />
+	</select>
+
+	<sql id="byProperty">
+		from
+		tb_user
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="username != null and '' != username"> and username = #{username} </if>
+			<if test="password != null and '' != password"> and password = #{password} </if>
+			<if test="email != null and '' != email"> and email = #{email} </if>
+			<if test="type != null and '' != type"> and type = #{type} </if>
+			<if test="nickname != null and '' != nickname"> and nickname = #{nickname} </if>
+			<if test="sex != null and '' != sex"> and sex = #{sex}</if>
+			<if test="userface != null"> and userface = #{userface}</if>
+			<if test="emotionStatus != null and '' != emotionStatus"> emotion_status = #{emotionStatus} </if>
+			<if test="phone != null and '' != phone"> phone = #{phone} </if>
+			<if test="phonePublic != null and '' != phonePublic"> phone_public = #{phonePublic} </if>
+			<if test="loginTime != null and '' != loginTime"> and login_time = #{loginTime} </if>
+			<if test="loginIp != null and '' != loginIp"> and login_ip = #{loginIp} </if>
+			<if test="status != null and '' != status"> and status = #{status} </if>
+			<if test="lngS != null and lngE != nul"> and (lng is not null) and (lng between #{lngS} and #{lngE})</if>
+			<if test="latS != null and latE != nul"> and (lat is not null) and (lat between #{latS} and #{latE})</if>
+			<if test="endDate != null and endDate != nul"> and loc_modify_time > #{endDate} </if>
+			<if test="applyTime != null and '' != applyTime"> and apply_time = #{applyTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="ids != null">
+				and id in ( <if test="ids.size() == 0">-1000</if>
+                <foreach collection="ids" item="item" index="index" separator=",">#{item}
+                </foreach>
+                )
+			</if>
+		</where>
+	</sql>
+	
+	<select id="listColumns" resultType="User">
+		select
+		<if test="needColumns!=null and needColumns.size()!=0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}</foreach>
+		</if>
+		from
+		tb_user
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="username != null and '' != username"> and username = #{username} </if>
+			<if test="password != null and '' != password"> and password = #{password} </if>
+			<if test="email != null and '' != email"> and email = #{email} </if>
+			<if test="type != null and '' != type"> and type = #{type} </if>
+			<if test="nickname != null and '' != nickname"> and nickname = #{nickname} </if>
+			<if test="sex != null"> and sex = #{sex}</if>
+			<if test="userface != null"> and userface = #{userface}</if>
+			<if test="emotionStatus != null and '' != emotionStatus"> emotion_status = #{emotionStatus} </if>
+			<if test="single != null and '' != single"> single = #{single} </if>
+			<if test="loginTime != null and '' != loginTime"> and login_time = #{loginTime} </if>
+			<if test="loginIp != null and '' != loginIp"> and login_ip = #{loginIp} </if>
+			<if test="status != null and '' != status"> and status = #{status} </if>
+			<if test="applyTime != null and '' != applyTime"> and apply_time = #{applyTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="ids != null">
+				and id in ( <if test="ids.size() == 0">-1000</if>
+				<foreach collection="ids" item="item" index="index" separator=",">#{item}
+				</foreach>
+				)
+			</if>
+		</where>
+	</select>
+</mapper>

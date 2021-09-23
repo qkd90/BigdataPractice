@@ -1,0 +1,15 @@
+/*!
+ * 找回页面 v0.1
+ * Author Jeffrey.
+ * Copyright 2011-2015.
+ */
+
+
+.zhaohui-bg{background:#ededef; padding:25px 0;}
+.zhaohui-bz{margin-bottom:20px;}
+.zh-btn{width:200px; height:50px;}
+.zhaohui-form{padding-top:50px; padding-bottom:50px;}
+
+.zhaohui-form .ok{background:url(../images/ok.jpg) left center no-repeat; height:119px; padding:10px 0 0 160px; margin:50px;}
+.ok h4{font-size:30px; color:#1c96d9; padding-bottom:20px;}
+.ok span a{color:#ffa535;}

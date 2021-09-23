@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.NoteImageMapper">
+	<insert id="insert" parameterType="NoteImage">
+		insert into tb_note_image
+			(
+				id,
+				note_id,
+				noteday_id,
+				note_scenic_id,
+				scenic_id,
+				plan_trip_id,
+				address_large,
+				address_medium,
+				address_small,
+				image_desc,
+				comment_count,
+				good_count,
+				image_width,
+				image_height,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{noteId},
+				#{notedayId},
+				#{noteScenicId},
+				#{scenicIds},
+				#{planTripId},
+				#{addressLarge},
+				#{addressMedium},
+				#{addressSmall},
+				#{imageDesc},
+				#{commentCount},
+				#{goodCount},
+				#{imageWidth},
+				#{imageHeight},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="NoteImage">
+		update tb_note_image
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="noteId != null and '' != noteId"> note_id = #{noteId},</if>
+			<if test="notedayId != null and '' != notedayId"> noteday_id = #{notedayId},</if>
+			<if test="noteScenicId != null and '' != noteScenicId"> note_scenic_id = #{noteScenicId},</if>
+			<if test="scenicIds != null and '' != scenicIds"> scenic_id = #{scenicIds},</if>
+			<if test="planTripId != null and '' != planTripId"> plan_trip_id = #{planTripId},</if>
+			<if test="addressLarge != null and '' != addressLarge"> address_large = #{addressLarge},</if>
+			<if test="addressMedium != null and '' != addressMedium"> address_medium = #{addressMedium},</if>
+			<if test="addressSmall != null and '' != addressSmall"> address_small = #{addressSmall},</if>
+			<if test="imageDesc != null and '' != imageDesc"> image_desc = #{imageDesc},</if>
+			<if test="commentCount != null and '' != commentCount"> comment_count = #{commentCount},</if>
+			<if test="goodCount != null and '' != goodCount"> good_count = #{goodCount},</if>
+			<if test="imageWidth != null and '' != imageWidth"> image_width = #{imageWidth},</if>
+			<if test="imageHeight != null and '' != imageHeight"> image_height = #{imageHeight},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+
+    <update id="updateNum" parameterType="NoteImage">
+        update tb_note_image
+        <set>
+            <if test="commentCount != null and commentCount" >comment_count = comment_count + 1</if>
+            <if test="commentCount != null and !commentCount" >comment_count = comment_count - 1</if>
+            <if test="goodCount != null and goodCount" >good_count = good_count + 1</if>
+            <if test="goodCount != null and !goodCount" >good_count = good_count - 1</if>
+        </set>
+        where
+            id = #{id}
+    </update>
+	
+	<delete id="del" parameterType="NoteImage">
+		delete from
+			tb_note_image
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="NoteImage">
+		select
+			*
+		from
+			tb_note_image
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="NoteImage">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_note_image
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="noteId != null and '' != noteId"> and note_id = #{noteId} </if>
+			<if test="notedayId != null and '' != notedayId"> and noteday_id = #{notedayId} </if>
+			<if test="noteScenicId != null and '' != noteScenicId"> and note_scenic_id = #{noteScenicId} </if>
+			<if test="scenicIds != null and '' != scenicIds"> and scenic_id = #{scenicIds} </if>
+			<if test="planTripId != null and '' != planTripId"> and plan_trip_id = #{planTripId} </if>
+			<if test="addressLarge != null and '' != addressLarge"> and address_large = #{addressLarge} </if>
+			<if test="addressMedium != null and '' != addressMedium"> and address_medium = #{addressMedium} </if>
+			<if test="addressSmall != null and '' != addressSmall"> and address_small = #{addressSmall} </if>
+			<if test="imageDesc != null and '' != imageDesc"> and image_desc = #{imageDesc} </if>
+			<if test="commentCount != null and '' != commentCount"> and comment_count = #{commentCount} </if>
+			<if test="imageWidth != null and '' != imageWidth"> and image_width = #{imageWidth} </if>
+			<if test="imageHeight != null and '' != imageHeight"> and image_height = #{imageHeight} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ids != null">
+			and id in ( <if test="ids.size() == 0">-1000</if>
+            <foreach collection="ids" item="item" index="index" separator=",">#{item}
+            </foreach>
+            )
+		</if>
+		</where>
+	</sql>
+</mapper>

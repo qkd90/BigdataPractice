@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.invitation.mapper.InvitationCityMapper">
+	<insert id="insert" parameterType="InvitationCity">
+		insert into tb_invitation_city
+			(
+				id,
+				invitation_id,
+				city_id,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{invitationId},
+				#{cityId},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="InvitationCity">
+		update tb_invitation_city
+		<set>
+			<if test="invitationId != null and '' != invitationId"> invitation_id = #{invitationId},</if>
+			<if test="cityId != null and '' != cityId"> city_id = #{cityId},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="InvitationCity">
+		delete from
+			tb_invitation_city
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="InvitationCity">
+		select
+			*
+		from
+			tb_invitation_city
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="InvitationCity">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_invitation_city
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="invitationId != null and '' != invitationId"> and invitation_id = #{invitationId} </if>
+			<if test="cityId != null and '' != cityId"> and city_id = #{cityId} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+</mapper>

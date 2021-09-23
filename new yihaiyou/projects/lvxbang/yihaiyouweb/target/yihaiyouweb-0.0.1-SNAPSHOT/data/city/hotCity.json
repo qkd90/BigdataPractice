@@ -1,0 +1,609 @@
+{
+  "sortMap": {
+    "hot": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/厦门/KBNNnmJ9gKux2SnEOgTR.jpg",
+        "id": 350200,
+        "name": "厦门"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/上海/lLP3QFrtjpaiTvjGXsQ5.jpg",
+        "id": 310100,
+        "name": "上海"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/拉萨/6L0SZYwOiKalrQ_5veM7.jpg",
+        "id": 540100,
+        "name": "拉萨"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/杭州/aWh7YFO0g0CwPOPoP8Ry.jpg",
+        "id": 330100,
+        "name": "杭州"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/rXCD6-E0hMarLPNuRVXL.jpg",
+        "id": 460200,
+        "name": "三亚"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/大理/jMgX3-VaigeXk8C_72Ei.jpg",
+        "id": 532900,
+        "name": "大理"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/黄山/HleX3wL5h7Cxym7_cgdS.jpg",
+        "id": 341000,
+        "name": "黄山"
+      }
+    ],
+    "A": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/安庆/aP-b5F5BjrmELFTX2syH.jpg",
+        "id": 340800,
+        "name": "安庆"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/安阳/VcWMPIYQgOW-7LRBDlx4.jpg",
+        "id": 410500,
+        "name": "安阳"
+      }
+    ],
+    "B": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/保山/sixM-vubijuLMqTcX4NN.jpg",
+        "id": 530500,
+        "name": "保山"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/包头/v9jdhQFsixCYsQuLv-jZ.jpg",
+        "id": 150200,
+        "name": "包头"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/巴中/QVkZqGkrjFWigTqGWMaN.jpg",
+        "id": 511900,
+        "name": "巴中"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/北海/LKOUR5Gxg2m8Up2OvJt6.jpg",
+        "id": 450500,
+        "name": "北海"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/北京/TXvqtruDhyWi98-8izDA.jpg",
+        "id": 110100,
+        "name": "北京"
+      }
+    ],
+    "C": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/承德/wzkkT6moiqSNmLZkdSTs.jpg",
+        "id": 130800,
+        "name": "承德"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/成都/5n8elR2WjpaYgY94InrR.jpg",
+        "id": 510100,
+        "name": "成都"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/郴州/ZSNXZJ41iCmNdMvu7Mcu.jpg",
+        "id": 431000,
+        "name": "郴州"
+      }
+    ],
+    "D": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/大连/Ps009haBiSytDsOvDG6y.jpg",
+        "id": 210200,
+        "name": "大连"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/大理/jMgX3-VaigeXk8C_72Ei.jpg",
+        "id": 532900,
+        "name": "大理"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/丹东/cFgipLujjz_OxS0Uckze.jpg",
+        "id": 210600,
+        "name": "丹东"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/大同/NbsvJgZ6gSOMcWGdW30C.jpg",
+        "id": 140200,
+        "name": "大同"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/迪庆/AGilby2Uj0Kv2vkF-VIF.jpg",
+        "id": 533400,
+        "name": "迪庆"
+      }
+    ],
+    "E": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/sokgPTungIK7yLuhjvsB.jpg",
+        "id": 513200,
+        "name": "阿坝"
+      }
+    ],
+    "F": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/福州/tQ3De2WwjH_HLcyAg4LE.jpg",
+        "id": 350100,
+        "name": "福州"
+      }
+    ],
+    "G": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/赣州/iGHMWY8QixyytyuFTiwc.jpg",
+        "id": 360700,
+        "name": "赣州"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/广州/gIGjyDiygVW1f24O9Vaa.jpg",
+        "id": 440100,
+        "name": "广州"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/桂林/VN6rI7huhVubBrcmOWzn.jpg",
+        "id": 450300,
+        "name": "桂林"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/贵阳/YwtQLjO-gf_52xxlCEfI.jpg",
+        "id": 520100,
+        "name": "贵阳"
+      }
+    ],
+    "H": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/海口/PZUxN3iYgCSCzda2X67V.jpg",
+        "id": 460100,
+        "name": "海口"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/邯郸/LYEJz6jtjNqt4gE02j3I.jpg",
+        "id": 130400,
+        "name": "邯郸"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/杭州/aWh7YFO0g0CwPOPoP8Ry.jpg",
+        "id": 330100,
+        "name": "杭州"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/汉中/FKZbr8W0jyyu-fEO9EAq.jpg",
+        "id": 610700,
+        "name": "汉中"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/菏泽/vd6jscOsgQKYo9gZrXhs.jpg",
+        "id": 371700,
+        "name": "菏泽"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/黄山/HleX3wL5h7Cxym7_cgdS.jpg",
+        "id": 341000,
+        "name": "黄山"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/呼和浩特/LDLysB22ixqOJBXovnSG.jpg",
+        "id": 150100,
+        "name": "呼和浩特"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/呼伦贝尔/tgpfcujaixeCGwj981QI.jpg",
+        "id": 150700,
+        "name": "呼伦贝尔"
+      }
+    ],
+    "I": [],
+    "J": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/吉安/dSY_ZpVCgzmCBGRpBG4I.jpg",
+        "id": 360800,
+        "name": "吉安"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/嘉兴/gZnubQnLilOMGopMKKZQ.jpg",
+        "id": 330400,
+        "name": "嘉兴"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/吉林/70U7Hj5qiX62UKR0w5bC.jpg",
+        "id": 220200,
+        "name": "吉林"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/济南/GKa4TlXVjmaCgMOpknAo.jpg",
+        "id": 370100,
+        "name": "济南"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/晋城/gv1vd-XrgNqsVkfwWVqE.jpg",
+        "id": 140500,
+        "name": "晋城"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/荆州/9U3n9-mFh9KSaSBs3N41.jpg",
+        "id": 421000,
+        "name": "荆州"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/晋中/dRZjlY93hf2KKDP4tsFJ.jpg",
+        "id": 140700,
+        "name": "晋中"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/九江/CNVHTQYthy_1dH21Xhyb.jpg",
+        "id": 360400,
+        "name": "九江"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/酒泉/Sc2XwyUtjJSHokVkWK54.jpg",
+        "id": 620900,
+        "name": "酒泉"
+      }
+    ],
+    "K": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/哈尔滨/owi1RfEKi1_erGEPo6gj.jpg",
+        "id": 230100,
+        "name": "哈尔滨"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/开封/EFmCvtMridCiQIhrOaoC.jpg",
+        "id": 410200,
+        "name": "开封"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/o8_rolWlj1iLv3-42fg8.jpg",
+        "id": 530100,
+        "name": "昆明"
+      }
+    ],
+    "L": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/兰州/6pHVcC9iglSLDDAfXymn.jpg",
+        "id": 620100,
+        "name": "兰州"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/拉萨/6L0SZYwOiKalrQ_5veM7.jpg",
+        "id": 540100,
+        "name": "拉萨"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/连云港/UEWCGN1VggSsKALXM1z3.jpg",
+        "id": 320700,
+        "name": "连云港"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/丽江/KtpWvmm9gZeIo1haI2Pp.jpg",
+        "id": 530700,
+        "name": "丽江"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/龙岩/QQOIoqdAimyxGh9n2k2b.jpg",
+        "id": 350800,
+        "name": "龙岩"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/洛阳/JXHQX9Mdiaqyiw1t5cM3.jpg",
+        "id": 410300,
+        "name": "洛阳"
+      }
+    ],
+    "M": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/无锡/r2t9IPzwjTye8uLMU-zb.jpg",
+        "id": 320200,
+        "name": "无锡"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/牡丹江/1RSubGblgY6hmnKXBt22.jpg",
+        "id": 231000,
+        "name": "牡丹江"
+      }
+    ],
+    "N": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/南昌/w3PrTTvIhDWJ2tnk5qtQ.jpg",
+        "id": 360100,
+        "name": "南昌"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/南宁/FH0fnBq4hVynkM49fbmJ.jpg",
+        "id": 450100,
+        "name": "南宁"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/南京/c-goHhVIieqvrGRc3_av.jpg",
+        "id": 320100,
+        "name": "南京"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/南平/RQUReoFDiVCPyxSwgP14.jpg",
+        "id": 350700,
+        "name": "南平"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/宁德/Cr3P-wfdhxO1957ROP28.jpg",
+        "id": 350900,
+        "name": "宁德"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/宁波/j2nzD60Jjj6x6-XkY8vP.jpg",
+        "id": 330200,
+        "name": "宁波"
+      }
+    ],
+    "O": [],
+    "P": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/莆田/NWrK9-PIhrqO1HXDDhtR.jpg",
+        "id": 350300,
+        "name": "莆田"
+      }
+    ],
+    "Q": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/齐齐哈尔/8v_L7H7BgPGZc-OWNLIL.jpg",
+        "id": 230200,
+        "name": "齐齐哈尔"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/青岛/YwoYu2SRhUGrITT5vHq2.jpg",
+        "id": 370200,
+        "name": "青岛"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/秦皇岛/pnxls88_iwaf0Sh5q716.jpg",
+        "id": 130300,
+        "name": "秦皇岛"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/泉州/t8kgKKYOhduqtZV8qRpU.jpg",
+        "id": 350500,
+        "name": "泉州"
+      }
+    ],
+    "R": [],
+    "S": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/三门峡/UaXgEfjTjSCj1tATgHCA.jpg",
+        "id": 411200,
+        "name": "三门峡"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/三明/99sO8rk9jUiu7nEepTEA.jpg",
+        "id": 350400,
+        "name": "三明"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/rXCD6-E0hMarLPNuRVXL.jpg",
+        "id": 460200,
+        "name": "三亚"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/厦门/KBNNnmJ9gKux2SnEOgTR.jpg",
+        "id": 350200,
+        "name": "厦门"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/上海/lLP3QFrtjpaiTvjGXsQ5.jpg",
+        "id": 310100,
+        "name": "上海"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/上饶/UjKwaxMpj-qRNGFuD3yu.jpg",
+        "id": 361100,
+        "name": "上饶"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/绍兴/4KUjvqh3h-_SkjWIaWy4.jpg",
+        "id": 330600,
+        "name": "绍兴"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/沈阳/lG3H6u6MjqWr3hKJuCbV.jpg",
+        "id": 210100,
+        "name": "沈阳"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/深圳/84DUkucGitWp5PRmmK6u.jpg",
+        "id": 440300,
+        "name": "深圳"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/十堰/9I5FMpaJjmqyXRzB7vJd.jpg",
+        "id": 420300,
+        "name": "十堰"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/苏州/oiMG-eBzhUi26OJsm3KT.jpg",
+        "id": 320500,
+        "name": "苏州"
+      }
+    ],
+    "T": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/泰安/ZBG5cLEphbKQbtHMBIfn.jpg",
+        "id": 370900,
+        "name": "泰安"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/太原/80Ex7K71jnqRmU_ljVuW.jpg",
+        "id": 140100,
+        "name": "太原"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/天津/9dFljVB6jGKZL5zVLHst.jpg",
+        "id": 120100,
+        "name": "天津"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/吐鲁番/oc5RZjtVgoKm_V0RFmhR.jpg",
+        "id": 652100,
+        "name": "吐鲁番"
+      }
+    ],
+    "U": [],
+    "V": [],
+    "W": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/威海/gLhu7j9uhXClDN4qacAv.jpg",
+        "id": 371000,
+        "name": "威海"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/武汉/w0dKYWPqgHiq2SXAggM8.jpg",
+        "id": 420100,
+        "name": "武汉"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/芜湖/jn0ZOmaGhoi8pNsdnB7x.jpg",
+        "id": 340200,
+        "name": "芜湖"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/乌鲁木齐/AoPdvHpzhiuESiVvPN0Z.jpg",
+        "id": 650100,
+        "name": "乌鲁木齐"
+      }
+    ],
+    "X": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/西安/xheWLPF1hcS4TiKx5EVe.jpg",
+        "id": 610100,
+        "name": "西安"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/湘西/XFyK5YedjO2Gmo_9vekP.jpg",
+        "id": 433100,
+        "name": "湘西"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/西宁/5T09V466hn2p728irvF8.jpg",
+        "id": 630100,
+        "name": "西宁"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/忻州/roCBqDCejSCIpLX-Wvko.jpg",
+        "id": 140900,
+        "name": "忻州"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/西双版纳/VcESJxEJhnOrQyzbiiwC.jpg",
+        "id": 532800,
+        "name": "西双版纳"
+      }
+    ],
+    "Y": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/延安/zh6dn7Beid2f-rHpWt6r.jpg",
+        "id": 610600,
+        "name": "延安"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/扬州/QctqcI9hip6kEBD5OQ0B.jpg",
+        "id": 321000,
+        "name": "扬州"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/宜宾/E4U6_56dh3W1FKDRf6pI.jpg",
+        "id": 511500,
+        "name": "宜宾"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/银川/yTSsq-B6im6barKkWR4W.jpg",
+        "id": 640100,
+        "name": "银川"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/景德镇/sQAh5ZaCgqSnyEuiWPAQ.jpg",
+        "id": 360200,
+        "name": "景德镇"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/鹰潭/bquepRn_grKMdgts9gGA.jpg",
+        "id": 360600,
+        "name": "鹰潭"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/烟台/080HLPvbg52D1O_kR3qU.jpg",
+        "id": 370600,
+        "name": "烟台"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/乐山/N1IUl0RJgqCHwuGiNaGp.jpg",
+        "id": 511100,
+        "name": "乐山"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/岳阳/wH0DyPn4jkGrKqEOlybJ.jpg",
+        "id": 430600,
+        "name": "岳阳"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/榆林/OsJCxsJnhZyQ-JkidCoq.jpg",
+        "id": 610800,
+        "name": "榆林"
+      }
+    ],
+    "Z": [
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/枣庄/TTvG-R6Ih9uxjkCFSdJH.jpg",
+        "id": 370400,
+        "name": "枣庄"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/长春/9BX8URqAgUGNuyp4Y72_.jpg",
+        "id": 220100,
+        "name": "长春"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/张家界/kVsXbL0qiOy1a9z9vic5.jpg",
+        "id": 430800,
+        "name": "张家界"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/长沙/Wj7tWAaahqWMpPfqQywF.jpg",
+        "id": 430100,
+        "name": "长沙"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/漳州/tweEnfK-iMqMC1MiTrTo.jpg",
+        "id": 350600,
+        "name": "漳州"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/郑州/dODy74Nrg1iIAgiw4U4z.jpg",
+        "id": 410100,
+        "name": "郑州"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/镇江/ouPDcCaEgeOoqx9K32Lr.jpg",
+        "id": 321100,
+        "name": "镇江"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/重庆/0GXXh9_Vjwyfkd7Bng6_.jpg",
+        "id": 500100,
+        "name": "重庆"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/舟山/Ngjtgv7xgaCDYAtP3455.jpg",
+        "id": 330900,
+        "name": "舟山"
+      },
+      {
+        "cover": "http://7u2inn.com2.z0.glb.qiniucdn.com/destination/珠海/I3JnjQ-Pi6OK9kUC6KSz.jpg",
+        "id": 440400,
+        "name": "珠海"
+      }
+    ]
+  },
+  "success": true
+}

@@ -1,0 +1,10 @@
+@import '../sys/ui.css';
+/*公共*/
+@import '../sys/util.css';
+#aa .easyui-linkbutton {
+	margin: 4px 6px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.propertyUL li{line-height: 26px;font-size: 13px;height: 26px;background-color: #EFEFEF;}
+.propertyUL li{border: 1px solid #ccc;}

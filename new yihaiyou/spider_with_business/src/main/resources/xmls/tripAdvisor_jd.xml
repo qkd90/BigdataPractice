@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <var-def name="html">
+        <http url="${url}"
+              charset="utf-8"></http>
+    </var-def>
+
+    <var-def name="content">
+        <html-to-xml>
+            <var name="html"></var>
+        </html-to-xml>
+    </var-def>
+    <var-def name="products">
+        <xquery>
+            <xq-param name="n" type="node()">
+                <var name="content"/>
+            </xq-param>
+            <xq-expression><![CDATA[
+			                            declare variable $n as node() external;
+			                            let $name := $n//div[@class='mapContainer']/@data-name
+			                           	let $address := $n//span[@class='street-address']/text()
+			                           	let $open_time := $n//span[@class='hours']
+										let $advice_time := $n//b[text()='建议游览时间：']/following-sibling::text()
+										let $recommend_reason := $n//p[@class='partial_entry']/span/text()
+			                           	let $introduction := $n//div[@class='listing_details']/p/text()
+			                           	let $telephone := $n//div[@class='phoneNumber']/text()
+			                           	let $lat := $n//div[@class='mapContainer']/@data-lat
+			                           	let $lng := $n//div[@class='mapContainer']/@data-lng
+			                           	let $rank := $n//b[@class='rank_text wrap']/span/text()
+			                           	let $score := $n//div[@class='rs rating']/span/img/@content
+
+				                        return
+				                        	<dataScenic>
+				                                <name>{data($name)}</name>
+												<address>{data($address)}</address>
+				                                <open_time>{data($open_time)}</open_time>
+				                                <advice_time>{data($advice_time)}</advice_time>
+				                                <recommend_reason>{data($recommend_reason)}</recommend_reason>
+				                                <introduce>{data($introduction)}</introduce>
+				                                <telephone>{data($telephone)}</telephone>
+				                                <latitude>{data($lat)}</latitude>
+				                                <longitude>{data($lng)}</longitude>
+				                                <order_num>{data($rank)}</order_num>
+				                                <score>{data($score)}</score>
+				                            </dataScenic>
+			                    ]]></xq-expression>
+        </xquery>
+    </var-def>
+    <!--let $website := $n//div[@class='rs rating']/span/img/@content-->
+    <!--let $traffic := $n//div[@class='rs rating']/span/img/@content-->
+    <!--let $cover := $n//div[@class='rs rating']/span/img/@content-->
+
+    <!-- <var-def name="result"> <![CDATA[<root>]]> <var name="nextHref"></var>
+        <var name="products"></var> <![CDATA[</root>]]> </var-def> -->
+    <file action="write" charset="utf-8" path="/Users/Sane/Downloads/jd.xml">
+        <var name="products"></var>
+    </file>
+</config>

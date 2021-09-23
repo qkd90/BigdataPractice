@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+/* 全局设置 */ 
+body,h1,h2,h3,h4,p,form,li,dt,dl,dd,label{ margin:0; padding:0; border:0; }
+body{ font-family:"宋体", Helvetica, Arial, sans-serif; font-size:12px; line-height:1.5; color:#000; }
+img{ border:0;}
+ul{ margin:0; padding:0; list-style:none;}
+em{ font-style:normal;}
+.clearfix:after{ content:"."; display:block; height:0; *height:1%; clear:both; visibility:hidden;}
+.clearfix{ display:block;}
+.clear{ clear:both;}
+a:link{color:#16b;text-decoration:none;}
+a:visited{color:#16b;text-decoration:none;}
+a:hover{color:#f73;text-decoration:none;}
+
+#nav-content ul{list-style-type:none;margin:0px; padding:10px;}
+#nav-content ul li{ padding:0px;}
+#nav-content ul li a{line-height:24px;}
+#nav-content ul li div{margin:2px 0px;padding-top:2px;}
+#nav-content ul li div.hover{border:1px dashed #99BBE8; background:#E0ECFF;cursor:pointer;}
+#nav-content ul li div.hover a{color:#416AA3;}
+#nav-content ul li div.selected{border:1px solid #99BBE8; background:#E0ECFF;cursor:default;}
+#nav-content ul li div.selected a{color:#416AA3; font-weight:bold;}
+
+.icon-sys{width:16px;height:16px;background:url(icons/directory.png) no-repeat; }
+

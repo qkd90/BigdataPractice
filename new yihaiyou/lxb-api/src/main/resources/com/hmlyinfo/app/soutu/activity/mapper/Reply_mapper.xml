@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.activity.mapper.ReplyMapper">
+	<insert id="insert" parameterType="Reply">
+		insert into tb_reply
+			(
+				id,
+				advice_id,
+				user_id,
+				content,
+				create_time,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{adviceId},
+				#{userId},
+				#{content},
+				#{createTime},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="Reply">
+		update tb_reply
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="adviceId != null and '' != adviceId"> advice_id = #{adviceId},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="content != null and '' != content"> content = #{content},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="Reply">
+		delete from
+			tb_reply
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="Reply">
+		select
+			*
+		from
+			tb_reply
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="Reply">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_reply
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="adviceId != null and '' != adviceId"> and advice_id = #{adviceId} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="content != null and '' != content"> and content = #{content} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+</mapper>

@@ -1,0 +1,1681 @@
+{
+  "@platforms": [
+    "android",
+    "iPhone",
+    "iPad"
+  ],
+  "id": "H503ACB49",
+  /*应用的标识，创建应用时自动生成，勿手动修改*/
+  "name": "旅行帮",
+  /*应用名称，程序桌面图标名称*/
+  "version": {
+    "name": "1.0",
+    /*应用版本名称*/
+    "code": ""
+  },
+  "description": "",
+  /*应用描述信息*/
+  "icons": {
+    "72": "icon.png"
+  },
+  "launch_path": "appindex.html",
+  /*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+  "developer": {
+    "name": "",
+    /*开发者名称*/
+    "email": "",
+    /*开发者邮箱地址*/
+    "url": ""
+  },
+  "permissions": {
+    "Audio": {
+      "description": "访问麦克风"
+    },
+    "Messaging": {
+      "description": "短彩邮件插件"
+    },
+    "Cache": {
+      "description": "管理应用缓存"
+    },
+    "Camera": {
+      "description": "访问摄像头"
+    },
+    "Console": {
+      "description": "跟踪调试输出日志"
+    },
+    "Contacts": {
+      "description": "访问系统联系人信息"
+    },
+    "Device": {
+      "description": "访问设备信息"
+    },
+    "Downloader": {
+      "description": "文件下载管理"
+    },
+    "Events": {
+      "description": "应用扩展事件"
+    },
+    "File": {
+      "description": "访问本地文件系统"
+    },
+    "Gallery": {
+      "description": "访问系统相册"
+    },
+    "Geolocation": {
+      "description": "访问位置信息"
+    },
+    "Invocation": {
+      "description": "使用Native.js能力"
+    },
+    "Proximity": {
+      "description": "访问距离感应器"
+    },
+    "Storage": {
+      "description": "管理应用本地数据"
+    },
+    "Uploader": {
+      "description": "管理文件上传任务"
+    },
+    "Runtime": {
+      "description": "访问运行期环境"
+    },
+    "XMLHttpRequest": {
+      "description": "跨域网络访问"
+    },
+    "Zip": {
+      "description": "文件压缩与解压缩"
+    },
+    "Barcode": {
+      "description": "管理二维码扫描插件"
+    },
+    "Maps": {
+      "description": "管理地图插件"
+    },
+    "Speech": {
+      "description": "管理语音识别插件"
+    },
+    "Webview": {
+      "description": "窗口管理"
+    },
+    "NativeUI": {
+      "description": "原生UI控件"
+    },
+    "Navigator": {
+      "description": "浏览器信息"
+    },
+    "NativeObj": {
+      "description": "原生对象"
+    },
+    "OAuth": {},
+    "Share": {},
+    "Payment": {}
+  },
+  "plus": {
+    "splashscreen": {
+      "autoclose": true,
+      /*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+      "waiting": true,
+      "delay": "0"
+    },
+    "popGesture": "close",
+    /*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
+    "runmode": "normal",
+    /*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+    "signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",
+    /*可选，保���给应用签名，暂不使用*/
+    "distribute": {
+      "plugins": {
+        "payment": {
+          "weixin": {
+            "description": "微信支付",
+            "appid": "wxa444b077b160ca6e"
+          },
+          "alipay": {
+            "description": "阿里支付",
+            "scheme": ""
+          }
+        },
+        "share": {
+          "weixin": {
+            "appid": "wxa444b077b160ca6e",
+            "appsecret": "3b1915d5cb640184674abb072240cceb",
+            "description": "可选，微信分享"
+          },
+          "qq": {
+            "appid": "1104524287",
+            "description": "QQ分享"
+          }
+        },
+        "oauth": {
+          "weixin": {
+            "appid": "wxa444b077b160ca6e",
+            "appsecret": "3b1915d5cb640184674abb072240cceb"
+          },
+          "qq": {
+            "appid": "1104524287"
+          }
+        }
+      },
+      "apple": {
+        "appid": "",
+        /*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+        "mobileprovision": "",
+        /*iOS应用打包配置文件*/
+        "password": "",
+        /*iOS应用打包个人证书导入密码*/
+        "p12": "",
+        /*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+        "devices": "universal",
+        /*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+        "frameworks": []
+      },
+      "google": {
+        "packagename": "",
+        /*Android应用包名，如io.dcloud.HelloH5*/
+        "keystore": "",
+        /*Android应用打包使用的密钥库文件*/
+        "password": "",
+        /*Android应用打包使用密钥库中证书的密码*/
+        "aliasname": "",
+        /*Android应用打包���用密钥库中证书的别名*/
+        "permissions": [
+          "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+          "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+          "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+          "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+          "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+          "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+          "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+          "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+          "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+          "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+          "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+          "<uses-feature android:name=\"android.hardware.camera\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+        ]
+      },
+      "orientation": [
+        "portrait-primary"
+      ],
+      /*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+      "icons": {
+        "ios": {
+          "prerendered": true,
+          /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
+          "auto": "",
+          /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+          "iphone": {
+            "normal": "unpackage/res/icons/57x57.png",
+            /*iPhone3/3GS程序图标，分辨率：57x57*/
+            "retina": "unpackage/res/icons/114x114.png",
+            /*iPhone4程序图标，分辨率：114x114*/
+            "retina7": "unpackage/res/icons/120x120.png",
+            /*iPhone4S/5/6程序图标，分辨率：120x120*/
+            "retina8": "unpackage/res/icons/180x180.png",
+            /*iPhone6 Plus程序图标，分辨率：180x180*/
+            "spotlight-normal": "unpackage/res/icons/29x29.png",
+            /*iPhone3/3GS Spotlight搜索程序图标，分辨率：29x29*/
+            "spotlight-retina": "unpackage/res/icons/58x58.png",
+            /*iPhone4 Spotlight搜索程序图标，分辨率：58x58*/
+            "spotlight-retina7": "unpackage/res/icons/80x80.png",
+            /*iPhone4S/5/6 Spotlight搜索程序图标，分辨率：80x80*/
+            "settings-normal": "unpackage/res/icons/29x29.png",
+            /*iPhone4设置页面程序图标，分辨率：29x29*/
+            "settings-retina": "unpackage/res/icons/58x58.png",
+            /*iPhone4S/5/6设置页面程序图标，分辨率：58x58*/
+            "settings-retina8": "unpackage/res/icons/87x87.png"
+          },
+          "ipad": {
+            "normal": "unpackage/res/icons/72x72.png",
+            /*iPad普通屏幕程序图标，分辨率：72x72*/
+            "retina": "unpackage/res/icons/144x144.png",
+            /*iPad高分屏程序图标，分辨率：144x144*/
+            "normal7": "unpackage/res/icons/76x76.png",
+            /*iPad iOS7程序图标，分辨率：76x76*/
+            "retina7": "unpackage/res/icons/152x152.png",
+            /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+            "spotlight-normal": "unpackage/res/icons/50x50.png",
+            /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+            "spotlight-retina": "unpackage/res/icons/100x100.png",
+            /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+            "spotlight-normal7": "unpackage/res/icons/40x40.png",
+            /*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+            "spotlight-retina7": "unpackage/res/icons/80x80.png",
+            /*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+            "settings-normal": "unpackage/res/icons/29x29.png",
+            /*iPad设置页面程序图标，分辨率：29x29*/
+            "settings-retina": "unpackage/res/icons/58x58.png"
+          }
+        },
+        "android": {
+          "mdpi": "unpackage/res/icons/48x48.png",
+          /*普通屏程序图标，分辨率：48x48*/
+          "ldpi": "unpackage/res/icons/48x48.png",
+          /*大屏程序图标，分辨率：48x48*/
+          "hdpi": "unpackage/res/icons/72x72.png",
+          /*高分屏程序图标，分辨率：72x72*/
+          "xhdpi": "unpackage/res/icons/96x96.png",
+          /*720P高分屏程序图标，分辨率：96x96*/
+          "xxhdpi": "unpackage/res/icons/144x144.png"
+        }
+      },
+      "splashscreen": {
+        "ios": {
+          "iphone": {
+            "default": "",
+            /*iPhone3启动图片选，分辨率：320x480*/
+            "retina35": "",
+            /*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+            "retina40": "",
+            /*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
+            "retina47": "",
+            /*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
+            "retina55": "",
+            /*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
+            "retina55l": ""
+          },
+          "ipad": {
+            "portrait": "",
+            /*iPad竖屏启动图片，分辨率：768x1004*/
+            "portrait-retina": "",
+            /*iPad高分屏竖屏图片，分辨率：1536x2008*/
+            "landscape": "",
+            /*iPad横屏启动图片，分辨率：1024x748*/
+            "landscape-retina": "",
+            /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+            "portrait7": "",
+            /*iPad iOS7竖屏启动图��，分辨率：768x1024*/
+            "portrait-retina7": "",
+            /*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+            "landscape7": "",
+            /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+            "landscape-retina7": ""
+          }
+        },
+        "android": {
+          "mdpi": "C:/Users/Kingsley/Documents/Tencent Files/181355120/FileRecv/开场动画2(1).png",
+          /*普通屏启动图片，分辨率：240x282*/
+          "ldpi": "C:/Users/Kingsley/Documents/Tencent Files/181355120/FileRecv/开场动画2(1).png",
+          /*大屏启动图片，分辨率：320x442*/
+          /*高分屏启动图片，分辨率：480x762*/
+          "xhdpi": "C:/Users/Kingsley/Documents/Tencent Files/181355120/FileRecv/开场动画2(1).png",
+          /*720P高分屏启动图片，分辨率：720x1242*/
+          "xxhdpi": "C:/Users/Kingsley/Documents/Tencent Files/181355120/FileRecv/开场动画2(1).png",
+          "hdpi": "C:/Users/Kingsley/Documents/Tencent Files/181355120/FileRecv/开场动画2(1).png"
+        }
+      },
+      "debug": true
+    }
+  },
+  "dependencies": {
+    "pages": {
+      "tpls/my-order-tk.html": {
+        "href": "tpls/my-order-tk.html",
+        "resources": [
+          "images/ico/trash.png"
+        ],
+        "priority": 0
+      },
+      "tpls/xing-xianlu-info.html": {
+        "href": "tpls/xing-xianlu-info.html",
+        "resources": [
+          "images/ico/order-jt.jpg"
+        ],
+        "priority": 1
+      },
+      "tpls/shaixuan.html": {
+        "href": "tpls/shaixuan.html",
+        "resources": [
+          "images/ico/close.png"
+        ],
+        "priority": 2
+      },
+      "tpls/my.html": {
+        "href": "tpls/my.html",
+        "resources": [
+          "images/my/toux.png"
+        ],
+        "priority": 3
+      },
+      "tpls/xing-cfd.html": {
+        "href": "tpls/xing-cfd.html",
+        "resources": [
+          "libs/data/js/mobiscroll.core-2.5.2.js",
+          "libs/data/js/mobiscroll.core-2.5.2-zh.js",
+          "libs/jquery/jquery.spinner.js",
+          "libs/data/css/mobiscroll.core-2.5.2.css",
+          "libs/data/css/mobiscroll.animation-2.5.2.css",
+          "libs/data/js/mobiscroll.datetime-2.5.1.js",
+          "libs/data/js/mobiscroll.datetime-2.5.1-zh.js",
+          "libs/data/js/mobiscroll.android-ics-2.5.2.js",
+          "libs/data/css/mobiscroll.android-ics-2.5.2.css"
+        ],
+        "priority": 4
+      },
+      "tpls/xieganxiang-pic.html": {
+        "href": "tpls/xieganxiang-pic.html",
+        "resources": [
+          "images/ico/trash.png"
+        ],
+        "priority": 5
+      },
+      "tpls/search.html": {
+        "href": "tpls/search.html",
+        "priority": 6
+      },
+      "tpls/my-reset-yzm.html": {
+        "href": "tpls/my-reset-yzm.html",
+        "resources": [
+          "images/checkNum.jsp"
+        ],
+        "priority": 7
+      },
+      "tpls/xing-xlbianji.html": {
+        "href": "tpls/xing-xlbianji.html",
+        "resources": [
+          "css/owl.carousel.css",
+          "css/owl.theme.css",
+          "js/owl.carousel.min.js",
+          "images/ico/xl-remove.jpg",
+          "images/ico/xl-back.jpg"
+        ],
+        "priority": 8
+      },
+      "tpls/login.html": {
+        "href": "tpls/login.html",
+        "resources": [
+          "images/login/logo.png",
+          "images/ico/close.png",
+          "images/login/login-wx.png",
+          "images/login/login-qq.png",
+          "images/login/login-wb.png"
+        ],
+        "priority": 9
+      },
+      "tpls/yxlist.html": {
+        "href": "tpls/yxlist.html",
+        "priority": 10
+      },
+      "tpls/searchlist.html": {
+        "href": "tpls/searchlist.html",
+        "priority": 11
+      },
+      "tpls/xing.html": {
+        "href": "tpls/xing.html",
+        "priority": 12
+      },
+      "tpls/xing-jingdian-quxiao.html": {
+        "href": "tpls/xing-jingdian-quxiao.html",
+        "resources": [
+          "images/jingdian/2.jpg",
+          "images/jingdian/s1.jpg"
+        ],
+        "priority": 13
+      },
+      "tpls/xing-city.html": {
+        "href": "tpls/xing-city.html",
+        "resources": [
+          "libs/jquery/jquery.pin.js"
+        ],
+        "priority": 14
+      },
+      "tpls/my-reset-pw.html": {
+        "href": "tpls/my-reset-pw.html",
+        "priority": 15
+      },
+      "tpls/xing-jingdian-search.html": {
+        "href": "tpls/xing-jingdian-search.html",
+        "priority": 16
+      },
+      "tpls/search-mdd.html": {
+        "href": "tpls/search-mdd.html",
+        "priority": 17
+      },
+      "tpls/my-sc.html": {
+        "href": "tpls/my-sc.html",
+        "resources": [
+          "images/jingdian/1.jpg",
+          "images/ico/trash.png"
+        ],
+        "priority": 18
+      },
+      "tpls/my-lt.html": {
+        "href": "tpls/my-lt.html",
+        "resources": [
+          "images/ico/trash.png"
+        ],
+        "priority": 19
+      },
+      "tpls/my-order.html": {
+        "href": "tpls/my-order.html",
+        "resources": [
+          "images/ico/trash.png"
+        ],
+        "priority": 20
+      },
+      "tpls/xing-jiaotong.html": {
+        "href": "tpls/xing-jiaotong.html",
+        "resources": [
+          "images/ico/ico-qu.jpg",
+          "images/ico/ico-fan.jpg"
+        ],
+        "priority": 21
+      },
+      "tpls/xing-jiudian-search.html": {
+        "href": "tpls/xing-jiudian-search.html",
+        "priority": 22
+      },
+      "tpls/my-order-info.html": {
+        "href": "tpls/my-order-info.html",
+        "resources": [
+          "images/ico/order-jt.jpg"
+        ],
+        "priority": 23
+      },
+      "tpls/xing-add-lvke.html": {
+        "href": "tpls/xing-add-lvke.html",
+        "resources": [
+          "libs/data/js/mobiscroll.core-2.5.2.js",
+          "libs/data/js/mobiscroll.core-2.5.2-zh.js",
+          "libs/data/css/mobiscroll.core-2.5.2.css",
+          "libs/data/css/mobiscroll.animation-2.5.2.css",
+          "libs/data/js/mobiscroll.datetime-2.5.1.js",
+          "libs/data/js/mobiscroll.datetime-2.5.1-zh.js",
+          "libs/data/js/mobiscroll.android-ics-2.5.2.js",
+          "libs/data/css/mobiscroll.android-ics-2.5.2.css"
+        ],
+        "priority": 24
+      },
+      "tpls/xieganxiang-ok.html": {
+        "href": "tpls/xieganxiang-ok.html",
+        "resources": [
+          "images/ganxiang/pic1.png",
+          "images/ganxiang/pic2.png",
+          "images/ganxiang/jia.png",
+          "images/ganxiang/gx1.png",
+          "images/ganxiang/gx2.png",
+          "images/ganxiang/gx3.png"
+        ],
+        "priority": 25
+      },
+      "tpls/my-xieyouji.html": {
+        "href": "tpls/my-xieyouji.html",
+        "resources": [
+          "libs/jquery/jquery.spinner.js",
+          "images/ico/my-xie-jia.jpg",
+          "images/ico/trash.png"
+        ],
+        "priority": 26
+      },
+      "tpls/test.html": {
+        "href": "tpls/test.html",
+        "resources": [
+          "css/scrollbar.css",
+          "libs/jquery/iscroll.js"
+        ],
+        "priority": 27
+      },
+      "tpls/my-yj.html": {
+        "href": "tpls/my-yj.html",
+        "priority": 28
+      },
+      "tpls/my-new-pw.html": {
+        "href": "tpls/my-new-pw.html",
+        "priority": 29
+      },
+      "tpls/xing-jingdian-info.html": {
+        "href": "tpls/xing-jingdian-info.html",
+        "priority": 30
+      },
+      "tpls/xing-jiudian-key-search.html": {
+        "href": "tpls/xing-jiudian-key-search.html",
+        "priority": 31
+      },
+      "tpls/xing-gailan.html": {
+        "href": "tpls/xing-gailan.html",
+        "resources": [
+          "libs/jquery/Sortable.min.js",
+          "images/ico/close.png",
+          "images/ico/xl-back.jpg",
+          "images/ico/xl-remove.jpg"
+        ],
+        "priority": 32
+      },
+      "tpls/my-hb.html": {
+        "href": "tpls/my-hb.html",
+        "priority": 33
+      },
+      "tpls/xing-xianlu-map.html": {
+        "href": "tpls/xing-xianlu-map.html",
+        "resources": [
+          "images/ico/close1.jpg"
+        ],
+        "priority": 34
+      },
+      "tpls/xing-order-ok.html": {
+        "href": "tpls/xing-order-ok.html",
+        "resources": [
+          "images/ico/order-jt.jpg"
+        ],
+        "priority": 35
+      },
+      "tpls/xianlu.html": {
+        "href": "tpls/xianlu.html",
+        "priority": 36
+      },
+      "tpls/xieganxiang.html": {
+        "href": "tpls/xieganxiang.html",
+        "resources": [
+          "images/ganxiang/jia.png",
+          "images/ganxiang/gx1.png",
+          "images/ganxiang/gx2.png",
+          "images/ganxiang/gx3.png"
+        ],
+        "priority": 37
+      },
+      "tpls/payment.html": {
+        "href": "tpls/payment.html",
+        "priority": 38
+      },
+      "tpls/youke-chang.html": {
+        "href": "tpls/youke-chang.html",
+        "priority": 39
+      },
+      "tpls/xing-xingcheng-info.html": {
+        "href": "tpls/xing-xingcheng-info.html",
+        "resources": [
+          "images/youji/1.jpg",
+          "images/youji/d1.jpg",
+          "images/youji/d2.jpg",
+          "images/ico/order-jt.jpg"
+        ],
+        "priority": 40
+      },
+      "tpls/my-bianji-user.html": {
+        "href": "tpls/my-bianji-user.html",
+        "priority": 41
+      },
+      "tpls/xing-jingdian-map.html": {
+        "href": "tpls/xing-jingdian-map.html",
+        "priority": 42
+      },
+      "tpls/my-new-pw-ok.html": {
+        "href": "tpls/my-new-pw-ok.html",
+        "priority": 43
+      },
+      "tpls/xing-gailan-delete.html": {
+        "href": "tpls/xing-gailan-delete.html",
+        "resources": [
+          "libs/jquery/Sortable.min.js",
+          "images/ico/close.png"
+        ],
+        "priority": 44
+      },
+      "tpls/xing-hb.html": {
+        "href": "tpls/xing-hb.html",
+        "priority": 45
+      },
+      "tpls/search-difang.html": {
+        "href": "tpls/search-difang.html",
+        "resources": [
+          "images/search/s1.png",
+          "images/search/s2.png",
+          "images/search/s3.png",
+          "images/search/s4.png"
+        ],
+        "priority": 46
+      },
+      "tpls/my-order-dfk.html": {
+        "href": "tpls/my-order-dfk.html",
+        "resources": [
+          "images/ico/trash.png"
+        ],
+        "priority": 47
+      },
+      "tpls/my-geren.html": {
+        "href": "tpls/my-geren.html",
+        "priority": 48
+      },
+      "tpls/xing-jingdian.html": {
+        "href": "tpls/xing-jingdian.html",
+        "priority": 49
+      },
+      "tpls/my-lt-yj.html": {
+        "href": "tpls/my-lt-yj.html",
+        "resources": [
+          "images/ico/trash.png"
+        ],
+        "priority": 50
+      },
+      "tpls/yxdetail.html": {
+        "href": "tpls/yxdetail.html",
+        "priority": 51
+      },
+      "tpls/my-xl.html": {
+        "href": "tpls/my-xl.html",
+        "resources": [
+          "images/ico/trash.png"
+        ],
+        "priority": 52
+      },
+      "tpls/my-bianjiyouji.html": {
+        "href": "tpls/my-bianjiyouji.html",
+        "resources": [
+          "images/ico/trash.png",
+          "images/youji/m1.jpg",
+          "images/youji/m2.jpg",
+          "images/youji/m3.jpg",
+          "images/youji/m4.jpg",
+          "images/youji/m5.jpg",
+          "images/youji/m6.jpg",
+          "images/ico/my-xie-jia.jpg"
+        ],
+        "priority": 53
+      },
+      "tpls/yjlist.html": {
+        "href": "tpls/yjlist.html",
+        "priority": 54
+      },
+      "tpls/xing-jiaotong-jipiao.html": {
+        "href": "tpls/xing-jiaotong-jipiao.html",
+        "priority": 55
+      },
+      "tpls/yjdetail.html": {
+        "href": "tpls/yjdetail.html",
+        "priority": 56
+      },
+      "tpls/ganxiang.html": {
+        "href": "tpls/ganxiang.html",
+        "resources": [
+          "images/ico/dagou.png"
+        ],
+        "priority": 57
+      },
+      "tpls/xing-jiudian-info.html": {
+        "href": "tpls/xing-jiudian-info.html",
+        "resources": [
+          "libs/data/js/mobiscroll.core-2.5.2.js",
+          "libs/data/js/mobiscroll.core-2.5.2-zh.js",
+          "libs/data/css/mobiscroll.core-2.5.2.css",
+          "libs/data/css/mobiscroll.animation-2.5.2.css",
+          "libs/data/js/mobiscroll.datetime-2.5.1.js",
+          "libs/data/js/mobiscroll.datetime-2.5.1-zh.js",
+          "libs/data/js/mobiscroll.android-ics-2.5.2.js",
+          "libs/data/css/mobiscroll.android-ics-2.5.2.css"
+        ],
+        "priority": 58
+      },
+      "tpls/xing-city-search.html": {
+        "href": "tpls/xing-city-search.html",
+        "priority": 59
+      },
+      "tpls/my-sz.html": {
+        "href": "tpls/my-sz.html",
+        "priority": 60
+      },
+      "tpls/xing-biaoti.html": {
+        "href": "tpls/xing-biaoti.html",
+        "resources": [
+          "images/ico/dagou.png"
+        ],
+        "priority": 61
+      },
+      "tpls/youhuiquan.html": {
+        "href": "tpls/youhuiquan.html",
+        "priority": 62
+      },
+      "tpls/xing-jiaotong-info.html": {
+        "href": "tpls/xing-jiaotong-info.html",
+        "priority": 63
+      },
+      "tpls/xing-jiudian.html": {
+        "href": "tpls/xing-jiudian.html",
+        "priority": 64
+      },
+      "tpls/my-order-info-tk.html": {
+        "href": "tpls/my-order-info-tk.html",
+        "priority": 65
+      },
+      "tpls/my-hb-n.html": {
+        "href": "tpls/my-hb-n.html",
+        "priority": 66
+      },
+      "tpls/loading.html": {
+        "href": "tpls/loading.html",
+        "resources": [
+          "css/owl.carousel.css",
+          "css/owl.theme.css",
+          "js/owl.carousel.min.js",
+          "images/load/1.jpg",
+          "images/load/2.jpg",
+          "images/load/3.jpg"
+        ],
+        "priority": 67
+      },
+      "tpls/xing-xianlu-order-info.html": {
+        "href": "tpls/xing-xianlu-order-info.html",
+        "resources": [
+          "images/ico/order-jt.jpg"
+        ],
+        "priority": 68
+      },
+      "tpls/search-fujin.html": {
+        "href": "tpls/search-fujin.html",
+        "priority": 69
+      },
+      "tpls/xing-jiaotong-huoche.html": {
+        "href": "tpls/xing-jiaotong-huoche.html",
+        "priority": 70
+      },
+      "tpls/reg.html": {
+        "href": "tpls/reg.html",
+        "resources": [
+          "images/login/logo.png",
+          "images/ico/close.png",
+          "images/checkNum.jsp"
+        ],
+        "priority": 71
+      },
+      "index.html": {
+        "href": "index.html",
+        "resources": [
+          "libs/jquery/jquery.min.js",
+          "libs/bootstrap/js/bootstrap.min.js",
+          "libs/bootstrap/js/bootbox.min.js",
+          "libs/jquery/icheck.min.js",
+          "libs/jquery/jquery.spinner.js",
+          "js/toucher.js",
+          "js/my.js",
+          "libs/angular/angular.min.js",
+          "libs/angular/angular-animate.js",
+          "libs/angular/angular-ui-router.js",
+          "libs/angular/angular-cookies.min.js",
+          "libs/angular/angularLocalStorage.min.js",
+          "libs/angular/ng-infinite-scroll.min.js",
+          "config.ini",
+          "js/app.js",
+          "js/directive.js",
+          "js/controllers.js",
+          "js/mycontrollers.js",
+          "js/services.js",
+          "libs/bootstrap/css/bootstrap.min.css",
+          "libs/bootstrap/fonts/glyphicons-halflings-regular.eot",
+          "libs/bootstrap/fonts/glyphicons-halflings-regular.woff2",
+          "libs/bootstrap/fonts/glyphicons-halflings-regular.woff",
+          "libs/bootstrap/fonts/glyphicons-halflings-regular.ttf",
+          "libs/bootstrap/fonts/glyphicons-halflings-regular.svg",
+          "css/style.css",
+          "images/ico/ajaxloading.gif",
+          "images/ico/xj.png",
+          "images/ico/ico7.png",
+          "images/ico/back.jpg",
+          "images/ico/dian.jpg",
+          "images/ico/ico-topmap.jpg",
+          "images/ico/ico-topsetting.jpg",
+          "images/ico/footer-fx.png",
+          "images/ico/footer-fx-hover.png",
+          "images/ico/footer-dz.png",
+          "images/ico/footer-dz-hover.png",
+          "images/ico/footer-my.png",
+          "images/ico/footer-my-hover.png",
+          "images/ico/view.png",
+          "images/ico/time.png",
+          "images/ico/ico6.png",
+          "images/ico/search-input-bg.jpg",
+          "images/search/search-ico.jpg",
+          "images/ico/search-jingdian.png",
+          "images/ico/search-jingdian-hover.png",
+          "images/ico/search-jiudian.png",
+          "images/ico/search-jiudian-hover.png",
+          "images/ico/search-meishi.png",
+          "images/ico/search-meishi-hover.png",
+          "images/ico/ico1.png",
+          "images/ico/ico2.png",
+          "images/ico/ico3.png",
+          "images/ico/ico5.png",
+          "images/ico/jia.png",
+          "images/search/ico1.png",
+          "images/search/ico2.png",
+          "images/top-share.png",
+          "images/top-sc.png",
+          "images/ico/ico-fj1.png",
+          "images/ico/ico4.png",
+          "images/xl-line.png",
+          "images/xl-title-1.png",
+          "images/xl-title.png",
+          "images/ico/tanhao.jpg",
+          "images/my/touxiang-bg.jpg",
+          "images/ico/my-next.png",
+          "images/ico/my1.png",
+          "images/ico/my2.png",
+          "images/ico/my3.png",
+          "images/ico/my4.png",
+          "images/ico/my5.png",
+          "images/ico/my6.png",
+          "images/ico/my7.png",
+          "images/ico/my8.png",
+          "images/ico/my9.png",
+          "images/ico/my-xl-jia.png",
+          "images/ico/my-xl-jian.png",
+          "images/ico/my-shengchengyouji.png",
+          "images/ico/my-xz.png",
+          "images/ico/my-xieyouji.jpg",
+          "images/ico/my-form-next.jpg",
+          "images/ico/my-xl-jia.jpg",
+          "images/ico/ico-cfd.png",
+          "images/ico/ico-cfsj.png",
+          "images/ico/share-py.jpg",
+          "images/ico/share-weixin.jpg",
+          "images/ico/share-qq.jpg",
+          "images/ico/share-weibo.jpg",
+          "images/ico/hb-bg.png",
+          "images/ico/hb-bg-1.png",
+          "images/login/login-bg.jpg",
+          "images/login/reg-bg.jpg",
+          "images/login/login-input-bg.png",
+          "images/login/login-btn.png",
+          "images/ico/line.png",
+          "images/login/yzm.png",
+          "images/login/reg-btn.png",
+          "images/ico/search-ico.jpg",
+          "images/ico/ico-xz1.png",
+          "images/ico/hot-left-ico.jpg",
+          "images/ico/gou.jpg",
+          "images/ico/tag-bg-close.jpg",
+          "images/ico/tag-bg.jpg",
+          "images/ico/ico-cf.jpg",
+          "images/ico/ico-time.jpg",
+          "images/ico/subsearch-bg.jpg",
+          "images/ico/searchico.png",
+          "images/ico/down.jpg",
+          "images/ico/down-hover.jpg",
+          "images/ico/remove.jpg",
+          "images/ico/add.jpg",
+          "images/ico/close1.jpg",
+          "images/ico/up.jpg",
+          "images/ico/jd-wxz.jpg",
+          "images/ico/jd-xz.jpg",
+          "images/ico/ico-map.jpg",
+          "images/ico/ico-jd-down-more.jpg",
+          "images/ico/xing-next.jpg",
+          "images/ico/xl-add-day.jpg",
+          "images/ico/jian.png",
+          "images/map/lv.png",
+          "images/map/hong.png",
+          "images/map/cheng.png",
+          "images/map/dian.png",
+          "images/map/lan.png",
+          "images/map/meihong.png",
+          "images/map/zi.png",
+          "images/map/hi.png",
+          "images/ico/order-jt.jpg",
+          "images/ico/ico-dc.jpg",
+          "images/ico/ico-fj.jpg",
+          "images/ico/jiantou1.jpg",
+          "images/ico/rili.jpg",
+          "images/ico/rili-xl.jpg",
+          "images/ico/ico-hotel.png",
+          "images/ico/ico-jd-down-more-close.jpg",
+          "images/ico/ico-fx-xz.png",
+          "images/ico/bi.png",
+          "images/ico/cart.png",
+          "images/ico/ico-youhui.png",
+          "images/ico/ico-youke.png",
+          "images/ico/pay-wx.png",
+          "images/ico/pay-zfb.png",
+          "images/ico/sx1.png",
+          "images/ico/sx2.png",
+          "images/ico/sx3.png",
+          "images/ico/sx4.png",
+          "images/ico/sx5.png",
+          "images/ico/sx6.png",
+          "css/icheck/skins/flat/green.css",
+          "css/icheck/skins/flat/green.png",
+          "images/ico/ico-wxz.jpg",
+          "images/ico/ico-xz.jpg",
+          "css/icheck/skins/flat/wxz.png",
+          "css/icheck/skins/flat/xz.png",
+          "css/icheck/skins/square/green.css",
+          "css/icheck/skins/wxz.png",
+          "css/icheck/skins/xz.png",
+          "css/icheck/skins/ico-bx-1.png",
+          "css/icheck/skins/ico-bx.png",
+          "css/dropload.css",
+          "css/icheck/skins/square/blue.css",
+          "css/icheck/skins/wxz1.png",
+          "css/icheck/skins/xz1.png",
+          "images/ico/ico-fx-jia.png",
+          "images/ico/ico-fx-xz.png",
+          "images/ico/xing-ok.png",
+          "images/ico/ico-fx-wxz.png",
+          "config.js",
+          "css/mui.min.css",
+          "js/mui.min.js",
+          "images/my/toux.png",
+          "/images/my/toux.png",
+          "libs/data/js/mobiscroll.datetime-2.5.1-zh.js",
+          "libs/data/js/mobiscroll.core-2.5.2.js",
+          "libs/data/css/mobiscroll.animation-2.5.2.css",
+          "libs/data/js/mobiscroll.core-2.5.2-zh.js",
+          "libs/data/js/mobiscroll.android-ics-2.5.2.js",
+          "libs/jquery/Sortable.min.js",
+          "libs/data/css/mobiscroll.core-2.5.2.css",
+          "libs/data/js/mobiscroll.datetime-2.5.1.js",
+          "libs/data/css/mobiscroll.android-ics-2.5.2.css",
+          "css/owl.theme.css",
+          "css/owl.carousel.css",
+          "js/owl.carousel.min.js"
+        ],
+        "refer": [
+          "tpls/my-order-tk.html",
+          "tpls/xing-xianlu-info.html",
+          "tpls/shaixuan.html",
+          "tpls/my.html",
+          "tpls/xing-cfd.html",
+          "tpls/xieganxiang-pic.html",
+          "tpls/search.html",
+          "tpls/my-reset-yzm.html",
+          "tpls/xing-xlbianji.html",
+          "tpls/login.html",
+          "tpls/yxlist.html",
+          "tpls/searchlist.html",
+          "tpls/xing.html",
+          "tpls/xing-jingdian-quxiao.html",
+          "tpls/xing-city.html",
+          "tpls/my-reset-pw.html",
+          "tpls/xing-jingdian-search.html",
+          "tpls/search-mdd.html",
+          "tpls/my-sc.html",
+          "tpls/my-lt.html",
+          "tpls/my-order.html",
+          "tpls/xing-jiaotong.html",
+          "tpls/xing-jiudian-search.html",
+          "tpls/my-order-info.html",
+          "tpls/xing-add-lvke.html",
+          "tpls/xieganxiang-ok.html",
+          "tpls/my-xieyouji.html",
+          "tpls/test.html",
+          "tpls/my-yj.html",
+          "tpls/my-new-pw.html",
+          "tpls/xing-jingdian-info.html",
+          "tpls/xing-jiudian-key-search.html",
+          "tpls/xing-gailan.html",
+          "tpls/my-hb.html",
+          "tpls/xing-xianlu-map.html",
+          "tpls/xing-order-ok.html",
+          "tpls/xianlu.html",
+          "tpls/xieganxiang.html",
+          "tpls/payment.html",
+          "tpls/youke-chang.html",
+          "tpls/xing-xingcheng-info.html",
+          "tpls/my-bianji-user.html",
+          "tpls/xing-jingdian-map.html",
+          "tpls/my-new-pw-ok.html",
+          "tpls/xing-gailan-delete.html",
+          "tpls/xing-hb.html",
+          "tpls/search-difang.html",
+          "tpls/my-order-dfk.html",
+          "tpls/my-geren.html",
+          "tpls/xing-jingdian.html",
+          "tpls/my-lt-yj.html",
+          "tpls/yxdetail.html",
+          "tpls/my-xl.html",
+          "tpls/my-bianjiyouji.html",
+          "tpls/yjlist.html",
+          "tpls/xing-jiaotong-jipiao.html",
+          "tpls/yjdetail.html",
+          "tpls/ganxiang.html",
+          "tpls/xing-jiudian-info.html",
+          "tpls/xing-city-search.html",
+          "tpls/my-sz.html",
+          "tpls/xing-biaoti.html",
+          "tpls/youhuiquan.html",
+          "tpls/xing-jiaotong-info.html",
+          "tpls/xing-jiudian.html",
+          "tpls/my-order-info-tk.html",
+          "tpls/my-hb-n.html",
+          "tpls/loading.html",
+          "tpls/xing-xianlu-order-info.html",
+          "tpls/search-fujin.html",
+          "tpls/xing-jiaotong-huoche.html",
+          "tpls/reg.html"
+        ],
+        "priority": 0
+      },
+      "appindex.html": {
+        "resources": [
+          "libs/data/js/mobiscroll.datetime-2.5.1-zh.js",
+          "libs/data/js/mobiscroll.core-2.5.2.js",
+          "libs/jquery/jquery.min.js",
+          "js/services.js",
+          "css/owl.theme.css",
+          "libs/data/css/mobiscroll.animation-2.5.2.css",
+          "libs/angular/angular-ui-router.js",
+          "js/mui.min.js",
+          "css/icheck/skins/square/green.css",
+          "libs/bootstrap/css/bootstrap.min.css",
+          "libs/jquery/jquery.spinner.js",
+          "libs/bootstrap/js/bootbox.min.js",
+          "libs/data/js/mobiscroll.core-2.5.2-zh.js",
+          "js/app.js",
+          "js/mycontrollers.js",
+          "libs/data/js/mobiscroll.android-ics-2.5.2.js",
+          "css/icheck/skins/square/blue.css",
+          "css/style.css",
+          "libs/angular/angular-cookies.min.js",
+          "css/owl.carousel.css",
+          "libs/angular/ng-infinite-scroll.min.js",
+          "config.js",
+          "libs/jquery/Sortable.min.js",
+          "libs/data/css/mobiscroll.core-2.5.2.css",
+          "css/icheck/skins/flat/green.css",
+          "js/directive.js",
+          "libs/data/js/mobiscroll.datetime-2.5.1.js",
+          "libs/angular/angular-animate.js",
+          "libs/bootstrap/js/bootstrap.min.js",
+          "libs/angular/angularLocalStorage.min.js",
+          "libs/data/css/mobiscroll.android-ics-2.5.2.css",
+          "libs/angular/angular.min.js",
+          "js/controllers.js",
+          "css/dropload.css",
+          "js/owl.carousel.min.js",
+          "libs/jquery/icheck.min.js",
+          "lxbApp.html.js"
+        ],
+        "refer": [],
+        "priority": 0
+      }
+    },
+    "idle": {
+      "resources": [
+        "ErrorFiles/401.html",
+        "libs/bootstrap/css/bootstrap.css.map",
+        "images/airlines/MF.png",
+        "images/airlines/TV.png",
+        "css/icheck/skins/flat/purple.png",
+        "css/icheck/skins/line/line.css",
+        "css/themes/purple/pace-theme-loading-bar.css",
+        "css/themes/black/pace-theme-corner-indicator.css",
+        "images/youji/5.jpg",
+        "css/--style.css",
+        "images/airlines/港龙航空.png",
+        "css/icheck/skins/square/aero@2x.png",
+        "css/themes/green/pace-theme-barber-shop.css",
+        "images/xianlubianji/map.jpg",
+        "data/myordert.json",
+        "css/icheck/skins/square/blue.png",
+        "images/airlines/华夏航空.png",
+        "data/mylvtu.js",
+        "css/icheck/skins/minimal/orange.png",
+        "css/icheck/skins/square/orange.css",
+        "data/myxianlu.js",
+        "css/icheck/skins/minimal/minimal.css",
+        "css/themes/pink/pace-theme-flash.css",
+        "css/themes/silver/pace-theme-minimal.css",
+        "images/airlines/KN.png",
+        "css/themes/red/pace-theme-center-radar.css",
+        "css/icheck/skins/minimal/yellow.png",
+        "images/ico/1xing.png",
+        "css/themes/yellow/pace-theme-center-simple.css",
+        "images/airlines/华信航空.png",
+        "css/icheck/skins/square/aero.png",
+        "css/themes/black/pace-theme-center-circle.css",
+        "images/airlines/成都航空.png",
+        "css/icheck/skins/flat/flat.png",
+        "css/themes/red/pace-theme-flash.css",
+        "css/themes/yellow/pace-theme-big-counter.css",
+        "css/icheck/skins/square/yellow.png",
+        "css/icheck/skins/flat/purple.css",
+        "images/airlines/河北航空.png",
+        "images/ico/ico-daohang.jpg",
+        "css/themes/yellow/pace-theme-minimal.css",
+        "css/icheck/skins/line/grey.css",
+        "css/themes/silver/pace-theme-center-radar.css",
+        "images/airlines/乌鲁木齐航空.png",
+        "css/themes/green/pace-theme-loading-bar.css",
+        "images/yinxiang/1.jpg",
+        "css/icheck/skins/flat/_all.css",
+        "images/airlines/大新华.png",
+        "css/themes/blue/pace-theme-flash.css",
+        "css/themes/yellow/pace-theme-flash.css",
+        "libs/data/js/mobiscroll.wp-2.5.2.js",
+        "css/icheck/skins/square/red.css",
+        "css/idangerous.swiper.css",
+        "css/themes/green/pace-theme-center-atom.css",
+        "images/ico/2xing.png",
+        "css/icheck/skins/flat/aero.css",
+        "images/airlines/澳门航空.png",
+        "css/themes/silver/pace-theme-mac-osx.css",
+        "data/search.js",
+        "libs/data/css/mobiscroll.ios-2.5.1.css",
+        "images/airlines/3U.png",
+        "images/youji/2.jpg",
+        "images/airlines/DR.png",
+        "images/ico/loading.png",
+        "logs/info.log.2016-06-06",
+        "css/themes/pink/pace-theme-center-radar.css",
+        "images/airlines/幸福航空.png",
+        "logs/info.log.2016-06-02",
+        "css/icheck/skins/minimal/blue.png",
+        "logs/info.log.2016-06-01",
+        "images/ganxiang/morepic1.jpg",
+        "data/myhb.js",
+        "images/yinxiang/2.jpg",
+        "css/themes/black/pace-theme-barber-shop.css",
+        "images/airlines/G5.png",
+        "images/my-xl/1.jpg",
+        "css/themes/blue/pace-theme-center-radar.css",
+        "css/icheck/skins/square/square.png",
+        "css/icheck/skins/line/green.css",
+        "css/icheck/skins/minimal/grey@2x.png",
+        "css/themes/blue/pace-theme-flat-top.css",
+        "css/themes/purple/pace-theme-center-radar.css",
+        "css/themes/pink/pace-theme-loading-bar.css",
+        "css/themes/black/pace-theme-center-atom.css",
+        "css/icheck/skins/square/yellow@2x.png",
+        "images/xianlubianji/2.jpg",
+        "images/airlines/PN.png",
+        "css/themes/black/pace-theme-big-counter.css",
+        "libs/angular/angular.js",
+        "data/myorder.js",
+        "libs/jquery/jquery-ui.js",
+        "images/airlines/OQ.png",
+        "css/themes/red/pace-theme-minimal.css",
+        "data/my-xl-more.json",
+        "css/themes/white/pace-theme-flash.css",
+        "libs/angular/ng-sortable.js",
+        "css/themes/yellow/pace-theme-center-circle.css",
+        "css/icheck/skins/flat/grey.css",
+        "css/icheck/skins/flat/green@2x.png",
+        "libs/bootstrap-switch/css/bootstrap-switch.css",
+        "css/icheck/skins/square/purple.png",
+        "images/yinxiang/5.jpg",
+        "css/icheck/skins/minimal/orange.css",
+        "css/icheck/skins/line/purple.css",
+        "data/mylvtu.json",
+        "images/airlines/重庆航空.png",
+        "images/airlines/山东航空.png",
+        "css/icheck/skins/line/line.png",
+        "css/icheck/skins/flat/flat@2x.png",
+        "ErrorFiles/502.html",
+        "css/icheck/skins/square/pink.png",
+        "libs/data/js/mobiscroll.list-2.5.1.js",
+        "images/airlines/GS.png",
+        "css/icheck/skins/line/blue.css",
+        "data/myorderd.json",
+        "css/themes/orange/pace-theme-loading-bar.css",
+        "ErrorFiles/404.html",
+        "css/themes/blue/pace-theme-center-simple.css",
+        "images/jingdian/s3.jpg",
+        "css/icheck/skins/minimal/red.css",
+        "css/icheck/skins/minimal/red@2x.png",
+        "images/airlines/NS.png",
+        "libs/jquery/dropload.min.js",
+        "css/icheck/skins/minimal/pink.png",
+        "images/airlines/祥鹏航空.png",
+        "css/themes/yellow/pace-theme-loading-bar.css",
+        "css/themes/orange/pace-theme-fill-left.css",
+        "css/themes/green/pace-theme-flat-top.css",
+        "css/icheck/skins/minimal/aero@2x.png",
+        "css/themes/orange/pace-theme-bounce.css",
+        "images/ico/ico-jia.png",
+        "images/yinxiang/detail1.jpg",
+        "ErrorFiles/403.html",
+        "css/themes/green/pace-theme-corner-indicator.css",
+        "images/my-xl/2.jpg",
+        "images/xingcheng/6.jpg",
+        "css/icheck/skins/minimal/minimal.png",
+        "css/icheck/skins/flat/yellow.png",
+        "images/my/touxiang.jpg",
+        "images/airlines/吉祥航空.png",
+        "css/themes/yellow/pace-theme-barber-shop.css",
+        "css/icheck/skins/minimal/grey.css",
+        "images/airlines/QW.png",
+        "libs/data/css/mobiscroll.jqm-2.5.1.css",
+        "css/themes/green/pace-theme-mac-osx.css",
+        "css/themes/purple/pace-theme-corner-indicator.css",
+        "images/xingcheng/5.jpg",
+        "images/airlines/FU.png",
+        "css/themes/purple/pace-theme-mac-osx.css",
+        "css/icheck/skins/line/line@2x.png",
+        "css/themes/white/pace-theme-mac-osx.css",
+        "images/my-xl/3.jpg",
+        "images/airlines/天津航空.png",
+        "css/themes/green/pace-theme-center-circle.css",
+        "css/themes/orange/pace-theme-flat-top.css",
+        "images/airlines/深圳航空.png",
+        "css/themes/silver/pace-theme-bounce.css",
+        "css/themes/blue/pace-theme-big-counter.css",
+        "css/themes/green/pace-theme-minimal.css",
+        "css/icheck/skins/square/orange@2x.png",
+        "data/myorder.json",
+        "images/xingcheng/3.jpg",
+        "images/airlines/福州航空.png",
+        "data/myuser.js",
+        "css/themes/orange/pace-theme-center-simple.css",
+        "images/xingcheng/2.jpg",
+        "css/icheck/skins/minimal/aero.css",
+        "css/themes/black/pace-theme-flat-top.css",
+        "css/themes/purple/pace-theme-barber-shop.css",
+        "css/themes/yellow/pace-theme-fill-left.css",
+        "css/icheck/skins/flat/yellow.css",
+        "logs/info.log.2016-05-22",
+        "logs/info.log.2016-05-23",
+        "images/xianlubianji/3.jpg",
+        "logs/info.log.2016-05-24",
+        "libs/jquery/spin.min.js",
+        "logs/info.log.2016-05-25",
+        "logs/info.log.2016-05-26",
+        "logs/info.log.2016-05-27",
+        "logs/info.log.2016-05-28",
+        "images/jiudian/1.jpg",
+        "logs/info.log.2016-05-29",
+        "images/xianlubianji/4.jpg",
+        "css/themes/silver/pace-theme-loading-bar.css",
+        "libs/data/js/mobiscroll.ios-2.5.1.js",
+        "css/themes/red/pace-theme-loading-bar.css",
+        "logs/info.log.2016-05-20",
+        "css/themes/black/pace-theme-center-simple.css",
+        "logs/info.log.2016-05-21",
+        "css/icheck/skins/square/aero.css",
+        "css/icheck/skins/minimal/pink.css",
+        "images/airlines/海南航空.png",
+        "libs/jquery/idangerous.swiper.min.js",
+        "css/icheck/green@2x.png",
+        "css/themes/white/pace-theme-minimal.css",
+        "css/themes/black/pace-theme-mac-osx.css",
+        "css/themes/silver/pace-theme-flat-top.css",
+        "images/jingdian/s2.jpg",
+        "images/airlines/中国国航.png",
+        "css/icheck/skins/polaris/polaris.png",
+        "css/themes/red/pace-theme-mac-osx.css",
+        "css/icheck/skins/flat/blue@2x.png",
+        "logs/info.log.2016-05-19",
+        "images/airlines/IV.png",
+        "libs/bootstrap/css/bootstrap-theme.min.css",
+        "css/themes/red/pace-theme-flat-top.css",
+        "css/themes/yellow/pace-theme-mac-osx.css",
+        "css/icheck/green.png",
+        "images/airlines/复兴航空.png",
+        "images/order/1.jpg",
+        "css/icheck/skins/minimal/blue@2x.png",
+        "images/airlines/JR.png",
+        "css/icheck/skins/flat/orange.css",
+        "css/icheck/skins/minimal/green.css",
+        "css/themes/white/pace-theme-corner-indicator.css",
+        "css/themes/black/pace-theme-bounce.css",
+        "images/airlines/HO.png",
+        "css/themes/yellow/pace-theme-center-radar.css",
+        "css/themes/green/pace-theme-fill-left.css",
+        "images/airlines/昆明航空.png",
+        "logs/info.log.2016-05-31",
+        "logs/info.log.2016-05-30",
+        "libs/data/css/wp_icons.png",
+        "css/icheck/skins/futurico/futurico.css",
+        "images/airlines/CN.png",
+        "logs/error.log.2016-06-02",
+        "logs/error.log.2016-06-01",
+        "data/yjdetail.js",
+        "data/myorderinfo.js",
+        "css/themes/red/pace-theme-bounce.css",
+        "css/themes/blue/pace-theme-center-atom.css",
+        "css/themes/black/pace-theme-minimal.css",
+        "css/icheck/skins/minimal/minimal@2x.png",
+        "css/themes/blue/pace-theme-bounce.css",
+        "css/themes/purple/pace-theme-minimal.css",
+        "data/myorderd.js",
+        "css/themes/pink/pace-theme-corner-indicator.css",
+        "libs/mui/css/mui.min.css",
+        "libs/bootstrap/css/bootstrap.css",
+        "images/youji/4.jpg",
+        "logs/error.log.2016-06-06",
+        "css/icheck/skins/line/aero.css",
+        "css/icheck/skins/line/pink.css",
+        "css/icheck/skins/minimal/purple.png",
+        "css/themes/pink/pace-theme-mac-osx.css",
+        "css/themes/orange/pace-theme-mac-osx.css",
+        "css/themes/blue/pace-theme-fill-left.css",
+        "css/icheck/skins/square/red@2x.png",
+        "images/yinxiang/detail.jpg",
+        "libs/jquery/zepto.min.js",
+        "images/ico/my-xl-jian.jpg",
+        "images/ganxiang/morepic2.jpg",
+        "images/ico/0xing.png",
+        "libs/mui/js/mui.js",
+        "libs/bootstrap/css/bootstrap-theme.css.map",
+        "js/wxpay.js",
+        "images/ico/4xing.png",
+        "css/themes/red/pace-theme-center-simple.css",
+        "css/icheck/skins/minimal/orange@2x.png",
+        "css/themes/green/pace-theme-center-radar.css",
+        "url.html",
+        "css/icheck/skins/flat/aero@2x.png",
+        "css/themes/purple/pace-theme-center-circle.css",
+        "css/themes/pink/pace-theme-minimal.css",
+        "images/airlines/ZH.png",
+        "css/icheck/skins/minimal/green@2x.png",
+        "libs/data/css/mobiscroll.sense-ui-2.5.1.css",
+        "images/ganxiang/gx4.png",
+        "images/airlines/英安航空.png",
+        "images/ico/3xing.png",
+        "旅行帮移动端接口文档.docx",
+        "css/themes/silver/pace-theme-barber-shop.css",
+        "images/order/train.jpg",
+        "data/more.json",
+        "logs/error.log.2016-05-30",
+        "css/icheck/skins/flat/red.css",
+        "css/icheck/skins/futurico/futurico@2x.png",
+        "css/themes/black/pace-theme-center-radar.css",
+        "images/search/search-input-bg.jpg",
+        "css/themes/orange/pace-theme-corner-indicator.css",
+        "css/themes/white/pace-theme-fill-left.css",
+        "css/icheck/skins/minimal/_all.css",
+        "images/airlines/国泰航空.png",
+        "css/icheck/skins/line/orange.css",
+        "css/themes/red/pace-theme-center-atom.css",
+        "css/icheck/skins/square/green.png",
+        "images/airlines/GJ.png",
+        "logs/error.log.2016-05-22",
+        "logs/error.log.2016-05-23",
+        "logs/error.log.2016-05-20",
+        "logs/error.log.2016-05-21",
+        "css/themes/yellow/pace-theme-center-atom.css",
+        "WEB-INF/web.xml",
+        "images/ico/loading1.gif",
+        "images/airlines/九元航空.png",
+        "images/airlines/福建航空.png",
+        "images/jiudian/2.jpg",
+        "css/icheck/skins/polaris/polaris@2x.png",
+        "css/icheck/skins/square/orange.png",
+        "images/map/location.png",
+        "images/airlines/BK.png",
+        "css/icheck/skins/polaris/polaris.css",
+        "images/airlines/青岛航空.png",
+        "logs/error.log.2016-05-29",
+        "logs/error.log.2016-05-28",
+        "logs/error.log.2016-05-27",
+        "images/airlines/SC.png",
+        "logs/error.log.2016-05-26",
+        "logs/error.log.2016-05-25",
+        "logs/error.log.2016-05-24",
+        "css/themes/purple/pace-theme-flash.css",
+        "data/yjlist.js",
+        "data/mysc.js",
+        "css/icheck/green.css",
+        "css/icheck/skins/minimal/grey.png",
+        "images/airlines/AQ.png",
+        "images/airlines/厦门航空.png",
+        "css/themes/red/pace-theme-corner-indicator.css",
+        "css/themes/white/pace-theme-loading-bar.css",
+        "images/airlines/DZ.png",
+        "libs/bootstrap/js/npm.js",
+        "css/icheck/skins/flat/grey@2x.png",
+        "css/icheck/skins/square/blue@2x.png",
+        "css/icheck/skins/square/grey@2x.png",
+        "css/themes/white/pace-theme-center-circle.css",
+        "images/ico/logo.png",
+        "css/themes/white/pace-theme-center-radar.css",
+        "css/themes/white/pace-theme-center-simple.css",
+        "images/airlines/西部航空.png",
+        "libs/mui/css/mui.css",
+        "images/yinxiang/3.jpg",
+        "css/themes/pink/pace-theme-barber-shop.css",
+        "libs/data/css/mobiscroll.android-2.5.1.css",
+        "data/mylvtuyouji.json",
+        "images/airlines/9C.png",
+        "images/airlines/春秋航空.png",
+        "css/themes/purple/pace-theme-fill-left.css",
+        "css/icheck/skins/square/pink@2x.png",
+        "logs/info.log",
+        "css/icheck/skins/flat/flat.css",
+        "css/themes/blue/pace-theme-barber-shop.css",
+        "css/themes/orange/pace-theme-center-radar.css",
+        "css/icheck/skins/minimal/purple.css",
+        "css/themes/red/pace-theme-barber-shop.css",
+        "css/icheck/skins/square/green@2x.png",
+        "css/icheck/skins/square/grey.css",
+        "css/icheck/skins/square/_all.css",
+        "css/themes/pink/pace-theme-center-atom.css",
+        "css/icheck/skins/minimal/green.png",
+        "css/themes/silver/pace-theme-center-simple.css",
+        "images/airlines/南方航空.png",
+        "css/themes/silver/pace-theme-center-atom.css",
+        "css/themes/yellow/pace-theme-corner-indicator.css",
+        "css/icheck/skins/futurico/futurico.png",
+        "images/airlines/YI.png",
+        "css/themes/green/pace-theme-bounce.css",
+        "images/youji/d3.jpg",
+        "css/themes/blue/pace-theme-center-circle.css",
+        "images/airlines/东方航空.png",
+        "css/icheck/skins/line/yellow.css",
+        "ErrorFiles/504.html",
+        "css/themes/black/pace-theme-flash.css",
+        "css/icheck/skins/flat/pink.css",
+        "css/normalize.css",
+        "css/icheck/skins/flat/pink@2x.png",
+        "css/icheck/skins/flat/orange.png",
+        "css/themes/green/pace-theme-center-simple.css",
+        "css/themes/red/pace-theme-center-circle.css",
+        "css/themes/silver/pace-theme-big-counter.css",
+        "css/themes/yellow/pace-theme-flat-top.css",
+        "css/themes/white/pace-theme-flat-top.css",
+        "images/airlines/GX.png",
+        "css/themes/purple/pace-theme-big-counter.css",
+        "libs/data/js/mobiscroll.jqm-2.5.1.js",
+        "css/themes/pink/pace-theme-center-simple.css",
+        "images/ico/5xing.png",
+        "images/youji/3.jpg",
+        "css/themes/red/pace-theme-big-counter.css",
+        "logs/error.log.2016-05-19",
+        "css/icheck/skins/flat/blue.png",
+        "css/icheck/skins/minimal/red.png",
+        "libs/data/js/mobiscroll.android-2.5.1.js",
+        "css/themes/orange/pace-theme-center-atom.css",
+        "css/themes/yellow/pace-theme-bounce.css",
+        "images/xianlubianji/1.jpg",
+        "css/icheck/skins/all.css",
+        "images/airlines/上海航空.png",
+        "js/pace.min.js",
+        "css/icheck/skins/minimal/pink@2x.png",
+        "images/xingcheng/1.jpg",
+        "css/themes/silver/pace-theme-fill-left.css",
+        "images/airlines/8C.png",
+        "data/yxlist.js",
+        "images/airlines/瑞丽航空.png",
+        "css/icheck/skins/flat/pink.png",
+        "css/themes/purple/pace-theme-center-atom.css",
+        "css/icheck/skins/square/grey.png",
+        "css/icheck/skins/minimal/blue.css",
+        "images/airlines/MU.png",
+        "css/themes/green/pace-theme-flash.css",
+        "libs/bootstrap-switch/js/bootstrap-switch.js",
+        "libs/bootstrap-switch/css/bootstrap-switch.min.css",
+        "libs/data/js/mobiscroll.select-2.5.1.js",
+        "css/icheck/skins/square/square.css",
+        "css/themes/red/pace-theme-fill-left.css",
+        "images/airlines/东星航空.png",
+        "css/themes/white/pace-theme-big-counter.css",
+        "css/themes/blue/pace-theme-minimal.css",
+        "libs/jquery/jquery.spin.js",
+        "css/icheck/skins/flat/orange@2x.png",
+        "css/themes/black/pace-theme-loading-bar.css",
+        "libs/mui/fonts/mui.ttf",
+        "css/themes/pink/pace-theme-fill-left.css",
+        "接口文档.docx",
+        "css/themes/purple/pace-theme-bounce.css",
+        "css/icheck/skins/square/square@2x.png",
+        "images/yinxiang/4.jpg",
+        "css/themes/white/pace-theme-bounce.css",
+        "css/themes/purple/pace-theme-center-simple.css",
+        "css/themes/blue/pace-theme-loading-bar.css",
+        "images/airlines/EU.png",
+        "libs/data/css/wp_icons_light.png",
+        "images/airlines/四川航空.png",
+        "libs/bootstrap-switch/js/bootstrap-switch.min.js",
+        "css/themes/blue/pace-theme-corner-indicator.css",
+        "images/order/flight.jpg",
+        "css/themes/blue/pace-theme-mac-osx.css",
+        "css/themes/green/pace-theme-big-counter.css",
+        "css/themes/white/pace-theme-center-atom.css",
+        "libs/jquery/jquery-ui.css",
+        "css/icheck/skins/flat/blue.css",
+        "images/airlines/8L.png",
+        "libs/jquery/jquery.ui.datepicker-zh-CN.js",
+        "libs/bootstrap/js/bootstrap.js",
+        "images/airlines/FM.png",
+        "css/icheck/skins/line/red.css",
+        "libs/data/css/mobiscroll.wp-2.5.2.css",
+        "images/airlines/中国联航.png",
+        "css/themes/orange/pace-theme-minimal.css",
+        "css/icheck/skins/minimal/purple@2x.png",
+        "css/icheck/skins/square/yellow.css",
+        "css/icheck/skins/flat/grey.png",
+        "css/themes/orange/pace-theme-flash.css",
+        "images/airlines/首都航空.png",
+        "images/my-xl/4.jpg",
+        "css/icheck/skins/flat/red@2x.png",
+        "images/airlines/JD.png",
+        "css/themes/silver/pace-theme-center-circle.css",
+        "css/icheck/skins/square/pink.css",
+        "images/airlines/KY.png",
+        "ErrorFiles/400.html",
+        "images/airlines/奥凯航空.png",
+        "ErrorFiles/500.html",
+        "js/common/toucher.js",
+        "libs/bootstrap/css/bootstrap-theme.css",
+        "css/mui.picker.min.css",
+        "images/airlines/东海航空.png",
+        "css/themes/black/pace-theme-fill-left.css",
+        "logs/error.log",
+        "images/airlines/CZ.png",
+        "css/themes/silver/pace-theme-flash.css",
+        "css/themes/silver/pace-theme-corner-indicator.css",
+        "images/airlines/CA.png",
+        "css/icheck/skins/square/red.png",
+        "css/themes/pink/pace-theme-big-counter.css",
+        "css/icheck/skins/flat/aero.png",
+        "css/themes/orange/pace-theme-center-circle.css",
+        "images/ico/my-jia.png",
+        "css/icheck/skins/square/purple@2x.png",
+        "images/xingcheng/4.jpg",
+        "data/yxdetail.js",
+        "js/common/public.js",
+        "css/test.css",
+        "css/icheck/skins/flat/red.png",
+        "css/icheck/skins/line/_all.css",
+        "images/airlines/北部湾航空.png",
+        "css/themes/orange/pace-theme-barber-shop.css",
+        "css/themes/orange/pace-theme-big-counter.css",
+        "WEB-INF/jsp/mobile/index/index.jsp",
+        "css/themes/white/pace-theme-barber-shop.css",
+        "images/airlines/HU.png",
+        "js/wxutil.js",
+        "css/icheck/skins/flat/yellow@2x.png",
+        "css/icheck/skins/minimal/yellow@2x.png",
+        "css/icheck/skins/minimal/aero.png",
+        "images/airlines/中华航空.png",
+        "images/airlines/西藏航空.png",
+        "libs/mui/js/mui.min.js",
+        "images/airlines/UQ.png",
+        "css/themes/pink/pace-theme-bounce.css",
+        "css/themes/purple/pace-theme-flat-top.css",
+        "css/icheck/skins/minimal/yellow.css",
+        "css/themes/pink/pace-theme-flat-top.css",
+        "css/themes/pink/pace-theme-center-circle.css",
+        "css/icheck/skins/flat/purple@2x.png",
+        "libs/mui/js/mui.picker.min.js",
+        "css/icheck/skins/square/purple.css"
+      ]
+    }
+  },
+  "fullscreen": true,
+  "unpackage": [
+    "WEB-INF/jsp/mobile/index/index.jsp",
+    "WEB-INF/web.xml",
+    "接口文档.docx",
+    "旅行帮移动端接口文档.docx",
+    "images/airlines/上海航空.png",
+    "images/airlines/东方航空.png",
+    "images/airlines/东星航空.png",
+    "images/airlines/东海航空.png",
+    "images/airlines/中华航空.png",
+    "images/airlines/中国国航.png",
+    "images/airlines/中国联航.png",
+    "images/airlines/乌鲁木齐航空.png",
+    "images/airlines/九元航空.png",
+    "images/airlines/北部湾航空.png",
+    "images/airlines/华信航空.png",
+    "images/airlines/华夏航空.png",
+    "images/airlines/南方航空.png",
+    "images/airlines/厦门航空.png",
+    "images/airlines/吉祥航空.png",
+    "images/airlines/四川航空.png",
+    "images/airlines/国泰航空.png",
+    "images/airlines/复兴航空.png",
+    "images/airlines/大新华.png",
+    "images/airlines/天津航空.png",
+    "images/airlines/奥凯航空.png",
+    "images/airlines/山东航空.png",
+    "images/airlines/幸福航空.png",
+    "images/airlines/成都航空.png",
+    "images/airlines/昆明航空.png",
+    "images/airlines/春秋航空.png",
+    "images/airlines/河北航空.png",
+    "images/airlines/海南航空.png",
+    "images/airlines/深圳航空.png",
+    "images/airlines/港龙航空.png",
+    "images/airlines/澳门航空.png",
+    "images/airlines/瑞丽航空.png",
+    "images/airlines/祥鹏航空.png",
+    "images/airlines/福州航空.png",
+    "images/airlines/福建航空.png",
+    "images/airlines/英安航空.png",
+    "images/airlines/西藏航空.png",
+    "images/airlines/西部航空.png",
+    "images/airlines/重庆航空.png",
+    "images/airlines/青岛航空.png",
+    "images/airlines/首都航空.png",
+    "logs/error.log",
+    "logs/error.log.2016-05-19",
+    "logs/error.log.2016-05-20",
+    "logs/error.log.2016-05-21",
+    "logs/error.log.2016-05-22",
+    "logs/error.log.2016-05-23",
+    "logs/error.log.2016-05-24",
+    "logs/error.log.2016-05-25",
+    "logs/error.log.2016-05-26",
+    "logs/error.log.2016-05-27",
+    "logs/error.log.2016-05-28",
+    "logs/error.log.2016-05-29",
+    "logs/error.log.2016-05-30",
+    "logs/error.log.2016-06-01",
+    "logs/error.log.2016-06-02",
+    "logs/error.log.2016-06-06",
+    "logs/info.log",
+    "logs/info.log.2016-05-19",
+    "logs/info.log.2016-05-20",
+    "logs/info.log.2016-05-21",
+    "logs/info.log.2016-05-22",
+    "logs/info.log.2016-05-23",
+    "logs/info.log.2016-05-24",
+    "logs/info.log.2016-05-25",
+    "logs/info.log.2016-05-26",
+    "logs/info.log.2016-05-27",
+    "logs/info.log.2016-05-28",
+    "logs/info.log.2016-05-29",
+    "logs/info.log.2016-05-30",
+    "logs/info.log.2016-05-31",
+    "logs/info.log.2016-06-01",
+    "logs/info.log.2016-06-02",
+    "logs/info.log.2016-06-06"
+  ]
+}

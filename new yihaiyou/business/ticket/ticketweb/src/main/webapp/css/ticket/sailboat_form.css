@@ -1,0 +1,194 @@
+.row{margin: 5px 15px 10px 15px;}
+
+.first{float: left;font-size: 14px;width: 130px;text-align: right;margin-right: 10px;}
+.first_offer{
+  float: left;
+  font-size: 14px;
+  width: 11%;
+  text-align: right;
+  margin-right: 10px;
+  line-height: 34px;
+}
+.second{
+  font-size: 14px;
+  float: right;
+  text-align: left;
+  width: 88%;
+}
+.first em{ color:#ff3000;}
+.first_offer em{ color:#ff3000;}
+.input_radio{  display: inline-block; line-height: 27px; vertical-align: top; position: relative; padding-left: 8px; padding-right: 5px;}
+.btn_a.on{ background: #FE7700; color:#fff; }
+.radio_tag{  display: inline-block; background: #efefef; line-height: 24px; height: 24px; padding: 0 10px; position: relative; margin: 0 10px 0px 0; font-size: 12px;}
+
+.accordion_child1 {
+  margin: 5px 15px 10px 15px;
+  display: flex
+}
+.J_add_pic{ background-color:#FAFAFA; height: 27px; margin-left:2px;} 
+.J_add_pic_first{ background-color:#FAFAFA; height: 27px; line-height: 27px; color: #333; font-size: 12px; display: inline-block; padding: 0 15px 0 35px; width: 67px; border-radius: 3px; border: 1px solid #ccc; position: relative;}
+.J_add_pic:link{color: #000000; text-decoration: none; }
+.J_add_pic:visited { color: #000000; text-decoration: none; } 
+.J_add_pic:hover { color: #000000; text-decoration: none; } 
+.J_add_pic_first:link{color: #000000; text-decoration: none; }
+.J_add_pic_first:visited { color: #000000; text-decoration: none; } 
+.J_add_pic_first:hover { color: #000000; text-decoration: none; } 
+.suffix_tip{
+  display: inline-block;
+  font-size: 12px;
+  color: #999;
+  line-height: 29px;
+  vertical-align: top;
+  /*padding-left: 8px;*/
+}
+.img_tip{
+	margin-left: 662px;
+	margin-top: 3px;
+	color:#999;
+}
+.img_tip em{
+	color:#51b500;
+	font-weight:700;
+  	margin: 0 3px;
+}
+.img_tip_offer{
+	margin-left: 540px;
+	margin-top: 3px;
+	color:#999;
+}
+.img_tip_offer em{
+	color:#51b500;
+	font-weight:700;
+  	margin: 0 3px;
+}
+.row_hd {
+  height: 27px;
+  line-height: 27px;
+  border-bottom: 1px solid #ddd;
+  background: #f4f4f4;
+  margin: 5px 15px 10px 15px;
+  padding-left: 10px;
+  font-weight: 700;
+  color: #666;
+}
+.use_template {
+  /*margin-left: 120px;*/
+  margin-top: 3px;
+  position: relative;
+  font-size: 12px;
+  color: #0087d4;
+  
+}
+#imgView a{
+    background: #F4EFEF;
+    margin-left: 207px;
+    margin-top: -30px;
+
+}
+/* ticketEditOffer.jsp */
+.date_table {
+  border: 1px solid #ccc;
+  position: relative;
+  margin-top: 10px;
+  font-size: 12px;
+  padding:10px;
+  width: 685px;
+  /*height: 1200px*/
+}
+.operate_area {
+  background: #fff6c3;
+  border-top: 0px solid #fff;
+  /* padding: 15px 18px; */
+  width: 685px;
+  height: 100px;
+}
+.tp {
+	padding:10px;
+  
+}
+.input_checkbox {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  padding: 10px 10px 10px 10px;
+}
+.bt{
+	margin-left: 20px;
+}
+.bt span {
+  display: inline-block;
+  height: 29px;
+  line-height: 29px;
+  vertical-align: top;
+}
+.bt span em{
+  color: #FF3000;
+  margin-right: 5px;
+}
+
+/* ticketPublishSuccess.jsp */
+.pro_input {
+  margin-left: 120px;
+  font-weight: 700;
+  color: #333;
+  position: relative;
+  padding-top: 12px;
+}
+.title {
+  border-bottom: 1px solid #DDD;
+  background: #fafafa;
+  height: 50px;
+}
+.title_name {
+  float: left;
+  font-size: 14px;
+  width: 110px;
+  text-align: right;
+  margin-right: 10px;
+  padding-top: 12px;
+  padding-left: 12px;
+}
+.success_tip {
+  padding-left: 80px;
+  margin-left: 108px;
+  border-left: 1px solid #ddd;
+  position: relative;
+  padding-bottom: 20px;
+  margin-top: 25px;
+}
+
+.left-block {
+  float: left;
+  padding-top: 10px;
+}
+.hd {
+  font-size: 24px;
+  font-family: ΢���ź�;
+  font-weight: 700;
+  line-height: 40px;
+  color: #666;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.left-block p {
+  color: #ff7700;
+  line-height: 24px;
+  margin-left: 10px;
+}
+.pub_btn{
+ margin-left: 10px;
+ margin-top: 10px;
+}
+.price-set{background-color: #FFF6C3;border: 1px #E0E0E0 solid;padding: 15px;}
+.price-set > div{height:35px;}
+.ck-div{float: left;width: 80px;height: 20px;vertical-align: middle;padding-top: 3px;}
+.ck-label{float: left;display: block;line-height: 12px;margin-left: 5px;}
+.left-block{float: left;display: block;}
+.clr-float{clear: both;}
+.imgView{
+	float:left;
+}
+.btn_class{
+	/*margin-left: 108px;*/
+}
+

@@ -1,0 +1,88 @@
+#edit-panel {
+    width: 300px;
+    height: 140px;
+}
+#edit-form{
+    width: 100%;
+}
+#edit-table{
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+}
+
+#edit-table td {padding:10px;}
+
+#btn-div{
+    padding-top: 10px;
+    padding-right: 60px;
+}
+
+.btn{
+    float: right;
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+input{
+    width: 120px;
+}
+
+.color-sure{
+    color: white;
+    background-color: #337AB7;
+}
+.color-cancel{
+    color: black;
+    background-color: #E0E0E0;
+}
+
+.cf { *zoom: 1; }
+.cf:after { display: block; content: '\20'; height: 0; clear: both; }
+
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.qrcode-div{
+    background-color: white;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+}
+
+.qrcode-img{
+    width: 50px;
+    height: 50px;
+}
+
+.qrcode-name{
+    padding-left: 5px;
+    font-size: 16px;
+}
+.qrcode-deal{
+    font-size: 16px;
+    color: #337ab7;
+}
+.deal-div{
+    padding-right: 5px;
+}
+#newQrcode{
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+#total{
+    /*padding-left: 10px;*/
+    /*padding-top: 10px;*/
+}

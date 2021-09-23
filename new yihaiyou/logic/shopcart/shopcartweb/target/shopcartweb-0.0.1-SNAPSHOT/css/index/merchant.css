@@ -1,0 +1,98 @@
+/* CSS Document */
+/* 全局样式 */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{font:400 12px/1.231 tahoma,arial,'microsoft yahei','hiragino sans gb',simsun,sans-serif;color:#333}
+body{background:#eee}
+ol,ul,li{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}
+table{border-collapse:collapse;border-spacing:0}
+th,td,strong,b{font-weight:400}
+address,em,i{font-style:normal}
+h1,h2,h3,h4,h5,h6,button,input,select,textarea{font-size:100%;font-weight:400}
+a{color:#09f;text-decoration:none;outline:0}
+a:hover{color:#fd0665;text-decoration:none}
+.clr,.clear{clear:both;height:0;overflow:hidden}
+.clrfix{zoom:1}
+.clrfix:after{clear:both;display:block;height:0;visibility:hidden;content:"."}
+.mpg-section{width:1280px}
+.mpg-ellipsis{overflow:hidden;width:100%;white-space:nowrap;text-overflow:ellipsis}
+.mpg-alphabg{position:absolute;z-index:1;background-color:#000;opacity:.5;filter:alpha(opacity=50)}
+.mpg-loading{background-image:url(http://simg2.qunarzz.com/piao/images/loading_camel.gif);background-position:center center;background-repeat:no-repeat}
+.mpg-price{font:12px 'microsoft yahei','hiragino sans gb',simsun,sans-serif}
+.mpg-price-num{font:14px arial,helvetica,sans-serif}
+.mpg-black{color:#333}
+.mpg-gray{color:#999}
+.mpg-light{color:#fd0665}
+.mpg-blue{color:#09f}
+.mpg-red{color:#f00}
+.mpg-orange{color:#f60}
+.mpg-green{color:#01a336}
+.mpg-btn{display:inline-block;min-width:60px;*+min-width:auto;padding:0 14px;text-align:center}
+.mpg-btn .icon{margin:0 5px;font-weight:bold}
+.mpg-btn-strong{height:32px;background:#ff6000;color:#fff;font-size:15px;line-height:32px}
+.mpg-btn-strong:hover{background:#fc3b00;color:#fff}
+.mpg-btn-weak{height:30px;border:1px solid #d1d1d1;background:#fff;color:#333;font-size:15px;line-height:30px}
+.mpg-btn-weak:hover{background:#efefef;color:#333}
+.mpg-btn-normal{height:28px;background:#1c88ef;color:#fff;font-size:12px;line-height:28px}
+.mpg-btn-normal:hover{background:#0073df;color:#fff}
+.mpg-btn-do{height:26px;border:1px solid #09f;background:#fff;color:#09f;font-size:12px;line-height:26px}
+.mpg-btn-do:hover{background:#09f;color:#fff}
+.mpg-btn-disabled,.mpg-btn-disabled:hover{background:#cdcdcd;color:#a1a1a1;cursor:default}
+/* 各部分样式 */
+.mpm-topbar{background:#f4f4f4}
+.mpm-topbar-bd{padding:0 20px;font-size:12px;line-height:32px;text-align:right}
+.mpm-topbar-bd .more{margin-left:30px}
+.mpm-topbar-bd .tuoshang{padding-left:20px;background:url(http://simg2.qunarzz.com/piao/images/tts/v3/sprite2.png) -71px -60px no-repeat}
+.mpm-head{background:#198dfc}
+.mpm-head-hd{float:left;width:410px;height:84px}
+.mpm-head-hd .logo,.mpm-head-hd .role,.mpm-head-hd .name{_display:inline;float:left}
+.mpm-head-hd .logo{width:138px;height:60px;text-indent:-9999px;background: url(/images/yihaiyou_logo.png) 0 0 no-repeat;margin: 10px 0 0 10px;}
+.mpm-head-hd .role,.mpm-head-hd .name{width:256px;height:28px;color:#fff;font-size:24px;line-height:28px;text-indent:0px}
+.mpm-head-hd .role{margin-top:13px}
+.mpm-head-bd{float:right;width:800px;text-align:right;padding-right:50px}
+.mpm-head-bd .nav{display:inline-block;*display:inline;zoom:1;margin-top:33px;background:transparent none!important;border-bottom:0 none!important}
+.mpm-head-bd .nav-item{float:left;padding:0 30px;color:#eee;font-size:15px;line-height:30px}
+.mpm-head-bd .nav-item:hover,.mpm-head-bd .nav-selected{color:#fff}
+.mpm-head-bd .nav-selected{border-bottom:4px solid #fff}
+.mpm-subnav .subnav-wrap{padding:27px 0 0 9px}
+.mpm-subnav .subnav-list{margin-top:15px}
+.mpm-subnav .subnav-list .subnav-item{display:block;margin-left:3px;color:#333;font-size:13px;line-height:35px;text-indent:38px}
+.mpm-subnav .subnav-list .subnav-item:hover,.mpm-subnav .subnav-selected .subnav-item{color:#333;font-weight:bold}
+.mpm-subnav .subnav-selected .subnav-item{margin-left:0;border-left:3px solid #008bf6;background:#fff}
+.mpm-foot{border-top:1px solid #ddd;background:#fff;}
+.mpm-foot .copyright{line-height:2.6;text-align:center}
+html{min-width:1280px}
+.mpg-section{}
+.mp-content-inner{position:relative;width:1280px;margin:0 auto}
+.mp-content{background:#f4f4f4}
+.mp-column-hd{float:left;width:200px}
+.mp-column-bd{margin-left:200px;_margin-left:197px;padding:20px;background:#fff}
+
+.nav{height:63px;}
+
+.wrap{width:1380px;margin:10px auto}
+.content{background:#fff}
+.left_bg{border-left:1px solid #ddd;border-right:1px solid #ddd;width:198px;vertical-align:top}
+.left h3{font:bold 14px/36px "microsoft yahei",Arial;border-bottom:1px solid #EEE;text-indent:24px}
+.left h3.tree-node,.left h3 a{display:block;height:36px;line-height:36px;background:url(http://simg1.qunarzz.com/site/images/package/tts_new/arrow.png) no-repeat 14px 15px;color:#555}
+.left h3 a:hover{background-color:#e8f9ff}
+.left h3 a.on{font-weight:bold;color:#FFF;background:#00add1 url(http://simg1.qunarzz.com/site/images/package/tts_new/arrow.png) no-repeat 14px -15px}
+.left ul li{display:block;height:36px;font-size:14px;position:relative;border-bottom:1px solid #EEE}
+.left ul li a{color:#555;display:block;height:36px;line-height:36px;text-indent:33px;font-family:"microsoft yahei",Arial;background:url(http://simg1.qunarzz.com/site/images/package/tts_new/arrow.png) no-repeat 24px -45px}
+.left ul li a:hover{background-color:#e8f9ff}
+.left ul li a.on{font-weight:bold;color:#FFF;background:#1c88ef url(http://simg1.qunarzz.com/site/images/package/tts_new/arrow.png) no-repeat 24px -15px}
+.left ul li a.done{font-weight:bold;color:#00add1}
+.left ul li a.undo{font-weight:bold;color:gray}
+.left ul li em.message_num{display:block;height:19px;line-height:16px;width:38px;background:url(http://simg1.qunarzz.com/site/images/travel/tts/sprite.png) no-repeat -101px 0;position:absolute;left:135px;top:3px;font-size:12px;color:#fff}
+.rig_bg{vertical-align:top;width:1080px}
+.rig_bg_fullscreen{width:1280px}
+.right .info{padding-left:10px;background:#fff}
+.right .info_no_background{background:0}
+.caption{height:28px;padding-left:10px;border-bottom:1px solid #ddd;font:700 18px/28px "Microsoft Yahei",Arial,sans-serif;color:#00add1}
+.caption .sign{line-height:10px; height:10px; border-left: 4px solid #00add1; }
+.caption .title{ margin-left:10px;}
+
+/*.mpg-section .mpm-head-bd .nav a:first-child{border-bottom:3px solid white;}*/
+.white_border_a{border-bottom:4px solid white;}

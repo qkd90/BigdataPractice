@@ -1,0 +1,103 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.data.data</groupId>
+		<artifactId>data</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>solr</artifactId>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.version>4.2.1.RELEASE</spring.version>
+		<struts.version>2.3.8</struts.version>
+		<hibernate.version>4.2.5.Final</hibernate.version>
+		<lucene.version>4.10.4</lucene.version>
+		<solr.version>4.10.4</solr.version>
+	</properties>
+	<dependencies>
+
+		<!-- <dependency> <groupId>com.data.data</groupId> <artifactId>frame</artifactId> 
+			<version>0.0.1-SNAPSHOT</version> <type>war</type> </dependency> <dependency> 
+			<groupId>com.data.data</groupId> <artifactId>frame</artifactId> <version>0.0.1-SNAPSHOT</version> 
+			<type>jar</type> <classifier>classes</classifier> </dependency> -->
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-solr</artifactId>
+			<version>1.5.0.RELEASE</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>spring-context</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>spring-tx</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>spring-core</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>spring-beans</artifactId>
+					<groupId>org.springframework</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.data.data</groupId>
+			<artifactId>coressh4</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.data.ikanalysis</groupId>
+			<artifactId>ikanalysis</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>solr</finalName>
+		<resources>
+			<resource>
+				<targetPath>webapp</targetPath>
+				<directory>src/main/webapp</directory>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<configuration>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<encoding>${project.build.sourceEncoding}</encoding>
+						<source>1.6</source>
+						<target>1.6</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<!-- <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-shade-plugin</artifactId> 
+			<version>2.2</version> <executions> <execution> <phase>package</phase> <goals> 
+			<goal>shade</goal> </goals> <configuration> <filters> <filter> <artifact>*:*</artifact> 
+			<excludes> <exclude>META-INF/*.SF</exclude> <exclude>META-INF/*.DSA</exclude> 
+			<exclude>META-INF/*.RSA</exclude> </excludes> </filter> </filters> <transformers> 
+			<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer"> 
+			<mainClass>solr.SpringSolr</mainClass> </transformer> <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer"> 
+			<resource>reference.conf</resource> </transformer> <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer"> 
+			<resource>META-INF/spring.handlers</resource> </transformer> <transformer 
+			implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer"> 
+			<resource>META-INF/spring.schemas</resource> </transformer> </transformers> 
+			</configuration> </execution> </executions> </plugin> </plugins> -->
+	</build>
+</project>

@@ -1,0 +1,66 @@
+<header class="header-box fixed">
+    <a href="javascript:history.go(-1)"><span class="daymar_back"><img src="lxb/images/fare_back.png"></span></a>
+
+    <h1>行程详情</h1>
+</header>
+<div class="wrapper" ng-controller="lineDayCtrl">
+    <div class="journey-detail">
+        <div class="journey-content">
+            <div class="tab-content">
+                <div class="journey-line">
+                    <ul>
+                        <li ng-repeat="lineDay in lineDayList">
+                            <div class="day-title">
+                                {{lineDay.dayDesc}}
+                                <div class="ball">
+                                    <span>D{{lineDay.lineDay}}</span>
+                                </div>
+                            </div>
+
+                            <div class="day-content" ng-bind-html="lineDay.arrange | trustHtml">
+                            </div>
+
+                            <div ng-repeat="dayPlan in lineDay.linedaysplan">
+                                <div class="label">
+                                    <div class="arrow"></div>
+                                    <div class="time-place">
+                                        <span class="icon icon-history"></span>
+                                        <span class="text">{{dayPlan.timeNode}}</span>
+                                    </div>
+                                    <div class="dott"></div>
+                                </div>
+
+                                <div class="day-content">
+                                    <p>{{dayPlan.timeDesc}}</p>
+
+                                    <div ng-repeat="planInfo in dayPlan.planInfoList">
+                                        <div class="place">
+                                            <span class="icon icon-place2"></span>
+                                            <span class="text">{{planInfo.littleTitle}}</span>
+                                        </div>
+                                        <p ng-bind-html="planInfo.titleDesc | trustHtml"></p>
+                                    </div>
+                                    <div class="imgs">
+                                        <div class="img-box" ng-repeat="infoImages in dayPlan.planInfoImagesList">
+                                            <img width="100%" bn-lazy-src="{{infoImages.imageUrl}}">
+
+                                            <div class="img-label">{{infoImages.imageDesc}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="day-footer">
+                                <div class="fan-zhu">
+                                    <div>三餐：{{lineDay.meals}}</div>
+
+                                    <div>住宿：{{lineDay.hotelName}}</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tips" style="line-height:25px;height:auto;padding:0">*以上行程仅供参考，最终行程可能会根据实际情况进行微调，敬请以出团通知为准。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

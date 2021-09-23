@@ -1,0 +1,17 @@
+<div class="personal_pay personal_widthdrawls" ng-controller="personalWithdrawCtrl">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        提现
+    </div>
+    <div class="drawals"><input type="number" placeholder="请输入提现金额" ng-model="price" autocomplete="off"/></div>
+    <div class="surebtn" ng-click="submit()">确定</div>
+    <div class="pay_shadow" ng-show="isBalancePay"></div>
+    <div class="passwordBox" centerbox ng-show="isBalancePay">
+        <h3>请输入密码</h3>
+        <input type="password" class="password" ng-model="payPassword" autocomplete="off">
+        <div class="p_bottom">
+            <span class="no" ng-click="cancel()">取消</span>
+            <span class="yes" ng-click="withdraw()">确定</span>
+        </div>
+    </div>
+</div>

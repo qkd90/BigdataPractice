@@ -1,0 +1,66 @@
+<div ng-controller="searchdifangCtrl">
+    <div class="searchform topbg col-xs-12 fixtop">
+        <form class="form-inline">
+            <div class="input-group">
+                <input type="text" class="form-control" id="project" placeholder="这个地方是？" ng-change="keyChange()" ng-model="key">
+      <span class="input-group-btn">
+          <a href="javascript:history.go(-1);">
+              <button class="btn btn-default" type="button">取消</button>
+          </a>
+      </span>
+            </div>
+        </form>
+    </div>
+    <div id="yjcontainer" class="clearfix">
+
+        <div class="search-difang-list col-xs-12">
+            <ul infinite-scroll="placeList()" infinite-scroll-distance="1" infinite-scroll-disabled="loading">
+                <li class="{{place.class}}" ng-repeat="place in places" ng-bind-html="place.html | trustHtml" ng-click="selectPlace(this)"></li>
+                <!--<div ng-show="loading"><div class="yuloading"><span>加载数据中...</span></div></div>-->
+                <div ng-show="nomore" class="alert alert-danger text-center">没有更多数据了</div>
+            </ul>
+        </div>
+        <div id="add-new" class="hidden">
+            <button type="button" class="btn-block" data-toggle="modal" data-target="#addmodal">增加游玩“{{key}}”</button>
+        </div>
+    </div>
+    <div class="modal fade" id="addmodal" tabindex="-1" role="dialog" aria-labelledby="addmodal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content text-center">
+                <div class="modal-header"><h4 class="modal-title text-left">提示</h4></div>
+                <div class="modal-body text-left">暂无"{{key}}"信息，确定设为地名？</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-left" data-dismiss="modal" style="width: 49%">取消</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tipmodal" style="width: 49%">确定
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tipmodal" tabindex="-1" role="dialog" aria-labelledby="addmodal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content text-center">
+                <div class="modal-body search-tip clearfix">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h3>这个地方是？</h3>
+
+                    <div class="tiplist">
+                        <a ng-click="addPlace('scenic')" class="col-xs-6"><img src="images/search/s1.png"/></a>
+                        <a ng-click="addPlace('hotel')" class="col-xs-6"><img src="images/search/s2.png"/></a>
+                        <a ng-click="addPlace('food')" class="col-xs-6"><img src="images/search/s3.png"/></a>
+                        <a ng-click="addPlace('other')" class="col-xs-6"><img src="images/search/s4.png"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#project").bind("input propertychange", function () {
+        $('#add-new').removeClass("hidden");
+        if (document.getElementById('project').value == '') {
+            $('#add-new').addClass("hidden");
+        }
+    });
+</script>

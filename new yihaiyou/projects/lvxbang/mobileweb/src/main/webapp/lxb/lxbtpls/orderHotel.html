@@ -1,0 +1,203 @@
+<header class="header-box fixed" id="header">
+    <a href="javascript:history.go(-1)"><span class="header-back">
+                <i class="icon-title-back effect-active"></i>
+            </span></a>
+
+    <h1>订单填写</h1>
+</header>
+<div class="wrapper orderHotel" ng-controller="orderHotelCtrl">
+    <div id="order">
+        <section class="area" style="border-top: none;">
+            <div class="order-info">
+                <ul>
+                    <li>
+                        <span class="hotel-name">{{hotel.name}}</span>
+                    </li>
+                    <li>
+                    <span class="room-name">{{hotelPrice.roomName}}
+
+                    </span>
+                    </li>
+                    <li>
+                        <span>入住: <label class="grey">{{startDate}}</label></span>
+
+                        <span>离店: <label class="grey">{{endDate}}</label></span>
+                        <span class="grey">{{day}}晚</span>
+
+                    </li>
+                    <li>
+                        <span>早餐:</span>
+                        <span ng-if="hotelPrice.breakfast">含早</span>
+                        <span ng-if="!hotelPrice.breakfast">无早</span>
+
+                        <span><label class="green day-detail" ng-click="showDetail()">每日明细 &gt;</label></span>
+
+                    </li>
+                    <li>
+                        <span>房费: </span>
+                        <span><label class="price pink total-price">{{totalPrice * num}}</label></span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="area">
+            <div class="room-num" ng-click="showChangeNum()">
+                <span>房间数</span>
+
+                <span class="number green room_number" id="roomNumber">{{num}}</span>&nbsp;间
+
+                <span class="arrow-right"></span>
+            </div>
+
+            <div class="container hide" id="container"
+                 style="padding-top: 30px;position: fixed;top: 26%;border-radius: 10px;background: #fff;z-index: 200000;margin: 0 11%;padding: 0 6%;width: 78%;">
+                <p>选择房间数<span class="icon-close" id="close" ng-click="showChangeNum()"></span></p>
+                <ul>
+
+                    <li data-rnum="1" ng-class="{'select': num == 1}" ng-click="changeNum(1)"><span>1间</span></li>
+
+                    <li data-rnum="2" ng-class="{'select': num == 2}" ng-click="changeNum(2)"><span>2间</span></li>
+
+                    <li data-rnum="3" ng-class="{'select': num == 3}" ng-click="changeNum(3)"><span>3间</span></li>
+
+                    <li data-rnum="4" ng-class="{'select': num == 4}" ng-click="changeNum(4)"><span>4间</span></li>
+
+                    <li data-rnum="5" ng-class="{'select': num == 5}" ng-click="changeNum(5)"><span>5间</span></li>
+
+                    <li data-rnum="6" ng-class="{'select': num == 6}" ng-click="changeNum(6)"><span>6间</span></li>
+
+                    <li data-rnum="7" ng-class="{'select': num == 7}" ng-click="changeNum(7)"><span>7间</span></li>
+
+                    <li data-rnum="8" ng-class="{'select': num == 8}" ng-click="changeNum(8)"><span>8间</span></li>
+
+                </ul>
+
+            </div>
+
+            <div class="customer-list">
+
+                <ul class="normal">
+
+                    <li ng-repeat="tourist in touristList">
+                        <span>入住人</span>
+                        <span>
+                            <input type="text" placeholder="必填，房间{{$index + 1}}，一位入住人姓名" ng-model="tourist.name">
+                        </span>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="order-tel" id="orderTel">
+                <span>预订人手机</span>
+                <input type="tel" placeholder="用于接收通知" id="hotelTel" maxlength="11" value="" ng-model="telephone">
+            </div>
+        </section>
+
+        <section class="area">
+            <div class="check-time" id="latest">
+                <div class="arrival-desc">最晚抵店时间&nbsp;</div>
+                <div>
+                    <p class="checkin-time">
+                        <span>{{startDate}} 22:00:00<span ng-if="hotelPrice.status == 'GUARANTEE'">(需担保)</span></span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="area fax">
+            如需开具发票，请在酒店前台领取
+        </section>
+
+        <section class="area discount" id="discountDiv">
+
+        </section>
+
+        <section class="area notice warm_tips">
+            <div class="title">温馨提示</div>
+            <p class="guarantee">加床：请提前咨询酒店前台</p>
+        </section>
+
+        <div class="receive" style="margin-bottom:60px"><span class="icon-choice"></span>我已阅读并接受&nbsp;<a
+                class="check_hotel_notice" ng-click="showNotice()">《酒店预订须知》</a></div>
+        <div class="bottom">
+
+        <span class="pay-total-price">
+            <label class="pay_name" ng-if="hotelPrice.status == 'GUARANTEE'">担保总额</label>
+            <label class="pay_name" ng-if="hotelPrice.status == 'UP'">到付总额</label>
+            <label class="price pink" id="totalPrice">{{totalPrice * num}}</label>
+        </span>
+            <span class="detail day-detail" ng-click="showDetail()">查看明细</span>
+            <span class="submit-btn" ng-click="next()" ng-if="hotelPrice.status == 'GUARANTEE'">去担保</span>
+            <span class="submit-btn" ng-click="submitOrder()" ng-if="hotelPrice.status == 'UP'">完成预订</span>
+        </div>
+        <div class="mask hide" id="fysm" ng-click="showDetail()">
+            <div class="expense-detail">
+                <p>费用明细</p>
+                <section class="card">
+                    <div class="title">订单总额<span class="price pink total-price">{{totalPrice * num}}</span></div>
+                    <ul>
+
+                        <li ng-repeat="calendar in priceCalendar">
+                            <span>{{calendar.showDate}}</span>
+                            <span style="margin-left: 40px;" ng-if="hotelPrice.breakfast">含早</span>
+                            <span style="margin-left: 40px;" ng-if="!hotelPrice.breakfast">无早</span>
+                            <span><label class="price">{{calendar.member}}&nbsp;</label>×&nbsp;<label
+                                    class="room_number">{{num}}</label>间</span>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <section class="card pay_amount">
+                    <div class="fl-r">
+                        <span>应付总额：<label class="price pink total-price">{{totalPrice * num}}</label></span>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        <div class="whats-mask hide"></div>
+    </div>
+    <div class="hide" id="bookNotice">
+        <header class="header-box fixed">
+        <span class="header-back" ng-click="showNotice()">
+            <i class="icon-title-back effect-active"></i>
+        </span>
+
+            <h1>酒店预订须知</h1>
+        </header>
+        <div class="main_cont book_notice">
+            <div ng-if="hotelPrice.status == 'GUARANTEE'"><p class="book_title">1.预订须知</p>
+
+            <p class="book_notice_content">1> 房量紧张，订单提交后需在线支付<span style="color: #ff0000;">￥{{totalPrice * num}}</span>担保金，如未预订成功，担保金全部原路退还;
+            </p>
+
+            <p class="book_notice_content">2> 入住结账，艺龙向酒店确认后，担保金全额原路退还;</p>
+
+            <p class="book_notice_content">3> 订单一经预订成功不可变更/取消，如未入住酒店将扣除全部担保金作为违约金;</p>
+
+            <p class="book_notice_content">4> 退还金额境内卡5个工作日内到账，境外卡20个工作日内到账。</p>
+
+            <div class="underline"></div>
+            <p class="book_title">2.注意事项</p>
+            </div>
+            <p class="book_title" ng-if="hotelPrice.status == 'UP'">1.注意事项</p>
+
+            <p class="book_notice_content">1> 旅行帮酒店供应商为艺龙旅行网</p>
+
+            <p class="book_notice_content">2> 现在预订，5分钟内供应商确认订单。</p>
+
+            <p class="book_notice_content">3> 订单提交后可拨打客服电话400-0131-770免费取消/变更。</p>
+
+            <p class="book_notice_content">4> 房费请于酒店前台支付。</p>
+
+            <p class="book_notice_content">5> 如需发票请到酒店前台索取。</p>
+        </div>
+    </div>
+    <!-- 预订须知部分结束 -->
+
+    <!-- 红包部分开始 -->
+</div>

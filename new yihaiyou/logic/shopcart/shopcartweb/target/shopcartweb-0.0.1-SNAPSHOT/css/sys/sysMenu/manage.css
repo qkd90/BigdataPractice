@@ -1,0 +1,14 @@
+#edit_panel td{
+	padding: 4px;
+}
+#show_panel td{
+	padding: 4px;
+}
+#edit_panel input{width: 360px;}
+#show_panel input{border: 0;width: 360px;}
+.wd360 {width: 360px;}
+#reloadBtn{
+	top: 20px;
+	right: 30px;
+	position: absolute;
+}

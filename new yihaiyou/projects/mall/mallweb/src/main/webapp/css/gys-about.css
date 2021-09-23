@@ -1,0 +1,38 @@
+/*!
+ * 供应商-关于我们 v0.1
+ * Author Jeffrey.
+ * Copyright 2011-2015.
+ */
+
+/*顶部*/
+#top{background:#f7f7f7; border-bottom:1px solid #ededed; height:36px; line-height:36px;}
+.toplinks a{margin-left:20px; float:left;}
+.toplinks a.top-wx{background:url(../images/top-wx.png) center center no-repeat; width:30px; height:36px; line-height:36px;}
+.toplinks a.top-wb{background:url(../images/top-wb.png) center center no-repeat; width:30px; height:36px; line-height:36px;}
+.toplinks a.top-qq{background:url(../images/top-qq.png) center center no-repeat; width:30px; height:36px; line-height:36px;}
+/*头部*/
+#gys-header{padding-top:10px; padding-bottom:20px;}
+#gys-header h1 a{font-size:30px; color:#1c96d9;}
+/*导航*/
+#topnav{background:#1c96d9; height:45px; line-height:45px;}
+.mainnav a{color:#fff; font-size:16px; display:inline-block; padding:0 30px; margin-right:10px;}
+.mainnav a:hover,.mainnav a.curr{background:#265aa5;}
+.mainnav span.cart{background:url(../images/cart.png) center center no-repeat; width:40px; height:45px;}
+
+/*左边*/
+.leftnav{background:#d8e4ed; min-height:550px;}
+.leftnav dt{background:#1c96d9 url(../images/ico8.jpg) 20px center no-repeat; color:#fff; font-size:16px; padding:5px 10px 5px 35px; border-bottom:2px solid #ededef;}
+.leftnav dd{background:#c3dceb url(../images/ico7.jpg) 20px center no-repeat; padding:5px 10px 5px 35px; border-bottom:2px solid #ededef;}
+.leftnav dd.curr{background:#1c96d9 url(../images/ico7.jpg) 20px center no-repeat; }
+.leftnav dd a{color:#265aa5;}
+
+#about h4.title{background:url(../images/about-title-line.jpg) left center repeat-x; color:#1c96d9; border:none; margin:0; padding:0;}
+#about h4.title span{background:#fff url(../images/ico9.jpg) left center no-repeat; display:inline-block; margin-left:50px; padding-left:10px;}
+#about h4.title span span{background:url(../images/ico9.jpg) right center no-repeat; display:inline-block; margin-left:0; padding-right:20px;}
+
+#about .media{margin:20px auto;}
+#about .media-left{padding-right:30px;}
+#about .media-body h2{font-size:16px; margin:0 0 10px 0; font-weight:bold;}
+#about .content{color:#666; line-height:180%;}
+
+.tplist{margin-top:20px;}

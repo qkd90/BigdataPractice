@@ -1,0 +1,145 @@
+.header-wrap .logo { position: absolute; top: 7px; left: 7px; width: 30px; height: 30px; background: #fff url("/images/indeximg/logo.png?__sprite") no-repeat center; background-size: 24px; border-radius: 3px; }
+.header-wrap .search { position: absolute; top: 0; right: 5px; width: 44px; height: 44px; background: url("/images/indeximg/l_i_search1.png?__sprite") no-repeat center; background-size: 21px; z-index: 100000; }
+.main-wrap { padding-top: 44px; padding-bottom: 50px; min-height: 100%; background: #fff; }
+.main-wrap.user-wrap { padding-bottom: 0; background: #f5f5f5; }
+.header-wrap .left-btn.help-btn { font-size: 0; background: url("/images/icon/lv_help.png?__sprite") center no-repeat; background-size: 23px;}
+#J_index_tab .ui-tab-title { position: fixed; top: 0; left: 0; width: 100%; padding: 0 50px 0 15%; background: #34ad37; z-index: 99999; box-sizing: border-box; }
+#J_index_tab .list-wrap.front-wrap{ position: fixed; top:44px; left: 0; width: 100%; padding-top: 40px; z-index: 99999; }
+#J_index_tab .list-wrap.myplan-front { padding-top: 0; }
+.index-header { position: fixed;top: 0;left: 0;z-index: 2;background-color: #33ad36;height: 44px;width: 100%;}
+.index-main { padding-top: 44px;box-sizing: border-box; }
+.index-header .left-btn.help-btn {font-size: 0;background: url("/images/icon/lv_help.png?__sprite") center no-repeat;background-size: 23px;}
+.index-header .left-btn {padding-left: 10px;left: 0;width: 35px;background: url("/images/planimg/back.png?__sprite") no-repeat center center;background-size: 20px;text-align: left;}
+.index-header a {position: absolute;top: 0;height: 44px;line-height: 44px;color: #fff;}
+
+.index-header .header-search {padding: 5px 45px;box-sizing: border-box;line-height: inherit;}
+.index-header h1 {padding: 0 12%;height: 44px;line-height: 44px;text-align: center;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+
+.index-header .header-search a {position: static;display: inline-block;height: 34px;line-height: normal;width: 100%;padding: 7px 14px;background: #2c7f20;font-size: 14px;color: #9bd687;box-sizing: border-box;border-radius: 34px;}
+.index-header .icon-user-left {background: url("/images/icon/l_03.png?__sprite") no-repeat center;background-size: 20px;}
+.index-header .right-btn {padding-right: 10px;right: 0;width: 35px;text-align: right;}
+.index-header img {width: 24px;height: 24px;border-radius: 25px;border: 1px #44be47 solid;}
+
+/* 我的行程 */
+.login-wrap { padding: 50% 20px;}
+.login-wrap p { text-align: center; font-size: 14px; }
+.login-wrap .login-btn { display: block; width: 100%; height: 40px; line-height: 40px; margin-top: 10px; background: #33ad36; color: #fff; font-size: 16px; text-align: center; border-radius: 3px; }
+.del-btn {  position: absolute; right: 10px; top: 50%; width: 40px; height: 40px; margin-top: -20px; font-size: 0; background: url("/images/planimg/del.png?__sprite") center no-repeat; background-size: 22px; }
+.date-input { width: 100%;height: 40px;background: initial;border: none; }
+.search-input input{ -webkit-appearance: caret;margin: 0;border: none; padding: 6px 15px;width: 100%;box-sizing: border-box;border-radius: 30px; background: #1c941f; }
+.search-input input::-webkit-input-placeholder { color: #93c895 !important; }
+.search-input { position: relative; }
+.search-input label { position: absolute; top: 13px; right: 10px; width: 18px; height: 18px; background: url("/images/icon/lv_ser1.png?__sprite"); background-size: 18px; }
+
+/* 推荐行程 */
+.trip-list-wrap { text-align: center;}
+.trip-list { padding-top: 40px; box-sizing: border-box; }
+.trip-list.myplan { padding-top: 0; }
+.quote-btn { position: absolute; right: 10px; top: 50%; width: 65px; height: 28px; line-height: 28px; background: #33ad36; color: #fff; text-align: center; margin-top: -14px; border-radius: 3px; }
+/* .quote-btn:hover { color: #fff; } */
+.trip-list .single-list p.quote-identifi { color: #18aaf2; }
+.trip-list .single-list .date-identifi { color: #fd5e4f; }
+.trip-list .single-list p.quote-identifi i{ float: left; width: 18px; height: 18px; background: url("/images/indeximg/l_i_yin.png?__sprite") left center no-repeat; background-size: 13px; }
+.trip-list .single-list .date-identifi i{ display: inline-block; margin-bottom: -3px; width: 18px; height: 18px; background: url("/images/icon/lv_sett.png?__sprite") left center no-repeat; background-size: 13px; }
+input[name='planCostL'],input[name='planCostU'] { width: 40% }
+.load-more { display: block; width: 100%;height: 38px;color: #34ad37;text-align: center;background: #f5f5f5;line-height: 39px;}
+.load-more.nomore { background: #fff; }
+
+/* 帮助页面 */
+.travel-tips { width: 260px; background: #f5f5f5; border-radius: 3px; }
+.travel-tips .pop-title { height: 48px; line-height: 50px; padding: 0 10px; font-size: 18px; border-bottom: 2px solid #33ad36; }
+.travel-tips .pop-content { padding: 0 10px; border-bottom: 1px #ddd solid; }
+.travel-tips .pop-content .label-wrap { position: relative; display: block; padding: 5px 0; color: #333; font-size: 14px; min-height: 40px; }
+.travel-tips a { display: block; color: #333; text-align: center; line-height: 35px; }
+.day-list { width: 100px; margin: -9px; }
+.day-list li { height: 35px; font-size: 14px; color: #333; text-align: center; border-top: 1px solid #d8d8d8; line-height: 35px; }
+.day-list li:FIRST-CHILD { border: none; }
+.day-list li.odd { background: #f5f5f5; }
+.plan-detail-footer { position: fixed; bottom: 0; left: 0; height: 44px; width: 100%; background: #fff; border-top: #e5e5e5 1px solid; box-shadow: #e5e5e5 0 0 7px; z-index: 2; }
+.plan-detail-footer a { float: left; width: 42%; height: 44px; padding-left: 8%; font-size: 16px; color: #333; line-height: 44px; text-align: center; }
+.plan-detail-footer .summary-btn { margin-left: -1px; border-right: 1px solid #d8d8d8; background: url("/images/planimg/lv_all.png?__sprite") no-repeat 35px; background-size: 20px; }
+.plan-detail-footer .travertips-btn { background: url("/images/planimg/lv_ts.png?__sprite") no-repeat 35px;; background-size: 20px; }
+#J_now-map { height: 100px; }
+.dayInfoMap { width: 100px; height: 100px; }
+.span-wrap {  background: #fff; text-align: center; }
+.span-wrap input { border: 1px solid #eee; padding: 5px; text-align: center; -webkit-appearance: none;}
+.span-wrap .submit-btn { display: block; background: #33ad36; margin-top:10px; border-radius: 3px; color: #fff; text-align: center; line-height: 35px; font-size: 14px; }
+
+/* 搜索页面 */
+.main-wrap.search-wrap { padding-bottom: 0; background: #f5f5f5; }
+#J_search .header-wrap { position: absolute; right: 0; }
+#J_search.search-wrap { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #f5f5f5; z-index: 100000; -webkit-transition: all 0.2s ease-in-out; -webkit-transform: translate3d(100%, 0, 0); }
+#J_search.panel--show { -webkit-transform: translate3d(0, 0, 0); }
+#J_search.search-wrap .left-btn { font-size: 0; }
+#J_search input[name="searchCon"] { width: 100%; box-sizing: border-box; border-radius: 5px; padding: 5px 30px 3px 5px; border: none; line-height: 25px; font-size: 14px; }
+#J_search .search-content { position: relative; line-height: 42px; }
+#J_search .search-top-content { padding: 0 60px 0 45px }
+#J_search label { position: absolute; top: 13px; right: 5px; width: 18px; height: 18px; background: url("/images/icon/lv_ser2.png?__sprite"); background-size: 18px; }
+#J_search .search-main { padding-top: 44px; box-sizing: border-box; height: 100% }
+#J_search .search-btn { width: 60px; box-sizing: border-box; text-align: center; padding: 0; font-size: 16px; }
+.tips-wrap li { line-height: 40px; text-align: center; font-size: 14px; }
+.tips-wrap .tips-1 { margin-left: 40px; color: #cdaecd }
+.tips-wrap .tips-2 { margin-right: 170px; color: #1dc5f9 }
+.tips-wrap .tips-3 { margin-right: 40px; color: #feb431 }
+.tips-wrap .tips-4 { margin-left: 200px; color: #666 }
+.search-list.trip-list { padding-top: 0; }
+.search-con { position: relative; z-index: 99; padding: 10px; border-bottom: 1px #ddd solid; }
+.search-list.trip-list .single-list .plan-name { padding-right: 50px;  }
+.plan-name span{display: inline-block; max-width: 100%;  overflow: hidden; text-overflow: ellipsis;}
+.trip-list .single-list h2.plan-name { text-overflow: inherit; overflow: inherit; }
+.plan-name i{ position: absolute; right: 10px; font-size: 10px; color: #fd5e4f; font-style: normal; vertical-align: top; }
+.main-wrap.search-wrap .right-content {padding-left: 90px;}
+
+/* 个人信息头部 */
+.user-wrap li{ background: #f6f6f6; }
+.user-wrap li:last-child { border-top: 1px solid #ddd; background: #fff; }
+.user-wrap .info-wrap { padding: 10px;text-align: center;width: 100px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; }
+.user-wrap li img { width: 25px; height: 25px; border-radius: 25px; }
+.artui-dialog { border-radius: 2px; border-color: #ccc;}
+.artui-dialog-body { padding: 0; }
+.logout-btn { display: block;line-height: 30px;width: 80px;margin: 10px auto 0;background: #fff;border: 1px #33ad36 solid; color: #33ad36; text-align: center; }
+.info-btn { display: block; text-align: center; line-height: 40px; color: #33ad36 }
+.ui-popup-bottom-right .artui-dialog-arrow-a, .ui-popup-bottom-right .artui-dialog-arrow-b { right: 5px; } 
+.ui-popup-bottom-left .artui-dialog-arrow-b, .ui-popup-bottom .artui-dialog-arrow-b, .ui-popup-bottom-right .artui-dialog-arrow-b { border-bottom: #f6f6f6 8px solid; }
+.ui-popup-bottom-left .artui-dialog-arrow-a, .ui-popup-bottom .artui-dialog-arrow-a, .ui-popup-bottom-right .artui-dialog-arrow-a { border-bottom: none; }
+
+
+
+ .publish-btn {
+  position: fixed;
+  bottom: 58px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  background: #18aaf2;
+  line-height: 70px;
+  border: 1px solid #079ce6;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #999;
+  z-index: 2;
+}
+
+.publish-btn:LINK, .publish-btn:VISITED { color: #fff; }
+
+.publish-btn i {
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  width: 40px;
+  height: 20px;
+  background: url("/images/creatplanimg/creat.png?__sprite") no-repeat center;
+  background-size: 19px;
+}
+
+.nav-li { position: relative; }
+
+.noplan-tips-wrap { text-align: center; margin-top: 30%; }
+.noplan-tips-wrap img { margin: 0 auto; }
+.noplan-tips-wrap p { margin: 20px 0; font-size: 16px; color: #34ad37; text-align: center; }
+.noplan-tips-wrap .rcm-tips-wrap { text-align: center; }
+.rcm-tips-wrap a { display: inline-block; width: 50px; height: 50px; margin-right: 30px; padding: 5px; background: #18aaf2; color: #fff; text-align: center; border-radius: 5px; box-sizing: border-box; }
+
+
+

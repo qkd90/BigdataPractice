@@ -1,0 +1,89 @@
+/*.bghtml {*/
+    /*background-color: #fff*/
+/*}*/
+
+/*.bgpicture {*/
+    /*width: 100%;*/
+    /*height: 200px;*/
+    /*background: url(/yihaiyou/image/perbg.jpg) no-repeat;*/
+    /*background-size: 100% 100%;*/
+    /*padding-top: 1px*/
+/*}*/
+
+/*.bgpicture .face_name {*/
+    /*margin: 50px auto;*/
+    /*width: 250px;*/
+    /*height: 100px;*/
+    /*position: relative;*/
+/*}*/
+
+/*.bgpicture .face {*/
+    /*width: 100px;*/
+    /*height: 100px;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*z-index: 5;*/
+/*}*/
+
+/*.bgpicture .face img {*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*border-radius: 50px;*/
+/*}*/
+
+/*.bgpicture .name {*/
+    /*width: 150px;*/
+    /*height: 50px;*/
+    /*line-height: 50px;*/
+    /*text-align: center;*/
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    /*position: absolute;*/
+    /*top: 25px;*/
+    /*left: 80px;*/
+    /*color: #fff;*/
+    /*font-size: 18px;*/
+    /*font-weight: 600;*/
+    /*letter-spacing: 2px*/
+/*}*/
+
+/*.list {*/
+    /*width: 100%;*/
+/*}*/
+
+/*.list ul {*/
+    /*width: 94%;*/
+    /*padding: 5px 3%;*/
+/*}*/
+
+/*.list ul li {*/
+    /*width: 100%;*/
+    /*height: 40px;*/
+    /*font-size: 18px;*/
+    /*border-bottom: 1px solid #e8e8e8;*/
+    /*padding: 5px 0;*/
+    /*line-height: 40px;*/
+    /*text-indent: 60px;*/
+/*}*/
+
+/*.list ul li a {*/
+    /*display: block;*/
+    /*color: #333;*/
+/*}*/
+
+/*.list ul li img {*/
+    /*width: 25px;*/
+    /*height: 30px;*/
+    /*float: right;*/
+    /*margin-top: 5px*/
+/*}*/
+
+/*.list ul li:nth-child(1) {*/
+    /*background: url(/yihaiyou/image/myorder.png) no-repeat 3% center;*/
+    /*background-size: 30px 30px;*/
+/*}*/
+
+/*.list ul li:nth-child(2) {*/
+    /*background: url(/yihaiyou/image/myhongbao.png) no-repeat 3% center;*/
+    /*background-size: 30px 30px;*/
+/*}*/

@@ -1,0 +1,146 @@
+<div ng-controller="xingorderokCtrl" class="dingdanok">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">确定订单详情</a></li>
+        </ul>
+    </div>
+    <div id="yjcontainer" class="clearfix">
+        <div id="orderdetail" class="clearfix">
+            <div class="panel panel-default" ng-if="order.planes.length > 0">
+                <div class="panel-heading">机票</div>
+                <div class="panel-body">
+                    <div class="subpanel clearfix" ng-repeat="plane in order.planes">
+                        <div class="pull-left panel-body-left">
+                            <p><span>班次：</span>{{plane.company}}{{plane.trafficCode}}</p>
+                            <p><span>起降：</span>{{plane.startStation}} <img src="images/ico/order-jt.jpg"/>
+                                {{plane.endStation}}</p>
+                        </div>
+                        <!--<div class="pull-right panel-body-price">
+                            <h2 class="price">￥{{plane.price}}</h2>
+                            <p class="youhui">燃油：￥{{plane.additionalFuelTax}}</p>
+                            <p class="youhui">机建：￥{{plane.airportBuildFee}}</p>
+                        </div>-->
+                        <div class="col-xs-12" style="margin-left:-15px">
+                            <div class="col-xs-4 pl0pr0"><span class="ord_gray">价格：</span><span style="color:#ff6100;">￥{{plane.price}}</span></div>
+                            <div class="col-xs-4 pl0pr0">燃油：<span style="color:#ff6100;">￥{{plane.additionalFuelTax}}</span></div>
+                            <div class="col-xs-4 pl0pr0">机建：<span style="color:#ff6100;">￥{{plane.airportBuildFee}}</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default" ng-if="order.trains.length > 0">
+                <div class="panel-heading">火车
+                </div>
+                <div class="panel-body">
+                    <div class="subpanel clearfix" ng-repeat="train in order.trains">
+                        <div class="pull-left panel-body-left">
+                            <p><span>车次：</span>{{train.trafficCode}}
+                            </p>
+                            <p class=""><span>起停：</span>{{train.startStation}} <img src="images/ico/order-jt.jpg"/>
+                                {{train.endStation}}</p>
+                        </div>
+                        <div class="pull-right panel-body-price">
+                            <h2 class="price">￥{{train.price}}</h2>
+                            <p class="youhui"></p>
+                            <p class="youhui"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default" ng-if="order.hotels.length > 0">
+                <div class="panel-heading">酒店</div>
+                <div class="panel-body">
+                    <div class="subpanel clearfix" ng-repeat="hotel in order.hotels" ng-if="hotel.check">
+                        <div class="pull-left panel-body-left">
+                            <p class="dingdanokheading">{{hotel.name}}
+                            </p>
+                            <p class=""><span>房型：</span>{{hotel.priceName}}</p>
+                            <p class=""><span>入离：</span>{{hotel.startDate}}至{{hotel.endDate}}</p>
+                        </div>
+                        <div class="pull-right panel-body-price danbaojiage">
+                            <h2 class="price ">￥{{hotel.price}}</h2>
+                            <p class="youhui text-right"><span class="daofu" ng-if="hotel.payType">{{hotel.payType}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div ng-if="order.days.length > 0">
+                    <div ng-repeat="day in order.days" ng-if="day.tickets.length > 0">
+                        <div class="panel-heading">{{day.cityName}} 第{{day.day}}天</div>
+                        <div class="panel-body">
+                            <div class="subpanel clearfix"  ng-repeat="ticket in day.tickets" ng-if="ticket.status == 'normal'">
+                                <div class="pull-left panel-body-left">
+                                    <p class="dingdanokheading ">{{ticket.scenicName}}</p>
+                                    <p>{{ticket.ticketName}}</p>
+                                    <p><span>游玩日期：</span>{{ticket.playDate}}</p>
+                                </div>
+                                <div class="pull-right panel-body-price pricebottom_order">
+                                    <label>价格：</label>
+                                    <h2 class="price">￥{{ticket.price}}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" ng-if="selectedtourist.length == 1">
+                    <div class="panel-heading">旅客信息</div>
+                    <div class="panel-body">
+                        <ul class="infolist clearfix" ng-repeat="json in selectedtourist">
+                            <li><span>姓   名：</span>{{json.name}}</li>
+                            <li><span>身份证：</span>{{json.idNumber}}</li>
+                            <li><span>手   机：</span>{{json.telephone}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default" ng-if="selectedtourist.length > 1" ng-repeat="json in selectedtourist">
+                    <div class="panel-heading">旅客信息{{$index + 1}}</div>
+                    <div class="panel-body">
+                        <ul class="infolist clearfix">
+                            <li><span>姓   名：</span>{{json.name}}</li>
+                            <li><span>身份证：</span>{{json.idNumber}}</li>
+                            <li><span>手   机：</span>{{json.telephone}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">联系人信息</div>
+                    <div class="panel-body">
+                        <ul class="infolist clearfix">
+                            <li><span>姓   名：</span>{{contact.name}}</li>
+                            <li><span>手   机：</span>{{contact.telephone}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default" ng-if="creditCard.cardNum.length > 0">
+                    <div class="panel-heading">酒店担保信息</div>
+                    <div class="panel-body">
+                        <ul class="kainfolist clearfix">
+                            <li><span>信用卡卡号：</span>{{creditCard.cardNum}}</li>
+                            <li><span>持卡人姓名：</span>{{creditCard.holderName}}</li>
+                            <li><span>有效期至：</span>{{creditCard.expirationYear}}年{{creditCard.expirationMonth}}月</li>
+                            <li><span>身份证号码：</span>{{creditCard.idNo}}</li>
+                            <li><span>信用卡验证码：</span>{{creditCard.cvv}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default" ng-if="invoice.telephone.length > 0">
+                    <div class="panel-heading">报销凭证</div>
+                    <div class="panel-body">
+                        <ul class="infolist clearfix">
+                            <li><span>收件人：</span>{{invoice.name}}</li>
+                            <li><span>手   机：</span>{{invoice.telephone}}</li>
+                            <li><span>地址：</span>{{invoice.address}}</li>
+                            <li><span>发票抬头：</span>{{invoice.title}}</li>
+                            <li><span>寄送方式：</span>快递到付</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mybottom text-center col-xs-12 orderpay"><a class="totalprice col-xs-9 pl0pr0">订单总价：￥{{productcost * selectedtourist.length}}
+            <small>（优惠-{{usecoupon.faceValue}}）</small>
+        </a>
+            <a ng-click="submit()" class="col-xs-3">确认下单</a></div>
+    </div>
+</div>

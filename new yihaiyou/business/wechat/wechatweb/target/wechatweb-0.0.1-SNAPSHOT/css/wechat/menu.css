@@ -1,0 +1,40 @@
+.cf { *zoom: 1; }
+.cf:after { display: block; content: '\20'; height: 0; clear: both; }
+.float-left { float: left; }
+
+
+.padding-left{
+    padding-left: 20px;
+}
+
+form table td {
+    padding:5px;
+}
+
+.display-none{
+    display: none;
+}
+
+#btn{
+    padding-left: 150px;
+    padding-top: 30px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.border-div{
+    width: 200px;
+    height: 350px;
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+    margin-left: 20px;
+    padding-top: 20px;
+    margin-top: 5px;
+}

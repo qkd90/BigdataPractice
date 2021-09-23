@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.recplan.mapper.RecplanDayMapper">
+	<insert id="insert" parameterType="RecplanDay" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_recplan_day
+			(
+				recplan_id,
+				day,
+				modify_time,
+				create_time,
+				scenics,
+				hours,
+				citys,
+				description,
+				hotel,
+				food,
+				ticket_cost,
+				seasonticket_cost,
+				traffic_cost,
+				hotel_cost,
+				traffic_time,
+				cost,
+				include_seasonticket_cost
+			)
+		values
+			(
+				#{recplanId},
+				#{day},
+				#{modifyTime},
+				#{createTime},
+				#{scenics},
+				#{hours},
+				#{citys},
+				#{description},
+				#{hotel},
+				#{food},
+				#{ticketCost},
+				#{seasonticketCost},
+				#{trafficCost},
+				#{hotelCost},
+				#{trafficTime},
+				#{cost},
+				#{includeSeasonticketCost}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="RecplanDay">
+		update tb_recplan_day
+		<set>
+			<if test="recplanId != null"> recplan_id = #{recplanId},</if>
+			<if test="day != null"> day = #{day},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+			<if test="scenics != null"> scenics = #{scenics},</if>
+			<if test="hours != null"> hours = #{hours},</if>
+			<if test="citys != null"> citys = #{citys},</if>
+			<if test="description != null"> description = #{description},</if>
+			<if test="hotel != null"> hotel = #{hotel},</if>
+			<if test="food != null"> food = #{food},</if>
+			<if test="ticketCost != null"> ticket_cost = #{ticketCost},</if>
+			<if test="seasonticketCost != null"> seasonticket_cost = #{seasonticketCost},</if>
+			<if test="trafficCost != null"> traffic_cost = #{trafficCost},</if>
+			<if test="hotelCost != null"> hotel_cost = #{hotelCost},</if>
+			<if test="trafficTime != null"> traffic_time = #{trafficTime},</if>
+			<if test="cost != null"> cost = #{cost},</if>
+			<if test="includeSeasonticketCost != null"> include_seasonticket_cost = #{includeSeasonticketCost},</if>
+			
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="RecplanDay">
+		delete from
+			tb_recplan_day
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="RecplanDay">
+		select
+			*
+		from
+			tb_recplan_day
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="RecplanDay">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_recplan_day
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="recplanId != null and '' != recplanId"> and recplan_id = #{recplanId} </if>
+			<if test="day != null and '' != day"> and day = #{day} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="scenics != null and '' != scenics"> and scenics = #{scenics} </if>
+			<if test="hours != null and '' != hours"> and hours = #{hours} </if>
+			<if test="citys != null and '' != citys"> and citys = #{citys} </if>
+			<if test="description != null and '' != description"> and description = #{description} </if>
+			<if test="hotel != null and '' != hotel"> and hotel = #{hotel} </if>
+			<if test="food != null and '' != food"> and food = #{food} </if>
+			<if test="ticketCost != null and '' != ticketCost"> and ticket_cost = #{ticketCost} </if>
+			<if test="seasonticketCost != null and '' != seasonticketCost"> and seasonticket_cost = #{seasonticketCost} </if>
+			<if test="trafficCost != null and '' != trafficCost"> and traffic_cost = #{trafficCost},</if>
+			<if test="hotelCost != null and '' != hotelCost"> and hotel_cost = #{hotelCost},</if>
+			<if test="trafficTime != null and '' != trafficTime"> and traffic_time = #{trafficTime},</if>
+			<if test="cost != null and '' != cost"> and cost = #{cost},</if>
+			<if test="includeSeasonticketCost != null and '' != includeSeasonticketCost"> and include_seasonticket_cost = #{includeSeasonticketCost},</if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; # {ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; # {tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+	</sql>
+</mapper>

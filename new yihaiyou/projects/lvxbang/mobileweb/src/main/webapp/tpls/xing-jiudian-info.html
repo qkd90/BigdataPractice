@@ -1,0 +1,94 @@
+<div ng-controller="xingjiudianinfoCtrl" class="xingjiudianinfo">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">酒店详情</a></li>
+        </ul>
+    </div>
+    <div id="subcontainer" class="clearfix boxbg">
+        <div class="jdinfo clearfix">
+            <div class="jdthumb clearfix"><img bn-lazy-src="{{hotel.cover}}" class="img-responsive"/></div>
+            <div class="jdbox clearfix">
+                <h4 class="jiudianming">{{hotel.name}}</h4>
+                <p><img src="images/ico/{{hotel.star}}xing.png" style="height: 16px;" />
+
+                <p>地址：{{hotel.address}}<a ui-sref="xing-jiudian-map" class="ico-map"></a></p>
+                <p>评分：{{hotel.score}}/5分</p>
+            </div>
+            <div class="jdbox clearfix">
+                <h4 class="hoteljianjie">酒店简介</h4>
+                <div id="moreinfo" style="height:95px; overflow:hidden;" class="moreinfo clearfix">
+                    {{hotel.introduction}}
+                </div>
+                <div id="viewMore">更多详情<img src="../images/ico/down.png"></div>
+                <div id="viewMoreclose" class="hidden">收起<img src="../images/ico/down.png"></div>
+            </div>
+            <div class="jdbox clearfix">
+                <h4 class="hoteljianjie">酒店房型</h4>
+                <div class="fanlist clearfix row" id="fanlist" style="height:243px; overflow:hidden;">
+
+                    <div class="col-xs-12 ruzhulidian" >
+
+                        <!--杨庄和修改后-->
+                    <div class="col-xs-3 ruzhudate"><input class="chufatime" ng-model="hotel.startDate" id="appDate"/></div>
+                        <div class="col-xs-3 ruzhu "><span style="margin-right: 20px;font-size: 14px;">入住<i
+                            class="glyphicon glyphicon-menu-right"></i></span></div>
+                    <div class="col-xs-3 text-right pl0pr0 ruzhudate"><input style="text-align: right;width: 100%;padding-right: 1px;" class="likaitime" ng-model="hotel.endDate" id="appDateTime"/></div>
+
+                        <div class="col-xs-3 ruzhu"><span style="margin-right: 16px;font-size: 14px;">
+                            离店<i class="glyphicon glyphicon-menu-right"></i></span></div>
+                    </div>
+
+                    <!--杨庄和改-->
+                    <!--<div class="col-xs-6 text-right pl0pr0"><input class="chufatime" ng-model="hotel.startDate" id="appDate"/>-->
+                        <!--<span > 入住<i-->
+                            <!--class="glyphicon glyphicon-menu-right"></i></span></div>-->
+                    <!--<div class="col-xs-6 text-left pl0pr0"><input style="text-align: right;width: 105px;text-align:left;" class="likaitime" ng-model="hotel.endDate" id="appDateTime"/>-->
+                        <!--<span >离店<i class="glyphicon glyphicon-menu-right"></i></span></div>-->
+
+
+                    <div class="col-xs-12 fangj" ng-repeat="price in hotel.prices">
+                        <div class="pull-left col-xs-5" style="padding-left: 0px;padding-right: 0px;">{{price.priceName}}</div>
+                        <div class="pull-right text-right col-xs-7" style="padding-left: 0px;padding-right: 0px;">
+                            <span class="price">￥{{price.price}}</span>
+                            <button ng-click="replace(this)" class="xuanding">选定</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="viewMoref">更多详情<img src="../images/ico/down.png"></div>
+                <div id="viewMoreclosef" class="hidden">收起<img src="../images/ico/down.png"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#viewMore').click(function () {
+            $('#moreinfo').css({'height': 'auto', 'overflow': 'none'});
+            $('#viewMore').toggle();
+            $('#viewMoreclose').removeClass("hidden");
+        });
+        $('#viewMoreclose').click(function () {
+            $('#moreinfo').css({'height': '95px', 'overflow': 'hidden'});
+            $('#viewMore').show();
+            $('#viewMoreclose').addClass("hidden");
+        });
+
+        $('#viewMoref').click(function () {
+            $('#fanlist').css({'height': 'auto', 'overflow': 'none'});
+            $('#viewMoref').toggle();
+            $('#viewMoreclosef').removeClass("hidden");
+        });
+        $('#viewMoreclosef').click(function () {
+            $('#fanlist').css({'height': '243px', 'overflow': 'hidden'});
+            $('#viewMoref').show();
+            $('#viewMoreclosef').addClass("hidden");
+        });
+        /*
+         $(document).ready(function () {
+         $('input').iCheck({
+         checkboxClass: 'icheckbox_square-blue',
+         radioClass: 'iradio_square-blue',
+         increaseArea: '20%' // optional
+         });
+         });
+         */
+    </script>
+</div>

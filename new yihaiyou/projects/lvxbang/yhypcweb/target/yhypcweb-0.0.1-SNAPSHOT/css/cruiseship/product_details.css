@@ -1,0 +1,833 @@
+.wrap-box{
+    background: #f2f2f2;
+    padding-bottom: 60px;
+}
+.wrap-box .wrap{
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap-box .wrap .bread-nav{
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+    line-height: 16px;
+}
+.wrap-box .wrap .bread-nav i{
+    font-style: normal;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.wrap-box .wrap .bread-nav a{
+    color: #333;
+    font-size: 14px;
+}
+.wrap-box .wrap .bread-nav a:hover{
+    color: #f80;
+}
+.wrap-box .wrap .product-order{
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    padding-left: 25px;
+    padding-bottom: 30px;
+    margin-bottom:20px;
+}
+.wrap-box .wrap .product-order .order-header{
+    margin-bottom: 7px;
+}
+.wrap-box .wrap .product-order .order-header h5{
+    font-size: 20px;
+    color: #333;
+    line-height: 50px;
+    text-align: left;
+    font-weight: normal;
+}
+.wrap-box .wrap .product-order .order-header span{
+    font-size: 14px;
+    color: #666;
+    line-height: 50px;
+    margin-right: 122px;
+}
+.wrap-box .wrap .product-order .order-body .order-swiper .views{
+    width: 440px;
+    height: 256px;
+    overflow: hidden;
+}
+.wrap-box .wrap .product-order .order-body .order-swiper .views .swiper-wrapper .swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+.wrap-box .wrap .product-order .order-body .order-swiper .previews-wrap{
+    width: 440px;
+    position: relative;
+    margin-top: 6px;
+}
+.wrap-box .wrap .product-order .order-body .order-swiper .previews-wrap .btn-prev{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 14px;
+    height: 40px;
+    background: #3996fa;
+    z-index: 9999;
+    text-align: center;
+}
+.wrap-box .wrap .product-order .order-body .order-swiper .previews-wrap .btn-prev .icon-prev{
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    background: url(/image/icon_left_gray.png) no-repeat center;
+    background-size: contain;
+    margin-top: 13px;
+}
+.wrap-box .wrap .product-order .order-body .order-swiper .previews-wrap .btn-next{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    width: 14px;
+    height: 40px;
+    background: #3996fa;
+    z-index: 9999;
+    text-align: center;
+}
+.wrap-box .wrap .product-order .order-body .order-swiper .previews-wrap .btn-next .icon-next{
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    background: url(/image/icon_right_gray.png) no-repeat center;
+    background-size: contain;
+    margin-top: 13px;
+}
+.wrap-box .wrap .product-order .order-body .order-swiper .previews-wrap .preview{
+    width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 40px;
+}
+.wrap-box .wrap .product-order .order-body .order-swiper .previews-wrap .preview .swiper-wrapper .swiper-slide{
+    padding-left: 6px;
+    padding-right: 6px;
+    box-sizing: border-box;
+}
+.wrap-box .wrap .product-order .order-body .order-swiper .previews-wrap .preview .swiper-wrapper .active img{
+    border-top:6px solid #3996fa!important;
+}
+
+.wrap-box .wrap .product-order .order-body .order-swiper .previews-wrap .preview .swiper-wrapper .swiper-slide img{
+    width: 100%;
+    height: 40px;
+}
+.wrap-box .wrap .product-order .order-body .order-content{
+    width: 676px;
+}
+.wrap-box .wrap .product-order .order-body .order-content .content-group{
+    font-size: 14px;
+    color: #666;
+    line-height: 16px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.wrap-box .wrap .product-order .order-body .content-color-blue{
+    color: #3996fa!important;
+}
+.wrap-box .wrap .product-order .order-body .order-content .content-port .port-group{
+    width: 40%;
+    font-size: 14px;
+    color: #666;
+    line-height: 16px;
+    margin-bottom: 15px;
+}
+.wrap-box .wrap .product-order .order-body .order-content .price{
+    background: #fff8f4;
+    padding-left: 26px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.wrap-box .wrap .product-order .order-body .order-content .price label{
+    font-size: 14px;
+    color: #666;
+    line-height: 60px;
+}
+.wrap-box .wrap .product-order .order-body .order-content .price .cost{
+    color: #f80;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 60px;
+}
+.wrap-box .wrap .product-order .order-body .order-content .price .cost sub{
+    vertical-align: middle;
+    margin-right: 4px;
+}
+.wrap-box .wrap .product-order .order-body .order-content .price .original-price{
+    font-size: 14px;
+    color: #666;
+    line-height: 60px;
+    position: relative;
+    margin-left: 16px;
+}
+.wrap-box .wrap .product-order .order-body .order-content .price .original-price .line{
+    display: block;
+    height: 1px;
+    background: #666;
+    width: 100%;
+    position: absolute;
+    top:50%;
+}
+.wrap-box .wrap .product-order .order-body .order-content .buy .buy-btn{
+    width: 120px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+    color: #fff;
+    background: #ff8800;
+    border-radius: 6px;
+    text-align: center;
+    margin-left: 8px;
+}
+.wrap-box .wrap .product-order .order-body .order-content .consult-tel{
+    margin-left: 26px;
+}
+.wrap-box .wrap .product-order .order-body .order-content .consult-tel p{
+    font-size: 12px;
+    color: #333;
+}
+.wrap-box .wrap .product-order .order-body .order-content .consult-tel .color-yellow{
+    color: #ff8800;
+    font-weight: bold;
+}
+.wrap-box .wrap .product-nav{
+    border:1px solid #dbdbdb;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.wrap-box .wrap .product-nav li{
+    font-size: 18px;
+    color: #333;
+    line-height: 58px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+.wrap-box .wrap .product-nav li.active{
+    color: #fff;
+    background: #3996fa;
+}
+.wrap-box .wrap .product-details .product-details-group{
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    padding-left: 19px;
+    padding-right: 19px;
+}
+.wrap-box .wrap .product-details .cruise-about{
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.wrap-box .wrap .product-details .cruise-about .about-header i{
+    display: inline-block;
+    width: 480px;
+    height: 1px;
+    margin-top: 40px;
+    background: #dbdbdb;
+}
+.wrap-box .wrap .product-details .cruise-about .about-header span{
+    font-size: 24px;
+    line-height: 80px;
+    color: #333;
+    width: 180px;
+    text-align: center;
+}
+.wrap-box .wrap .product-details .cruise-about .about-txt{
+    width: 940px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+}
+.wrap-box .wrap .product-details .cruise-about .about-txt a{
+    font-size: 12px;
+    line-height: 20px;
+    color: #2299ee;
+}
+.wrap-box .wrap .product-details .cruise-about .about-nav{
+    width: 700px;
+    margin: 0 auto;
+}
+.wrap-box .wrap .product-details .cruise-about .about-nav li{
+    width: 25%;
+    cursor: pointer;
+}
+
+.wrap-box .wrap .product-details .cruise-about .about-nav li span{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    line-height: 36px;
+}
+.wrap-box .wrap .product-details .cruise-about .about-nav li.active span{
+    color: #3996fa;
+}
+.wrap-box .wrap .product-details .cruise-about .about-nav li .icon-triangle{
+    display: none;
+    height: 16px;
+    background: url(/image/icon_triangle_down_16x9.png) no-repeat 56px center;
+    background-size: 16px 9px;
+}
+.wrap-box .wrap .product-details .cruise-about .about-nav li.active span{
+    color: #3996fa;
+}
+.wrap-box .wrap .product-details .cruise-about .about-nav li.active .icon-triangle{
+    display: block;
+}
+.wrap-box .wrap .product-details .cruise-about .about-content .about-content-group{
+    position: relative;
+}
+.wrap-box .wrap .product-details .cruise-about .about-content .about-content-group .about-content-prev{
+    display: inline-block;
+    width: 14px;
+    height: 52px;
+    background: #dbdbdb;
+    position: absolute;
+    left: 0;
+    top:99px;
+}
+.wrap-box .wrap .product-details .cruise-about .about-content .about-content-group .about-content-prev i{
+    display: block;
+    width: 4px;
+    height: 9px;
+    background:url(/image/icon_prev_black_4x9.png) no-repeat center;
+    background-size: contain;
+    margin: 0 auto;
+    margin-top: 21px;
+}
+.wrap-box .wrap .product-details .cruise-about .about-content .about-content-group .about-content-next{
+    display: inline-block;
+    width: 14px;
+    height: 52px;
+    background: #dbdbdb;
+    position: absolute;
+    right: 0;
+    top:99px;
+}
+.wrap-box .wrap .product-details .cruise-about .about-content .about-content-group .about-content-next i{
+    display: block;
+    width: 4px;
+    height: 9px;
+    background:url(/image/icon_next_black_4x9.png) no-repeat center;
+    background-size: contain;
+    margin: 0 auto;
+    margin-top: 21px;
+}
+.wrap-box .wrap .product-details .cruise-about .about-content .about-content-group .content-swiper{
+    width: 1094px;
+    margin: 0 auto;
+    height: 251px;
+    overflow: hidden;
+}
+.wrap-box .wrap .product-details .cruise-about .about-content .about-content-group .content-swiper .swiper-slide{
+    padding-left: 6px;
+    padding-right: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.wrap-box .wrap .product-details .cruise-about .about-content .about-content-group .content-swiper .swiper-slide .content-box{
+    padding: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.wrap-box .wrap .product-details .cruise-about .about-content .about-content-group .content-swiper .swiper-slide .content-box:hover{
+    background: #ebebff;
+}
+.wrap-box .wrap .product-details .cruise-about .about-content .about-content-group .content-swiper .swiper-slide .content-box img{
+    width: 100%;
+    height: 170px;
+}
+.wrap-box .wrap .product-details .cruise-about .about-content .about-content-group .content-swiper .swiper-slide .content-box h6{
+    font-size: 12px;
+    color: #333;
+    font-weight: normal;
+    line-height: 36px;
+}
+.wrap-box .wrap .product-details .cruise-about .about-content .about-content-group .content-swiper .swiper-slide .content-box p{
+    font-size: 12px;
+    color: #999;
+    line-height: 22px;
+    height: 44px;
+    overflow: hidden;
+}
+.wrap-box .wrap .product-details .cruise-about .about-content .about-content-group .content-swiper .swiper-slide .content-popup{
+    position: fixed;
+    left: 0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+}
+.wrap-box .wrap .product-details .cruise-about .cabin-question{
+    font-size: 12px;
+    color: #3996fa;
+    line-height: 32px;
+    height: 32px;
+    margin-top: 10px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.wrap-box .wrap .product-details .cruise-about .cabin-question .icon-question{
+    width: 32px;
+    height: 32px;
+    background: url(/image/icon_question.png) no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.wrap-box .wrap .product-details .product-details-group{
+    margin-bottom: 20px;
+}
+.wrap-box .wrap .product-details .cruise-route{
+    border: 1px solid #dbdbdb;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 20px;
+}
+.wrap-box .wrap .product-details .cruise-route .route-img{
+    width: 552px;
+    height: 311px;
+    overflow: hidden;
+}
+.wrap-box .wrap .product-details .cruise-route .route-img img{
+    width: 100%;
+    height: 100%;
+}
+.wrap-box .wrap .product-details .cruise-route .route-table{
+    width: 567px;
+}
+.wrap-box .wrap .product-details .cruise-route .route-table .route-table-wrap{
+    height: 311px;
+    overflow: auto;
+}
+.wrap-box .wrap .product-details .cruise-route .route-table .route-table-wrap table{
+    width: 550px;
+    text-align: left;
+}
+.wrap-box .wrap .product-details .cruise-route .route-table .route-table-wrap table thead th{
+    background: #f2f2f2;
+    font-size: 14px;
+    color: #1a1a1a;
+    line-height: 40px;
+}
+.wrap-box .wrap .product-details .cruise-route .route-table .route-table-wrap table thead th sub{
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+    vertical-align: baseline;
+    margin-left: 4px;
+}
+.wrap-box .wrap .product-details .cruise-route .route-table .route-table-wrap table tbody{
+    height: 270px;
+    overflow: hidden;
+}
+.wrap-box .wrap .product-details .cruise-route .route-table .route-table-wrap table tbody tr td{
+    height: 30px;
+    font-size: 12px;
+    line-height: 40px;
+    color: #1a1a1a;
+}
+.wrap-box .wrap .product-details .cruise-route .route-table .table-tips{
+    font-size: 12px;
+    color: #999;
+    line-height: 20px;
+    margin-top: 6px;
+}
+.wrap-box .wrap .product-details .cruise-route .route-table .table-tips i{
+    font-size: 12px;
+    line-height: 26px;
+    color: #e91f1f;
+    margin-right: 3px;
+    font-style: normal;
+}
+.wrap-box .wrap .product-details .cruise-everyday{
+    padding-left: 18px;
+    padding-top: 20px;
+    padding-right: 0;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-nav{
+    width: 64px;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-nav li{
+    font-size: 12px;
+    color: #666;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-nav li span{
+    display: block;
+    height: 30px;
+    width: 59px;
+    border-right:2px solid #dbdbdb;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-nav li.active{
+    background: url(/image/icon_route_nav_active_bg.png) no-repeat center;
+    background-size: contain;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-nav li.active span{
+    color: #fff;
+    border-right: 2px solid #ff6500;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content{
+    width: 1088px;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group{
+    padding-bottom: 20px;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group .group-header{
+    border:1px solid #dbdbdb;
+    background: #f2f2f2;
+    height: 38px;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group .group-header .header-content-date i{
+    display: inline-block;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 28px;
+    line-height: 38px;
+    color: #1a1a1a;
+    font-style: normal;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group .group-header .header-content-date .content-date {
+    margin-top: 6px;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group .group-header .header-content-date .content-date span{
+    display: block;
+    width: 70px;
+    text-align: left;
+    font-size: 12px;
+    color: #333;
+    line-height: 14px;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group .group-header .header-content-day{
+    width: 34px;
+    background: #e8e8e8;
+    height: 33px;
+    padding-top: 5px;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group .group-header .header-content-day span{
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    line-height: 14px;
+    display: block;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group .group-header .header-content-port{
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    line-height: 38px;
+    margin-left: 6px;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group .group-body{
+    padding-top: 38px;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group .group-body .boat-time{
+    width: 93px;
+    text-align: right;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group .group-body .boat-time span{
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    display: block;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group .group-body .boat-time i{
+    font-size: 12px;
+    color: #666;
+    display: block;
+    font-style: normal;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group .group-body .boat-icon {
+    width: 46px;
+    height: 23px;
+    background: url(/image/icon_new_boat_route.png) no-repeat center;
+    background-size: 25px 23px;
+}
+.wrap-box .wrap .product-details .cruise-everyday .everyday-content .everyday-group .group-body .boat-txt {
+    font-size: 12px;
+    color: #333;
+    line-height: 22px;
+    width: 924px;
+}
+.wrap-box .wrap .product-details .cruise-cost .cost-header{
+    margin-top: 65px;
+    margin-bottom: 55px;
+}
+.wrap-box .wrap .product-details .cruise-cost .cost-header i{
+    width: 500px;
+    height: 1px;
+    display: inline-block;
+    background: #dbdbdb;
+    margin-top: 11px;
+}
+.wrap-box .wrap .product-details .cruise-cost .cost-header span{
+    width: 140px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    line-height: 24px;
+}
+.wrap-box .wrap .product-details .cruise-cost .cost-content{
+    padding-left: 23px;
+}
+.wrap-box .wrap .product-details .cruise-cost .cost-content label{
+    font-size: 16px;
+    color: #333;
+    width: 146px;
+    text-align: left;
+    font-weight: bold;
+}
+.wrap-box .wrap .product-details .cruise-cost .cost-content .cost-txt{
+    margin-bottom: 32px;
+}
+.wrap-box .wrap .product-details .cruise-cost .cost-content .cost-txt p{
+    width: 935px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    line-height: 30px;
+}
+.wrap-box .wrap .product-details .cruise-order{
+    padding-bottom: 36px;
+}
+.wrap-box .wrap .product-details .cruise-order .order-header{
+    margin-top: 65px;
+    margin-bottom: 55px;
+}
+.wrap-box .wrap .product-details .cruise-order .order-header i{
+    width: 500px;
+    height: 1px;
+    display: inline-block;
+    background: #dbdbdb;
+    margin-top: 11px;
+}
+.wrap-box .wrap .product-details .cruise-order .order-header span{
+    width: 140px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    line-height: 24px;
+}
+.wrap-box .wrap .product-details .cruise-order .order-body .order-nav{
+    width: 120px;
+    margin-right: 50px;
+}
+.wrap-box .wrap .product-details .cruise-order .order-body .order-nav li{
+    border-bottom: 1px solid #dbdbdb;
+    color: #333;
+    font-size: 16px;
+    line-height: 42px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.wrap-box .wrap .product-details .cruise-order .order-body .order-nav li:hover{
+    color: #3996fa;
+}
+.wrap-box .wrap .product-details .cruise-order .order-body .order-nav li.active{
+    color: #3996fa;
+}
+.wrap-box .wrap .product-details .cruise-order .order-body .order-txt{
+    width: 942px;
+}
+.wrap-box .wrap .product-details .cruise-order .order-body .order-txt .order-txt-group{
+    font-size: 14px;
+    color: #333;
+    line-height: 26px;
+    text-align: left;
+}
+.wrap-box .wrap .product-details .cruise-policy .policy-header{
+    margin-top: 65px;
+    margin-bottom: 55px;
+}
+.wrap-box .wrap .product-details .cruise-policy .policy-header i{
+    width: 500px;
+    height: 1px;
+    display: inline-block;
+    background: #dbdbdb;
+    margin-top: 11px;
+}
+.wrap-box .wrap .product-details .cruise-policy{
+    padding-bottom: 37px;
+}
+.wrap-box .wrap .product-details .cruise-policy .policy-header span{
+    width: 140px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    line-height: 24px;
+}
+.wrap-box .wrap .product-details .cruise-policy .policy-txt{
+    width: 942px;
+    margin-left: 170px;
+    font-size: 14px;
+    color: #333;
+    line-height: 26px;
+    text-align: left;
+}
+
+/*邮轮介绍弹窗样式*/
+#popupWrap{
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.popup-box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top:0;
+    background: #000;
+    filter: alpha(opacity=60);
+    background: rgba(0,0,0,0.6);
+    z-index: 9999999;
+}
+.popup-box .popup{
+    width: 500px;
+    height: 455px;
+    padding: 15px 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -280px;
+    margin-top: -250px;
+    background: #fff;
+}
+.popup-box .popup .popup-close{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: #5e5e5e;
+    position: absolute;
+    right: -32px;
+    top:0;
+    z-index: 9999999;
+    cursor: pointer;
+}
+.popup-box .popup .popup-close:hover{
+    background: #000000;
+}
+
+.popup-box .popup .popup-close i{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background: url(/image/icon_share_close_white.png) no-repeat center;
+    background-size: contain;
+    margin-left: 9px;
+    margin-top: 9px;
+}
+.popup-box .popup h6{
+    font-size: 16px;
+    color: #333;
+    line-height: 18px;
+    font-weight: normal;
+    margin-bottom: 18px;
+}
+.popup-box .popup .popup-swiper .views{
+    width: 500px;
+    height: 333px;
+    overflow: hidden;
+}
+.popup-box .popup .popup-swiper .views .swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+
+.popup-box .popup .popup-swiper .previews-wrap{
+    position: relative;
+    margin-top: 6px;
+}
+.popup-box .popup .popup-swiper .previews-wrap .btn-prev{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 14px;
+    height: 50px;
+    background: #3996fa;
+    z-index: 9999;
+    text-align: center;
+}
+.popup-box .popup .popup-swiper .previews-wrap .btn-prev .icon-prev{
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    background: url(/image/icon_left_gray.png) no-repeat center;
+    background-size: contain;
+    margin-top: 18px;
+}
+.popup-box .popup .popup-swiper .previews-wrap .btn-next{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    width: 14px;
+    height: 50px;
+    background: #3996fa;
+    z-index: 9999;
+    text-align: center;
+}
+.popup-box .popup .popup-swiper .previews-wrap .btn-next .icon-next{
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    background: url(/image/icon_right_gray.png) no-repeat center;
+    background-size: contain;
+    margin-top: 18px;
+}
+.popup-box .popup .popup-swiper .previews-wrap .preview{
+    width: 460px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 50px;
+}
+.popup-box .popup .popup-swiper .previews-wrap .preview .swiper-wrapper .swiper-slide{
+    padding-left: 6px;
+    padding-right: 6px;
+    box-sizing: border-box;
+}
+.popup-box .popup .popup-swiper .previews-wrap .preview .swiper-wrapper .active img{
+    border-top:6px solid #3996fa!important;
+}
+
+.popup-box .popup .popup-swiper .previews-wrap .preview .swiper-wrapper .swiper-slide img{
+    width: 100%;
+    height: 50px;
+}
+.popup-box .popup .txt{
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #666;
+    height: 36px;
+    overflow: hidden;
+}
+/*邮轮介绍弹窗样式  ending*/
+
+/*导航fixed*/
+.wrap-box .wrap .product-nav.fixed{
+    position: fixed;
+    left: 50%;
+    top:0;
+    z-index: 999999;
+    margin-left: -590px;
+    width: 1178px;
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: 2px 2px 8px #dbdbdb,-2px 0px 8px #dbdbdb;
+}

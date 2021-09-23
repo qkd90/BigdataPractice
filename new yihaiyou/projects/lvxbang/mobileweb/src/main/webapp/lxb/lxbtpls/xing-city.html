@@ -1,0 +1,214 @@
+
+
+<div id="xingcityDiv" ng-controller="xingcityCtrl" class="xingcityCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="" ng-click="goback()"  class="goback">选择城市</a></li>
+        </ul>
+    </div>
+    <div id="citycontainer" class="clearfix">
+        <div class="clearfix" ng-if="hotCity.length == 0">
+            <div class="yuloading">
+                <span>正在加载数据中...</span>
+            </div>
+        </div>
+        <div class="subsearch clearfix" style="position: fixed;background-color: #f4f4f4;">
+            <input type="text" id="xingcitysearch1" style="height: 40px;margin-top: 10px;line-height: 43px;font-size: 17px;width: 276px;" ng-change="onSelectCitys()" ng-model="searchkey" placeholder="请输入城市名（如北京、bj、beijing）" >
+            <!--<a name="fisrt" id="fisrt" ng-click="onSearchCity()" class="col-xs-12">请输入城市名（如北京、bj、beijing）</a>-->
+        </div>
+        <div ng-show="searchReShow" class="searchresult clearfix">
+            <div class="search-fujin-list">
+                <ul>
+                    <li class="col-xs-12" ng-repeat="city in citys"><a href="javascript:;" ng-click="selectCity(city)" ng-bind-html="city.html | trustHtml"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="margin-top: 60px;" class="citybg clearfix">
+            <div class="citylist clearfix">
+                <dl class="now" ng-if="nowCity != null">
+                    <dt><a name="now" id="now"></a>当前</dt>
+                    <dd><span><small>GPS定位</small><small ng-click="currentLocation()">{{nowCity.name}}</small></span> </dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="hist" id="hist"></a>历史</dt>
+                    <dd><a class="active" ng-click="selectCityCode(fromCity)">{{fromCity.name}}</a></dd>
+                </dl>
+                <dl class="clearfix" ng-if="hotCity.length > 0">
+                    <dt><a name="hot" id="hot"></a>热门城市</dt>
+                    <dd>
+                        <a  ng-repeat="city in hotCity" ng-click="selectCityCode(this.city)">{{city.name}}</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="clearfix azrow" ng-if="Z != null">
+                <dl class="clearfix">
+                    <dt><a name="A" id="A"></a>A</dt>
+                    <dd><a ng-repeat="city in A" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="B" id="B"></a>B</dt>
+                    <dd><a  ng-repeat="city in B" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="C" id="C"></a>C</dt>
+                    <dd><a  ng-repeat="city in C" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="D" id="D"></a>D</dt>
+                    <dd><a  ng-repeat="city in D" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="E" id="E"></a>E</dt>
+                    <dd><a  ng-repeat="city in E" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="F" id="F"></a>F</dt>
+                    <dd><a  ng-repeat="city in F" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="G" id="G"></a>G</dt>
+                    <dd><a  ng-repeat="city in G" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="H" id="H"></a>H</dt>
+                    <dd><a  ng-repeat="city in H" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="I" id="I"></a>I</dt>
+                    <dd><a  ng-repeat="city in I" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="J" id="J"></a>J</dt>
+                    <dd><a  ng-repeat="city in J" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="K" id="K"></a>K</dt>
+                    <dd><a  ng-repeat="city in K" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="L" id="L"></a>L</dt>
+                    <dd><a  ng-repeat="city in L" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="M" id="M"></a>M</dt>
+                    <dd><a  ng-repeat="city in M" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="N" id="N"></a>N</dt>
+                    <dd><a  ng-repeat="city in N" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="O" id="O"></a>O</dt>
+                    <dd><a  ng-repeat="city in O" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="P" id="P"></a>P</dt>
+                    <dd><a  ng-repeat="city in P" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="Q" id="Q"></a>Q</dt>
+                    <dd><a  ng-repeat="city in Q" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="R" id="R"></a>R</dt>
+                    <dd><a  ng-repeat="city in R" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="S" id="S"></a>S</dt>
+                    <dd><a  ng-repeat="city in S" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="T" id="T"></a>T</dt>
+                    <dd><a  ng-repeat="city in T" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="U" id="U"></a>U</dt>
+                    <dd><a  ng-repeat="city in U" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="V" id="V"></a>V</dt>
+                    <dd><a  ng-repeat="city in V" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="W" id="W"></a>W</dt>
+                    <dd><a  ng-repeat="city in W" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="X" id="X"></a>X</dt>
+                    <dd><a  ng-repeat="city in X" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="Y" id="Y"></a>Y</dt>
+                    <dd><a  ng-repeat="city in Y" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+                <dl class="clearfix">
+                    <dt><a name="Z" id="Z"></a>Z</dt>
+                    <dd><a  ng-repeat="city in Z" ng-click="selectCityCode(city)">{{city.name}}</a></dd>
+                </dl>
+            </div>
+            <div class="azlist pull-right">
+                <a href="" ng-click="gotoBottom('fisrt')" class="hidden">当前</a>
+                <a href="" ng-click="gotoBottom('now')">历</a>
+                <a href="" ng-click="gotoBottom('hist')">热</a>
+                <a href="" ng-click="gotoBottom('hot')">A</a>
+                <a href="" ng-click="gotoBottom('A')">B</a>
+                <a href="" ng-click="gotoBottom('B')">C</a>
+                <a href="" ng-click="gotoBottom('C')">D</a>
+                <a href="" ng-click="gotoBottom('D')">E</a>
+                <a href="" ng-click="gotoBottom('E')">F</a>
+                <a href="" ng-click="gotoBottom('F')">G</a>
+                <a href="" ng-click="gotoBottom('G')">H</a>
+                <a href="" ng-click="gotoBottom('H')">I</a>
+                <a href="" ng-click="gotoBottom('I')">J</a>
+                <a href="" ng-click="gotoBottom('J')">K</a>
+                <a href="" ng-click="gotoBottom('K')">L</a>
+                <a href="" ng-click="gotoBottom('L')">M</a>
+                <a href="" ng-click="gotoBottom('M')">N</a>
+                <a href="" ng-click="gotoBottom('N')">O</a>
+                <a href="" ng-click="gotoBottom('O')">P</a>
+                <a href="" ng-click="gotoBottom('P')">Q</a>
+                <a href="" ng-click="gotoBottom('Q')">R</a>
+                <a href="" ng-click="gotoBottom('R')">S</a>
+                <a href="" ng-click="gotoBottom('S')">T</a>
+                <a href="" ng-click="gotoBottom('T')">U</a>
+                <a href="" ng-click="gotoBottom('U')">V</a>
+                <a href="" ng-click="gotoBottom('V')">W</a>
+                <a href="" ng-click="gotoBottom('W')">X</a>
+                <a href="" ng-click="gotoBottom('X')">Y</a>
+                <a href="" ng-click="gotoBottom('Y')">Z</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //$(".azlist").pin()
+		$(".azlist1").pin({
+      containerSelector: ".citybg"
+})
+    </script>
+</div>
+<!--<div id="xingcitysearchDiv" ng-controller="xingcitysearchCtrl" class="xingcitysearchCtrl">
+    <div class="searchform topbg col-xs-12 fixtop">
+        <form class="form-inline">
+            <div class="input-group">
+                <input type="text" id="xingcitysearch" class="form-control" ng-change="onSelectCitys()" ng-model="searchkey" placeholder="搜索目的地城市" style="width:90%;margin:3px 0 0 10px;border-radius:20px">
+                <span class="input-group-btn">
+                    <a href="" ng-click="cancelSearchCity()">
+                        <button class="btn btn-default" type="button" style="height:30px;margin-right:5px;">取消</button>
+                    </a>
+                </span>
+            </div>
+
+        </form>
+    </div>
+    <div id="subcontainer" class="clearfix">
+        <div class="search-fujin-list">
+            <ul>
+                <li class="col-xs-12" ng-repeat="city in citys"><a href="javascript:;" ng-click="selectCity(city)" ng-bind-html="city.html | trustHtml"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>-->
+
+
+

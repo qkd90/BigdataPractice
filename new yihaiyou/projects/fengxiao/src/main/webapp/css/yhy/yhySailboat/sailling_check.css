@@ -1,0 +1,224 @@
+.secnav {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #c2c2c2;
+    box-shadow: 0 1px 2px #c2c2c2;
+    background-color: #3c3c3c;
+    border-top: 1px solid #666;
+}
+
+.secnav_list {
+    width: 1200px;
+    margin: auto;
+}
+
+.secnav_list ul {
+    width: 217px;
+    float: right;
+    margin-right: 443px;
+}
+
+.secnav_list ul li {
+    width: 100px;
+    height: 40px;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    line-height: 40px;
+    color: #888;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.secnav_list .HSsec_active {
+    border-bottom: 4px solid #bbb;
+    color: #999!important;
+}
+
+.checkList {
+	width: 1200px;
+	margin: auto;
+	margin-top:20px;
+	padding-top:1px;
+}
+
+.checkList .checkBox {
+    width: 1200px;
+    height: 226px;
+    border:1px solid #e0e0e0;
+    background-color: #fff;
+}
+
+.checkList .checkBox .centerBox {
+    width: 470px;
+    height: 43px;
+    margin: 93px auto;
+}
+
+.checkBox .centerBox .outInput {
+    height: 40px;
+    float: left;
+    border-radius: 40px;
+    background: linear-gradient( #f9f7fa 0%, #fdfdfd 100%);
+}
+
+.checkBox .centerBox input {
+    width: 350px;
+    height: 40px;
+    outline: none;
+    color: #959892;
+    font-size: 14px;
+    text-indent: 15px;
+    border-radius: 40px;
+    font-family: '微软雅黑';
+    border:1px solid #e0e0e0;
+    box-shadow: 0 1px 2px #ccc;
+    background:url(/images/yhy/search_01.png) no-repeat 316px center;
+}
+
+.checkBox .centerBox ::-webkit-input-placeholder { 
+    color: #959892;
+    font-size: 14px;
+    text-indent: 15px;
+    font-family: '微软雅黑'
+}
+
+.checkBox .centerBox .checkBtn {
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    float: right;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 40px;
+    font-family: '微软雅黑';
+    background-color: #f15a29;
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.checkList .checkResult {
+    width: 1200px;
+    border:1px solid #e0e0e0;
+    background-color: #fff;
+    margin-top: 20px;
+    padding:25px 20px 0 30px;
+}
+
+.checkList .checkResult .check_resultTitle {
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    color: #5a5a5a;
+    font-family: 'SimSun';
+    font-weight: 600;
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.check_resultTitle span {
+    display: block;
+    width: 100px;
+    height: 30px;
+    border-bottom: 2px solid #729c14;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+
+.checkList .checkResult  .check_resultContain {
+    width: 100%;
+    height: 80px;
+    padding-top: 1px;
+}
+
+.check_resultContain .check_return {
+    width: 320px;
+    height: 50px;
+    color: #49b3fa;
+    font-size:18px;
+    text-indent: 60px;
+    line-height: 50px;
+    margin: 25px auto 0 auto;
+    font-family: '微软雅黑';
+}
+
+.check_resultContain .success {
+    background:url(/images/yhy/success.png) no-repeat left center;
+}
+
+.check_resultContain .fail {
+    background:url(/images/yhy/fail.png) no-repeat left center;
+    color: #9d9e9d;
+}
+
+.check_resultContain .checked {
+    background:url(/images/yhy/checked.png) no-repeat left center;
+}
+
+.checkList .checkResult .check_state {
+    width: 100%;
+    padding: 20px 0 15px 0;
+}
+
+.checkResult .check_state .ticketNum {
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 22px;
+    font-family: 'SimSun';
+}
+
+.check_state .ticketNum .ticket_num {
+    font-size: 13px;
+    color: #666;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.check_state .ticketNum p {
+    padding-top: 23px;
+    margin-bottom:0;
+}
+
+.ticketNum p span.index {
+    padding:2px 6px;
+    background:url(/images/yhy/indexBox.png) no-repeat center center;
+}
+
+.ticketNum p span.ticket_time {
+    margin-left: 64px;
+}
+
+.checkList .checkResult .check_message {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.checkResult .check_message ul {
+    width: 1080px;
+    margin-bottom: 0;
+}
+
+.checkResult .check_message ul li {
+    float: left;
+    width: 460px;
+    font-size: 13px;
+    color: #666;
+    font-family: 'SimSun';
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+}
+
+.checkResult .check_message ul li span.message_l{
+    width: 110px;
+    font-size: 14px;
+    font-weight: 600;
+    float: left;
+}
+
+.true {
+    display: none;
+}

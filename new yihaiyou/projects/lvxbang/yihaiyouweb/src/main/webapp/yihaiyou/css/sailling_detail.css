@@ -1,0 +1,441 @@
+.product_infomation .infoimg{height: 200px;width: 100%;margin-top:45px;  position: relative;}
+.product_infomation .infoimg .collect-bar{top: 50px;}
+.product_infomation .infoimg .bottomcontent{  margin-top: -50px;
+	color: white;
+	padding: 5px;
+	font-size: 13px;
+	background-color: black;
+	position: relative;
+	height: 50px;
+	padding-left: 10px;
+	opacity: 0.6;}
+.product_infomation .infoimg .bottomcontent .dianpinginfo{
+	font-size: 10px;
+	background-position: 0px 3px;
+	padding-top: 3px;
+	background: url(/yihaiyou/image/personal/icon-star5.png) no-repeat left;
+	background-size: 90px;
+}
+.product_infomation .infoimg .bottomcontent .dianpingstar5{
+	background: url(/yihaiyou/image/personal/icon-star5.png) no-repeat left;
+	background-size: 90px;
+}
+.product_infomation .infoimg .bottomcontent .dianpingstar4{
+	background: url(/yihaiyou/image/personal/icon-star4.png) no-repeat left;
+	background-size: 90px;
+}
+.product_infomation .infoimg .bottomcontent .dianpingstar3{
+	background: url(/yihaiyou/image/personal/icon-star3.png) no-repeat left;
+	background-size: 90px;
+}
+.product_infomation .infoimg .bottomcontent .dianpingstar2{
+	background: url(/yihaiyou/image/personal/icon-star2.png) no-repeat left;
+	background-size: 90px;
+}
+.product_infomation .infoimg .bottomcontent .dianpingstar1{
+	background: url(/yihaiyou/image/personal/icon-star1.png) no-repeat left;
+	background-size: 90px;
+}
+.product_infomation .infoimg .bottomcontent .dianpingstar0{
+	background: url(/yihaiyou/image/personal/icon-star0.png) no-repeat left;
+	background-size: 90px;
+}
+.product_infomation .infoimg .bottomcontent .pingfen {  padding-left: 105px;position: absolute;font-size: 1.2em;}
+.product_infomation .infoimg .bottomcontent .dianpinginfo .zhangshu{  padding-left: 66%;}
+
+
+
+/*.product_infomation .infobody{padding: 10px;}*/
+.product_infomation .infobody .dizhitese{padding-left:10px!important;padding-right:10px!important;}
+.product_infomation .dizhititle{width: 100%!important;overflow:hidden;text-overflow:ellipsis;/*文字溢出的部分隐藏并用省略号代替*/white-space:nowrap;display: block;}
+.product_infomation .ticketleft1{width: 100px;overflow:hidden;text-overflow:ellipsis;/*文字溢出的部分隐藏并用省略号代替*/white-space:nowrap;/*文本不自动换行*/}
+.product_infomation .infoimg img{width: 100%;height: 200px;}
+.product_infomation .infobody .jdaddress{width: 82%;height: 30px;line-height:30px;font-size: 14px;}
+.product_infomation .infobody .dizhitese .callicon{width: 18%; height:30px;float: right;border-left: 1px solid #eaeaea;  background: url(/yihaiyou/image/sailling/phone.png) no-repeat center;  background-size: 25px;}
+
+.product_infomation .infobody .jdspecial{display:none;  height: 32px;line-height:32px;border-bottom:2px solid #eaeaea;font-size: 14px;background:url(/yihaiyou/image/sailling/icon-sencery.png) no-repeat  left;background-size: 15px; padding-left: 26px;}
+.product_infomation .infobody .jdspecial img{width: 10px;float: right;  padding-top: 8px;}
+.product_infomation .infobody .dizhitese .tiaojiantui{font-size:1.2rem;}
+.product_infomation .infobody .dizhitese .nowprice{
+	font-size:1.2rem;
+}
+.product_infomation .infobody .dizhitese {
+	padding-top: 10px;
+}
+
+.product_infomation .ticket_qiehuan{
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	font-size: 13px;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.product_infomation .ticket_qiehuan .yekaqiehuan {
+	height: 38px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.product_infomation .yekaqiehuan ul li {
+	float: left;
+	width: 33.3%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+}
+
+
+/*.product_infomation .ticket_qiehuan {
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	font-size: 18px;
+}*/
+
+/*.product_infomation .ticket_qiehuan .yekaqiehuan{height: 38px;}*/
+/*.product_infomation .yekaqiehuan ul li .fixed {
+	position: fixed;
+	height: 38px;
+	top: 0px;
+	background-color: white;
+	width: 100%;
+	left: 0px;
+}*/
+.product_infomation .ticket_qiehuan .active_green {
+	/*color: #33bd61;*/
+	/*border-bottom: 2px solid #33BD61;*/
+	color: #ff9900;
+	border-bottom: 2px solid #ff9900;
+}
+
+/*.product_infomation .yekaqiehuan ul li{float: left;width: 50%;height: 38px;line-height:38px;text-align: center;font-size: 18px;}*/
+.product_infomation .qiehuan-tabcontent {width: 100%;}
+
+/*.product_infomation .yekaqiehuan ul li{float: left;width: 50%;height: 38px;line-height:38px;text-align: center;font-size: 18px;}*/
+.product_infomation .qiehuan-tabcontent {width: 100%;height: auto;  padding-left: 10px;
+	padding-right: 10px;}
+
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy{width: 100%;line-height:38px;height: 106px;  border-bottom: 2px solid #eaeaea;}
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy .ticketbuy_left{width: 70%;line-height:38px;float: left;}
+
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy .ticketbuy_left .ticketshuoming { height: 20px;line-height: 20px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy .ticketbuy_left .ticketshuoming  a{ color: #8b8b8b!important;font-size:1.2rem;}
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy .ticketbuy_left .ticketleft1 {font-size: 15px;width: 100%;;overflow:hidden;text-overflow:ellipsis;}
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy .ticketbuy_left .ticketleft2 {color: #b7b7b7;font-size: 12px;height: 20px;    line-height: 20px; }
+.product_infomation .ticketleft2 .ticketdate{background:url(/yihaiyou/image/sailling/icon-biaoz.png) no-repeat  left;  padding-left: 20px;background-size: 16px;font-size:1.2rem;}
+.product_infomation .ticketleft2 .tiaojiantui{
+	/*background:url(/yihaiyou/image/sailling/icon-biaoz.png) no-repeat  left; */
+	/*padding-left: 20px;background-size: 16px;*/
+	border: 1px solid #007eff;
+	background-size: 16px;
+	border-radius: 3px;
+	color:#007eff ;
+	padding-left: 3px;
+	padding-right: 3px;
+;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy .ticketbuy_right{width: 30%;line-height:38px;text-align: right; float: right;}
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy .ticketbuy_right .menshijia{color: #b7b7b7;font-size: 14px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy .ticketbuy_right .menshijia .oldprice{    height: 20px;line-height: 28px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy .ticketbuy_right .menshijia .trueprice{font-size: 20px;font-weight: 600;height: 20px;line-height: 15px;}
+.product_infomation .changecolor{color: #ff8501; height: 26px;  font-size: 18px;}
+.product_infomation .oldprice{height: 26px;font-size:13px;}
+
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy .ticketbuy_right .yudingbox{width: 73px;float: right;border-radius: 5px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy .ticketbuy_right .yudingbox ul li{  height: 20px; line-height: 20px;text-align: center;  margin-top: 10px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy .ticketbuy_right .yudingbox ul .yuding{background-color: #ff8501;color: white;font-size: 15px;  height: 30px;
+	line-height: 30px;  border-radius: 5px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .ticketbuy .ticketbuy_right .yudingbox ul .zaixinapay{color: #ff8501;font-size: 12px;}
+
+.product_infomation .qiehuan-tabcontent .ticket_content .opentime{border-bottom:2px solid #eaeaea;}
+.product_infomation .qiehuan-tabcontent .ticket_content .opentime p{line-height: 50%;  line-height: 35px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .opentime .kaifangtime{background:url(/yihaiyou/image/sailling/icon-clock.png) no-repeat  left;background-size: 18px; padding-left: 26px;font-size: 15px;}
+.product_infomation .timechoose{height: 22px!important;line-height: 22px!important;}
+.product_infomation .qiehuan-tabcontent .ticket_content .opentime .youhui{background:url(/yihaiyou/image/sailling/icon-bin.png) no-repeat  left;background-size: 18px; padding-left: 26px;font-size: 15px;}
+.product_infomation .youhuishuomin{line-height: 22px!important;}
+
+.product_infomation .qiehuan-tabcontent .ticket_content .tishi{}
+	.product_infomation .qiehuan-tabcontent .ticket_content .tishi .wenxintishi{background:url(/yihaiyou/image/sailling/icon-book.png) no-repeat  left;background-size: 18px; padding-left: 26px;font-size: 15px;padding-bottom: 10px;  padding-top: 5px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .tishi .youhuishuomin{color: #5c5c5c;}
+
+.product_infomation .color{border-bottom:3px solid #ff8501; color: #ff8501;}
+.product_infomation .infobody .guid_fixed{position:fixed;top:45px;left:0;background-color:#f0f0f0;}
+
+.scenicOrderKnow{}
+.scenicOrderKnow .tese{padding:0 15px 20px 15px;background-color:#fff;}
+.scenicOrderKnow .tese h3{line-height:40px;font-size:20px;text-align:center;}
+.scenicOrderKnow .tese ul li{width:100%;margin-top:10px;}
+.scenicOrderKnow .tese ul li:nth-child(3){line-height:20px;font-size:15px;color:#888;}
+.scenicOrderKnow .tese ul li img{width:100%}
+
+.product_infomation .book-popup .body{width:100%;}
+.product_infomation .book-popup .body .bookNotice{width:100%;}
+.product_infomation .book-popup .body .bookNotice .content{width:100%;padding-bottom:0;}
+
+
+/*.product_infomation .infobody .tofixed{position:fixed;top:50px;left:0;background-color:#fff;width:100%;}*/
+
+
+
+.product_infomation .qiehuan-tabcontent .ticket_content .yingyetime{
+	/*height: 60px;*/
+	margin-bottom: 20px;
+	margin-top: 5px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .yingyetime p{
+	color: #777777;
+	/*height: 50%;*/
+	line-height: 25px;
+	padding-left: 20px;
+	font-size:1.2rem;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .yingyetime .yingyedate{
+background: url(/yihaiyou/image/sailling/icon-time.png) no-repeat left;
+background-size: 15px;
+font-size: 14px;
+}
+
+.product_infomation .qiehuan-tabcontent .ticket_content .xiaotieshi{border-bottom: 2px solid #e1ddd4;color: #777777;}
+.product_infomation .qiehuan-tabcontent .ticket_content .xiaotieshi .tieshi{
+	background: url(/yihaiyou/image/sailling/icon-xia.png) no-repeat left;
+	background-size: 15px;
+	padding-left: 20px;
+	font-size: 14px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .xiaotieshi .youwanshijian,.youwanshichang{padding-top: 5px;padding-left: 20px;font-size:1.2rem;margin-bottom: 20px;}
+
+
+/*.product_infomation .qiehuan-tabcontent .ticket_content .jingdianintruo{border: 1px solid red;}*/
+/*.product_infomation .qiehuan-tabcontent .ticket_content .jingdianintruo p{*/
+	/*margin-top: 10px;*/
+	/*padding-left: 20px;*/
+	/*font-size: 14px;*/
+	/*color: #777777;*/
+	/*}*/
+.product_infomation .qiehuan-tabcontent .ticket_content .jingdianintruo .jdjieshao{
+	height: 20px;
+	background: url(/yihaiyou/image/sailling/icon-jing.png) no-repeat left;
+	background-size: 15px;
+	margin-top: 10px;
+	padding-left: 20px;
+	font-size: 14px;
+	color: #777777;
+	}
+.product_infomation .qiehuan-tabcontent .ticket_content .jingdianintruo .jdjs-content{padding-left: 20px;padding-right: 20px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .jingdianintruo .jdjs-content .jdimg{height: 170px;
+	width: 100%;
+	padding: 10px 0px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .jingdianintruo .jdjs-content .jdimg img{height: 100%;width: 100%}
+
+/*评价内容            */
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content{
+	padding-left: 10px;
+	padding-right: 10px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .pigjiatop{	border-bottom: 1px solid #dbdbdb;}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .pingjia{
+	color: black;
+	font-size: 16px;
+	height:40px;
+	line-height: 40px;
+	/*background: url(/yihaiyou/image/ico/0xing.png) no-repeat right;*/
+	width: 85%;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .star_0{
+	background: url(/yihaiyou/image/personal/icon-star0.png) no-repeat right;
+	background-size: 90px;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .star_1{
+	background: url(/yihaiyou/image/personal/icon-star1.png) no-repeat right;
+	background-size: 90px;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .star_2{
+	background: url(/yihaiyou/image/personal/icon-star2.png) no-repeat right;
+	background-size: 90px;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .star_3{
+	background: url(/yihaiyou/image/personal/icon-star3.png) no-repeat right;
+	background-size: 90px;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .star_4{
+	background: url(/yihaiyou/image/personal/icon-star4.png) no-repeat right;
+	background-size: 90px;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .star_5{
+	background: url(/yihaiyou/image/personal/icon-star5.png) no-repeat right;
+	background-size: 90px;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .pigjiatop{position: relative;}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .pingfen{
+	position: absolute;
+	right: 0;
+	top: 11px;
+	color: #f9a601;
+	font-size: 13px;
+}
+
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo{
+	border-bottom: 1px solid #dbdbdb;
+	width: 100%;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .username{
+	color: #8c8c8c;
+	height: 20px;
+	line-height: 20px;
+	font-size: 1.2rem;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .xingjidate{
+	padding-left: 100px;
+	margin-bottom: 10px;
+	background: url(/yihaiyou/image/ico/0xing.png) no-repeat left;
+	background-size: 85px;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .xing0{
+	background: url(/yihaiyou/image/ico/0xing.png) no-repeat left;
+	background-size: 85px;
+	font-size: 1.2rem;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .xing1{
+	background: url(/yihaiyou/image/ico/1xing.png) no-repeat left;
+	background-size: 85px;
+	font-size: 1.2rem;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .xing2{
+	background: url(/yihaiyou/image/ico/2xing.png) no-repeat left;
+	background-size: 85px;
+	font-size: 1.2rem;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .xing3{
+	background: url(/yihaiyou/image/ico/3xing.png) no-repeat left;
+	background-size: 85px;
+	font-size: 1.2rem;
+}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .xing4{
+	 background: url(/yihaiyou/image/ico/4xing.png) no-repeat left;
+	 background-size: 85px;
+	font-size: 1.2rem;
+ }
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .xing5{
+	background: url(/yihaiyou/image/ico/5xing.png) no-repeat left;
+	background-size: 85px;
+	font-size: 1.2rem;
+}
+
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .recommend {
+	padding: 0 8px;
+	background-color: #f7f7f6;
+}
+
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .recommend h3 {
+	color: #4f4f4f;
+	border-bottom: 1px solid #e0e0e0;
+	line-height: 34px;
+	font-size: 1.2rem;
+}
+
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .recommend p {
+	color: #ff9900;
+	line-height: 20px;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+	font-size: 1.2rem;
+}
+
+
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .pignlunwenzi{width: 100%;color: black;font-size: 14px;}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .pinglunimg{height: 50px;  width: 100%;}
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .pinglunimg img{width:100%;height:100%;}
+
+.product_infomation .qiehuan-tabcontent .ticket_content .pingjia-content .neironginfo .chuhaimingzi{height:40px;line-height: 40px;font-size: 16px;color:#666666;}
+
+
+/*热门推荐*/
+.product_infomation .rementuijian{
+margin-top: 10px;
+}
+.product_infomation .rementuijian .rementitle{
+	font-size: 14px;
+	border-bottom: 1px solid #eaeaea;
+	padding-bottom: 5px;
+	padding-top: 10px;
+	height: 30px;
+	line-height: 5px;
+
+}
+.product_infomation .rementuijian .clear{
+	clear:both
+}
+.product_infomation .rementuijian .boatpic{
+	width: 33%;
+	height: 93px;
+	float: left;
+	position: relative;
+}
+.product_infomation .rementuijian .boatinfo{
+	height: 93px;
+	padding-left: 10px;
+	width: 66%;
+	float: right;
+	position: relative;
+}
+.product_infomation .rementuijian .boatinfo .boatinfotitle{
+	font-size: 16px;
+	height: 25px;
+	line-height: 25px;
+	color:black;
+}
+.product_infomation .rementuijian .boatinfo .price-pingfen{
+	padding-top: 20px;
+	bottom: 0;
+	color: #b0b0b0;
+	width: 100%;
+	font-size: 1.2em;
+}
+
+
+.product_infomation .rementuijian .boatinfo .yudingrenshu{
+	color: #b0b0b0;
+	font-size: 14px;
+}
+.product_infomation .rementuijian .boatinfo .price-pingfen .danjia{
+	color: #ff8501;
+
+}
+.product_infomation .rementuijian .boatinfo .price-pingfen .danjia .rmbprice{
+	font-size: 20px;
+	font-weight: bold;
+}
+/*查看更多*/
+.product_infomation .reviewmore{
+	color:#ff9900;
+	text-align: center;
+	font-size: 15px;
+	height: 30px;
+	line-height: 30px;
+	background-size: 16px 12px;
+	background-position: 196px;
+
+}
+.product_infomation .kongzhigaodu{height: 318px;overflow:hidden;}
+.product_infomation .huifugaodu{height: auto;}
+.product_infomation .pic-roate{   transform: rotate(180deg);  }
+.jdjsneirong{font-size:1.2rem;}
+
+.product_infomation .xiangceshuliang{ border-radius: 10px;background-color: black;width: 30px;  height: 18px;  z-index: 998;color: white;  left: 15px;  bottom: 20px;position: relative;text-align: center;opacity: 0.7; font-size: 1.4em}
+
+.product_infomation .no-ticket-bar {
+	height:120px;
+	padding:25px 0;
+}
+
+.product_infomation .no-ticket-bar img {
+	margin:auto;
+	height:45px;
+	display: block;
+}
+
+.product_infomation .no-ticket-bar p {
+	color:#999;
+	text-align:center;
+}
+

@@ -1,0 +1,318 @@
+﻿
+/*销售收银首页*/
+.inventory{ 
+    background:none  scroll 0 0 #ffffff; font: 12px/1.5 tahoma,arial,宋体; color:#303030;
+}
+
+/*头部栏目*/
+.inventory .topbar {
+    height:44px;  background:none scroll 0 0 rgba(250,250,250,1); position:relative;
+}
+.inventory .topbar .left {
+    float:left;
+}
+.inventory .topbar .right {
+     float:right;
+}
+.inventory .topbar ul li {
+    float:left;  line-height:43px; position:relative; 
+}
+
+.inventory .topbar ul li button.btn01{ 
+    position:absolute; top:9px; right:1px; border-radius:0 3px 3px 0;
+}
+.inventory .topbar ul li button.btn02{ 
+    position:absolute; top:13px; right:4px;
+}
+.inventory .topbar ul li input.txt01{
+    width:198px;
+}
+.inventory .topbar ul li input.txt02{
+    width:116px; 
+}
+.inventory .topbar ul li input.txt03{
+    width:84px; border-radius:0;
+}
+.inventory .topbar ul li.name {
+    font-size:14px; font-weight:bold;
+}
+.inventory .topbar ul li.time {
+    font-size:14px; font-weight:bold;
+}
+.inventory .topbar .ui-select02{
+    width:98px;
+}
+
+
+/*头部弹窗*/
+.inventory .topbar ul li.popup{ 
+    position:absolute; left:41px; top:34px; z-index:9999; line-height:25px;
+}
+.inventory .topbar ul li.popup table{
+    background:none scroll 0 0 #ffffff; border:1px solid #bdbdbd; border-collapse:collapse; width:100%;  font-size:14px;
+}
+.inventory .topbar ul li.popup tr{
+    border:0; background:none scroll 0 0 #ffffff;
+}
+.inventory .topbar ul li.popup tr.subbg{
+    background:none scroll 0 0 #eeeeee;
+}
+.inventory .topbar ul li.popup tr:hover {
+    background:none scroll 0 0 #e2f2fd;
+}
+.inventory .topbar ul li.popup th{
+    height:30px; text-align:center; border:0; border-right:1px solid #0696da;  box-shadow:1px 0px 1px rgba(255,255,255,1) inset; background:none scroll 0 0 #0696da; color:#ffffff; 
+}
+.inventory .topbar ul li.popup td{
+    border:0; border-right:1px solid #bdbdbd; text-align:center;  box-shadow:1px 0px 1px rgba(255,255,255,1) inset; 
+}
+.inventory .topbar ul li.popup th.column01{
+    width:25px;
+}
+.inventory .topbar ul li.popup th.column02{
+    width:180px;
+}
+.inventory .topbar ul li.popup th.column03{
+    width:160px;
+}
+.inventory .topbar ul li.popup th.column04{
+    width:100px;
+}
+.inventory .topbar ul li.popup dt{
+    padding:5px 10px 0;
+}
+.inventory .topbar ul li.popup dt span{
+    position:relative; top:2px; left:-4px;
+}
+.inventory .topbar ul li.popup dd{
+    padding:10px;
+}
+.inventory .topbar ul li.popup dd span{
+    position:relative; top:1px; left:-3px;
+}
+
+/*底部栏目*/
+.inventory .footerbar {
+    border:1px solid #fefefe; background:none scroll 0 0 rgba(250,250,250,1); overflow:hidden; font-size:14px;   
+}
+.inventory .footerbar .tag{ 
+    float:left; background:none scroll 0 0 #54a6e0; border:1px solid #2479ba; border-bottom:1px solid #cfd7dc; border-radius:3px;  box-shadow:0px 2px 3px rgba(21,21,21,0.2) inset;  display:block; position:relative; 
+}
+.inventory .footerbar .textlist{
+     clear:both; 
+}
+.inventory .footerbar textarea{
+    width:240px; height:106px; 
+}
+.inventory .footerbar h6 ,.inventory .footerbar h4{
+    font-weight: normal;
+}
+.inventory .footerbar button{
+    cursor:pointer;
+}
+.inventory .footerbar .checkout{
+    height:55px;  
+}
+
+.inventory .footerbar .checkout button{
+    width:165px; height:55px; font-size:30px; font-family:微软雅黑; border-radius:6px;
+}
+
+.inventory .footerbar .notebar{ 
+    float:left;
+}
+
+.inventory .footerbar .notebar ul li{
+    display:block;
+}
+.inventory .footerbar .notebar ul li .icon{
+    width:56px; position:absolute;  left:-1px; top:-3px; 
+}
+.inventory .footerbar .notebar .ui-textarea01{
+    height:90px;
+}
+
+
+.inventory .footerbar .totalbar{ 
+    float:left;
+}
+.inventory .footerbar .totalbar ul{
+    border:0;  min-width:188px;
+}
+.inventory .footerbar .totalbar ul li{
+    display:block; 
+}
+.inventory .footerbar .totalbar ul li span{
+    position:relative; top:3px;
+}
+.inventory .footerbar .totalbar ul li span.num {
+
+}
+.inventory .footerbar .totalbar ul li span.sum {
+
+}
+
+
+
+.inventory .footerbar .discountbar{ 
+    float:left;
+}
+.inventory .footerbar .discountbar ul{ 
+    min-width:160px;
+}
+.inventory .footerbar .discountbar ul li{
+    display:block;
+}
+.inventory .footerbar .discountbar ul li span{
+    position:relative;
+}
+.inventory .footerbar .discountbar ul li .icon{
+    width:56px; position:absolute;  left:-1px; top:-3px; 
+}
+
+
+.inventory .footerbar .checkoutbar{ 
+    float:right;
+}
+.inventory .footerbar .checkoutbar ul{
+    min-width:165px;
+}
+
+.inventory .footerbar .checkoutbar ul li{
+    position:relative;
+}
+.inventory .footerbar .checkoutbar ul li p.g-pt5{
+    padding-top:3px;
+}
+
+
+
+/*销售历史底部*/
+.inventory .footer-bg{
+    background: -webkit-linear-gradient(top,#eaeef1,#fefefe);
+}
+.inventory .footerbar .historyBar {
+    height:35px; line-height:35px; overflow:hidden; font-size:14px;
+}
+.inventory .footerbar .historyBar ul li{
+    float:left;
+}
+.inventory .footerbar .historyBar ul li.right{
+    float:right;
+}
+.inventory .bottomBar {
+     clear:both; height:30px; line-height:30px; overflow:hidden; font-size:14px; border-top:1px solid #d3d3d3; text-align:right; color:#707070;
+}
+
+/* 快速新增商品 */
+.inventory .quickaddgood td{ padding:3px 5px;}
+
+.inventory .g-inventory-f{
+    padding:15px 19px 15px 19px;
+}
+/*导入盘点数据 */
+.inventory .topbar ul li.import-prompt i{
+    position:relative; left:0px; top:3px;
+}
+.inventory .importbar{
+    background:none scroll 0 0 #fafafa; height:428px;
+}
+.inventory .importbar .imporbar-top{
+    width:739px; height:32px; background:url(../images/home.png) no-repeat scroll 0px -547px transparent; margin:0px auto;
+}
+.inventory .importbar .imporbar-top ul li{
+    float:left; font-size:14px; text-align:center; line-height:32px;
+}
+.inventory .importbar .imporbar-top ul li.stepOne{
+    width:217px; height:32px; background:url(../images/home.png) no-repeat scroll 0px -579px; color:#ffffff;
+}
+.inventory .importbar .imporbar-top ul li.stepTwo{
+    width:217px; height:32px; background:url(../images/home.png) no-repeat scroll -224px -579px; color:#ffffff; margin-left:-14px;
+}
+.inventory .importbar .imporbar-top ul li.uncheck{
+    background:none; color:#303030;
+}
+.inventory .importbar .imporbar-main{
+    padding-top:50px;
+}
+.inventory .importbar .imporbar-main ul{
+    width:616px; height:273px; background:none scroll 0 0 #fcfcfc; border-radius:3px; border:1px solid #c8c8c8; padding:20px 10px 0; margin:0px auto; position:relative;
+}
+.inventory .importbar .imporbar-main ul li{
+    line-height:150%; overflow:hidden;
+}
+.inventory .importbar .imporbar-main ul li p{
+    float:left;
+}
+.inventory .importbar .imporbar-main ul li i{
+    position:relative; top:2px; float:left;
+}
+.inventory .importbar .imporbar-main ul li.imporExcel{
+    text-align:center; margin-top:50px; 
+}
+.inventory .importbar .imporbar-main ul li.imporExcel button.ui-btn05{
+    width:240px; height:60px; padding:0; position:relative;
+}
+.inventory .importbar .imporbar-main ul li.imporExcel button i{
+    position:absolute; top:12px; left:30px;
+}
+.inventory .importbar .imporbar-main ul li.imporFoot{
+    position:absolute; bottom:0; width:596px; border-top:1px solid #c8c8c8; padding:0px 10px;
+}
+.inventory .importbar .imporbar-main ul li.imporFoot button.ui-btn05{
+    width:100px; height:30px; padding:0;
+}
+.inventory .importbar .imporbar-main ul li.imporFoot button.ui-btn13{
+    width:100px; height:30px; padding:0;
+}
+
+.inventory .importbar .imporbar-main ul li.imporFoot span{
+    display:block; padding:10px 0;
+}
+.inventory .importbar .imporbar-main ul li.imporFoot span.previous {
+    float:left; 
+}
+.inventory .importbar .imporbar-main ul li.imporFoot span.next{
+    float:right; line-height:50px;
+}
+.inventory .importbar .imporbar-main ul li.imporPath{
+    text-align:center; margin-top:85px; 
+}
+.inventory .importbar .imporbar-main ul li.imporPath button.ui-btn05{
+    width:86px; height:30px; padding:0;
+}
+.inventory .importbar .imporbar-main ul li.imporPath input.ui-txt02{
+    width:444px; height:27px; padding:0;
+}
+.inventory .importbar .imporbar-main ul li.imporLoad{
+    text-align:center; margin-top:75px; 
+}
+.inventory .importbar .imporbar-main ul li.imporLoad dt{
+    
+}
+.inventory .importbar .imporbar-main ul li.imporLoad dd{
+    width:455px; height:12px; background:url(../images/home.png) no-repeat scroll -174px -507px transparent; margin-left:auto; margin-right:auto; padding:4px 3px 3px 3px;
+}
+.inventory .importbar .imporbar-main ul li.imporLoad dd span{
+    height:12px; background:url(../images/importLoadingImg.png) no-repeat; display:block;
+
+}
+.inventory .importbar .imporbar-main ul li.imporError{
+    text-align:center; margin-top:30px; 
+}
+.inventory .importbar .imporbar-main ul li.imporError dt button.ui-btn05{
+    width:86px; height:30px; padding:0;
+}
+.inventory .importbar .imporbar-main ul li.imporError dt input.ui-txt02{
+    width:444px; height:27px; padding:0;
+}
+.inventory .importbar .imporbar-main ul li.imporError dd label.ui-txt02{
+    width:434px; height:76px; background-color:#fafafa;  display:block; float:left; margin-left:40px; text-align:left; line-height:18px; letter-spacing:1px;
+}
+.inventory .importbar .imporbar-main ul li.imporError dd label.ui-txt02 em{
+    display:block; float:left;
+}
+.inventory .importbar .imporbar-main ul li.imporError dd button.ui-btn05{
+    width:86px; height:88px; position:relative; left:-17px;
+}
+

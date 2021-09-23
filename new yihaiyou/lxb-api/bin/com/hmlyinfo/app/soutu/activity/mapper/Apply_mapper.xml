@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.activity.mapper.ApplyMapper">
+	<insert id="insert" parameterType="Apply">
+		insert into tb_apply
+			(
+				id,
+				user_id,
+				email,
+				phone,
+				address,
+				create_time,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{userId},
+				#{email},
+				#{phone},
+				#{address},
+				#{createTime},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="Apply">
+		update tb_apply
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="email != null and '' != email"> email = #{email},</if>
+			<if test="phone != null and '' != phone"> phone = #{phone},</if>
+			<if test="address != null and '' != address"> address = #{address},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="Apply">
+		delete from
+			tb_apply
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="Apply">
+		select
+			*
+		from
+			tb_apply
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="Apply">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_apply
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="email != null and '' != email"> and email = #{email} </if>
+			<if test="phone != null and '' != phone"> and phone = #{phone} </if>
+			<if test="address != null and '' != address"> and address = #{address} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+</mapper>

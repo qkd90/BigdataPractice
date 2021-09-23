@@ -1,0 +1,49 @@
+<div ng-controller="paymentCtrl" class="payment_do">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback"></a></li>
+            <li class="pull-right"></li>
+            <!--<img style="width:40px;height:40px;margin:5px 10px 0 0" src="/lxb/images/index.png" ng-click="homePage()">-->
+        </ul>
+    </div>
+    <div id="yjcontainer" class="clearfix">
+        <div class="payment clearfix">
+            <h4 class="text-center" style="margin-top: 10px;font-size:16px" ng-if="order.orderStatus == 'WAIT'">请在半小时内完成支付，否则系统将取消本次订单</h4>
+            <h3>在线支付：￥{{order.price}}</h3>
+            <ul>
+                <li><img src="images/ico/icon-weixin.png" style="
+    display: block;
+    width: 50px;
+    float: left;
+"> <span class="wx pull-left">微信支付</span><label class="radio-inline pull-right">
+                    <input type="radio" name="pay" id="wx" value="1" payselect checked style="line-height: 50px;">
+                </label></li>
+                <li ng-if="iftaobao">
+                    <img src="images/ico/pay-zfb.png" style="
+    display: block;
+    width: 50px;
+    float: left;
+">
+                    <span class="alipay pull-left">支付宝支付</span><label class="radio-inline pull-right">
+                    <input type="radio" name="pay" id="zfb" value="2" payselect style="line-height: 50px;">
+                </label></li>
+            </ul>
+            <div ng-if="order.orderStatus != 'WAIT' && order.type == 'line'" style="margin-top: 70px;">
+                <h4 class="text-left" style="margin-top: 10px;font-weight: normal;font-size: 14px;color: #999;">订单生成中，客服尽快为您查询，给您反馈。如有疑问，请致电400-0131-770咨询。</h4>
+            </div>
+        </div>
+    </div>
+    <div class="mybottom text-center col-xs-12 orderpay">
+        <a class="totalprice  col-xs-6" style="text-align: center;" ng-click="orderDetail()">查看订单</a>
+        <a class="col-xs-6" ng-if="order.orderStatus == 'WAIT'" ng-click="pay()">立即支付</a>
+        <a class="col-xs-6" ng-if="order.orderStatus != 'WAIT'" style="background-color: #BEBEBE;">立即支付</a></div>
+    <!--<script>
+        $(document).ready(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_flat-green',
+                radioClass: 'iradio_flat-green',
+                increaseArea: '20%' // optional
+            });
+        });
+    </script>-->
+</div>

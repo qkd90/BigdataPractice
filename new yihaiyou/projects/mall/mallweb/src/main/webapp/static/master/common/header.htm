@@ -1,0 +1,79 @@
+<div class="header">
+    <div class="head-panel">
+        <div class="logo" >
+            <img src="/fav.ico">
+        </div>
+        <div class="index-city-panel">
+            <div class="city_selector">厦门市</div>
+            <div class="city-panel">
+                <div class="hot-city">
+                    <div class="hot-city-title">热门出发城市</div>
+                    <div class="hot-city-list-wrap">
+                        <ul>
+                            <li>厦门</li>
+                            <li>厦门</li>
+                            <li>厦门</li>
+                            <li>厦门</li>
+                            <li>厦门</li>
+                            <li>厦门</li>
+                            <li>厦门</li>
+                            <li>厦门</li>
+                            <li>厦门</li>
+                            <li>厦门</li>
+                            <li>厦门</li>
+                            <li>厦门</li>
+                            <li>厦门</li>
+                            <li>厦门</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="all-city">
+                    <div class="searcher">
+                        <span>输入出发城市</span>
+                        <input type="text"/>
+                    </div>
+                    <div class="city-list-wrap">
+                        <div class="city-nav">
+                            <ul>
+                                <#list areaList as areaSubList>
+                                    <li><#list areaSubList as area>${area.index}</#list></li>
+                                </#list>
+
+                            </ul>
+                        </div>
+                        <div class="city-list-panel-wrap">
+                            <#list areaList as areaSubList>
+                                <div class="city-list-panel">
+                                    <ul>
+                                        <#list areaSubList as area>
+                                            <li>
+                                                <span>${area.index}</span>
+                                    <span>
+                                        <#list area.list as city>
+                                            <span>${city.name}</span>
+                                        </#list>
+                                    </span>
+                                            </li>
+                                        </#list>
+                                    </ul>
+                                </div>
+                            </#list>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="searcher">
+
+        </div>
+    </div>
+
+    <div class="nav">
+        <ul class="nav-list clearfix">
+            <li class="nav-item">首页</li>
+            <li class="nav-item">旅游路线</li>
+            <li class="nav-item">景点门票</li>
+            <li class="nav-item">供应商</li>
+        </ul>
+    </div>
+</div>

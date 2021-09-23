@@ -1,0 +1,26 @@
+<div ng-controller="ferryDoRealnameCtrl" class="ferryRealname">
+    <div class="header">
+        <a href="javascript:history.back();"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        填写用户实名信息
+        <span class="save pic2 pic2_1" ui-sref="personalIndex"></span>
+        <span class="save pic2  pic3"></span>
+    </div>
+    <div class="blank"></div>
+    <div class="ticketAttention">因为轮渡购票需要实名，请填写相关实名信息。若您已有轮渡账号请点此登录</div>
+    <div class="form-group clearfix" style="margin-top: 10px;border-top:1px solid #ddd">
+        <label>姓<i>空</i>名：</label><input type="text" class="form-control" ng-model="member.trueName" placeholder="请输入姓名"/>
+    </div>
+    <div class="form-group clearfix">
+        <label>身份证：</label><input type="text" class="form-control" ng-model="member.idnumber" placeholder="请输入身份证号"/>
+    </div>
+    <div class="form-group clearfix">
+        <label>手机号：</label><input type="text" class="form-control" ng-model="member.mobile" placeholder="请输入手机号"/>
+    </div>
+    <!--<div class="form-group clearfix">
+        <label>银行卡：</label><input type="text" class="form-control" ng-model="member.bankNo" placeholder="请输入银行卡号"/>
+    </div>-->
+    <div class="form-group clearfix" style="border-bottom:1px solid #ddd">
+        <label>邮<i>空</i>箱：</label><input type="text" class="form-control" ng-model="" placeholder="请输入邮箱"/>
+    </div>
+    <button type="submit" class="btn col-xs-12 subbtn" ng-click="submitReal(true)">验证</button>
+</div>

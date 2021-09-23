@@ -1,0 +1,1711 @@
+html{background-color:#f5f5f5;}
+/*个人中心首页*/
+.personal_index, .personal_myMessage, .personal_changeName, .personal_myOrder, .personal_myWallet, .personal_cruiseDetail, .personal_mySelection {
+	background-color: #f0f0f0;
+	margin-top:45px;
+}
+
+.personal_index .person_facebox {
+	width: 100%;
+	height: 176px;
+	background-color:#1476e1;
+	background-size: 100% 100%;
+	padding-top: 1px;
+	margin-top:45px;
+}
+
+.personal_index .person_name {
+	margin: 38px auto;
+	min-width: 100px;
+	height: 120px;
+	max-width:150px;
+}
+
+.personal_index .person_name a {
+	display: block;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.personal_index .person_facebox .person_name .face {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	margin: auto;
+}
+
+.personal_index .person_facebox .person_name .face img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.personal_index .person_facebox .person_name p {
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	margin-top: 7px;
+	font-weight:600;
+	letter-spacing: 2px;
+}
+
+.personal_index .person_facebox .person_name p img {
+	width: 16px;
+	height: 13px;
+	margin: 0 0 -3px 3px;
+}
+
+.personal_index .person_messlist {
+	padding: 0 15px;
+	background-color: #fff;
+}
+
+.personal_index .person_messlist ul li {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #f5f5f5;
+	line-height: 50px;
+	color: #000;
+	text-indent: 12px;
+	font-size:14px;
+	background:url(/yihaiyou/image/personal/open_right.png) no-repeat right center;
+	background-size:8px 12px;
+}
+
+.personal_index .person_messlist ul li a {
+	display: block;
+	color: #333;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	background:url(/yihaiyou/image/personal/open_right.png) no-repeat right center;
+	background-size:8px;
+}
+
+.personal_index .person_messlist ul li a.isReal {
+	background:none;
+}
+
+.personal_index .person_messlist ul li img {
+	width: 8px;
+	height: 12px;
+	float: right;
+	margin: 15px 0 0 0;
+}
+
+/*.personal_index .person_messlist ul li:nth-child(1) {*/
+	/*background: url(/yihaiyou/image/personal/icon-order.png) no-repeat left center;*/
+	/*background-size: 27px 27px;*/
+/*}*/
+
+/*.personal_index .person_messlist ul li:nth-child(2) {*/
+	/*background: url(/yihaiyou/image/personal/icon-wallet.png) no-repeat left center;*/
+	/*background-size: 27px 27px;*/
+/*}*/
+
+/*.personal_index .person_messlist ul li:nth-child(3) {*/
+	/*background: url(/yihaiyou/image/personal/icon-collection.png) no-repeat left center;*/
+	/*background-size: 27px 27px;*/
+/*}*/
+
+/*.personal_index .person_messlist ul li:nth-child(4) {*/
+	/*background: url(/yihaiyou/image/personal/icon-evaluation.png) no-repeat left center;*/
+	/*background-size: 27px 27px;*/
+/*}*/
+
+/*.personal_index .person_messlist ul li:nth-child(5) {*/
+	/*background: url(/yihaiyou/image/personal/icon-common.png) no-repeat left center;*/
+	/*background-size: 27px 27px;*/
+/*}*/
+/*.personal_index .person_messlist ul li:nth-child(6) {*/
+	/*background: url(/yihaiyou/image/personal/remove.png) no-repeat left center;*/
+	/*background-size: 27px 27px;*/
+/*}*/
+/*我的信息*/
+.personal_myMessage .person_messlist ul li {
+	text-indent: 5px !important;
+	background:none!important;
+}
+
+.personal_myMessage .person_messlist ul li i {
+	padding: 0 1em;
+}
+
+.personal_myMessage .person_messlist ul li span.phone {
+	padding: 0 0.5em
+}
+
+.personal_myMessage .person_messlist ul li span.containx {
+	padding: 0 20px 0 35px;
+	float:right;
+	color:#999;
+}
+
+.personal_myMessage .logout {
+	width: 80%;
+	height: 40px;
+	background-color: #ff9a14;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	line-height: 40px;
+	border-top:none;
+	margin:30px 10% 10px 10%;
+}
+
+.personal_myMessage .changemale {
+	position: fixed;
+	width: 220px;
+	height: 100px;
+	background-color: #f5f5f5;
+	z-index: 11;
+	box-shadow: 0 0 35px #2a8ffa
+}
+
+.personal_myMessage .changemale p {
+	line-height: 45px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.personal_myMessage .changemale span input {
+	margin-right: 10px;
+}
+
+.personal_myMessage .shadow {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 10;
+}
+/*修改昵称，邮箱，手机�*/
+.personal_changeName .newname{width: 100%;height: 40px;line-height: 40px;background-color: #fff;margin-top: 15px;font-size: 14px;color: #333;text-indent: 15px;letter-spacing: 1px;border: none;outline: none;}
+.personal_changeName .attention{padding:0 15px;line-height:40px;color:#999;font-size:1.2rem;}
+.personal_changeName .savechange{width:calc(100% - 30px);height:40px;line-height:40px;text-align: center;background-color:#ff9a14;color:#fff;margin:auto;font-size:17px;}
+.personal_changePassword .savechange{margin-top:40px;}
+.personal_changePassword .sexSelBox{padding:0 15px;background-color:#fff;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;margin-top:60px;}
+.personal_changePassword .sexSelBox p{line-height:40px;font-size:17px;font-family: '苹方';}
+.personal_changePassword .sexSelBox p:nth-child(1){border-bottom:1px solid #e0e0e0;}
+.personal_changePassword .sexSelBox .selSex{background:url(/yihaiyou/image/personal/icon-zxc.png) no-repeat right center;background-size:20px;}
+/*修改密码*/
+.personal_changePassword .opar_password {;
+	background-color: #fff;
+	margin-top: 15px;
+	padding: 0 15px 15px 15px;
+}
+
+.personal_changePassword .opar_password ul li {
+	border-bottom: 1px solid #f5f5f5;
+	letter-spacing: 1px;
+}
+
+.personal_changePassword .opar_password label {
+	font-size: 14px;
+	color: #333;
+	line-height: 40px;
+}
+
+.personal_changePassword .opar_password .newpassword {
+	float: right;
+	height: 40px;
+	line-height: 40px;
+	color: #aaa;
+	font-size: 13px;
+	border: none;
+	outline: none;
+	text-align: right;
+}
+/*我的订单*/
+/*景点门票*/
+.personal_myOrder .selbar {
+	background-color: #fff;
+	width:100%;
+	box-shadow: 0 1px 1px #e0e0e0;
+	position:fixed;
+	left:0;
+	top:45px;
+	z-index: 11;
+}
+
+.personal_myOrder .selbar ul li {
+	width: calc(50% - 1px);
+	height: 45px;
+	line-height: 45px;
+	color: #7e7e7e;
+	font-size: 14px;
+	border-bottom: 1px solid #ececec;
+	float: left;
+	text-align: center;
+}
+.personal_myOrder .selbar ul li.now{
+	color:#ee810b;
+	border-bottom:2px solid #ee810b;
+}
+.personal_myOrder .selbar ul li img {
+	width: 10px;
+	height: 8px;
+	margin: 0 0 0 5px;
+}
+
+.personal_myOrder .selbar ul li:nth-child(1) {
+	border-right: 1px solid #ececec;
+}
+
+.personal_myOrder .sellist {
+	position: absolute;
+	left: 0;
+	top: 45px;
+	background-color: #fff;
+	width: 100%;
+	z-index: 11;
+	padding:0 15px;
+}
+
+.personal_myOrder .sellist ul li {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	color: #7e7e7e;
+	border-bottom: 1px solid #ececec;
+	background:url(/yihaiyou/image/Tright_gray.png) no-repeat right center;
+	background-size:17px;
+}
+.personal_myOrder .sellist ul li img{
+	width:27px;
+	height:27px;
+	margin-right:10px;
+}
+.personal_myOrder .sellist ul li span.selLogo{
+	display:block;
+	width:27px;
+	height:27px;
+	margin:11px 10px 0 0;
+	float:left;
+	border-radius:50%;
+}
+
+.personalRecord .recordeUl .selLogo {
+	background:red;
+	border-radius:50%;
+}
+.personal_myOrder .sellistall ul li{
+	width:auto;
+	float:left;
+	text-indent:0;
+	text-align:center;
+	background:none;
+}
+.personal_myOrder .sellistall ul li span{
+	padding:3px 5px;
+	border:1px solid #e0e0e0;
+	margin-right:15px;
+	border-radius:3px;
+}
+.personal_myOrder .scenic .orderdetail {
+	background-color: #fff;
+	margin-top: 10px;
+}
+.personal_myOrder section.scenic{
+	margin-top:35px;
+	position: absolute;
+	width: 100%;
+}
+.personal_myOrder .scenic .orderdetail .ticketmess {
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.personal_myOrder .scenic .orderdetail .ticketmess p {
+	line-height: 30px;
+	padding: 0 15px;
+	font-size:1.2rem;
+}
+
+.personal_myOrder .scenic .orderdetail .ticketmess p:nth-child(1) {
+	font-size: 13px;
+	color: #7e7e7e;
+}
+
+.personal_myOrder .scenic .orderdetail .ticketmess p:nth-child(1) span:nth-child(1) {
+	padding: 0 10px;
+}
+
+.personal_myOrder .scenic .orderdetail .ticketmess p:nth-child(1) span:nth-child(2) {
+	color: #9a9a9a
+}
+
+.personal_myOrder .scenic .orderdetail .ticketmess p:nth-child(1) span:nth-child(3) {
+	float: right;
+	color: #9a9a9a;
+	padding-right: 30px;
+}
+.personal_myOrder .scenic .orderdetail .ticketmess p:nth-child(1) i{
+	display:block;
+	width:20px;
+	height:30px;
+	background: url(/yihaiyou/image/personal/garbage.jpg) no-repeat center center;
+	background-size: 18px 20px;
+	float:right;
+}
+.personal_myOrder .scenic .orderdetail .ticketmess p:nth-child(1) .codeNum{
+	float: right;
+	color: #9a9a9a;
+	padding-right: 10px;
+}
+
+.personal_myOrder .scenic .orderdetail .ticketmess p:nth-child(2) {
+	font-size: 15px;
+	width: 85%;
+}
+
+.personal_myOrder .scenic .orderdetail .ticketmess p:nth-child(3) {
+	font-size: 12px;
+}
+
+.personal_myOrder .scenic .orderdetail .ticketmess p:nth-child(3) span:nth-child(1) {
+	color: #7e7e7e;
+	margin-right: 15px;
+}
+
+.personal_myOrder .scenic .orderdetail .ticketmess p:nth-child(3) span:nth-child(2) {
+	color: #9a9a9a;
+}
+
+.personal_myOrder .scenic .orderdetail .checkorder {
+	padding: 0 15px;
+	line-height: 60px;
+	font-size: 16px;
+	color: #fda372;
+	border-bottom: 1px solid #e0e0e0
+}
+
+.personal_myOrder .scenic .orderdetail .checkorder span {
+	display: block;
+	float: right;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #bbbaba;
+	border-radius: 3px;
+	margin: 15px 0;
+	color: #fff;
+	font-size: 14px;
+}
+
+.personal_myOrder .scenic .orderdetail_secc .ticketmess p:nth-child(1) {
+	background: none;
+	padding: 0 15px 0 15px;
+}
+
+.personal_myOrder .scenic .orderdetail_secc .ticketmess p:nth-child(1) span:nth-child(3) {
+	padding-right: 15px;
+}
+
+.personal_myOrder .scenic .orderdetail_secc .checkorder span {
+	background-color: #ee810b;
+}
+
+.personal_myOrder .shadow {
+	width: 100%;
+	height: calc(100% - 95px);
+	position: fixed;
+	left: 0;
+	top: 95px;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 10;
+}
+
+.stopScroll {
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+.picrotate {
+	transform: rotate(180deg);
+}
+
+/*酒店*/
+.personal_myOrder .hotel .orderdetail .ticketmess p:nth-child(3) {
+	font-size: 12px;
+	color: #323232
+}
+
+.personal_myOrder .hotel .orderdetail .ticketmess p:nth-child(4) {
+	font-size: 12px;
+	color: #9a9a9a;
+}
+
+/*船票*/
+.personal_myOrder .boatticket .orderdetail .ticketmess p:nth-child(3) span {
+	font-size: 12px;
+	color: #9a9a9a;
+	margin-right: 10px;
+}
+/*神舟专车*/
+.personal_myOrder .scenic .orderdetail .shenzhou{border-bottom: 1px solid #e0e0e0;background: url(/yihaiyou/image/personal/open_right.png) no-repeat calc(100% - 18px) center;background-size: 8px;}
+.personal_myOrder .scenic .orderdetail .shenzhou p{line-height: 30px;padding: 0 15px;}
+.personal_myOrder .scenic .orderdetail .shenzhou p:nth-child(1){font-size: 13px;color: #7e7e7e;}
+.personal_myOrder .scenic .orderdetail .shenzhou p:nth-child(1) span:nth-child(1){padding: 0 10px;}
+.personal_myOrder .scenic .orderdetail .shenzhou p:nth-child(1) span:nth-child(2){color: #9a9a9a}
+.personal_myOrder .scenic .orderdetail .shenzhou p:nth-child(1) span:nth-child(4){float: right;color:#9a9a9a;padding-right: 10px;}
+.personal_myOrder .scenic .orderdetail .shenzhou p:nth-child(1) span:nth-child(3){float:right;display:block;width:20px;height:30px;background: url(/yihaiyou/image/garbage.jpg) no-repeat center center;background-size: 18px 20px;}
+.personal_myOrder .scenic .orderdetail .shenzhou p:nth-child(n+2){font-size:13px;color: #7e7e7e;text-indent: 30px;}
+.personal_myOrder .scenic .orderdetail .shenzhou p:nth-child(2){background: url(/yihaiyou/image/icon-clock.png) no-repeat 15px center;background-size: 20px;}
+.personal_myOrder .scenic .orderdetail .shenzhou p:nth-child(3){background: url(/yihaiyou/image/icon-s.png) no-repeat 15px center;background-size: 20px;}
+.personal_myOrder .scenic .orderdetail .shenzhou p:nth-child(4){background: url(/yihaiyou/image/icon-x.png) no-repeat 15px center;background-size: 20px;}
+.personal_myOrder .scenic .orderdetail .shenzhou p:nth-child(5){background: url(/yihaiyou/image/icon-zx.png) no-repeat 15px center;background-size: 20px;}
+.personal_myOrder .scenic .orderdetail .shenzhou p span.finalpay{color: #fda372;font-size: 17px;}
+
+.personal_myOrder_shenzhou{background-color: #f0f0f0;}
+.personal_myOrder_shenzhou .finalpaying{width: 100%;margin-top: 8px;border-top: 2px solid #e0e0e0;margin-top:60px;border-bottom: 2px solid #e0e0e0;text-align: center;background-color: #fff;}
+.personal_myOrder_shenzhou .finalpaying p:nth-child(1){line-height:35px;font-size:16px;margin-top:5px;}
+.personal_myOrder_shenzhou .finalpaying p:nth-child(1) span{font-weight: 600;font-size:18px;}
+.personal_myOrder_shenzhou .finalpaying p:nth-child(2){line-height:34px;font-size:13px;color: #aaa;}
+.personal_myOrder_shenzhou .midmess{width:100%;background-color: #fff;}
+
+.personal_myOrder_shenzhou .midmess.mt60 {
+	margin-top: 60px;
+}
+.personal_myOrder_shenzhou .midmess ul li{width: 100%;text-align:center;}
+.personal_myOrder_shenzhou .midmess ul li:nth-child(1){line-height:40px;font-size: 13px;color: #aaa;}
+.personal_myOrder_shenzhou .midmess ul li:nth-child(2){font-size: 13px;padding: 6px 0;background: url(/yihaiyou/image/vzcv.png) no-repeat center center;background-size: 70px;}
+.personal_myOrder_shenzhou .midmess ul li:nth-child(2) span{width: 28%;display: block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size:15px;line-height: 25px;}
+.personal_myOrder_shenzhou .midmess ul li:nth-child(2) span:nth-child(1){float: left;text-align: right;margin-left: 7%;}
+.personal_myOrder_shenzhou .midmess ul li:nth-child(2) span:nth-child(2){float: right;text-align: left;margin-right:7%;}
+.personal_myOrder_shenzhou .midmess ul li:nth-child(3){height: 40px;line-height:40px;border-top: 2px solid #e0e0e0;border-bottom: 2px solid #e0e0e0;font-size:16px;margin-top:5px;}
+.personal_myOrder_shenzhou .midmess ul li:nth-child(3) div{width: calc(50% - 1px);display: block;float: left;text-align: center;}
+.personal_myOrder_shenzhou .midmess ul li:nth-child(3) div.first{border-right: 2px solid #e0e0e0;}
+.personal_myOrder_shenzhou .midmess ul li:nth-child(3) div span.bold{font-size: 17px;font-weight: 600;}
+.personal_myOrder_shenzhou .drivermess{margin-top:8px;border-top:1px solid #e0e0e0;width: 100%;background-color: #fff;}
+.personal_myOrder_shenzhou .drivermess .left{float: left;width: 30%;height:100px;}
+.personal_myOrder_shenzhou .drivermess .left .face{width: 70px;height: 70px;margin: 25px auto;}
+.personal_myOrder_shenzhou .drivermess .left .face img{width: 100%;height: 100%;border-radius: 50%;}
+.personal_myOrder_shenzhou .drivermess .right{float: left;padding-top: 20px;}
+.personal_myOrder_shenzhou .drivermess .right ul li{width:100%;line-height: 25px;}
+.personal_myOrder_shenzhou .drivermess .right .drivename{color: #aaa;font-size: 16px;}
+.personal_myOrder_shenzhou .drivermess .right .carid{color: #233333;font-size: 17px;}
+
+.personal_myOrder_shenzhou .drivermess .right .dstar span {
+	display: block;
+	width: 45px;
+	height: 20px;
+	background-color: #fda372;
+	line-height: 20px;
+	color: #fff;
+	text-align: right;
+	padding-right: 5px;
+	font-size: 14px;
+	background: #f9cd6a url(/yihaiyou/image/xcvcx.png) no-repeat 5px center;
+	background-size: 14px;
+	border-radius: 3px;
+}
+/*专车订单*/
+.personal_myOrder_shenzhou .commend{width: 100%;background-color: #fff;}
+.personal_myOrder_shenzhou .commend h3{text-align: center;color: #aaa;font-size: 16px;font-weight: 500;}
+.personal_myOrder_shenzhou .commend .starnum{width: 100%;height: 80px;}
+.personal_myOrder_shenzhou .commend .starnum ul{width: 260px;margin: auto;height: 80px;}
+.personal_myOrder_shenzhou .commend .starnum ul li{width: 20%;height: 100%;float: left;}
+.personal_myOrder_shenzhou .commend .starnum.star0{background:url(/yihaiyou/image/icon-star0.png) no-repeat center center;background-size: 260px;}
+.personal_myOrder_shenzhou .commend .starnum.star1{background:url(/yihaiyou/image/icon-star1.png) no-repeat center center;background-size: 260px;}
+.personal_myOrder_shenzhou .commend .starnum.star2{background:url(/yihaiyou/image/icon-star2.png) no-repeat center center;background-size: 260px;}
+.personal_myOrder_shenzhou .commend .starnum.star3{background:url(/yihaiyou/image/icon-star3.png) no-repeat center center;background-size: 260px;}
+.personal_myOrder_shenzhou .commend .starnum.star4{background:url(/yihaiyou/image/icon-star4.png) no-repeat center center;background-size: 260px;}
+.personal_myOrder_shenzhou .commend .starnum.star5{background:url(/yihaiyou/image/icon-star5.png) no-repeat center center;background-size: 260px;}
+.personal_fareDetail{width: 100%;background-color: #f0f0f0;}
+.personal_fareDetail .all_fare{border-bottom:2px dashed #e0e0e0;padding: 10px 0;}
+.personal_fareDetail .all_fare p{line-height: 25px;font-size: 14px;color: #aaa;}
+.personal_fareDetail .all_fare p span,.personal_fareDetail ul li span{float: right;color: #233333;font-weight: 600;}
+.personal_fareDetail .cartype{font-weight: 600;}
+.personal_fareDetail .quan{border-bottom:1px solid #e0e0e0;}
+.personal_fareDetail .final{border:none;}
+.personal_fareDetail ul{border-bottom:2px solid #e0e0e0;background-color: #fff;}
+.personal_fareDetail ul li{margin:0 15px;font-size: 16px;color: #aaa;line-height: 40px;border-bottom:2px dashed #e0e0e0;}
+.personal_myOrder_shenzhou  .cansoledate{width:260px;height:40px;background-color:#ee810b;line-height:40px;text-align:center;font-size:16px;margin:10px auto;color:#fff;}
+
+/*消费记录*/
+.personalRecord{background-color:#f0f0f0;}
+.personalRecord .allrecorde{padding: 0 15px 8px 15px;margin-top:45px;border-top:1px solid #e0e0e0;background-color:#fff;}
+.personalRecord .allrecorde .recordeUl li{height:50px;line-height:50px;border-bottom: 1px solid #e0e0e0;}
+.personalRecord .allrecorde .recordeUl li ul li{float:left;text-align:center;width:100%}
+.personalRecord .allrecorde .recordeUl li ul li p{line-height:16px;}
+.personalRecord .allrecorde .recordeUl li ul li p:nth-child(1){margin-top:8px;}
+.personalRecord .allrecorde .recordeUl li ul li:nth-child(1){font-size:14px;color:#777;}
+.personalRecord .allrecorde .recordeUl li ul li:nth-child(1) p:nth-child(2){font-size:13px;}
+/*.personalRecord .allrecorde .recordeUl li ul li:nth-child(2) img{width:32px;height:32px;}*/
+.personalRecord .allrecorde .recordeUl li ul li.hotel{background: rgb(255,104,103);}
+.personalRecord .allrecorde .recordeUl li ul li.ferry{background: rgb(34,139,248);}
+.personalRecord .allrecorde .recordeUl li ul li.shenzhou{background: rgb(255,157,0);}
+.personalRecord .allrecorde .recordeUl li ul li.cruiseship{background: rgb(6,209,117);}
+.personalRecord .allrecorde .recordeUl li ul li.sailling{background: rgb(30,210,199);}
+.personalRecord .allrecorde .recordeUl li ul li.ticket{background: rgb(255,159,34);}
+.personalRecord .allrecorde .recordeUl li ul li.recharge{background: rgb(112,199,213);}
+.personalRecord .allrecorde .recordeUl li ul li.withdraw{background: rgb(144,193,96);}
+.personalRecord .allrecorde .recordeUl li ul li.plan{background: rgb(254,207,47);}
+.personalRecord .allrecorde .recordeUl li ul li:nth-child(3) p:nth-child(1),.personalRecord .allrecorde .recordeUl li ul li:nth-child(4) p:nth-child(1){font-size:15px;color:#333;font-weight:600;}
+.personalRecord .allrecorde .recordeUl li ul li:nth-child(3) p:nth-child(2),.personalRecord .allrecorde .recordeUl li ul li:nth-child(4) p:nth-child(2){font-size:14px;color:#666;}
+.personalRecord .allrecorde .recordeUl li ul li:nth-child(1){width:18%}
+.personalRecord .allrecorde .recordeUl li ul li:nth-child(2){width:26px;height:26px;margin:12px calc(9% - 13px);line-height: 25px;font-size:25px;color:#fff;border-radius:50%;}
+.personalRecord .allrecorde .recordeUl li ul li:nth-child(3){width:30%}
+.personalRecord .allrecorde .recordeUl li ul li:nth-child(4){width:34%}
+/*我的钱包*/
+
+.personal_myWallet .walletlist {
+	background-color: #fff;
+	margin-top: 15px;
+	border-top:1px solid #e0e0e0;
+	border-bottom:1px solid #e0e0e0;
+}
+
+.personal_myWallet .walletlist ul li {
+	width: 33%;
+	border-bottom: 1px solid #ececec;
+	color: #333;
+	font-size: 14px;
+	float:left;
+	text-align:center;
+}
+.personal_myWallet .walletlist ul li:nth-child(2){
+	width:calc(34% - 2px);
+	border-left:1px solid #e0e0e0;
+	border-right:1px solid #e0e0e0;
+}
+
+.personal_myWallet .walletlist ul li:nth-child(1) span {
+	color: #fe8848
+}
+
+.personal_myWallet .walletlist ul li span.w_span {
+	width: 45px;
+	height: 45px;
+	display:block;
+	border-radius:50%;
+	margin: 10px auto 0 auto;
+}
+
+.personal_myWallet .walletlist ul li span.chargespan {
+	background:rgb(112,199,213);
+}
+
+.personal_myWallet .walletlist ul li span.withdrawspan {
+	background:rgb(144,193,96);
+}
+
+.personal_myWallet .walletlist ul li span.recordspan {
+	background:rgb(254,207,47);
+}
+
+.personal_myWallet .walletlist ul li img {
+	width: 45px;
+	height: 45px;
+	margin: 10px auto 0 auto;
+}
+.personal_myWallet .walletlist ul li p{
+	line-height:45px;
+	color:#5f5f5f;
+}
+.personal_myWallet .person_facebox{
+	width: 100%;
+	height: 176px;
+	background-color: #1476e1;
+	background-size: 100% 100%;
+	padding-top: 1px;
+	margin-top: 45px;
+}
+.personal_myWallet  .person_facebox .person_name{
+	margin: 8px auto 0 auto;
+	min-width: 100%;
+	height: 95px;
+	max-width: 150px;
+}
+.personal_myWallet  .person_facebox .person_name .face{
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	margin: auto;
+	overflow:hidden;
+}
+.personal_myWallet  .person_facebox .person_name .face img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.personal_myWallet .person_facebox .person_name p {
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	margin-top: 7px;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+.personal_myWallet .rechamess{
+	width:100%;
+	margin-top:10px;
+}
+.personal_myWallet .rechamess li{
+	float:left;
+	text-align: center;
+}
+.personal_myWallet .rechamess li:nth-child(1){
+	width:47%
+}
+.personal_myWallet .rechamess li:nth-child(2){
+	color:#fff;
+	font-size:34px;
+	width:calc(6% - 1px);
+}
+.personal_myWallet .rechamess li:nth-child(3){
+	width:47%;
+}
+.personal_myWallet .rechamess li p{
+	color:#fff;
+}
+.personal_myWallet .rechamess li p:nth-child(1){
+	font-size:13px;
+	padding-top:5px;
+	color:#e0e0e0;
+	text-indent:2px;
+}
+.personal_myWallet .rechamess li p:nth-child(1) img{
+	width:17px;
+	height:18px;
+	margin-right:10px;
+	margin-top:-7px;
+}
+.personal_myWallet .rechamess li p:nth-child(2){
+	font-size:16px;
+}
+.personal_myWallet .rechamess li p .money{font-weight:600;}
+.personal_myWallet .payset{
+	padding: 0 15px;
+	color:#4f4f4f;
+	text-indent:30px;
+	background-color:#fff;
+	line-height:50px;
+	height:50px;
+	font-size:14px;
+	border-top:1px solid #e0e0e0;
+	border-bottom:1px solid #e0e0e0;
+	margin-top:10px;
+	background:#fff url(/yihaiyou/image/personal/icon-set.png) no-repeat 15px center;background-size: 20px;
+}
+.personal_myWallet .payset span{
+	display: block;
+	float:right;
+	font-size:13px;
+	color:#aaa;
+	padding-right:15px;
+	background:url(/yihaiyou/image/personal/open_right.png) no-repeat right 47%;background-size: 6px;
+}
+.personal_addTour .seltour{
+	margin:45px 0 0 0;
+
+}
+.personal_addTour .seltour ul li{
+	height:45px!important;
+	line-height:45px !important;
+	font-size:15px!important;
+}
+
+.personal_addTour .seltour ul .false{
+	background: url(/yihaiyou/image/plan/icon-xuan.png) no-repeat right center;
+	background-size: 17px 17px!important;
+}
+.personal_addTour .savechange{
+	width:80%;
+	height:40px;
+	line-height:40px;
+	text-align: center;
+	background-color:#ff9a14;color:#fff;
+	margin:auto;
+	font-size:17px;
+	border-radius:5px;
+	margin:30px 10% 10px 10%;
+}
+.personal_addTour .seltour .deletetour{
+	margin-right:0;
+	float:right
+}
+.personal_addTour .seltour .deletetour img{
+	width:18px;
+	height:19px;
+	margin-top:13px;
+}
+/*船票订单详情*/
+.personal_cruiseDetail .orderDetailTitle {
+	background-color: #fff;
+	padding: 0 15px;
+	margin-top: 15px;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+.personal_cruiseDetail .ticketdetail  p.yi_orange{
+	color:#fe8848;
+}
+
+.personal_cruiseDetail .orderDetailTitle p {
+	line-height: 30px;
+}
+
+.personal_cruiseDetail .orderDetailTitle .linemess {
+	font-size: 12px;
+	color: #ee810b
+}
+
+.personal_cruiseDetail .orderDetailTitle .sta_end {
+	font-size: 15px;
+	color: #111;
+}
+
+.personal_cruiseDetail .orderDetailTitle .tickettime span {
+	margin-right: 10px;
+}
+
+.personal_cruiseDetail .orderDetailTitle .tickettime span:nth-child(1) {
+	font-size: 13px;
+	color: #333
+}
+
+.personal_cruiseDetail .orderDetailTitle .tickettime span:nth-child(2) {
+	font-size: 13px;
+	color: #4f4f4f;
+}
+
+.personal_cruiseDetail .orderDetailTitle .tickettime span:nth-child(3) {
+	font-size: 12px;
+	color: #a7a7a7;
+}
+
+.personal_cruiseDetail .ticketdetail {
+	background-color: #fff;
+	padding: 10px 15px;
+	margin-top: 15px;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.personal_cruiseDetail .ticketdetail h3 {
+	line-height: 30px;
+	font-size: 14px;
+	color: #3f3f3f;
+}
+
+.personal_cruiseDetail .ticketdetail .hostname {
+	font-weight:500;
+	padding-right:10px;
+}
+
+.personal_cruiseDetail .ticketdetail .tick_price .rmb {
+	font-size:1.2rem;
+	color: #fe8848;
+	margin-right:0;
+}
+
+.personal_cruiseDetail .ticketdetail .ferryh {
+	font-size:1.6rem;
+	font-weight:600;
+}
+
+.personal_cruiseDetail .ticketdetail p {
+	line-height: 28px;
+	font-size: 13px;
+	color: #7c7b7b
+}
+
+.personal_cruiseDetail .ticketdetail p span {
+	color: #111;
+	margin-right: 5px;
+}
+
+.personal_cruiseDetail .ticketdetail p span.tick_price {
+	color: #fe8848;
+	font-size:16px;
+}
+
+/*酒店订单详情*/
+.personal_hotelDetail .hoteldetail p {
+	line-height: 20px !important;
+}
+
+.personal_hotelDetail .hotelphone {
+	height: 40px;
+	line-height: 40px;
+	padding: 0 15px;
+	font-size: 13px;
+	font-weight: 600;
+	color: #3f3f3f;
+	background: #fff url(/yihaiyou/image/personal/phone.png) no-repeat calc(100% - 15px) center;
+	background-size: 17px 17px;
+}
+
+.personal_hotelDetail .hotelphone span {
+	color: #999;
+	font-size: 12px;
+	font-weight: 500
+}
+
+.personal_hotelDetail .hotelt {
+	height: 40px;
+	line-height: 40px;
+	font-weight: 600;
+	color: #3f3f3f;
+	font-size: 13px;
+	border-bottom: 1px solid #e0e0e0;
+	margin-top: 15px;
+	background-color: #fff;
+	padding: 0 15px;
+}
+
+.personal_hotelDetail .hotelt span {
+	color: #999;
+	font-size: 12px;
+	font-weight: 500
+}
+
+.personal_hotelDetail .hotelt span.totalDay {
+	float: right;
+	color: #fe8848
+}
+
+.personal_hotelDetail .thetop {
+	margin-top: 0 !important
+}
+
+/*我的收藏*/
+.personal_mySelection .product {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #fff;
+	font-size: 14px;
+}
+
+.personal_mySelection .product img {
+	width: 10px;
+	height: 8px;
+	margin: 0 0 0 5px;
+}
+
+.personal_mySelection .hotlinelist {
+	width: 100%;
+	margin: 0;
+	border-bottom: 5px solid #ededed;
+}
+
+.personal_mySelection .hotlinelist .listone {
+	height: 120px;
+	padding: 8px 0;
+	border-bottom: 1px solid #cfcfcf;
+	border-top: 1px solid #cfcfcf;
+	margin-top: 10px;
+	background-color: #fff;
+	padding: 10px 10px;
+	position: relative;
+	overflow: hidden;
+}
+
+.personal_mySelection .hotlinelist .listone:last-child {
+	/*border-bottom: none;*/
+}
+
+.personal_mySelection .hotlinelist .listone .deletebox {
+	position: absolute;
+	left: 25px;
+	top: 50px;
+	width: 15px;
+	height: 15px;
+}
+
+.personal_mySelection .hotlinelist .listone .fortrue {
+	background: url(/yihaiyou/image/personal/icon-gou.png) no-repeat center center;
+	background-size: cover;
+}
+
+.personal_mySelection .hotlinelist .listone .forfalse {
+	background: url(/yihaiyou/image/personal/icon-dcz.png) no-repeat center center;
+	background-size: cover;
+}
+
+.personal_mySelection .hotlinelist .listone .list_left {
+	width: 33%;
+	height: 100px;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.personal_mySelection .hotlinelist .listone .list_left img {
+	width: 100%;
+	height: 100%;
+}
+
+.personal_mySelection .hotlinelist .listone .list_right {
+	width: calc(66% - 30px);
+	height: 100px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	padding-left:0;
+}
+
+.personal_mySelection .hotlinelist .listone .list_right ul {
+}
+
+.personal_mySelection .hotlinelist .listone .list_right ul li {
+}
+
+.personal_mySelection .hotlinelist .listone .list_right ul li:nth-child(1) {
+	height: 60px;
+	line-height: 18px;
+	color: #6f6f6f;
+	font-weight:500;
+}
+
+.personal_mySelection .hotlinelist .listone .list_right ul li:nth-child(2) {
+	height: 25px;
+	line-height: 25px;
+	color: #ccc
+}
+
+.personal_mySelection .hotlinelist .listone .list_right ul li:nth-child(2) span {
+	color: #fe8800;
+	font-size: 20px;
+	font-weight:600;
+}
+.personal_mySelection .rmb{font-size:12px!important;}
+.personal_mySelection .hotlinelist .listone .list_right ul li:nth-child(3) {
+	height: 15px;
+	width: 70%;
+	float: left;
+	color: #aaa;
+	text-indent: 2em;
+	background: url(/yihaiyou/image/icon-mudi.png) no-repeat left center;
+	background-size: 14px 14px;
+}
+
+.personal_mySelection .hotlinelist .listone .list_right ul li:nth-child(4) {
+	height: 15px;
+	width: 30%;
+	float: right;
+	color: #aaa;
+	text-align: right;
+}
+
+.personal_mySelection .hotlinelist .hotel .list_right ul li:nth-child(1) {
+	font-size: 14px;
+	color: #4f4f4f;
+	height: auto;
+	padding-bottom: 8px
+}
+
+.personal_mySelection .hotlinelist .hotel .list_right ul li:nth-child(2) {
+	line-height: 16px;
+	color: #6f6f6f;
+	height: 32px
+}
+
+.personal_mySelection .hotlinelist .hotel .list_right ul li:nth-child(3) {
+	height: 25px;
+	line-height: 25px;
+	color: #ccc;
+	background: none;
+	text-indent: 0;
+}
+
+.personal_mySelection .hotlinelist .hotel .list_right ul li:nth-child(3) span {
+	color: #fe8800;
+	font-size: 16px;
+}
+
+.personal_mySelection .hotlinelist .hotel .list_right ul li:nth-child(4) {
+	height: 15px;
+	width: 70%;
+	float: left;
+	color: #aaa;
+	text-indent: 0;
+	text-align: left;
+}
+
+.personal_mySelection .hotlinelist .hotel .list_right ul li:nth-child(5) {
+	height: 15px;
+	width: 30%;
+	float: right;
+	color: #aaa;
+	text-align: right;
+}
+
+.personal_mySelection .hotlinelist .scenic .list_right ul li:nth-child(1) {
+	font-size: 15px;
+	color: #666;
+	font-weight:500;
+}
+
+.personal_mySelection .hotlinelist .scenic .list_right ul li:nth-child(3) {
+	background: none;
+	text-indent: 0;
+}
+
+.personal_mySelection .deleout {
+	position:fixed;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:55px;
+	padding:10px 0;
+	background:#f8f8f8;
+	border-top:1px solid #ccc;
+}
+
+.personal_mySelection .deletAll {
+	width: 256px;
+	max-width: 280px;
+	height: 35px;
+	background-color: #ff8700;
+	color: #fff;
+	font-size: 15px;
+	line-height: 35px;
+	text-align: center;
+	margin:auto;
+	border-radius: 5px;
+}
+
+.personal_mySelection .myproductlist {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 90px;
+	background-color: #fff;
+	z-index: 11;
+	border-top: 1px solid #ececec;
+}
+
+.personal_mySelection .myproductlist ul li {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+	border-bottom: 1px solid #ececec;
+}
+
+.personal_mySelection .shadow {
+	width: 100%;
+	height: calc(100% - 90px);
+	position: fixed;
+	left: 0;
+	top: 90px;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 10;
+}
+
+/*我的点评*/
+.personal_myComment .product {
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #fff;
+	font-size: 14px;
+}
+
+.personal_myComment .product .orange_true {
+	color: #ff8700
+}
+
+.personal_myComment .product .orange_false {
+	color: #333
+}
+
+.personal_myComment .product ul li {
+	height: 40px;
+	line-height: 40px;
+	width: 50%;
+	float: left;
+	color: #333;
+}
+
+.personal_myComment .product .sliderbar {
+	width: 50%;
+	height: 3px;
+	background-color: #ff8700;
+	position: absolute;
+	left: 0;
+	top: 40px;
+	z-index: 9;
+}
+
+.personal_myComment .commentList {
+	border-top: 1px solid #ececec;
+}
+
+.personal_myComment .commentList .comlistone {
+	background-color: #fff;
+	margin-top: 10px;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.personal_myComment .commentList .comlistone .list_left {
+	width: 42%;
+	float: left;
+	height: 100px;
+	margin-bottom: 10px;
+	padding: 10px 0 0 15px;
+}
+
+.personal_myComment .commentList .comlistone .list_left img {
+	width: 100%;
+	height: 100%
+}
+
+.personal_myComment .commentList .comlistone .list_right {
+	width: 58%;
+	float: right;
+	padding: 10px 15px 0 10px;
+	position: relative;
+	height: 100px;
+}
+
+.personal_myComment .commentList .comlistone .list_right p {
+	font-size: 1.4rem;
+}
+
+.personal_myComment .commentList .comlistone .list_right span {
+	display: block;
+	width: 56px;
+	height: 22px;
+	color: #ff8700;
+	border: 1px solid #ff8700;
+	border-radius: 5px;
+	position: absolute;
+	right: 15px;
+	bottom: 0;
+	line-height: 22px;
+	text-align: center;
+	font-size: 13px;
+}
+
+.personal_myComment .commentList .comlistone .list_bottom {
+	clear: both;
+	border-top: 1px solid #ececec;
+	padding: 0 15px 15px 15px;
+}
+
+.personal_myComment .commentList .comlistone .list_bottom p:nth-child(1) {
+	background-size: 75px 15px;
+	width: 100%;
+	height: 30px;
+}
+
+.personal_myComment .commentList .comlistone .list_bottom p:nth-child(2) {
+	line-height: 18px;
+	color: #747474;
+	font-size:1.2rem;
+}
+
+.personal_myComment .commentArea {
+	width: 260px;
+	position: fixed;
+	z-index: 11;
+}
+
+.personal_myComment .commentArea .commentAreaTop {
+	width: 100%;
+	height: 80px;
+	padding-top:1px;
+	border-radius: 5px 5px 0 0;
+	background-color: #7eb3fc;
+}
+
+.personal_myComment .commentArea .commentAreaTop .starClick{
+	width:40%;
+	height:20px;
+	margin:30px auto 0 auto;
+}
+
+.personal_myComment .commentArea .commentAreaTop .starClick span{
+	display:block;
+	width:20%;
+	float:left;
+	height:100%;
+}
+
+.personal_myComment .commentArea .starLevel0{
+	background: url(/yihaiyou/image/personal/icon-star0.png) no-repeat center center;
+	background-size: 90px 15px;
+}
+.personal_myComment .commentArea .starLevel1{
+	background: url(/yihaiyou/image/personal/icon-star1.png) no-repeat center center;
+	background-size: 90px 15px;
+}
+.personal_myComment .commentArea .starLevel2{
+	background: url(/yihaiyou/image/personal/icon-star2.png) no-repeat center center;
+	background-size: 90px 15px;
+}
+.personal_myComment .commentArea .starLevel3{
+	background: url(/yihaiyou/image/personal/icon-star3.png) no-repeat center center;
+	background-size: 90px 15px;
+}
+.personal_myComment .commentArea .starLevel4{
+	background: url(/yihaiyou/image/personal/icon-star4.png) no-repeat center center;
+	background-size: 90px 15px;
+}
+.personal_myComment .commentArea .starLevel5{
+	background: url(/yihaiyou/image/personal/icon-star5.png) no-repeat center center;
+	background-size: 90px 15px;
+}
+
+.personal_myComment .commentArea .commentAreaBottom {
+	min-height: 150px;
+	background-color: #fff;
+	line-height: 20px;
+	font-size: 12px;
+	position: relative;
+	border-radius: 0 0 5px 5px;
+	padding: 15px 15px 60px 15px;
+	color: #747474;
+	letter-spacing: 1px;
+}
+
+.personal_myComment .commentArea .commentAreaBottom textarea {
+	border: none;
+	width: 100%;
+	min-height: 150px;
+	max-height: 500px;
+	overflow: hidden;
+	outline: none;
+}
+
+.personal_myComment .commentArea .commentAreaSub {
+	position: absolute;
+	left: 20px;
+	bottom: 15px;
+	width: 220px;
+	background-color: #f9a601;
+	height: 35px;
+	line-height: 35px;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 15px
+}
+
+.personal_myComment .shadow {
+	width: 100%;
+	height: calc(100%);
+	position: fixed;
+	left: 0;
+	top: 0px;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 10;
+}
+
+/*支付  提现*/
+.personal_pay {
+	background-color: #f0f0f0;
+}
+
+.personal_pay .drawals{
+	width: 100%;
+	margin-top:60px;
+	height:40px;
+	line-height:40px;
+	background-color:#fff;
+	border-top:1px solid #e0e0e0;
+	border-bottom:1px solid #e0e0e0;
+}
+.personal_pay .payment {
+	width: 100%;
+	margin-top:20px;
+}
+
+.personal_pay .payment ul {
+	background-color: #fff;
+	margin-top: 20px;
+	padding:0 15px;
+	border-top:1px solid #e0e0e0;
+	border-bottom:1px solid #e0e0e0;
+}
+
+.personal_pay .payment ul li {
+	height: 50px;
+	line-height: 50px;
+	margin:0;
+}
+
+.personal_pay .payment ul li span {
+	display: block;
+	float: left;
+	height: 50px;
+	padding-left:0;
+}
+
+.personal_pay .payment ul li span.recharge_pic{
+	display:block;
+	width:36px;
+	height:36px;
+	margin:10px 10px 0 0;
+}
+
+.personal_pay .payment ul li span.recharge_pic.icon_wx {
+	background: url(/yihaiyou/image/icon-wei.png) no-repeat center center;
+	background-size: 30px 30px;
+}
+
+.personal_pay .payment ul li span.recharge_pic.icon_zfb {
+	background: url(/yihaiyou/image/icon-zhifu.png) no-repeat center center;
+	background-size: 30px 30px;
+}
+
+.personal_pay .payment ul li img {
+	width: 36px;
+	height: 36px;
+	margin: 7px 15px 0 0;
+}
+
+.personal_pay .paytrue {
+	background: url(/yihaiyou/image/personal/icon-xuanzhong.png) no-repeat right center;
+	background-size: 20px;
+}
+
+.personal_pay .payfalse {
+	background: url(/yihaiyou/image/personal/icon-xuan.png) no-repeat right center;
+	background-size: 20px;
+}
+
+.personal_widthdrawls .drawals {
+	width: 100%;
+	height: 40px;
+	margin-top: 60px;
+}
+
+.personal_widthdrawls .drawals input,.personal_pay .drawals input {
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	text-indent: 2em;
+	font-size: 14px;
+	outline: none;
+	border: none;
+	color: #999;
+	margin-top:10px;
+}
+/*游艇帆船订单详情*/
+.personal_cruiseDetail .pingz{float: right;width:75%;line-height: 20px;margin-top:5px;color: #7c7b7b;font-size:13px;}
+
+.personal_cruiseDetail .savechange{
+	width:80%;
+	height:40px;
+	line-height:40px;
+	text-align: center;
+	background-color:#ff9a14;color:#fff;
+	margin:auto;
+	font-size:17px;
+	border-radius:5px;
+	position:fixed;
+	bottom:15px;
+	left:10%;
+}
+
+.orderpay .payment .false{
+	background:url(/yihaiyou/image/personal/icon-xuan.png) no-repeat right center;
+	background-size:22px;
+}
+.orderpay .payment .true{
+	background:url(/yihaiyou/image/personal/icon-xuanzhong.png) no-repeat right center;
+	background-size:22px;
+}
+.personal_pay .surebtn{width:100%;height:40px;line-height:40px;text-align: center;color:#fff;font-size:18px;background-color:#fe8848;position:fixed;bottom:0;left:0;}
+.personal_writeTourMess{
+	background-color:#f0f0f0;
+}
+.personal_writeTourMess .savechange{
+	width:calc(100% - 30px);
+	height:40px;
+	line-height:40px;
+	text-align: center;
+	background-color:#ff9a14;
+	color:#fff;
+	margin:0 auto 10px auto;
+	font-size:17px;
+	border-radius:5px;
+}
+.personal_writeTourMess .setTour{
+	width:100%;
+	padding-top:45px;
+	margin-bottom:20px;
+}
+.personal_writeTourMess .setTour h3{
+	margin-top:10px;
+	line-height:30px;
+	font-size:15px;
+	text-indent:15px;
+	color:#666;
+}
+.personal_writeTourMess .setTour .messSex{
+	line-height:40px;
+	padding:5px 20px 5px 0;
+	background:url(/yihaiyou/image/personal/icon-xuan.png) no-repeat right center;
+	background-size:17px;
+}
+.personal_writeTourMess .setTour .true{
+	background:url(/yihaiyou/image/personal/icon-xuanzhong.png) no-repeat right center;
+	background-size:17px;
+}
+.personal_writeTourMess .setTour .idcar{
+	position:relative;
+	overflow: initial;
+}
+.personal_writeTourMess .setTour .moretype{
+	width:100%;
+	position:absolute;
+	left:0;
+	top:41px;
+	z-index: 12;
+	border:1px solid #f0f0f0;
+}
+.personal_writeTourMess .setTour .moretype ul li{
+	width:100%;
+	height:40px;
+	line-height:40px;
+	border-bottom:1px solid #e0e0e0;
+	background-color:#f5f5f5;
+	text-align:center;
+	padding:0;
+	color:#5f5f5f;
+
+}
+.personal_writeTourMess .setTour .moretype ul li:first-child{
+	box-shadow:0px -2px 6px 0px #999;
+}
+.personal_writeTourMess .setTour .moretype ul li:last-child{
+	box-shadow:0px 3px 10px 0px #999;
+}
+.personal_writeTourMess .setTour ul li{
+	padding: 0 15px 0 25px;
+	background-color:#fff;
+	font-size:14px;
+	letter-spacing: 1px;
+	line-height:40px;
+	border-bottom:1px solid #e0e0e0;
+	color:#4f4f4f;
+}
+.personal_writeTourMess .setTour ul li span{
+	color:#999;
+	margin-left:25px;
+}
+.personal_writeTourMess .setTour ul li span img{
+	width:12px;
+	height:6px;
+	margin-left:5px;
+}
+.personal_writeTourMess .setTour ul li input{
+	color:#888;
+	margin-left:25px;
+	line-height:20px;
+	width:140px;
+}
+.personal_writeTourMess .setTour ul li i{
+	color:#fff;
+}
+ .commentLevel0{
+	background: url(/yihaiyou/image/personal/icon-star0.png) no-repeat left center;
+	background-size: 90px 15px;
+}
+ .commentLevel1{
+	background: url(/yihaiyou/image/personal/icon-star1.png) no-repeat left center;
+	background-size: 90px 15px;
+}
+ .commentLevel2{
+	background: url(/yihaiyou/image/personal/icon-star2.png) no-repeat left center;
+	background-size: 90px 15px;
+}
+ .commentLevel3{
+	background: url(/yihaiyou/image/personal/icon-star3.png) no-repeat left center;
+	background-size: 90px 15px;
+}
+ .commentLevel4{
+	background: url(/yihaiyou/image/personal/icon-star4.png) no-repeat left center;
+	background-size: 90px 15px;
+}
+.commentLevel5{
+	background: url(/yihaiyou/image/personal/icon-star5.png) no-repeat left center;
+	background-size: 90px 15px;
+}
+.personalTopay{width:100%;height:40px;line-height:40px;text-align:center;color:#fff;font-size:1.6rem;letter-spacing: 1px;position:fixed;bottom:0;left:0;}
+
+.personalTopay .t_pay {
+	width:50%;
+	float:left;
+	background-color:#ee810b;
+}
+
+.personalTopay .t_turn {
+	width:50%;
+	float:left;
+	background-color:#3996fa;
+}
+
+.refund {
+	width:80%;
+	max-width:320px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	background-color:#ee810b;
+	color:#fff;
+	font-size:1.6rem;
+	letter-spacing: 1px;
+	margin:15px auto;
+	border-radius:5px;
+}
+
+.marchlist {
+	padding:0 15px;
+}
+
+.marchlist ul {
+	width:100%;
+	padding-top: 1px;
+}
+
+.marchlist ul li {
+	width:100%;
+	border-radius:5px;
+	background:#fff;
+	border:1px solid #ccc;
+	margin-top:15px;
+}
+
+.marchlist ul li .march_left {
+	float: left;
+	width:25%;
+}
+
+.marchlist ul li .march_left span.marchLogo {
+	width:35px;
+	height:35px;
+	display:block;
+	margin:15px auto;
+	border-radius:50%;
+	background:linear-gradient(to bottom, rgb(241,172,80),rgb(238,159,55),rgb(235,146,28))
+}
+
+.marchlist ul li .march_right {
+	float: right;
+	width:75%;
+	position:relative;
+}
+
+.marchlist ul li .march_right .delete {
+	position: absolute;
+	right:10px;
+	top:10px;
+	display: block;
+	width:20px;
+	height:20px;
+	background: url(/yihaiyou/image/personal/garbage.jpg) no-repeat center center;
+	background-size: 18px 20px;
+}
+
+.marchlist ul li .march_right .marchname {
+	font-size:1.5rem;
+	font-weight:600;
+	width:95%;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	padding-top:10px;
+}
+
+.marchlist ul li .march_right .marchtime {
+	font-size:1.3rem;
+	color:#666;
+	padding:5px 0 10px 0
+}
+
+.marchlist ul li .march_right .marchtime .daytime {
+	padding-left:16px;
+	background:url(../image/date.png) no-repeat left center;
+	background-size:14px;
+	margin:0 8px;
+}
+
+.personal_writeTourMess .redstar {
+	color: #ff0000!important;
+	margin-left:0!important;
+}
+
+.personal_writeTourMess .whitestar {
+	color: #fff!important;
+	margin-left:0!important;
+}
+
+.personal_changePassword .opar_password ul li {
+	font-size:1.4rem;
+	height:50px;
+	line-height:50px;
+}
+
+.personal_changePassword .opar_password ul li label {
+	font-weight:500;
+	float: left;
+	line-height: 50px;
+}
+
+.personal_changePassword .opar_password ul li input {
+	height:50px!important;
+	line-height:50px!important;
+	-webkit-user-select:auto!important;
+}
+
+.icon_personal {
+	float: left;
+	text-indent: 0;
+	width: 27px;
+	height: 27px;
+	border-radius:50%;
+	margin-top:12px;
+}
+
+.per_font {
+	color:#fff;
+	font-size:2.7rem!important;
+	line-height:27px!important;
+}
+
+.per_35font {
+	color:#fff;
+	font-size:3.5rem!important;
+	line-height:35px!important;
+}
+
+.per_45font {
+	color:#fff;
+	font-size:4.5rem!important;
+	line-height:45px!important;
+}
+
+.personal_changePassword .psw_box {
+	height:50px;
+	line-height:50px;
+	font-size: 1.4rem;
+	color: #333;
+	border-bottom:1px solid #f5f5f5;
+}
+
+.personal_changePassword .psw_box .le_ti {
+	float:left;
+}
+.personal_changePassword .psw_box input{
+	float:right;
+	width:180px;
+	text-align:right;
+	height:40px;
+	margin:5px 0;
+}

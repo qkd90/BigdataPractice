@@ -1,0 +1,22 @@
+<div ng-controller="orderKnowCtrl">
+    <header class="y-know-header">
+        <i class="back" ui-sref="cruiseDetails({dateId: dateId})"></i>
+        预定须知
+    </header>
+    <nav class="y-know-nav clearBoth">
+        <span class=" pull-left" ng-class="{active : mark == 1}" ng-click="transf(1)">预定须知</span>
+        <span class="pull-left" ng-class="{active : mark == 2}" ng-click="transf(2)">支付方式</span>
+    </nav>
+    <section class="y-know-content" ng-show="mark == 1">
+        <h4>预定限制</h4>
+        <div class="know-content">
+            {{orderKnow}}
+        </div>
+    </section>
+    <section class="y-know-content" ng-show="mark == 2">
+        <h4>支付方式</h4>
+        <div class="know-content">
+            {{payWay}}
+        </div>
+    </section>
+</div>

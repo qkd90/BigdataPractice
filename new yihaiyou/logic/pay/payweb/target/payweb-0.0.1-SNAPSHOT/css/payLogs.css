@@ -1,0 +1,48 @@
+#titlename strong{
+    font-size: 20px;
+}
+#searchparam label{
+    width: 70px;
+    display: inline-block;
+}
+
+.needmargin{
+    margin-left: 30px;
+}
+
+.margintop{
+    margin-top: 10px;
+}
+
+.searcharea{
+    margin-left: 30px;
+}
+
+#searchbtn{
+    background: #8ab2ea;
+    display: inline-block;
+    padding: 0px 10px 0px;
+    color: #000000;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer
+}
+
+.easyui-treegrid td { padding: 12px 14px; text-align: center }
+
+.easyui-treegrid {width: 100%; height: 100%;}
+
+table td{
+    padding: 6px 0;
+    color: #444;
+    word-break: break-all;
+}
+
+
+.easyui-treegrid td .datagrid-cell {
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}

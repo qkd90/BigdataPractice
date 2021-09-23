@@ -1,0 +1,153 @@
+.orderDetail {
+	width: 1200px;
+	margin: auto;
+	background-color: #fff;
+	margin-top:20px;
+	padding-top:1px;
+	border:1px solid #dcdedf;
+	/*height:322px;*/
+}
+
+.orderDetail .detail_header {
+	margin:26px 20px 0 20px;
+	border-bottom:1px solid #e6e6e6;
+}
+
+.orderDetail .detail_header .detail_title {
+	display: block;;
+	height: 38px;
+	width: 6em;
+	border-bottom: 1px solid #478ff1;
+	font-size: 16px;
+	color: #666;
+	font-weight: 600;
+	text-indent: 0.2em;
+	font-family: SimSun;
+	float:left;
+	line-height:38px;
+}
+
+.orderDetail .detail_header .Return {
+	width: 106px;
+	height: 28px;
+	float: right;
+	line-height: 28px;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	font-family: SimSun;
+	border-radius: 4px;
+	font-weight: 600;
+	cursor: pointer;
+	background:url(/images/yhy/icon-return.png) no-repeat center center;
+	background-size:cover;
+}
+
+.orderDetail .detail_header .Return:hover {
+	background:url(/images/yhy/icon-return01.png) no-repeat center center;
+	background-size:cover;
+}
+
+.orderDetail .order_detailUl {
+	padding:10px 20px;
+}
+
+.orderDetail .order_detailUl li {
+	line-height: 24px;
+	color: #666;
+	font-family: AdobeInvisFont;
+	font-size: 13px;
+}
+
+.orderDetail .order_detailUl li .orderNumber {
+	color: #247af2;
+	font-weight: 600;
+}
+
+.orderDetailTop {
+	border-top: 2px solid #4a95ff;
+	height:230px;
+	padding:20px;
+	margin-bottom: 20px;
+	margin-top:12px;
+}
+
+/*.orderDetailTop .table .headTr_fir {
+	background: linear-gradient(#666, #999)
+}*/
+
+.orderDetailTop .table .headTr {
+	background-color:#fff!important;
+}
+
+.orderDetailTop .table .headTr td,.orderDetailTop .table .headTr th {
+	border-top:none;
+}
+
+.orderDetailTop .table .headTr th {
+	font-size: 14px;
+	color: #666;
+	text-align: center;
+	font-weight: bold;
+	font-family: SimSun;
+}
+
+.orderDetailTop .table .headTr_sec {
+	border:1px solid #dcdedf;
+	border-left:0;
+}
+
+.orderDetailTop .table .headTr_sec td {
+	border-left:1px solid #dcdedf;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 12px;
+	color: #666;
+	font-family: AdobeInvisFont;
+	padding:0 12px;
+}
+
+.orderDetailTop .table .productMessTi {
+	font-size: 16px!important;
+}
+
+.orderDetailTop .table .productMess {
+	text-align: left!important;
+	padding:8px 12px;
+}
+
+.table .headTr th.reasonTi {
+	text-align: center!important;
+}
+
+.table .headTr .reason {
+	width: 280px;
+	padding:12px!important;
+	text-align: left!important;
+	line-height: 20px!important;
+	overflow: auto;
+}
+
+.orderButtom {
+	width: 250px;
+	margin: auto;
+}
+
+.orderDetailTop button {
+	width: 106px;
+	height: 30px;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: SimSum;
+}
+
+.orderDetailTop button.console {
+	color: #666;
+}
+
+.orderDetailTop button.sure {
+	background-color: #247af2;
+	color: #fff;
+	margin-left:20px;
+}

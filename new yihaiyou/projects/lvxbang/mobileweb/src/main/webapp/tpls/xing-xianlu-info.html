@@ -1,0 +1,118 @@
+<div ng-controller="xingxianluinfoCtrl" class="xianlu_info">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">线路详情</a></li>
+            <li class="pull-right dropdown" ng-hide="isWeixin">
+                <a id="sd" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class=""></a>
+                <ul class="dropdown-menu" id="share" aria-labelledby="dropdownMenu1">
+                    <li><a href="#" class="share" ng-click="share()">分享</a></li>
+                    <li><a href="#" class="shouc">收藏</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <div id="yjcontainer" class="clearfix">
+            <div id="xianluinfo" class="clearfix detail boxbg" style="padding: 0px 3px;" ng-if="xldetails.userId">
+                <!--<h2 class="toptitle clearfix text-center" ng-if="xldetails.userId == user.id"><a-->
+                        <!--ng-click="updateName()"><span>{{xldetails.name}}</span></a></h2>-->
+                <!--<h2 class="toptitle clearfix text-center" ng-if="xldetails.userId != user.id">{{xldetails.name}}</h2>-->
+                <div class="clearfix fenmian">
+                    <img class="img-responsive" bn-lazy-src="{{xldetails.cover}}?imageView2/1/w/600/h/300/q/75">
+
+                    <div class="info">
+                        <h2 class="name clearfix">{{xldetails.name}}
+                            <small class="clearfix xianlusmall">{{xldetails.startDate}}出发/{{xldetails.planDay}}天</small>
+                        </h2>
+                        <p class="other"><span class="pull-right"><span class="view">{{xldetails.viewNum}}</span><span
+                                class="licheng">{{xldetails.quoteNum}}</span></span></p>
+                    </div>
+                </div>
+                <div class="oneday col-xs-12 pl0pr0 bgwhite" ng-repeat="day in xldetails.days">
+                    <h2 class="subtitle"><span>第{{day.day}}天</span></h2>
+
+                    <div class="feiji clearfix xianludiv" ng-if="day.traffic != null">
+                        <h2 class="feiji icobg">{{day.traffic.fromCityName}} >{{day.traffic.toCityName}}</h2>
+
+                        <div class="content-text">
+                            <p><span class="suppspan">航班：</span>{{day.traffic.company}}{{day.traffic.trafficCode}}</p>
+
+                            <p><span class="suppspan">起降：</span>{{day.traffic.startStation}}<img src="images/ico/order-jt.jpg"/>{{day.traffic.endStation}}
+                            </p>
+
+                            <p><span class="suppspan">价格：</span><span class="xiangqingprice">￥{{day.traffic.price}}</span></p>
+                        </div>
+                    </div>
+                    <div ng-repeat="trip in day.trips" id="{{trip.tripId}}" class="paddleft">
+                        <h2 class="jingdian icobg"><a></a>{{trip.scenicName}}{{trip.name}}</h2>
+
+                        <div class="content-text moreinfo">
+                            <p><img class="img-responsive" bn-lazy-src="{{trip.cover}}?imageView2/1/w/600/h/300/q/75"></p>
+
+                            <p><p class="supp" ng-if="trip.adviceTime"><span class="suppspan">建议：</span>{{trip.adviceTime}}</p><p class="supp"><span class="suppspan">地址：</span>{{trip.address}}</p><p class="supp"><span class="suppspan">门票：</span><span class="xiangqingprice" ng-if="trip.price > 0">￥{{trip.price}}</span><span class="xiangqingprice" ng-if="trip.price == 0">免费</span></p><p class="supp"><span class="suppspan">简介：</span>
+                                    <span ng-if="trip.introduction" ng-bind-html="trip.introduction | trustHtml" style="white-space: pre-wrap; word-wrap: break-word;"></span>
+                                    <span ng-if="trip.shortIntro" ng-bind-html="trip.shortIntro | trustHtml" style="white-space: pre-wrap; word-wrap: break-word;"></span>
+                                </p>
+                            </p>
+                        </div>
+                        <div class="viewMore">查看更多<img src="../images/ico/down.png"></div>
+                        <div class="viewMoreclose hidden">收起<img src="../images/ico/down.png"></div>
+                    </div>
+                    <div ng-if="day.hotel != null" style="padding-left:15px">
+                        <h2 class="jiudian icobg"><a name="d{{day.day}}"></a>{{day.hotel.name}}</h2>
+
+                        <div class="content-text moreinfo hotelinfo">
+                            <p><img class="img-responsive" bn-lazy-src="{{day.hotel.cover}}?imageView2/1/w/600/h/300/q/75"></p>
+
+                            <p><p><span class="suppspan">地址：</span>{{day.hotel.address}}</p><p><span class="suppspan">房型：</span>{{day.hotel.priceName}}</p><p><span class="suppspan">价格：</span><span class="xiangqingprice">￥{{day.hotel.price}}</span></p><p><span class="suppspan">简介：</span>{{day.hotel.introduction}}
+                            </p></p>
+                        </div>
+                        <div class="viewMore">查看更多<img src="../images/ico/down.png"></div>
+                        <div class="viewMoreclose hidden">收起<img src="../images/ico/down.png"></div>
+                    </div>
+                    <div class="feiji clearfix" ng-if="day.returnTraffic != null">
+                        <h2 class="feiji icobg flysec">{{day.returnTraffic.fromCityName}}
+                            >{{day.returnTraffic.toCityName}}</h2>
+
+                        <div class="content-text xianludiv">
+                            <p>航班：{{day.returnTraffic.company}}{{day.returnTraffic.trafficCode}}</p>
+
+                            <p>起降：{{day.returnTraffic.startStation}}<img src="images/ico/order-jt.jpg"/>{{day.returnTraffic.endStation}}
+                            </p>
+
+                            <p>价格：<span class="xiangqingprice">￥{{day.returnTraffic.price}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buyxianlu text-center col-xs-12"><!--<a href="" class="moreinfo pull-left">游记详情</a>-->
+            <a ng-click="toOrder()" class="fuzhi" style="width: 100%"
+               ng-if="xldetails.userId == user.id"><span>购买线路</span></a>
+            <a ng-click="quotePlan()" class="fuzhi" style="width: 100%" ng-if="xldetails.userId != user.id"><span
+                    class="fuzhispan">复制线路</span></a>
+        </div>
+        <button id="xianluyl" class="text-center"><span>线路概览</span></button>
+        <div id="silder-right">
+            <h3>线路概览</h3>
+            <dl class="clearfix" ng-repeat="day in xldetails.days">
+                <dt><span class="daytitle">第{{day.day}}天</span><span class="dayxl">{{day.cityName}}</span></dt>
+                <dd ng-repeat="trip in day.trips"><a ng-click="jump(trip.tripId)">{{trip.scenicName}}{{trip.name}}</a></dd>
+            </dl>
+        </div>
+        <div ng-show="loading">
+            <div class="yuloading"><span>加载数据中...</span></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $("#xianluyl").click(function () {
+        $("#silder-right").fadeToggle();
+    });
+    $("#yjcontainer").click(function () {
+        $("#silder-right").fadeOut();
+    });
+    $("#silder-right").click(function () {
+        $("#silder-right").fadeOut();
+    });
+</script>

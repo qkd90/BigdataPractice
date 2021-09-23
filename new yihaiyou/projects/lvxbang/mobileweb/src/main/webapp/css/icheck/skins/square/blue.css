@@ -1,0 +1,131 @@
+/* iCheck plugin Square skin, blue
+----------------------------------- */
+.icheckbox_square-blue{
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 61px;
+    height: 61px;
+    background: url(../wxz1.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_square-blue {
+    background-position: center center;
+	background-repeat:no-repeat;
+	margin:0 auto;
+	display:block;
+	width:100%; height:100%;
+}
+    .icheckbox_square-blue.hover {
+    }
+    .icheckbox_square-blue.checked {
+        /*background-position: -48px 0;*/
+		background:url(../xz1.png);
+    background-position: center center;
+	background-repeat:no-repeat;
+    }
+    .icheckbox_square-blue.disabled {
+        background-position: -72px 0;
+        cursor: default;
+    }
+    .icheckbox_square-blue.checked.disabled {
+        background-position: -96px 0;
+    }
+
+.iradio_square-blue {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 33px;
+    height: 33px;
+    background: url(../../../../images/ico/ico-fx-jia.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+.iradio_square-blue {
+    background-position: 0 0;
+}
+    .iradio_square-blue.hover {
+        background-position: 0 0;
+    }
+    .iradio_square-blue.checked {
+        background: url(../../../../images/ico/ico-fx-xz.png) no-repeat;
+    }
+    .iradio_square-blue.disabled {
+        background-position: -192px 0;
+        cursor: default;
+    }
+    .iradio_square-blue.checked.disabled {
+        background-position: -216px 0;
+    }
+	
+	
+.icheckbox_square-blue-x{
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 61px;
+    height: 61px;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_square-blue-x {
+    background-position: center center;
+	background-repeat:no-repeat;
+	margin:0 auto;
+	display:block;
+	width:100%; height:100%;
+}
+    .icheckbox_square-blue-x.hover {
+    }
+    .icheckbox_square-blue-x.checked {
+        /*background-position: -48px 0;*/
+		background:url(../../../../images/ico/xing-ok.png) center center no-repeat;
+		background-color:rgba(0,0,0,0.5);
+    }
+    .icheckbox_square-blue-x.disabled {
+        background-position: -72px 0;
+        cursor: default;
+    }
+    .icheckbox_square-blue-x.checked.disabled {
+        background-position: -96px 0;
+    }
+	
+/*红包选中和未选中*/
+.iradio_square-hb {
+    display: inline-block;
+    *display: inline;
+    vertical-align: middle;
+    margin: 40px;
+    padding: 0;
+    width: 33px;
+    height: 33px;
+    background: url(../../../../images/ico/ico-fx-wxz.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+.iradio_square-hb {
+    background-position: 0 0;
+}
+    .iradio_square-hb.hover {
+        background-position: 0 0;
+    }
+    .iradio_square-hb.checked {
+        background: url(../../../../images/ico/ico-fx-xz.png) no-repeat;
+    }
+    .iradio_square-hb.disabled {
+        background-position: -192px 0;
+        cursor: default;
+    }
+    .iradio_square-hb.checked.disabled {
+        background-position: -216px 0;
+    }

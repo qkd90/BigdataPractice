@@ -1,0 +1,64 @@
+package com.zuipin.tag;
+
+import com.zuipin.util.StringUtils;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.taglibs.standard.lang.support.ExpressionEvaluatorManager;
+
+import javax.servlet.jsp.JspException;
+import javax.servlet.jsp.tagext.Tag;
+import javax.servlet.jsp.tagext.TagSupport;
+import java.io.File;
+import java.io.IOException;
+
+public class IncludeTag extends TagSupport {
+
+    /**
+     * .
+     */
+    private static final long serialVersionUID = -2165476717536407223L;
+
+    private final Log log = LogFactory.getLog(IncludeTag.class);
+
+    private Object fileAttr;
+    private String encode = "utf-8";
+
+    @Override
+    public int doStartTag() throws JspException {
+        if (StringUtils.isBlank(fileAttr.toString())) {
+            throw new JspException("Tag attr 'fileAttr' is blank");
+        }
+        try {
+            String filePath = new StringBuilder(pageContext.getServletContext().getRealPath("")).append(fileAttr).toString();
+            if (new File(filePath).exists()) {
+                String html = FileUtils.readFileToString(new File(filePath), encode);
+                pageContext.getOut().write(html);
+            } else {
+                pageContext.getOut().write(String.format("%s Not Found", fileAttr));
+            }
+            return Tag.SKIP_BODY;
+        } catch (IOException e) {
+            log.error(e.getMessage(), e);
+            throw new JspException(e.getMessage());
+        }
+
+    }
+
+    public Object getFileAttr() {
+        return fileAttr;
+    }
+
+    public void setFileAttr(Object fileAttr) throws JspException {
+        this.fileAttr = ExpressionEvaluatorManager.evaluate("fileAttr", fileAttr.toString(), Object.class, this, pageContext);
+    }
+
+    public String getEncode() {
+        return encode;
+    }
+
+    public void setEncode(String encode) {
+        this.encode = encode;
+    }
+
+}

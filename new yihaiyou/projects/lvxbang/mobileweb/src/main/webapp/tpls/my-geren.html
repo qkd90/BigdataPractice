@@ -1,0 +1,68 @@
+<div ng-controller="mygerenCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">编辑个人信息</a></li>
+        </ul>
+    </div>
+    <div id="subcontainer" class="clearfix">
+        <div class="mytop clearfix">
+            <a class="touxiang center-block" ng-click="uploadHead()"><span class="thumb"><img src="{{user.head}}" class="img-circle"/></span><span class="loginbt">修改头像</span></a>
+            <input type="file" accept="image/*" id="upload-head" style="display: none;">
+        </div>
+        <div class="my-geren clearfix boxbg">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="name" class="col-xs-3 control-label">昵称：</label>
+
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" id="name" value="{{user.nickName}}"
+                               ng-model="user.nickName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="sex" class="col-xs-3 control-label">性别：</label>
+
+                    <div class="col-xs-8">
+                        <label class="radio-inline">
+                            <input type="radio" name="sex" id="men" value="1">
+                            男 </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="sex" id="women" value="2">
+                            女 </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="col-xs-3 control-label">手机：</label>
+
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" id="tel" value="{{user.telephone}}"
+                               ng-model="user.telephone">
+                    </div>
+                </div>
+                <div class="form-group last">
+                    <label for="name" class="col-xs-3 control-label">邮箱：</label>
+
+                    <div class="col-xs-8">
+                        <input type="email" class="form-control" id="email" value="{{user.email}}"
+                               ng-model="user.email">
+                    </div>
+                </div>
+                <div class="save clearfix">
+                    <div class="col-xs-12">
+                        <button type="button" class="btn btn-default btn-block btn-lg" ng-click="updateUser()" style="color: #333;">保存
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_flat-green-geren',
+            radioClass: 'iradio_flat-green-geren',
+            increaseArea: '20%' // optional
+        });
+    });
+</script>

@@ -1,0 +1,253 @@
+<div ng-controller="mIndexCtrl">
+    <header class="m_header sticky_head" id="J_header">
+        <div class="al_inhead">
+                <span class="index_search">
+                <form>
+                    <input class="index_Input" search-dir pre-url="'lineList'">
+                </form>
+                </span>
+            <i class="index_personal icon-mine" go-personal></i>
+        </div>
+    </header>
+    <div class="main" traval-position>
+        <div class="top-sections">
+            <section class="i-category-list swipe-container" id="J_category-slider" style="visibility: visible;">
+                <ul class="swipe-box clearfix-index">
+                    <li class="swipe-frame">
+                        <ul class="list">
+                            <li>
+                                <a ui-sref="tour/custom/index">
+                          <span class="btn_icon">
+                              <img width="40" height="40" bn-lazy-src="/lxb/images/dingzhiyou.png"></span>
+                                    <span class="word">定制精品</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a ui-sref="tour/self/index">
+                          <span class="btn_icon">
+                              <img width="40" height="40" bn-lazy-src="/lxb/images/picture_zizhuyou.png">
+                          </span>
+                                    <span class="word">自助游</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a ui-sref="tour/drive/index">
+                          <span class="btn_icon">
+                              <img width="40" height="40" bn-lazy-src="/lxb/images/picture_zijiayou.png">
+                          </span>
+                                    <span class="word">自驾游</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a ui-sref="tour/group/index">
+                          <span class="btn_icon">
+                              <img width="40" height="40" bn-lazy-src="/lxb/images/picture_gentuan.png">
+                          </span><span class="word">跟团游</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a ui-sref="ticket/index">
+                          <span class="btn_icon">
+                              <img width="40" height="40" bn-lazy-src="/lxb/images/picture_menpiao.png">
+                          </span><span class="word">景点门票</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a ui-sref="hotel/index">
+                          <span class="btn_icon">
+                              <img width="40" height="40" bn-lazy-src="/lxb/images/picture_jiudian.png">
+                          </span><span class="word">酒店</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a ui-sref="tour/group/index">
+                          <span class="btn_icon">
+                              <img width="40" height="40" bn-lazy-src="/lxb/images/picture_youlun.png">
+                          </span><span class="word">邮轮</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/index.html#/xing">
+                          <span class="btn_icon">
+                              <img width="40" height="40" bn-lazy-src="/lxb/images/picture_sirendingzhi.png">
+                          </span><span class="word">私人订制</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section class="i-swipe-banner">
+                <div class="swipe-banner-content swiper-container" id="index-top-slider-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide" ng-repeat="ad in result.topBannerAds" is-over="finish.over">
+                            <a ng-href="{{ad.url}}">
+                                <img src="/static/{{ad.imgPath}}">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="swipe-pagenavi swiper-pagination" id="index-top-slide-page"></div>
+                </div>
+            </section>
+            <section class="i-destination" style="">
+                <ul class="clearfix-index">
+                    <li><a ui-sref="tour/around/index">
+                        <img bn-lazy-src="/lxb/images/index_middle_zhoubian.png"></a></li>
+                    <li><a ui-sref="tour/internal/index">
+                        <img bn-lazy-src="/lxb/images/index_middle_guonei.png"></a></li>
+                    <li><a ui-sref="tour/overseas/index">
+                        <img bn-lazy-src="/lxb/images/index_middle_chujing.png"></a></li>
+                </ul>
+            </section>
+            <section class="i-abroad-destination" style="">
+                <ul class="clearfix-index">
+                    <li ng-repeat="area in result.middleAreas">
+                        <a go-line-list city-code="area.cityCode" ineList style="background:#f8f9fc">
+                            <p>{{area.name}}</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="i-global-destination" style="">
+                <a ui-sref="selectCity" style="background:#f8f9fc">
+                    <span>目的地大全</span><i class="more-signal"></i></a>
+            </section>
+        </div>
+        <!-- 热门产品推荐 -->
+        <div class="products">
+            <ul class="tabs" id="tr_list">
+                <li class="proTabLi active_green">周边游</li>
+                <li class="proTabLi">国内游</li>
+                <li class="proTabLi">出境游</li>
+            </ul>
+            <ul class="sub-tabs">
+                <ul class="sub-list thin-border day_line" style="display:block">
+                    <li ng-repeat="area in result.zhoubianAreas" ng-class="{'active' : $first}">
+                        <div class="sub-list-name z-ellipsis"
+                             ng-click="goAreaLineList(this, $event)"
+                             ng-class="{'super_bg' : $first, 'each_bg': !$first}">{{area.name}}</div>
+                    </li>
+                </ul>
+                <ul class="sub-list thin-border out_line">
+                    <li ng-repeat="area in result.guoneiAreas" ng-class="{'active': $first}">
+                        <div class="sub-list-name z-ellipsis"
+                             ng-click="goAreaLineList(this, $event)"
+                             ng-class="{'super_bg' : $first, 'each_bg': !$first}">{{area.name}}</div>
+                    </li>
+                </ul>
+                <ul class="sub-list thin-border home_line">
+                    <li ng-repeat="area in result.chujingAreas" ng-class="{'active': $first}">
+                        <div class="sub-list-name z-ellipsis"
+                             ng-click="goAreaLineList(this, $event)"
+                             ng-class="{'super_bg': $first, 'each_bg': !$first}">{{area.name}}</div>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+        <!--周边游-->
+        <div class="gentuan_line" style="width:100%;display:block;" infinite-scroll="getAreaLineListData()"
+             infinite-scroll-distance='1' infinite-scroll-disabled='loading'>
+            <ul class="around_place" style="display:block">
+                <li ng-repeat="line in areaLineLists[0]" class="m-product-item">
+                    <a ui-sref="lineDetail({id: line.id})">
+                    <div class="item-top">
+                        <div class="product-image">
+                            <img bn-lazy-src="{{IMG_DOMAIN}}/{{line.productImg}}?imageView2/1/w/640/h/480/q/75">
+                            <div class="image-gra"></div>
+                        </div>
+                        <div class="sati-peo">
+                            <!--<div class="peo">{{line.orderNum}}人出游</div>-->
+                            <div class="sati">{{line.satisfaction}}%满意</div>
+                        </div>
+                        <div class="product-extra"><span class="icon icon-tours"></span>
+                            <span>周边游</span><span class="separator">|</span>
+                            <span>{{line.startCity}}</span></div>
+                        <div class="product-price price-schema-1">
+                            <div class="product-price-now" ng-if="line.price > 0">￥<em>{{line.price}}</em>起</div>
+                            <div class="product-price-now" ng-if="line.price <= 0">来电咨询</div>
+                            <!--<div class="product-promotion">立省￥250</div>-->
+                        </div>
+                    </div>
+                    <div class="item-bottom"><h5 class="product-title">{{line.name}}</h5>
+
+                        <p class="product-describe">{{line.appendTitle}}</p></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--国内游-->
+        <div class="gentuan_line" style="width:100%;display:none;" infinite-scroll="getAreaLineListData()"
+             infinite-scroll-distance='1' infinite-scroll-disabled='loading'>
+            <ul class="out_place" style="display:block">
+                <li ng-repeat="line in areaLineLists[1]" class="m-product-item">
+                    <a ui-sref="lineDetail({id: line.id})">
+                        <div class="item-top">
+                            <div class="product-image">
+                                <img bn-lazy-src="{{IMG_DOMAIN}}/{{line.productImg}}?imageView2/1/w/640/h/480/q/75">
+                                <div class="image-gra"></div>
+                            </div>
+                            <div class="sati-peo">
+                                <!--<div class="peo">{{line.orderNum}}人出游</div>-->
+                                <div class="sati">{{line.satisfaction}}%满意</div>
+                            </div>
+                            <div class="product-extra"><span class="icon icon-tours"></span>
+                                <span>国内游</span><span class="separator">|</span><span>{{line.startCity}}</span></div>
+                            <div class="product-price price-schema-1">
+                                <div class="product-price-now" ng-if="line.price > 0">￥<em>{{line.price}}</em>起</div>
+                                <div class="product-price-now" ng-if="line.price <= 0">来电咨询</div>
+                                <!--<div class="product-promotion">立省￥250</div>-->
+                            </div>
+                        </div>
+                        <div class="item-bottom"><h5 class="product-title">{{line.name}}</h5>
+                            <p class="product-describe">{{line.appendTitle}}</p></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--出境游-->
+        <div class="gentuan_line" style="width:100%;display:none;" infinite-scroll="getAreaLineListData()"
+             infinite-scroll-distance='1' infinite-scroll-disabled='loading'>
+            <ul class="home_place" style="display:block">
+                <li ng-repeat="line in areaLineLists[2]" class="m-product-item">
+                    <a ui-sref="lineDetail({id: line.id})">
+                        <div class="item-top">
+                            <div class="product-image">
+                                <img bn-lazy-src="{{IMG_DOMAIN}}/{{line.productImg}}?imageView2/1/w/640/h/480/q/75">
+                                <div class="image-gra"></div>
+                            </div>
+                            <div class="sati-peo">
+                                <!--<div class="peo">{{line.orderNum}}人出游</div>-->
+                                <div class="sati">{{line.satisfaction}}%满意</div>
+                            </div>
+                            <div class="product-extra"><span class="icon icon-tours"></span>
+                                <span>出境游</span><span class="separator">|</span><span>{{line.startCity}}</span></div>
+                            <div class="product-price price-schema-1">
+                                <div class="product-price-now" ng-if="line.price > 0">￥<em>{{line.price}}</em>起</div>
+                                <div class="product-price-now" ng-if="line.price <= 0">来电咨询</div>
+                                <!--<div class="product-promotion">立省￥250</div>-->
+                            </div>
+                        </div>
+                        <div class="item-bottom"><h5 class="product-title">{{line.name}}</h5>
+                            <p class="product-describe">{{line.appendTitle}}</p></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div ng-show="loading">
+            <div class="yuloading"><span>加载数据中...</span></div>
+        </div>
+        <div ng-hide="hasMore[areaLineIndex]" class="alert alert-danger text-center bg_loading">没有更多了...</div>
+    </div>
+<a href="javascript:;" class="to-top J_toTop hidden"></a>
+<a href="tel:4000131770" class="call-phone J_callPhone"></a>
+<div class="ad_bottom_2" id="addTop2" style="display:none">
+    <div class="ad_content">
+        <div class="links"></div>
+    </div>
+    <div class="control">
+        <span class="arrow"></span>
+
+        <div class="arrow_bg"></div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.weixin.mapper.WxReplyVoiceMapper">
+	<insert id="insert" parameterType="WxReplyVoice" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_wx_reply_voice
+			(
+				id,
+				title,
+				media_id,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{title},
+				#{mediaId},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="WxReplyVoice">
+		update tb_wx_reply_voice
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="title != null and '' != title"> title = #{title},</if>
+			<if test="mediaId != null and '' != mediaId"> media_id = #{mediaId},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="WxReplyVoice">
+		delete from
+			tb_wx_reply_voice
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="WxReplyVoice">
+		select
+			*
+		from
+			tb_wx_reply_voice
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="WxReplyVoice">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_wx_reply_voice
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="title != null and '' != title"> and title = #{title} </if>
+			<if test="mediaId != null and '' != mediaId"> and media_id = #{mediaId} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				# {item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+</mapper>

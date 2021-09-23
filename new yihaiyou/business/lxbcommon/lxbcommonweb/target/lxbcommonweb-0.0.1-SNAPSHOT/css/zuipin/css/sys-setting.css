@@ -1,0 +1,4 @@
+﻿.sys-setting .ui-content {padding:20px;}
+.sys-setting .ui-content h2{ position:relative; height:16px; margin-left:40px; background:url(../images/dash.png) repeat-x left center;font-weight:normal;}
+.sys-setting .ui-content h2 span{ position:absolute; left:-38px;}
+.sys-setting .ui-content h3{ font-weight:normal;}

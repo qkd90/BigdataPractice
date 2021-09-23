@@ -1,0 +1,36 @@
+<div ng-controller="scenicTrafficGuideCtrl" class="scenicOrderKnow">
+    <div class="header">
+    <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        &lt;{{scenicName}}&gt;交通信息
+    </div>
+    <div class="wrapper" id="wrapper">
+        <div id="index">
+            <!-- 预订须知 -->
+            <div class="main_cont">
+                <!-- Notice BEGIN -->
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        景区地址
+                    </div>
+                    <div class="notice-content">
+                        <p>{{address}}</p>
+                    </div>
+                </div>
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        交通说明
+                    </div>
+                    <div class="notice-content">
+                        <p>{{trafficGuide}}</p>
+                    </div>
+                </div>
+                <!-- Notice END -->
+            </div>
+        </div>
+        <!--<div ng-show="loading">-->
+        <!--<div class="yuloading"><span>加载数据中...</span></div>-->
+        <!--</div>-->
+    </div>
+</div>

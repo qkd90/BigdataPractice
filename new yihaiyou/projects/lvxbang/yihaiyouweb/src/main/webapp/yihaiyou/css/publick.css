@@ -1,0 +1,288 @@
+@charset "utf-8";
+* {
+    margin: 0px;
+    padding: 0px
+}
+
+@font-face {
+    font-family: 'yhyfont';
+    src: url('/yihaiyou/font/yhy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+.yhyfont{
+    font-family:"yhyfont" !important;
+    font-size:1.6rem;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -o-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    font-size: 62.5%!important;
+}
+
+body {
+    background-color: #fff;
+}
+
+li {
+    list-style-type: none
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    content: "\200B";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.ticket_main {
+    min-width: 320px;
+    max-width: 640px;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    height: 45px;
+    background-color: #3996fa;
+    line-height: 45px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
+}
+
+.header a {
+    display: block;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.header a:nth-child(1) span {
+    display: block;
+    width: 40px;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.header a:nth-child(2) span {
+    display: block;
+    width: 40px;
+    height: 45px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.header a:nth-child(1) span img {
+    width: 10px;
+    height: 15px;
+    margin: 15px auto;
+    display: block;
+}
+
+.header a:nth-child(1) span img.logo {
+    width: 40px;
+    height: 20px;
+    margin: 13px auto 5px auto;
+    display: block;
+}
+
+.header a:nth-child(2) span img {
+    width: 20px;
+    height: 20px;
+    margin: 15px auto;
+    display: block;
+}
+
+.header span.save {
+    display: block;
+    width: 40px;
+    height: 45px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 14px;
+}
+
+.header span.save a {
+    display: block;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #fff;
+}
+
+.header span.pic1{
+    width:35px;
+    background:url(/yihaiyou/image/icon-search.png) no-repeat center center;background-size:45% 35%;
+    right:40px;
+}
+.header span.pic2{
+    width:35px;
+    height: 45px;
+    position: absolute;
+    display: block;
+    background:url(/yihaiyou/image/icon-me.png) no-repeat center center;background-size:50% 35%;
+    right:6px;
+}
+
+.header span.pic2_1 {
+    right:30px;
+}
+
+.header span.pic3{
+    width:25px;
+    height:45px;
+    background:url(/yihaiyou/image/help.png) no-repeat center center;background-size:74% 42%;
+    right:10px;
+}
+.header span.picSearch{
+    width:35px;
+    background:url(/yihaiyou/image/icon-search.png) no-repeat center center;background-size:50% 38%;
+    right:5px;
+}
+.blank{
+    width:100%;
+    height:45px;
+}
+.bodyStop{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+}
+
+/*背景颜色*/
+
+/*首页*/
+.in_diy {
+    background: rgb(254,207,47);
+}
+
+.in_boatticket {
+    background: rgb(30,165,254);
+}
+
+.in_seaFund {
+    background: rgb(6,210,118);
+}
+
+.in_ludao {
+    background: rgb(252,111,0);
+}
+
+.in_zhang {
+    background: rgb(135,216,11);
+}
+
+.in_gu {
+    background: rgb(0,211,204);
+}
+
+.in_jin {
+    background: rgb(15,199,249);
+}
+
+.in_sail {
+    background: rgb(137,211,0);
+}
+
+.in_cruis {
+    background: rgb(21,208,197);
+}
+
+.in_youtin {
+    background: rgb(4,209,155);
+}
+
+.in_tra_around {
+    background: rgb(136,159,255);
+}
+
+.in_scenic {
+    background: #ff9f22;
+}
+
+.in_hotel {
+    background: #ff6867;
+}
+
+.in_guider {
+    background: rgb(94,190,230);
+}
+
+.in_guide {
+    background: rgb(137,214,70);
+}
+
+.in_car {
+    background: rgb(79,146,239);
+}
+
+.in_food {
+    background: rgb(255,141,161);
+}
+
+.in_present {
+    background: rgb(255,65,69);
+}
+
+.in_electriguide {
+    background: rgb(255,179,210);
+}
+
+/*个人中心*/
+.per_order {
+    background:#ff7356;
+}
+
+.per_perdiy {
+    background:rgb(145,158,152);
+}
+
+.per_wallet {
+    background: #2db2ff;
+}
+
+.per_collect {
+    background: #89d300;
+}
+
+.per_common {
+    background: #06d276;
+}
+
+.per_evaluation {
+    background: #889fff;
+}
+
+.per_remove {
+    background: #ffb400;
+}
+
+
+
+

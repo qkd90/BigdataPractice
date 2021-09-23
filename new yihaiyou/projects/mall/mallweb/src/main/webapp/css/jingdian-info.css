@@ -1,0 +1,42 @@
+/*!
+ * 景点详情页面 v0.1
+ * Author Jeffrey.
+ * Copyright 2011-2015.
+ */
+
+
+/*景点详情*/
+#jingdian h1.title{font-size:30px;}
+#jingdian h1.title small{display:block; font-size:14px; color:#666; padding-top:20px;}
+#jingdian h1.title small a.map{color:#1c96d9; margin-left:50px;}
+
+.buyaction{margin-top:20px;}
+.buyaction span.price{font-size:16px; color:#666;}
+.buyaction span.price b{color:#ff7700; font-size:30px;}
+.buyaction span.price i{color:#ff7700;}
+.buyaction input{height:50px; font-weight:bold; margin-left:20px;}
+
+#jd-info{background:#fff1e2; border:2px solid #ff9422; padding:15px; margin:10px auto;}
+#jd-info h2.title{font-size:24px;}
+#jd-info .media-left{padding-right:50px;}
+#jd-info .content{color:#666; padding:15px 0; border-bottom:1px solid #ff9422; min-height:80px; margin-right:100px;}
+#jd-info .ydlc{background:url(../images/ico6.jpg) left center no-repeat; padding:10px 10px 10px 30px; margin:20px auto;}
+#jd-info .share{font-size:14px;}
+
+.jd-box{border:1px solid #ebebeb; margin:20px auto;}
+.jd-box h5{background:#fff1e2; height:50px; line-height:50px; margin:0;}
+.jd-box h5 a{color:#ff9524; display:inline-block; padding:0 30px;}
+.jd-box h5 a:hover,.jd-box h5 a.curr{background:#ff9524; color:#fff;}
+.jd-box h4{background:#ff9627; height:50px; line-height:50px; margin:0; font-size:16px; color:#fff; padding-left:20px;}
+
+.jd-box .table-top{background:#f7f7f7;}
+.jd-box .table-top td{padding:10px; border:none;}
+.jd-box td{padding:20px; border-top:1px solid #ededed;}
+.jd-box td.border-right{border-right:1px solid #ededed;}
+
+.jd-box-content{padding:30px;}
+.jd-box-content h6{background:#efefef; font-size:16px; color:#fff; height:43px; margin:20px auto;}
+.jd-box-content h6 span.subtitle{background:#ffa127 url(../images/subtitle-right.jpg) right center no-repeat; line-height:43px; display:inline-block; padding-left:10px; padding-right:35px;}
+.jd-box-content h6 span.subtitle span{background:url(../images/subtitle-ico.jpg) left center no-repeat; padding-left:20px;}
+
+.commission-hide {display: none}

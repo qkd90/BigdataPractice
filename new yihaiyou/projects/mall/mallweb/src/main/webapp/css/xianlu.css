@@ -1,0 +1,39 @@
+/*!
+ * 旅游线路 v0.1
+ * Author Jeffrey.
+ * Copyright 2011-2015.
+ */
+
+
+/*属性筛选*/
+.typelist{color:#666; padding:30px 30px 10px 30px;}
+.typelist dt{font-weight:normal; float:left; width:160px;}
+.typelist dt span{display:inline-block;}
+.typelist dt span.title{text-align:right; width:80px;}
+.typelist dt span.curr{background:#ff9422; padding:2px 10px; color:#fff; font-size:12px;}
+.typelist dt span a.close{color:#fff;opacity:1; font-weight:normal; margin-left:5px; font-size:14px;}
+.typelist dd{border-bottom:1px dashed #b2b2b2; float:left; width:950px;}
+.typelist dd a{color:#666; padding:5px; float:left; height:30px; margin:0 10px 5px 0; padding:5px 20px; border-radius:5px;}
+.typelist dd a.curr,.typelist dd a:hover{background:#ff9422; color:#fff;}
+.typelist dd a.update{background:url(../images/update.jpg) left center  no-repeat; padding-left:20px; color:#1c96d9;}
+.typelist dl.last dd{border-bottom:none;}
+
+/*排序*/
+.sortby{border:1px solid #e5e5e5; text-align:center; background:#fff;}
+.sortby a.top{float:left; border-left:1px solid #e5e5e5; border-top:2px solid #fff; height:45px; line-height:45px; padding:0 50px;}
+.sortby a.top.curr,.sortby a.top:hover{border-top:2px solid #1c96d9;}
+.sortby a.price span.qj{border:1px solid #e5e5e5; padding:5px 20px;}
+.sortby a.price:hover span.qj{border-bottom:1px solid #fff; position:relative; z-index:99999;}
+.price-sub{color:#999; border:1px solid #e5e5e5; display:block; width:540px; padding:9px;position:absolute; margin-left:309px; margin-top:45px; z-index:9999; background:#fff;}
+.price-sub a{color:#999; float:left; border-left:1px solid #f1e3db; padding:0 15px; line-height:27px;}
+.price-sub a.first{border-left:none;}
+.price-sub input.text{width:64px; height:25px; border:1px solid #e5e5e5;}
+.price-sub input.button{border:none; background:#a1a1a1; color:#fff; padding:3px 10px;}
+
+/*列表*/
+.listtop{background:#f7f7f7; height:44px; line-height:44px; padding:0 15px;}
+.list{border-bottom:1px solid #ebebeb; padding-bottom:20px; margin-bottom:20px;}
+.list dt{margin-bottom:10px;}
+.list dt a{color:#1c96d9;}
+.list dd{line-height:180%;}
+.list .action a{margin-bottom:10px;}

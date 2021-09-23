@@ -1,0 +1,51 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="lvxbangweb:war exploded">
+    <output-path>$PROJECT_DIR$/lvxbang/lvxbangweb/target/lvxbangweb-0.0.1-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="lvxbangweb" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="lvxbangservice-0.0.1-SNAPSHOT.jar">
+            <element id="module-output" name="lvxbangservice" />
+          </element>
+          <element id="library" level="project" name="Maven: com.data.data:coressh4:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:areaservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:search:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:lineservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:scenicservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:userservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:restaurantservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:hotelservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:trafficservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:handdrawingservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:planservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:frame:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:shopcartservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:payservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:common:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:lxbcommonservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-test:4.2.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.2.1.RELEASE" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Maven: com.data.data:impressionservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:salesservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.hmly.3rdjar:qq:qzone" />
+          <element id="library" level="project" name="Maven: com.hmly.3rdjar:weibo:sina" />
+          <element id="library" level="project" name="Maven: com.data.data:discount:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:builder:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:otherweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: org.xhtmlrenderer:core-renderer:R8" />
+          <element id="library" level="project" name="Maven: com.lowagie:itext:2.0.8" />
+          <element id="library" level="project" name="Maven: bouncycastle:bcmail-jdk14:138" />
+          <element id="library" level="project" name="Maven: bouncycastle:bcprov-jdk14:138" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/lvxbang/lvxbangweb/target/lvxbangweb-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="lvxbangweb/web/Web" />
+    </root>
+  </artifact>
+</component>

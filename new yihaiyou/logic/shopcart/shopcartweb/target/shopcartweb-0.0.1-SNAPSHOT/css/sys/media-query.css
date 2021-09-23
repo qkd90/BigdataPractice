@@ -1,0 +1,290 @@
+﻿/* S-媒体查询，根据窗口大小设置不同样式 */
+@media screen and (min-width:1400px){
+    
+    body, select, input ,button{
+        font-family:Microsoft YaHei !important;
+    }
+}
+/* @media screen and (max-width:800px){
+    .b-productAdd .batchList,
+    .b-productAdd .batchList button,
+    .b-productAdd .batchList input,
+    .b-productAdd .batchList select,
+    .b-productAdd .footerbar button,
+    .b-productAdd .footerbar input,
+    .b-productAdd .batchList select,
+    .b-productAdd .batchList th,
+    .b-productAdd .importList,
+    .pop-checkOut .bill-bottom,
+    .pop-chooseGoods input,
+    .pop-chooseGoods select
+    {
+        font-size:12px !important;
+    } 
+} */
+@media screen and (max-width:900px) {
+    select {
+        padding:3px 3px 4px 3px;
+        border:1px solid #d0d0d0;
+    }
+    .b-main .tabmenu{
+        font:16px/7vh Microsoft YaHei !important;
+    }
+    .g-main .g-topbar {
+        font-size:12px !important;
+    }
+    .ui-tab-01 {
+        font-size:12px !important;
+    }
+    .ui-table .ui-table-header th {
+        font-size:14px !important;
+    }
+    .ui-table .ui-table-content td {
+        font-size:14px !important;
+    }
+    .g-footer {
+        font-size:12px !important;
+    }
+    .ui-dialog .ui-dialog-header .ui-title,
+    .pop-chooseGoods .goods-left p,
+    .pop-chooseOtherGoods .bottom
+     {
+        font-size:14px !important;
+    }
+    .b-system .left-td .navmenu > li {
+        font-size:14px !important;
+    }
+    .b-system .left-td .navmenu > li.select {
+        font-weight:bold !important;
+    }
+    .b-system .left-td .submenu {
+        font-size:14px !important;
+    }
+    .b-system .left-td .submenu > li.select {
+        font-weight:bold !important;
+    }
+    .pop-addMember p {
+        font-size:14px !important;
+    }
+    .ui-btn-07,.ui-btn-02,.ui-btn-05,.ui-btn-06,.ui-btn-10{
+        font-size:14px !important;
+    }
+    .ui-ico-add,.ui-ico-focus {
+        font-size:16px !important;
+    }
+    .ui-txt01,.ui-txt02,.ui-btn-03  {
+        font-size:12px !important;
+    }
+    .ui-ico-opengood ,.ui-ico-discard,.ui-dialog .ui-ico-close,.ui-ico-search,.ui-ico-editor,.ui-ico-time,.ui-dialog .ui-ico-closebg{
+        font-size:20px !important;
+    }
+    .ui-ico-cfg,.b-productAdd .importb .importwayTop,.b-productAdd .importb .importwayFooter {
+        font-size:16px !important;
+    }
+    .ui-ico-listype-list,.ui-ico-listype-grid {
+        font-size:14px !important;
+    }
+    .b-main .tabmenu i,.ui-ico-hint,.pop-chooseOtherGoods .no-product .j-quickAdd i.ui-ico-add,.b-productAdd .oneadd span i.ui-ico-search{
+        font-size:24px !important;
+    }
+    .b-system .left-td li i[class^='ui-ico-'] {
+        font-size:20px !important;
+    }
+    .b-system .left-td {
+        width:140px;
+    }
+    .b-main .tabmenu i.ui-ico-bg { 
+        position:absolute;
+        background:#fff;  
+        top:9px;
+        left:1px;
+        right:4px;
+        bottom:11px;
+        z-index:1;
+    }
+    .g-fs-20 {
+        font-size:18px !important;
+    }
+    .pop-chooseOtherGoods .no-product .j-quickAdd,.pop-chooseOtherGoods .bottom i.ui-ico-state {
+        font-size:20px !important;
+    }
+    .b-productAdd .oneadd span i.ui-ico-search {
+        font-size:24px !important;
+        margin-top:-12px !important;
+    }
+    .b-backstage .datamapList,.b-productAdd .importList a.history,.b-productAdd .importb .importHistory,.b-productAdd .importb .importwayTop a.importBack {
+        font-size:12px !important;
+    }
+    .pop-record .record-bottom .record-label,.pop-record .record-top {
+        font-size:12px !important;
+    }
+    .ui-page .ui-ico-arrow-pl,.ui-page .ui-ico-arrow-pr,.ui-combobox .ui-ico-arrow-d {
+        font-size:12px !important;
+    }
+    .b-membersAdd .maincont,
+    .pop-membersInfo .maincont,
+    .b-supplierAdd .maincont,
+    .b-productAdd .maincont,
+    .b-productAdd .maincont input,
+    .b-productAdd .maincont select,
+    .pop-systemSet,
+    .g-fs-16,
+    .b-category .catelist .cate,
+    .b-product .productg .goodinfo,
+    .b-storeSet .g-main,
+    .b-storeSet .g-main input,
+    .b-staffAdd .maincont,
+    .b-partSet
+     {
+        font-size:14px !important;
+    }
+    .b-product .productb td input[type='text'],.b-product .productb td select{
+        font-size:14px !important;
+    }
+    .pop-checkOut .coupon-pop input {
+        font-size:2.2vw !important;
+    }
+    .pop-systemSet .facilitySet .oneadd p.g-fs-16,.b-sale .g-main .g-footer i.ui-ico-navbg,.b-sale .g-main .g-footer i.ui-ico-back {
+        font-size: 18px !important;
+    }
+    .pop-record .record-bottom .checkout label.g-fs-20,.ui-select {
+        font-size: 12px !important;
+    }
+    .b-system .left-td .navmenu > li .j-topmenu,.pop-chooseOtherGoods .bottom i.ui-ico-larrow,.pop-chooseOtherGoods .bottom i.ui-ico-rarrow {
+        font-size:16px !important;
+    }
+} 
+@media screen and (min-width:1400px) {
+    select {
+        padding:6px 6px 7px 6px;
+        border:1px solid #d0d0d0;
+    }
+    .g-main .g-topbar {
+        font-size:21px !important;
+    }
+    .ui-tab-01 {
+        font-size:21px !important;
+    }
+    .ui-table .ui-table-header th {
+        font-size:21px !important;
+    }
+    .ui-table .ui-table-content td {
+        font-size:21px !important;
+    }
+    .g-footer,.pop-chooseOtherGoods .bottom {
+        font-size:21px !important;
+    }
+    .ui-dialog .ui-dialog-header .ui-title,
+    .pop-chooseGoods .goods-left p
+    {
+        font-size:21px !important;
+        font-weight:normal;
+    }
+    .b-system .left-td .navmenu > li {
+        font-size:21px !important;
+    }
+    .b-system .left-td .submenu {
+        font-size:21px !important;
+    }
+    .pop-addMember p ,
+    .b-productAdd .importb .importwayTop,.b-productAdd .importb .importwayFooter,.b-productAdd .importb .importwayTop a.importBack{
+        font-size:21px !important;
+    }
+    .ui-btn-07,.ui-btn-02,.ui-btn-05,.ui-btn-06,.ui-btn-10,.ui-btn-03 {
+        font-size:21px !important;
+    }
+    .ui-ico-add {
+        font-size:24px !important;
+    }
+    .ui-ico-focus {
+        font-size:32px !important;
+    }
+    .ui-txt01,.ui-txt02 {
+        font-size:21px !important;
+    }
+    .ui-ico-opengood,.ui-ico-discard,.ui-dialog .ui-ico-close,.ui-ico-search,.ui-ico-editor,.ui-ico-time,.ui-dialog .ui-ico-closebg {
+        font-size:40px !important;
+    }
+    .ui-ico-cfg {
+    font-size:32px !important;
+    }
+    .ui-ico-listype-list,.ui-ico-listype-grid {
+    font-size:24px !important;
+    }
+    .ui-ico-hint,.pop-chooseOtherGoods .no-product .j-quickAdd i.ui-ico-add {
+        font-size:48px !important;
+    }
+    .b-system .left-td li i[class^='ui-ico-'],
+    .b-sale .g-main .g-footer i.ui-ico-navbg,
+    .b-sale .g-main .g-footer i.ui-ico-back,
+    .pop-chooseOtherGoods .bottom i.ui-ico-larrow,.pop-chooseOtherGoods .bottom i.ui-ico-rarrow {
+        font-size:28px !important;
+    }
+    .b-system .left-td {
+        width:220px;
+    }
+    .g-fs-20,.pop-chooseOtherGoods .bottom i.ui-ico-state {
+        font-size:36px !important;
+    }
+    .pop-chooseOtherGoods .no-product .j-quickAdd {
+        font-size:40px !important;
+    }
+    .b-productAdd .oneadd span i.ui-ico-search {
+        font-size:48px !important;
+        margin-top:-24px !important;
+    }
+    .b-productAdd .oneadd button.ui-btn-06 ,.b-backstage .hintList p.g-fs-20{
+        font-size:30px !important;
+    }
+    .b-backstage .datamapList {
+        font-size:21px !important;
+    }
+    .pop-record .record-bottom .record-label,.b-productAdd .importList a.history,.b-productAdd .importb .importHistory {
+        font-size:18px !important;
+    }
+    .pop-record .record-top {
+        font-size:21px !important;
+    }
+    .ui-page .ui-ico-arrow-pl,.ui-page .ui-ico-arrow-pr,.ui-combobox .ui-ico-arrow-d {
+        font-size:18px !important;
+    }
+    .b-membersAdd .maincont,
+    .pop-membersInfo .maincont,
+    .b-supplierAdd .maincont,
+    .b-productAdd .maincont,
+    .pop-systemSet,
+    .g-fs-16,
+    .b-category .catelist .cate,
+    .b-product .productg .goodinfo,
+    .b-storeSet .g-main,
+    .b-storeSet .g-main input,
+    .b-staffAdd .maincont,
+    .b-partSet,
+    .ui-select
+     {
+        font-size:21px !important;
+    }
+    .b-membersAdd em,.pop-membersInfo em,.b-supplierAdd .maincont em,.b-productAdd .maincont em {
+        font-size:22px !important;
+    }
+    .b-product .productb td input[type='text'],.b-product .productb td select,.b-productAdd .maincont em.g-c-51a{
+        font-size:21px !important;
+    }
+    .b-product .g-footer span b.g-fs-20,
+    .b-members .g-footer span b.g-fs-20,
+    .b-supplier .g-footer span b.g-fs-20
+     {
+        font-size:24px !important;
+    }
+    .pop-checkOut .coupon-pop input {
+        font-size:2.2vw !important;
+    }
+    .pop-systemSet .facilitySet .oneadd p.g-fs-16 {
+        font-size: 40px !important;
+    }
+
+
+}
+
+
+/* E-媒体查询，根据窗口大小设置不同样式 */

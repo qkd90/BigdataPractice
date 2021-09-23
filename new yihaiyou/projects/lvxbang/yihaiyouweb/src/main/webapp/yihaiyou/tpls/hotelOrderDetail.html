@@ -1,0 +1,38 @@
+<div class="personal_cruiseDetail personal_hotelDetail" ng-controller="hotelOrderDetailCtrl" screenheight>
+    <div class="header">
+        <a ng-click="back()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        酒店订单详情
+    </div>
+    <div class="ticketdetail">
+        <p><span>订单号码：</span>{{order.orderNo}}</p>
+
+        <p><span>订单状态：</span>{{order.status}}</p>
+
+        <p ng-if="order.orderStatus == 'FAILED'"><span>失败原因：</span>{{order.msg}}</p>
+    </div>
+    <div class="ticketdetail hoteldetail">
+        <h3>{{order.name}}</h3>
+
+        <p>{{order.address}}</p>
+    </div>
+    <a href="tel:{{order.hotelTelephone}}"><div class="hotelphone">酒店号码：<span>{{order.hotelTelephone}}</span></div></a>
+    <div class="hotelt" ng-if="order.codes.length > 0">验证码：<span ng-repeat="code in order.codes">{{code.code}}<span ng-if="code.used == 1">（已使用）</span><span ng-if="code.used == -1">（无效）</span> </span></div>
+    <div class="hotelt">入离日期：<span>{{startDate}}-{{endDate}}</span><span class="totalDay">共{{order.day}}晚</span></div>
+    <div class="ticketdetail thetop">
+        <p><span>入住房型：</span>{{order.roomName}}</p>
+
+        <p><span>最晚到店：</span>{{startDate}} 21:00</p>
+
+        <p><span>入住人：</span><span ng-repeat="tourist in order.tourists" style="color: #7c7b7b;">{{tourist.name}} </span>
+        </p>
+
+        <p><span>联系电话：</span>{{order.contact.telephone}}</p>
+
+        <p><span>早餐信息：</span>{{breakfast}}</p>
+
+        <p><span>发票信息：</span>酒店开具</p>
+    </div>
+    <div class="blank"></div>
+    <!--<div class="savechange">申请退款</div>-->
+    <div class="personalTopay" ui-sref="orderPay({orderId: order.id})" ng-if="order.orderStatus == 'WAIT'">去支付</div>
+</div>

@@ -1,0 +1,249 @@
+<div class="youlunlist" ng-controller="cruiseShipDetailCtrl">
+    <div class="yl_header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        邮轮信息详情
+    </div>
+    <div id="publicNotice" data-channel="youlun"></div>
+    <div class="content" style="padding: 0 5px 15px 5px;">
+        <div class="screen screen_first">
+            <!-- 头图 -->
+            <div class="top">
+                <img bn-lazy-src="{{ship.coverImage}}" style="height: 100%;">
+                <span class="span_message">编号：<span>{{ship.productNo}}</span></span>
+                <span class="collect" ng-click="addCollect()" ng-class="{collected: isCollect}" style="right: 10px;"></span>
+
+                <p class="top_title" ng-if="ship.brand != null && ship.brand.length > 0">【{{ship.brand}}】</p>
+            </div>
+            <!-- 线路信息 -->
+            <div class="ship_msg_f">
+                <div class="f_ship">
+                    <p class="line_name">{{ship.name}}</p>
+
+                    <p class="ship_line">途径：{{ship.route}}</p>
+                </div>
+                <div class="price">
+                    <span><b>¥<strong>{{date.minSalePrice}}</strong></b>/人起</span>
+                </div>
+            </div>
+            <!-- 航线日期 -->
+            <div class="date_line" ng-show="date.id != null">
+                <span class="date_icon"></span>
+            <span class="date_txt">
+                {{date.startDate}}&nbsp;{{date.startWeek}}启航&nbsp;&nbsp;
+                {{date.endDate}}&nbsp;{{date.endWeek}}返航
+            </span>
+            </div>
+        </div>
+        <!-- 舱房选择 -->
+        <div class="screen screen_cabin">
+            <div class="screen_cabin_box">
+                <h3 class="d_h">舱房选择</h3>
+            </div>
+            <div class="screen_cabin_box cabin_line" ng-repeat="room in roomTypes">
+                <div class="cabin_left">
+                    <p class="cabin_title">{{room.roomTypeDesc}} &nbsp;<span class="exp" ng-click="showCangFang($index)">舱房说明</span></p>
+                    <!--<p class="cabin_txt">{{room.area}}<span>&nbsp;</span>{{room.facilities | trustHtml}}<span>&nbsp;</span>入住{{room.peopleNum}}人-->
+                    <!--</p>-->
+                </div>
+                <div class="cabin_right">
+                    <a class="">
+                        <span class="cabin_price"><b>¥<strong>{{room.price}}</strong></b>/人起</span>
+                        <!--<span class="cabin_btn" ng-click="toOrder(this.room.roomType)">预订</span>-->
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div ng-repeat="roomType in roomTypes" class="cangfang" ng-show="$index==cangfang">
+            <div class="cangfangzehzhao1" ng-repeat="room in roomType.roomList"  >
+                <h3>{{room.name}}
+                    <img src="/yihaiyou/image/ico/i6@2x.png" ng-if="$index == 0" ng-click="hideCangFang()">
+                </h3>
+                <div class="cangfangpic"><img bn-lazy-src="{{room.coverImage}}?imageView2/1/w/400/h/312/q/90"></div>
+                <div class="cangfangmess">
+                    <ul>
+                        <li>房间面积 <span>{{room.area}}</span></li>
+                        <li>容纳人数 <span>{{room.peopleNum}}人</span></li>
+                        <li>位于甲板 <span>{{room.deck}}</span></li>
+                        <li>服务设施 <span ng-bind-html="room.facilities | trustHtml"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <!--<div class="cangfangintro">-->
+                <!--<h3>舱房简介</h3>-->
+                <!--<p>-->
+                    <!--私人阳台休息区，2张单人床，部分房间配有第3/4张床，有沙发和设施齐全的浴室。阳台房有更好的私密性，不受打扰的享受私人空间。-->
+                    <!--私人阳台休息区，2张单人床，部分房间配有第3/4张床，有沙发和设施齐全的浴室。阳台房有更好的私密性，不受打扰的享受私人空间。-->
+                    <!--私人阳台休息区，2张单人床，部分房间配有第3/4张床，有沙发和设施齐全的浴室。阳台房有更好的私密性，不受打扰的享受私人空间。-->
+                    <!--私人阳台休息区，2张单人床，部分房间配有第3/4张床，有沙发和设施齐全的浴室。阳台房有更好的私密性，不受打扰的享受私人空间。-->
+                    <!--私人阳台休息区，2张单人床，部分房间配有第3/4张床，有沙发和设施齐全的浴室。阳台房有更好的私密性，不受打扰的享受私人空间。-->
+                <!--</p>-->
+            <!--</div>-->
+        </div>
+        <div class="listbar">
+            <ul>
+                <!--<li ng-click="sliderb(0)">{{ship.playDay}}日行程</li>-->
+                <li ng-click="sliderb(0)">行程介绍</li>
+                <li ng-click="sliderb(1)">邮轮介绍</li>
+                <li ng-click="sliderb(2)">预订须知</li>
+            </ul>
+            <div class="sliderbar"></div>
+        </div>
+        <!-- 线路行程明细 -->
+        <style>
+            .item .icon-hotel:before {
+                content: normal;
+            }
+
+            .item .icon-time:before {
+                content: normal;
+            }
+        </style>
+        <div class="screen screen_trip" ng-show="day_march" style="margin-bottom: 45px;">
+            <div class="trip_box" ng-repeat="day in ship.planDays" style="margin-bottom: 10px">
+                <h3 class="trip_title">
+                    <span class="date">第{{day.day}}天</span>
+                            <span class="city">
+                                {{day.dayDesc}}
+                            </span>
+                    （{{day.showDate}}）
+                </h3>
+
+                <div class="item">
+                    <i class="icon-time"></i>
+                    <span>抵达时间：{{day.arriveTime}}</span>
+                    <span>启航时间：{{day.leaveTime}}</span>
+                </div>
+                <div class="item"><i class="icon-hotel"></i>{{day.hotelName}}</div>
+                <div class="item">
+                    <i class="icon-eat"></i>
+                    早餐-{{day.breakfast}}&nbsp;&nbsp;中餐-{{day.lunch}}&nbsp;&nbsp;晚餐-{{day.supper}}
+                </div>
+                <div class="view-info">
+                    <p><span ng-bind-html="day.arrange | trustHtml"></span>
+                    </p>
+                    <span></span>
+                </div>
+                <div class="putdown" show-more show-height="68" complete-flag="{{completeFlag}}"
+                     show-text="收起" hide-text="查看更多">查看更多
+                </div>
+            </div>
+        </div>
+        <div class="screen screen_trip" ng-show="boat_introduce" style="margin-bottom: 45px;">
+            <!-- 船队介绍 -->
+            <div class="boat_list">
+                <div class="boat_box">
+                    <h3 class="tb_title">{{ship.brand}}简介</h3>
+
+                    <p ng-bind-html="ship.extend.introduction | trustHtml"></p>
+                </div>
+            </div>
+            <!--舱房介绍-->
+            <!--<div class="boat_list" ng-repeat="room in rooms">-->
+                <!--<div class="boat_box">-->
+                    <!--<h3 class="d_h roomde">{{room.roomTypeDesc}}</h3>-->
+                    <!--<img class="boat_img lazyload-img" bn-lazy-src="{{room.coverImage}}" style="height:180px">-->
+
+                    <!--<div class="boat_txt">-->
+                        <!--<p>-->
+                            <!--<span class="area">房间面积</span>{{room.area}}-->
+                        <!--</p>-->
+
+                        <!--<p>-->
+                            <!--<span class="number">容纳人数</span>{{room.peopleNum}}-->
+                        <!--</p>-->
+
+                        <!--<p>-->
+                            <!--<span class="deck">位于甲板</span>{{room.deck}}-->
+                        <!--</p>-->
+
+                        <!--<p>-->
+                            <!--<span class="facilities">服务设施</span>{{room.facilities | trustHtml}}-->
+                        <!--</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--饕餮美食-->
+            <div class="boat_list" ng-repeat="deck in ship.decks">
+                <div class="boat_box">
+                    <h3 class="d_h">第{{deck.level}}层</h3>
+                    <div class="boat_note">
+                        简介
+                        <div ng-bind-html="deck.levelDesc | trustHtml"></div>
+                    </div>
+                    <img class="boat_img" bn-lazy-src="{{deck.shapeImage}}">
+                    <div class="boat_note">
+                        设施
+                        <div ng-bind-html="deck.deckFacility | trustHtml"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="screen screen_trip" ng-show="xuzhi">
+            <div class="con_list notice_content" style="margin-bottom: 45px;">
+                <div class="notice_box"
+                     ng-if="ship.extend.quoteContainDesc != null && ship.extend.quoteContainDesc != ''">
+                    <h3>费用包含：</h3>
+
+                    <p ng-bind-html="ship.extend.quoteContainDesc | trustHtml"></p>
+
+                    <p></p>
+                </div>
+                <div class="notice_box"
+                     ng-if="ship.extend.quoteNoContainDesc != null && ship.extend.quoteNoContainDesc != ''">
+                    <h3>费用不包含：</h3>
+
+                    <p ng-bind-html="ship.extend.quoteNoContainDesc | trustHtml"></p>
+
+                    <p></p>
+                </div>
+                <div class="notice_box" ng-if="ship.extend.orderKnow != null && ship.extend.orderKnow != ''">
+                    <h3>预订须知：</h3>
+
+                    <p ng-bind-html="ship.extend.orderKnow | trustHtml"></p>
+
+                    <p></p>
+                </div>
+                <div class="notice_box" ng-if="ship.extend.howToOrder != null && ship.extend.howToOrder != ''">
+                    <h3>如何预订：</h3>
+
+                    <p ng-bind-html="ship.extend.howToOrder | trustHtml"></p>
+
+                    <p></p>
+                </div>
+                <div class="notice_box" ng-if="ship.extend.signWay != null && ship.extend.signWay != ''">
+                    <h3>签约方式：</h3>
+
+                    <p ng-bind-html="ship.extend.signWay | trustHtml"></p>
+
+                    <p></p>
+                </div>
+                <div class="notice_box" ng-if="ship.extend.payWay != null && ship.extend.payWay != ''">
+                    <h3>付款方式：</h3>
+
+                    <p ng-bind-html="ship.extend.payWay | trustHtml"></p>
+
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <!-- 其他更多
+        -->
+        <!--<div class="trip_more">查看更多详细行程...</div>-->
+        <!-- 吸底 -->
+        <div class="as_parent">
+            <div class="d-book">
+                <a class="a-phone" href="javascript:;" ng-click="showPhone()">咨询客服</a>
+                <!--<a class="a-book" ng-click="toOrder('')">如需预订联系客服</a>-->
+                <a class="a-book">如需预订联系客服</a>
+            </div>
+        </div>
+        <div class="shadowkefu" ng-show="kefushadow" ng-click="hidePhone()"></div>
+        <div class="kefu_phone" ng-show="kefubox">
+            <p class="phonenumber">联系客服</p>
+            <p class="callphone"><a href="tel:0597-5829849" style="color: #3996fa;">0592-5826061</a></p>
+        </div>
+    </div>
+</div>

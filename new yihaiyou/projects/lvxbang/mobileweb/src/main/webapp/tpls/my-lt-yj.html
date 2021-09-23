@@ -1,0 +1,25 @@
+<div ng-controller="mylvtuyoujiCtrl">
+<div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+  <ul>
+    <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">我的旅途</a></li>
+  </ul>
+</div>
+<div id="yjcontainer" class="clearfix">
+  <div class="subheader"><a ui-sref="my-lt">印象</a><a ui-sref="my-lt-yj" class="active">游记</a></div>
+  <div class="myltlist clearfix">
+  <div class="my-lt-yjlist clearfix" ng-repeat="data in mylvtuyoujis.youji">
+    <p class="clearfix thumb"><img src="{{data.thumb}}" class="img-responsive" /></p>
+    <a ng-click="deleteRow(this);" class="trash img-circle"><span><img src="images/ico/trash.png" class="img-responsive center-block" /></span></a>
+    <h2 class="text-center"><a ui-sref="{{data.url}}">{{data.title}}</a></h2>
+    <div class="info"><span class="view">{{data.view}}</span><span class="time">{{data.time}}</span></div>
+  </div>
+  </div>
+</div>
+<div class="mybottom text-center col-xs-12 xieyj"><a  ui-sref="my-xieyouji"><span>写游记</span></a></div>
+</div>
+<script>
+//删除线路
+//function deleteRow(obj) {
+//    obj.parents(".my-lt-yjlist").remove();
+//}
+</script>

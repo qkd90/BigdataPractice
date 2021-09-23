@@ -1,0 +1,43 @@
+<div ng-controller="balanceCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">余额</a></li>
+        </ul>
+    </div>
+    <div id="subcontainer" class="clearfix">
+        <div class="my-geren clearfix boxbg">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-xs-6 control-label">余额：</label>
+                    <label class="col-xs-6 control-label" style="text-align: left;">￥{{user.balance}}</label>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-6 control-label">充值/提现金额：</label>
+
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control"
+                               ng-model="price">
+                    </div>
+                </div>
+                <div class="form-group" ui-sref="balanceLog">
+                    <label class="col-xs-1 control-label"></label>
+                    <label class="col-xs-5 control-label" style="text-align: left;">查看余额明细</label>
+                    <label class="col-xs-5 control-label">&gt;</label>
+                    <label class="col-xs-1 control-label"></label>
+                </div>
+                <div class="save clearfix">
+                    <div class="col-xs-6">
+                        <button type="button" class="btn btn-default btn-block btn-lg" ng-click="recharge()"
+                                style="color: #333;">充值
+                        </button>
+                    </div>
+                    <div class="col-xs-6">
+                        <button type="button" class="btn btn-default btn-block btn-lg" ng-click="withdraw()"
+                                style="color: #333;">提现
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

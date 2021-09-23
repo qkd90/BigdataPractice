@@ -1,0 +1,84 @@
+/*登录*/
+.login-bg{background:url(../image/login/regbg.jpg) no-repeat; height:800px;}
+.reg-bg{background:url(../image/login/regbg.jpg) no-repeat; height:1134px;}
+#login .close{margin:10px 5px 10px auto}
+#login .logo{margin-bottom:35px;}
+#login .login-form input.form-control{    height: 40px;
+	line-height: 40px;
+	border: none;
+	background-color: rgba(53,53,53,0.7);
+	color:white;
+	font-size: 14px;
+	margin: 0 auto;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 40px;}
+#login .login-form input.form-control:focus{box-shadow:0 0 0;}
+#login .login-btn{background-color: rgb(255,122,38); height: 40px;
+	border: none;
+	margin: 15px auto;
+	font-size: 20px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	color: white;
+	border-radius: 40px;}
+
+.modal-footer {
+	padding: 0;
+}
+
+#login .reg a,#login .reg span{color:#fff; font-size: 18px;}
+#login .reg span{padding:0 45px;}
+#login .otherlogin{background:url(../image/ico/line.png) center center repeat-x; height:30px; line-height:30px; color:#fff; font-size: 18px; margin:15px auto;}
+#login .otherlogin1 a{display:inline-block; margin:0 30px;}
+#login img.hqyzm{width:70px; height:39px; border:none; margin:-40px 00px auto auto; position:relative;}
+#login button.hqyzm{ width:153px; height:39px; border:none; margin:-40px 0px auto auto; position:relative;background-color:#fff!important}
+#login .reg-btn{background:url(../image/login/reg-btn.png) no-repeat; width:588px; height:84px; border:none; margin:75px auto;}
+#login .tiaokuan a{color:#fff; font-size:12px; padding-left:10px;}
+#login .tiaokuan a span{text-decoration:underline; padding-left:10px;}
+
+.modal-body {
+	font-size: 14px!important;
+	padding-bottom: 34px!important;
+	padding-top: 28px!important;
+	text-align: center;
+	width: 100%;
+	color: #1a1a1a;
+}
+
+.modal-footer .btn {
+	background: #f7f7f7!important;
+	font-size: 16px;
+	border: none;
+	padding: 0;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 0px;
+	color: #35bf83!important;
+	margin: 0;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.scenicTicketOrder .verify {
+	width:180px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

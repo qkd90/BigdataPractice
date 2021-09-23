@@ -1,0 +1,21 @@
+<div class="diymarch_addTour personal_addTour" ng-controller="personalTouristListCtrl">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        选择常用联系人
+    </div>
+    <div class="blank"></div>
+    <div class="searchbox clearfix">
+        <input class="editorPersonal" type="text" placeholder="输入常用联系人" ng-model="keyword" ng-keyup="search()" /><label class="editor" ui-sref="personalWriteTourMess"><label>＋</label> </label>
+    </div>
+    <div class="seltour">
+        <ul>
+            <li ng-repeat="tourist in touristList" ui-sref="personalWriteTourMess({touristId: tourist.touristId})" ng-if="tourist.show">
+                <span>{{tourist.name}}</span>
+                <span>{{tourist.showType}}</span>
+                <span class="phone">{{tourist.telephone}}</span>
+                <span class="deletetour" ng-click="delete(tourist, $event)"><img
+                        src="/yihaiyou/image/personal/garbage.jpg"></span>
+            </li>
+        </ul>
+    </div>
+</div>

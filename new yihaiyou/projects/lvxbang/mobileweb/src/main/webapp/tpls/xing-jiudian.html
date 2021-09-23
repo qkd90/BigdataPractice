@@ -1,0 +1,38 @@
+<div ng-controller="xingjiudianCtrl" class="xing_jiudian">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">添加酒店</a></li>
+        </ul>
+    </div>
+    <div id="yjcontainer" class="clearfix">
+        <div ng-if="ajaxloading"><div class="yuloading"><span>智能推荐酒店中...</span></div></div>
+        <div ng-show="nohotels" class="alert alert-danger text-center nomore">没有找到比较合适的酒店</div>
+        <div class="top_bordiv"></div>
+        <div class="panel panel-default jiudian" ng-repeat="hotel in hotels">
+            <div class="panel-heading citytitle"><span>{{hotel.city.name}}</span></div>
+            <div class="panel-body jiusianlist">
+                <div class="row" id="xzjd">
+                    <div class="col-xs-5" style="padding-left: 0px;width:34%;padding-right:0px"><span class="img jiudianimg"><img bn-lazy-src="{{hotel.cover}}"/></span>
+                        <div id="jdcheckbox" style="background-size:46px;">
+                            <input ng-if="hotel.checked" selectjiudian checked name="{{hotel.id}}" type="checkbox" value="" />
+                            <input ng-if="!hotel.checked" selectjiudian name="{{hotel.id}}" type="checkbox" value=""/>
+                        </div>
+                    </div>
+                    <div class="col-xs-7 body pl0pr0 jiudianright  jiudianr">
+                        <!--<p ><a ng-click="jiudianDetail(this)">{{hotel.name}}</a></p>-->
+                        <p class="jiudianming morefont" title="hotel.name"><a ng-click="jiudianDetail(this)">{{hotel.name}}</a></p>
+                        <p class="fen">{{hotel.score}}分</p>
+                        <p class="address">{{hotel.address}}</p>
+                        <p class="clearfix sure_gh">
+                            <span class="price pull-right">￥{{hotel.price}}起</span>
+                            <button type="button" class="genhuan pull-right genghuanbt" ng-click="search(this)">更换</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="listsec"></div>
+        </div>
+    </div>
+    <div class="mybottom text-center col-xs-12 orderpay"><a class="xiugai col-xs-6 pl0pr0" ng-click="finish()">完成</a><a
+            ng-click="buy()">立即购买</a></div>
+</div>

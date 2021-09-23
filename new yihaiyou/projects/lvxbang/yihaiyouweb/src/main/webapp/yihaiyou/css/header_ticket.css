@@ -1,0 +1,1065 @@
+.swipe, .swipe-items-wrap {
+    overflow: hidden;
+    position: relative
+}
+
+.swipe-items-wrap {
+    height: 100%
+}
+
+.swiper-container .swipe-items-wrap {
+    height: 140px;
+}
+
+.swipe-items-wrap > div {
+    position: absolute;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    width: 100%;
+    height: 100%;
+    display: none
+}
+
+.swipe-items-wrap > div.active {
+    display: block;
+    -webkit-transform: none;
+    transform: none
+}
+
+.swipe-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.swipe-indicator {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #000;
+    opacity: .2;
+    margin: 0 3px
+}
+
+.swipe-indicator.active {
+    background: #fff
+}
+
+.loading {
+    background-color: #fff;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.loading .spinner {
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: -webkit-gradient(radial, 100% 50%, 0, 100% -38%, 100, from(#1dbd8d), to(hsla(0, 0%, 100%, 0)));
+    border-radius: 100%;
+    -webkit-animation: rotate 2s linear 0s infinite;
+    animation: rotate 2s linear 0s infinite
+}
+
+.loading .spinner .spinner-inner {
+    position: relative;
+    top: 3px;
+    left: 3px;
+    width: 62px;
+    height: 62px;
+    background-color: #fff;
+    border-radius: 100%
+}
+
+.loading .spinner .cutout {
+    position: absolute;
+    top: 34px;
+    left: 35px;
+    border-right: 34px solid #fff;
+    border-bottom: 34px solid #fff;
+    width: 0;
+    height: 0
+}
+
+.loading .spinner .s-circle {
+    width: 3px;
+    height: 3px;
+    background-color: #1dbd8d;
+    position: absolute;
+    top: 33px;
+    right: 0;
+    border-radius: 3px
+}
+
+.loading .loading-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #1dbd8d;
+    opacity: .8
+}
+
+.loading .loading-logo .icon-logo {
+    font-size: 40px
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: translate(-50%, -50%) rotate(0);
+        transform: translate(-50%, -50%) rotate(0)
+    }
+    to {
+        -webkit-transform: translate(-50%, -50%) rotate(1turn);
+        transform: translate(-50%, -50%) rotate(1turn)
+    }
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: translate(-50%, -50%) rotate(0);
+        transform: translate(-50%, -50%) rotate(0)
+    }
+    to {
+        -webkit-transform: translate(-50%, -50%) rotate(1turn);
+        transform: translate(-50%, -50%) rotate(1turn)
+    }
+}
+
+.city-picker-mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    display: block;
+    opacity: .85;
+    background: #fff
+}
+
+.city-wrapper {
+    position: relative;
+    padding-top: 45px;
+    width: 100%;
+    height: 100%
+}
+
+.no-header {
+    padding-top: 0
+}
+
+.search-list {
+    position: relative;
+    top: 46px;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff
+}
+
+.letter-list H3 {
+    line-height: 30px;
+    padding-left: 20px;
+    background-color: #f5f5f5;
+    color: #222
+}
+
+.letter-city-list {
+    font-size: 14px;
+    margin-left: 15px;
+    margin-right: 15px;
+    list-style: none
+}
+
+.letter-city-list li {
+    line-height: 45px;
+    padding-left: 5px;
+    border-bottom: 1px solid #eee
+}
+
+.city-header {
+    width: 100%;
+    background-color: #f4f4f4;
+    height: 44px;
+    border-bottom: 1px solid #d4d4d4;
+    line-height: 44px;
+    position: fixed;
+    z-index: 199
+}
+
+.city-header .city-header-back {
+    position: absolute;
+    padding: 0 10px;
+    font-size: 1.6rem
+}
+
+.city-header h1 {
+    text-align: center;
+    font-size: 1.6rem
+}
+
+.city-header i {
+    color: #33bd61
+}
+
+.search-box {
+    position: fixed;
+    display: -webkit-box;
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+    padding: 8px 15px;
+    background-color: #f3f2f5;
+    z-index: 200
+}
+
+.search-box .cancel {
+    line-height: 30px;
+    margin-left: 15px;
+    color: #666;
+    font-size: 14px
+}
+
+.search-box .search-input {
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    padding: 0 5px 0 30px;
+    outline: none;
+    font-size: 12px;
+    color: #bbb;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative
+}
+
+.search-box .search-input:focus {
+    width: 100%
+}
+
+.search-box .search-input-ctn {
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1
+}
+
+.search-box .search-input-ctn .search_btn {
+    position: absolute;
+    left: 11px;
+    top: 6px;
+    color: #999;
+    z-index: 1
+}
+
+.search-box .search-input-ctn .search_btn:before {
+    font-size: 18px
+}
+
+.nav-tabs {
+    width: 100%;
+    font-size: 0;
+    display: block;
+    position: relative;
+    letter-spacing: -3px
+}
+
+.nav-tabs li {
+    display: inline-block;
+    letter-spacing: 0;
+    width: 50%;
+    color: #666;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.nav-tabs li span {
+    display: block;
+    line-height: 36px;
+    font-size: 14px;
+    text-align: center
+}
+
+.nav-tabs li.active {
+    color: #33bd61
+}
+
+.nav-tabs:after {
+    display: block;
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background: #33bd62;
+    left: 0;
+    -webkit-transform: translateZ(0);
+    -webkit-transition: -webkit-transform .15s ease-in-out 0s;
+    width: 50%
+}
+
+.nav-tabs.selected:after {
+    -webkit-transform: translate3d(100%, 0, 0)
+}
+
+.city-list {
+    width: 100%;
+    position: relative;
+    top: 46px;
+    background: #fff;
+    font-size: 14px
+}
+
+.city-list .city-section h3 {
+    color: #222;
+    background: #f5f5f5;
+    padding-left: 20px;
+    line-height: 30px
+}
+
+.city-list .text-container {
+    margin: 10px 20px 0 15px;
+    overflow: hidden
+}
+
+.city-list .text-container .text-item {
+    box-sizing: border-box;
+    width: 25%;
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 15px
+}
+
+.city-list .text-container .text-item .item-title {
+    position: relative;
+    line-height: 30px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #222;
+    text-align: center;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.city-list .text-container .text-item.selected .item-title {
+    color: #23cc77;
+    border-color: #23cc77;
+    background-color: #f4fcf8
+}
+
+.city-list .indexer {
+    box-sizing: border-box;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 30px;
+    color: #23cc77;
+    font-size: 10px;
+    font-weight: 700;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    list-style: none
+}
+
+.city-list .indexer li {
+    position: relative;
+    text-align: center;
+    line-height: 16px
+}
+
+.icon-title-back:before {
+    content: "\E65D"
+}
+
+.icon-search4:before {
+    content: "\E916"
+}
+
+.indexer-show {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: -25px;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    background: #23cc77;
+    border-radius: 50%;
+    z-index: 2
+}
+
+.city-picker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    z-index: 200;
+    top: 0;
+    left: 100%;
+    -webkit-transition: left .15s linear .1s;
+    transition: left .15s linear .1s;
+    display: none
+}
+
+.show-city-box {
+    -webkit-transition: all .15s linear .1s;
+    transition: all .15s linear .1s;
+    left: 0
+}
+
+.show-city-box .indexer {
+    display: block
+}
+
+.hide-city-box {
+    -webkit-transition: all .15s linear .1s;
+    transition: all .15s linear .1s;
+    left: 100%
+}
+
+.hide-city-box .indexer {
+    display: none
+}
+
+blockquote, fieldset, {
+    margin: 0;
+    padding: 0
+}
+
+body, html {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: Helvetica;
+    font-size: 1rem
+}
+
+a {
+    color: #000;
+    text-decoration: none
+}
+
+a {
+    text-decoration: none
+}
+
+:focus {
+    outline: none
+}
+
+input::-moz-placeholder {
+    font-size: 1.4rem;
+    color: #bbb
+}
+
+input::-webkit-input-placeholder {
+    font-size: 1.4rem;
+    color: #bbb
+}
+
+input:-ms-input-placeholder {
+    font-size: 1.4rem;
+    color: #bbb
+}
+
+input {
+    font-size: 1.4rem;
+    color: #999
+}
+
+.clearfix-ticket:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.ticket-header {
+    height: 50px;
+    background-color: #fff
+}
+
+.ticket-header .ticket-header-bar {
+    height: 100%;
+    position: relative
+}
+
+.ticket-header .ticket-header-bar .ticket-header-left {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%) rotate(90deg);
+    -webkit-transform: translateY(-50%) rotate(90deg);
+    color: #43c475
+}
+
+.ticket-header .ticket-header-bar .ticket-header-center {
+    position: absolute;
+    left: 50%;
+    height: 50px;
+    line-height: 50px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%)
+}
+
+.ticket-header .ticket-header-bar .ticket-header-center span {
+    font-size: 1.8rem
+}
+
+.ticket-header .ticket-header-bar .ticket-header-center i {
+    font-size: 16px;
+    vertical-align: middle;
+    color: #bbb
+}
+
+.search {
+    height: 30px;
+    margin: 8px;
+    display: -webkit-box;
+    position: relative
+}
+
+.search i {
+    position: absolute;
+    left: 8px;
+    font-size: 16px;
+    color: #bbb;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%)
+}
+
+.search i.icon-search5:before {
+    color: #bbb;
+}
+
+.search .search-container {
+    -webkit-box-flex: 1;
+    flex: 1
+}
+
+.search .search-input {
+    width: 100%;
+    height: 30px;
+    border: .5px solid #ddd;
+    border-radius: 13px;
+    background-color: #f9f9f9;
+    padding-left: 30px;
+    margin-top: 0px;
+}
+
+.destination {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    background-color: #fff
+}
+
+.destination span {
+    font-size: 14px;
+    padding-left: 15px;
+    float: left;
+    color: #33bd61
+}
+
+.destination i {
+    float: right;
+    margin-right: 15px;
+    margin-top: 17px;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    display: inline-block;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg)
+}
+
+.content-container-ticket {
+    width: 100%;
+    height: 100%
+}
+
+.content-container-ticket .swipe-container {
+    width: 100%;
+    height: 140px;
+    background-color: #999;
+    overflow: hidden
+}
+
+.content-container-ticket .swipe-container .swipe {
+    height: 140px
+}
+
+.content-container-ticket .swipe-container .swipe a {
+    display: block;
+    height: 100%
+}
+
+.content-container-ticket .swipe-container img {
+    width: 100%;
+    height: 140px
+}
+
+.content-container-ticket .swipe-container .swipe-indicator {
+    background-color: #fff;
+    opacity: 1
+}
+
+.content-container-ticket .swipe-container .swipe-indicator.active {
+    background-color: #32bd60
+}
+
+.content-container-ticket .tab-ticket {
+    background-color: #fff;
+    margin: 0;
+}
+
+.content-container-ticket .tab-ticket .tab-item-ticket li {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+    height: 50px;
+    border: none;
+}
+
+.content-container-ticket .tab-ticket .tab-item-ticket li p {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    color: #222;
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box
+}
+
+.content-container-ticket .tab-ticket .tab-item-ticket li p .tab-desc {
+    font-size: 1.6rem;
+    vertical-align: middle
+}
+
+.content-container-ticket .tab-ticket .tab-item-ticket li p .tab-img {
+    width: 3rem;
+    padding: 7px 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px
+}
+
+.content-container-ticket .tab-ticket .tab-item-ticket li:first-child p {
+    border-right: 1px solid #ddd
+}
+
+.content-container-ticket .hot-themes-ticket {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 10px
+}
+
+.content-container-ticket .hot-themes-ticket ul {
+    padding-top: 11px;
+    padding-bottom: 2px;
+    margin-right: 6px;
+    margin-left: 15px;
+    overflow: hidden
+}
+
+.content-container-ticket .hot-themes-ticket ul li {
+    width: 25%;
+    padding-right: 9px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-bottom: 9px;
+    float: left
+}
+
+.content-container-ticket .hot-themes-ticket ul li a {
+    display: block;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #f8f9fc;
+    vertical-align: middle;
+    text-align: center;
+    padding: 7px 0;
+    font-size: 1.4rem;
+    color: #222;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.content-container-ticket .hot-scenic {
+    margin-top: 10px;
+    background-color: #fff
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-city {
+    padding-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #222;
+    font-weight: 700
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content {
+    margin-left: 15px;
+    margin-right: 15px
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content ul li {
+    width: 50%;
+    height: 160px;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-bottom: 15px
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content ul li img {
+    width: 100%;
+    height: 100px;
+    display: block
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content ul li .des-content-ticket {
+    height: 60px;
+    background-color: #f8f9fc;
+    position: relative;
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content ul li .des-content-ticket .name {
+    font-size: 14px;
+    color: #222;
+    margin-left: 10px;
+    padding-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Helvetica;
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content ul li .des-content-ticket .price {
+    position: absolute;
+    left: 10px;
+    bottom: 3px;
+    font-size: 12px;
+    color: #999;
+    font-family: Helvetica;
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content ul li .des-content-ticket .price .rmb-symbol {
+    color: #f60;
+    font-family: "Helvetica", "微软雅黑" !important;
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content ul li .des-content-ticket .price .money {
+    color: #f60;
+    font-size: 20px;
+    font-family: Helvetica;
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content ul li .des-content-ticket .distance_ticket {
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-family: Helvetica;
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content ul li:nth-child(odd) {
+    padding-right: 4.5px
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content ul li:nth-child(even) {
+    padding-left: 4.5px
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content .check-more {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-top: -15px
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content .check-more a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #999;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 20px 0
+}
+
+.content-container-ticket .hot-scenic .hot-scenic-content .check-more a i {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg)
+}
+
+.content-container-ticket .assort {
+    background-color: #fff;
+    margin-top: 10px;
+    padding-bottom: 15px
+}
+
+.content-container-ticket .assort .head {
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0 15px;
+    line-height: 45px
+}
+
+.content-container-ticket .assort .head .title {
+    font-size: 15px;
+    color: #222
+}
+
+.content-container-ticket .assort .assort-list {
+    margin-left: 15px;
+    margin-right: 6px;
+    overflow: hidden
+}
+
+.content-container-ticket .assort .assort-list li {
+    width: 33.3%;
+    float: left;
+    padding-right: 9px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative
+}
+
+.content-container-ticket .assort .assort-list li a {
+    display: block
+}
+
+.content-container-ticket .assort .assort-list li img {
+    width: 100%
+}
+
+.content-container-ticket .assort .assort-list li span {
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 62%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    margin-left: -4.5px;
+    white-space: nowrap
+}
+
+.content-container-ticket .assort .assort-list .one-match {
+    width: 100%
+}
+
+.content-container-ticket .assort .assort-list .two-match {
+    width: 50%
+}
+
+.inform-box {
+    width: 100%;
+    margin: 0;
+    background-color: #f8f9fc
+}
+
+.inform-box .inform-list {
+    margin-left: 20px;
+    margin-right: 20px
+}
+
+.inform-box .inform-list li {
+    width: 33.3%;
+    float: left;
+    color: #999;
+    font-size: 0;
+    padding: 15px 0;
+    text-align: center
+}
+
+.inform-box .inform-list li i {
+    vertical-align: middle;
+    margin-right: 10px
+}
+
+.inform-box .inform-list li span {
+    font-size: 1.4rem;
+    vertical-align: middle
+}
+
+.inform-box .inform-list li:first-child {
+    text-align: left
+}
+
+.inform-box .inform-list li:last-child {
+    text-align: right
+}
+
+.city-select {
+    position: relative
+}
+
+.city-select:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-bottom: 1px solid #222;
+    border-right: 1px solid #222;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-left: 5px;
+    position: absolute;
+    margin-top: 15px
+}
+
+@media (max-width: 320px) {
+    .content-container-ticket .assort .assort-list li span {
+        font-size: 12px
+    }
+}
+
+.header-box {
+    background-color: #f4f4f4;
+    height: 44px;
+    border-bottom: #d4d4d4 1px solid;
+    line-height: 44px
+}
+
+.header-box.fixed_ticket {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%
+}
+
+.header-box.fixed_ticket
+i {
+    color: #33bd61
+}
+
+.header-box .header-back {
+    position: absolute;
+    padding: 0 10px;
+    font-size: 1.6rem
+}
+
+.header-box .header-action {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 1.6rem;
+    color: #33bd61
+}
+
+.header-box
+h1 {
+    text-align: center;
+    font-size: 1.6rem
+}
+
+.wrapper-ticket {
+    padding-top: 45px
+}
+
+footer {
+    margin: 20px 0px
+}
+
+footer
+.links {
+    text-align: center
+}
+
+footer .links
+a {
+    display: inline-block;
+    width: 78px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 1.4rem;
+    color: #666;
+    border-right: 1px solid #ccc
+}
+
+footer .links a:last-child {
+    border-right: none
+}
+
+footer
+.icp {
+    height: 50px;
+    line-height: 50px;
+    color: #999;
+    font-size: 1.2rem;
+    text-align: center
+}
+
+footer
+.app_download {
+    margin-top: 8px;
+    overflow: hidden;
+    height: 30px;
+    background: url(/lxb/images/xiaobang_logo.png) no-repeat 29px center;
+    background-size: 30px 30px;
+    padding: 0px 33px 0px 75px
+}
+
+footer .app_download
+span.txt {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    font-size: 1.2rem
+}
+
+footer .app_download
+a {
+    float: right;
+    padding: 0px 15px;
+    border: 1px solid #cecece;
+    border-radius: 3px;
+    height: 28px;
+    line-height: 28px;
+    color: #666;
+    font-size: 1.2rem
+}
+
+.ticket-index {padding-bottom: 0!important;padding-top: 0!important;}
+
+.ticket-index .search{
+    width:calc(100% - 16px);
+    margin:8px;
+}

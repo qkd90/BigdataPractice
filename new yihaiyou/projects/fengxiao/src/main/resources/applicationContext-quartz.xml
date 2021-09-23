@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <!-- 短信发送 -->
+    <bean id="appendOrderTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="sendingMsgService" />
+        </property>
+        <property name="targetMethod">
+            <value>findSendingMsg</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="cronTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="appendOrderTaskJob"></property>
+        <property name="cronExpression" value="0/10 * * * * ?"></property>
+    </bean>
+
+    <!--<bean id="jszxOrderTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+        <!--<property name="targetObject">-->
+            <!--<ref bean="jszxOrderQuartz" />-->
+        <!--</property>-->
+        <!--<property name="targetMethod">-->
+            <!--<value>doAndUpdateJszxOrder</value>-->
+        <!--</property>-->
+        <!--<property name="concurrent">-->
+            <!--<value>false</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="jszxOrderCronTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+        <!--<property name="jobDetail" ref="jszxOrderTaskJob"></property>-->
+        <!--<property name="cronExpression" value="0/10 * * * * ?"></property>-->
+        <!--&lt;!&ndash;<property name="cronExpression" value="0 1 0 * * ?"></property> &lt;!&ndash; 每天零点1分更新 &ndash;&gt;&ndash;&gt;-->
+    <!--</bean>-->
+
+    <!-- 下单定时器-->
+    <bean id="orderApiTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="orderDispatchQuzrtz"/>
+        </property>
+        <property name="targetMethod">
+            <value>doDispatchOrder</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="orderApicronTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="orderApiTaskJob"></property>
+        <property name="cronExpression" value="0/7 * * * * ?"></property>
+    </bean>
+    <!-- 火车票支付定时器-->
+    <bean id="trainTicketPayJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="trainTicketPayQuzrtz"/>
+        </property>
+        <property name="targetMethod">
+            <value>doPayTrainTicket</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="trainTicketPayTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="trainTicketPayJob"></property>
+        <property name="cronExpression" value="0/15 * * * * ?"></property>
+    </bean>
+    <!-- 火车票退款定时器-->
+    <bean id="trainTicketRefundJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="trainTicketRefundQuzrtz"/>
+        </property>
+        <property name="targetMethod">
+            <value>doRefundTrainTicket</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="trainTicketRefundTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="trainTicketRefundJob"></property>
+        <property name="cronExpression" value="0/30 * * * * ?"></property>
+    </bean>
+
+    <!-- 机票付款定时器 -->
+    <bean id="flightTicketPayJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="flightTicketPayQuzrtz"/>
+        </property>
+        <property name="targetMethod">
+            <value>doPayFlightTicket</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="flightTicketPayTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="flightTicketPayJob"></property>
+        <property name="cronExpression" value="0/15 * * * * ?"></property>
+    </bean>
+    <!-- 机票退款定时器 -->
+    <bean id="flightTicketRefundJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="flightTicketRefundQuzrtz"/>
+        </property>
+        <property name="targetMethod">
+            <value>doRefunFlightTicket</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="flightTicketRefundTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="flightTicketRefundJob"></property>
+        <property name="cronExpression" value="0/30 * * * * ?"></property>
+    </bean>
+    <!-- 酒店状态检查定时器 -->
+    <bean id="hotelOrderStatusCheckJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="hotelStatusCheckQuzrtz"/>
+        </property>
+        <property name="targetMethod">
+            <value>doCheckHotelOrderStatus</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="hotelStatusCheckTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="hotelOrderStatusCheckJob"></property>
+        <property name="cronExpression" value="0/1800 * * * * ?"></property>
+    </bean>
+
+    <!-- 供应商订单下单定时器 -->
+    <!--<bean id="outOrderDispatchJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+        <!--<property name="targetObject">-->
+            <!--<ref bean="outOrderDispatchQuartz"/>-->
+        <!--</property>-->
+        <!--<property name="targetMethod">-->
+            <!--<value>doDispatchOutOrder</value>-->
+        <!--</property>-->
+        <!--<property name="concurrent">-->
+            <!--<value>false</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="outOrderDispatchTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+        <!--<property name="jobDetail" ref="outOrderDispatchJob"></property>-->
+        <!--<property name="cronExpression" value="0/30 * * * * ?"></property>-->
+    <!--</bean>-->
+
+    <!--供应商线路订单状态检查定时器-->
+    <!--<bean id="lineOrderStatusCheckJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+        <!--<property name="targetObject">-->
+            <!--<ref bean="lineOrderStatusCheckQuartz"/>-->
+        <!--</property>-->
+        <!--<property name="targetMethod">-->
+            <!--<value>doCheckLineOrderStatus</value>-->
+        <!--</property>-->
+        <!--<property name="concurrent">-->
+            <!--<value>false</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="lineOrderStatusCheckTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+        <!--<property name="jobDetail" ref="lineOrderStatusCheckJob"></property>-->
+        <!--<property name="cronExpression" value="0/60 * * * * ?"></property>-->
+    <!--</bean>-->
+
+    <!-- 供应商线路订单支付超时检查定时器-->
+    <!--<bean id="lineOrderPayCheckJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+        <!--<property name="targetObject">-->
+            <!--<ref bean="lineOrderPayCheckQuartz"/>-->
+        <!--</property>-->
+        <!--<property name="targetMethod">-->
+            <!--<value>doCheckLineOrderPay</value>-->
+        <!--</property>-->
+        <!--<property name="concurrent">-->
+            <!--<value>false</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="lineOrderPayCheckTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+        <!--<property name="jobDetail" ref="lineOrderPayCheckJob"></property>-->
+        <!--<property name="cronExpression" value="0 0 10 * * ?"></property> &lt;!&ndash;每天10点检查&ndash;&gt;-->
+    <!--</bean>-->
+
+    <!-- 供应商订单支付超时检查定时器-->
+    <bean id="orderPayCheckJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="orderPayCheckQuartz"/>
+        </property>
+        <property name="targetMethod">
+            <value>doCheckOrderPay</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="orderPayCheckTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="orderPayCheckJob"></property>
+        <property name="cronExpression" value="0/60 * * * * ?"></property>
+    </bean>
+
+    <!-- 酒店订单已支付商家确认超时检查定时器-->
+    <bean id="hotelOrderPayedCheckJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="hotelOrderPayedCheckQuartz"/>
+        </property>
+        <property name="targetMethod">
+            <value>doCheckOrderPayed</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="hotelOrderPayedCheckTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="hotelOrderPayedCheckJob"></property>
+        <property name="cronExpression" value="0/60 * * * * ?"></property>
+    </bean>
+
+    <!-- 供应商邮轮订单状态检查定时器-->
+    <!--<bean id="cruiseShipOrderStatusCheckJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+        <!--<property name="targetObject">-->
+            <!--<ref bean="cruiseShipOrderStatusCheckQuzrtz"/>-->
+        <!--</property>-->
+        <!--<property name="targetMethod">-->
+            <!--<value>doCheckCruiseShipOrderStatus</value>-->
+        <!--</property>-->
+        <!--<property name="concurrent">-->
+            <!--<value>false</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="cruiseShipOrderStatusCheckTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+        <!--<property name="jobDetail" ref="cruiseShipOrderStatusCheckJob"></property>-->
+        <!--<property name="cronExpression" value="0/60 * * * * ?"></property>-->
+    <!--</bean>-->
+
+    <!--供应商邮轮订单支付超时检查定时器 -->
+    
+
+    <!-- 供应商门票订单过期未使用自动退款检查定时器-->
+    <!--<bean id="ticketAutoRefundCheckJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+        <!--<property name="targetObject">-->
+            <!--<ref bean="ticketAutoRefundQuartz"/>-->
+        <!--</property>-->
+        <!--<property name="targetMethod">-->
+            <!--<value>doAutoRefundTicket</value>-->
+        <!--</property>-->
+        <!--<property name="concurrent">-->
+            <!--<value>false</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="ticketAutoRefundTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+        <!--<property name="jobDetail" ref="ticketAutoRefundCheckJob"></property>-->
+        <!--<property name="cronExpression" value="0 0 8 * * ?"></property> &lt;!&ndash;每天8点检查&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="cronExpression" value="0/30 * * * * ?"></property>&ndash;&gt;-->
+    <!--</bean>-->
+
+    <!-- 订单结算定时器-->
+    <bean id="orderDetailBillJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="orderDetailBillQuartz"/>
+        </property>
+        <property name="targetMethod">
+            <value>genOrderBillSummary</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="orderDetailBillTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="orderDetailBillJob"></property>
+        <property name="cronExpression" value="0 0 1 * * ?"></property> <!--每天1点结算-->
+        <!--<property name="cronExpression" value="0/30 * * * * ?"></property>-->
+    </bean>
+
+
+
+    <!-- 优惠券状态更新定时器 -->
+    <bean id="couponStatusCheckJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="couponStatusQuzrtz"/>
+        </property>
+        <property name="targetMethod">
+            <value>doRefreshCouponStatus</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="couponStatusCheckTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="couponStatusCheckJob"></property>
+        <property name="cronExpression" value="0/20 * * * * ?"></property>
+    </bean>
+
+    <!-- 用户优惠券状态更新定时器-->
+    <bean id="userCouponStatusCheckJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="userCouponStatusQuzrtz"/>
+        </property>
+        <property name="targetMethod">
+            <value>doRefreshUserCouponStatus</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="userCouponStatusCheckTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="userCouponStatusCheckJob"></property>
+        <property name="cronExpression" value="0/20 * * * * ?"></property>
+    </bean>
+
+    <!-- 携程数据同步 -->
+    <bean id="ctripTicketTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="nctripTicketQuartz" />
+        </property>
+        <property name="targetMethod">
+            <value>syncTicket</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="ctripTicketCron" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="ctripTicketTaskJob"></property>
+        <property name="cronExpression" value="0 10 0 ? * MON"></property><!-- 每周一零点10分 -->
+    </bean>
+
+    <!-- 携程价格日历数据同步 -->
+    <bean id="ctripTicketDatePriceTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="nctripTicketQuartz" />
+        </property>
+        <property name="targetMethod">
+            <value>syncTicketDatePrice</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="ctripTicketDatePriceCron" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="ctripTicketDatePriceTaskJob"></property>
+        <property name="cronExpression" value="0 10 0 ? * TUE-SUN"></property><!-- 除每周一零点10分 -->
+    </bean>
+
+    <!-- 携程退单后状态更新 -->
+    <bean id="ctripCancelTicketTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="apiOrderCancelQuartz" />
+        </property>
+        <property name="targetMethod">
+            <value>syncCtripOrderCancel</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="ctripCancelTicketCron" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="ctripCancelTicketTaskJob"></property>
+        <property name="cronExpression" value="0 0/60 * * * ?"></property><!-- 每60分钟检查一次 -->
+    </bean>
+
+    <!-- 船票退单后状态更新 -->
+    <bean id="ferryCancelTicketTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="apiOrderCancelQuartz" />
+        </property>
+        <property name="targetMethod">
+            <value>syncFerryOrderCancel</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="ferryCancelTicketCron" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="ferryCancelTicketTaskJob"></property>
+        <property name="cronExpression" value="0 0/60 * * * ?"></property><!-- 每60分钟检查一次 -->
+    </bean>
+
+    <!-- 艺龙酒店数据同步 -->
+    <bean id="elongHotelTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="elongHotelQuartz"/>
+        </property>
+        <property name="targetMethod">
+            <value>syncHotelPrice</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="elongHotelCron" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="elongHotelTaskJob"></property>
+        <property name="cronExpression" value="0 33 14 ? * MON,THU"></property><!-- 每周一零点10分 -->
+        <!--<property name="cronExpression" value="0/10 * * ? * *"></property>-->
+    </bean>
+
+    <!-- 招行自动结账定时器 -->
+    <!--<bean id="cmbOrderSettleJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+        <!--<property name="targetObject">-->
+            <!--<ref bean="cmbOrderSettleQuzrtz"/>-->
+        <!--</property>-->
+        <!--<property name="targetMethod">-->
+            <!--<value>doSettleCmbOrder</value>-->
+        <!--</property>-->
+        <!--<property name="concurrent">-->
+            <!--<value>false</value>-->
+        <!--</property>-->
+    <!--</bean>-->
+    <!--<bean id="cmbOrderSettleTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+        <!--<property name="jobDetail" ref="cmbOrderSettleJob"></property>-->
+        <!--<property name="cronExpression" value="0 0 2 * * ?"></property>-->
+        <!--&lt;!&ndash; 每天2点 &ndash;&gt;-->
+    <!--</bean>-->
+
+    <!-- 招行自动结账定时器 -->
+    <bean id="shenzhouOrderJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="shenzhouOrderQuzrtz"/>
+        </property>
+        <property name="targetMethod">
+            <value>doUpdateShenzhouOrder</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="shenzhouOrderTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="shenzhouOrderJob"></property>
+        <property name="cronExpression" value="0 0/1 *  * * ?"></property>
+        <!-- 每一分钟 -->
+    </bean>
+
+    <!-- 检查并更新合同的状态 -->
+    <bean id="contractObj" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="contractQuartz"/>
+        </property>
+        <property name="targetMethod">
+            <value>doCheckAndUpdateContract</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="contractObjBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="contractObj"></property>
+        <!--<property name="cronExpression" value="0 0/1 *  * * ?"></property>-->
+        <property name="cronExpression" value="0 0 2 * * ?"></property>
+        <!-- 每天2点 -->
+    </bean>
+
+    <!-- 接口定时监控 -->
+    <bean id="apiMonitorTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="apiMonitorQuartz" />
+        </property>
+        <property name="targetMethod">
+            <value>monitorApi</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="apiMonitorCron" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="apiMonitorTaskJob"></property>
+        <property name="cronExpression" value="0 0 0 * * ?"></property><!-- 每天0点 -->
+    </bean>
+
+    <bean id="trigger" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <!--<ref bean="cronTriggerBean"/>--><!-- 短信发送 -->
+                <!--<ref bean="jszxOrderCronTriggerBean"/>-->
+                <!--<ref bean="ctripTicketCron"/>-->
+                <!--<ref bean="ctripTicketDatePriceCron"/>--><!-- 20160510涉及查询次数费用问题取消以减少频率 -->
+                <!--<ref bean="ctripCancelTicketCron"/>--> <!-- 携程取消订单查询 -->
+                <!--<ref bean="ferryCancelTicketCron"/>--> <!-- 船票取消订单查询 -->
+                <!--<ref bean="orderApicronTriggerBean"/>--><!--第三方资源订单下单接口, 如携程门票,聚合火车票,机票-->
+                <!--<ref bean="outOrderDispatchTriggerBean"/>--><!--供应商资源订单下单, 如门票(游艇帆船),民宿,邮轮,线路-->
+                <!--<ref bean="lineOrderStatusCheckTriggerBean"/>--><!--供应商线路订单状态检查, 检查线路订单是否被供应商是否确认或取消-->
+                <!--<ref bean="lineOrderPayCheckTriggerBean"/>--><!--供应商线路订单支付超时检查定时器-->
+                <!--<ref bean="cruiseShipOrderStatusCheckTriggerBean"/>--><!--供应商邮轮订单状态检查, 检查邮轮订单是否被供应商是否确认或取消-->
+                <!--<ref bean="ticketAutoRefundTriggerBean" />--><!--供应商门票未使用自动退订定时器-->
+                <!--<ref bean="orderPayCheckTriggerBean" />--><!--订单支付超时检查定时器-->
+                <!--<ref bean="hotelOrderPayedCheckTriggerBean" />--><!--酒店订单已支付商家确认超时检查定时器-->
+                <!--<ref bean="orderDetailBillTriggerBean" />--><!--订单结算定时器-->
+                <!--<ref bean="trainTicketPayTriggerBean"/>--><!--聚合接口火车票是否可支付检查, 出票状态检查定时器-->
+                <!--<ref bean="trainTicketRefundTriggerBean"/>--><!--聚合接口火车票退订状态检查, 退款状态检查-->
+                <!--<ref bean="flightTicketPayTriggerBean"/>--><!--聚合接口机票是否可支付检查, 出票状态检查定时器-->
+                <!--<ref bean="flightTicketRefundTriggerBean"/>--><!--聚合接口机票退订状态检查, 退款状态检查-->
+                <!--<ref bean="hotelStatusCheckTriggerBean"/>--><!--艺龙酒店订单状态检查定时器, 用于同步预订成功的艺龙酒店订单状态-->
+                <!--<ref bean="elongHotelCron"/>-->
+                <!--<ref bean="userCouponStatusCheckTriggerBean"/>--><!--发放给用户的优惠券状态检查定时器, 检查过期状态-->
+                <!--<ref bean="couponStatusCheckTriggerBean"/>--><!--检查优惠券状态的定时器, 检查过期状态-->
+                <!--<ref bean="contractObjBean"/>--> <!--检查并更新合同的状态-->
+                <!--<ref bean="apiMonitorCron"/>--> <!-- 接口定时监控 -->
+            </list>
+        </property>
+    </bean>
+
+</beans>

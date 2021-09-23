@@ -1,0 +1,141 @@
+<div class="takeorder" ng-controller="orderCruiseShipCtrl">
+    <div class="yl_header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        填写订单
+    </div>
+    <div id="publicNotice" data-channel="youlun"></div>
+    <!-- 页面内容块 -->
+    <div class="content" getnew="/youlun/json/getShipRoominfo.html">
+        <div class="booking-detail">
+            <div class="tit_box">
+                <p>{{ship.name}}</p>
+
+                <p class="port"><span ng-if="ship.route != null && ship.route.length > 0">途径：{{ship.route}}</span>&nbsp;&nbsp;{{ship.playDay
+                    - 1}}晚{{ship.playDay}}日游</p>
+
+                <div class="p_text">
+                    <p class="go_time" style="background: none;">{{date.date}}&nbsp;&nbsp;启航</p>
+
+                    <p class="back_time">
+                        {{date.endDate}}&nbsp;&nbsp;返航
+                        <!--<span>(建议提前9天以上报名)</span>-->
+                    </p>
+                </div>
+            </div>
+            <div class="bl_bg"></div>
+        </div>
+        <div class="main_choose">
+            <div class="main_choose_con">
+                <div class="nav_box clearfix">
+                    <ul class="nav_type" style="left: 0px;">
+                        <li ng-class="{'current_sty': rooms[0].roomType == roomType}"
+                            ng-repeat="rooms in roomsList" ng-click="changeType(rooms[0].roomType)">
+                            <p class="room_n">{{rooms[0].roomTypeDesc}}</p>
+
+                            <p class="room_p">
+                                <b>¥<strong> {{rooms[0].price}} </strong>起</b>
+                            </p>
+                            <em ng-show="roomTypeSelect[rooms[0].roomType] > 0">{{roomTypeSelect[rooms[0].roomType]}}</em>
+                        </li>
+                    </ul>
+                </div>
+                <div class="con">
+                    <div class="panel" ng-class="{'panel-active': rooms[0].roomType == roomType}"
+                         ng-repeat="rooms in roomsList" style="margin: 0;">
+                        <section>
+                            <div class="pro_box" ng-repeat="room in rooms" style="height: auto;">
+                                <div class="pro_box_l">
+                                    <p class="pro_tit">{{room.name}}</p>
+
+                                    <p class="pro_m">{{room.area}},入住 {{room.peopleNum}} 人,{{room.deck}}</p>
+
+                                    <p class="pro_s">
+
+
+                                    </p>
+                                </div>
+                                <div class="pro_box_r">
+                                    <p class="price_box">
+                                        <span style="display: inline">¥<b>{{room.price}}</b></span><em>/人</em>
+                                    </p>
+
+                                    <div class="act_box">
+                                        <span class="em_box" ng-if="!room.isOver">
+                                            <em class="d_icon "></em>
+                                            <input readonly class="p_num" type="text" ng-model="room.selectNum"
+                                                   num-changer min-num="0" max-num="50" scope-num="room.selectNum"
+                                                   can-minus="can_act" add-num="{{room.addNum}}"
+                                                   call-back="changeCost()"/>
+                                            <em class="ad_icon "></em>
+                                        </span>
+                                        <span class="s_e" ng-if="room.isOver">已售罄</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact_box">
+            <div class="name_box" style="font-size: 1.2rem;">
+                联系人<input type="text" ng-model="contact.name" placeholder="填写联系人姓名">
+            </div>
+            <div class="mobile_box" style="font-size: 1.2rem">
+                手机号<input type="text" ng-model="contact.telephone" placeholder="填写手机号码" maxlength="11">
+            </div>
+        </div>
+        <div class="div_box1">
+            <a href="javascript:void(0);" class="insurance1" attr-id="408">
+                <p style="font-size: 1.2rem">太平洋“尊享邮轮”2016版境外保险A款</p>
+
+                <div class="bxprice1"><b>¥</b><em>100</em>X<span>2</span>人</div>
+            </a>
+        </div>
+        <!--旅游顾问-->
+        <div class="shade_bg none">
+        </div>
+        <br>
+
+
+        <div class="pop_detail none">
+            <div class="price_detail">
+                <h2>价格详情
+                </h2>
+                <ul>
+                    <li class="clearfix" ng-repeat="room in selectRooms"><p>{{room.name}}</p>
+                        <strong><b>¥{{room.price}}</b>*<em>{{room.selectNum}}</em>人</strong></li>
+                    <li class="clearfix"><p>保险</p><strong><b>¥200</b></strong></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub_box" style="left: 0px;">
+            <span class="allPrice">订单总额:<b>¥<strong>{{totalCost}}</strong></b></span>
+            <span class="subBt" ng-click="submitOrder()">提交订单</span>
+        </div>
+        <div class="mpop none">
+            <div class="room_box">
+                <div class="loading">
+                </div>
+            </div>
+        </div>
+        <!-- 日历 -->
+        <div id="calendarPage" class="page">
+            <div class="page-header">
+                <a href="javascript:void(0);" class="page-back"></a>
+
+                <h2>选择游玩日期
+                </h2>
+            </div>
+        </div>
+    </div>
+    <!-- 保险 -->
+    <div class="baoxian">
+        <div class="head">
+            <div class="page-head">
+                <h2>选择保险</h2>
+            </div>
+            <a href="javascript:void(0);" class="submit">确定</a>
+        </div>
+    </div>
+</div>

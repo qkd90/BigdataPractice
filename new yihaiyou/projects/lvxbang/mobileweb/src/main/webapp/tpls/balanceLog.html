@@ -1,0 +1,24 @@
+<div ng-controller="balanceLogCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">余额明细</a></li>
+        </ul>
+    </div>
+    <div id="subcontainer" class="clearfix">
+        <div class="my-geren clearfix boxbg">
+            <form class="form-horizontal">
+                <div class="form-group" ng-repeat="balanceLog in balanceLogList">
+                    <div class="col-xs-12">
+                        <label class="col-xs-8 control-label" style="text-align: left;">{{balanceLog.description}}({{balanceLog.status}})</label>
+                        <label class="col-xs-4 control-label">金额：￥{{balanceLog.money}}</label>
+                    </div>
+                    <div class="col-xs-12">
+                        <label class="col-xs-8 control-label"
+                               style="text-align: left;">{{balanceLog.createTime}}</label>
+                        <label class="col-xs-4 control-label">余额：￥{{balanceLog.balance}}</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

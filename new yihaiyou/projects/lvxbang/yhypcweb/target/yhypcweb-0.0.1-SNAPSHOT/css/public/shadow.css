@@ -1,0 +1,1071 @@
+/*弹窗*/
+.popup_shadow {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1001;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);
+
+}
+
+.opcity9 {
+    background: rgba(0, 0, 0, 0.9);
+    display:none;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e5000000,endColorstr=#e5000000);
+}
+
+.popup_shadow .collapse {
+    width: 358px;
+    height: 487px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left:-179px;
+    margin-top:-244px;
+}
+.popup_shadow .collapse img.vcode_img {
+    cursor: pointer;
+}
+.popup_shadow .collapse .login-computer {
+    background: #fff;
+    width: 100%;
+    height: 431px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 15px;
+}
+
+.popup_shadow .collapse .login-computer .close-btn {
+    float: right;
+    width: 17px;
+    height: 17px;
+    background: url("/image/modal-close.png") no-repeat center;
+    margin-right: 16px;
+}
+
+.popup_shadow .collapse .login-computer .logo {
+    width: 260px;
+    margin: 0 auto;
+    height: 55px;
+    background: url("/image/logo.png") no-repeat center bottom;
+}
+
+.popup_shadow .collapse .login-computer .login-3thpart {
+    width: 260px;
+    margin: 0 auto;
+}
+
+.popup_shadow .collapse .login-computer .login-3thpart .part3-header {
+    font-size: 16px;
+    line-height: 50px;
+    color: #a3a3a3;
+    text-align: center;
+}
+
+.popup_shadow .collapse .login-computer .login-3thpart .part3-header i {
+    width: 66px;
+    height: 2px;
+    background: #d4d4d4;
+    margin-top: 24px;
+}
+
+.popup_shadow .collapse .login-computer .login-3thpart .part3-header i:first-of-type {
+    float: left;
+}
+
+.popup_shadow .collapse .login-computer .login-3thpart .part3-header i:last-of-type {
+    float: right;
+}
+
+.popup_shadow .collapse .login-computer .login-3thpart .part3-header span {
+    float: left;
+    width: 128px;
+    text-align: center;
+}
+
+.popup_shadow .collapse .login-computer .login-3thpart .part3-body {
+    margin-bottom: 4px;
+    padding-top: 9px;
+}
+
+.popup_shadow .collapse .login-computer .login-3thpart .part3-body a {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 0 21px;
+}
+
+.popup_shadow .collapse .login-computer .login-3thpart .part3-body .microblog {
+    background: url("/image/ticket-icon-microblog.png") no-repeat center;
+    background-size: contain;
+}
+
+.popup_shadow .collapse .login-computer .login-3thpart .part3-body .qq {
+    background: url("/image/ticket-icon-qq.png") no-repeat center;
+    background-size: contain;
+}
+
+.popup_shadow .collapse .login-computer .login-3thpart .part3-body .weichart {
+    background: url("/image/ticket-icon-weichart.png") no-repeat center;
+    background-size: contain;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail {
+    width: 260px;
+    margin: 0 auto;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-header {
+    font-size: 16px;
+    line-height: 50px;
+    color: #a3a3a3;
+    text-align: center;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-header i {
+    width: 45px;
+    height: 2px;
+    background: #d4d4d4;
+    margin-top: 24px;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-header .i-left {
+    float: left;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-header .i-right {
+    float: right;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-header span {
+    float: left;
+    width: 170px;
+    text-align: center;
+    color: #3996fa;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap {
+    position: relative;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap input {
+    display: block;
+    border: 1px solid #c9c9c9;
+    box-shadow: inset 0px 1px 4px #e0e0e0;
+    width: 211px;
+    padding-left: 13px;
+    padding-right: 32px;
+    height: 34px;
+    line-height:34px;
+    outline: none;
+    /*margin-bottom: 20px;*/
+    font-size: 14px;
+    color: #8d8d8d;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap p.login-tips {
+    height: 20px;
+    color: #f80;
+    padding: 2px 5px;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap input:focus {
+    border: 1px solid #1571d4;
+    box-shadow: inset 0px 1px 7px #a2cbff;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap #eyeicon {
+    position: absolute;
+    width: 22px;
+    display: inline-block;
+    top: 70px;
+    right: 9px;
+    cursor: pointer ;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips {
+    margin: 0 0 18px;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #999;
+    line-height: 13px;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips label {
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips label input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips label .radiomask {
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    float: left;
+    border: 1px solid #3996fa;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips label span {
+    float: left;
+    padding-left: 5px;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips label input[type=checkbox]:checked + .radiomask {
+    border: 1px solid #f80;
+    background: url("/image/list-checkbox-selected.png") no-repeat center;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips a {
+    float: right;
+    font-size: 12px;
+    color: #999;
+    line-height: 13px;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips a:hover {
+    color: #3996fa;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .next-box a {
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    background: #f80;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .next-box a:hover {
+    background: #ca8c34;
+}
+
+.popup_shadow .collapse .login-computer .login-computer-footer {
+    padding-left: 50px;
+}
+
+.popup_shadow .collapse .login-computer .login-computer-footer span {
+    float: left;
+    font-size: 12px;
+    line-height: 42px;
+    color: #000;
+}
+
+.popup_shadow .collapse .login-computer .login-computer-footer span a {
+    font-size: 13px;
+    line-height: 42px;
+    color: #3996fa;
+}
+
+.popup_shadow .collapse .login-computer .login-computer-footer #jumpToWechat {
+    float: right;
+    width: 64px;
+    height: 64px;
+    background: url("/image/icon-Pc-switch.png") no-repeat center;
+    background-size: 64px 64px;
+}
+
+.popup_shadow .collapse .login-weichart {
+    background: #fff;
+    width: 100%;
+    height: 472px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 15px;
+}
+
+.popup_shadow .collapse .login-weichart .close-btn {
+    float: right;
+    width: 17px;
+    height: 17px;
+    background: url("/image/modal-close.png") no-repeat center;
+    margin-right: 16px;
+}
+
+.popup_shadow .collapse .login-weichart h4 {
+    font-size: 16px;
+    color: #a3a3a3;
+    text-align: center;
+    line-height: 76px;
+    margin-top: 44px;
+}
+
+.popup_shadow .collapse .login-weichart .weichartcode-wrap {
+    width: 300px;
+    height: 331px;
+    margin: 0 auto;
+    /*border: 1px solid #e2e2e2;*/
+    /*padding: 10px;*/
+    margin-bottom: 20px;
+}
+
+.popup_shadow .collapse .login-weichart .weichartcode-wrap img {
+    width: 100%;
+    height: 100%;
+}
+
+.popup_shadow .collapse .login-weichart p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #a3a3a3;
+    text-align: center;
+}
+
+.popup_shadow .collapse .login-weichart .yhylink {
+    font-size: 16px;
+    line-height: 22px;
+    color: #3996fa;
+    text-align: center;
+    display: block;
+}
+
+.popup_shadow .collapse .login-weichart #jumpToPC {
+    margin-top: 25px;
+    float: right;
+    display: inline-block;
+    width: 79px;
+    height: 79px;
+    background: url("/image/icon-weichart-switch.png") no-repeat center;
+}
+
+.popup_shadow .collapse .password-forget {
+    background: #fff;
+    width: 100%;
+    height: 417px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 15px;
+}
+
+.popup_shadow .collapse .password-forget .close-btn {
+    float: right;
+    width: 17px;
+    height: 17px;
+    background: url("/image/modal-close.png") no-repeat center;
+    margin-right: 16px;
+}
+
+.popup_shadow .collapse .password-forget h4 {
+    font-size: 16px;
+    color: #3996fa;
+    text-align: center;
+    line-height: 16px;
+    padding-top: 8px;
+    padding-bottom: 11px;
+    border-bottom: 2px solid #d4d4d4;
+    width: 258px;
+    margin: 0 auto;
+    margin-bottom: 90px;
+}
+
+.popup_shadow .collapse .password-forget .username-input {
+    width: 243px;
+    border: 1px solid #c9c9c9;
+    margin: 0 auto;
+    display: block;
+    box-shadow: inset 0 2px 6px #e0e0e0;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 13px;
+    outline: none;
+    color: #8d8d8d;
+    font-size: 14px;
+}
+
+.popup_shadow .collapse .password-forget .username-input:focus {
+    box-shadow: inset 0 2px 6px #c7e2ff;
+    border: 1px solid #1571d4;
+}
+
+.popup_shadow .collapse .password-forget .username-tips {
+    height: 23px;
+    font-size: 12px;
+    color: #f80;
+    margin-left: 55px;
+    line-height: 23px;
+}
+
+/*.popup_shadow .collapse .password-forget .username-tips:before {*/
+    /*content: "*";*/
+    /*font-size: 16px;*/
+    /*color: #f80;*/
+    /*line-height: 24px;*/
+    /*vertical-align: sub;*/
+/*}*/
+
+.popup_shadow .collapse .password-forget .passwordforget-group {
+    margin-left: 50px;
+    width: 266px;
+    /*margin-bottom: 70px;*/
+}
+
+.popup_shadow .collapse .password-forget .passwordforget-group input {
+    float: left;
+    width: 114px;
+    height: 34px;
+    border: 1px solid #c9c9c9;
+    box-shadow: inset 0 2px 6px #e0e0e0;
+    padding-left: 14px;
+    outline: none;
+    color: #8d8d8d;
+    font-size: 14px;
+    line-height: 34px;
+    margin-right: 8px;
+}
+
+.popup_shadow .collapse .password-forget .passwordforget-group input:focus {
+    box-shadow: inset 0 2px 6px #c7e2ff;
+    border: 1px solid #1571d4;
+}
+
+.popup_shadow .collapse .password-forget .passwordforget-group span {
+    float: left;
+    width: 80px;
+    height: 36px;
+    overflow: hidden;
+    margin-right: 3px;
+}
+
+.popup_shadow .collapse .password-forget .passwordforget-group a {
+    color: #3996fa;
+    font-size: 14px;
+    line-height: 36px;
+}
+
+.popup_shadow .collapse .password-forget .next-box {
+    width: 258px;
+    margin: 70px auto 0;
+}
+
+.popup_shadow .collapse .password-forget .next-box a {
+    display: block;
+    width: 100%;
+    height: 34px;
+    text-align: center;
+    background: #f80;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 34px;
+}
+
+.popup_shadow .collapse .password-forget .next-box a:hover {
+    background: #ca8c34;
+}
+
+.popup_shadow .collapse .realname-check {
+    background: #fff;
+    width: 100%;
+    height: 432px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 15px;
+}
+
+.popup_shadow .collapse .realname-check .close-btn {
+    float: right;
+    width: 17px;
+    height: 17px;
+    background: url("/image/modal-close.png") no-repeat center;
+    margin-right: 16px;
+}
+
+.popup_shadow .collapse .realname-check h4 {
+    font-size: 16px;
+    color: #3996fa;
+    text-align: center;
+    line-height: 16px;
+    padding-top: 8px;
+    padding-bottom: 11px;
+    border-bottom: 2px solid #d4d4d4;
+    width: 258px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.popup_shadow .collapse .realname-check input {
+    width: 243px;
+    border: 1px solid #c9c9c9;
+    margin: 0 auto;
+    display: block;
+    box-shadow: inset 0 2px 6px #e0e0e0;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 13px;
+    outline: none;
+    color: #8d8d8d;
+    font-size: 14px;
+    margin-bottom: 26px;
+}
+
+.popup_shadow .collapse .realname-check input:focus {
+    box-shadow: inset 0 2px 6px #c7e2ff;
+    border: 1px solid #1571d4;
+}
+
+/*.popup_shadow .collapse .realname-check input:first-of-type {*/
+    /*margin-bottom: 0;*/
+/*}*/
+
+.popup_shadow .collapse .realname-check input.realName {
+margin-bottom: 0;
+}
+
+.popup_shadow .collapse .realname-check input:last-of-type {
+    margin-bottom: 30px;
+}
+
+.popup_shadow .collapse .realname-check .attention{
+    width: 243px;
+    margin: -15px auto 10px auto;
+}
+
+.popup_shadow .collapse .realname-check .attention span {
+    display:inline-block;
+    color:#f00;
+    font-size:22px;
+}
+
+.popup_shadow .collapse .realname-check .input-tips {
+    font-size: 12px;
+    color: #f80;
+    margin-left: 65px;
+    line-height: 26px;
+}
+
+.popup_shadow .collapse .realname-check .input-tips:before {
+    content: "*";
+    font-size: 16px;
+    color: #f80;
+    line-height: 24px;
+    vertical-align: sub;
+}
+
+.popup_shadow .collapse .realname-check .next-box {
+    width: 258px;
+    margin: 0 auto;
+}
+
+.popup_shadow .collapse .realname-check .next-box a {
+    display: block;
+    width: 100%;
+    height: 34px;
+    text-align: center;
+    background: #f80;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 34px;
+}
+
+.popup_shadow .collapse .realname-check .next-box a:hover {
+    background: #ca8c34;
+}
+
+.popup_shadow .collapse .account-signin {
+    background: #fff;
+    width: 100%;
+    height: 435px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 15px;
+}
+
+.popup_shadow .collapse .account-signin .close-btn {
+    float: right;
+    width: 17px;
+    height: 17px;
+    background: url("/image/modal-close.png") no-repeat center;
+    margin-right: 16px;
+}
+
+.popup_shadow .collapse .account-signin h4 {
+    font-size: 16px;
+    color: #3996fa;
+    text-align: center;
+    line-height: 16px;
+    padding-top: 8px;
+    padding-bottom: 11px;
+    border-bottom: 2px solid #d4d4d4;
+    width: 258px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.popup_shadow .collapse .account-signin .login_r {
+    float: right;
+    color: #bbb;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.popup_shadow .collapse .account-signin input {
+    width: 243px;
+    border: 1px solid #c9c9c9;
+    margin: 0 auto;
+    display: block;
+    box-shadow: inset 0 2px 6px #e0e0e0;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 13px;
+    outline: none;
+    color: #8d8d8d;
+    font-size: 14px;
+    /*margin-bottom: 26px;*/
+}
+
+.popup_shadow .collapse .account-signin input:focus {
+    box-shadow: inset 0 2px 6px #c7e2ff;
+    border: 1px solid #1571d4;
+}
+
+.popup_shadow .collapse .account-signin .input-tips {
+    height: 23px;
+    font-size: 12px;
+    color: #f80;
+    margin-left: 65px;
+    line-height: 23px;
+}
+
+/*.popup_shadow .collapse .account-signin .input-tips:before {*/
+    /*content: "*";*/
+    /*font-size: 16px;*/
+    /*color: #f80;*/
+    /*line-height: 24px;*/
+    /*vertical-align: sub;*/
+/*}*/
+
+.popup_shadow .collapse .account-signin .account-signin-group {
+    margin: 0 auto;
+    width: 260px;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap .account-signin-group input,
+.popup_shadow .collapse .account-signin .account-signin-group input {
+    float: left;
+    width: 100px;
+    height: 34px;
+    border: 1px solid #c9c9c9;
+    box-shadow: inset 0 2px 6px #e0e0e0;
+    padding-left: 14px;
+    padding-right: 0;
+    outline: none;
+    color: #8d8d8d;
+    font-size: 14px;
+    line-height: 34px;
+    margin-right: 8px;
+}
+
+.popup_shadow .collapse .account-signin .account-signin-group input:focus {
+    box-shadow: inset 0 2px 6px #c7e2ff;
+    border: 1px solid #1571d4;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap .account-signin-group span,
+.popup_shadow .collapse .account-signin .account-signin-group span {
+    float: left;
+    width: 80px;
+    height: 36px;
+    overflow: hidden;
+    margin-right: 3px;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap .account-signin-group a,
+.popup_shadow .collapse .account-signin .account-signin-group a {
+    color: #3996fa;
+    font-size: 14px;
+    line-height: 36px;
+}
+
+.popup_shadow .collapse .account-signin .next-box {
+    width: 258px;
+    margin: 8px auto 0;
+}
+
+.popup_shadow .collapse .account-signin .next-box a {
+    display: block;
+    width: 100%;
+    height: 34px;
+    text-align: center;
+    background: #f80;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 34px;
+}
+
+.popup_shadow .collapse .account-signin .next-box a:hover {
+    background: #ca8c34;
+}
+
+.popup_shadow .collapse .account-check {
+    background: #fff;
+    width: 100%;
+    height: 417px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 15px;
+}
+
+.popup_shadow .collapse .account-check .close-btn {
+    float: right;
+    width: 17px;
+    height: 17px;
+    background: url("/image/modal-close.png") no-repeat center;
+    margin-right: 16px;
+}
+
+.popup_shadow .collapse .account-check h4 {
+    font-size: 16px;
+    color: #3996fa;
+    text-align: center;
+    line-height: 16px;
+    padding-top: 8px;
+    padding-bottom: 11px;
+    border-bottom: 2px solid #d4d4d4;
+    width: 258px;
+    margin: 0 auto;
+    margin-bottom: 63px;
+}
+
+.popup_shadow .collapse .account-check p {
+    margin-left: 50px;
+    font-size: 14px;
+    color: #8d8d8d;
+    line-height: 30px;
+    text-align: left;
+}
+
+.popup_shadow .collapse .account-check input {
+    width: 243px;
+    border: 1px solid #c9c9c9;
+    margin: 0 auto;
+    display: block;
+    box-shadow: inset 0 2px 6px #e0e0e0;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 13px;
+    outline: none;
+    color: #8d8d8d;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.popup_shadow .collapse .account-check input:focus {
+    box-shadow: inset 0 2px 6px #c7e2ff;
+    border: 1px solid #1571d4;
+}
+
+.popup_shadow .collapse .account-check .time-tips {
+    font-size: 12px;
+    color: #f80;
+    height: 20px;
+    line-height: 20px;
+}
+
+.popup_shadow .collapse .account-check .next-box {
+    width: 258px;
+    margin: 30px auto 0;
+}
+
+.popup_shadow .collapse .account-check .next-box a {
+    display: block;
+    width: 100%;
+    height: 34px;
+    text-align: center;
+    background: #f80;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 34px;
+}
+
+.popup_shadow .collapse .account-check .next-box a:hover {
+    background: #ca8c34;
+}
+
+
+
+
+
+.popup_shadow .collapse .account-success {
+    background: #fff;
+    width: 100%;
+    height: 417px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 15px;
+}
+
+.popup_shadow .collapse .account-success .close-btn {
+    float: right;
+    width: 17px;
+    height: 17px;
+    background: url("/image/modal-close.png") no-repeat center;
+    margin-right: 16px;
+}
+
+.popup_shadow .collapse .account-success h4 {
+    font-size: 16px;
+    color: #3996fa;
+    text-align: center;
+    line-height: 16px;
+    padding-top: 8px;
+    padding-bottom: 11px;
+    border-bottom: 2px solid #d4d4d4;
+    width: 258px;
+    margin: 0 auto;
+    margin-bottom: 63px;
+}
+.popup_shadow .collapse .account-success p {
+    font-size: 22px;
+    color: #8d8d8d;
+    line-height: 30px;
+    text-align: center;
+}
+.popup_shadow .collapse .account-success p.success-ico {
+    height: 65px;
+    margin: 0;
+    background: url("/image/gou.png") no-repeat center center;
+}
+
+.popup_shadow .collapse .account-success input {
+    width: 243px;
+    border: 1px solid #c9c9c9;
+    margin: 0 auto;
+    display: block;
+    box-shadow: inset 0 2px 6px #e0e0e0;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 13px;
+    outline: none;
+    color: #8d8d8d;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.popup_shadow .collapse .account-success input:focus {
+    box-shadow: inset 0 2px 6px #c7e2ff;
+    border: 1px solid #1571d4;
+}
+
+.popup_shadow .collapse .account-success .time-tips {
+    font-size: 12px;
+    color: #f80;
+    line-height: 50px;
+    margin-bottom: 50px;
+}
+
+.popup_shadow .collapse .account-success .next-box {
+    /*width: 258px;*/
+    /*margin: 0 auto;*/
+    width: 100%;
+    margin-top: 65px;
+}
+.popup_shadow .collapse .account-success .next-box .btns {
+    text-align: center;
+}
+.popup_shadow .collapse .account-success .next-box a {
+    height: 34px;
+    text-align: center;
+    background: #f80;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 34px;
+    padding: 8px 15px;
+}
+
+.popup_shadow .collapse .account-success .next-box a:hover {
+    background: #ca8c34;
+}
+
+.popup_shadow .collapse .reset-pwd h4 {
+    margin-bottom: 80px;
+}
+
+
+.popup_shadow .setpswordBox {
+    width: 760px;
+    height: 580px;
+    background: #fff;
+    position: fixed;
+    z-index: 7;
+    /*display: none;*/
+}
+.popup_shadow .with_header {
+    width: 100%;
+    color: #333;
+    height: 50px;
+    font-size: 18px;
+    text-indent: 25px;
+    line-height: 50px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.popup_shadow .with_header span.closebtn {
+    width: 50px;
+    height: 50px;
+    float: right;
+    cursor: pointer;
+    background: url(/image/icon_close.png) no-repeat center center;
+}
+.popup_shadow .with_body {
+    padding: 25px 40px;
+    font-family: '微软雅黑';
+}
+.popup_shadow .newUser ul li {
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 18px;
+}
+.popup_shadow .newUser ul li span.user_l {
+    width: 6em;
+    float: left;
+    text-align: right;
+    font-size: 14px;
+    color: #333;
+    margin-right: 15px;
+}
+.popup_shadow .newUser ul li span.user_l label {
+    color: #ff8800;
+    margin-right: 5px;
+    display: inline-block;
+}
+.popup_shadow .newUser ul li input {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    border-radius: 2px;
+    padding: 3px 10px;
+    font-size: 13px;
+    color: #333;
+    line-height: 30px;
+}
+.popup_shadow .newUser ul li span.user_l i {
+    color: #fff;
+}
+.popup_shadow .newUser ul li .button {
+    width: 450px;
+    float: left;
+}
+.popup_shadow .newUser ul li .checksel .checksex {
+    background: url(/image/icon-YES.png) no-repeat left center;
+}
+.popup_shadow .newUser ul li .button span.save {
+    color: #fff;
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 25px 0 0;
+    border-radius: 4px;
+    background: #ff8800;
+    float: left;
+    cursor: pointer;
+}
+.xdsoft_datetimepicker {
+    z-index: 100000;
+}
+
+.popup_shadow .newUser ul li .checksel span {
+    display: inline-block;
+    /* width: 16px; */
+    padding-left: 18px;
+    margin-right: 32px;
+    cursor: pointer;
+    background: url(/image/icon-NO.png) no-repeat left center;
+}
+
+.popup_shadow .newUser ul li span.advice {
+    color: #999;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.popup_shadow .newUser ul li .button span.cancle {
+    border: 1px solid #e0e0e0;
+    color: #666;
+    background: #fff;
+    cursor: pointer;
+}
+.popup_shadow .newUser ul li .button span.save-msg {
+    line-height: 50px;
+    color: #ff8800;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.popup_shadow .namespan,.popup_shadow .passwordspan,#register_form .username,#register_form .phoneNum,#register_form .apassword,#register_form .bpassword,#register_form .checkcode,#passwordForget .forget-namespan,#passwordForget .forget-imgcode {
+    position:absolute;
+    color:#8d8d8d;
+    font-size:14px;
+    display:none;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap .namespan {
+    left:15px;
+    top:10px;
+}
+
+.popup_shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap .passwordspan {
+    left:15px;
+    top:70px;
+}
+
+#register_form {
+    position:relative;
+}
+
+#register_form .username {
+    left:65px;
+    top:82px;
+}
+
+#register_form .phoneNum {
+    left:65px;
+    top:141px;
+}
+
+#register_form .apassword {
+    left:65px;
+    top:200px;
+}
+
+#register_form .bpassword {
+    left:65px;
+    top:259px;
+}
+
+#register_form .checkcode {
+    left:65px;
+    top:318px;
+}
+#passwordForget .forget-namespan{
+    left:65px;
+    top: 168px;
+}
+#passwordForget .forget-imgcode{
+    left:65px;
+    top: 228px;
+}

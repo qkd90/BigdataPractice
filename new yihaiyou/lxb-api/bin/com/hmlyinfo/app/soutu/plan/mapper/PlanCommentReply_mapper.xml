@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.PlanCommentReplyMapper">
+	<insert id="insert" parameterType="PlanCommentReply">
+		insert into tb_plan_comment_reply
+			(
+				id,
+				plan_id,
+				user_id,
+				comment_id,
+				content,
+				create_time,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{planId},
+				#{userId},
+				#{commentId},
+				#{content},
+				#{createTime},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="PlanCommentReply">
+		update tb_plan_comment_reply
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="planId != null and '' != planId"> plan_id = #{planId},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="commentId != null and '' != commentId"> comment_id = #{commentId},</if>
+			<if test="content != null and '' != content"> content = #{content},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="PlanCommentReply">
+		delete from
+			tb_plan_comment_reply
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="PlanCommentReply">
+		select
+			*
+		from
+			tb_plan_comment_reply
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="PlanCommentReply">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+
+	<sql id="byProperty">
+		from tb_plan_comment_reply
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="planId != null and '' != planId"> and plan_id = #{planId} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="commentId != null and '' != commentId"> and comment_id = #{commentId} </if>
+			<if test="content != null and '' != content"> and content = #{content} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+		</where>
+	</sql>
+
+    <select id="listWithUser" resultType="map">
+        select
+        reply.*,
+        user.nickname,
+        user.userface
+        from tb_plan_comment_reply reply
+            inner join tb_user user on reply.user_id=user.id
+        <where>
+            <if test="id != null and '' != id"> and reply.id = #{id} </if>
+            <if test="planId != null and '' != planId"> and reply.plan_id = #{planId} </if>
+            <if test="userId != null and '' != userId"> and reply.user_id = #{userId} </if>
+            <if test="commentId != null and '' != commentId"> and reply.comment_id = #{commentId} </if>
+            <if test="content != null and '' != content"> and reply.content = #{content} </if>
+            <if test="createTime != null and '' != createTime"> and reply.create_time = #{createTime} </if>
+            <if test="modifyTime != null and '' != modifyTime"> and reply.modify_time = #{modifyTime} </if>
+        </where>
+    </select>
+</mapper>

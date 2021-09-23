@@ -1,0 +1,33 @@
+<div class="personal_myWallet" ng-controller="personalWalletCtrl" screenheight>
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        我的钱包
+    </div>
+    <div class="person_facebox">
+        <div class="person_name">
+            <div class="face">
+                <img bn-lazy-src="{{user.head}}">
+            </div>
+            <p>{{user.nickName}}</p>
+        </div>
+        <ul class="rechamess clearfix">
+            <li>
+                <p><img src="/yihaiyou/image/personal/icon-ey.png">余额</p>
+                <p>¥ <span class="money">{{user.balance}}</span></p>
+            </li>
+            <li>|</li>
+            <li ui-sref="personalChangePayPassword">
+                <p><img src="/yihaiyou/image/personal/icon-ey.png">支付设置</p>
+                <p>设置支付密码</p>
+            </li>
+        </ul>
+    </div>
+    <div class="walletlist">
+        <ul class="clearfix">
+            <li ui-sref="personalRecharge"><span class="w_span chargespan"><i class="yhyfont icon-certer_chong per_45font" style="line-height:48px!important"></i></span><p>手机充值</p></li>
+            <li ui-sref="personalWithdraw"><span class="w_span withdrawspan"><i class="yhyfont icon-certer_wallet per_45font"></i></span><p>现金提现</p></li>
+            <li ui-sref="personalRecord"><span class="w_span recordspan"><i class="yhyfont icon-certer_oeder per_45font"></i></span><p>消费记录</p></li>
+        </ul>
+    </div>
+    <!--<div class="payset" ui-sref="personalChangePayPassword">支付设置<span>设置支付密码</span></div>-->
+</div>

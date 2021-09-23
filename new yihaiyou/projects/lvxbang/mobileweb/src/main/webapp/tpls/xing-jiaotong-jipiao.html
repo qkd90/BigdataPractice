@@ -1,0 +1,34 @@
+<div ng-controller="xingjiaotongjipiaoCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">{{traffics.fromCityName}}至{{traffics.toCityName}} {{traffics.startDate}}</a>
+            </li>
+            <li class="pull-right dropdown hidden">
+                <a id="sd" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class=""></a>
+                <ul class="dropdown-menu" id="jtchage" aria-labelledby="dropdownMenu1">
+                    <li><a href="#" class="cfd">更改出发地</a></li>
+                    <li><a href="#" class="cfsj">更改出发时间</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="yjcontainer" class="clearfix">
+        <div class="addjiaotong clearfix" ng-repeat="traffics in trafficList">
+            <a class="clearfix">
+                <div class="banci clearfix" ng-click="huochedetail(this)">
+                    <span class="time pull-left">{{traffics.startTime}}<small>{{traffics.startStation}}</small></span>
+                    <span class="jiantou pull-left"></span>
+                    <span class="time pull-left">{{traffics.endTime}}<small>{{traffics.endStation}}</small></span>
+                    <span class="price pull-right">￥{{traffics.prices[0].price}}</span>
+                </div>
+                <div class="clearfix col-xs-12">
+                    <!--<span class="ico-dc pull-left">{{traffics.prices[0].seatName}}</span>-->
+                    <span class="pull-left banciNo"><img src="images/airlines/{{traffics.companyCode}}.png">{{traffics.company}}{{traffics.trafficCode}}</span>
+                    <button type="button" class="xuanding pull-right" ng-click="replace(this)">选定</button>
+                </div>
+            </a>
+        </div>
+
+    </div>
+    <div class="mybottom text-center col-xs-12 orderpay pl0pr0"><a ui-sref="xing-cfd({fromQuote: true})" class="xiugai col-xs-6 pl0pr0"><span class="cfd">更改出发地</span></a><a ui-sref="xing-cfd({fromQuote: true})" class="cfsj"><span class="cfsj">更改出发时间</span></a></div>
+</div>

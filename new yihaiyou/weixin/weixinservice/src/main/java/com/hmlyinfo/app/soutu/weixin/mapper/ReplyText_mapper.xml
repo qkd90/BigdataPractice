@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.weixin.mapper.ReplyTextMapper">
+	<insert id="insert" parameterType="ReplyText" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_wx_reply_text
+			(
+				id,
+				content,
+				create_time,
+				modify_time
+				
+			)
+		values
+			(
+				#{id},
+				#{content},
+				#{createTime},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="ReplyText">
+		update tb_wx_reply_text
+		<set>
+			<if test="id != null"> id = #{id},</if>
+			<if test="content != null"> content = #{content},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="ReplyText">
+		delete from
+			tb_wx_reply_text
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="ReplyText">
+		select
+			*
+		from
+			tb_wx_reply_text
+		where
+			id = #{id}
+	</select>
+	
+</mapper>

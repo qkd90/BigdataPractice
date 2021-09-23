@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.UrbanTrafficMapper">
+	<insert id="insert" parameterType="UrbanTraffic" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_urban_traffic
+			(
+				start_lat,
+				start_lng,
+				end_lat,
+				end_lng,
+				start_trip_type,
+				start_trip_id,
+				end_trip_type,
+				end_trip_id,
+				walk_time,
+				walk_dist,
+				walk_desc,
+				bus_time,
+				bus_desc,
+				bus_dist,
+				car_time,
+				car_desc,
+				car_dist,
+				car_cost,
+				modify_time
+			)
+		values
+			(
+				#{startLat},
+				#{startLng},
+				#{endLat},
+				#{endLng},
+				#{startTripType},
+				#{startTripId},
+				#{endTripType},
+				#{endTripId},
+				#{walkTime},
+				#{walkDist},
+				#{walkDesc},
+				#{busTime},
+				#{busDesc},
+				#{busDist},
+				#{carTime},
+				#{carDesc},
+				#{carDist},
+				#{carCost},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="UrbanTraffic">
+		update tb_urban_traffic
+		<set>
+			<if test="startLat != null"> start_lat = #{startLat},</if>
+			<if test="startLng != null"> start_lng = #{startLng},</if>
+			<if test="endLat != null"> end_lat = #{endLat},</if>
+			<if test="endLng != null"> end_lng = #{endLng},</if>
+			<if test="startTripType != null"> start_trip_type = #{startTripType},</if>
+			<if test="startTripId != null"> start_trip_id = #{startTripId},</if>
+			<if test="endTripType != null"> end_trip_type = #{endTripType},</if>
+			<if test="endTripId != null"> end_trip_id = #{endTripId},</if>
+			<if test="walkTime != null"> walk_time = #{walkTime},</if>
+			<if test="walkDist != null"> walk_dist = #{walkDist},</if>
+			<if test="walkDesc != null"> walk_desc = #{walkDesc},</if>
+			<if test="busTime != null"> bus_time = #{busTime},</if>
+			<if test="busDesc != null"> bus_desc = #{busDesc},</if>
+			<if test="busDist != null"> bus_dist = #{busDist},</if>
+			<if test="carTime != null"> car_time = #{carTime},</if>
+			<if test="carDesc != null"> car_desc = #{carDesc},</if>
+			<if test="carDist != null"> car_dist = #{carDist},</if>
+			<if test="carCost != null"> car_cost = #{carCost},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="UrbanTraffic">
+		delete from
+			tb_urban_traffic
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="UrbanTraffic">
+		select
+			*
+		from
+			tb_urban_traffic
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="UrbanTraffic">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">$ {item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_urban_traffic
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="startLat != null and '' != startLat"> and start_lat = #{startLat} </if>
+			<if test="startLng != null and '' != startLng"> and start_lng = #{startLng} </if>
+			<if test="endLat != null and '' != endLat"> and end_lat = #{endLat} </if>
+			<if test="endLng != null and '' != endLng"> and end_lng = #{endLng} </if>
+			<if test="startTripType != null and '' != startTripType"> and start_trip_type = #{startTripType} </if>
+			<if test="startTripId != null and '' != startTripId"> and start_trip_id = #{startTripId} </if>
+			<if test="endTripType != null and '' != endTripType"> and end_trip_type = #{endTripType} </if>
+			<if test="endTripId != null and '' != endTripId"> and end_trip_id = #{endTripId} </if>
+			<if test="walkTime != null and '' != walkTime"> and walk_time = #{walkTime} </if>
+			<if test="walkDist != null and '' != walkDist"> and walk_dist = #{walkDist} </if>
+			<if test="walkDesc != null and '' != walkDesc"> and walk_desc = #{walkDesc} </if>
+			<if test="busTime != null and '' != busTime"> and bus_time = #{busTime} </if>
+			<if test="busDesc != null and '' != busDesc"> and bus_desc = #{busDesc} </if>
+			<if test="busDist != null and '' != busDist"> and bus_dist = #{busDist} </if>
+			<if test="carTime != null and '' != carTime"> and car_time = #{carTime} </if>
+			<if test="carDesc != null and '' != carDesc"> and car_desc = #{carDesc} </if>
+			<if test="carDist != null and '' != carDist"> and car_dist = #{carDist} </if>
+			<if test="carCost != null and '' != carCost"> and car_cost = #{carCost} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; #{ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; #{tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+	</sql>
+</mapper>

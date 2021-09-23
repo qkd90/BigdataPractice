@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hdp="http://www.springframework.org/schema/hadoop"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+    http://www.springframework.org/schema/hadoop http://www.springframework.org/schema/hadoop/spring-hadoop-2.0.xsd">
+
+    <!-- <context:property-placeholder location="classpath*:/hadoop.properties,classpath*:/hive.properties"/> -->
+	<bean id="hiveDriver" class="org.apache.hadoop.hive.jdbc.HiveDriver" />
+
+	<bean id="hiveSource"
+		class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<constructor-arg name="driver" ref="hiveDriver" />
+		<constructor-arg name="url" value="${hive.url}" />
+	</bean>
+
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg ref="hiveSource" />
+	</bean>
+
+
+	<context:component-scan base-package="org.springframework.samples.hadoop.hive" />
+
+	<hdp:configuration>
+		fs.defaultFS=${hd.fs}
+		mapred.job.tracker=${hd.jt}
+	</hdp:configuration>
+
+	<!-- <hdp:hive-server  port="${hive.port}" />  -->
+
+	<hdp:hive-client-factory host="${hive.host}" port="${hive.port}" />
+
+	<hdp:hive-template id="hiveTemplate" />
+
+	<!-- <script id="hdfsScript" language="groovy" location="set-hive-permissions.groovy" 
+		run-at-startup="true"/> <hive-runner id="hiveRunner" hive-client-factory-ref="hiveClientFactory" 
+		run-at-startup="false" pre-action="hdfsScript"> <script location="password-analysis.hql"/> 
+		</hive-runner> -->
+
+
+</beans>

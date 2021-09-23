@@ -1,0 +1,33 @@
+<div ng-controller="xianluCtrl" class="xianlu">
+    <div class="fixtop topbg col-xs-12 navtop" id="fxtop">
+        <ul>
+            <li class="active"><a ui-sref="xianlu">线路</a></li>
+            <!--<li><a ui-sref="yinxiang">印象</a></li>-->
+            <li class="pull-right"><a ui-sref="shaixuan" class="sygz">筛选</a></li>
+        </ul>
+    </div>
+    <div class="clearfix" id="xingcontainer">
+        <div class="content yjlist" id="thelist" infinite-scroll='fetchXianLus()' infinite-scroll-distance='1' infinite-scroll-disabled='loading'>
+            <div class="clearfix xlpic" ng-repeat="xianlu in xianlus">
+                <a ui-sref="xing-xianlu-info({id:{{xianlu.id}}})">
+                    <img bn-lazy-src="{{xianlu.cover}}?imageView2/1/w/600/h/300/q/75" class="img-responsive">
+                    <div class="info xlinfo">
+                        <h2 class="name clearfix">{{xianlu.name}}
+                            <small class="clearfix">{{xianlu.startDate}}出发/{{xianlu.day}}天
+                                <!--/￥{{xianlu.cost}}--></small>
+                        </h2>
+                        <!--<p class="other"><span class="pull-right"><span class="view">{{ data.view }}</span><span
+                                class="licheng">20000</span></span></p>-->
+                    </div>
+                </a>
+            </div>
+            <div ng-show="loading"><div class="yuloading"><span>加载数据中...</span></div></div>
+            <div ng-show="nomore" class="alert alert-danger text-center">没有更多数据了</div>
+        </div>
+    </div>
+    <div class="fixbottom col-xs-12" id="appbottom">
+        <a ui-sref="xianlu" class="active"><span class="fx">发现</span></a>
+        <a ui-sref="xing"><span class="dz">私人定制</span></a>
+        <a ui-sref="my"><span class="my">我的</span></a>
+    </div>
+</div>

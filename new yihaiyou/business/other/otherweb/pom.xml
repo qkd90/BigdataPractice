@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.data.data</groupId>
+    <artifactId>other</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>otherweb</artifactId>
+  <packaging>war</packaging>
+  
+  <dependencies>
+    <dependency>
+        <groupId>com.data.data</groupId>
+        <artifactId>userweb</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <classifier>classes</classifier>
+    </dependency>
+    <dependency>
+        <groupId>com.data.data</groupId>
+        <artifactId>userweb</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <type>war</type>
+    </dependency>
+	<dependency>
+		<groupId>com.data.data</groupId>
+		<artifactId>otherservice</artifactId>
+		<version>${project.version}</version>
+	</dependency>	
+  </dependencies>
+</project>

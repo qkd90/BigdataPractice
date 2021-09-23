@@ -1,0 +1,54 @@
+<div ng-controller="myhbCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">我的红包</a></li>
+            <li class="pull-right"><a href="" class="sygz" data-toggle="modal" data-target="#sygz">使用规则</a></li>
+        </ul>
+    </div>
+    <div id="mycontainer" class="clearfix">
+        <div id="hongbaotab">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active"><a data-target="#wsy" aria-controls="wsy" role="tab"
+                                      data-toggle="tab"><span>未使用</span></a></li>
+                <li><a data-target="#ysy" aria-controls="ysy" role="tab" data-toggle="tab"><span>已使用</span></a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="wsy">
+                    <div class="media hongbao" ng-repeat="data in myhbs.nouse">
+                        <div class="media-left"><span class="nouse">￥{{data.faceValue}}</span></div>
+                        <div class="media-body">
+                            <h4>{{data.limitProductTypes}}</h4>
+                            <!--<p class="num">编号：{{data.couponCode}}</p>-->
+                            <p class="time">有效期至{{data.validEnd}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane search-fujin-list" id="ysy">
+                    <div class="media hongbao" ng-repeat="data in myhbs.use">
+                        <div class="media-left"><span class="use">￥{{data.faceValue}}</span></div>
+                        <div class="media-body">
+                            <h4>{{data.limitProductTypes}}</h4>
+                            <!--<p class="num">编号：{{data.couponCode}}</p>-->
+                            <p class="time">有效期至{{data.validEnd}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 清除缓存 -->
+    <div class="modal fade" id="sygz" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center" id="myModalLabel">{{myhbs.rule.title}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="clearfix" ng-bind-html="myhbs.rule.content | trustHtml"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,39 @@
+<div class="personal_cruiseDetail" ng-controller="ferryOrderDetailCtrl" screenheight>
+    <div class="header">
+        <a ng-click="back()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        船票订单详情
+        <span class="save pic2 pic2_1" ui-sref="personalIndex"></span>
+        <span class="save pic2  pic3"></span>
+    </div>
+    <div class="ticketdetail">
+        <h3 class="ferryh">订单信息</h3>
+
+        <p><span>一海游订单号：</span>{{order.orderNo}}</p>
+
+        <p><span>轮渡订单号：</span>{{order.ferryNumber}}</p>
+
+        <p><span>航线：</span>{{order.name}}</p>
+
+        <p><span>航班号：</span>{{order.flightNumber}}</p>
+
+        <p><span>下单时间：</span>{{order.orderDate}}</p>
+
+        <p><span>出发时间：</span>{{order.startDate}}</p>
+
+        <p><span>票数：</span>{{order.touristList.length}}</p>
+
+        <p><span>旅客：</span><label class="hostname" ng-repeat="tourist in order.touristList">{{tourist.name}} </label></p>
+
+        <p><span>订单状态：</span>{{order.status}}</p>
+
+        <p><span>订单价格：</span><span class="tick_price"><span class="rmb">¥</span>{{order.price}}</span></p>
+
+    </div>
+    <div class="refund" ng-if="order.orderStatus == 'SUCCESS'" ng-click="returnOrder()">申请退款</div>
+    <div class="personalTopay clearfix" ng-if="order.orderStatus == 'WAIT'"><span class="t_pay" ui-sref="ferry_firmorder({orderId: order.id})" >去支付</span><span class="t_turn" ng-click="cancel()">取消订单</span></div>
+    <style>
+        .bootbox .modal-footer .btn.confirmBoxBtn {
+            width: 50%;
+        }
+    </style>
+</div>

@@ -1,0 +1,46 @@
+<div class="Qdate_main clearfix" ng-controller="orderDateCtrl" id="tagHeight">
+    <header>
+        <div class="Qdate_header">
+            <a href="javascript:history.go(-1)"><span><i class="icon-title-back effect-active icon-white"></i></span></a>
+            选择团期
+        </div>
+    </header>
+    <section id="calendar" style="margin-top: 45px;" full-calendar calendar-data="{{calendarData}}"
+             calendar-event-click="eventClick(calEvent)" calendar-day-click="dayClick(date)">
+    </section>
+    <section style="margin-bottom: 100px;">
+        <div class="Qdate_describe" style="width:100%">
+            <span>已选团期：{{selectedDate}}</span>
+        </div>
+    </section>
+    <div class="Qdate_footer">
+        <div class="Qdate_ticket">
+            <div class="Qdate_adult">
+                <span class="Qdate_totalprice">成人 <span>￥{{adultPrice}}</span></span>
+                <div class="Qdate_num" num-changer min-num="1" max-num="50" scope-num="adultNum" minus-element-id="minusAdult" add-element-id="addAdult">
+                    <span class="Qdate_num_minus Qdate_updown" ng-class="{disabled: adultNum <= 1}"
+                          id="minusAdult">-</span>
+                    <span class="Qdate_number">{{adultNum}}</span>
+                    <span class="Qdate_num_add Qdate_updown" id="addAdult">+</span>
+                </div>
+            </div>
+            <div class="Qdate_child">
+                <span class="Qdate_totalprice">儿童 <span>￥{{childPrice}}</span></span>
+                <div class="Qdate_num" num-changer min-num="0" max-num="50" scope-num="childNum" minus-element-id="minusChild" add-element-id="addChild">
+                    <span class="Qdate_num_minus Qdate_updown" ng-class="{disabled: childNum <= 0}"
+                          id="minusChild">-</span>
+                    <span class="Qdate_number">{{childNum}}</span>
+                    <span class="Qdate_num_add Qdate_updown" id="addChild">+</span>
+                </div>
+            </div>
+        </div>
+        <div ng-click="next()">
+        <p>下一步</p>
+        <p>选择资源</p>
+        </div>
+    </div>
+</div>
+<script>
+    var docHeight=$(window).height();
+        $('#tagHeight').css({'height':docHeight});
+</script>

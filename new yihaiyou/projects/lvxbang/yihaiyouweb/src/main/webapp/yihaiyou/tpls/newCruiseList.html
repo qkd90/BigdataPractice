@@ -1,0 +1,36 @@
+<div ng-controller="cruiseShipList" style="background: #fff;">
+    <div class="y-list-header">
+        <a href="javascripe:;" class="back" ui-sref="index"></a>
+        邮轮
+        <!--<i class="glasses"></i>-->
+    </div>
+    <div class="y-list-nav clearfix">
+        <div class="y-nav-group pull-left">
+            <span ng-class="{true:'active',false:''}[navStatus1]" ng-click="switchNav(1)">淡季热门</span>
+        </div>
+        <div class="y-nav-group pull-right">
+            <span ng-class="{true:'active',false:''}[navStatus2]" ng-click="switchNav(2)">热门推荐</span>
+        </div>
+    </div>
+    <ul class="y-list-content clearBoth">
+        <li ng-repeat="ship in shipList" ui-sref="cruiseDetails({dateId: ship.date.id})">
+            <div class="y-content-left pull-left">
+                <img src={{ship.coverImage}}>
+            </div>
+            <div class="y-content-right pull-left">
+                <h5>{{ship.name}}</h5>
+                <div class="depart-info clearBoth">
+                    <span class="pull-left">{{ship.date.date}}</span>
+                    <span class="pull-left">{{ship.startCity}}</span>
+                </div>
+                <div class="content-price">
+                    <sup>￥</sup>{{ship.date.minSalePrice}}<sub>起/人</sub>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="y-list-footer" ui-sref="shipList">
+        查看更多推荐产品
+        <i class="icon-right"></i>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div ng-controller="orderPayCtrl" class="orderpay">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        收银台
+    </div>
+    <ul class="paytype">
+        <li ng-repeat="pay in payType" ng-class="{true:selectedType == pay.index,false:selectedType != pay.index}"
+            ng-click="changePayType(pay.index)" ng-if="pay.index != 3 || iftaobao">
+            <span class="paypic" ng-class="{icon_wx: pay.index == 2, icon_zfb: pay.index == 3}"
+                  ng-if="pay.index > 1"></span>
+            {{pay.name}}
+            <span ng-if="pay.index == 1">{{balance}}元</span><label class="recharge" ui-sref="personalRecharge" ng-if="pay.index == 1">充值</label>
+        </li>
+    </ul>
+    <div class="bottompay">
+        <ul>
+            <li><span>支付金额：</span>¥{{order.price}}</li>
+            <li ng-click="pay()">去支付</li>
+        </ul>
+    </div>
+    <div class="pay_shadow" ng-show="isBalancePay"></div>
+    <div class="passwordBox" centerbox ng-show="isBalancePay">
+        <div class="pas_close clearfix"><span ng-click="closePWinput()"></span></div>
+        <h3>请输入密码</h3>
+        <input type="password" class="password" ng-model="payPassword">
+        <div class="p_bottom">
+            <span class="no" ng-click="balanceCancel()">取消</span>
+            <span class="yes" ng-click="payBalance()">确定</span>
+        </div>
+    </div>
+</div>

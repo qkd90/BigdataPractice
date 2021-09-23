@@ -1,0 +1,92 @@
+<div class="advert">
+    <div class="swiper-container" id="hotel_index_top_banner">
+        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href=""><img src="http://oi43av1md.bkt.clouddn.com/ads/banner/1486542467655.png"></a></div>
+        </div>
+        <div class="swipe-pagenavi swiper-pagination" id="hotel_index_top_page"></div>
+    </div>
+    <div class="outadvertBox" style="position:absolute;left:0;top:0">
+        <form id="searchForm" action="" enctype="multipart/form-data">
+            <div class="advertBox">
+                <div class="dateBox">
+                    <ul>
+                        <li class="dateTitle clearfix">
+                            <span class="line_l"></span>
+                            <span class="line_t">酒店民宿</span>
+                            <span class="line_l"></span>
+                        </li>
+                        <li class="interBox">
+                            <label>入住日期：</label>
+                            <div class="date_d" id="startDateDiv" onclick="WdatePicker({el:'startDate', doubleCalendar:true, readOnly:true, onpicked:HotelIndex.onFoucsEndTime(), minDate:'%y-%M-{%d}'})">
+                                <input type="text" id="startDate" name="startDate" autocomplete="off" onclick="WdatePicker({doubleCalendar:true, readOnly:true, onpicked:HotelIndex.onFoucsEndTime(), minDate:'%y-%M-{%d}'})">
+                            </div>
+                        </li>
+                        <li class="interBox">
+                            <label>离店日期：</label>
+                            <div class="date_d" id="endDateDiv" onclick="WdatePicker({el:'endDate', doubleCalendar:true, readOnly:true, minDate:'#F{$dp.$D(\'startDate\',{d:1})}'})">
+                                <input type="text" id="endDate" name="endDate" autocomplete="off" onclick="WdatePicker({doubleCalendar:true, readOnly:true, minDate:'#F{$dp.$D(\'startDate\',{d:1})}'})">
+                            </div>
+                        </li>
+                        <li class="interBox">
+                            <label>关键词：</label>
+                            <div class="date_d date_key">
+                                <input type="text" placeholder="关键词" id="searchWord" name="searchWord">
+                            </div>
+                        </li>
+                        <li class="interBox">
+                            <div class="search">
+                                <a href="javascript:;" id="goHotelListBtn">搜索</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="specailHotel">
+    <h3>特色民宿</h3>
+    <div class="specailList">
+        <ul class="clearfix">
+        </ul>
+    </div>
+</div>
+<div class="hotBrand">
+    <h3>热门推荐</h3>
+    <div class="hotelList">
+        <ul class="clearfix">
+        </ul>
+    </div>
+    <div class="tackMore"><a target="_blank" href="/yhypc/hotel/list.jhtml">查看更多</a></div>
+</div>
+<div class="hotBrand hotHotel">
+    <h3>热门住宿</h3>
+    <div class="brandList">
+        <p class="brandTitle" id="region_sel">
+                <span data-region-id="7734" class="active">白鹭洲/厦鼓码头</span>
+                <span data-region-id="7735" class="">曾厝垵</span>
+                <span data-region-id="7736" class="">高崎国际机场区域</span>
+                <span data-region-id="7737" class="">鼓浪屿风景区</span>
+                <span data-region-id="7738" class="">湖里商业区</span>
+                <span data-region-id="7739" class="">湖里万达、五缘湾</span>
+                <span data-region-id="7740" class="">环岛路黄厝海滨浴场</span>
+        </p>
+    </div>
+    <div class="hotelList" id="hot_hotel_area">
+            <ul data-region-id="7734" class="clearfix" style="display: none">
+            </ul>
+            <ul data-region-id="7735" class="clearfix" style="display: none">
+            </ul>
+            <ul data-region-id="7736" class="clearfix" style="display: none">
+            </ul>
+            <ul data-region-id="7737" class="clearfix" style="display: none">
+            </ul>
+            <ul data-region-id="7738" class="clearfix" style="display: none">
+            </ul>
+            <ul data-region-id="7739" class="clearfix" style="display: none">
+            </ul>
+            <ul data-region-id="7740" class="clearfix" style="display: none">
+            </ul>
+    </div>
+    <div class="tackMore"><a target="_blank" href="/yhypc/hotel/list.jhtml">查看更多</a></div>
+</div>

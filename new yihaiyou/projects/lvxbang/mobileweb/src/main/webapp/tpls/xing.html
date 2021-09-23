@@ -1,0 +1,122 @@
+<div ng-controller="SelectCityCtrl" id="SelectCityCtrl" class="xing">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="#/xianglu" class="goback">选择目的地</a></li>
+            <li class="pull-right">
+                <button type="button" class="fabu btn" ng-click="next()">下一步</button>
+            </li>
+        </ul>
+    </div>
+    <div id="xingcontainer" class="clearfix">
+        <div class="xheader clearfix">
+            <div class="hot text-center pull-left col-xs-4">
+                <button type="button" data-toggle="modal" data-target="#hotModal">热门<span class="caret"></span></button>
+            </div>
+            <div class="hotsearch pull-right col-xs-8" style="padding-left: 2px;">
+                <form>
+                    <a ui-sref="search-mdd" class="kw">输入想去的地方</a>
+                </form>
+            </div>
+        </div>
+        <div class="dzlistall clearfix waibu">
+            <div ng-if="citys.length == 0"><div class="yuloading"><span>正在加载数据中...</span></div></div>
+        <div class="dzlist clearfix col-xs-12 pl0pr0">
+            <ul id="dzxz" class="clearfix" style="margin-right:0px">
+                <li ng-if="city.check" citid="{{city.id}}" city citid="{{city.id}}" class="col-xs-6 active" ng-repeat="city in citys" >
+                    <a>
+                        <img bn-lazy-src="{{city.cover}}?imageView2/2/h/210/interlace/0/q/100" class="img-responsive">
+                        <h3>{{city.name}}</h3>
+                        <div class='xzok'></div>
+                    </a>
+                </li>
+                <li ng-if="!city.check" citid="{{city.id}}" city citid="{{city.id}}" class="col-xs-6" ng-repeat="city in citys">
+                    <a>
+                        <img bn-lazy-src="{{city.cover}}?imageView2/2/h/210/interlace/0/q/100" class="img-responsive">
+                        <h3>{{city.name}}</h3>
+                        <div class='xzok'></div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="tagbottom row">
+        <div class="taglist pull-left col-xs-8">
+            <div class="alltags"><a ng-click="removeCity(this)" ng-repeat="city in selectCitys"><span>{{city.name}}</span></a></div>
+        </div>
+        <div class="totaltag text-center pull-right col-xs-4">{{selectCitys.length}}个目的地</div>
+    </div>
+    <!-- 热门搜索弹出框 -->
+    <div class="modal fade" id="hotModal" tabindex="-1" role="dialog" aria-labelledby="hotModalLabel">
+        <div class="modal-dialog  col-xs-12" role="document" style="width:100%">
+
+            <div class="clearfix hotlist">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tab vertical-tab pull-left col-xs-4" role="tablist" id="vtab">
+                    <li role="hotlist" class="active">
+                        <a data-target="#hot" aria-controls="hot" role="tab" data-toggle="tab">热门</a></li>
+                    <li role="hotlist"><a data-target="#ad" aria-controls="ad" role="tab" data-toggle="tab">ABCD</a>
+                    </li>
+                    <li role="hotlist"><a data-target="#eh" aria-controls="eh" role="tab" data-toggle="tab">EFGH</a>
+                    </li>
+                    <li role="hotlist"><a data-target="#il" aria-controls="il" role="tab" data-toggle="tab">IJKL</a>
+                    </li>
+                    <li role="hotlist"><a data-target="#mp" aria-controls="mp" role="tab" data-toggle="tab">MNOP</a>
+                    </li>
+                    <li role="hotlist"><a data-target="#qt" aria-controls="qt" role="tab" data-toggle="tab">QRST</a>
+                    </li>
+                    <li role="hotlist"><a data-target="#ux" aria-controls="ux" role="tab" data-toggle="tab">UVWX</a>
+                    </li>
+                    <li role="hotlist"><a data-target="#yz" aria-controls="yz" role="tab" data-toggle="tab">YZ</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content vertical-tab-content pull-left col-xs-8">
+                    <div role="tabpanel" class="tab-pane active" id="hot">
+                        <ul class="clearfix" id="hotcitylist">
+                            <li city ng-if="city.check" class="active" citid="{{city.id}}" ng-repeat="city in hotCity"><a>{{city.name}}</a></li>
+                            <li city ng-if="!city.check" citid="{{city.id}}" ng-repeat="city in hotCity"><a>{{city.name}}</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="ad">
+                        <ul class="clearfix" id="hotcitylist">
+                            <li city citid="{{city.id}}" ng-repeat="city in citys_ABCD"><a>{{city.name}}</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="eh">
+                        <ul class="clearfix" id="hotcitylist">
+                            <li city citid="{{city.id}}" ng-repeat="city in citys_EFGH"><a>{{city.name}}</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="il">
+                        <ul class="clearfix" id="hotcitylist">
+                            <li city citid="{{city.id}}" ng-repeat="city in citys_IJKL"><a>{{city.name}}</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="mp">
+                        <ul class="clearfix" id="hotcitylist">
+                            <li city citid="{{city.id}}" ng-repeat="city in citys_MNOP"><a>{{city.name}}</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="qt">
+                        <ul class="clearfix" id="hotcitylist">
+                            <li city citid="{{city.id}}" ng-repeat="city in citys_QRST"><a>{{city.name}}</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="ux">
+                        <ul class="clearfix" id="hotcitylist">
+                            <li city citid="{{city.id}}" ng-repeat="city in citys_UVWX"><a>{{city.name}}</a></li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="yz">
+                        <ul class="clearfix" id="hotcitylist">
+                            <li city citid="{{city.id}}" ng-repeat="city in citys_YZ"><a>{{city.name}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

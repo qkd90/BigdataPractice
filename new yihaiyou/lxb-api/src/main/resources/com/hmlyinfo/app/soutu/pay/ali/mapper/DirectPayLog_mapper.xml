@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.pay.ali.mapper.DirectPayLogMapper">
+	<insert id="insert" parameterType="DirectPayLogDto" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_ali_direct_pay_log
+			(
+				order_id,
+				total_fee,
+				subject,
+				order_desc,
+				use_anti_phishing_key,
+				exter_invoke_ip,
+				seller_email,
+				notify_url,
+				return_url,
+				show_url,
+				pay_resp_service,
+				pay_success_url,
+				pay_fail_url,
+				create_time,
+				modify_time
+			)
+		values
+			(
+				#{orderId},
+				#{totalFee},
+				#{subject},
+				#{orderDesc},
+				#{useAntiPhishingKey},
+				#{exterInvokeIp},
+				#{sellerEmail},
+				#{notifyUrl},
+				#{returnUrl},
+				#{showUrl},
+				#{payRespService},
+				#{paySuccessUrl},
+				#{payFailUrl},
+				#{createTime},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="DirectPayLogDto">
+		update tb_ali_direct_pay_log
+		<set>
+			<if test="orderId != null"> order_id = #{orderId},</if>
+			<if test="totalFee != null"> total_fee = #{totalFee},</if>
+			<if test="subject != null"> subject = #{subject},</if>
+			<if test="orderDesc != null"> order_desc = #{orderDesc},</if>
+			<if test="useAntiPhishingKey != null"> use_anti_phishing_key = #{useAntiPhishingKey},</if>
+			<if test="exterInvokeIp != null"> exter_invoke_ip = #{exterInvokeIp},</if>
+			<if test="sellerEmail != null"> seller_email = #{sellerEmail},</if>
+			<if test="notifyUrl != null"> notify_url = #{notifyUrl},</if>
+			<if test="returnUrl != null"> return_url = #{returnUrl},</if>
+			<if test="showUrl != null"> show_url = #{showUrl},</if>
+			<if test="payRespService != null"> pay_resp_service = #{payRespService},</if>
+			<if test="paySuccessUrl != null"> pay_success_url = #{paySuccessUrl},</if>
+			<if test="payFailUrl != null"> pay_fail_url = #{payFailUrl},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			log_id = #{logId}
+	</update>
+	
+	<delete id="del" parameterType="DirectPayLogDto">
+		delete from
+			tb_ali_direct_pay_log
+		where
+			log_id = #{logId}
+	</delete>
+	
+	<select id="selById" resultType="DirectPayLogDto">
+		select
+			*
+		from
+			tb_ali_direct_pay_log
+		where
+			log_id = #{logId}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="DirectPayLogDto">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_ali_direct_pay_log
+		<where>
+			<if test="logId != null and '' != logId"> and log_id = #{logId} </if>
+			<if test="orderId != null and '' != orderId"> and order_id = #{orderId} </if>
+			<if test="totalFee != null and '' != totalFee"> and total_fee = #{totalFee} </if>
+			<if test="subject != null and '' != subject"> and subject = #{subject} </if>
+			<if test="orderDesc != null and '' != orderDesc"> and order_desc = #{orderDesc} </if>
+			<if test="useAntiPhishingKey != null and '' != useAntiPhishingKey"> and use_anti_phishing_key = #{useAntiPhishingKey} </if>
+			<if test="exterInvokeIp != null and '' != exterInvokeIp"> and exter_invoke_ip = #{exterInvokeIp} </if>
+			<if test="sellerEmail != null and '' != sellerEmail"> and seller_email = #{sellerEmail} </if>
+			<if test="notifyUrl != null and '' != notifyUrl"> and notify_url = #{notifyUrl} </if>
+			<if test="returnUrl != null and '' != returnUrl"> and return_url = #{returnUrl} </if>
+			<if test="showUrl != null and '' != showUrl"> and show_url = #{showUrl} </if>
+			<if test="payRespService != null and '' != payRespService"> and pay_resp_service = #{payRespService} </if>
+			<if test="paySuccessUrl != null and '' != paySuccessUrl"> and pay_success_url = #{paySuccessUrl} </if>
+			<if test="payFailUrl != null and '' != payFailUrl"> and pay_fail_url = #{payFailUrl} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; # {ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; # {tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+	</sql>
+</mapper>

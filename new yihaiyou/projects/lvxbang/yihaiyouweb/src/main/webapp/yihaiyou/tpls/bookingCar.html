@@ -1,0 +1,77 @@
+<div class="bk_main" ng-controller="tagplace" screenheight>
+    <div class="header">
+        <a  ui-sref="index"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        预约专车
+    </div>
+    <div class="chosewant">
+        <form>
+            <ul>
+                <li class="phone">
+                    <input class="pername" type="text" id="name" ng-model="messagex.name" ng-blur="checkName()"
+                           placeholder="请输入姓名"/>
+                </li>
+                <li class="phone" style="margin-top: 0;border-top: 0;">
+                    <input class="perphone" type="tle" id="phone" ng-model="messagex.phone" ng-blur="getPrice()"
+                           placeholder="请输入手机号"/>
+                </li>
+                <li class="fly" ng-show="none"><input type="text" placeholder="请输入航班号"/></li>
+                <li class="bkcarstyle">
+                    <span ng-click="bkstyle(1)" ng-class="{tagcolor:serviceType == 1}">立即叫车</span>
+                    <span ng-click="bkstyle(2)" ng-class="{tagcolor:serviceType == 2}">预约叫车</span>
+                </li>
+                <li class="usetime" ng-show="date_car"><input id="time" type="text" placeholder="请输入用车时间" ng-blur="getPrice()" readonly ng-model="startTime" data-lcalendar=""/></li>
+            </ul>
+            <div class="takecar">
+                <div class="staplace">厦门</div>
+                <input type="text" ng-model="firstpla.title" placeholder="请选择上车地点" readonly ui-sref="shangche"/>
+            </div>
+            <div class="takecar" style="margin-top:-1px">
+                <div class="tagplace">厦门</div>
+                <input type="text" ng-model="lastpla.title" placeholder="请选择下车地点" readonly ui-sref="xiache"/>
+            </div>
+            <div class="selcar" style="height:60px">
+                <ul>
+                    <li>
+                        <p ng-class="{true: 'bgpx', false: 'bgp'}[carTypeIndex.item == 1]" ng-click="selectCarType(1)">
+                            <img src="/yihaiyou/image/gongwu.png"></p>
+
+                        <p>公务轿车</p>
+                    </li>
+                    <li>
+                        <p ng-class="{true: 'bgpx', false: 'bgp'}[carTypeIndex.item == 2]" ng-click="selectCarType(2)">
+                            <img src="/yihaiyou/image/shangwu.png"></p>
+
+                        <p>商务轿车</p>
+                    </li>
+                    <li>
+                        <p ng-class="{true: 'bgpx', false: 'bgp'}[carTypeIndex.item == 3]" ng-click="selectCarType(3)">
+                            <img src="/yihaiyou/image/haohua.png"></p>
+
+                        <p>豪华轿车</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bk_bottom">
+                <div class="price">预估价：<span>¥ {{price.price}}</span></div>
+                <div class="handin" ng-if="messagex.balance >= price.price * 2 && price.price > 0"><a
+                        ng-click="submitOrder()"><span>提交</span></a></div>
+                <div class="handin" ng-if="price.price == 0"><a><span class="gray">提交</span></a></div>
+                <div class="handin" ng-if="messagex.balance < price.price * 2"><a
+                        ui-sref="personalRecharge"><span>立即充值</span></a></div>
+            </div>
+        </form>
+    </div>
+    <div class="car_detail" ng-if="price.price > 0">
+        <p>¥{{price.startPrice}}+¥{{price.perKilometrePrice}}/公里+¥{{price.perTimePrice}}/分钟</p>
+        <!--<p>大众帕萨特丰田美凯瑞或类似5座车型</p>-->
+    </div>
+    <div class="balanceLack" ng-if="messagex.balance < price.price * 2" ng-click="statement()">钱包余额不足请充值</div>
+    <div class="statement_recharge" ng-show="statement_word">
+        <h3>充值金额说明</h3>
+
+        <p>您的钱包余额不足，为方便您的乘车体验最少需充值¥{{balanceDiff}}，最少充值金额为预估车费的2倍，
+            最终车费结算将以实际车费为准，多余车费将退回至您的钱包，您可提现至个人账户，给您带来不便敬请谅解。</p>
+    </div>
+    <div class="shadowbox" ng-show="isShow" ng-click="shadowhide()"></div>
+    <div class="shadowScreen" ng-show="shadowScreen" ng-click="hideshadowScreen()"></div>
+</div>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.NoteDayMapper">
+	<insert id="insert" parameterType="NoteDay">
+		insert into tb_note_day
+			(
+				id,
+				note_id,
+				travel_date,
+				weather,
+				weather_type,
+				air_quality,
+				day_desc,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{noteId},
+				#{travelDate},
+				#{weather},
+				#{weatherType},
+				#{airQuality},
+				#{dayDesc},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="NoteDay">
+		update tb_note_day
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="noteId != null and '' != noteId"> note_id = #{noteId},</if>
+			<if test="travelDate != null and '' != travelDate"> travel_date = #{travelDate},</if>
+			<if test="weather != null and '' != weather"> weather = #{weather},</if>
+			<if test="weatherType != null and '' != weatherType"> weather_type = #{weatherType},</if>
+			<if test="airQuality != null and '' != airQuality"> air_quality = #{airQuality},</if>
+			<if test="dayDesc != null and '' != dayDesc"> day_desc = #{dayDesc},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="NoteDay">
+		delete from
+			tb_note_day
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="NoteDay">
+		select
+			*
+		from
+			tb_note_day
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="NoteDay">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_note_day
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="noteId != null and '' != noteId"> and note_id = #{noteId} </if>
+			<if test="travelDate != null and '' != travelDate"> and travel_date = #{travelDate} </if>
+			<if test="weather != null and '' != weather"> and weather = #{weather} </if>
+			<if test="weatherType != null and '' != weatherType"> and weather_type = #{weatherType} </if>
+			<if test="airQuality != null and '' != airQuality"> and air_quality = #{airQuality} </if>
+			<if test="dayDesc != null and '' != dayDesc"> and day_desc = #{dayDesc} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ids != null">
+			and id in ( <if test="ids.size() == 0">-1000</if>
+            <foreach collection="ids" item="item" index="index" separator=",">#{item}
+            </foreach>
+            )
+		</if>
+		</where>
+	</sql>
+</mapper>

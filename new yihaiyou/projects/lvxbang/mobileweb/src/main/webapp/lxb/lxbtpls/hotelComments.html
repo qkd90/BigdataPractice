@@ -1,0 +1,36 @@
+<div class="hotelComments" ng-controller="hotelCommentsCtrl">
+    <header class="produ_lis_header">
+        <div class="pro_header_main">
+            <span class="gty_left">
+                <i class="icon icon-title-back" ng-click="back()"></i>
+            </span>
+            <span class="gty_center">
+               酒店点评
+            </span>
+            <span class="gty_right"></span>
+        </div>
+    </header>
+    <div id="calendar">
+        <div class="comment-list" infinite-scroll="listComment()" infinite-scroll-distance='1' infinite-scroll-disabled='loading'>
+            <div class="comment-bar" ng-repeat="itemData in commentList">
+                <p class="info-comment-bar"><i class="icon-group"></i>
+                    {{itemData.nickName}}<span class="type"></span></p>
+                <p class="stars">
+                    <i class="icon-star" ng-class="{'activity': itemData.maxScore >= 20}"></i>
+                    <i class="icon-star" ng-class="{'activity': itemData.maxScore >= 40}"></i>
+                    <i class="icon-star" ng-class="{'activity': itemData.maxScore >= 60}"></i>
+                    <i class="icon-star" ng-class="{'activity': itemData.maxScore >= 80}"></i>
+                    <i class="icon-star" ng-class="{'activity': itemData.maxScore >= 100}"></i>
+                </p>
+                <p class="content">
+                    {{itemData.content}}
+                </p>
+                <p class="remark-date">
+                    {{itemData.createTimeStr}}
+                </p>
+            </div>
+        </div>
+        <div ng-show="nomore" class="alert alert-danger text-center">没有更多数据了</div>
+        <div ng-show="loading"><div class="yuloading"><span>加载数据中...</span></div></div>
+    </div>
+</div>

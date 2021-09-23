@@ -1,0 +1,269 @@
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}.f12{font-size:12px}.f14{font-size:14px}.f16{font-size:16px}.f20{font-size:20px}.fb{font-weight:bold}.fn{font-weight:normal}.t2{text-indent:2em}.unl{text-decoration:underline}.no_unl{text-decoration:none}.tl{text-align:left}.tc{text-align:center}.tr{text-align:right}.bc{margin-left:auto;margin-right:auto}.fl{float:left;display:inline}.fr{float:right;display:inline}.cb{clear:both}.cl{clear:left}.cr{clear:right}.clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden}.clearfix{}*html
+.clearfix{height:1%}.vm{vertical-align:center}.pr{position:relative}.pa{position:absolute}.abs-right{position:absolute;right:0}.zoom{zoom:1}.none{display:none}.w{width:100%}.h{height:100%}.m5{margin:5px}.m10{margin:10px}.m15{margin:15px}.m20{margin:20px}.m30{margin:30px}.mt5{margin-top:5px}.mt10{margin-top:10px}.mt15{margin-top:15px}.mt20{margin-top:20px}.mt30{margin-top:30px}.mb5{margin-bottom:5px}.mb10{margin-bottom:10px}.mb15{margin-bottom:15px}.mb20{margin-bottom:20px}.mb30{margin-bottom:30px}.ml5{margin-left:5px}.ml10{margin-left:10px}.ml15{margin-left:15px}.ml20{margin-left:20px}.ml30{margin-left:30px}.mr5{margin-right:5px}.mr10{margin-right:10px}.mr15{margin-right:15px}.mr20{margin-right:20px}.mr30{margin-right:30px}.left{width:800px}a{text-decoration:none}.mr0{margin-right:0px !important}.hotel_res{background-image:url("http://img1.tuniucdn.com/img/20150130/hotel_v3/hotel_res.png");display:inline-block}.bg_buildings{background-position:0 -61px}.bg_buildings2{background-position:0 -406px;width:800px}.bg_shadow{background-position:1px 1px;width:376px;height:51px}.icon_1start{background-position:0 -383px;width:68px;height:16px}.icon_2start{background-position:0 -366px;width:68px;height:16px}.icon_3start{background-position:0 -349px;width:68px;height:16px}.icon_4start{background-position:0 -332px;width:68px;height:16px}.icon_5start{background-position:0 -312px;width:68px;height:16px}.icon_house{background-position:-274px -221px;width:36px;height:36px}.icon_cup{background-position:-90px -221px;width:36px;height:36px}.icon_dinnerware{background-position:-138px -221px;width:36px;height:36px}.icon_wifi{background-position:0 -221px;width:36px;height:36px}.icon_coffee{background-position:0 -268px;width:36px;height:36px}.icon_parking{background-position:-44px -222px;width:36px;height:36px}.icon_alarm{background-position:-44px -268px;width:36px;height:36px}.icon_luggage{background-position:-90px -268px;width:36px;height:36px}.icon_meeting{background-position:-138px -268px;width:36px;height:36px}.icon_swimming{background-position:-184px -222px;width:36px;height:36px}.icon_receive{background-position:-184px -268px;width:36px;height:36px}.icon_gym{background-position:-229px -222px;width:36px;height:36px}.icon_laundry{background-position:-229px -268px;width:36px;height:36px}.icon_airport{background-position:-276px -271px;width:36px;height:36px}.icon_baby{background-position:-320px -222px;width:36px;height:36px}.icon_pet{background-position:-320px -268px;width:36px;height:36px}.icon_card_master{background-position:-84px -314px;width:105px;height:65px}.icon_card_visa{background-position:-225px -314px;width:105px;height:65px}.icon_card_express{background-position:-368px -314px;width:105px;height:65px}.icon_card_jcb{background-position:-509px -314px;width:105px;height:65px}.icon_card_diners{background-position:0 -520px;width:105px;height:65px}.icon_card_unionpay{background-position:-141px -520px;width:105px;height:65px}.icon_card_others{background-position:-284px -520px;width:105px;height:65px}.icon_floor{background-position:-389px -222px;width:67px;height:67px}.icon_voltage{background-position:-466px -222px;width:67px;height:67px}.icon_mingsu{background-position:-623px -222px;width:67px;height:67px}.icon_qinglv{background-position:-704px -222px;width:67px;height:67px}.icon_quote_left{background-position:-389px -16px;width:12px;height:10px}.icon_quote_right{background-position:-411px -16px;width:12px;height:10px}.icon_quote2_left{background-position:-431px -9px;width:19px;height:18px}.icon_quote2_right{background-position:-458px -9px;width:19px;height:18px}.icon_quote3_left{background-position:-517px -9px;width:18px;height:16px}.icon_quote3_right{background-position:-543px -9px;width:18px;height:16px}.icon_comment{background-position:-491px -9px;width:17px;height:18px}.icon_rec{background-position:0 -601px;width:20px;height:42px}.accommodation_summary{font-family:"microsoft yahei";border:1px
+solid #eaeaea;border-left:4px solid #bf9958;padding:20px;width:760px;height:95px;overflow:hidden}.accommodation_summary
+h1{font-size:24px;line-height:1}.accommodation_summary
+p{font-size:12px;color:#666;margin-top:15px;line-height:1.5;height:56px;overflow:hidden}.h_panel{font-family:"microsoft yehei"}.h_panel
+h2{font-size:16px;padding:10px
+7px;line-height:1;color:#ac7009;font-weight:bold}.h_panel
+.panel_body{border:1px
+solid #eaeaea;border-top:2px solid #b3b3b3;background:#fff;padding:15px}.h_panel2{font-family:"microsoft yahei";border:1px
+solid #eaeaea;background:#fff;padding:20px
+30px}.h_panel2
+h2{font-size:18px;font-weight:bold;color:#666}.h_panel2 h2
+a{font-size:12px;float:right;color:#999;font-weight:normal}.hotels_hot
+ul{}.hotels_hot ul
+li{float:left;margin-bottom:15px;position:relative}.hotels_hot ul li
+img{display:block;width:378px;height:250px}.hotels_hot ul li
+p{color:#fff;width:100%;height:51px;line-height:51px;font-size:14px;text-indent:1em;overflow:hidden;position:absolute;bottom:0;left:0;font-family:"microsoft yahei"}.hotels_all{}.hotels_all h2
+span{font-size:12px;color:#666;margin-left:5px;font-weight:normal}.hotels_all h2 span
+em{color:#9e6606}.hotels_all
+.panel_body{border-bottom:none}.hotels_all
+.tags{font-size:12px;line-height:1.5}.hotels_all .tags
+label{color:#999}.hotels_all .tags
+ul{overflow:hidden}.hotels_all .tags ul
+li{float:left;display:inline;color:#333;padding:0
+8px;margin-bottom:5px}.hotels_all .tags ul li
+a{color:#333}.hotels_all .tags
+.tag_separator{color:#999}.hotels_all .tags
+.selected{color:#fff;background:#bf7c08;border-radius:8px}.hotels_all .tags .selected
+a{color:#fff}.hotels_all
+.hotel_item{line-height:1.5;position:relative;padding:20px
+0;border-bottom:1px solid #eaeaea}.hotels_all
+.last{border-bottom:none}.hotels_all .hotel_item
+img{display:block;float:left;width:260px;height:170px}.hotels_all .hotel_item
+.item_info{float:left;margin-left:20px;font-family:"宋体";font-size:12px;width:480px}.hotels_all .hotel_item .item_info
+h4{font-family:"microsoft yahei";font-size:20px;color:#333;height:30px;line-height:30px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.hotels_all .hotel_item .item_info
+.level{color:#999;margin-top:12px;width:auto}.hotels_all .hotel_item .item_info .level
+*{vertical-align:middle}.hotels_all .hotel_item .item_info .level
+label{line-height:16px;margin-right:5px}.hotels_all .hotel_item .item_info
+.summary{margin-top:10px;color:#999;height:36px;overflow:hidden}.hotels_all .hotel_item .item_info .summary
+label{font-weight:bold}.hotels_all .hotel_item .item_info
+.service{position:absolute;bottom:30px;left:280px}.hotels_all .hotel_item .item_info .service
+*{vertical-align:middle}.hotels_all .hotel_item .item_info .service
+span{padding:0
+5px;margin-right:10px}.hotels_all
+.panel_footer{border:1px
+solid #eaeaea;padding:15px
+20px;background:#fff}.hotels_all
+.hotel_pagination{float:right}.hotels_more
+.panel_body{padding-left:0;padding-right:0;border-left:none;border-right:none;border-bottom:none;background:none}.hotels_more
+ul{}.hotels_more ul
+li{float:left;display:inline;border:1px
+solid #eaeaea;background:#fff;position:relative;width:238px;height:225px;padding:10px;font-size:12px;overflow:hidden;margin-bottom:10px}.hotels_more li
+.hotel_name{background:rgba(0, 0, 0, 0.4);height:32px;line-height:32px;position:absolute;text-indent:1em;width:240px;left:10px;top:138px;color:#fff;font-family:"microsoft yahei"}.hotels_more li
+.hotel_comment{color:#666;margin-top:20px}.hotels_more li .hotel_comment
+p{margin-left:20px;height:36px;overflow:hidden}.hotels_more li .hotel_comment
+.icon_quote_left{float:left}.hotels_more li .hotel_comment
+.icon_quote_right{float:right}.hotel_home{border:1px
+solid #eaeaea}.hotel_home
+.home_header{border-bottom:1px solid #eaeaea;padding-bottom:10px;overflow:hidden}.hotel_home .home_header
+h1{margin-top:20px;border-left:4px solid #bf7c08;padding-left:26px;padding-right:20px;font-size:26px;color:#333;line-height:1;font-family:"microsoft yahei";height:26px}.hotel_home .home_header h1
+span{font-size:14px;color:#999;margin-left:10px}.hotel_home .home_header h1
+a{font-size:12px;color:#999;float:right;font-family:"宋体";height:26px;line-height:26px}.hotel_home .home_header
+ul{margin-top:20px;padding-left:30px;font-size:12px;color:#666;font-family:"宋体"}.hotel_home .home_header
+li{float:left;display:inline;padding:0
+10px;cursor:pointer;line-height:2}.hotel_home .home_header li
+a{color:#666}.hotel_home .home_header
+.separator{color:#999;margin:0
+10px}.hotel_home .home_header
+.selected{background:#bf7c08;color:#fff}.hotel_home .home_header .selected
+a{color:#fff}.hotel_home
+.home_body{padding:30px
+24px;background:#fff}.hotel_home
+.hotel_summary{position:relative;font-size:12px}.hotel_home .hotel_summary
+img{display:block;border:1px
+solid #eaeaea;padding:5px;height:400px}.hotel_home .hotel_summary
+.images_count{position:absolute;left:20px;top:370px;line-height:1.5;padding:0
+10px;background:#fff;color:#666;font-size:14px}.hotel_home .hotel_summary
+.hotel_desc_bg{position:absolute;color:#ffd633;background:#996f24;opacity:0.8;filter:alpha(opacity=80);height:400px;width:250px;top:6px;right:32px}.hotel_home .hotel_summary
+.hotel_desc{position:absolute;color:#ffd633;padding-top:15px;height:395px;width:250px;top:6px;right:32px}.hotel_home .hotel_summary .hotel_desc
+.desc_item{font-size:14px;padding-left:25px;margin-top:20px}.hotel_home .hotel_summary .hotel_desc .desc_item
+*{vertical-align:middle}.hotel_home .hotel_summary .hotel_desc .desc_item
+label{font-weight:bold}.hotel_home .hotel_summary .hotel_desc .desc_item
+span{color:#fff;font-family:"microsoft yahei"}.hotel_home .hotel_summary .hotel_desc
+.labels{position:relative;overflow:hidden}.hotel_home .hotel_summary .hotel_desc .labels
+label{position:absolute;top:0;left:25px;overflow:hidden}.hotel_home .hotel_summary .hotel_desc .labels
+ul{font-size:12px;float:left}.hotel_home .hotel_summary .hotel_desc .labels ul
+.first{margin-left:72px}.hotel_home .hotel_summary .hotel_desc .labels ul
+li{display:inline-block;*display:inline;*zoom:1;background:#fff;color:#bf9958;padding:2px
+8px;margin-right:5px;margin-bottom:5px;white-space:nowrap}.hotel_home .hotel_summary .hotel_desc
+.comment{padding:0
+10px;margin-top:20px;left:0;bottom:40px}.hotel_home .hotel_summary .hotel_desc .comment
+.icon_quote2_left{float:left}.hotel_home .hotel_summary .hotel_desc .comment
+.icon_quote2_right{float:right}.hotel_home .hotel_summary .hotel_desc .comment
+p{padding:0
+30px;line-height:1.5}.hotel_home .hotel_summary .hotel_desc .comment p
+a{color:#ffd633}.hotel_home .hotel_summary
+.hotel_info{background:#f8f9f8;padding:20px;font-size:12px;color:#333}.hotel_home .hotel_summary .hotel_info
+.field{margin-bottom:10px}.hotel_home .hotel_summary .hotel_info
+label{color:#999;display:inline-block;width:65px;text-align:left}.hotel_home .hotel_summary .hotel_info
+.map{color:#2e9900}.room_type{}.room_type
+ul{margin-top:20px}.room_type ul
+li{float:left;position:relative;margin-right:9px;margin-bottom:10px}.room_type ul li
+img{display:block;width:240px;height:160px}.room_type ul li
+p{position:absolute;left:0;bottom:0;width:100%;font-size:12px;height:28px;line-height:28px;font-family:"宋体";text-align:center;opacity:0.8;filter:alpha(opacity=80);color:#fff;background:#000}.hotel_speciality{}.hotel_speciality
+ul{}.hotel_speciality
+li{float:left;font-size:12px;color:#666;width:123px;margin-bottom:15px}.hotel_speciality li
+*{vertical-align:middle}.spot_nearby{}.spot_nearby h2
+a{float:right;font-size:12px;font-family:"宋体";color:#999;font-weight:normal}.spot_nearby
+ul{}.spot_nearby
+li{float:left;width:240px;margin-right:24px;margin-bottom:20px;height:229px}.spot_nearby li
+h5{font-size:16px;font-family:"microsoft yahei";color:#333}.spot_nearby li
+p{font-size:12px;color:#999;margin-top:7px;height:36px;overflow:hidden}.spot_nearby li
+div{font-size:12px;color:#666;font-family:"宋体";margin-top:7px}.spot_nearby li div
+*{vertical-align:middle}.spot_nearby li div
+span{margin-left:5px}.spot_nearby
+.mr0{margin-right:0}.hotel_home
+.hotel_intro{font-size:12px;font-family:"宋体";color:#666}.hotel_home .hotel_intro
+.introduction{background:#f8f9f8;padding:15px
+20px 25px 20px}.hotel_home .hotel_intro .introduction
+h3{font-size:18px;font-weight:bold;font-family:"microsoft yahei"}.hotel_home .hotel_intro .introduction h3
+.icon_quote3_left{margin-left:15px;vertical-align:super}.hotel_home .hotel_intro .introduction h3
+.icon_quote3_right{margin-left:5px;vertical-align:sub}.hotel_home .hotel_intro .introduction
+p{line-height:1.5;margin-top:10px}.hotel_home .hotel_intro
+.detail{}.hotel_home .hotel_intro .detail
+.field{border-bottom:1px dotted #e5e5e5;padding:10px
+0}.hotel_home .hotel_intro .detail .field
+*{vertical-align:middle}.hotel_home .hotel_intro .detail .field
+label{display:inline-block;width:80px;color:#999;padding-left:20px;line-height:1.5}.hotel_home .hotel_intro .detail .field
+span{color:#333}.hotel_home .hotel_intro .detail .address
+span{display:inline-block;width:650px}.hotel_home .hotel_intro .detail .labels
+ul{width:650px;margin-left:100px}.hotel_home .hotel_intro .detail .labels
+li{background:#faf1e1;color:#c18824;line-height:1.5;padding:0
+10px;float:left;margin-right:10px}.hotel_home .hotel_intro .detail
+.map{color:#2e9900}.hotel_route{}.hotel_route
+p{font-size:12px;font-family:"宋体";margin:15px
+0 10px 0;line-height:1.5;color:#333}.hotel_nearby{}.hotel_nearby
+ul{padding-top:10px}.hotel_nearby
+li{padding-left:10px;margin-top:10px;font-size:12px;font-family:"宋体";color:#666}.hotel_nearby li
+.hotel_res{margin-right:15px}.hotel_nearby li
+*{vertical-align:middle}.hotel_home
+.hotel_images{}.hotel_home .hotel_images
+h3{font-size:18px;color:#666;font-family:"microsoft yahei";font-weight:bold}.hotel_home .hotel_images h3
+span{font-size:12px;font-family:"宋体";color:#999;margin-left:10px;font-weight:normal}.hotel_home .hotel_images
+ul{margin-top:20px}.hotel_home .hotel_images
+li{float:left;margin-right:14px;margin-bottom:10px}.hotel_home .hotel_images li
+img{display:block}.hotel_home .hotel_images
+.mr0{margin-right:0}.hotel_home
+.hotel_images_detail{}.hotel_home .hotel_images_detail
+.breadcrumb{font-size:12px;font-family:"宋体";color:#999}.hotel_home .hotel_images_detail .breadcrumb
+a{color:#bf7c08}.hotel_home .hotel_images_detail .breadcrumb
+span{margin:0
+5px}.hotel_home .hotel_images_detail .breadcrumb
+.current{color:#999}.hotel_home .hotel_images_detail
+.controls{text-align:center;font-size:12px;margin-top:20px}.hotel_home .hotel_images_detail .controls
+a{display:inline-block;background:#f2f2f2;color:#333;padding:5px
+10px}.hotel_home .hotel_images_detail .controls
+span{color:#999;margin:0
+15px}.hotel_home .hotel_images_detail
+ul{margin-top:15px;margin-bottom:20px}.hotel_home .hotel_images_detail ul
+.current{display:block}.hotel_home .hotel_images_detail
+li{display:none;font-size:12px;color:#fff;font-weight:bold;font-family:"宋体";position:relative;padding:0
+5px}.hotel_home .hotel_images_detail li
+img{display:block}.hotel_home .hotel_images_detail li
+p{position:absolute;left:5px;bottom:0;width:740px;background:#000;opacity:0.6;filter:alpha(opacity=60);height:35px;line-height:35px;text-align:center}.hotel_home
+.hotel_service{}.hotel_home .hotel_service
+h2{font-size:18px;font-family:"microsoft yahei";color:#666;font-weight:bold}.hotel_home .hotel_service
+.field{border-bottom:1px dotted #eaeaea;font-size:12px;font-family:"宋体";color:#333;padding:12px
+0}.hotel_home .hotel_service .field
+label{color:#999;width:115px;display:inline-block}.hotel_home .hotel_service .field
+span{color:#333}.hotel_home .hotel_service
+.card_field{border-bottom:none}.hotel_home .hotel_service .card_field
+label{float:left}.hotel_home .hotel_service .card_field
+ul{margin-left:115px}.hotel_home .hotel_service .card_field
+li{float:left;display:inline;margin-right:40px;margin-bottom:20px}.hotel_home .hotel_service .card_field li
+p{color:#999;text-align:center;margin-top:5px}.hotel_facilities
+.last{border-bottom:none}.hotel_facilities
+.field{padding:12px
+0;font-size:12px;font-family:"宋体";color:#333;line-height:1.5;border-bottom:1px dotted #eaeaea}.hotel_facilities .field
+label{float:left;width:90px;color:#999}.hotel_facilities .field
+p{margin-left:115px}.hotel_facilities .field
+ul{margin-left:115px;margin-top:15px}.hotel_facilities .field
+li{float:left;margin-right:25px}.hotel_facilities .field li
+*{vertical-align:middle}.hotel_facilities .field li
+span{color:#bf7c08}.hotel_home
+.hotel_room{}.hotel_home .hotel_room
+.room_info{font-size:12px;color:#666;font-family:"Hiragino Sans GB",Tahoma,arial,宋体,sans-serif}.hotel_home .hotel_room .room_info
+.mr0{margin-right:0}.hotel_home .hotel_room .room_info
+.info_item{background:#f8f9f8;height:105px;width:360px;float:left;overflow:hidden;margin-right:30px}.hotel_home .hotel_room .room_info .info_item
+.item_title{border-top-left-radius:6px;border-bottom-left-radius:6px;float:left;display:inline;height:90px;width:15px;padding:23px
+15px 0 15px;background:#ead4ae;font-size:15px;line-height:16px;font-weight:bold;color:#997a45;font-family:"microsoft yahei"}.hotel_home .hotel_room .room_info .info_item
+.item_icon{float:left;display:inline;margin-left:40px;margin-top:20px}.hotel_home .hotel_room .room_info .info_item
+.item_detail{float:left;display:inline;margin-left:10px;margin-top:20px;overflow:hidden}.hotel_home .hotel_room .room_info .info_item .item_detail
+p{line-height:1.5}.hotel_home .hotel_room .room_info .info_item .item_detail p
+*{vertical-align:middle}.hotel_home .hotel_room
+h2{font-size:18px;font-weight:bold;font-family:"microsoft yahei";color:#666;margin-top:35px}.hotel_home .hotel_room
+.type_list{border-top:1px solid #eaeaea;margin-top:15px}.hotel_home .hotel_room
+.list_item{padding:20px
+0;font-size:12px;font-family:"Hiragino Sans GB",Tahoma,arial,宋体,sans-serif;line-height:1.5}.hotel_home .hotel_room .list_item
+img{float:left}.hotel_home .hotel_room .list_item
+.item_right{margin-left:280px}.hotel_home .hotel_room .list_item .item_right
+.strong{color:#f60;font-size:14px;font-family:"microsoft yahei"}.hotel_home .hotel_room .list_item .item_right
+h5{font-size:20px;font-family:"microsoft yahei"}.hotel_home .hotel_room .list_item .item_right
+.feature{color:#333}.hotel_home .hotel_room .list_item .item_right .feature
+.separator{color:#999;margin:0
+10px}.hotel_home .hotel_room .list_item .item_right
+p{color:#999}.hotel_home .hotel_room .list_item .item_right p
+label{color:#333}.hotel_home .hotel_room .list_item
+.item_bottom{background:#f8f9f8;margin-top:10px;padding:0
+20px}.hotel_home .hotel_room .list_item .item_bottom
+p{padding:15px
+0;padding-left:80px;position:relative;border-bottom:1px dotted #eaeaea;color:#999}.hotel_home .hotel_room .list_item .item_bottom p
+label{color:#333;position:absolute;top:18px;left:0}.hotel_home .hotel_room .list_item .item_bottom
+.border_none{border:none}.hotel_home
+.home_footer{border-top:1px solid #eaeaea;padding:15px
+20px;background:#fff}.hotel_home .home_footer
+.hotel_pagination{float:right}.hotel_pagination{font-size:12px;color:#333;font-family:"宋体"}.hotel_pagination
+ul{float:left}.hotel_pagination
+.border_none{border:none !important}.hotel_pagination .current
+a{background:#c7e7ab}.hotel_pagination
+li{float:left;display:inline;border:1px
+solid #ddd;min-width:28px;height:28px;line-height:28px;margin-right:5px;text-align:center}.hotel_pagination li
+a{color:#333;display:block}.hotel_pagination li a:hover{background:#c7e7ab}.hotel_pagination
+.go_to{float:left;display:inline;margin-left:25px}.hotel_pagination .go_to
+input{border:1px
+solid #ddd;text-align:center;height:26px;line-height:26px;outline:none;width:26px;margin:0
+8px}.hotel_pagination .go_to
+a{border:1px
+solid #ddd;display:inline-block;padding:0
+1em;height:26px;line-height:26px;color:#333}.children_pets{}.children_pets
+ul{font-size:12px;color:#666;overflow:hidden}.children_pets
+li{margin-top:10px}.children_pets li
+*{vertical-align:middle}.children_pets li
+span{margin-left:10px}.hotel_home
+.hotel_comment{}.hotel_home .hotel_comment
+.comment_summary{}.hotel_home .hotel_comment .comment_summary
+.summary_item{width:360px;background:#f8f9f8;height:105px;float:left}.hotel_home .hotel_comment .comment_summary .summary_item
+h5{border-top-left-radius:6px;border-bottom-left-radius:6px;font-size:15px;color:#997a45;background:#ead4ae;padding:15px
+15px 0 15px;float:left;width:15px;height:90px;font-family:"microsoft yahei";font-weight:bold;line-height:1.1}.hotel_home .hotel_comment .comment_summary .summary_item
+ul{margin-left:70px;padding-top:20px;height:68px;overflow:hidden}.hotel_home .hotel_comment .comment_summary .summary_item
+li{display:inline-block;*display:inline;*zoom:1;font-size:12px;color:#c18824;background:#faf1e1;margin-right:5px;padding:4px
+10px;margin-bottom:10px}.hotel_home .hotel_comment
+.comment_detail{margin-top:20px}.hotel_home .hotel_comment .comment_detail
+h2{font-size:18px;font-weight:bold;font-family:"microsoft yahei";color:#666;padding:15px
+0}.hotel_home .hotel_comment .comment_detail h2
+span{font-size:12px;color:#999;font-family:"宋体";margin-left:5px;font-weight:normal}.hotel_home .hotel_comment .comment_detail
+ul{font-size:12px;font-family:"宋体";color:#333}.hotel_home .hotel_comment .comment_detail
+li{border-top:1px solid #eaeaea;padding:25px
+0 30px 0}.hotel_home .hotel_comment .comment_detail li
+.icon_quote3_left{float:left}.hotel_home .hotel_comment .comment_detail li
+.icon_quote3_right{float:right}.hotel_home .hotel_comment .comment_detail li
+p{margin-left:30px;line-height:2}.hotel_home .hotel_comment .comment_detail li
+.comment_time{color:#999}.hotel_pop{padding:25px;padding-right:0;width:350px}.hotel_pop
+h5{font-size:15px;font-family:"microsoft yahei";color:#333}.hotel_pop
+.hotel_info{margin-top:15px}.hotel_pop .hotel_info
+img{float:left;display:block}.hotel_pop .hotel_info
+.info_summary{margin-left:200px;font-size:12px;color:#999;font-family:"宋体";line-height:1}.hotel_pop .hotel_info .info_summary
+p{border-bottom:1px dashed #eaeaea;padding:10px
+0}.hotel_pop .hotel_info .info_summary p
+*{vertical-align:middle}.hotel_pop .hotel_info .info_summary
+.price{font-size:18px;font-weight:bold;color:#f60;font-family:"microsoft yahei"}.hotel_pop .hotel_info .info_summary
+a{display:inline-block;color:#fff;background:#ff9419;font-size:16px;border-radius:2px;padding:5px
+20px;font-family:"microsoft yahei";font-weight:bold;margin-top:18px}.parttabbox .parttoptab
+li{margin:0}.rec-pro-new ul
+li{position:relative}.rec-pro-new ul li
+p{position:absolute;left:0;bottom:0;background:#bf7c08;padding:0
+5px}.rec-pro-new ul li p
+a{color:#fff}.rec-pro-new2 ul
+li{position:relative;z-index:0;overflow:visible}.rec-pro-new2 ul li
+.icon_rec{position:absolute;z-index:1;top:-3px;left:5px}

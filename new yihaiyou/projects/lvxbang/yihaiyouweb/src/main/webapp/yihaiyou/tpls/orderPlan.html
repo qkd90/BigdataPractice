@@ -1,0 +1,107 @@
+<div class="diymarch_takeOrder" ng-controller="orderPlanCtrl">
+    <div class="header">
+        <a ui-sref="planTouristList"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        填写订单
+    </div>
+    <div class="blank"></div>
+    <section class="tickettype" ng-if="planSelectedFerry != null && planSelectedFerry.selectedNum > 0">
+        <h3>船票</h3>
+
+        <div class="repeat" ng-repeat="ticket in planSelectedFerry.ticketLst.Ticket" ng-if="ticket.selectedNum > 0">
+            <div class="ticketmess" ng-class="{tickettrue:ticket.selected,ticketfalse:!ticket.selected}" ng-click="checkright(ticket)">
+                <p><label class="ticket_name">{{planSelectedFerry.line.name}}</label><span>总价：¥<label class="rmb">{{ticket.totalPrice}}</label></span></p>
+
+                <p><span>{{planSelectedFerry.number}}</span><span>{{planSelectedFerry.departTime}}</span>
+                    <span class="moremessage" ng-class="{get_up:ticket.showMore == true}" ng-click="showthisone(ticket, $event)">更多</span></p>
+            </div>
+            <div ng-show="ticket.showMore">
+                <div class="ticketnum">
+                    <p>票数：</p>
+
+                    <p><span>{{ticket.name}} * {{ticket.selectedNum}}张</span></p>
+                </div>
+                <div class="tournum clearfix">
+                    <p>旅客：</p>
+                    <span ng-repeat="tourist in ticket.touristList" ng-click="removeFerryTourist(ticket, tourist)"
+                          ng-if="tourist.selected">{{tourist.name}}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tickettype tickethotel" ng-if="order.hotels.length > 0">
+        <h3>酒店民宿</h3>
+
+        <div class="repeat" ng-repeat="hotel in order.hotels">
+            <div class="ticketmess" ng-class="{tickettrue:hotel.selected,ticketfalse:!hotel.selected}"
+                 ng-click="checkright(hotel)">
+                <p><label class="ticket_name">{{hotel.name}}</label><span>总价：¥<label class="rmb">{{hotel.totalPrice}}</label></span></p>
+
+                <p><span>{{hotel.startDate}}至{{hotel.endDate}}</span><span class="moremessage" ng-class="{get_up:hotel.showMore == true}" ng-click="showthisone(hotel, $event)">更多</span>
+                </p>
+            </div>
+            <div ng-show="hotel.showMore">
+                <div class="ticketnum ticket_hotel">
+                    <p>房型：</p>
+
+                    <div class="addsub" ng-repeat="price in hotel.hotelPrices">
+                        <ul class="clearfix">
+                            <li class="name">{{price.priceName}} <span
+                                    class="dayNum">×<span>{{price.day}}</span>晚</span></li>
+                            <li class="manNum"><span>-</span><span num-changer min-num="0"
+                                                                   max-num="{{hotel.selectedTourist.length}}"
+                                                                   scope-num="price.selectedNum"
+                                                                   call-back="changeCost()">{{price.selectedNum}}</span><span>+</span>
+                            </li>
+                            <li class="price">¥{{price.selectedNum * price.price}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tournum clearfix">
+                    <p>旅客：</p>
+                    <span ng-repeat="tourist in hotel.selectedTourist" ng-click="removeTourist(hotel.selectedTourist, tourist, hotel.hotelPrices)"
+                          ng-if="tourist.selected">{{tourist.name}}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tickettype tickethotel" ng-if="order.scenics.length > 0">
+        <h3>景点门票</h3>
+
+        <div class="repeat" ng-repeat="scenic in order.scenics">
+            <div class="ticketmess" ng-class="{tickettrue:scenic.selected,ticketfalse:!scenic.selected}"
+                 ng-click="checkright(scenic)">
+                <p><span
+                        style="float: left;color: black;width: 185px;overflow:hidden;text-overflow:ellipsis;/*文字溢出的部分隐藏并用省略号代替*/white-space:nowrap;display: block;"><label class="ticket_name">{{scenic.scenicName}}</label></span>
+                    <span>总价：¥<label class="rmb">{{scenic.totalPrice}}</label></span></p>
+
+                <p><span>{{scenic.playDate}}</span><span class="moremessage" ng-class="{get_up:scenic.showMore == true}" ng-click="showthisone(scenic, $event)">更多</span></p>
+            </div>
+            <div ng-show="scenic.showMore">
+                <div class="ticketnum">
+                    <p>票型：</p>
+
+                    <div class="addsub" ng-repeat="ticket in scenic.tickets">
+                        <ul class="clearfix">
+                            <li>{{ticket.ticketName}}</li>
+                            <li class="pleft"><span>－</span><span num-changer min-num="0" max-num="{{scenic.selectedTourist.length}}"
+                                                    scope-num="ticket.selectedNum" call-back="changeCost()">{{ticket.selectedNum}}</span><span>＋</span>
+                            </li>
+                            <li>¥<label class="rmb">{{ticket.price * ticket.selectedNum}}</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tournum clearfix">
+                    <p>旅客：</p>
+                    <span ng-repeat="tourist in scenic.selectedTourist" ng-click="removeTourist(scenic.selectedTourist, tourist, scenic.tickets)"
+                          ng-if="tourist.selected">{{tourist.name}}</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="ordertake">
+        <ul>
+            <li>订单总价：¥{{totalPrice}}</li>
+            <li ng-click="submitOrder()">提交订单</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,90 @@
+<div class="personal_myMessage personal_index" ng-controller="personalInfoCtrl">
+    <div class="header">
+        <a ui-sref="personalIndex"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        我的信息
+    </div>
+    <div class="person_facebox">
+        <div class="person_name">
+            <div class="face">
+                <img src="{{user.head}}" ng-if="user.head.length > 0">
+            </div>
+            <p>{{user.nickName}}</p>
+        </div>
+    </div>
+    <div class="person_messlist">
+        <ul>
+            <li>
+                <a ui-sref="personalChangeName">
+                    昵<i></i>称：
+                    <span class="containx">{{user.nickName}}</span>
+                </a>
+            </li>
+            <li>
+                <a ui-sref="personalChangeTrueName" ng-if="!user.isReal">
+                    姓<i></i>名：
+                    <span class="containx">{{user.userName}}</span>
+                </a>
+                <a ng-if="user.isReal" class="isReal">
+                    姓<i></i>名：
+                    <span class="containx">{{user.userName}}</span>
+                </a>
+            </li>
+            <li>
+                <a ui-sref="personalChangeSex">
+                    性<i></i>别：
+                    <span class="containx">{{showSex}}</span>
+                </a>
+            </li>
+            <li>
+                <a ui-sref="personalChangeEmail">
+                    邮<i></i>箱：
+                    <span class="containx ">{{user.email}}</span>
+                </a>
+            </li>
+            <li>
+                <a ui-sref="personalChangePhone" ng-if="!user.isReal">
+                    手<span class="phone">机</span>号：
+                    <span class="containx">{{user.telephone}}</span>
+                </a>
+                <a ng-if="user.isReal" class="isReal">
+                    手<span class="phone">机</span>号：
+                    <span class="containx">{{user.telephone}}</span>
+                </a>
+            </li>
+            <li>
+                <a ui-sref="personalChangeIdNumber" ng-if="!user.isReal">
+                    身份证号：
+                    <span class="containx">{{user.idNumber}}</span>
+                </a>
+                <a ng-if="user.isReal" class="isReal">
+                    身份证号：
+                    <span class="containx">{{user.idNumber}}</span>
+                </a>
+            </li>
+            <li>
+                <a ui-sref="personalChangeBankNo" ng-if="!user.isReal">
+                    银行卡号：
+                    <span class="containx">{{user.bankNo}}</span>
+                </a>
+                <a ng-if="user.isReal" class="isReal">
+                    银行卡号：
+                    <span class="containx">{{user.bankNo}}</span>
+                </a>
+            </li>
+            <li>
+                <a ng-click="toFerryMember()" ng-class="{isReal: user.isReal}">
+                    轮渡账号：
+                    <span class="containx">{{user.ferryUserName}}<span
+                            ng-if="user.ferryUserName != null && user.ferryUserName != '' && !user.isReal">（未实名）</span></span>
+                </a>
+            </li>
+            <li ng-if="!isWeixin">
+                <a ui-sref="personalChangePassword">
+                    修改密码：
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="logout" ng-show="login" ng-click="logout()" ng-if="!isWeixin">安全退出登录</div>
+    <div class="shadow" ng-show="shadow" ng-click="hideshadow()"></div>
+</div>

@@ -1,0 +1,184 @@
+.roomset{
+	/*display:none;*/
+}
+.detail_header {
+	width:110px;
+	position:absolute;
+	top:25px;
+	right:50px;
+}
+
+.detail_header .return {
+	float: right;
+	width: 106px;
+	height: 28px;
+	line-height: 28px;
+	background:url(/images/yhy/icon-return.png) no-repeat center center;
+	background-size:100%;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.detail_header .return:hover {
+	background:url(/images/yhy/icon-return01.png) no-repeat center center;
+	background-size:100%;
+}
+.sailPrice,.sailBaseMess,.sailMine {
+	width: 1200px;
+	margin: 10px auto 0 auto;
+	background-color: #fff;
+	padding-top:1px;
+	border:1px solid #ddd;
+	position:relative;
+}
+.sailMine .outDiv {
+	margin-top:24px;
+	position: relative;
+}
+.sailMine .homestayName {
+	width:300px;
+}
+
+.sailMine .leftTitle {
+    display: block;
+    float: left;
+    margin-right: 15px;
+    line-height: 30px;
+    color: #666;
+    font-size: 14px;
+    width: 120px;
+    text-align: right;
+    font-weight: 600;
+	margin-bottom: 0px;
+	max-width: none;
+}
+
+.sailMine .leftTitle span.starColor {
+	color:#ff4444;
+	font-size:24px;
+	line-height: 37px;
+    float: left;
+    height: 30px;
+    margin-left: 62px;
+}
+
+.sailMine .leftTitle span.marginLeft4 {
+	margin-left: 34px;
+}
+
+.sailMine .selType span {
+	display: block;
+	float: left;
+	width:65px;
+	font-size: 12px;
+	text-indent: 25px;
+	height: 30px;
+	line-height: 30px;
+	background: url(/images/yhy/icon-NO.png) no-repeat left center;
+	background-size: 16px;
+	cursor: pointer;
+	color: #666;
+}
+
+.sailMine .selPlace span {
+	width: 132px;
+}
+#sailboatInfoForm .selType {
+	display: inline-block;
+}
+.sailMine .selType span.selected {
+	background: url(/images/yhy/icon-YES.png) no-repeat left center;
+	background-size: 16px;
+}
+
+.sailMine .selType span.selSec {
+	margin-left:10px;
+}
+
+.sailMine .introForm {
+	float:left;
+	width:600px;
+}
+
+.sailMine .introForm .form-group,.sailMine .introForm .input-group {
+	position:relative;
+}
+
+.sailMine textarea.honey_atention {
+	width: 600px;
+	padding: 6px 12px;
+    height: 120px!important;
+    font-size: 12px;
+    color: #777;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.yhy-form-group .writLimit {
+	position: absolute;
+	top: -17px;
+	right:0px;
+	margin-left: 5px;
+	font-size:10px;
+	color: #9d9eae
+}
+#sailboatInfoForm .has-feedback .form-control-feedback {
+	top: 0px;
+	right: -30px;
+}
+#sailboatInfoForm .has-feedback .help-block {
+	margin-left: 130px;
+}
+
+.sailMine .outDiv .remind_Tips,.sailMine .outDiv .remind_scenicIntro {
+	position:absolute;
+	left:750px;
+	top: 10px;
+	font-size:12px;
+	background-color: #f5f5f5;
+	width:200px;
+	height:100px;
+	border-radius:10px;
+	padding:12px;
+	letter-spacing: 1px;
+	line-height: 17px;
+	color: #333;
+	display: none;
+}
+
+.sailMine .mineBtn .btn {
+	width: 100px;
+    height: 38px;
+    font-size: 16px;
+    font-family: SimSum;
+    font-weight: 600;
+    color: #666;
+}
+
+.sailMine .mineBtn .btn1 {
+    float: left;
+}
+
+.sailMine .mineBtn .btn1:hover {
+	background-color: #f5f5f5;
+}
+
+.sailMine .mineBtn .btn2 {
+    float: right;
+    background-color: #4790ee;
+    color: #fff;
+    border: none;
+}
+
+.sailMine .mineBtn .btn2:hover {
+	background-color: #0069fc;
+}
+
+.sailMine .mineBtn {
+	width: 250px;
+	height: 40px;
+	margin: 30px auto;
+}

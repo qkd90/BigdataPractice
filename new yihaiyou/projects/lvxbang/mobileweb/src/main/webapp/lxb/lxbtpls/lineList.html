@@ -1,0 +1,337 @@
+<div class="produc_main" ng-controller="lineListController">
+    <header class="produ_lis_header">
+        <div class="pro_header_main">
+                <span class="gty_left">
+                    <a ui-sref="index"><i class="icon icon-home3"></i></a>
+                    <i class="icon icon-search5" style="top: -42px;margin-left: 55px;" ng-click="goToSearch()"></i>
+                </span>
+                <span class="gty_center">
+                    {{destination}}{{tabName}}
+                </span>
+            <span class="gty_right"><i class="icon icon-mine" ng-click="personal()"></i></span>
+        </div>
+    </header>
+    <div class="produc_section">
+        <!--<div class="top_list">
+            <ul>
+                <li id="jingpinLi" class="top_list_bg" ng-click="tabChange(1)">精品定制</li>
+                <li id="zizhuLi" ng-click="tabChange(2)">自助游</li>
+                <li id="zijiaLi" ng-click="tabChange(3)">自驾游</li>
+                <li id="gentuanLi" ng-click="tabChange(4)">跟团游</li>
+            </ul>
+        </div>-->
+        <style>
+            .swiper-container {position:fixed;top:45px;left:0px;border-bottom:1px solid #ccc;width:100%;background-color:#fff;z-index:300}
+            .swiper-slide {width:75px;}
+            .swiper-slide span{padding:5px 0;display:block;height:42px;line-height:35px;float:left;width:100%;text-align:center;font-size:15px;}
+            .swiper-wrapper{width:100%;}
+
+        </style>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide" id="swiper-slide_1" style="width:75px;">
+                    <span id="jingpinLi" class="top_list_bg" ng-click="tabChange(1)">精品定制</span>
+                </div>
+                <div class="swiper-slide" id="swiper-slide_2" style="width:75px;">
+                    <span id="zizhuLi" ng-click="tabChange(2)">自助游</span>
+                </div>
+                <div class="swiper-slide" id="swiper-slide_3" style="width:75px;">
+                    <span id="zijiaLi" ng-click="tabChange(3)">自驾游</span>
+                </div>
+                <div class="swiper-slide" id="swiper-slide_4" style="width:75px;">
+                    <span id="gentuanLi" ng-click="tabChange(4)">跟团游</span>
+                </div>
+                <div class="swiper-slide" id="swiper-slide_5" style="width:75px;">
+                    <span ng-click="tabChange(5)">门票</span>
+                    <!--<span>邮轮</span>-->
+                </div>
+
+                <!--
+                <div class="swiper-slide">
+                    <span id="jingpinLi" class="top_list_bg" ng-click="tabChange(1)">精品定制</span>
+                    <span id="zizhuLi" ng-click="tabChange(2)">自助游</span>
+                    <span id="zijiaLi" ng-click="tabChange(3)">自驾游</span>
+                    <span id="gentuanLi" ng-click="tabChange(4)">跟团游</span>
+                </div>
+                <div class="swiper-slide">
+                    <span ng-click="tabChange(5)">门票</span>
+                    &lt;!&ndash;<span ng-click="tabChange(6)">邮轮</span>&ndash;&gt;
+                </div>-->
+            </div>
+        </div>
+
+
+        <!--精品定制-->
+        <div class="produc_contain clearfix" style="display:block;margin-top:90px;background-color: white;" infinite-scroll="listLine(1)" infinite-scroll-distance='1' infinite-scroll-disabled='loading1' ng-show="jingpinShow">
+            <div class="produc_contain_detail clearfix" style="border-bottom:1px solid #ccc;"  ng-repeat="custommadeLine in lineList1">
+                <a ui-sref="lineDetail({id:{{custommadeLine.id}}})">
+                   <span class="produc_contain_span">
+                        <img bn-lazy-src="{{custommadeLine.productImg ? 'http://7u2inn.com2.z0.glb.qiniucdn.com/' + custommadeLine.productImg +'?imageView2/1/w/640/h/480/q/75' : ''}}">
+                        <span>{{custommadeLine.productAttr}}</span>
+                    </span>
+                    <ul class="produc_contain_ul">
+                        <li><{{custommadeLine.name}}>{{custommadeLine.appendTitle}}</li><!--固定高度两行，字体数量需控制-->
+                        <li>团期: {{custommadeLine.startDays[0] | date:"MM/dd" + '、'}}{{custommadeLine.startDays[1] | date:"MM/dd" + '、' }}{{ custommadeLine.startDays[2] | date:"MM/dd" + '、...' }}</li>
+                        <li>
+                            <span class="s_left1">￥</span>
+                            <span class="s_left2" ng-if="custommadeLine.price > 0">{{custommadeLine.price}}</span>
+                            <span class="s_left3" ng-if="custommadeLine.price > 0">起</span>
+                            <span class="s_left2" ng-if="custommadeLine.price <= 0">来电咨询</span>
+                            <!--<span class="s_left4">{{custommadeLine.orderNum}}人出游 {{custommadeLine.satisfaction}}%满意</span>-->
+                            <span class="s_left4">{{custommadeLine.satisfaction}}%满意</span>
+                        </li>
+                    </ul>
+                </a>
+            </div>
+            <div ng-show="loading1"><div class="yuloading"><span>加载数据中...</span></div></div>
+            <div ng-show="nomore1" class="alert alert-danger text-center bg_loading">没有更多了...</div>
+        </div>
+
+
+
+        <!--自助游-->
+        <div class="produc_contain" style="display:block;margin-top:90px;" infinite-scroll="listLine(2)" infinite-scroll-distance='1' infinite-scroll-disabled='loading2'  ng-show="zizhuShow">
+            <div class="produc_contain_detail clearfix" style="border-bottom:1px solid #ccc;"  ng-repeat="ziyouLine in lineList2">
+                <a ui-sref="lineDetail({id:{{ziyouLine.id}}})">
+                    <span class="produc_contain_span">
+                        <img bn-lazy-src="{{ziyouLine.productImg ? 'http://7u2inn.com2.z0.glb.qiniucdn.com/' + ziyouLine.productImg +'?imageView2/1/w/640/h/480/q/75' : ''}}">
+                        <span>{{ziyouLine.productAttr}}</span>
+                    </span>
+                    <ul class="produc_contain_ul">
+                        <li><{{ziyouLine.name}}>{{ziyouLine.appendTitle}}</li><!--固定高度两行，字体数量需控制-->
+                        <li>团期: {{ziyouLine.startDays[0] | date:"MM/dd" + '、'}}{{ziyouLine.startDays[1] | date:"MM/dd" + '、' }}{{ ziyouLine.startDays[2] | date:"MM/dd" + '、...' }}</li>
+                        <li>
+                            <span class="s_left1">￥</span>
+                            <span class="s_left2" ng-if="ziyouLine.price > 0">{{ziyouLine.price}}</span>
+                            <span class="s_left3" ng-if="ziyouLine.price > 0">起</span>
+                            <span class="s_left2" ng-if="ziyouLine.price <= 0">来电咨询</span>
+                            <!--{{ziyouLine.orderNum}}万人出游-->
+                            <span class="s_left4">{{ziyouLine.satisfaction}}%满意</span>
+
+                        </li>
+                    </ul>
+                </a>
+            </div>
+            <div ng-show="loading2"><div class="yuloading"><span>加载数据中...</span></div></div>
+            <div ng-show="nomore2" class="alert alert-danger text-center bg_loading">没有更多了...</div>
+        </div>
+
+
+        <div class="produc_contain" style="display:block;margin-top:90px;" infinite-scroll="listLine(3)" infinite-scroll-distance='1' infinite-scroll-disabled='loading3'  ng-show="zijiaShow">
+            <div class="produc_contain_detail clearfix" style="border-bottom:1px solid #ccc;" ng-repeat="zijiaLine in lineList3">
+                <a ui-sref="lineDetail({id:{{zijiaLine.id}}})">
+                    <span class="produc_contain_span">
+                        <img bn-lazy-src="{{zijiaLine.productImg ? 'http://7u2inn.com2.z0.glb.qiniucdn.com/' + zijiaLine.productImg +'?imageView2/1/w/640/h/480/q/75' : ''}}">
+                        <span>{{zijiaLine.productAttr}}</span>
+                    </span>
+                    <ul class="produc_contain_ul">
+                        <li><{{zijiaLine.name}}>{{zijiaLine.appendTitle}}</li><!--固定高度两行，字体数量需控制-->
+                        <li>团期: {{zijiaLine.startDays[0] | date:"MM/dd" + '、'}}{{zijiaLine.startDays[1] | date:"MM/dd" + '、' }}{{ zijiaLine.startDays[2] | date:"MM/dd" + '、...' }}</li>
+                        <li>
+                            <span class="s_left1">￥</span>
+                            <span class="s_left2" ng-if="zijiaLine.price > 0">{{zijiaLine.price}}</span>
+                            <span class="s_left3" ng-if="zijiaLine.price > 0">起</span>
+                            <span class="s_left2" ng-if="zijiaLine.price <= 0">来电咨询</span>
+                            <!--{{zijiaLine.orderNum}}人出游-->
+                            <span class="s_left4">{{zijiaLine.satisfaction}}%满意</span>
+
+                        </li>
+                    </ul>
+                </a>
+            </div>
+            <div ng-show="loading3"><div class="yuloading"><span>加载数据中...</span></div></div>
+            <div ng-show="nomore3" class="alert alert-danger text-center bg_loading">没有更多了...</div>
+        </div>
+
+
+        <!--跟团游-->
+        <div class="produc_contain" style="display:block;margin-top:90px;" infinite-scroll="listLine(4)" infinite-scroll-distance='1' infinite-scroll-disabled='loading4' ng-show="gentuanShow">
+            <div class="produc_contain_detail clearfix" style="border-bottom:1px solid #ccc;" ng-repeat="gentuanLine in lineList4">
+                <a ui-sref="lineDetail({id:{{gentuanLine.id}}})">
+                    <span class="produc_contain_span">
+                        <img bn-lazy-src="{{gentuanLine.productImg ? 'http://7u2inn.com2.z0.glb.qiniucdn.com/' + gentuanLine.productImg +'?imageView2/1/w/640/h/480/q/75' : ''}}">
+                        <span>{{gentuanLine.productAttr}}</span>
+                    </span>
+                    <ul class="produc_contain_ul">
+                        <li><{{gentuanLine.name}}>{{gentuanLine.appendTitle}}</li><!--固定高度两行，字体数量需控制-->
+                        <li>团期: {{gentuanLine.startDays[0] | date:"MM/dd" + '、'}}{{gentuanLine.startDays[1] | date:"MM/dd" + '、' }}{{ gentuanLine.startDays[2] | date:"MM/dd" + '、...' }}</li>
+                        <li>
+                            <span class="s_left1">￥</span>
+                            <span class="s_left2" ng-if="gentuanLine.price > 0">{{gentuanLine.price}}</span>
+                            <span class="s_left3" ng-if="gentuanLine.price > 0">起</span>
+                            <span class="s_left2" ng-if="gentuanLine.price <= 0">来电咨询</span>
+                            <!--{{gentuanLine.orderNum}}人出游-->
+                            <span class="s_left4">{{gentuanLine.satisfaction}}%满意</span>
+
+                        </li>
+                    </ul>
+                </a>
+            </div>
+            <div ng-show="loading4"><div class="yuloading"><span>加载数据中1...</span></div></div>
+            <div ng-show="nomore4" class="alert alert-danger text-center bg_loading">没有更多了...</div>
+        </div>
+
+        <!--底部固定栏-->
+        <div class="produc_under">
+            <ul class="produc_under_ul">
+                <li id="pro_destination" ng-click="clickFooter(1)"><p class="filter-icon icon-destination2"></p>
+                    <p>目的地</p></li>
+                <li id="pro_daytime" ng-click="clickFooter(2)"><p class="filter-icon icon-time2"></p>
+                    <p>时间天数</p></li>
+                <li id="pro_selection" ng-click="clickFooter(3)"><p class="filter-icon icon-sift"></p>
+                    <p>特色筛选</p></li>
+                <li id="pro_order" ng-click="clickFooter(4)"><p class="filter-icon icon-sequence"></p>
+                    <p>推荐筛选</p></li>
+            </ul>
+        </div>
+
+
+
+
+
+        <div class="pro tank" ng-show="destinationFlag" style="display: block">
+            <div class="pro_desCity_all">
+                <div class="pro_desCity_top">
+                    <span style="width:25%;color:#777d84;" id="desGo_cancel" ng-click="hideFooter()">取消</span>
+                    <span style="width:50%;color:#777d84;" id="desGo_empty" ng-click="clearDestination()">清空已选</span>
+                    <span style="width:25%;color:#f5f5f7;" id="desGo_ensure" ng-click="searchLineList()">确定</span>
+                </div>
+                <ul class="pro_province">
+                    <li ng-repeat="provice in provinceList" id="province_{{provice.id}}" class="provinceClass {{provice.selectClass}}" ng-click="selectProvince(provice.id)">{{provice.name}}</li>
+                </ul>
+                <ul class="pro_municipality" style="display:block">
+                    <!--<li ng-repeat="city in cityList" province-id="{{city.id}}"><span>{{city.name}}</span><input class="pro_desCity_check1" ng-model="x" ng-checked="city.master" ng-click="chk(city.id, city.name, x)" id="{{city.id}}" type="checkbox"></input></li>-->
+                    <li ng-repeat="city in cityList" province-id="{{city.id}}">
+                        <label>
+                            <span>{{city.name | cutByLength:6}}</span>
+                            <span class="bingo1 {{city.cityClass}}" style="float: right;line-height: 10px;margin: 10px 12px;" id="bingo_{{city.id}}"></span>
+                            <input class="pro_desCity_check1" style="display: none;" name="dest" ng-model="selCityId" value="{{city.id}}" ng-checked="city.master" ng-click="chk(city.id, city.name)" id="{{city.id}}" type="radio">
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+         <!--时间天数页面-->
+         <div class="pro_desDay tank" ng-show="daysFlag" style="display: block">
+             <div class="pro_desCity_all">
+                  <div class="pro_desCity_top">
+                       <span style="width:25%;color:#777d84;" id="desDay_cancel" ng-click="hideFooter()">取消</span>
+                       <span style="width:50%;color:#777d84;" id="desDay_empty" ng-click="clearDestination()">清空已选</span>
+                       <span style="width:25%;color:#f5f5f7;" id="desDay_ensure" ng-click="searchLineList()">确定</span>
+                  </div>
+              <div class="pro_desDay_picture"><span>行程天数</span></div>
+              <ul class="pro_desDay_ul">
+                 <label><li><span class="pro_desDay_green pro_desDay_num">不限</span><span class="bingo1" id="day0"></span><input class="pro_desDay_check" type="checkbox" checked="checked" ng-model="isDay0" ng-checked="isDay0" ng-click="checkDay( 0, 0, isDay0)"></li></label>
+                 <label><li><span class="pro_desDay_num">1天</span><span class="bingo1" id="day1"></span><input class="pro_desDay_check" type="checkbox" ng-model="isDay1" ng-checked="isDay1" ng-click="checkDay(1, 1, isDay1)"></li></label>
+                 <label><li><span class="pro_desDay_num">2天</span><span class="bingo1" id="day2"></span><input class="pro_desDay_check" type="checkbox" ng-model="isDay2" ng-checked="isDay2" ng-click="checkDay(2, 2, isDay2)"></li></label>
+                 <label><li><span class="pro_desDay_num">3天</span><span class="bingo1" id="day3"></span><input class="pro_desDay_check" type="checkbox" ng-model="isDay3" ng-checked="isDay3" ng-click="checkDay(3, 3, isDay3)"></li></label>
+                 <label><li><span class="pro_desDay_num">4天</span><span class="bingo1" id="day4"></span><input class="pro_desDay_check" type="checkbox" ng-model="isDay4" ng-checked="isDay4" ng-click="checkDay(4, 4, isDay4)"></li></label>
+                 <label><li><span class="pro_desDay_num">5天</span><span class="bingo1" id="day5"></span><input class="pro_desDay_check" type="checkbox" ng-model="isDay5" ng-checked="isDay5" ng-click="checkDay(5, 5, isDay5)"></li></label>
+                 <label><li><span class="pro_desDay_num">6天</span><span class="bingo1" id="day6"></span><input class="pro_desDay_check" type="checkbox" ng-model="isDay6" ng-checked="isDay6" ng-click="checkDay(6, 6, isDay6)"></li></label>
+                 <label><li><span class="pro_desDay_num">1周</span><span class="bingo1" id="day7"></span><input class="pro_desDay_check" type="checkbox" ng-model="isDay7" ng-checked="isDay7" ng-click="checkDay(7, 7, isDay7)"></li></label>
+                 <label><li><span class="pro_desDay_num">2周</span><span class="bingo1" id="day8"></span><input class="pro_desDay_check" type="checkbox" ng-model="isDay8" ng-checked="isDay8" ng-click="checkDay(14, 8, isDay8)"></li></label>
+                 <label><li><span class="pro_desDay_num">3周</span><span class="bingo1" id="day9"></span><input class="pro_desDay_check" type="checkbox" ng-model="isDay9" ng-checked="isDay9" ng-click="checkDay(21, 9, isDay9)"></li></label>
+                 <label><li><span class="pro_desDay_num">1月</span><span class="bingo1" id="day10"></span><input class="pro_desDay_check" type="checkbox" ng-model="isDay10" ng-checked="isDay10" ng-click="checkDay(30, 10, isDay10)"></li></label>
+              </ul>  
+             </div>
+         </div>
+         <!--特色筛选页面-->
+         <div class="pro_desSel tank" ng-show="featuresFlag" style="display: block">
+             <div class="pro_desCity_all">
+                 <div class="pro_desCity_top">
+                       <span style="width:25%;color:#777d84;" id="desSel_cancel" ng-click="hideFooter()">取消</span>
+                       <span style="width:50%;color:#777d84;" id="desSel_empty" ng-click="clearDestination()">清空已选</span>
+                       <span style="width:25%;color:#f5f5f7;" id="desSel_ensure" ng-click="searchLineList()">确定</span>
+                  </div>
+             </div>
+             <ul class="pro_desSel_ul">
+                 <!--<li class="pro_desSel_bg">-->
+                     <!--<!--<span>推荐排序</span><input class="pro_desCity_check" type="checkbox" checked="checked">-->
+                 <!--</li>-->
+                 <label>
+                     <li>
+                         <span>纯玩无购物</span>
+                         <span class="bingo1" style="float: right;line-height: 30px;" id="feature0"></span>
+                         <input class="pro_desCity_check pro_desCity_radio" style="display: none;" type="radio" name="play" ng-model="cheFeature" value="纯玩无购物" ng-click="checkFeature(0, '纯玩无购物')"/>
+                     </li>
+                 </label>
+                 <label>
+                     <li>
+                        <span>无自费</span>
+                        <span class="bingo1" style="float: right;line-height: 30px;" id="feature1"></span>
+                         <input class="pro_desCity_check pro_desCity_radio" style="display: none;" type="radio" name="play" ng-model="cheFeature" value="无自费" ng-click="checkFeature(1, '无自费')"/>
+                     </li>
+                 </label>
+                 <label>
+                     <li>
+                         <span>多日游</span>
+                         <span class="bingo1" style="float: right;line-height: 30px;" id="feature2"></span>
+                         <input class="pro_desCity_check pro_desCity_radio" style="display: none;" type="radio" name="play" ng-model="cheFeature" value="多日游" ng-click="checkFeature(2, '多日游')">
+                     </li>
+                 </label>
+             </ul>
+         </div>
+         <!--推荐筛选页面-->
+         <div class="pro_desOrd tank" ng-show="adviseFlag" style="display: block">
+             <div class="pro_desCity_all">
+                 <div class="pro_desCity_top">
+                       <span style="width:25%;color:#777d84;" id="desOrd_cancel" ng-click="hideFooter()">取消</span>
+                       <span style="width:50%;color:#777d84;" id="desOrd_empty" ng-click="clearDestination()">清空已选</span>
+                       <span style="width:25%;color:#f5f5f7;" id="desOrd_ensure" ng-click="searchLineList()">确定</span>
+                  </div>
+             </div>
+             <ul class="pro_desSel_ul">
+                 <label>
+                     <li class="pro_desSel_bg">
+                         <span>推荐排序</span>
+                         <span class="bingo1" style="float: right;line-height: 30px;" id="sort0"></span>
+                         <input class="pro_desCity_check pro_desCity_radio" style="display: none;" type="radio" name="sort" ng-model="sort" value="0" ng-click="checkSort(0, 'satisfaction')">
+                     </li>
+                 </label>
+                 <label>
+                     <li>
+                         <span>销量从高到低</span>
+                         <span class="bingo1" style="float: right;line-height: 30px;" id="sort1"></span>
+                         <input class="pro_desCity_check pro_desCity_radio" style="display: none;" type="radio" name="sort" ng-model="sort" value="1"  ng-click="checkSort(1, 'saleHight')">
+                     </li>
+                 </label>
+                 <label>
+                     <li>
+                         <span>销量从低到高</span>
+                         <span class="bingo1" style="float: right;line-height: 30px;" id="sort2"></span>
+                         <input class="pro_desCity_check pro_desCity_radio" style="display: none;" type="radio" name="sort" ng-model="sort" value="2"  ng-click="checkSort(2, 'saleLow')">
+                     </li>
+                 </label>
+                 <label>
+                     <li>
+                         <span>价格从高到低</span>
+                         <span class="bingo1" style="float: right;line-height: 30px;" id="sort3"></span>
+                         <input class="pro_desCity_check pro_desCity_radio" style="display: none;" type="radio" name="sort" ng-model="sort" value="3" ng-click="checkSort(3, 'priceHight')">
+                     </li>
+                 </label>
+                 <label>
+                     <li>
+                         <span>价格从低到高</span>
+                         <span class="bingo1" style="float: right;line-height: 30px;" id="sort4"></span>
+                         <input class="pro_desCity_check pro_desCity_radio" style="display: none;" type="radio" name="sort" ng-model="sort" value="4" ng-click="checkSort(4, 'priceLow')">
+                     </li>
+                 </label>
+             </ul>
+         </div>
+        <div class="list_shade" ng-show="darkDivShow" ng-click="hideFooter()"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal',
+        slidesPerView: 4,
+        initialSlide :0,
+        loop: false,
+        pagination: '.swiper-pagination',
+        freeMode: true,
+    })
+</script>

@@ -1,0 +1,38 @@
+<div class="ljOrder" ng-controller="lvjiOrderController">
+    <div class="ljOrder-header">
+        <i class="back" ng-click="whereFrom()"></i>
+        填写订单
+    </div>
+    <div class="ljOrder-info clearfix">
+        <div class="ljOrder-info-img pull-left">
+            <img src="../image/icon-clock.png">
+        </div>
+        <div class="ljOrder-info-txt pull-left">
+            <h5 class="ljOrder-title">{{ljData.name}}-手机语音导游</h5>
+            <p class="ljOrder-title-second">THE PALACE MUSEUM</p>
+            <div class="ljOrder-inof-tips clearfix">
+                <!--<span class="pull-left">23个讲解点</span>-->
+                <!--<span class="pull-left">非官方</span>-->
+            </div>
+            <div class="price">￥{{ljData.price}}</div>
+        </div>
+        <span class="ljOrder-mustKnow">购买须知</span>
+    </div>
+    <div class="ljOrder-mobile clearfix">
+        <label class="pull-left">姓名</label>
+        <input class="pull-left" type="text" name="mobile" ng-model="contact.name" placeholder="请输入姓名">
+    </div>
+    <div class="ljOrder-mobile clearfix">
+        <label class="pull-left">手机号</label>
+        <input class="pull-left" type="text" name="mobile" ng-model="contact.mobile" placeholder="请输入手机号" maxlength="11">
+    </div>
+
+    <p class="ljOrder-tips">温馨提示：语音导览短信授权码将发送至该手机号。</p>
+    <div class="ljOrder-footer clearfix">
+        <div class="ljOrder-footer-left pull-left clearfix">
+            <label class="pull-left">订单金额：</label>
+            <span class="pull-left"><sub>￥</sub>{{ljData.price}}</span>
+        </div>
+        <a href="javascript:;" class="ljOrder-footer-right pull-right" ng-click="submitLjOrder(ljData.id)">提交订单</a>
+    </div>
+</div>

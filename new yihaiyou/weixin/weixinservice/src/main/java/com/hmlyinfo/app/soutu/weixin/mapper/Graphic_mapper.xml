@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.weixin.mapper.GraphicMapper">
+	<insert id="insert" parameterType="Graphic" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_wx_reply_graphic
+			(
+				id,
+				title,
+				image_path,
+				description,
+				url,
+				type,
+				father_id,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{title},
+				#{imagePath},
+				#{description},
+				#{url},
+				#{type},
+				#{fatherId},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="Graphic">
+		update tb_wx_reply_graphic
+		<set>
+			<if test="id != null"> id = #{id},</if>
+			<if test="title != null"> title = #{title},</if>
+			<if test="imagePath != null"> image_path = #{imagePath},</if>
+			<if test="description != null"> description = #{description},</if>
+			<if test="url != null"> url = #{url},</if>
+			<if test="type != null"> type = #{type},</if>
+			<if test="fatherId != null"> father_id = #{fatherId},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="Graphic">
+		delete from
+			tb_wx_reply_graphic
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="Graphic">
+		select
+			*
+		from
+			tb_wx_reply_graphic
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="searchCount" resultType="int">
+		select 
+			count(*) 
+		from
+			tb_wx_reply_graphic
+		<where>
+		<if test="title != null and '' != title"> and title like #{title} </if>
+		<if test="fatherId != null and '' != url"> and father_id = #{fatherId} </if>
+		</where>
+	</select>
+	
+	<select id="searchList" resultType="Graphic">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">$ {item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>
+		from
+			tb_wx_reply_graphic
+		<where>
+		<if test="title != null and '' != title"> and title like #{title} </if>
+		<if test="fatherId != null and '' != url"> and father_id = #{fatherId} </if>
+		</where>
+		order by create_time desc
+	</select>
+	
+	<select id="ascList" resultType="Graphic">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">$ {item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="Graphic">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">$ {item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+		order by modify_time desc
+	</select>
+	
+	<sql id="byProperty">
+	from
+	tb_wx_reply_graphic
+	<where>
+		<if test="id != null and '' != id"> and id = #{id} </if>
+		<if test="title != null and '' != title"> and title = #{title} </if>
+		<if test="imagePath != null and '' != imagePath"> and image_path = #{imagePath} </if>
+		<if test="description != null and '' != description"> and description = #{description} </if>
+		<if test="url != null and '' != url"> and url = #{url} </if>
+		<if test="type != null and '' != url"> and type = #{type} </if>
+		<if test="fatherId != null and '' != url"> and father_id = #{fatherId} </if>
+		<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+		<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+	</where>
+	
+	</sql>
+
+</mapper>

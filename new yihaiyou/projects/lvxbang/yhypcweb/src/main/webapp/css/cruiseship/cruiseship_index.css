@@ -1,0 +1,448 @@
+* {
+  font-family: arial, "微软雅黑";
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+/*工具样式*/
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+/*轮播*/
+.banner {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.banner .banner-search {
+  width: 415px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  z-index: 14;
+  margin-left: -592px;
+}
+.banner .banner-search .banner-search-wrap {
+  width: 336px;
+  height: 266px;
+  background: rgba(0, 0, 0, 0.6);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);
+  padding: 10px 40px 15px 40px;
+}
+.banner .banner-search .banner-search-wrap .banner-search-title {
+  color: #ff8800;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.banner .banner-search .banner-search-wrap .banner-search-title span {
+  width: 125px;
+  height: 2px;
+  display: inline-block;
+  background-color: #fff;
+  vertical-align: middle;
+}
+.banner .banner-search .banner-search-wrap .banner-search-title i {
+  width: 74px;
+  text-align: center;
+  height: 25px;
+  font-style:normal;
+  display:inline-block;
+}
+.banner .banner-search .banner-search-wrap .banner-search-form {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+.banner .banner-search .banner-search-wrap .banner-search-form .form-group {
+  margin-bottom: 24px;
+  position: relative;
+}
+.banner .banner-search .banner-search-wrap .banner-search-form .form-group label {
+  width: 72px;
+  text-align: right;
+  display: inline-block;
+  font-weight: normal;
+}
+.banner .banner-search .banner-search-wrap .banner-search-form .form-group input {
+  width: 243px;
+  height: 34px;
+  border: 1px solid #1571d4;
+  color: #8d8d8d;
+  text-align: left;
+  padding-left: 13px;
+  background:#ffffff;
+  background-image:url("/image/icon-datalist.png");
+  background-repeat:no-repeat;
+  background-position:230px 10px;
+  cursor: pointer;
+  line-height: 34px;
+}
+.banner .banner-search .banner-search-wrap .banner-search-form .form-group .datalist {
+  position: absolute;
+  left: 78px;
+  top: 38px;
+  background: #fff;
+  z-index: 100;
+  color: #000;
+  text-align: left;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.506);
+  display:none;
+}
+.banner .banner-search .banner-search-wrap .banner-search-form .form-group .datalist li {
+  width: 243px;
+  padding-left: 13px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #3996fa;
+  cursor: pointer;
+}
+.banner .banner-search .banner-search-wrap .banner-search-form .form-group .datalist li:last-of-type {
+  border-bottom: none;
+}
+.banner .banner-search .banner-search-wrap .banner-search-form .form-group .datalist .active {
+  box-shadow: inset 3px 3px 8px #238bfa,inset -3px -3px 8px #238bfa;
+  background: #3c97fb;
+  color: #fff;
+}
+.banner .banner-search .banner-search-wrap .banner-search-form .btn-search {
+  width: 181px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background-color: #ff9a1c;
+  line-height: 16px;
+  border-radius: 4px;
+  text-align: center;
+  display: inline-block;
+  line-height: 34px;
+  color: #fff;
+  cursor: pointer;
+}
+.banner .banner-search .banner-search-wrap .banner-search-form .btn-search .icon-search {
+  width: 56px;
+  height: 33px;
+  background: url(/image/icon-search.png) no-repeat left center;
+  display: inline-block;
+  text-align: right;
+}
+.banner .banner-search .banner-search-wrap .banner-search-form .btn-search:hover {
+  background-color: #f80;
+}
+.banner .carousel-wrap {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+.banner .carousel-wrap .swiper-container {
+  height: 350px;
+}
+.banner .carousel-wrap .swiper-container .swiper-wrapper .swiper-slide a {
+  display: inline-block;
+}
+.banner .carousel-wrap .swiper-container .swiper-pagination {
+  width: 600px;
+  left: 50%;
+  bottom: 15px!important;
+  top: auto;
+  margin-left: -20px;
+}
+.banner .carousel-wrap .swiper-container .swiper-pagination span {
+  width: 12px;
+  height: 12px;
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 2px solid #fff;
+  background: none;
+  border-radius: 12px;
+  opacity: 1;
+}
+.banner .carousel-wrap .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+  width: 64px;
+  background: #fff;
+}
+.recommend {
+  width: 1180px;
+  margin: 0 auto;
+  margin-top: 38px;
+  margin-bottom: 38px;
+}
+.recommend .recommend-title {
+  border-bottom: 1px solid #3996fa;
+  margin-bottom: 30px;
+}
+.recommend .recommend-title .recommend-left {
+  font-size: 24px;
+  color: #3996fa;
+  width: 120px;
+  border-bottom: 2px solid #3996fa;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 14px;
+  font-weight: bold;
+}
+.recommend .recommend-title .recommend-right a {
+  display: inline-block;
+  height: 42px;
+  line-height: 42px;
+  font-size: 18px;
+  color: #3996fa;
+}
+.recommend .recommend-content .recommend-content-section {
+  margin-bottom: 20px;
+}
+.recommend .recommend-content .recommend-content-section .aside-wrap {
+  width: 240px;
+  height: 451px;
+  background: #e0eeff;
+}
+.recommend .recommend-content .recommend-content-section .aside-wrap .aside {
+  width: 251px;
+  height: 451px;
+  text-align: center;
+  background: url("/image/cruises-column-ship-bg.png") no-repeat bottom left;
+}
+.recommend .recommend-content .recommend-content-section .aside-wrap .aside .category {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 24px;
+}
+.recommend .recommend-content .recommend-content-section .aside-wrap .aside .category .aside-title {
+  width: 146px;
+  height: 40px;
+  margin: 0 auto;
+  border: 2px solid #3996fa;
+  background: url("/image/cruises-column-english-cruiseline.png") no-repeat center 17px;
+}
+.recommend .recommend-content .recommend-content-section .aside-wrap .aside .category span {
+  display: inline-block;
+  width: 89px;
+  height: 18px;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  background-color: #e0eeff;
+  color: #3996fa;
+  position: absolute;
+  left: 76px;
+  top: 40px;
+  font-weight: bold;
+  font-family: '微软雅黑';
+}
+.recommend .recommend-content .recommend-content-section .aside-wrap .aside .loaction-port {
+  margin-bottom: 20px;
+}
+.recommend .recommend-content .recommend-content-section .aside-wrap .aside .loaction-port a {
+  width: 146px;
+  height: 34px;
+  border: 1px solid #3996fa;
+  border-radius: 18px;
+  background-color: #e0eeff;
+  font-size: 16px;
+  line-height: 34px;
+  color: #3996fa;
+  display: inline-block;
+  text-align: center;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle {
+  width: 358px;
+  height: 428px;
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+  margin-left: 20px;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-imgbox {
+  width: 358px;
+  height: 287px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-imgbox a {
+   display: inline-block;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+ }
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-imgbox a img{
+  height: 100%;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-textbox {
+  background: #3996fa;
+  padding-top: 6px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-textbox h3 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 38px;
+  font-weight: bold;
+  text-align: left;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-textbox h3 a {
+  color: #fff;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-textbox p {
+  height: 44px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-textbox .content-middle-info {
+  padding: 14px 0;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-textbox .content-middle-info a {
+  margin-top: 1px;
+  border: 1px solid #f80;
+  width: 134px;
+  height: 21px;
+  background: url("/image/cruises-columb-product-price-bg-big.png") no-repeat center;
+  display: inline-block;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-textbox .content-middle-info a i {
+  width: 50%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+  font-style: normal;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-textbox .content-middle-info a .first-i {
+  color: #fff;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-textbox .content-middle-info a .second-i {
+  color: #f80;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-textbox .content-middle-info span {
+  font-size: 32px;
+  line-height: 25px;
+  color: #fff;
+  margin-top: -4px;
+  font-family: "黑体";
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-textbox .content-middle-info span sub {
+  font-family: "微软雅黑";
+  vertical-align: baseline;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-textbox .content-middle-info span sub:first-of-type {
+  font-size: 16px;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-middle .content-middle-textbox .content-middle-info span sub:last-of-type {
+  font-size: 14px;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right {
+  width: 520px;
+  padding-left: 19px;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li:nth-of-type(2n-1) {
+  float: left;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li:nth-of-type(2n) {
+  float: right;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li:nth-of-type(1),
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li:nth-of-type(2) {
+  margin-bottom: 18px;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li {
+  border: 1px solid #e5e5e5;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li .cotent-right-imgbox {
+  width: 246px;
+  height: 149px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li .cotent-right-imgbox a {
+  display: inline-block;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li .content-right-textbox {
+  padding: 3px 9px 10px 9px;
+  border-top: 1px solid #e5e5e5;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li .content-right-textbox h3 {
+  font-size: 15px;
+  line-height: 32px;
+  text-align: left;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li .content-right-textbox h3 a {
+  color: #8d8d8d;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li .content-right-textbox .content-right-info a {
+  width: 109px;
+  height: 16px;
+  border: 1px solid #f80;
+  background: url("/image/cruises-columb-product-price-bg-big.png") no-repeat center;
+  background-size: cover;
+  font-size: 12px;
+  display: inline-block;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li .content-right-textbox .content-right-info a i {
+  width: 50%;
+  text-align: center;
+  font-style: normal;
+  line-height: 16px;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li .content-right-textbox .content-right-info a .first-i {
+  color: #fff;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li .content-right-textbox .content-right-info a .second-i {
+  color: #f80;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li .content-right-textbox .content-right-info span {
+  color: #f80;
+  font-size: 24px;
+  line-height: 18px;
+  font-family: "黑体";
+  margin-top: -3px;
+}
+.recommend .recommend-content .recommend-content-section .recommend-content-right ul li .content-right-textbox .content-right-info span sub {
+  font-family: "微软雅黑";
+  font-size: 14px;
+  vertical-align: baseline;
+}
+
+/*IE8*/
+.form-group .brandPlaceholder{
+  position: absolute;
+  left: 90px;
+  top:9px;
+  color: #8d8d8d;
+  z-index: 99;
+}
+.form-group .routPlaceholder{
+  position: absolute;
+  left: 90px;
+  top:9px;
+  color: #8d8d8d;
+  z-index: 99;
+}

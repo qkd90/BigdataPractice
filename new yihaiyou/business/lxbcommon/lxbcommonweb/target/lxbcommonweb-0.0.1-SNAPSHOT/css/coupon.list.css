@@ -1,0 +1,41 @@
+.coupon_dialog{
+    padding: 0 10px;
+}
+.coupon_dialog input{
+    width: 150px;
+    padding: 2px;
+    font-size: 13px;
+}
+.coupon_dialog li{
+    margin-top: 8px;
+}
+.coupon_dialog .disa{
+    background: none;
+    border: none;
+}
+.coupon_dialog textarea{
+    width: 350px;
+    padding: 3px;
+    font-size: 13px;
+}
+.coupon_dialog .vam{
+    vertical-align: middle;
+}
+
+/* user coupon */
+em{
+    padding: 0 3px 0 0;
+    color: #ff5967;
+    font-size: 13px;
+    font-family: "宋体";
+}
+
+.opt a.ena{
+    color: #0000cc;
+    text-decoration: underline;
+}
+.opt a.disa{
+    color: #8F8F8F;
+    text-decoration: none;
+    cursor: not-allowed;
+}

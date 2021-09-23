@@ -1,0 +1,31 @@
+<urlrewrite>
+    <rule>
+        <from>/lvxbang/scenic/detail_([0-9]+).html</from>
+        <to>/lvxbang/scenic/detail.jhtml?scenicId=$1</to>
+    </rule>
+
+    <rule>
+        <from>/lvxbang/destination/detail_([0-9]+).html</from>
+        <to>/lvxbang/destination/detail.jhtml?cityCode=$1</to>
+    </rule>
+
+    <rule>
+        <from>/lvxbang/recommendPlan/detail_([0-9]+).html</from>
+        <to>/lvxbang/recommendPlan/detail.jhtml?recplanId=$1</to>
+    </rule>
+
+    <rule>
+        <from>/lvxbang/hotel/detail_([0-9]+).html</from>
+        <to>/lvxbang/hotel/detail.jhtml?hotelId=$1</to>
+    </rule>
+
+    <rule>
+        <from>/lvxbang/delicacy/detail_([0-9]+).html</from>
+        <to>/lvxbang/delicacy/detail.jhtml?delicacyId=$1</to>
+    </rule>
+
+    <rule>
+        <from>/lvxbang/plan/detail_([0-9]+).html</from>
+        <to>/lvxbang/plan/detail.jhtml?planId=$1</to>
+    </rule>
+</urlrewrite>

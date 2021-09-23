@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.account.mapper.AccessTokenMapper">
+	<insert id="insert" parameterType="AccessToken">
+		insert into tb_access_token
+			(
+				id,
+				client_id,
+				user_id,
+				token,
+				expiry_date,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{clientId},
+				#{userId},
+				#{token},
+				#{expiryDate},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="AccessToken">
+		update tb_access_token
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="clientId != null and '' != clientId"> client_id = #{clientId},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="token != null and '' != token"> token = #{token},</if>
+			<if test="expiryDate != null and '' != expiryDate"> expiry_date = #{expiryDate},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="delClientTokenByUser" parameterType="map">
+		delete from tb_access_token where client_id = #{clientId} and user_id = #{userId}
+	</delete>
+	
+	<delete id="del" parameterType="AccessToken">
+		delete from
+			tb_access_token
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="AccessToken">
+		select
+			*
+		from
+			tb_access_token
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="AccessToken">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_access_token
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="clientId != null and '' != clientId"> and client_id = #{clientId} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="token != null and '' != token"> and token = #{token} </if>
+			<if test="expiryDate != null and '' != expiryDate"> and expiry_date = #{expiryDate} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		</where>
+	</sql>
+</mapper>

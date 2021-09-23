@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenicTicket.mapper.ScenicTicketOrderMapper">
+	<insert id="insert" parameterType="ScenicTicketOrder" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_scenic_ticket_order
+			(
+				id,
+				order_num,
+				plan_id,
+				user_id,
+				pay_order,
+				mobile,
+				buyer_name,
+				id_card_no,
+				buyer_email,
+				buyer_post_code,
+				buyer_address,
+				plan_flag,
+				pay_type,
+				status,
+				order_name,
+				order_date,
+				total_fee,
+				season_ticket,
+				online_pay,
+				create_time,
+				modify_time,
+				push_flag,
+				order_id
+			)
+		values
+			(
+				#{id},
+				#{orderNum},
+				#{planId},
+				#{userId},
+				#{payOrder},
+				#{mobile},
+				#{buyerName},
+				#{idCardNo},
+				#{buyerEmail},
+				#{buyerPostCode},
+				#{buyerAddress},
+				#{planFlag},
+				#{payType},
+				#{status},
+				#{orderName},
+				#{orderDate},
+				#{totalFee},
+				#{seasonTicket},
+				#{onlinePay},
+				#{createTime},
+				#{modifyTime},
+				#{pushFlag},
+				#{orderId}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="ScenicTicketOrder">
+		update tb_scenic_ticket_order
+		<set>
+			<if test="orderNum != null"> order_num = #{orderNum},</if>
+			<if test="planId != null"> plan_id = #{planId},</if>
+			<if test="userId != null"> user_id = #{userId},</if>
+			<if test="payOrder != null"> pay_order = #{payOrder},</if>
+			<if test="mobile != null"> mobile = #{mobile},</if>
+			<if test="buyerName != null"> buyer_name = #{buyerName},</if>
+			<if test="idCardNo != null"> id_card_no = #{idCardNo},</if>
+			<if test="buyerEmail != null"> buyer_email = #{buyerEmail},</if>
+			<if test="buyerPostCode != null"> buyer_post_code = #{buyerPostCode},</if>
+			<if test="buyerAddress != null"> buyer_address = #{buyerAddress},</if>
+			<if test="planFlag != null"> plan_flag = #{planFlag},</if>
+			<if test="payType != null"> pay_type = #{payType},</if>
+			<if test="orderName != null"> order_name = #{orderName},</if>
+			<if test="orderDate != null"> order_date = #{orderDate},</if>
+			<if test="totalFee != null"> total_fee = #{totalFee},</if>
+			<if test="status != null"> status = #{status},</if>
+			<if test="seasonTicket != null"> season_ticket = #{seasonTicket},</if>
+			<if test="onlinePay != null"> online_pay = #{onlinePay},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="pushFlag != null"> push_flag = #{pushFlag},</if>
+			<if test="orderId != null"> order_id = #{orderId}</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="ScenicTicketOrder">
+		delete from
+			tb_scenic_ticket_order
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="ScenicTicketOrder">
+		select
+			*
+		from
+			tb_scenic_ticket_order
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="ScenicTicketOrder">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">main.${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 main.*
+		</if>,sub.count as count
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_scenic_ticket_order main left join tb_scenic_ticket_sub_order sub on main.id=sub.scenic_ticket_order_id
+		<where>
+            <if test="listAll ==null or '' == listAll">main.status>0</if>
+			<if test="id != null and '' != id"> and main.id = #{id} </if>
+			<if test="orderNum != null"> order_num = #{orderNum} </if>
+			<if test="userId != null and '' != userId"> and main.user_id = #{userId} </if>
+			<if test="planId != null and '' != planId"> and main.plan_id = #{planId} </if>
+			<if test="payOrder != null and '' != payOrder"> and main.pay_order = #{payOrder} </if>
+			<if test="mobile != null and '' != mobile"> and main.mobile = #{mobile} </if>
+			<if test="buyerName != null and '' != buyerName"> and main.buyer_name = #{buyerName} </if>
+			<if test="idCardNo != null and '' != idCardNo"> and main.id_card_no = #{idCardNo} </if>
+			<if test="buyerEmail != null"> and main.buyer_email = #{buyerEmail} </if>
+			<if test="buyerPostCode != null"> and main.buyer_post_code = #{buyerPostCode} </if>
+			<if test="buyerAddress != null"> and main.buyer_address = #{buyerAddress} </if>
+			<if test="planFlag != null and '' != planFlag"> and main.plan_flag = #{planFlag} </if>
+			<if test="payType != null and '' != payType"> and main.pay_type = #{payType} </if>
+			<if test="orderName != null and '' != orderName"> and main.order_name = #{orderName} </if>
+			<if test="orderDate != null and '' != orderDate"> and main.order_date = #{orderDate} </if>
+			<if test="orderDateL != null and '' != orderDateL"> and unix_timestamp(main.order_date) * 1000 &gt;= #{orderDateL} </if>
+			<if test="orderDateU != null and '' != orderDateU"> and unix_timestamp(main.order_date) * 1000 &lt;= #{orderDateU} </if>
+			<if test="totalFee != null and '' != totalFee"> and main.total_fee = #{totalFee} </if>
+			<if test="status != null and '' != status"> and main.status = #{status} </if>
+			<if test="seasonTicket != null and '' != seasonTicket"> and season_ticket = #{seasonTicket} </if>
+			<if test="onlinePay != null and '' != onlinePay"> and online_pay = #{onlinePay} </if>
+			<if test="statusL != null and '' != statusL"> and main.status &gt;= #{statusL} </if>
+			<if test="createTime != null and '' != createTime"> and main.create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and main.modify_time = #{modifyTime} </if>
+			<if test="pushFlag != null and '' != pushFlag"> and push_flag = #{pushFlag} </if>
+			<if test="orderId != null and '' != orderId"> and order_id = #{orderId} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(main.create_time) * 1000 &gt; #{ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(main.create_time) * 1000 &lt; #{tb} </if>
+		<if test="ids != null and ids.size() > 0">
+			and main.id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+		<choose>
+			<when test="orderColumn != null and '' != orderColumn">
+				ORDER BY main.${orderColumn}
+				<if test="orderType != null and '' != orderType">
+					${orderType}
+				</if>
+			</when>
+			<otherwise>
+				order by main.create_time DESC
+			</otherwise>
+		</choose>
+	</sql>
+</mapper>

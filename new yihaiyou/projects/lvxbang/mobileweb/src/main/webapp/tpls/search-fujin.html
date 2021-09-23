@@ -1,0 +1,52 @@
+<div ng-controller="searchfujinCtrl">
+    <div class="searchform topbg col-xs-12 fixtop">
+        <form class="form-inline">
+            <div class="input-group">
+                <a ui-sref="search-difang">
+                    <input type="text" class="form-control" id="project" placeholder="这个地方是？">
+                </a>
+                <span class="input-group-btn">
+                    <a href="javascript:history.go(-1);">
+                        <button class="btn btn-default" type="button">取消</button>
+                    </a>
+                </span>
+            </div>
+        </form>
+    </div>
+    <div id="subcontainer" class="clearfix">
+        <div id="search-fujin">
+            <ul class="nav nav-tabs" role="tablist">
+                <li id="scenic-tab" ng-click="changePlaceType('scenic')"><a data-target="#jingdian" aria-controls="jingdian" role="tab"
+                                      data-toggle="tab"><span class="s-jingdian">景点</span></a></li>
+                <li id="hotel-tab" ng-click="changePlaceType('hotel')"><a data-target="#jiudian" aria-controls="jiudian" role="tab" data-toggle="tab"><span
+                        class="s-jiudian">酒店</span></a></li>
+                <li id="food-tab" ng-click="changePlaceType('food')"><a data-target="#meishi" aria-controls="meishi" role="tab" data-toggle="tab"><span class="s-meishi">美食</span></a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane search-fujin-list" id="jingdian">
+                    <ul infinite-scroll="scenicList()" infinite-scroll-distance="1" infinite-scroll-disabled="loading">
+                        <li class="col-xs-12" ng-repeat="place in scenics"><a ng-click="selectPlace(this)">{{place.name}}</a></li>
+                        <!--<div ng-show="loading"><div class="yuloading"><span>加载数据中...</span></div></div>-->
+                        <div ng-show="scenicNomore" class="alert alert-danger text-center">没有更多数据了</div>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane search-fujin-list" id="jiudian">
+                    <ul infinite-scroll="hotelList()" infinite-scroll-distance="1" infinite-scroll-disabled="loading">
+                        <li class="col-xs-12" ng-repeat="place in hotels"><a ng-click="selectPlace(this)">{{place.name}}</a></li>
+                        <!--<div ng-show="loading"><div class="yuloading"><span>加载数据中...</span></div></div>-->
+                        <div ng-show="hotelNomore" class="alert alert-danger text-center">没有更多数据了</div>
+                    </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane search-fujin-list" id="meishi">
+                    <ul infinite-scroll="foodList()" infinite-scroll-distance="1" infinite-scroll-disabled="loading">
+                        <li class="col-xs-12" ng-repeat="place in foods"><a ng-click="selectPlace(this)">{{place.name}}</a></li>
+                        <!--<div ng-show="loading"><div class="yuloading"><span>加载数据中...</span></div></div>-->
+                        <div ng-show="foodNomore" class="alert alert-danger text-center">没有更多数据了</div>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

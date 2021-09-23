@@ -1,0 +1,107 @@
+﻿
+
+.supplier .top{ background-color:#fafafa; position:relative; height:38px; border-bottom:solid 1px #d5d5d5; border-top:solid 1px #fefefe;  position:relative; z-index:1;}
+.supplier .top h2{width:181px;position: absolute;left: 6px;top: 6px; height:32px; background:url(../images/home.png) no-repeat -388px -209px; font-weight:normal; line-height:32px; text-align:center;}
+
+.supplier .hleft{ position:absolute; left:200px; top:6px;}
+.supplier .keyword{ position:absolute; left:312px; top:6px;}
+.supplier .keyword .ui-ico-search{ position:absolute; right:5px; top:5px;}
+.supplier .keyword input[type='text'] { padding-right:30px; padding-left:10px;width:248px; }
+.supplier .mul-handle{ position:absolute; right:10px; top:6px;}
+.supplier .selectedNum{ border-radius:10px; display:inline-block; width:20px; height:20px; color:#fff; line-height:20px; text-align:center; background-color:#129de0;}
+.supplier .donothide{ display:inline !important;}
+
+.supplier .left{ float:left; height:100%;border-right:solid 1px #d5d5d5; width:190px; background-color:#fcfcfc;}
+.supplier .allcate{ cursor:pointer;}
+.supplier .allcate:hover{ color:red;}
+.supplier h2 .select {color:red; font-weight:bold;}
+.supplier .left .ui-tree{ height:555px; overflow:auto; padding-right:2px;}
+.supplier .left .ui-tree li .ui-ico-cfg{ position:absolute; right:3px; top:8px; display:none;}
+.supplier .left .ui-tree li:hover>.ui-ico-cfg{ display:inline;}
+.supplier .left .ui-tree li .namecon{
+    cursor:pointer;
+    width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.supplier .left .ui-tree li.select{ color:Red; font-weight:bold;}
+.supplier .left .ui-tree .ui-ico-treeico{cursor:pointer;}
+.supplier .left .addcate{ margin-top:3px;}
+.supplier .left .addcate .ui-btn04{width:150px;}
+
+.supplier .right{height: 100%; margin-left: 191px; position:relative; }
+.supplier .right .supplierlist{
+    padding:15px 9px; position:relative;
+}
+.supplier .right .supplierlist ul{
+    width:214px; margin:10px; padding:9px 10px; border:1px solid #d3d3d3; float:left; position:relative;
+}
+.supplier .right .supplierlist ul:hover{
+    border:1px solid #8ac1e6;
+}
+.supplier .right .supplierlist li{
+    height:30px;line-height:30px;
+}
+.supplier .right .supplierlist li label{
+    float:left;
+}
+.supplier .right .supplierlist li span.supplierName, .supplier .right .supplierlist li span.supplierPerson , .supplier .right .supplierlist li span.supplierPhone{
+    width:150px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; display:block; float:left;
+}
+
+.supplier .right .supplierlist .redact{
+    position:absolute; right:10px; top:10px;
+}
+.supplier .right .supplierlist .close, .supplier .right .supplierlist .nonclose{
+    position:absolute; right:10px; bottom:6px;
+}
+
+.supplier .right .ui-page{ position:absolute; bottom:40px; left:1px; width:100%;right:1px;}
+
+/*添加供应商弹窗*/
+.supplier .addsupplier{
+   padding:10px 20px; border-radius: 0 0 3px 3px; width:458px; overflow:hidden;
+}
+.supplier .addsupplier ul li{
+    display:block; padding:10px 0px 5px 0; line-height:22px; overflow:hidden; min-width:210px;
+}
+.supplier .addsupplier ul li.leftside{
+    float:left;
+}
+.supplier .addsupplier ul li.both{
+    clear:both; padding:0;
+}
+
+.supplier .addsupplier ul li.rightside{
+    float:right;
+}
+.supplier .addsupplier label{
+    width:80px; display:block; float:left; text-align:right;
+}
+.supplier .addsupplier input{
+    border-radius:0; padding:0px; text-indent:2px;
+}
+.supplier .addsupplier input.kind01 {
+    width:376px; height:22px;
+}
+.supplier .addsupplier input.kind02 {
+    width:138px; height:22px;
+}
+.supplier .addsupplier input.kind03{
+    position:relative; top:2px;
+}
+.supplier .addsupplier select{
+    border:solid 1px #bdbdbd; width:140px;
+}
+.supplier .addsupplier textarea{
+    width:366px; height:70px; overflow:auto;
+}
+
+
+/* 选择商品弹窗 */
+.supplierSelect{}
+.supplierSelect .left .ui-tree{ height:372px; overflow:auto;}
+.supplierSelect .right .goodlist li{ margin-bottom:1px; margin-right:1px;}
+.supplierSelect .hleft{top: 14px;}
+.supplierSelect .keyword{ left:240px;}

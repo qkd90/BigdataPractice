@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.DestinationWeatherMapper">
+	<insert id="insert" parameterType="DestinationWeather">
+		insert into tb_destination_weather
+			(
+			id,
+			destination_id,
+			month,
+			weather,
+			modify_time,
+			create_time
+			)
+		values
+			(
+			#{id},
+			#{destinationId},
+			#{month},
+			#{weather},
+			#{modifyTime},
+			#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="DestinationWeather">
+		update tb_destination_weather
+		<set>
+            <if test="destinationId != null and '' != destinationId">destination_id = #{destinationId},</if>
+            <if test="month != null and '' != month">month = #{month},</if>
+            <if test="weather != null and '' != weather">weather = #{weather},</if>
+            <if test="modifyTime != null and '' != modifyTime">modify_time = #{modifyTime},</if>
+		</set>
+		where
+	</update>
+	
+	<delete id="del" parameterType="DestinationWeather">
+		delete from
+			tb_destination_weather
+		where id=#{id}
+	</delete>
+	
+	<select id="selById" resultType="DestinationWeather">
+		select
+			*
+		from
+			tb_destination_weather
+		where id=#{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(1)
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="DestinationWeather">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_destination_weather
+		<where>
+            <if test="destinationId != null and '' != destinationId">and destination_id = #{destinationId}</if>
+            <if test="month != null and '' != month">and month = #{month}</if>
+            <if test="weather != null and '' != weather">and weather = #{weather}</if>
+            <if test="ids != null and ids.size() > 0">
+                and id in
+                <foreach item="item" index="index" collection="ids" open="("
+                    separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+		</where>
+	</sql>
+</mapper>

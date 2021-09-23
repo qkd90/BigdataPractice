@@ -1,0 +1,74 @@
+<div class="product_infomation" ng-controller="sailboatYachtTicketDetailCtrl" style=" background-color: white;">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        预订说明
+        <!--<span class="save pic1"></span>-->
+        <span class="save pic2" ui-sref="personalIndex"></span>
+    </div>
+    <div class="infoimg">
+        <img bn-lazy-src="{{ticketPrice.cover | getImgUrl}}">
+
+        <!--增加点击图片出现相册窗口-->
+        <div class="picchuangkou" ng-click="openpichuangkou()" style="height:60px;width: 70px;  right: 10px;  bottom:3px;border: 1px solid white;  position: absolute;" >
+            <img bn-lazy-src="{{ticketPrice.cover | getImgUrl}}" style="width: 100%;height: 100%;">
+        </div>
+        <div class="picchuangkou" ng-click="openpichuangkou()" style="height:60px;width: 70px;  right: 13px;  bottom: 0;border: 1px solid white;  position: absolute;" >
+            <img bn-lazy-src="{{ticketPrice.cover | getImgUrl}}" style="width: 100%;height: 100%;">
+        </div>
+
+
+    </div>
+
+    <div class="infobody" style="margin-bottom: 30px">
+        <div class="dizhitese">
+            <div class="jdaddress"><span class="dizhititle">{{ticketPrice.name}}</span></div>
+            <p class="tiaojiantui" ng-if="ticketPrice.isTodayValid || ticketPrice.isConditionRefund"><span class="ticketdate" ng-if="ticketPrice.isTodayValid">可定今日票</span> <span class="youtiaojiantui" ng-if="ticketPrice.isConditionRefund">有条件退</span></p>
+
+            <p class="nowprice">
+                <span class="xianzaiprice">￥<span class="trueprice">{{ticketPrice.discountPrice}}</span></span> /人
+                <span class="oldprice">
+                    <!--<del>门市价：￥<span>{{ticketPrice.maketPrice}}</span></del>-->
+                    <!--<span class="salenum">已售-->
+                        <!--<span ng-if="ticketPrice.orderNum == null">0</span>-->
+                        <!--<span ng-if="ticketPrice.orderNum != null">{{ticketPrice.orderNum}}</span>-->
+                    <!--</span>-->
+                </span>
+            </p>
+        </div>
+        <div style="width:100%;height:8px;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;background-color:#f0efed"></div>
+        <div class="xingjipingfen" ng-click="goSailComment()">
+            <span class="xingji-left" ng-class="ticketPrice.star">{{ticketPrice.score}}</span>
+            <span class="pingjiazopngshu">
+                <span>{{ticketPrice.commentCount}}</span><span ng-if="ticketPrice.commentCount == '暂无'">评价</span><span ng-if="ticketPrice.commentCount != '暂无'">人评价</span>
+            </span>
+        </div>
+        <div style="width:100%;height:8px;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;background-color:#f0efed"></div>
+        <!--<div class="usetime" ng-if="ticketPrice.startDate != ''">-->
+            <!--<P class="shiyongdate">使用时间</p>-->
+
+            <!--<p style="color: #ff8501;">有效时间</p>-->
+
+            <!--<p> .<span>{{ticketPrice.startDate}}</span> 至 <span>{{ticketPrice.endDate}}</span></p>-->
+        <!--</div>-->
+
+        <div class="yudingxuzhi" ng-repeat="extendList in ticketPrice.extendLists">
+            <P class="shiyongdate">{{extendList[0].firstTitle}}</p>
+
+            <div ng-repeat="extend in extendList">
+                <p class="yudingtitle">{{extend.secondTitle}}</p>
+
+                <p class="yudingattention">
+                    <span ng-bind-html="extend.content | trustHtml"></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="buyingbottom">
+        <ul>
+            <li>船票价格：<span>¥{{ticketPrice.discountPrice}}</span></li>
+            <li ui-sref="sailling/date({ticketPriceId: priceId})">在线预定</li>
+        </ul>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,31 @@
+<div ng-controller="distributeShareCtrl">
+
+    <div id="notSubscribe" ng-hide="subscribe">
+        <div>
+            <span>您还没有关注我们的公众号无法参加活动，请长按下方二维码关注之后重新点击链接</span>
+        </div>
+        <div>
+            <img bn-lazy-src="{{qrcode}}" style="width:200px;height:200px;">
+        </div>
+    </div>
+
+    <div id="errPage" ng-show="error">
+        <span>出错了，请稍后再试</span>
+    </div>
+
+    <div id="subscribed" ng-show="canBeInvited">
+        <span>
+            欢迎加入旅行帮人人分销，请
+            <a class="success-account-name" href="javascript:void(0);" ng-click="goMyTeam()">点击</a>
+            查看详情
+        </span>
+    </div>
+
+    <div id="cantBeInvited" ng-show="notCanBeInvited">
+        <span>
+             您已经被邀请或者您已经邀请了别人，请
+            <a class="success-account-name" href="javascript:void(0);" ng-click="goMyTeam()">点击</a>
+            查看详情
+        </span>
+    </div>
+</div>

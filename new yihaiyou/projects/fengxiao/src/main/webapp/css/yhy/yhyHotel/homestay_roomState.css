@@ -1,0 +1,589 @@
+.financeList {
+	width: 1200px;
+	margin: auto;
+	/*background-color: #fff;*/
+	margin-top:10px;
+	padding-top:1px;
+}
+
+.financeList .selectBar {
+	height:60px;
+	clear: both;
+	background: none;
+}
+
+.selB_1 {
+	float: left;
+	margin-top:16px;
+}
+
+.selB_1 .form-control {
+	height: 30px;
+	font-size:12px;
+	color: #333;
+	border:1px solid #d1d1d1;
+	border-radius:5px!important;
+}
+
+.financeList .businesOrderNum {
+	width:160px;
+}
+
+.financeList .businesOrderNum .input-group {
+	margin-left:8px;
+}
+
+.financeList .businesOrderNum .form-control {
+	width: 150px;
+}
+
+.financeList .orderTime {
+	width:310px;
+}
+
+.financeList .orderTime div.input-group {
+	float:left;
+}
+
+.financeList .orderTime span,.financeList .businesOrderNum span {
+	display: block;
+	float:left;
+	line-height:30px;
+	font-size: 12px;
+	color: #333;
+	text-align: center;
+	font-family: AdobeInvisFont;
+	width:70px;
+}
+
+.financeList .orderTime span.orderTime_1 {
+	width: 70px;
+}
+
+.financeList .orderTime span.orderTime_2 {
+	width: 30px;
+}
+
+.financeList .orderTime .form-control {
+	width: 100px;
+}
+
+.financeList .orderState {
+	width: 210px
+}
+
+.financeList .orderState .orderState_1{
+	width: 40px;
+	float: left;
+	display: block;
+	line-height: 30px;
+	font-size:12px;
+	text-align: center;
+}
+
+.financeList .orderState .orderStatelist {
+	float: left;
+	width:134px;
+	line-height: 30px;
+	font-size:12px;
+}
+
+.financeList .orderState .orderStatelist select {
+	width: 100px;
+	text-align: left;
+	font-size: 12px;
+	color: #666;
+	float: right;
+}
+
+.financeList .orderState .form-control {
+	width: 130px;
+}
+
+.financeList .search {
+	float: right;
+	margin-right:10px;
+}
+
+.financeList .search .btn {
+	background-color: #478ff1;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+}
+
+.orderState .orderState_1 {
+	display: block;
+    float: left;
+    line-height: 30px;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    font-family: AdobeInvisFont;
+    width: 50px;
+}
+
+.financeList .week_moon {
+	width:95px;
+}
+
+.financeList .week_moon button {
+	width: 45px;
+	height:30px;
+	padding:0;
+	line-height:30px;
+	font-size: 12px;
+}
+
+.financeList .financeTable .orderNum {
+	width: 158px;
+}
+
+.financeList .financeTable .bookman {
+	width: 92px;
+}
+
+.financeList .financeTable .phoneNum {
+	width: 116px;
+}
+
+.financeList .financeTable .inDay {
+	width: 120px;
+}
+
+.financeList .financeTable .outDay {
+	width: 132px;
+}
+
+.financeList .financeTable .roomType {
+	width: 192px;
+}
+
+.financeList .financeTable .roomNum {
+	width: 152px;
+}
+
+.financeList .financeTable .checkState {
+	width: 74px;
+	/*color:#118ed1;*/
+}
+
+.financeList .financeTable .operation {
+	width: 154px;
+	/*color:#118ed1;*/
+	/*cursor:pointer;*/
+}
+
+.financeList .financeTable .operation span {
+	display: block;
+	width: 50%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	float:left;
+}
+
+.financeList .financeTable .operation span:hover{
+	text-decoration: underline;
+}
+
+.financeList .financeTable .operation span.state_in {
+	width: 100%;
+}
+
+.financeList .financeTable .operation .state_out {
+
+}
+
+.financeList .financeTable .operation .state_mess {
+
+}
+
+.financeList .financeTable table {
+	margin-bottom:0;
+}
+
+.financeList .financeTable table tr th {
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+	height: 35px;
+	line-height:35px;
+	border-bottom: none;
+}
+
+.financeList .financeTable table tr td {
+	font-size: 12px;
+	color: #666;
+	text-align: center;
+	height: 30px;
+	line-height:30px;
+	font-family: AdobeInvisFont;
+	border-right:1px solid #ddd;
+	vertical-align: middle;
+}
+
+.financeList .financeTable table tr td.checkNum {
+	border-left:1px solid #ddd;
+}
+
+.financeList .financeTable table tr td.operation a {
+	display: block;
+	text-decoration: none;
+	color: #1181de;
+}
+
+.financeList .checkin,.financeList .checkout,.financeList .checkmess {
+	width: 760px;
+	padding-top:15px;
+	position: fixed;
+	z-index: 101;
+	background-color:#fff;
+	border-radius:5px;
+	top: 15%;
+	left: 25%;
+	display: none;
+}
+
+.checkhead {
+	width: 100%;
+	font-size: 18px;
+	font-weight: 600;
+	padding:3px 18px 10px 18px;
+	color: #333;
+}
+
+.checkhead span.checkclose {
+	display: block;
+	float:right;
+	width: 30px;
+	height: 30px;
+	background:url(/images/yhy/icon-down.png) no-repeat center center;
+	background-size: 18px;
+    cursor: pointer;
+}
+
+.financeList .checkbody {
+	height: 252px;
+	border-top:1px solid #e0e0e0;
+	padding: 0 18px;
+	overflow: auto;
+}
+
+.checkbody .mesdiv {
+	border:1px solid #ddd;
+	height:30px;
+	float: left;
+	margin:10px 5px;
+	border-radius:4px;
+	color: #999;
+	padding:0 10px;
+	line-height: 30px;
+}
+
+#check_in_form .checkbody .mesdiv {
+    border: none;
+}
+#check_in_form .checkbody .cut,
+#check_in_form .checkbody .add {
+    border:1px solid #ddd;
+}
+
+.roomset .mesdiv .leftTitle {
+    display: block;
+    float: left;
+    margin-right:10px;
+    line-height:30px;
+    color: #000;
+    font-size:14px;
+    font-weight: normal;
+    margin-bottom: 0px;
+    max-width: none;
+}
+.roomset span.text {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px 10px;
+}
+
+.checkbody .mesdiv input {
+	/*border:none;*/
+	width: 100%;
+	/*padding:0;*/
+	font-size:12px;
+	border-radius:4px;
+	box-shadow: none;
+	height:28px;
+}
+
+.checkbody .message1 {
+	padding:0 0 0 18px;
+	background:url(/images/yhy/icon-information.png) no-repeat 10px 15px;
+	background-size: 18px 21px;
+	padding-bottom: 10px;
+	border-bottom:1px dashed #efefef;
+}
+.checkbody .message1.pb0 {
+    padding-bottom: 0px;
+}
+
+.checkbody .message2 {
+	background:url(/images/yhy/icon-card.png) no-repeat 10px 15px;
+	background-size: 18px 21px;
+}
+
+.checkbody .message3 {
+	background:url(/images/yhy/icon-house.png) no-repeat 10px 15px;
+	background-size: 23px 21px;
+	border-bottom:none;
+}
+
+.checkbody .message1 .bookName {
+	width: 112px;
+	margin-left:26px;
+	color: #333;
+	font-size:12px;	
+}
+
+.checkbody .message1 .bookPhone {
+	width: 150px;
+	color: #333;
+	font-size:13px;
+	margin-left: 26px;
+}
+
+.checkbody .message1 .validateCode {
+    width: 370px;
+    color: #333;
+    font-size:13px;
+}
+.checkbody .message1 .validateCode input{
+    width: 180px;
+    display: inline-block;
+}
+.checkbody .message1 .validateCode button {
+    padding: 3.5px 10px;
+}
+
+.checkbody .message1 .latearive {
+	width: 160px;
+	line-height:30px;
+	border:none;	
+	padding:0;
+	font-size:12px;
+}
+
+.checkbody .message1 .checkreadolny {
+	border: 1px solid #ddd;
+	padding-left:10px;
+	color: #333;
+	font-size:12px;
+}
+
+.checkbody .message2 .latearive,.checkbody .message3 .latearive {
+	width: 120px;
+}
+
+.checkbody .message2 .IDnum {
+	width: 210px;
+	color: #333;
+	font-size:13px;
+}
+
+.checkbody .message2 .oneperson {
+    float: left;
+	display: inline-block;
+	height:36px;
+}
+
+.checkbody .message2 .cut {
+    border: 1px solid #ddd;
+	width: 24px;
+	height:24px;
+	border-radius:50%;
+	line-height:24px;
+	text-align: center;
+	padding:0;
+	margin:13px 0 0 5px;
+	cursor: pointer;
+}
+
+.checkbody .message2 .add,
+.checkbody .add-member {
+    border: 1px solid #ddd;
+	width: 60px;
+	height:24px;
+	border-radius:10px;
+	line-height:24px;
+	text-align: center;
+	padding:0;
+	margin:12px 0 0 15px;
+	font-size:12px;
+	cursor: pointer;
+}
+
+.checkbody .message3 .normalbox {
+	margin:10px 0 0 0;
+	width: 112px;
+	color: #333;
+    font-size: 12px;
+}
+.checkbody .message3 .latearive {
+    margin:10px 0 0 0;
+}
+
+.checkbody .message3 .blankbox {
+	margin:10px 0 0 0;
+	border:none;
+	line-height: 30px;
+}
+
+.checkbody .message3 .bookName {
+	margin-right:0px;
+    margin-bottom: 0px;
+	width: 112px;
+}
+
+.latearive select {
+	width: 120px;
+	height: 30px;
+	border:1px solid #ddd;
+	border-radius:3px;
+	margin-left:10px;
+	float: right;
+}
+
+.latearive select option {
+	height:30px;
+}
+
+.checkbody .message1 .beizhu {
+	clear:both;
+	border:none;
+	height: auto;
+	margin:0 0 0 16px;
+
+}
+#check_detail_form .checkbody .message1 .beizhu {
+    margin:0 0 0 25px;
+}
+
+#check_in_form .checkbody .message1 .beizhu {
+    margin:0 0 0 25px;
+}
+
+.checkbody .message1 .bzmess {
+	width:650px;
+	min-height: 40px;
+	max-height:60px;
+	padding:0 0 0 10px;
+	border:1px solid #ddd;
+	margin-left:35px;
+	line-height:26px;
+	color: #333;
+	font-size: 12px;
+	overflow: auto;
+}
+
+.checkbody .message1 .beizhu textarea {
+	width:650px;
+	min-height: 40px;
+	max-height: 80px;
+    max-width: 650px;
+	padding:0 0 0 10px;
+	border:1px solid #ddd;
+	box-shadow: none;
+	
+}
+
+.financeList .checkfooter {
+	border-top:1px solid #e0e0e0;
+	background-color: #f0f0f0;
+	width: 100%;
+	height: 60px;
+    padding: 12px 0px;
+	position:relative;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.financeList .checkfooter .footer-btn-area {
+    width: 120px;
+    margin: 0 auto;
+}
+.financeList .checkfooter .sureBtn {
+    padding: 5px 25px;
+	background-color: #98be4e;
+	color: #fff;
+	font-family: SimSum;
+	border-radius:5px;
+	font-weight: 600;
+}
+.financeList .checkfooter .sureBtn:hover {
+    background-color: #9bb744;
+}
+
+.financeList .checkfooter .count {
+	width: 200px;
+	height: 60px;
+	/*float: right;*/
+	line-height: 60px;
+	text-align: right;
+	padding-right:15px;
+	font-size:16px;
+	font-weight: 600;
+	color: #333;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.financeList .checkfooter .count span.money {
+	color: #ff7f00;
+	margin-left:10px;
+}
+
+.latearive .lasttime {
+	display: block;
+	width: 100px;
+	height: 30px;
+	border:1px solid #ddd;
+	border-radius:3px;
+	margin-left:10px;
+	float: right;
+	padding-left:10px;
+	color: #333;
+}
+
+.ml {
+	margin-left: 10px!important;
+}
+
+.meswidth {
+	width: 70px!important;
+}
+
+.finalcount {
+	float: left;
+	line-height: 32px;
+	margin:10px 0 0 10px;
+}
+
+.finalcount span.money {
+	color: #ff7f00;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 600;
+
+}
+#check_in_form .form-control[readonly] {
+    background: none;
+    cursor: not-allowed;
+}
+table.dataTable thead tr {
+	height: 50px;
+	background: linear-gradient( #f9f9f9 0%, #f0f0f0 100%);
+	border: 1px solid #ddd;
+}

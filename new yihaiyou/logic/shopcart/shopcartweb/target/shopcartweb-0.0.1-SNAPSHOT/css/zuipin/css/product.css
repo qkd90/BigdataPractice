@@ -1,0 +1,200 @@
+﻿.product .top { background-color: #fafafa; position: relative; height: 38px; border-bottom: solid 1px #d5d5d5; border-top: solid 1px #fefefe; position: relative; z-index: 1; }
+.product .top h2 { width: 181px; position: absolute; left: 6px; top: 6px; height: 32px; background: url(../images/home.png) no-repeat -388px -209px; font-weight: normal; line-height: 32px; text-align: center; }
+
+.product .hleft { position: absolute; left: 200px; top: 6px; }
+.product .keyword { position: absolute; left: 300px; top: 6px; }
+.product .keyword .ui-ico-search { position: absolute; right: 5px; top: 5px; }
+.product .keyword input[type='text'] { padding-right: 30px; width: 155px; }
+/*padding-left:10px;*/
+.product .mul-handle { position: absolute; right: 10px; top: 6px; }
+.product .selectedNum { border-radius: 10px; display: inline-block; width: 20px; height: 20px; color: #fff; line-height: 20px; text-align: center; background-color: #129de0; }
+.product .donothide { display: inline !important; }
+
+.product .left { float: left; height: 100%; border-right: solid 1px #d5d5d5; width: 190px; background-color: #fcfcfc; }
+.product .allcate { cursor: pointer; }
+.product .allcate:hover { color: red; }
+.product h2 .select { color: red; font-weight: bold; }
+.product .left .ui-tree { height: 555px; overflow: auto; padding-right: 2px; overflow-x: hidden; }
+.product .left .ui-tree li .ui-ico-cfg { position: absolute; right: 3px; top: 8px; display: none; }
+.product .left .ui-tree li:hover > .ui-ico-cfg { display: inline; }
+.product .left .ui-tree li .namecon { cursor: pointer; }
+.product .left .ui-tree li.select { color: Red; font-weight: bold; }
+.product .left .ui-tree .ui-ico-treeico { cursor: pointer; }
+.product .left .addcate { margin-top: 3px; }
+.product .left .addcate .ui-btn04 { width: 150px; }
+
+.product .right { height: 100%; background: url(../images/good-bg.png) repeat left top; margin-left: 191px; position: relative; }
+.product .right .goodlist { }
+.product .right .goodlist ul { }
+.product .right .goodlist li { width: 258px; height: 106px; margin: 1px; float: left; border: solid 1px transparent; position: relative; left: 1px; }
+.product .right .goodlist li input[type='checkbox'] { display: none; position: absolute; left: 0; top: 0; }
+.product .right .goodlist li:hover, .product .right .goodlist li.select { background-color: #e2f2fd; border: solid 1px #8ac1e6; }
+.product .right .goodlist li:hover input[type='checkbox'], .product .right .goodlist li.select input[type='checkbox'] { display: inline; }
+.product .right .goodlist .ui-ico-cfg { display: none; position: absolute; right: 2px; top: 3px; }
+.product .right .goodlist li:hover .ui-ico-cfg { display: inline; }
+.product .right .goodlist li label { position: absolute; left: 4px; top: 3px; }
+.product .right .goodlist li .goodinfo { margin: 5px 0 0 115px; font-size: 14px; }
+.product .right .goodlist li .goodinfo p { margin-top: 7px; display: block; max-width: 128px; max-height: 52px; overflow: hidden; }
+.product .right .goodlist li span.goodimg { display: table-cell; vertical-align: middle; text-align: center; overflow: hidden; width: 100px; height: 100px; }
+.product .right .goodlist li span.goodimg img { max-width: 100px; max-height: 100px; }
+.product .right .multype input[type='checkbox'] { display: inline !important; }
+.product .right .multype .ui-ico-cfg { display: none !important; }
+
+.product .right .ui-page { position: absolute; bottom: 40px; left: 1px; width: 100%; right: 1px; }
+
+/* 添加商品*/
+.product .addgood { border-top: 1px solid #d8d8d8; padding: 15px 15px; background: none scroll 0 0 #ffffff; overflow: hidden; }
+.product .addgood .leftsidebar { float: left; }
+.product .addgood .leftsidebar input { width: 258px; height: 22px; border: 1px solid #d3d3d3; text-indent: 0.5em; }
+.product .addgood .leftsidebar input:hover { border: 1px solid #3b9ad0; }
+.product .addgood .leftsidebar .basicsbar { border: 1px solid #cfcfcf; background-color: #fafafa; width: 378px; overflow: hidden; box-shadow: 0px 0px 1px rgba(255,255,255,1) inset; }
+.product .addgood .leftsidebar .space { margin-top: 8px; }
+.product .addgood .leftsidebar .basicsbar h6.basic { width: 25px; padding: 35px 0; text-align: center; line-height: 150%; background-color: #0696da; color: #ffffff; float: left; }
+.product .addgood .leftsidebar .basicsbar h6.repertory { width: 25px; padding: 17px 0; text-align: center; line-height: 150%; background-color: #0696da; color: #ffffff; float: left; }
+.product .addgood .leftsidebar .basicsbar ul { width: 353px; float: right; padding: 5px 0; }
+.product .addgood .leftsidebar .basicsbar li { padding: 3px 0; line-height: 24px; }
+.product .addgood .leftsidebar .basicsbar li label { width: 75px; display: block; text-align: right; float: left; }
+
+.product .addgood .rightsidebar { float: right; padding: 10px 0 0 0; }
+.product .addgood .rightsidebar .imagePath { display: table-cell; vertical-align: middle; text-align: center; overflow: hidden; border: 3px solid #e9e9e9; width: 167px; height: 167px; }
+.product .addgood .rightsidebar .imagePath img { max-width: 167px; max-height: 167px; }
+.product .addgood .rightsidebar ul { height: 200px; padding-bottom: 10px; background: url(../images/addgood-imgshadow.png) no-repeat center bottom; overflow: hidden; }
+.product .addgood .rightsidebar li.icon { width: 28px; height: 28px; background: url(../images/addgood-icon.png) no-repeat; margin-left: 10px; }
+.product .addgood .rightsidebar li.upload { height: 20px; cursor: pointer; line-height: 20px; color: #ffffff; background: none scroll 0 0 rgba(0,192,245,0.4); text-align: center; position: relative; top: -24px; margin: 0px 3px; }
+
+.product .addgood .packinfobar { clear: both; padding: 15px 0 0 0; position: relative; }
+.product .addgood .packinfobar .leftside { float: left; border: 1px solid #cfcfcf; }
+.product .addgood .packinfobar .leftside ul li { padding: 9px 4px; line-height: 24px; }
+.product .addgood .packinfobar .leftside ul li.topside { background: none scroll #fafafa; border-bottom: 1px solid #cfcfcf; box-shadow: 0px 0px 1px rgba(255,255,255,1) inset; height: 26px; padding: 4px 0 0 0; }
+.product .addgood .packinfobar .leftside li label { width: 65px; display: block; text-align: right; float: left; }
+
+.product .addgood .packinfobar .rightside { float: left; overflow: hidden; }
+.product .addgood .packinfobar .rightside ul li { float: left; }
+.product .addgood .packinfobar .rightside ul li.leftarrow { padding: 100px 9px 0; }
+.product .addgood .packinfobar .rightside ul li.leftarrow button { width: 26px; height: 41px; border: 0; background: url(../images/home.png) no-repeat scroll 0 -345px transparent; }
+.product .addgood .packinfobar .rightside ul li.leftarrow button:hover { background-position: -52px -345px; }
+.product .addgood .packinfobar .rightside ul li.rightarrow { padding: 100px 9px 0; }
+.product .addgood .packinfobar .rightside ul li.rightarrow button { width: 26px; height: 41px; border: 0; background: url(../images/home.png) no-repeat scroll -26px -345px transparent; }
+.product .addgood .packinfobar .rightside ul li.rightarrow button:hover { background-position: -78px -345px; }
+.product .addgood .packinfobar .rightside ul li.maincontent { display: block; border: 1px solid #cfcfcf; min-width: 238px; height: 248px; line-height: 24px; }
+.product .addgood .packinfobar .rightside ul li.maincontent label { width: 65px; display: block; text-align: right; float: left; }
+.product .addgood .packinfobar .rightside ul li.maincontent dt { background: none scroll #fafafa; border-bottom: 1px solid #cfcfcf; box-shadow: 0px 0px 1px rgba(255,255,255,1) inset; padding: 3px 0; position: relative; }
+.product .addgood .packinfobar .rightside ul li.maincontent dt button { width: 16px; height: 16px; background: url(../images/home.png) no-repeat scroll -104px -345px transparent; border: 0; position: absolute; right: 2px; top: 2px; }
+.product .addgood .packinfobar .rightside ul li.maincontent dt button:hover { background-position: -120px -345px; }
+.product .addgood .packinfobar .rightside ul li.maincontent dd { padding: 9px 4px; }
+.product .addgood .packinfobar .rightside ul li.maincontent .suks dd button { width: 76px; height: 27px; background: url(../images/home.png) no-repeat scroll -147px -287px; border: 0; }
+.product .addgood .packinfobar .rightside ul li.maincontent .suks dd button:hover { background-position: -226px -287px; }
+.product .addgood .packinfobar .rightside ul li.maincontent .addsuk button { width: 140px; height: 35px; background: url(../images/home.png) no-repeat scroll 0 -386px transparent; border: 0; color: #303030; text-indent: 1em; margin: 100px 0 0 55px; }
+.product .addgood .packinfobar .rightside ul li.maincontent .addsuk button:hover { background-position: 0 -421px; color: #ffffff; }
+.product .addgood .packinfobar i { font-style: normal; }
+.product .addgood .packinfobar .historyPrice { position: absolute; top: -82px; left: 168px; width: 300px; z-index: 999; border: 1px solid #d3d3d3; box-shadow: 0px 0px 3px rgba(0,0,0,0.3); }
+.product .addgood .packinfobar .historyPrice table th { height: 25px; }
+.product .addgood .packinfobar .historyPrice table td { height: 25px; }
+.product .addgood .packinfobar .historyPrice .list { height: 150px; overflow: auto; }
+.product .addgood .packinfobar .historyPrice button { width: 16px; height: 16px; background: url(../images/home.png) no-repeat scroll -104px -345px transparent; border: 0; position: absolute; right: 2px; top: 2px; }
+.product .addgood .packinfobar .historyPrice button:hover { background-position: -120px -345px; }
+
+/* 添加商品-条形码页面*/
+.product .addbarcode { margin: 0px auto; }
+/*.product .addbarcode button{ border:0;}*/
+.product .addbarcode .sidebar { width: 60px; float: left; }
+.product .addbarcode .sidebar ul li { margin: 280px 0 0 15px; }
+.product .addbarcode .sidebar ul li button { width: 30px; height: 61px; background: url(../images/home.png) no-repeat scroll -151px -345px transparent; border: 0; }
+.product .addbarcode .sidebar ul li button:hover { background-position: -181px -345px; }
+
+.product .addbarcode .mainbar { height: 623px; background: none scroll 0 0 rgba(255,255,255,1); color: #303030; }
+.product .addbarcode .mainbar a { color: #2786e4; text-decoration: none; }
+.product .addbarcode .mainbar .maintop { height: 40px; position: relative; border-bottom: 1px solid #d3d3d3; background-color: #fafafa; }
+.product .addbarcode .mainbar .maintop ul li { position: absolute; }
+.product .addbarcode .mainbar .maintop ul li.title { left: 20px; }
+.product .addbarcode .mainbar .maintop ul li.title button { width: 139px; height: 31px; background: url(../images/home.png) no-repeat scroll -173px -461px transparent; border: 0; cursor: pointer; position: relative; top: 8px; }
+.product .addbarcode .mainbar .maintop ul li.title button.select { height: 32px; background-position: -313px -461px; top: 9px; color: #2495db; font-weight: bold; }
+
+.product .addbarcode .mainbar .maintop ul li.return { top: 6px; right: 10px; }
+/*.product .addbarcode .mainbar .maintop ul li.return button{ border:1px solid #bdbdbd; background:-webkit-linear-gradient(top,#f4f4f4,#fdfdfd); text-align:center; border-radius:3px; padding:5px 10px;}
+.product .addbarcode .mainbar .maintop ul li.return button:hover{ box-shadow: 0px 0px 3px rgba(115,224,253,0.75) inset; border:1px solid #009ccf;}*/
+
+.product .addbarcode .mainbar .mainlist { width: 735px; margin: 0px auto; margin-top: 100px; font: 14px/1.5 tahoma,arial,宋体; position: relative; }
+.product .addbarcode .mainbar .mainlist ul li { float: left; position: relative; }
+.product .addbarcode .mainbar .mainlist ul li.leftside { width: 270px; }
+.product .addbarcode .mainbar .mainlist ul li.leftside img { display: block; }
+.product .addbarcode .mainbar .mainlist ul li.leftside p { display: block; }
+.product .addbarcode .mainbar .mainlist ul li.leftside p.pic { width: 270px; height: 250px; background: url(../images/barcode-img.jpg) no-repeat; }
+.product .addbarcode .mainbar .mainlist ul li.leftside p.title { text-align: center; }
+.product .addbarcode .mainbar .mainlist ul li.leftside p.text { width: 420px; padding: 10px 25px; margin-top: 8px; background: none scroll 0 0 #fff4d4; border: 1px solid #dcdcdc; border-radius: 6px; position: absolute; left: 72px; }
+.product .addbarcode .mainbar .mainlist ul li.leftside p.text span { display: block; width: 9px; height: 6px; background: url(../images/barcode-arrow.png) no-repeat scroll 0 0 transparent; position: absolute; top: -6px; }
+.product .addbarcode .mainbar .mainlist ul li.leftside p.text a { text-decoration: underline; }
+.product .addbarcode .mainbar .mainlist ul li.rightside { width: 440px; padding-left: 20px; }
+.product .addbarcode .mainbar .mainlist ul li.rightside h6 { line-height: 300%; }
+.product .addbarcode .mainbar .mainlist ul li.rightside input { width: 248px; height: 38px; line-height: 38px; text-indent: 0.5em; border: 1px solid #d3d3d3; border-radius: 3px; }
+.product .addbarcode .mainbar .mainlist ul li.rightside input:hover { border: 1px solid #3b9ad0; }
+.product .addbarcode .mainbar .mainlist ul li.rightside button.remove { width: 30px; height: 40px; background: url(../images/home.png) no-repeat scroll -211px -345px; position: absolute; left: 240px; border: none; }
+.product .addbarcode .mainbar .mainlist ul li.rightside button.remove:hover { background-position: -241px -345px; }
+.product .addbarcode .mainbar .mainlist ul li.rightside button.sure { border: 1px solid #bdbdbd; background: -webkit-linear-gradient(top,#f4f4f4,#fdfdfd); text-align: center; border-radius: 3px; padding: 10px 15px; margin-left: 8px; font-weight: bold; font-size: 14px; }
+.product .addbarcode .mainbar .mainlist ul li.rightside button.sure:hover { box-shadow: 0px 0px 5px rgba(115,224,253,0.75) inset; border: 1px solid #009ccf; }
+.product .addbarcode .mainbar .mainlist ul li.rightside p.hint { width: 248px; background: none scroll 0 0 rgba(255,232,163,0.9); border: 1px solid #bdbdbd; border-radius: 0 0 3px 3px; text-align: center; position: absolute; margin-top: -1px; padding: 10px 0; font-size: 13px; }
+.product .addbarcode .mainbar .mainlist ul li.rightside p.hint button { border: 1px solid #bdbdbd; background: -webkit-linear-gradient(top,#f4f4f4,#fdfdfd); text-align: center; border-radius: 3px; padding: 5px 15px; margin-top: 6px; }
+.product .addbarcode .mainbar .mainlist ul li.rightside p.text { padding-top: 10px; }
+.product .addbarcode .mainbar .mainlist ul li.rightside p.hint button:hover { box-shadow: 0px 0px 3px rgba(115,224,253,0.75) inset; border: 1px solid #009ccf; }
+.product .addbarcode .mainbar .mainlist ul li.rightside p.handwork { text-align: center; padding-top: 10px; }
+.product .addbarcode .mainbar .mainlist ul li.rightside p.handwork button { width: 165px; height: 40px; background: url(../images/home.png) no-repeat scroll 0 -457px; font-size: 14px; border: 0; }
+.product .addbarcode .mainbar .mainlist ul li.rightside p.handwork button:hover { background-position: 0 -497px; color: #ffffff; }
+
+/*批量导入*/
+.product .importbar { background: none scroll 0 0 #ffffff; height: 428px; }
+.product .importbar .imporbar-top { width: 642px; margin: 0px auto; overflow: hidden; margin-top: 70px; }
+.product .importbar .imporbar-top ul li { float: left; font-size: 14px; text-align: center; }
+.product .importbar .imporbar-top ul li dt { width: 160px; font-size: 18px; color: #686868; text-align: center; line-height: 32px; font-family: 微软雅黑; }
+.product .importbar .imporbar-top ul li dd { width: 160px; height: 32px; font-size: 18px; color: #ffffff; text-align: center; line-height: 32px; background: url(../images/home.png) no-repeat scroll -339px -412px transparent; }
+.product .importbar .imporbar-top ul li.checkOn dt { color: #2495db; }
+.product .importbar .imporbar-top ul li.checkOn dd { background-position: -179px -412px; }
+
+.product .importbar .imporbar-main { padding-top: 30px; }
+.product .importbar .imporbar-main ul { width: 616px; height: 273px; background: none scroll 0 0 #fcfcfc; border-radius: 3px; border: 1px solid #c8c8c8; padding: 20px 10px 0; margin: 0px auto; position: relative; }
+.product .importbar .imporbar-main ul li { line-height: 150%; overflow: hidden; }
+.product .importbar .imporbar-main ul li i { position: relative; top: 2px; float: left; }
+.product .importbar .imporbar-main ul li p { float: left; }
+.product .importbar .imporbar-main ul li.imporExcel { text-align: center; margin-top: 50px; }
+.product .importbar .imporbar-main ul li.imporExcel button.ui-btn05 { width: 240px; height: 60px; padding: 0; position: relative; }
+.product .importbar .imporbar-main ul li.imporExcel button i { position: absolute; top: 12px; left: 30px; }
+.product .importbar .imporbar-main ul li.setUp { width: 280px; margin: 0px auto; line-height: 30px; margin-top: 60px; text-align: center; }
+.product .importbar .imporbar-main ul li.setUp select { border-radius: 3px; }
+.product .importbar .imporbar-main ul li.imporFoot { position: absolute; bottom: 0; width: 596px; border-top: 1px solid #c8c8c8; padding: 0px 10px; }
+.product .importbar .imporbar-main ul li.imporFoot button.ui-btn05 { width: 100px; height: 30px; padding: 0; }
+.product .importbar .imporbar-main ul li.imporFoot button.ui-btn14 { width: 100px; height: 30px; padding: 0; }
+
+.product .importbar .imporbar-main ul li.imporFoot span { display: block; padding: 10px 0; }
+.product .importbar .imporbar-main ul li.imporFoot span.previous { float: left; }
+.product .importbar .imporbar-main ul li.imporFoot span.next { float: right; line-height: 50px; }
+.product .importbar .imporbar-main ul li.imporPath { text-align: center; margin-top: 77px; }
+.product .importbar .imporbar-main ul li.imporPath button.ui-btn05 { width: 86px; height: 30px; padding: 0; }
+.product .importbar .imporbar-main ul li.imporPath input.ui-txt02 { width: 444px; height: 27px; padding: 0; }
+.product .importbar .imporbar-main ul li.imporLoad { text-align: center; margin-top: 75px; }
+.product .importbar .imporbar-main ul li.imporLoad dt { }
+.product .importbar .imporbar-main ul li.imporLoad dd { width: 455px; height: 12px; background: url(../images/home.png) no-repeat scroll -174px -507px transparent; margin-left: auto; margin-right: auto; padding: 4px 3px 3px 3px; }
+.product .importbar .imporbar-main ul li.imporLoad dd span { border-radius:3px; height: 10px; margin-top:1px; background: url(../images/1322181.gif) no-repeat; display: block; }
+.product .importbar .imporbar-main ul li.imporError { text-align: center; margin-top: 30px; }
+.product .importbar .imporbar-main ul li.imporError dt button.ui-btn05 { width: 86px; height: 30px; padding: 0; }
+.product .importbar .imporbar-main ul li.imporError dt input.ui-txt02 { width: 444px; height: 27px; padding: 0; }
+.product .importbar .imporbar-main ul li.imporError dd label.ui-txt02 { width: 434px; height: 76px; background-color: #fafafa; display: block; float: left; margin-left: 40px; text-align: left; line-height: 18px; letter-spacing: 1px; }
+.product .importbar .imporbar-main ul li.imporError dd label.ui-txt02 em { display: block; float: left; }
+.product .importbar .imporbar-main ul li.imporError dd button.ui-btn05 { width: 86px; height: 88px; position: relative; left: -17px; }
+.product .importbar .imporbar-main ul li.imporOver { text-align: center; margin-top: 70px; }
+.product .importbar .imporbar-main ul li.imporOver dt { position: relative; width: 250px; margin: 0px auto; font-size: 16px; }
+.product .importbar .imporbar-main ul li.imporOver dt i { float: none; left: -2px; }
+.product .importbar .imporbar-main ul li.imporOver dd { margin-top: 30px; }
+.product .importbar .imporbar-main ul li.imporOver dd button.ui-btn05 { width: 210px; height: 40px; position: relative; font-size: 16px; font-weight: bold; }
+
+
+
+
+
+
+
+/* 选择商品弹窗 */
+.productSelect { }
+.productSelect .left .ui-tree { height: 372px; overflow: auto; overflow-x: hidden; }
+.productSelect .right .goodlist li { margin-bottom: 1px; margin-right: 1px; }
+.productSelect .hleft { top: 14px; }
+.productSelect .keyword { left: 240px; }
+.productSelect .right .goodlist li input[type='checkbox'] { display: inline; }

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="fengxiao:war">
+    <output-path>$PROJECT_DIR$/fengxiao/target</output-path>
+    <root id="archive" name="fengxiao-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="fengxiao:war exploded" />
+    </root>
+  </artifact>
+</component>

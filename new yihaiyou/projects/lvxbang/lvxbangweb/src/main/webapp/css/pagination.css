@@ -1,0 +1,8 @@
+.pagelist-wrapper { text-align: center; font-size: 14px; font-family: simsun,sans-serif; } 
+.pagelist-wrapper .pagelist {display: inline-block; padding: 40px 0; } 
+.pagelist-wrapper .pagelist.userpagelist { padding: 10px 0; }
+.pagelist-wrapper .pagelist.comment-pagelist { padding-bottom: 10px; }
+.pagelist-wrapper .pagelist a { display: inline-block; margin-right: 5px; min-width: 20px; height: 28px; padding: 0 4px; line-height: 30px; color: #333; background-color: #fff; border: 1px solid #e6e6e6; text-align: center; } 
+.pagelist-wrapper .pagelist a.prev, .pagelist-wrapper .pagelist a.next { padding: 0 10px; } 
+.pagelist-wrapper .pagelist .tangram-pager-current { background: #34ad37; color: #fff; border: #fff; }
+.pagelist-center { text-align: center; }

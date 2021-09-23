@@ -1,0 +1,64 @@
+<div class="personal_myOrder_shenzhou" ng-controller="takeorder">
+    <div class="header">
+        <a ng-click="back()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        行程详情
+        <span class="save" ng-click="showsel()" ng-if="canCancel">取消</span>
+    </div>
+    <div class="finalpaying" ng-if="hasPrice">
+        <p ng-click="toFeeDetail()">最终支付<span>¥{{order.totalPrice}}</span></p>
+    </div>
+    <div class="midmess" ng-class="{'mt60':!hasPrice}">
+        <ul>
+            <li>订单号：{{order.orderNo}}</li>
+            <li class="clearfix"><span>{{order.startName}}</span><span>{{order.endName}}</span></li>
+            <li class="clearfix">
+                <div class="first"><span class="bold">{{order.duration}}</span>分钟</div>
+                <div><span class="bold">{{order.distance / 1000}}</span>公里</div>
+            </li>
+        </ul>
+    </div>
+    <div class="drivermess clearfix" ng-if="order.driverName != ''">
+        <div class="left">
+            <div class="face"><img src="/yihaiyou/image/ucar_d.jpg"></div>
+        </div>
+        <div class="right">
+            <ul>
+                <li class="drivename">{{order.driverName}}</li>
+                <li class="carid">{{order.vehicleNo}} {{order.vehicleModel}}</li>
+                <li class="dstar"><span>{{order.driverScore}}</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="midmess" style="text-align: center;font-size: 15px;color: red;line-height: 50px;" ng-if="order.status == 'invalid'">
+        周围无空车，订单无效。
+    </div>
+    <div class="commend" ng-if="order.status == 'paid' || order.status == 'completed'">
+        <h3>您对Ta的印象</h3>
+
+        <div class="starnum {{star}}">
+            <ul>
+                <li ng-repeat="li in lis" ng-click="comstar(li)"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="cansoledate" ng-if="order.status == 'paid'" ng-click="submitComment()">提交评价</div>
+    <div class="forcans" ng-show="carUse" ng-if="canCancel">
+        <h3>您确定要取消用车吗？</h3>
+        <!--<p>取消原因：<input type="text" ng-model="cancelReason"/></p>-->
+        <div class="consmid clearfix">
+            <div class="cansoleleft">取消原因：</div>
+            <div class="cansoleright">
+                <ul>
+                    <li ng-repeat="reason in cancelReasonList"
+                        ng-class="{true: reason.id == selectedReason.id,false: reason.id != selectedReason.id}"
+                        ng-click="selectCancel(reason)">{{reason.value}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p class="consolebt clearfix">
+            <button class="no" ng-click="thisconsole()">否</button>
+            <button class="yes" ng-click="cancel()">是</button>
+        </p>
+    </div>
+</div>

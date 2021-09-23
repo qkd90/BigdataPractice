@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenicTicket.qunar.mapper.QunarContantMapper">
+	<insert id="insert" parameterType="QunarContant" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_ticket_qunar_contant
+			(
+				id,
+				order_qunar_id,
+				mobile,
+				name,
+				pinyin,
+				email,
+				postal_info,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{orderQunarId},
+				#{mobile},
+				#{name},
+				#{pinyin},
+				#{email},
+				#{postalInfo},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="QunarContant">
+		update tb_ticket_qunar_contant
+		<set>
+			<if test="id != null"> id = #{id},</if>
+			<if test="orderQunarId != null"> order_qunar_id = #{orderQunarId},</if>
+			<if test="mobile != null"> mobile = #{mobile},</if>
+			<if test="name != null"> name = #{name},</if>
+			<if test="pinyin != null"> pinyin = #{pinyin},</if>
+			<if test="email != null"> email = #{email},</if>
+			<if test="postalInfo != null"> postal_info = #{postalInfo},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="QunarContant">
+		delete from
+			tb_ticket_qunar_contant
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="QunarContant">
+		select
+			*
+		from
+			tb_ticket_qunar_contant
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="QunarContant">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">$ {item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_ticket_qunar_contant
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="orderQunarId != null and '' != orderQunarId"> and order_qunar_id = #{orderQunarId} </if>
+			<if test="mobile != null and '' != mobile"> and mobile = #{mobile} </if>
+			<if test="name != null and '' != name"> and name = #{name} </if>
+			<if test="pinyin != null and '' != pinyin"> and pinyin = #{pinyin} </if>
+			<if test="email != null and '' != email"> and email = #{email} </if>
+			<if test="postalInfo != null and '' != postalInfo"> and postal_info = #{postalInfo} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; #{ta} </if>
+        	<if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; #{tb} </if>
+			<if test="ids != null">
+				and id in
+				<if test="ids.size() == 0">(-1)</if>
+				<if test="ids.size() > 0">
+				<foreach item="item" index="index" collection="ids" open="("
+					separator="," close=")">
+					#{item}
+				</foreach>
+				</if>
+			</if>
+		</where>
+	</sql>
+</mapper>

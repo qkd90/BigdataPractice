@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.bargain.mapper.BargainPlanTripMapper">
+	<insert id="insert" parameterType="BargainPlanTrip" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_bargain_plan_trip
+			(
+				id,
+				bargain_plan_id,
+				bargain_plan_day_id,
+				day,
+				index,
+				type,
+				name,
+				time,
+				description,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{bargainPlanId},
+				#{bargainPlanDayId},
+				#{day},
+				#{index},
+				#{type},
+				#{name},
+				#{time},
+				#{description},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="BargainPlanTrip">
+		update tb_bargain_plan_trip
+		<set>
+			<if test="id != null"> id = #{id},</if>
+			<if test="bargainPlanId != null"> bargain_plan_id = #{bargainPlanId},</if>
+			<if test="bargainPlanDayId != null"> bargain_plan_day_id = #{bargainPlanDayId},</if>
+			<if test="day != null"> day = #{day},</if>
+			<if test="index != null"> index = #{index},</if>
+			<if test="type != null"> type = #{type},</if>
+			<if test="name != null"> name = #{name},</if>
+			<if test="time != null"> time = #{time},</if>
+			<if test="description != null"> description = #{description},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="BargainPlanTrip">
+		delete from
+			tb_bargain_plan_trip
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="BargainPlanTrip">
+		select
+			*
+		from
+			tb_bargain_plan_trip
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="BargainPlanTrip">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">$ {item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_bargain_plan_trip
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="bargainPlanId != null and '' != bargainPlanId"> and bargain_plan_id = #{bargainPlanId} </if>
+			<if test="bargainPlanDayId != null and '' != bargainPlanDayId"> and bargain_plan_day_id = #{bargainPlanDayId} </if>
+			<if test="day != null and '' != day"> and day = #{day} </if>
+			<if test="index != null and '' != index"> and index = #{index} </if>
+			<if test="type != null and '' != type"> and type = #{type} </if>
+			<if test="name != null and '' != name"> and name = #{name} </if>
+			<if test="time != null and '' != time"> and time = #{time} </if>
+			<if test="description != null and '' != description"> and description = #{description} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt;#{ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt;#{tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				# {item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+	</sql>
+</mapper>

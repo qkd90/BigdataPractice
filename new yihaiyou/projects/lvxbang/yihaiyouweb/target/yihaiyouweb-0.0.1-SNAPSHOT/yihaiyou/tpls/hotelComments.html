@@ -1,0 +1,46 @@
+<div class="sailling_commend" style="padding-bottom: 0px;" ng-controller="hotelCommentsCtrl">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        评论
+        <span class="save pic1"></span>
+        <span class="save pic2" ui-sref="personalIndex"></span>
+    </div>
+    <div class="levalstar clearfix" style="background: white;">
+        <div class="levalscore">
+            <div class="scorebox">
+                <ul>
+                    <li>{{resultScore}}</li>
+                    <li><p>{{totalCount}}</p><p ng-class="pstar"></p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="levalline">
+            <ul class="clearfix" ng-repeat="star in initStar">
+                <li>{{star.starnum}}星</li>
+                <li><span style="width:{{star.width}}"></span></li>
+                <li>{{star.star}}</li>
+            </ul>
+
+        </div>
+    </div>
+    <div id="commentList" style="background: white;margin-bottom: 45px;" infinite-scroll="listComment()"
+         infinite-scroll-disabled='loading' infinite-scroll-distance='1'>
+        <div class="onecommend" ng-repeat="com in commentList">
+            <ul>
+                <li class="username">{{com.nickName}}</li>
+                <li class="comstar" ng-class="com.star">{{com.createTimeStr}}</li>
+                <li class="com">{{com.content}}</li>
+                <li class="compic clearfix" ng-show="com.commentPhotos != null && com.commentPhotos.length > 0"><span ng-repeat="photo in com.commentPhotos"><img ng-src="{{photo.imagePath | getImgUrl}}"></span></li>
+                <li class="sailname">{{com.targetName}}</li>
+            </ul>
+            <div class="recommend" ng-repeat="replyComment in com.comments">
+                <h3>商家回复：</h3>
+                <p>{{replyComment.content}}</p>
+            </div>
+        </div>
+        <div class="watchall" ng-show="nomore">
+            暂无更多评论
+            <!--查看全部{{totalCount}}条评论-->
+        </div>
+    </div>
+</div>

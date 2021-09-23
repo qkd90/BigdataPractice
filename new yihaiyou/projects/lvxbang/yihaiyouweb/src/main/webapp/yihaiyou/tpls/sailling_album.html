@@ -1,0 +1,35 @@
+<style type="text/css">
+    .slider {
+        height: 50%;
+    }
+    .slider-slide {
+        text-align: center;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300;
+        height: 90%;
+    }
+</style>
+<!--<div class="sailling_album" ng-controller="sailling_album" ng-click="outAlbum()" screenheight>-->
+<div class="sailling_album" ng-controller="sailling_album" ng-click="outAlbum()">
+    <div class="pagenum"><span id="runIndex" total-count="{{initImageCount}}"></span>/{{initImageCount}}</div>
+   <!-- <ion-slide-box active-slide="myActiveSlide" does-continue="true" on-slide-changed="slideHasChanged(index)" centerbox>
+        <ion-slide ng-repeat="item in imageList">
+            <img ng-src="http://7u2inn.com2.z0.glb.qiniucdn.com/{{item.path}}">
+        </ion-slide>
+    </ion-slide-box>-->
+    <div class="swiper-container" centerbox2 id="image-top-slider-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" ng-repeat="image in imageList" is-over="finish.over"><img src="{{image.path | getImgUrl}}"></div>
+        </div>
+        <!--<div class="swipe-pagenavi swiper-pagination" id="image-top-slide-page"></div>-->
+    </div>
+
+</div>
+<!--<script src="yihaiyou/js/swiper-3.3.1.min.js"></script>-->
+<!--<script>-->
+<!--var mySwiper = new Swiper ('.swiper-container', {-->
+<!--direction: 'horizontal',-->
+<!--loop: false,-->
+<!--autoplay:5000,-->
+<!--pagination: '.swiper-pagination'-->
+<!--})-->
+<!--</script>-->

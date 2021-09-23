@@ -1,0 +1,59 @@
+
+     <div class="foodList" ng-controller="foodCtrl">
+        <div class="header">
+            <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+            美食
+            <span class="save picSearch"></span>
+        </div>
+         <div class="blank"></div>
+        <div class="ad_pic">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><img src="/yihaiyou/image/food/banner-food01.png"></li>
+                    <li class="swiper-slide"><img src="/yihaiyou/image/food/banner-food02.png"></li>
+                    <li class="swiper-slide"><img src="/yihaiyou/image/food/banner-food03.png"></li>
+                </ul>
+                <div class="swipe-pagenavi swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="food_list">
+            <ul class="foodUl" infinite-scroll="getFootList()" infinite-scroll-distance="1" infinite-scroll-disabled='loading'>
+                <li class="foodLi" ng-repeat="food in foodList">
+                    <ul>
+                        <li class="name">{{food.name}}</li>
+                        <li class="picture clearfix">
+                            <div class="pic">
+                                <img bn-lazy-src="{{food.cover}}">
+                            </div>
+                            <div class="infoma">
+                                <div class="introdu" ng-click="moreInformation(food)" ng-bind-html="food.introduction | writingLimit"></div>
+                                <div class="comment">
+                                    <span>{{food.viewNum}}</span>
+                                    <span>{{food.collectNum}}</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="message clearfix">
+                            <div class="mesbox clearfix"><span>菜系</span><span>{{food.cuisine}}</span></div>
+                            <div class="mesbox clearfix"><span>均价</span><span class="perprice">¥{{food.price}}</span></div>
+                            <div class="mesbox clearfix"><span>口感</span><span>{{food.taste}}</span></div>
+                        </li>
+                    </ul>
+                    <div class="moreInformation" ng-if="food.showMore">
+                        <h3>{{food.name}} <i ng-click="clearShadow()"><img src="/yihaiyou/image/food/close.png"></i></h3>
+                        <div class="infobody" ng-bind-html="food.introduction | trustHtml">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="shadowbox" ng-show="shadowbox" ng-click="clearShadow()"></div>
+     </div>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    loop: false,
+    autoplay:5000,
+    pagination: '.swiper-pagination'
+    })
+</script>

@@ -1,0 +1,93 @@
+<div class="ljOrder orderpay" ng-controller="lvjiPayController">
+    <div class="ljOrder-header">
+        <i class="back" ui-sref="lvjiOrder"></i>
+        确认订单
+    </div>
+    <div class="ljPay">
+        <div class="ljPay-wrap">
+            <h4>订单信息</h4>
+            <div class="label-group clearfix">
+                <label class="pull-left">订单号：</label>
+                <span class="pull-left">{{order.orderNo}}</span>
+            </div>
+            <div class="label-group clearfix">
+                <label class="pull-left">产品名称：</label>
+                <span class="pull-left">{{order.recName}}-手机语音导航</span>
+            </div>
+            <div class="label-group clearfix">
+                <label class="pull-left">下单时间：</label>
+                <span class="pull-left">{{order.startDate}}</span>
+            </div>
+            <div class="label-group clearfix">
+                <label class="pull-left">旅客：</label>
+                <span class="pull-left">{{order.name}}</span>
+            </div>
+            <div class="label-group clearfix">
+                <label class="pull-left">订单状态：</label>
+                <span class="pull-left">{{order.status}}</span>
+            </div>
+            <div class="label-group clearfix">
+                <label class="pull-left">订单价格：</label>
+                <span class="orderDetail-price pull-left">￥{{order.price}}</span>
+            </div>
+        </div>
+        <div class="ljPay-tips">
+            你的驴迹订单已经成功订购，请在{{minute}}分{{second}}秒网上支付，否则系统自动取消本次交易
+        </div>
+        <div class="payWay">
+            <div class="payWay-group clearfix">
+                <div class="payWay-wallet pull-left" ng-click="get(1)">
+                    我的钱包余额：<sub>￥</sub><span class="money">{{balance}}</span><a class="charge"
+                                                                                ui-sref="personalRecharge">充值</a><span
+                        class="checkbox" ng-class="{checkboxTrue: selectedType == 1}"></span>
+                </div>
+                <i ng-class="{true:'sure-icon sure pull-right',false:'sure-icon pull-right'}[data.walletStatus]"
+                   ng-click="method.payWayChoose(1)"></i>
+            </div>
+            <div class="payWay-group clearfix">
+                <div class="payWay-wechart pull-left" ng-click="get(2)">
+                    <i class="icon-wechart"></i>微信支付<span class="checkbox"
+                                                          ng-class="{checkboxTrue: selectedType == 2}"></span>
+                </div>
+                <i ng-class="{true:'sure-icon sure pull-right',false:'sure-icon pull-right'}[data.weChartStatus]"
+                   ng-click="method.payWayChoose(2)"></i>
+            </div>
+        </div>
+        <div class="pay-operation clearfix">
+            <!--<a class="cancel-order pull-left" ng-click="cancelLvji()">取消订单</a>-->
+            <!--<a ng-click="method.switchPopStatus()" class="sure-order pull-right" ng-click="confirmPay()">确认支付</a>-->
+            <a class="cancel-order pull-left" ng-click="cancelLvji()">取消订单</a>
+            <a ng-click="method.payPopStatus()" class="sure-order pull-right">确认支付</a>
+        </div>
+    </div>
+
+    <div class="pay_shadow" ng-show="data.isBalancePay"></div>
+    <div class="passwordBox" centerbox ng-show="data.isBalancePay">
+        <div class="pas_close clearfix"><span ng-click="method.payPopStatus()"></span></div>
+        <h3>请输入密码</h3>
+        <input type="password" class="password" ng-model="payPassword">
+        <div class="p_bottom">
+            <span class="no" ng-click="method.payPopStatus()" ng-click="balanceCancel()">取消</span>
+            <span class="yes" ng-click="payBalance()">确定</span>
+        </div>
+    </div>
+
+    <div class="ljOrder-pop" ng-if="data.popStatus">
+        <div class="ljOrder-pop-wrap">
+            <div class="ljOrder-pop-header">
+                提示
+            </div>
+            <div class="ljOrder-pop-body">
+                请前往一海游公众号首页点击“电子导览”。选择相应景区输入您所收到的短信授权码进行使用。
+            </div>
+            <div class="ljOrder-popOk" ng-click="method.switchPopStatus()">
+                我知道了
+            </div>
+        </div>
+    </div>
+    <style>
+        .bootbox .modal-footer .btn.confirmBoxBtn {
+            width: 50%;
+        }
+    </style>
+</div>

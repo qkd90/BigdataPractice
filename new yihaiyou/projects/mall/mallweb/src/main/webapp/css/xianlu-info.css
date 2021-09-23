@@ -1,0 +1,75 @@
+/*!
+ * 线路详情 v0.1
+ * Author Jeffrey.
+ * Copyright 2011-2015.
+ */
+
+/*线路详情页*/
+.xl-pic{margin-bottom:15px;}
+.xl-pic span.label-title{background:url(../images/label-bg.png) no-repeat; width:76px; height:49px; line-height:40px; text-align:center; color:#fff; font-size:16px; display:block; position:absolute; margin-left:20px;}
+#info{border:1px solid #ebebeb; min-height:830px;}
+#info h1{background:#e8f4fb; font-size:24px; color:#1c96d9; margin:0; padding:30px 0 30px 30px;}
+.info-content{padding:32px 50px;}
+.info-content li{margin:10px auto; font-size:16px;}
+.info-content li input{display:inline-block; height:25px;}
+.info-content li input#min,.info-content li input#min1{background:#f0f0f0; border:none;}
+.info-content li input#add,.info-content li input#add1{background:#f0f0f0; border:none;}
+.info-content li input#num,.info-content li input#num1{background:#fff; border:1px solid #f0f0f0; width:40px; text-align:center;}
+.info-content li input#datepicker1{border:2px solid #ebebeb; width:130px; height:30px;}
+
+.info-price-list{margin:20px auto;}
+.info-price-list dl{background:url(../images/info-price-list-bg.jpg) left top repeat-x; border-right:5px solid #fff; font-size:16px;}
+.info-price-list dt,
+.info-price-list dd{height:44px; line-height:44px; font-weight:normal;}
+.buy-bt input{border:none; width:167px; height:50px; margin:10px;}
+.buy-bt input.buy-now{background:url(../images/order-now.jpg) no-repeat;}
+.buy-bt input.addtocart{background:url(../images/addtocart.jpg) no-repeat;}
+.buy-bt input.update-now{background:url(../images/update-now.jpg) no-repeat;}
+.buy-bt input.fenxiao{background:url(../images/fenxiao.jpg) no-repeat;}
+
+.info-lx{padding:0 15px; margin-top:20px;}
+.info-lx dt{font-weight:normal; width:80px;}
+.info-lx dd{width:460px;}
+.info-lx dd a{border:1px solid #ddd; margin:0 5px 5px 0; padding:5px; display:inline-block;}
+.info-lx dd a:hover,.info-lx dd a.curr{border:1px solid #f00;}
+.info-lx dd a:focus {outline: none;text-decoration: none;color: #555}
+
+/*详情内容*/
+#detail{margin:10px auto;border:1px solid #ebebeb;}
+#detail h5{background:#e8f4fb; margin:0;}
+#detail h5 a{height:55px; line-height:55px; color:#1d97d9; padding:0 30px; display:inline-block;}
+#detail h5 a:hover,#detail h5 a.curr{color:#fff; background:#1d97d9;}
+#detail .detail-content{padding:50px;}
+.detail-content h4{background:#efefef; font-size:16px; color:#fff; height:43px;}
+.detail-content h4 span.subtitle{background:#ffa127 url(../images/subtitle-right.jpg) right center no-repeat; line-height:43px; display:inline-block; padding-left:10px; padding-right:35px;}
+.detail-content h4 span.subtitle span{background:url(../images/subtitle-ico.jpg) left center no-repeat; padding-left:20px;}
+.subcontent{padding:10px 0; line-height:180%;}
+
+/*行程安排*/
+#xcap h3{font-size:16px; height:43px; line-height:43px;}
+#xcap h3 span{display:inline-block;}
+#xcap h3 span.one{background:#1d97d9 url(../images/subcontent-title.jpg) right center no-repeat; color:#fff; padding:0 33px 0 20px;}
+#xcap h3 span.xc-title{color:#ffa127; padding-left:20px;}
+#xcap .xcbh{background:#e8f4fb; font-size:16px; padding:15px; margin-left:120px;}
+#xcap .xcbh p span{display:inline-block;}
+#xcap .xcbh p span.ico{width:150px; color:#1d97d9; padding-left:35px;}
+#xcap .xcbh p.yc span.ico{background:url(../images/ico1.jpg) left center no-repeat;}
+#xcap .xcbh p.jt span.ico{background:url(../images/ico2.jpg) left center no-repeat;}
+#xcap .xcbh p.jd span.ico{background:url(../images/ico3.jpg) left center no-repeat;}
+
+#feiyong h6{font-size:16px; color:#1d97d9;}
+#feiyong h6 span{background:#e8f4fb; border:1px solid #1d97d9; padding:12px 20px;}
+
+/*点评*/
+.dianpin dl{border-bottom:1px solid #ededed; color:#666; padding-bottom:15px; margin-bottom:15px;}
+.dianpin dt{font-weight:normal; padding-bottom:15px;}
+.dianpin dt span.content{background:url(../images/ico4.jpg) left top no-repeat; padding-left:30px; line-height:23px; display:inline-block;}
+
+/*日历*/
+#calendar .fc-toolbar{background:#ebebeb; border:1px solid #ebebeb; padding:10px; margin-bottom:0;}
+#calendar h2{font-size:18px; color:#666;}
+#calendar .fc-day-number{text-align:left;}
+#calendar .fc-event{font-size:14px; color:#ff6a23!important; border:none;}
+#calendar .fc-row td{border-color: #ebebeb;}
+
+.commission-hide {display: none}

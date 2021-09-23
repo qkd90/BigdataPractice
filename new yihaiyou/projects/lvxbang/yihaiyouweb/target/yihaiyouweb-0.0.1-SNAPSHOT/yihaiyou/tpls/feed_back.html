@@ -1,0 +1,44 @@
+<div class="ticket_main" ng-controller="feedBackCtrl">
+    <div class="header">
+        <span>建议意见</span>
+    </div>
+    <div class="dingdanbody">
+        <div class="tab">
+            <!--<div class="tab-title">
+                <h3>填写意见</h3>
+            </div>-->
+            <div class="tab-content section" style="background:#fff">
+                <div class="row" style="display: block; padding: 5px; margin: 0px;">
+                    <!--<div class="span-head">：</div>-->
+                    <div class="span" style="display: block;">
+                        <textarea style="width: 96%; min-height: 150px;" ng-model="content" placeholder="请填写意见内容"></textarea>
+                    </div>
+                </div>
+                <!--<hr>
+                <div class="row">
+                    <div class="span-head">姓名：</div>
+                    <div class="span">
+                        <input type="text" class="input-middle verify" ng-model="contact.name"
+                               placeholder="请输入姓名">
+                    </div>
+                </div>-->
+                <hr>
+                <div class="row">
+                    <div class="span-head">电话：</div>
+                    <div class="span">
+                        <input type="tel" class="input-middle verify" ng-model="contact"
+                               placeholder="请输入联系电话">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <ul>
+            <li class="paybutton" style="width: 100%;" ng-click="submitFeedBack()">提交</li>
+        </ul>
+    </div>
+    <!--<div class="shadowbox" ng-show="shadow" ng-click="hideAll()"></div>-->
+</div>
+

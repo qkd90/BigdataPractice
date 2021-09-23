@@ -1,0 +1,15 @@
+@import 'base.css';
+@import 'media-query.css';
+@import 'g.css';
+@import 'ui.css';
+@import 'main.css';
+form{margin:0;padding:0;}
+.body {background-image: url(/images/xmbd_09.gif);background-size:100% 150%;}
+input {font-family: "宋体";font-size: 12px;line-height: normal;text-decoration: none;background-color: #FFFFFF;border-top: none;border-right: none;border-bottom: none;border-left: none;}
+A:link,A:visited,A:hover{color:#ff00ff; font-size:12px; text-decoration: none;}
+.reginput{border:0px;height:18px;line-height:18px;outline: 0px none;background:url(/images/loginInput.png) no-repeat;}
+#udpLoginMain{width:1024px;height:700px;background:url(/images/deng.jpg) no-repeat 0px 190px;margin:0 auto;position:relative;}
+#udpLoginBody{width:325px;height:127px;position:absolute;top:350px;left:370px;}
+#udpLoginBody td.logintit{height:30px;font-size:14px;color:#666666;	width:75px;}
+#validatetd{height:20px;line-height:20px;}
+.ui-txt03{font-size: 14px !important;height: 24px;padding-left: 30px;width: 80px;}

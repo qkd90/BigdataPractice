@@ -1,0 +1,135 @@
+<div ng-controller="scenicOrderKnowCtrl" class="scenicOrderKnow">
+    <header class="produ_lis_header">
+        <div class="pro_header_main">
+            <span class="gty_left">
+                <i class="icon icon-title-back" ng-click="back()"></i>
+            </span>
+            <span class="gty_center">
+                &lt;{{scenicName}}&gt;预订须知
+            </span>
+            <span class="gty_right"></span>
+        </div>
+    </header>
+    <div class="wrapper" id="wrapper">
+        <div id="index">
+            <!-- 预订须知 -->
+            <div class="main_cont">
+                <!-- Notice BEGIN -->
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        景区开放时间
+                    </div>
+                    <div class="notice-content">
+                        <p>{{openTime}}</p>
+                    </div>
+                </div>
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        景区联系方式
+                    </div>
+                    <div class="notice-content">
+                        <p>联系电话：{{telephone}}</p>
+                    </div>
+                </div>
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        提前预订时间
+                    </div>
+                    <div class="notice-content">
+                        <p>常规门票：提前1天23点前</p>
+                        <p>夜场门票：当天15点前</p>
+                        <p>【在线支付票种提交订单后请及时付款，过时未付订单将被取消】</p></div>
+                </div>
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        入园凭证
+                    </div>
+                    <div class="notice-content">
+                        <p>凭有效票据或者验证码和本人有效证件（身份证、学生证）验证入园。</p>
+                        <p>请在当天开放时间内入园</p></div>
+                </div>
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        特殊人群政策
+                    </div>
+                    <div class="notice-content">
+                        <p>1）身高低于1.2米(不含1.2米)的儿童免票。</p>
+                        <p>2）身高在1.2米—1.5米（不含1.5米）的儿童、65—69周岁的成人（凭本人相关证件）可享受优惠票。</p>
+                        <p>3）年龄在70周岁以上(含70周岁)的老人凭本人有效证件免费入园。 </p>
+                        <p>具体请以景区告示为准</p>
+                    </div>
+                </div>
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        费用说明
+                    </div>
+                    <div class="notice-content">
+                        <p>以景区公示为主。</p>
+                        <p></p>
+                        <p>请点击门票，以门票的“其他说明”为准</p></div>
+                </div>
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        预订提醒
+                    </div>
+                    <div class="notice-content">
+                        <p>本产品须提前至少1天23:00前预订并完成支付</p>
+                        <p></p>
+                        <p>请点击门票，以门票下方的产品说明为准</p></div>
+                </div>
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        温馨提醒
+                    </div>
+                    <div class="notice-content">
+                        <p>门票当天有效，出园需入园，需再次购票。请务必携带本人身份证入园！</p>
+                        <p>请点击门票，以门票下方的产品说明为准</p></div>
+                </div>
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        发票说明
+                    </div>
+                    <div class="notice-content">
+                        <p>在线支付票种，由旅行帮提供发票，发票明细为“旅游费”或“代订门票费”</p>
+                        <p></p>
+                        <p>如需发票，请致电旅行帮客服索取</p></div>
+                </div>
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        退改规则
+                    </div>
+                    <div class="notice-content">
+                        <p>如需退该请致电旅行帮客服，未使用及兑换日期结束后15天内，可以退款。过期则作废。一经核销验证，不退不改。 </p>
+                        <p>
+                            具体票种请点击门票‘预定’，以预定页面产品说明中的退改说明为准。【不退不改的产品，恕无法退还票款，请慎重预定。携程产品不支持部分退改，退改审核周期3到5个工作日请您耐心等待】如有疑问请咨询旅行帮客服！</p>
+                        <p>请点击门票，以门票下方的产品说明为准</p>
+                    </div>
+                </div>
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        特殊信息
+                    </div>
+                    <div class="notice-content">
+                        <p></p>
+
+                        <p>请点击门票，以门票下方的产品说明为准</p>
+                    </div>
+                </div>
+                <!-- Notice END -->
+                <div class="scroll_toTop" id="scrolltoTop"><p>回到</p><p>顶部</p></div>
+            </div>
+        </div>
+        <div ng-show="loading"><div class="yuloading"><span>加载数据中...</span></div></div>
+    </div>
+</div>

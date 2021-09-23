@@ -1,0 +1,642 @@
+.total {
+	padding-top: 1px;
+	background:#f3f8fe;
+	padding-bottom: 1px;
+	font-family: '微软雅黑';
+	border-top: 2px solid #3996fa;
+}
+
+.order_progress {
+	width: 1180px;
+	height: 200px;
+	margin: 30px auto 0 auto;
+}
+
+.order_progress .po_both {
+	float: left;
+	background: #fff;
+	border:1px solid #3996fa;
+}
+
+.order_progress .progress_left {
+	width: 810px;
+	height: 140px;
+	padding: 30px 40px;
+}
+
+.order_progress .progress_right {
+	width: 186px;
+	height: 200px;
+	padding: 0 40px;
+	margin-left: 18px;
+}
+
+.order_progress .progress_pic {
+	width: 100%;
+	height: 50px;
+	background: url(/image/progress01.png) no-repeat top center;
+}
+
+.order_progress .progress_pic2 {
+	background: url(/image/progress02.png) no-repeat top center;
+}
+
+.order_progress .progress_text {
+	text-align: center;
+	font-size: 18px;
+	color: #ff8800;
+}
+.order_progress .progress_text .p_tip {
+	font-size: 12px;
+	color: #666;
+}
+
+.order_progress .progress_pic span {
+	width: 265px;
+	height: 20px;
+	color: #3996fa;
+	font-size: 13px;
+	font-weight: 600;
+	margin-top: 30px;
+	line-height: 20px;
+	display: inline-block;
+}
+
+.progress_pic span.submited {
+	text-align: left;
+	text-indent: 22px;
+}
+
+.progress_pic span.paying {
+	text-align: left;
+	text-indent: 134px;
+}
+
+.progress_pic span.over {
+	text-align: left;
+	text-indent: 207px;
+}
+
+.progress_pic span.pro_active {
+	color: #ff8800;
+}
+
+.progress_left .order_mess {
+	font-size: 13px;
+	margin-top: 30px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.progress_left .messcontain {
+	font-size: 14px;
+	margin-top: 10px;
+	border-bottom: none;
+}
+
+.order_mess span {
+	width: 25%;
+	height: 30px;
+    line-height: 30px;
+	float: left;
+	color: #404040;
+	text-align: center;
+	display: inline-block;
+}
+
+.order_mess span.mess_pri {
+	/*text-indent: 140px;*/
+}
+
+.messcontain span.mess_pri {
+	color: #ff8800;
+}
+
+.messcontain span.mess_pri label {
+	font-size: 16px;
+}
+
+.waitpay {
+	/*text-indent: 95px!important;*/
+}
+
+.progress_right .pay_wait {
+	
+}
+
+.progress_right .pay_over {
+	display: none;
+}
+
+.order_mess span.arial {
+	font-family: 'Arial';
+}
+
+.progress_right p {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.progress_right p span {
+	display: inline-block;
+}
+
+.progress_right p span.payinline {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.progress_right p span.paycount {
+	font-size: 20px;
+	color: #ff8800;
+}
+
+.progress_right .overlogo {
+	width: 100%;
+	height: 100px;
+	border-bottom: 1px solid #3996fa;
+	background: url(/image/payover.png) no-repeat center center;
+}
+
+.progress_right .commitlogo {
+	background: url(/image/paycommit.png) no-repeat center center;
+}
+
+.pay_commit .commitBtn {
+	width: 160px;
+	height: 40px;
+	font-size: 17px;
+	color: #ff8800;
+	cursor: pointer;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 5px;
+	margin: 30px auto;
+	border: 2px solid #ff8800;
+}
+
+.pay_over p {
+	margin-top: 25px;
+	text-align: center;
+}
+
+.pay_over p .paytit {
+	font-size: 15px;
+}
+
+.progress_right p span.paycount label {
+	font-size: 28px;
+}
+
+.progress_right .paybtn {
+	color: #fff;
+	width: 166px;
+	height: 40px;
+	cursor: pointer;
+	font-size: 20px;
+	line-height: 40px;
+	margin: 22px auto;
+	text-align: center;
+	border-radius: 5px;
+	background: #ff8800;
+}
+
+.orderMessage {
+	width: 1180px;
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+.Messagelist {
+	width: 890px;
+	border:1px solid #dbdbdb;
+	background: #fff;
+	border-top:3px solid #dbdbdb;
+	margin-top: 30px;
+}
+.Messagelist .lj-order-title{
+	padding-left: 20px;
+	padding-top: 19px;
+	padding-bottom: 16px;
+	font-size: 20px;
+	line-height: 20px;
+	color: #3996fa;
+}
+.Messagelist .lj-order-title i{
+	display: inline-block;
+	width: 4px;
+	height: 20px;
+	background: #3996fa;
+	border-radius: 2px;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+.Messagelist .Messagecontain{
+	width: 810px;
+	margin: 0 auto;
+	border-top:1px dashed #dbdbdb;
+	padding-top: 17px;
+	padding-bottom: 15px;
+}
+.Messagelist .Messagecontain .order-group-wrap{
+	padding-left: 12px;
+}
+.Messagelist .Messagecontain .order-group-wrap .order-group{
+	width: 376px;
+	float: left;
+}
+.Messagelist .Messagecontain .order-group-wrap .order-group label{
+	font-size: 12px;
+	line-height: 30px;
+	color: #666;
+	float: left;
+}
+.Messagelist .Messagecontain .order-group-wrap .order-group span{
+	font-size: 12px;
+	line-height: 30px;
+	color: #333;
+	float: left;
+}
+.Messagelist .Messagecontain .order-group-wrap .order-group .orange{
+	color: #cc9b4b;
+}
+
+
+
+
+
+.listtitle i {
+	width: 3px;
+	float: left;
+	height: 18px;
+	color: #3996fa;
+	margin-top: 6px;
+	margin-right: 5px;
+	border-radius:6px;
+	background: #3996fa;
+}
+
+.Messagecontain .product {
+	font-size: 14px;
+	color: #555;
+	padding: 0 10px 10px;
+	margin:0 0 4px 15px;
+	border-bottom: 1px dashed #e0e0e0;
+}
+
+.Messagecontain .boatticket {
+	margin: 0 0 40px 25px;
+}
+.Messagecontain .boatticket:last-child {
+	margin-bottom: 0;
+}
+
+.boatticket ul li {
+	width: 335px;
+	float: left;
+	font-size: 13px;
+	margin-top: 16px;
+    color: #555;
+}
+
+.boatticket ul li span {
+	color: #999;
+}
+
+.boatticket ul li.price {
+	color: #ff8800;
+}
+
+.boatticket ul li.price label {
+	font-size: 14px;
+}
+
+.boatticket ul .liroomtype {
+	float: right;
+}
+
+.Messagecontain .hotelmes {
+	color: #555;
+	font-size: 13px;
+	margin:0 0 40px 25px;
+}
+
+.Messagecontain .hotelmes .le {
+	float: left;
+	width: 385px;
+} 
+
+.Messagecontain .hotelmes p {
+	margin-top: 16px;
+}
+
+.Messagecontain .hotelmes p.price {
+	color: #ff8800;
+	clear: both;
+}
+
+.Messagecontain .hotelmes p.price label {
+	font-size: 16px;
+}
+
+.hotelmes p span.l_title {
+	color: #999;
+}
+.hotelmes div.l_title {
+    color: #999;
+    float: left;
+    margin-top: 10px;
+}
+.hotelmes div.tourist_list{
+    float: left;
+    margin: 0 0 15px 10px;
+}
+
+.hotelmes div.tourist_list p {
+	margin-top:10px;
+}
+
+.Messagecontain .hotelmes .ri {
+	float: left;
+	width: 340px;
+	position: relative;
+}
+
+.Messagecontain .hotelmes .ri .roommess {
+	width: 300px;
+	display: block;
+	float: right;
+	margin-top: 16px;
+	line-height:20px;
+}
+
+.Messagecontain .hotelmes .ri p {
+	margin-top: 0;
+}
+
+.Messagecontain .hotelmes .ri .l_title {
+	float: left;
+	margin-top: 16px;
+}
+
+.Messagecontain .hotelmes .ri .roommess label {
+	padding: 0 15px;
+}
+
+.Messagecontain .hotelmes .ri .roommess label.rmb {
+	color: #ff8800;
+	padding: 0;
+}
+
+.Messagecontain .hotelmes .ri .roommess label.commitComment {
+	 border:1px solid #ff8800;
+	 color:#ff8800;
+	 cursor: pointer;
+	 position: absolute;
+	 right:-95px;
+	 top:15px;
+ }
+
+.Messagecontain .hotelmes .ri .roommess label.lookComment {
+	border:1px solid #3996fa;
+	color:#3996fa;
+	cursor: pointer;
+	position: absolute;
+	right:-95px;
+	top:15px;
+}
+
+.order_part .hotelmes:last-child {
+	margin-bottom:0;
+}
+
+
+
+.shadow {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 6;
+	display: none;
+}
+
+.commentContain {
+	width: 742px;
+	height: 440px;
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	z-index: 7;
+	background: #fff;
+	display: none;
+}
+
+.com_header {
+	width: 100%;
+	color: #333;
+	height: 50px;
+	font-size: 18px;
+	text-indent: 25px;
+	line-height: 50px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.suss_header {
+	border-bottom: none;
+}
+
+.com_header span.closebtn {
+	width: 50px;
+	height: 50px;
+	float: right;
+	background: url(/image/icon_close.png) no-repeat center center;
+}
+
+.commentContain .com_body {
+	padding: 22px 35px 0 70px;
+}
+
+.com_body .maincontain {
+	width: 100%;
+	height: 320px;
+}
+
+.maincontain .contain_top {
+	width: 100%;
+	height: 92px;
+}
+
+.maincontain .contain_top .pic {
+	width: 165px;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.maincontain .contain_top .pic img {
+	width: 100%;
+	height: 100%;
+}
+
+.maincontain .contain_top .pic_mess {
+	float: left;
+	width: 452px;
+	padding-left: 20px;
+	border-bottom: 2px solid #3996fa;
+}
+
+.maincontain .pic_mess .mess_name {
+	padding-top: 13px;
+	font-size: 16px;
+	color: #3996fa;
+}
+
+.mess_score .score_le {
+	float: left;
+}
+
+.mess_score .starnum {
+	width: 155px;
+	height: 56px;
+	float: left;
+	background: url(/image/star00.png) no-repeat left center;
+	background-size: 155px;
+}
+
+.mess_score .starnum span {
+	width: 20%;
+	height: 100%;
+	float: left;
+	cursor: pointer;
+}
+
+.maincontain .pic_mess .mess_score {
+	line-height: 56px;
+	font-size: 14px;
+	color: #404040;
+}
+
+.maincontain .pic_mess .mess_score01 {
+	background: url(/image/star01.png) no-repeat left center;
+	background-size: 155px;
+}
+
+.maincontain .pic_mess .mess_score02 {
+	background: url(/image/star02.png) no-repeat left center;
+	background-size: 155px;
+}
+
+.maincontain .pic_mess .mess_score03 {
+	background: url(/image/star03.png) no-repeat left center;
+	background-size: 155px;
+}
+
+.maincontain .pic_mess .mess_score04 {
+	background: url(/image/star04.png) no-repeat left center;
+	background-size: 155px;
+}
+
+.maincontain .pic_mess .mess_score05 {
+	background: url(/image/star05.png) no-repeat left center;
+	background-size: 155px;
+}
+
+.contain_mid {
+	margin-top: 20px;
+	font-size: 13px;
+
+	border:1px solid #e0e0e0;
+}
+
+.contain_mid textarea {
+	width: calc(100% - 30px);
+	padding: 15px;
+	border:none;
+	height: 108px;
+	outline: none;
+	color: #666;
+	line-height: 20px;
+	background:#f3f8fe;
+	letter-spacing: 1px;
+}
+
+.maincontain .niming {
+	color: #666;
+	width: 90px;
+	font-size: 14px;
+	cursor: pointer;
+	margin-top: 20px;
+	text-indent: 20px;
+	background: url(/image/icon-limited.png) no-repeat left center;
+}
+
+.maincontain .no_niming {
+	background: url(/image/icon-dislimit.png) no-repeat left center;
+}
+
+.com_submit {
+	width: 140px;
+	height: 40px;
+	font-size: 22px;
+	color: #fff;
+	cursor: pointer;
+	background-color: #ff8800;
+	line-height: 40px;
+	text-align: center;
+	margin: 25px auto;
+	border-radius: 5px;
+}
+
+.comsuccess {
+	width: 460px;
+	height: 150px;
+	background: #fff;
+	position: absolute;
+	z-index: 7;
+	display: none;
+}
+
+.suss_body {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	font-size: 24px;
+	color: #555;
+	text-indent: 210px;
+	background: url(/image/icon_com_suss.png) no-repeat 140px center;
+}
+
+.suss_footer {
+	width: 250px;
+	height: 36px;
+	margin: 40px auto;
+}
+
+.suss_footer span {
+	width: 103px;
+	height: 34px;
+	font-size: 18px;
+	line-height: 34px;
+	color: #3996fa;
+	cursor: pointer;
+	text-align: center;
+	font-family: 'simsun';
+	border:1px solid #3996fa;
+	border-radius: 3px;
+}
+
+.suss_footer span.turnIndex {
+	float: left;
+}
+
+.suss_footer span.checkOrder {
+	float: right;
+}
+
+.suss_footer span a {
+	display: block;
+	color: #3996fa;
+}
+

@@ -1,0 +1,80 @@
+<div class="diymarch_selScenic diymarch_travDemand" ng-controller="planDemandCtrl">
+    <div class="header">
+        <a ui-sref="index"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        出游需求
+    </div>
+    <section class="part1">
+        <div class="tdiv travTime">出发时间<input type="text" readonly id="time" data-lcalendar="" ng-model="playDate"/>
+        </div>
+        <div class="tdiv travDay">
+            游玩天数
+            <span><img src="/yihaiyou/image/plan/add.png"></span>
+            <span num-changer scope-num="playDay" min-num="1" max-num="15" is-prev-add="true">{{playDay}}</span>
+            <span><img src="/yihaiyou/image/plan/sub.png"></span>
+        </div>
+        <!--<div class="tdiv travPeaple">-->
+            <!--<div>出游人数</div>-->
+            <!--<hr>-->
+            <!--<div>-->
+                <!--<ul>-->
+                    <!--<li>-->
+                        <!--成人-->
+                        <!--<span><img src="/yihaiyou/image/plan/add.png"></span>-->
+                        <!--<span num-changer scope-num="adultNum" min-num="1" is-prev-add="true">{{adultNum}}</span>-->
+                        <!--<span><img src="/yihaiyou/image/plan/sub.png"></span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--儿童-->
+                        <!--<span><img src="/yihaiyou/image/plan/add.png"></span>-->
+                        <!--<span num-changer scope-num="childNum" min-num="0" is-prev-add="true">{{childNum}}</span>-->
+                        <!--<span><img src="/yihaiyou/image/plan/sub.png"></span>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="dateroom clearfix">
+            <div class="left">是否需求住宿</div>
+            <div class="right">
+                <span ng-class="{true:needHotel,false:!needHotel}" ng-click="chooseroom(true)">是</span>
+                <span ng-class="{true:!needHotel,false:needHotel}" ng-click="chooseroom(false)">否</span>
+            </div>
+        </div>
+        <div class="datetime">
+            <ul>
+                <li ng-repeat="one in more" ng-class="{true:hour ==one.index,false:hour !=one.index}"
+                    ng-click="changestate(one.index)">{{one.name}}
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="progress">
+        <!--<div class="probar"></div>-->
+        <!--<div class="proname">-->
+            <!--<ul>-->
+                <!--<li>填写需求</li>-->
+                <!--<li>选择景点</li>-->
+                <!--<li>行程详情</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <div class="nex_pre">
+            <span><a ng-click="next()">下一步</a></span>
+        </div>
+    </section>
+    <div class="starprice" ng-show="roomlevel">
+        <h3 class="xprice">价格</h3>
+        <ul class="clearfix">
+            <li ng-repeat="price in pricelist" ng-class="{selTag: tagnum == price.index}" ng-click="pricelevel(price)">
+                {{price.name}}
+            </li>
+        </ul>
+        <h3 class="xstar">星级</h3>
+        <ul class="ul2 clearfix">
+            <li ng-repeat="star in starlist" ng-class="{selTag: tagnum2 == star.index}" ng-click="starlevel(star)">
+                {{star.name}}
+            </li>
+        </ul>
+        <div class="forsure" ng-click="commitHotelSearch()">确认</div>
+        <img class="closedm" src="/yihaiyou/image/plan/icon-chak.png" ng-click="closewindow()">
+    </div>
+    <div class="shadow" ng-show="shadow"></div>
+</div>

@@ -1,0 +1,81 @@
+<div class="youjigonglve" ng-controller="guideIndexCtrl">
+	<div class="header">
+		<a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+		游记攻略
+		<span class="search-pic1"></span>
+	</div>
+	<div class="infoimg">
+		<div class="i-swipe-banner swiper-container ads-area" style="height: 150px;" id="recplan-top-slider-container">
+			<ul class="swiper-wrapper ads-slider" id="slide">
+				<li class="swiper-slide" ng-repeat="ad in topBannerAds" is-over="finish.over">
+					<a ng-href="{{ad.url}}"><img ng-src="{{ad.imgPath | getImgUrl}}"></a>
+					<!--<a ng-href="{{ad.url}}"><img src="/yihaiyou/image/fc{{$index + 1}}.jpg"></a>-->
+				</li>
+			</ul>
+			<div class="swipe-pagenavi swiper-pagination" id="recplan-top-slide-page"></div>
+		</div>
+		<!--<img src="/yihaiyou/image/sailling/banner-travel.png">-->
+	</div>
+
+	<!--<div class="ticket_qiehuan" scroll-tabs>-->
+		<!--<div class="yekaqiehuan">-->
+			 <!--<ul class="clickbutton">-->
+				<!--<li> <span ng-class="{true:'tuijian', false: ''}[1 == tabIndex]" ng-click="changeTabList(1)">推荐</span></li>-->
+				<!--<li> <span ng-class="{true:'tuijian', false: ''}[2 == tabIndex]" ng-click="changeTabList(2)">最新</span></li>-->
+			  <!--</ul>-->
+		<!--</div>-->
+	<!--</div>-->
+	<div style="position: absolute;width: 100%;" ng-show="showTabList" infinite-scroll="getRecommendPlanList()"
+		 infinite-scroll-disabled='loading' infinite-scroll-distance='1'>
+		<div class="gonglvexinxi" ng-repeat="recommendPlan in recommendPlanList" ng-click="goRecommendPlanDetail(recommendPlan.id)"  style="  height: 180px;background-color: white;  margin-bottom: 10px;">
+			<div class="clearfix">
+				<div class="xiangqingdizhi" title="recommendPlan.passScenics"> {{recommendPlan.passScenics}}</div>
+				<div class="jinghua"></div>
+			</div>
+
+			<div class="clearfix">
+				<img style="height: 95px;width:100%" bn-lazy-src="{{recommendPlan.cover}}">
+				<!--<div class="youjileft">-->
+					<!--<img bn-lazy-src="{{recommendPlan.cover}}">-->
+				<!--</div>-->
+				<!--<div class="youjiright">-->
+					<!--<p class="yuedushangcnag"> <span class="yuedulaing"> {{recommendPlan.viewNum}}</span>  <span class="shoucang"></span> {{recommendPlan.collectNum}}</p>-->
+
+				<!--</div>-->
+			</div>
+            <div class="usertouxiang" >
+				<!--<div class="touxiang-pic">-->
+					<!--<img style="width: 30px; height: 30px;" ng-if="recommendPlan.head != null" ng-src="{{recommendPlan.head}}">-->
+					<!--<img style="width: 30px; height: 30px;" ng-if="recommendPlan.head == null" src="/yihaiyou/image/touxiang.png">-->
+				<!--</div>-->
+				<!--<span class="user-nickname">{{recommendPlan.nickName}} </span>-->
+				<span  style="float: right;"> <span class="yuedulaing">{{recommendPlan.viewNum}} </span>  <span class="shoucang">{{recommendPlan.collectNum}}</span> </span>
+			</div>
+
+		</div>
+		<!--<div ng-show="reLoading">
+			<div class="yuloading"><span>加载数据中...</span></div>
+		</div>-->
+		<div ng-show="reNomore" class="alert alert-danger text-center bg_loading">没有更多了...</div>
+	</div>
+
+	<div style="position: absolute;width: 100%;" ng-hide="showTabList" infinite-scroll="getNewestPlanList()"
+		 infinite-scroll-disabled='newLoading' infinite-scroll-distance='1'>
+		<div class="gonglvexinxi" ng-repeat="newestPlan in newestPlanList" ng-click="goRecommendPlanDetail(newestPlan.id)">
+			<div class="youjileft">
+				<img bn-lazy-src="{{newestPlan.cover}}">
+			</div>
+			<div class="youjiright">
+				<p class="dizhititle">{{newestPlan.name}}</p>
+				<p class="xiangqingdizhi"> {{newestPlan.passScenics}}</p>
+				<p class="yuedushangcnag"> <span class="yuedulaing"> {{newestPlan.viewNum}}</span>  <span class="shoucang"></span> {{newestPlan.collectNum}}</p>
+			</div>
+
+		</div>
+		<div ng-show="newLoading">
+			<div class="yuloading"><span>加载数据中...</span></div>
+		</div>
+		<div ng-show="newNomore" class="alert alert-danger text-center bg_loading">没有更多了...</div>
+	</div>
+	<div class="totop" ng-click="gotosky()" ng-if="guideHeight > 1200"></div>
+ </div>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.hotel.mapper.CtripHotelMapper">
+	<insert id="insert" parameterType="CtripHotel" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_ctrip_hotel
+			(
+				id,
+				city_code,
+				hotel_name,
+				addr,
+				contact,
+				img_url,
+				service,
+				latitude,
+				longitude,
+				google_longitude,
+				google_latitude,
+				gcj_lng,
+				gcj_lat,
+				user_id,
+				score,
+				hotel_comment,
+				comment_num,
+				lowest_hotel_price,
+				style,
+				star,
+				intro,
+				open_time,
+				is_valid,
+				cover_small,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{cityCode},
+				#{hotelName},
+				#{addr},
+				#{contact},
+				#{imgUrl},
+				#{service},
+				#{latitude},
+				#{longitude},
+				#{googleLongitude},
+				#{googleLatitude},
+				#{gcjLng},
+				#{gcjLat},
+				#{userId},
+				#{score},
+				#{hotelComment},
+				#{commentNum},
+				#{lowestHotelPrice},
+				#{style},
+				#{star},
+				#{intro},
+				#{openTime},
+				#{isValid},
+				#{coverSmall},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="CtripHotel">
+		update tb_ctrip_hotel
+		<set>
+			<if test="cityCode != null and '' != cityCode"> city_code = #{cityCode},</if>
+			<if test="hotelName != null and '' != hotelName"> hotel_name = #{hotelName},</if>
+			<if test="addr != null and '' != addr"> addr = #{addr},</if>
+			<if test="contact != null and '' != contact"> contact = #{contact},</if>
+			<if test="imgUrl != null and '' != imgUrl"> img_url = #{imgUrl},</if>
+			<if test="service != null and '' != service"> service = #{service},</if>
+			<if test="latitude != null and '' != latitude"> latitude = #{latitude},</if>
+			<if test="longitude != null and '' != longitude"> longitude = #{longitude},</if>
+			<if test="googleLongitude != null and '' != googleLongitude"> google_longitude = #{googleLongitude},</if>
+			<if test="googleLatitude != null and '' != googleLatitude"> google_latitude = #{googleLatitude},</if>
+			<if test="gcjLng != null and '' != gcjLng"> gcj_lng = #{gcjLng},</if>
+			<if test="gcjLat != null and '' != gcjLat"> gcj_lat = #{gcjLat},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="score != null and '' != score"> score = #{score},</if>
+			<if test="hotelComment != null and '' != hotelComment"> hotel_comment = #{hotelComment},</if>
+			<if test="commentNum != null and '' != commentNum"> comment_num = #{commentNum},</if>
+			<if test="lowestHotelPrice != null and '' != lowestHotelPrice"> lowest_hotel_price = #{lowestHotelPrice},</if>
+			<if test="style != null and '' != style"> style = #{style},</if>
+			<if test="star != null and '' != star"> star = #{star},</if>
+			<if test="intro != null and '' != intro"> intro = #{intro},</if>
+			<if test="openTime != null and '' != openTime"> open_time = #{openTime},</if>
+			<if test="isValid != null and '' != isValid"> is_valid = #{isValid},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="CtripHotel">
+		delete from
+			tb_ctrip_hotel
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="CtripHotel">
+		select
+			hotel.*,
+            user.nickname,
+            user.userface
+		from
+			tb_ctrip_hotel hotel
+            inner join tb_user user on hotel.user_id=user.id
+		where
+			hotel.id = #{id}
+	</select>
+	
+	<select id="listAndOrder" resultType="CtripHotel">
+		select
+			hotel.*,
+            user.nickname,
+            user.userface
+            <if test="longitude!=null and longitude!=''">,
+        		ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) as distance
+        	</if>
+        	<if test="gcjLng!=null and gcjLng!=''">,
+        		ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000) as distance
+        	</if>
+		from
+			tb_ctrip_hotel hotel
+            inner join tb_user user on hotel.user_id=user.id
+		where hotel.id in (<if test="ids.size() == 0">-1</if>
+				<foreach item="item" index="index" collection="ids"
+						 separator="," >
+					#{item}
+				</foreach>
+				)
+		order by field (hotel.id,<if test="ids.size() == 0">-1</if>
+				<foreach item="item" index="index" collection="ids"
+						 separator="," >
+					#{item}
+				</foreach>
+				)
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(1)
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="CtripHotel">
+		select
+        hotel.*
+        <if test="longitude!=null and longitude!=''">,
+        ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) as distance
+        </if>
+        <if test="gcjLng!=null and gcjLng!=''">,
+        ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000) as distance
+        </if>
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_ctrip_hotel hotel
+		<where>
+            hotel.flag=1
+            and status = 1
+            <if test="id != null and '' != id"> and id =#{id} </if>
+            <if test="isValid != null and '' != isValid"> and is_valid =#{isValid} </if>
+			<if test="cityCode != null and '' != cityCode"> and city_code =#{cityCode} </if>
+			<if test="hotelName != null and '' != hotelName"> and hotel_name like "%"#{hotelName}"%" </if>
+			<if test="addr != null and '' != addr"> and addr = #{addr} </if>
+			<if test="contact != null and '' != contact"> and contact = #{contact} </if>
+			<if test="imgUrl != null and '' != imgUrl"> and img_url = #{imgUrl} </if>
+			<if test="service != null and '' != service"> and service = #{service} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="score != null and '' != score"> and score = #{score} </if>
+			<if test="hotelComment != null and '' != hotelComment"> and hotel_comment = #{hotelComment} </if>
+			<if test="commentNum != null and '' != commentNum"> and comment_num = #{commentNum} </if>
+			<if test="lowestHotelPrice != null and '' != lowestHotelPrice"> and lowest_hotel_price = #{lowestHotelPrice} </if>
+            <if test="lowestPrice !=null and '' !=lowestPrice"> and lowest_hotel_price &gt; #{lowestPrice}</if>
+            <if test="highestPrice !=null and '' !=highestPrice"> and lowest_hotel_price &lt; #{highestPrice}</if>
+			<if test="style != null and '' != style"> and style = #{style} </if>
+			<if test="star != null and '' != star"> and star = #{star} </if>
+			<if test="intro != null and '' != intro"> and intro = #{intro} </if>
+			<if test="openTime != null and '' != openTime"> and open_time = #{openTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ids != null ">
+			and hotel.id in (<if test="ids.size() == 0">-1</if>
+			<foreach item="item" index="index" collection="ids"
+				separator="," >
+				#{item}
+			</foreach>
+            )
+		</if>
+            <if test="distance != null and '' != distance">
+            	<if test="longitude!=null and longitude!=''">
+        			and ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) &lt; #{distance}
+        		</if>
+        		<if test="gcjLng!=null and gcjLng!=''">
+        			and ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000) &lt; #{distance}
+        		</if>
+                
+            </if>
+            
+		</where>
+            <choose>
+                <when test="operCount!=null and operCount!=''"></when>
+                <when test="orderColumn != null and '' != orderColumn">
+                    ORDER BY isnull(hotel.${orderColumn}),hotel.${orderColumn}
+                    <if test="orderType != null and '' != orderType">
+                        ${orderType}
+                    </if>
+                    <if test="longitude!=null and longitude!=''">
+                        ,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)),
+                        ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)
+                    </if>
+                    <if test="gcjLng!=null and gcjLng!=''">
+                    	,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)),
+                    	ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)
+                	</if>
+                </when>
+                <when test="longitude!=null and longitude!=''">
+                    order by
+                    ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)),
+                    ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)
+                </when>
+                <when test="gcjLng!=null and gcjLng!=''">
+                	order by
+        			ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)),
+        			ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)
+        		</when>
+                <otherwise>
+                    order by hotel_rank desc
+                </otherwise>
+            </choose>
+	</sql>
+	<select id="listColumns" resultType="CtripHotel">
+		select
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="longitude!=null and longitude!=''">,
+			ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) as distance
+		</if>
+		<if test="gcjLng!=null and gcjLng!=''">,
+        	ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000) as distance
+        </if>
+		from
+		tb_ctrip_hotel hotel
+		<where>
+			hotel.flag=1
+			and status = 1
+			<if test="isValid != null and '' != isValid"> and is_valid =#{isValid} </if>
+			<if test="id != null and '' != id"> and id =#{id} </if>
+			<if test="cityCode != null and '' != cityCode"> and city_code =#{cityCode} </if>
+			<if test="hotelName != null and '' != hotelName"> and hotel_name like "%"#{hotelName}"%" </if>
+			<if test="addr != null and '' != addr"> and addr = #{addr} </if>
+			<if test="contact != null and '' != contact"> and contact = #{contact} </if>
+			<if test="imgUrl != null and '' != imgUrl"> and img_url = #{imgUrl} </if>
+			<if test="service != null and '' != service"> and service = #{service} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="score != null and '' != score"> and score = #{score} </if>
+			<if test="hotelComment != null and '' != hotelComment"> and hotel_comment = #{hotelComment} </if>
+			<if test="commentNum != null and '' != commentNum"> and comment_num = #{commentNum} </if>
+			<if test="lowestHotelPrice != null and '' != lowestHotelPrice"> and lowest_hotel_price = #{lowestHotelPrice} </if>
+			<if test="lowestPrice !=null and '' !=lowestPrice"> and lowest_hotel_price > #{lowestPrice}</if>
+			<if test="highestPrice !=null and '' !=highestPrice"> and lowest_hotel_price &lt; #{highestPrice}</if>
+			<if test="style != null and '' != style"> and style = #{style} </if>
+			<if test="star != null and '' != star"> and star = #{star} </if>
+			<if test="intro != null and '' != intro"> and intro = #{intro} </if>
+			<if test="openTime != null and '' != openTime"> and open_time = #{openTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="ids != null ">
+				and hotel.id in (<if test="ids.size() == 0">-1</if>
+				<foreach item="item" index="index" collection="ids"
+						 separator="," >
+					#{item}
+				</foreach>
+				)
+			</if>
+			<if test="distance != null and '' != distance">
+				<if test="longitude!=null and longitude!=''">
+        			and ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) &lt; #{distance}
+        		</if>
+        		<if test="gcjLng!=null and gcjLng!=''">
+        			and ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000) &lt; #{distance}
+        		</if>
+				
+			</if>
+		</where>
+		<choose>
+			<when test="operCount!=null and operCount!=''"></when>
+			<when test="orderColumn != null and '' != orderColumn">
+				ORDER BY hotel.${orderColumn}
+				<if test="orderType != null and '' != orderType">
+					${orderType}
+				</if>
+				<if test="longitude!=null and longitude!=''">
+					,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)),
+					ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)
+				</if>
+				<if test="gcjLng!=null and gcjLng!=''">
+                    ,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)),
+                    ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)
+                </if>
+			</when>
+			<when test="longitude!=null and longitude!=''">
+				order by
+				ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)),
+				ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)
+			</when>
+			<when test="gcjLng!=null and gcjLng!=''">
+                order by
+        		ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)),
+        		ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)
+        	</when>
+			<otherwise>
+				order by hotel_rank desc
+			</otherwise>
+		</choose>
+	</select>
+</mapper>

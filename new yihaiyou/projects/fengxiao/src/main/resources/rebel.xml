@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.zeroturnaround.com"
+	xsi:schemaLocation="http://www.zeroturnaround.com http://www.zeroturnaround.com/alderaan/rebel-2_0.xsd"
+>
+	<classpath>
+		<dir name="F:/workspace/data/projects/fengxiao/target/classes">
+		</dir>
+		<dir name="F:/workspace/data/frame/target/classes">
+		</dir>
+		<dir name="F:/workspace/data/business/order/orderweb/target/classes">
+		</dir>
+		<dir name="F:/workspace/data/business/ticket/ticketweb/target/classes">
+		</dir>
+		<dir name="F:/workspace/data/business/ticket/ticketservice/target/classes">
+		</dir>
+		<dir name="F:/workspace/data/business/scemanager/scemanageservice/target/classes">
+		</dir>
+		<dir name="F:/workspace/data/business/scemanager/scemanagerweb/target/classes">
+		</dir>
+		<dir name="F:/workspace/data/business/wechat/wechatservice/target/classes">
+		</dir>
+		<dir name="F:/workspace/data/business/wechat/wechatweb/target/classes">
+		</dir>
+		<dir name="F:/workspace/data/business/user/userweb/target/classes"> 
+		</dir>
+		<dir name="F:/workspace/data/business/scenic/scenicweb/target/classes"> 
+		</dir>
+		<dir name="F:/workspace/data/coressh4/target/classes">
+		</dir>
+	</classpath>
+	<web>
+		<link target="/">
+			<dir name="F:/workspace/data/frame/src/main/webapp">
+			</dir>
+			<dir name="F:/workspace/data/business/order/orderweb/src/main/webapp">
+			</dir>
+			<dir name="F:/workspace/data/business/line/lineweb/src/main/webapp">
+			</dir>
+			<dir name="F:/workspace/data/business/ticket/ticketweb/src/main/webapp">
+			</dir>
+			<dir name="F:/workspace/data/business/scemanager/scemanagerweb/src/main/webapp">
+			</dir>
+			<dir name="F:/workspace/data/business/user/userweb/src/main/webapp">
+			</dir>
+			<dir name="F:/workspace/data/business/wechat/wechatweb/src/main/webapp">
+			</dir>
+		</link>
+	</web>
+</application>

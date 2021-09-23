@@ -1,0 +1,105 @@
+.back-white {
+    background-color: white;
+}
+#header {
+    overflow: hidden;
+}
+#header-content {
+    padding: 5% 10px 10px;
+}
+#header-face {
+    width: 40%;
+    float: left;
+}
+#header-detail{
+    padding-top: 10px;
+    width: 60%;
+    float: right;
+    color: white;
+}
+#face-img {
+    width: 100px;
+    height: 100px;
+    border-radius:50%
+}
+#user-info {
+    font-size: 33ch;
+}
+#nav-bar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#bar-content {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.center-bar {
+    width: 20%;
+    float: left;
+    border-left: 1px solid #aaaaaa;
+    box-sizing: border-box;
+}
+
+#bar-content .center-bar:first-child { border-left: none; }
+
+.bar-a {
+    background: url("/css/mobile/user/team.png") no-repeat top;
+    background-size: 60px;
+    display: block;
+    padding-top: 36px;
+    text-align: center;
+
+}
+a {
+    text-decoration:none;
+    color: black;
+}
+#menu {
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+}
+.menu-div {
+    width: 100%;
+    border-top: 1px solid #aaaaaa;
+}
+
+#menu .menu-div:first-child { border-top: none; }
+.menu-image {
+    width: 50px;
+    height: 50px;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.orange-font {
+    color: orange;
+}
+
+.cf { *zoom: 1; }
+.cf:after { display: block; content: '\20'; height: 0; clear: both; }
+.home-menu-a {
+    background: url("/css/mobile/user/sss.png") no-repeat left;
+    background-size: 60px;
+    display: block;
+    padding-left: 60px;
+    /*text-align: center;*/
+    height: 50px;
+}
+
+.menu-text{
+    line-height: 50px;
+}
+
+.pad-right {
+    padding-right: 5px;
+}
+
+#share-text{
+    margin-top: 10px;
+    padding-left: 5px;
+}

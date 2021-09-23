@@ -1,0 +1,233 @@
+* {
+  font-family: arial, "微软雅黑";
+}
+h3,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+/*工具样式*/
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  border-top: 3px solid #3996fa;
+}
+.wrap .container-box {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 54px;
+}
+.wrap .container-box h3 {
+  font-size: 12px;
+  text-align: left;
+  line-height: 48px;
+  font-family: '宋体';
+  color: #737373;
+}
+.wrap .container-box h3 a {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #ff8800;
+}
+.wrap .container-box h3 a:last-of-type {
+  color: #737373;
+}
+.wrap .container-box .search-wrap {
+  border-top: 3px solid #2869af;
+  background: #3996fa;
+  padding: 12px 50px;
+  margin-bottom: 20px;
+}
+.wrap .container-box .search-wrap .search-group {
+  float: left;
+  position: relative;
+}
+.wrap .container-box .search-wrap .search-group label {
+  float: left;
+  font-size: 14px;
+  line-height: 36px;
+  color: #fff;
+}
+.wrap .container-box .search-wrap .search-group input {
+  float: left;
+  border: 1px solid #1571d4;
+  line-height: 34px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #8d8d8d;
+  padding-left: 14px;
+}
+.wrap .container-box .search-wrap .search-group .route-input {
+  width: 276px;
+  padding-right: 26px;
+  background: url("/image/ticket-index-icon-routedown.png") no-repeat 290px center, #ffffff;
+  margin-right: 127px;
+}
+.wrap .container-box .search-wrap .search-group .route-datalist {
+  position: absolute;
+  left: 42px;
+  top: 35px;
+  z-index: 999;
+  border: 1px solid #1571d4;
+  border-bottom: none;
+}
+.wrap .container-box .search-wrap .search-group .route-datalist li {
+  width: 276px;
+  padding-right: 26px;
+  padding-left: 14px;
+  border-bottom: 1px solid #1571d4;
+  background: #fff;
+  font-size: 14px;
+  color: #8d8d8d;
+  line-height: 34px;
+  cursor: pointer;
+}
+.wrap .container-box .search-wrap .search-group .route-datalist li:hover {
+  background: #3996fa;
+  color: #fff;
+}
+
+.wrap .container-box .search-wrap .search-group .date-input {
+  width: 214px;
+  padding-right: 29px;
+  background: url("/image/ticket-index-search-icon-calendar.png") no-repeat 227px center, #ffffff;
+  margin-right: 80px;
+}
+.wrap .container-box .search-wrap .search-group .search-btn {
+  width: 182px;
+  height: 36px;
+  background: #ffa01f;
+  display: inline-block;
+  line-height: 36px;
+  text-align: center;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 6px;
+}
+.wrap .container-box .search-wrap .search-group .search-btn i {
+  display: inline-block;
+  width: 17px;
+  height: 36px;
+  background: url("/image/icon-search.png") no-repeat center 9px;
+  margin-right: 5px;
+  vertical-align: bottom;
+}
+.wrap .container-box .search-wrap .search-group .search-btn:hover {
+  background: #f80;
+}
+.wrap .container-box .table-wrap {
+  margin-bottom: 40px;
+  border: 1px solid #e0e0e0;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #fff;
+  position: relative;
+}
+.wrap .container-box .table-wrap .mask-left {
+  width: 10px;
+  height: 36px;
+  background: #f7f7f7;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.wrap .container-box .table-wrap .mask-right {
+  width: 10px;
+  height: 36px;
+  background: #f7f7f7;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.wrap .container-box .table-wrap .line {
+  height: 1px;
+  background: #e0e0e0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 36px;
+}
+.wrap .container-box .table-wrap table {
+  border-collapse: collapse;
+}
+.wrap .container-box .table-wrap table thead {
+  background: #f7f7f7;
+}
+.wrap .container-box .table-wrap table thead tr th {
+  font-size: 14px;
+  color: #6c6c6c;
+  line-height: 36px;
+  font-weight: normal;
+  text-align: center;
+}
+.wrap .container-box .table-wrap table thead tr th:nth-of-type(1) {
+  width: 120px;
+  margin-right: 10px;
+}
+.wrap .container-box .table-wrap table thead tr th:nth-of-type(2) {
+  width: 170px;
+}
+.wrap .container-box .table-wrap table thead tr th:nth-of-type(3) {
+  width: 170px;
+}
+.wrap .container-box .table-wrap table thead tr th:nth-of-type(4) {
+  width: 164px;
+}
+.wrap .container-box .table-wrap table thead tr th:nth-of-type(5) {
+  width: 122px;
+}
+.wrap .container-box .table-wrap table thead tr th:nth-of-type(6) {
+  width: 138px;
+}
+.wrap .container-box .table-wrap table thead tr th:nth-of-type(7) {
+  width: 138px;
+}
+.wrap .container-box .table-wrap table thead tr th:nth-of-type(8) {
+  width: 158px;
+}
+.wrap .container-box .nonedata-img {
+  height: 243px;
+  background: url("/image/ticket-img-nonedata.png") no-repeat center bottom;
+}
+.wrap .container-box .nonedata-tips {
+  width: 134px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ced1d5;
+  text-align: center;
+}

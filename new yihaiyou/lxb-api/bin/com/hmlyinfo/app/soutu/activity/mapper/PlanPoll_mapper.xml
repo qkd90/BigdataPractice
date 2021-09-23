@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.activity.mapper.PlanPollMapper">
+	<insert id="insert" parameterType="PlanPoll">
+		insert into tb_plan_poll
+			(
+				id,
+				activity_id,
+				user_id,
+				joined_plan_id,
+				create_time,
+				modify_time,
+				ip
+			)
+		values
+			(
+				#{id},
+				#{activityId},
+				#{userId},
+				#{joinedPlanId},
+				#{createTime},
+				#{modifyTime},
+				#{ip}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="PlanPoll">
+		update tb_plan_poll
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="activityId != null and '' != activityId"> activity_id = #{activityId},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="joinedPlanId != null and '' != joinedPlanId"> joined_plan_id = #{joinedPlanId},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="ip != null and '' != ip"> ip = #{ip},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="PlanPoll">
+		delete from
+			tb_plan_poll
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="PlanPoll">
+		select
+			*
+		from
+			tb_plan_poll
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="PlanPoll">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_plan_poll
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="activityId != null and '' != activityId"> and activity_id = #{activityId} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="joinedPlanId != null and '' != joinedPlanId"> and joined_plan_id = #{joinedPlanId} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="ip != null and '' != ip"> and ip = #{ip} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+</mapper>

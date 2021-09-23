@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.weixin.mapper.WxFlowMapper">
+	<insert id="insert" parameterType="WxFlow" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_wx_flow
+			(
+				id,
+				url,
+				ip,
+				response_time,
+				date,
+				create_time,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{url},
+				#{ip},
+				#{responseTime},
+				#{date},
+				#{createTime},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="WxFlow">
+		update tb_wx_flow
+		<set>
+			<if test="id != null"> id = #{id},</if>
+			<if test="url != null"> url = #{url},</if>
+			<if test="ip != null"> ip = #{ip},</if>
+			<if test="responseTime != null"> response_time = #{responseTime},</if>
+			<if test="date != null"> date = #{date},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="WxFlow">
+		delete from
+			tb_wx_flow
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="WxFlow">
+		select
+			*
+		from
+			tb_wx_flow
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="WxFlow">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">$ {item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+
+	<sql id="byProperty">
+		from
+			tb_wx_flow
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="url != null and '' != url"> and url = #{url} </if>
+			<if test="ip != null and '' != ip"> and ip = #{ip} </if>
+			<if test="responseTime != null and '' != responseTime"> and response_time = #{responseTime} </if>
+			<if test="date != null and '' != date"> and date = #{date} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+
+	<select id="wxFlowList" resultType="map">
+		select a.dd, IFNULL(b.pv,0) as pv,IFNULL(c.uv,0) as uv from
+		(SELECT  DATE_FORMAT(ADDDATE(#{createTimeStart},day-1),'%Y-%m-%d')as dd
+		FROM tb_day_data
+		WHERE day &lt;= TIMESTAMPDIFF(DAY,#{createTimeStart},#{createTimeEnd})+1
+		ORDER BY dd) a  LEFT JOIN
+		(select DATE_FORMAT(date,'%Y-%m-%d') as dates, count(*) as pv from tb_wx_flow  GROUP BY dates) b
+		on a.dd = b.dates left JOIN
+		(select DATE_FORMAT(date,'%Y-%m-%d') as dates, count(DISTINCT ip) as uv from tb_wx_flow  GROUP BY dates) c
+		on a.dd = c.dates
+	</select>
+
+	<select id="wxFlowVistorList" resultType="WxFlow">
+		select b.name as urlName,a.pv as pv,a.uv as uv , a.url as url from
+		(select date,url,count(ip) as pv, count(DISTINCT ip) as uv from tb_wx_flow where date &gt;=#{createTimeStart} and date &lt;= date_add(#{createTimeEnd}, INTERVAL 1 day) GROUP BY url) a
+		INNER JOIN (select name,url from tb_wx_flow_name) b on a.url = b.url order by a.pv desc
+	</select>
+
+	<select id="maxDateList" resultType="WxFlow">
+		select MAX(date) as date from tb_wx_flow where date &lt;= date_add(#{createTimeEnd}, INTERVAL 1 day)
+	</select>
+
+	<select id="maxDateList2" resultType="WxFlow">
+		select MAX(date) as date from tb_wx_flow where date &lt;= date_add(#{createTimeStart}, INTERVAL 1 day)
+	</select>
+
+</mapper>

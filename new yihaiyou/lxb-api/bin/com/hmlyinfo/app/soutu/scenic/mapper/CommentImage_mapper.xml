@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.CommentImageMapper">
+	<insert id="insert" parameterType="CommentImage">
+		insert into tb_comment_image
+			(
+				id,
+				comment_user_id,
+				comment_id,
+				address_large,
+				address_medium,
+				address_small,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{commentUserId},
+				#{commentId},
+				#{addressLarge},
+				#{addressMedium},
+				#{addressSmall},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="CommentImage">
+		update tb_comment_image
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="commentUserId != null and '' != commentUserId"> comment_user_id = #{commentUserId},</if>
+			<if test="commentId != null and '' != commentId"> comment_id = #{commentId},</if>
+			<if test="addressLarge != null and '' != addressLarge"> address_large = #{addressLarge},</if>
+			<if test="addressMedium != null and '' != addressMedium"> address_medium = #{addressMedium},</if>
+			<if test="addressSmall != null and '' != addressSmall"> address_small = #{addressSmall},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="CommentImage">
+		delete from
+			tb_comment_image
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="CommentImage">
+		select
+			id,
+			comment_user_id,
+			comment_id,
+			address_large,
+			address_medium,
+			address_small,
+			modify_time,
+			create_time
+		from
+			tb_comment_image
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="CommentImage">
+		select 
+			id,
+			comment_user_id,
+			comment_id,
+			address_large,
+			address_medium,
+			address_small,
+			modify_time,
+			create_time
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="listIn" resultType="CommentImage">
+		select 
+			id,
+			comment_user_id,
+			comment_id,
+			address_large,
+			address_medium,
+			address_small,
+			modify_time,
+			create_time
+		from
+			tb_comment_image
+		where
+			comment_user_id in ( ${commentUserIdList} )
+			and comment_id in ( ${commentIdList} )
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_comment_image
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="commentUserId != null and '' != commentUserId"> and comment_user_id = #{commentUserId}</if>
+			<if test="commentId != null and '' != commentId"> and comment_id = #{commentId} </if>
+			<if test="addressLarge != null and '' != addressLarge"> and address_large = #{addressLarge} </if>
+			<if test="addressMedium != null and '' != addressMedium"> and address_medium = #{addressMedium} </if>
+			<if test="addressSmall != null and '' != addressSmall"> and address_small = #{addressSmall} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		</where>
+		order by image_order
+	</sql>
+</mapper>

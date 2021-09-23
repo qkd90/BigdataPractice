@@ -1,0 +1,52 @@
+<div class="ticket_main" ng-controller="ferryOrderCtrl">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        填写订单
+        <span class="save pic2 pic2_1" ui-sref="personalIndex"></span>
+        <span class="save pic2  pic3"></span>
+    </div>
+    <div class="section_order">
+        <div class="personmes">
+            <!--<span style="width: 100%;font-size: small;">{{startFerryPort}}- {{endFerryPort}} {{startDate}} {{ferryTime}}</span>-->
+            {{flightLine.namea}}-{{flightLine.nameb}}
+        </div>
+        <div class="aticket" ng-repeat="tourist in touristList">
+            <div class="host"><span class="name">{{tourist.name}}</span><span class="carId">{{tourist.idNumber}}</span></div>
+            <div class="host"><span class="name">票型</span><span class="carId" ng-click="ticketbox(tourist)">{{tourist.ticket.name}}<i></i></span></div>
+        </div>
+        <div class="ticketList" ng-show="ticketListbox">
+            <p ng-repeat="tic in ticket.ticketLst.Ticket" ng-click="select_p(tic)" >{{tic.name}}</p>
+        </div>
+        <div class="ferryshadow" ng-show="ferryshadow" ng-click="shutferrybox()"></div>
+        <!--<div class="ticket_type">-->
+            <!--<ul>-->
+                <!--<li ng-repeat="tourist in touristList">-->
+                    <!--<div class="host">-->
+                        <!--<p class="name">{{tourist.name}}</p>-->
+                        <!--<p class="personal">-->
+                            <!--<span class="personalid">{{tourist.idNumber}}</span>-->
+                            <!--&lt;!&ndash;<span class="children" ng-class="{true1: tourist.hasChild}" ng-click="getbox1(tourist)">携带1.2m一下儿童</span>&ndash;&gt;-->
+                        <!--</p>-->
+                    <!--</div>-->
+                    <!--<div class="tickettype">-->
+                        <!--<div class="ticketlist clearfix">-->
+                            <!--<ul>-->
+                                <!--<li ng-repeat="tic in tourist.ticket.ticketList"  ng-class="{true2: tourist.ticket.selected == $index}" ng-click="getbox2(tourist.ticket, $index)">{{tic.name}} <span>¥{{tic.price}}</span></li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <div class="beknow">
+            <ul>
+                <li class="beknow_atten">成人乘客如有携带身高不足<span>1.2米</span>的儿童，请至少提前<span>30分钟</span>凭该儿童的有效身份证件（不满<span>2周岁</span>婴儿凭出生医学证明）到乘客出发码头售票窗口申领免费实名制船票，每位成人可携带1名儿童，超过<span>一名</span>时，应按照超过人数购买儿童半价票。</li>
+                <li class="agreebg" ng-class="{agreebgx: isAgree}" ng-click="agree()">我已阅读并同意<a ui-sref="ferryOrderKnow">《厦门轮渡有限公司购票须知》</a>条款</li>
+            </ul>
+        </div>
+        <div class="over">
+            <div class="sel_again">应付金额：<span>¥{{totalPrice}}</span></div>
+            <div class="sel_submit"><a ng-click="submitOrder()">提交订单</a></div>
+        </div>
+    </div>
+</div>

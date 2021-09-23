@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lvxbangweb" />
+        <module name="ctripdata" />
+        <module name="otherservice" />
+        <module name="goodsservice" />
+        <module name="userweb" />
+        <module name="restaurantservice" />
+        <module name="lvxbangservice" />
+        <module name="ticketweb" />
+        <module name="solr" />
+        <module name="productservice" />
+        <module name="wechatweb" />
+        <module name="planservice" />
+        <module name="contractservice" />
+        <module name="lineweb" />
+        <module name="cruiseshipservice" />
+        <module name="restaurantweb" />
+        <module name="weixinservice" />
+        <module name="payweb" />
+        <module name="scenicweb" />
+        <module name="hotelservice" />
+        <module name="orderweb" />
+        <module name="impressionservice" />
+        <module name="customerweb" />
+        <module name="productweb" />
+        <module name="builder" />
+        <module name="shopcartweb" />
+        <module name="goodsweb" />
+        <module name="orderservice" />
+        <module name="payservice" />
+        <module name="planweb" />
+        <module name="lineservice" />
+        <module name="scheduler" />
+        <module name="frame" />
+        <module name="handdrawingweb" />
+        <module name="userservice" />
+        <module name="scemanagerweb" />
+        <module name="transportationservice" />
+        <module name="ali-tool" />
+        <module name="hotelweb" />
+        <module name="discount" />
+        <module name="sparkbase" />
+        <module name="datamgr" />
+        <module name="areaweb" />
+        <module name="wechatservice" />
+        <module name="scenicservice" />
+        <module name="weixinweb" />
+        <module name="salesweb" />
+        <module name="translation" />
+        <module name="trafficweb" />
+        <module name="salesservice" />
+        <module name="scemanageservice" />
+        <module name="elongdata" />
+        <module name="fengxiao" />
+        <module name="shopcartservice" />
+        <module name="lxbcommonservice" />
+        <module name="search" />
+        <module name="otherweb" />
+        <module name="wechat-tool" />
+        <module name="contractweb" />
+        <module name="transportationweb" />
+        <module name="handdrawingservice" />
+        <module name="areaservice" />
+        <module name="ticketservice" />
+        <module name="trafficservice" />
+        <module name="common" />
+        <module name="coressh4" />
+        <module name="customerservice" />
+        <module name="cruiseshipweb" />
+        <module name="lxbcommonweb" />
+        <module name="ikanalysis" />
+        <module name="comment" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

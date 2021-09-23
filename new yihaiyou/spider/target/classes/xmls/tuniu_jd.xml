@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<var-def name="html">
+		<http url="${url}" charset="utf-8"></http>
+	</var-def>
+
+	<var-def name="content">
+		<html-to-xml>
+			<var name="html"></var>
+		</html-to-xml>
+	</var-def>
+	<var-def name="products">
+		<xquery>
+			<xq-param name="n" type="node()">
+				<var name="content" />
+			</xq-param>
+			<xq-expression><![CDATA[
+			                            declare variable $n as node() external;
+			                            let $info := $n//div[@class='ticket_proinf']
+			                            let $name := $info//h1[@class='tp_name']/text()
+			                           	let $address := $info//p[@class='tp_addr']/text()
+			                           	let $hpl := $info//span[@class='saf_lev']/text()		
+			                           	let $detail := $n//div[@class='order_detail_imfor']																
+			                           	let $introduce1 := $n//div[@class='pkg-detail-infor']/div[@class='detail_infor fordfImg']/p[1]
+			                           	let $introduce2 := $n//div[@class='pkg-detail-infor']/div[@class='detail_infor fordfImg']/p[2]
+			                           	let $introduce3 := $n//div[@class='pkg-detail-infor']/div[@class='detail_infor fordfImg']/p[3]												
+			                           	let $best_time := $n//p[@class='best_time']/em/text()
+			                           	let $recommend_reason := $n//div[@class='rem_reason']
+				                        return 
+				                        	<scenic>
+				                                <name>{data($name)}</name>
+												<address>{data($address)}</address>
+				                                <introduce>{concat(data($introduce1),data($introduce2),data($introduce3))}</introduce> 
+				                                <best_time>{data($best_time)}</best_time>
+				                                <recommend_reason>{data($recommend_reason)}</recommend_reason> 	
+				                                <hpl>{data($hpl)}</hpl> 			                                
+				                            </scenic>			                           
+			                    ]]></xq-expression>
+		</xquery>
+	</var-def>
+
+	<!-- <var-def name="result"> <![CDATA[<root>]]> <var name="nextHref"></var> 
+		<var name="products"></var> <![CDATA[</root>]]> </var-def> -->
+	<!-- <file action="write" charset="utf-8" path="d:\jd.xml"> <var name="products"></var> 
+		</file> -->
+</config>

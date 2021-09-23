@@ -1,0 +1,87 @@
+/*!
+ * 厦门旅游集散服务中心 v0.1
+ * Author Jeffrey.
+ * Copyright 2011-2015.
+ */
+body{font-size:14px; font-family:"微软雅黑"; color:#555;}
+ul,li{list-style:none; padding:0; margin:0;}
+a{color:#555;}
+a:hover{color:#000;text-decoration:none;}
+
+.container{width:1220px!important;}
+
+/*顶部*/
+#top{background:#f7f7f7; border-bottom:1px solid #ededed; height:36px; line-height:36px;}
+.toplinks a{margin-left:20px; float:left;}
+.toplinks a.top-wx{background:url(../images/top-wx.png) center center no-repeat; width:30px; height:36px; line-height:36px;}
+.toplinks a.top-wb{background:url(../images/top-wb.png) center center no-repeat; width:30px; height:36px; line-height:36px;}
+.toplinks a.top-qq{background:url(../images/top-qq.png) center center no-repeat; width:30px; height:36px; line-height:36px;}
+/*头部*/
+#header{padding-top:10px; padding-bottom:10px;}
+#header .city{margin:20px 0 0 10px; }
+#header .city a.curr{color:#1c96d9; padding-left:10px;background:url(../images/header-city.jpg) no-repeat; width:88px; height:29px; line-height:29px; display:block;}
+  .subcity{width:424px; background:#fff; border:1px solid #e9e9e9; padding:10px; position:absolute; margin-left:180px; margin-top:50px; z-index:9999;}
+  .subcity h5{color:#1c96d9;}
+  .hotcity a{width:43px; display:inline-block; color:#a2a2a2;}
+  .hotcity a.red{color:#ff6a00;}
+  .startcity{background:#f4f4f4; color:#b4b4b4; padding:12px 10px; margin:10px auto;}
+  .startcity input{width:275px; background:#fff; border:1px solid #b4b4b4; margin-left:10px;}
+  #othercity .nav-tabs{border:none;}
+  #othercity .nav > li > a{padding:8px 15px;border-radius:0;}
+  #othercity .nav > li > a:hover{border:none;background:#1c96d9; color:#fff;}
+  #othercity .nav-tabs > li.active > a, #othercity .nav-tabs > li.active > a:focus, #othercity .nav-tabs > li.active > a:hover{border:none; background:#1c96d9; color:#fff;}
+  #othercity .tab-bg{background:#f4f4f4;}
+  #othercity .citylist{padding:10px 5px;}
+  #othercity .citylist span{color:#1c96d9; font-size:18px; width:50px;}
+  #othercity .citylist a{margin-left:10px; color:#a2a2a2;}
+  .topsearch{color:#a2a2a2; margin-top:20px;}
+  .topsearch dt{font-weight:normal; color:#a2a2a2; margin-bottom:10px;}
+  .topsearch input{float:left;}
+  .topsearch .search-kw{background:#fcfcfc url(../images/top-search.png) 5px center no-repeat; width:500px; border:1px solid #c9c9c9; border-right:none; height:35px; line-height:35px; padding-left:40px;}
+  .topsearch .search-bt{background:#ff7700; border:none; color:#fff; font-size:16px; height:35px; line-height:35px; display:block; width:75px;}
+/*导航*/
+#topnav{background:#1c96d9; height:45px; line-height:45px;}
+.mainnav a{color:#fff; font-size:16px; display:inline-block; padding:0 30px; margin-right:10px;}
+.mainnav a:hover,.mainnav a.curr{background:#265aa5;}
+.mainnav span.cart{background:url(../images/cart.png) center center no-repeat; width:40px; height:45px;}
+/*banner*/
+#banner .carousel-indicators{margin-bottom:0; bottom:5px;}
+#banner .carousel-indicators li{width:30px; height:3px; background:#99a9ab; border:none; border-radius:0;}
+#banner .carousel-indicators .active{background:#f0884a;}
+/*首页登录框*/
+#homelogin{width:300px; position:relative; z-index:999; margin-top:45px;}
+.login-title{background:url(../images/reg-top.png) no-repeat; height:73px;}
+.login-title a{display:inline-block; height:73px; line-height:73px; width:50%;}
+.login-form{background:url(../images/login-bg.png) no-repeat; height:283px; margin-top:10px; padding-top:63px;}
+.login-form span{display:block; margin-left:65px;}
+.login-form span.no-margin-left{margin-left:0;}
+.login-form input{background:none; border:none; height:40px; line-height:40px; margin-bottom:20px; width:172px; color:#b2b2b2;}
+.login-form input.login-bt{background:url(../images/login-bt.png) no-repeat; width:240px; height:40px;}
+.login-form span.no-margin-left input{margin-bottom:5px;}
+/*首页线路模块*/
+.box-title{height:37px; margin:20px 0;}
+.box-title span.title{border-radius:5px 5px 0 0; color:#fff; padding:0 20px; height:35px; line-height:35px; display:inline-block;}
+.box-title a.more{border:1px solid #a2a2a2; color:#a2a2a2; height:30px; line-height:26px; font-size:14px; padding:0 10px;}
+.box{margin-bottom:20px;}
+.box .content{background:#f7f7f7; padding:15px;}
+.box .content h2{font-size:16px; margin:0;}
+.box .content h2 span{display:block;}
+.box .content h2 span.price{padding-top:10px;}
+.box .content h2 span.price b{font-size:24px; font-weight:normal;}
+.lyxl{border-bottom:2px solid #1c96d9;}
+.lyxl span.title{background:#1c96d9;}
+.xianlu .content h2 span.price{color:#1c96d9;}
+.jdmp-title{border-bottom:2px solid #ff6e54;}
+.jdmp-title span.title{background:#ff6e54;}
+.jdmp .content h2 span.price{color:#ef5a00;}
+.gys-title{border-bottom:2px solid #00ca98;}
+.gys-title span.title{background:#00ca98;}
+.gyslist .media{border:1px solid #d3d3d3;}
+.gyslist .media-left{padding:0 20px;}
+.gyslist .media-body h2{font-size:18px; color:#000; margin-top:30px;}
+.gyslist .media-body span{font-size:16px; color:#8d8d8d;}
+.gyslist .info{color:#8d8d8d; padding:10px 0;}
+/*footer*/
+#footer{background:#1c96d9; padding-top:35px; padding-bottom:35px; color:#fff;}
+#footer a{color:#fff; padding:0 20px;}
+#footer .copyright{padding-top:15px;}

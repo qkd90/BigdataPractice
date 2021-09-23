@@ -1,0 +1,27 @@
+<div class="fixtop topbg col-xs-12 navtop" id="fxtop">
+  <ul>
+    <li><a ui-sref="yinxiang">印象</a></li>
+    <li class="active"><a ui-sref="youji">游记</a></li>
+    <li><a ui-sref="xianlu">线路</a></li>
+    <li><a ui-sref="search">搜索</a></li>
+    <li class="pull-right xj"><a href="#"></a></li>
+  </ul>
+</div>
+<div id="mycontainer" class="clearfix">
+<div class="content yjlist" ng-controller="YoujiListCtrl">
+      <div class="clearfix" ng-repeat="data in yjlists.youji">
+      <a  ui-sref="yjdetail">
+        <img src="{{ data.image }}" class="img-responsive">
+        <div class="info">
+          <h2 class="name clearfix">{{ data.title }}</h2>
+          <p class="other"><span class="pull-right"><span class="view">{{ data.view }}</span><span class="time">{{ data.time }}</span></span></p>
+        </div>
+      </a>
+      </div>
+</div>
+</div>
+<div class="fixbottom col-xs-12" id="appbottom">
+ <a ui-sref="yinxiang" class="active"><span class="fx">发现</span></a>
+ <a ui-sref="xing"><span class="dz">私人定制</span></a>
+ <a ui-sref="my"><span class="my">我的</span></a>
+</div>

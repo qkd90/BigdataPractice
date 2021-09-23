@@ -1,0 +1,313 @@
+<div ng-controller="mTicketNearCtrl">
+    <header class="header-box fixed" id="header">
+    <span class="header-back">
+        <i class="icon-title-back effect-active" go-back></i>
+    </span>
+
+        <h1>我的附近</h1>
+
+        <div class="header-action"><a ui-sref="index"><i class="icon-home"></i></a></div>
+    </header>
+    <!-- contain start -->
+    <div class="wrapper">
+        <div class="top-bar">
+            <!--<div class="location-bar">-->
+            <!--<table>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+            <!--<td class="prefix">所在地</td>-->
+            <!--<td class="detail">无法定位您的位置，请检查定位功能或重启应用。</td>-->
+            <!--<td class="refresh"><a class="refresh-btn"><i class="icon-refresh"></i></a></td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+            <!--</table>-->
+            <!--</div>-->
+            <ul class="tab_ticket_near">
+                <li class="first" data-id="local"><a href="javascript:void(0)">当地玩乐</a></li>
+                <li class="active" data-id="ticket"><a href="javascript:void(0)">门票</a></li>
+            </ul>
+        </div>
+        <div class="search_result" style="top: 40px;">
+            <a class="img-box" id="imgBox"></a>
+
+            <div class="result">
+                <div id="hasResult">
+                    <ul id="result">
+                        <li id="resultPage_1" style="display:none"></li>
+                        <li class="ticket">
+                            <a href="http://m.tuniu.com/menpiao/t_364">
+                                <div class="img">
+                                    <img src="./我的附近_files/628943f5edb8c72c302483ea65e8c2f0_w180_h180_c1_t0.jpg">
+                                    <span class="category">门票</span>
+                                </div>
+                                <div class="title">
+                                    鼓浪屿
+                                </div>
+                                <div class="icon">
+                                </div>
+                                <div class="text_info">开放时间：旺季：6月-9月 07:30-21:00；淡季：10月-5月 07:30-20:30</div>
+                                <div class="market_price">市场价：￥78</div>
+                                <div class="advanced_info">
+                                    <div class="price">
+                                        <span>￥<strong>48</strong></span>起
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ticket">
+                            <a href="http://m.tuniu.com/menpiao/t_786071">
+                                <div class="img">
+                                    <img src="./我的附近_files/Cii9EFcquHaIRsOwAATR2mmQuOkAAFRRwEbSwUABNHy533_w180_h180_c1_t0.jpg">
+                                    <span class="category">门票</span>
+                                </div>
+                                <div class="title">
+                                    厦门方特梦幻王国
+                                </div>
+                                <div class="icon">
+                                </div>
+                                <div class="text_info">开放时间：周一至周五09:30-17:30；周末及节假日09:00-18:00</div>
+                                <div class="advanced_info">
+                                    <div class="price">
+                                        <span>￥<strong>65</strong></span>起
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ticket">
+                            <a href="http://m.tuniu.com/menpiao/t_51654">
+                                <div class="img">
+                                    <img src="./我的附近_files/2037496a2f07e4b1a0a79a442f7257e5_w180_h180_c1_t0.jpg">
+                                    <span class="category">门票</span>
+                                </div>
+                                <div class="title">
+                                    厦门科技馆
+                                </div>
+                                <div class="icon">
+                                </div>
+                                <div class="text_info">开放时间：周二至周日9:00-17:00</div>
+                                <div class="advanced_info">
+                                    <div class="price">
+                                        <span>￥<strong>70</strong></span>起
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ticket">
+                            <a href="http://m.tuniu.com/menpiao/t_38588">
+                                <div class="img">
+                                    <img src="./我的附近_files/76d6b55da95d1594824596361a81b373_w180_h180_c1_t0.jpg">
+                                    <span class="category">门票</span>
+                                </div>
+                                <div class="title">
+                                    观音山梦幻海岸
+                                </div>
+                                <div class="icon">
+                                </div>
+                                <div class="text_info">开放时间：10:00—19:00</div>
+                                <div class="market_price">市场价：￥80</div>
+                                <div class="advanced_info">
+                                    <div class="price">
+                                        <span>￥<strong>60</strong></span>起
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ticket">
+                            <a href="http://m.tuniu.com/menpiao/t_789446">
+                                <div class="img">
+                                    <img src="./我的附近_files/8e7c87b20f13eabe332f6d9115d9fb9f_w180_h180_c1_t0.jpg">
+                                    <span class="category">门票</span>
+                                </div>
+                                <div class="title">
+                                    厦门日月谷温泉
+                                </div>
+                                <div class="icon">
+                                </div>
+                                <div class="text_info">开放时间：10:00-24:00</div>
+                                <div class="market_price">市场价：￥98</div>
+                                <div class="advanced_info">
+                                    <div class="price">
+                                        <span>￥<strong>88</strong></span>起
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ticket">
+                            <a href="http://m.tuniu.com/menpiao/t_38258">
+                                <div class="img">
+                                    <img src="./我的附近_files/19ec39ed91c520dfb95a4bd7064c777a_w180_h180_c1_t0.jpg">
+                                    <span class="category">门票</span>
+                                </div>
+                                <div class="title">
+                                    金厦海域游(海上看金门)
+                                </div>
+                                <div class="icon">
+                                </div>
+                                <div class="text_info">开放时间：08:00—17:00</div>
+                                <div class="market_price">市场价：￥136</div>
+                                <div class="advanced_info">
+                                    <div class="price">
+                                        <span>￥<strong>80</strong></span>起
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ticket">
+                            <a href="http://m.tuniu.com/menpiao/t_38257">
+                                <div class="img">
+                                    <img src="./我的附近_files/52f03c6926474a8d767fca5097631c04_w180_h180_c1_t0.jpg">
+                                    <span class="category">门票</span>
+                                </div>
+                                <div class="title">
+                                    鹭江夜游
+                                </div>
+                                <div class="icon">
+                                </div>
+                                <div class="text_info">开放时间：20:00开船</div>
+                                <div class="market_price">市场价：￥136</div>
+                                <div class="advanced_info">
+                                    <div class="price">
+                                        <span>￥<strong>60</strong></span>起
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ticket">
+                            <a href="http://m.tuniu.com/menpiao/t_2027330">
+                                <div class="img">
+                                    <img src="./我的附近_files/Cii9EFcpav6IdT9UAAG8Y3yFTRYAAFPlwPzdI0AAbx7849_w180_h180_c1_t0.jpg">
+                                    <span class="category">门票</span>
+                                </div>
+                                <div class="title">
+                                    五缘湾帆船游艇港
+                                </div>
+                                <div class="icon">
+                                </div>
+                                <div class="market_price">市场价：￥178</div>
+                                <div class="advanced_info">
+                                    <div class="price">
+                                        <span>￥<strong>78</strong></span>起
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ticket">
+                            <a href="http://m.tuniu.com/menpiao/t_1797999">
+                                <div class="img">
+                                    <img src="./我的附近_files/Cii-TFeZ10uIKPxUAARYK-WOj0QAAAjGgLkwNsABFhD299_w180_h180_c1_t0.png">
+                                    <span class="category">门票</span>
+                                </div>
+                                <div class="title">
+                                    厦门灵玲动物王国
+                                </div>
+                                <div class="icon">
+                                </div>
+                                <div class="text_info">开放时间：10:00-18:00</div>
+                                <div class="market_price">市场价：￥60</div>
+                                <div class="advanced_info">
+                                    <div class="price">
+                                        <span>￥<strong>60</strong></span>起
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ticket">
+                            <a href="http://m.tuniu.com/menpiao/t_5097">
+                                <div class="img">
+                                    <img src="./我的附近_files/413e5c5022242261dfd4f78bce7c3127_w180_h180_c1_t0.jpg">
+                                    <span class="category">门票</span>
+                                </div>
+                                <div class="title">
+                                    厦门胡里山炮台
+                                </div>
+                                <div class="icon">
+                                </div>
+                                <div class="text_info">开放时间：07:30-18:00</div>
+                                <div class="market_price">市场价：￥25</div>
+                                <div class="advanced_info">
+                                    <div class="price">
+                                        <span>￥<strong>23</strong></span>起
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li id="resultPage_2" style="display:none"></li>
+                    </ul>
+                    <div class="to-top" id="toTop" style="display: none;">
+                        <div class="icon-up icon"></div>
+                        顶部
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="filter-bar-box active">
+            <div class="filter-bar filter-count-4">
+                <div class="filter-btn" data-type="1" data-show-index="1">
+                    <i class="filter-icon icon-price2"></i>
+                    <span>价格区间</span></div>
+                <div class="filter-btn checkbox-group" data-type="2" data-show-index="2">
+                    <i class="filter-icon icon-sift"></i>
+                    <span>特色筛选</span></div>
+                <div class="filter-btn " data-type="3" data-show-index="3">
+                    <i class="filter-icon icon-sequence"></i>
+                    <span>推荐排序</span></div>
+            </div>
+        </div>
+        <div class="filter-bar-back" style="min-height: 580px;">
+            <div class="filter-box">
+                <div class="filter-func">
+                    <div class="filter-cancel">取消</div>
+                    <div class="filter-clear">清空已选<i class="icon-delete2 filter-delete-icon filter-delete"></i></div>
+                    <div class="filter-confirm">确定</div>
+                </div>
+                <div class="filter-content-box">
+                    <div class="filter-content single filter-need-scroll" data-type="1">
+                        <ul class="filter-list filter-radio filter-data-box" data-data-index="2" data-change="0">
+                            <li class="filter-data default  active">不限<i class="filter-icon icon-gou"></i></li>
+                            <li class="filter-data" data-index="0">0元 ~ 50元<i class="filter-icon icon-gou"></i>
+                            </li>
+                            <li class="filter-data" data-index="1">50元 ~ 100元<i class="filter-icon icon-gou"></i></li>
+                            <li class="filter-data" data-index="2">100元以上<i class="filter-icon icon-gou"></i></li>
+                        </ul>
+                    </div>
+                    <div class="filter-content" data-type="2">
+                        <div class="filter-sidebar-box">
+                            <div class="filter-sidebar left filter-need-scroll">
+                                <ul>
+                                    <li class="active">
+                                        <div class="text">景点主题<i class="filter-changed-icon"></i></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="filter-sidebar right filter-need-scroll">
+                                <div class="filter-sidebar-content active">
+                                    <ul class="filter-list filter-data-box" data-data-index="3">
+                                        <li class="filter-data default only active">不限
+                                            <i class="icon-choice filter-icon filter-checkbox"></i>
+                                        </li>
+                                        <li ng-repeat="label in result.themeLabels"
+                                            class="filter-data" data-index="{{$index}}">{{label.name}}
+                                            <i class="icon-no-choice filter-icon filter-checkbox"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-content single filter-need-scroll" data-type="3">
+                        <ul class="filter-list filter-radio filter-data-box" data-data-index="4" data-change="1">
+                            <li class="filter-data default" data-index="0">推荐排序<i class="filter-icon icon-gou"></i></li>
+                            <li class="filter-data" data-index="1">30天销量最高<i class="filter-icon icon-gou"></i></li>
+                            <li class="filter-data" data-index="2">满意度最高<i class="filter-icon icon-gou"></i></li>
+                            <li class="filter-data" data-index="3">价格从高到低<i class="filter-icon icon-gou"></i></li>
+                            <li class="filter-data" data-index="4">价格从低到高<i class="filter-icon icon-gou"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div ng-show="loading">-->
+    <!--<div class="yuloading"><span>加载数据中...</span></div>-->
+    <!--</div>-->
+</div>

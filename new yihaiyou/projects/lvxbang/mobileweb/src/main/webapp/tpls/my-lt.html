@@ -1,0 +1,43 @@
+<div ng-controller="myltCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">我的印象</a></li>
+        </ul>
+    </div>
+    <div id="yjcontainer" class="clearfix">
+        <!--<div class="subheader"><a ui-sref="my-lt" class="active">印象</a><a ui-sref="my-lt-yj">游记</a></div>-->
+        <div class="myltlist clearfix" infinite-scroll="impressionList()" infinite-scroll-distance='1'
+             infinite-scroll-disabled='loading'>
+            <div class="my-lt-yxlist clearfix" ng-repeat="data in yxlist">
+                <a ui-sref="yxdetail({id: data.id})">
+                    <p class="clearfix thumb"><img bn-lazy-src="{{data.cover}}" class="img-responsive"/></p>
+                    <!--<span class="checkinput"><input name="" type="checkbox" ng-model="chk" ng-click="check(chk)"/></span>-->
+                    <div class="info">
+                        <h2 class="name clearfix"><span class="pull-left">{{data.placeName}}</span><span
+                                class="pull-right"><span
+                                class="view">{{data.browsingNum}}</span><span
+                                class="time">{{data.createTime}}</span></span></h2>
+
+                        <p class="text">{{data.content}}</p>
+                    </div>
+                </a>
+                <a ng-click="deleteRow(this);" class="trash img-circle">
+                    <span><img src="images/ico/trash.png" class="img-responsive center-block"/></span>
+                </a>
+            </div>
+            <div ng-show="loading"><div class="yuloading"><span>加载数据中...</span></div></div>
+            <div ng-show="nomore" class="alert alert-danger text-center">没有更多数据了</div>
+        </div>
+    </div>
+    <!--<div class="mybottom text-center col-xs-12 scyj"><a ui-sref=""><span>生成游记</span></a></div>-->
+</div>
+<script>
+    //选择
+    $(document).ready(function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    });
+</script>

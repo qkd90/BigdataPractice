@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.activity.mapper.NotificationMapper">
+    <!-- 添加 -->
+    <insert id="insert" parameterType="Notification">
+        insert into tb_notification
+        (
+        id,
+        content,
+        status,
+        create_time,
+        modify_time
+        )
+        values
+        (
+        #{id},
+        #{content},
+        #{status},
+        #{createTime},
+        #{modifyTime}
+        )
+    </insert>
+    <!-- 修改 -->
+    <update id="update" parameterType="Notification">
+        update tb_notification
+        <set>
+            <if test="id != null and '' != id"> id = #{id},</if>
+            <if test="content != null and '' != content"> content = #{content},</if>
+            <if test="status != null and '' != status"> status = #{status},</if>
+            <if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+            <if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+        </set>
+        where
+        id = #{id}
+    </update>
+    <!-- 删除 -->
+    <delete id="del" parameterType="Notification">
+        delete from
+        tb_notification
+        where
+        id = #{id}
+    </delete>
+    <!-- 根据id查询 -->
+    <select id="selById" resultType="Notification">
+        select
+        *
+        from
+        tb_notification
+        where
+        id = #{id}
+    </select>
+
+    <!-- 查询集合 -->
+    <select id="list" resultType="Notification">
+        select
+        *
+        <include refid="byProperty"/>
+    </select>
+
+    <sql id="byProperty">
+        from
+        tb_notification
+        <where>
+            <if test="id != null and '' != id"> and id = #{id} </if>
+            <if test="content != null and '' != content"> and content like "%"#{content}"%" </if>
+            <if test="status != null and '' != status"> and status = #{status} </if>
+            <if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+            <if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+            <if test="ids != null and ids.size() > 0">
+                and id in
+                <foreach item="item" index="index" collection="ids" open="("
+                         separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+        <choose>
+            <when test="orderColumn != null and '' != orderColumn">
+                ORDER BY ${orderColumn}
+                <if test="orderType != null and '' != orderType">
+                    ${orderType}
+                </if>
+            </when>
+            <otherwise>
+                order by id desc
+            </otherwise>
+        </choose>
+    </sql>
+</mapper>

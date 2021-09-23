@@ -1,0 +1,125 @@
+<div ng-controller="orderTwoCtrl" style="padding-bottom:40px">
+<header class="header-box fixed" id="header">
+            <span class="header-back">
+                <a ng-click="goBack()"><i class="icon-title-back effect-active"></i></a>
+            </span>
+    <h1>2/2填写订单</h1>
+</header>
+
+    <div class="wrapper" id="totalDiv" style="padding-bottom: 0px;">
+    <div class="container containban" id="container" style="margin:0;position:static"><div class="box">
+        <div class="title">
+            <!-- <div class="sp-box">
+                 <div class="sp"></div>
+            </div>-->
+            <div class="text">联系人信息</div>
+        </div>
+        <div class="content form">
+            <div class="content-cell">
+                <div class="cell-title">姓名</div><div class="cell-input">
+                <input type="text" name="realname" placeholder="必填" value="" ng-model="contact.name" required>
+            </div>
+            </div>
+            <div class="content-cell" style="">
+                <div class="cell-title">手机</div><div class="cell-input">
+                <span class="interCode">+86</span>
+                <div class="interIcon"></div>
+                <input type="tel" name="number" placeholder="必填，用于接收订单确认信息" value="" required
+                       ng-model='contact.telephone'>
+            </div>
+            </div>
+        </div>
+    </div>
+        <div class="box" ng-if="needGuarantee">
+            <div class="title">
+                <div class="text" ng-click="toGuarantee()">填写担保信息&gt;</div>
+            </div>
+        </div>
+        <div class="box" id="changeTourists">
+            <div class="title">
+               <!-- <div class="sp-box">
+                    <div class="sp"></div>
+                </div>-->
+                <div class="text">游客信息</div>
+                <div class="right" ng-click="toTouristList()">编辑游客信息&gt;</div>
+            </div>
+            <div class="content tourists">
+
+                <div class="content-cell order_pa empty" ng-repeat="tourist in selectedAdultTourist" style="margin:0">
+                    <!-- <div class="user">
+                         <div><i class="icon icon-account"></i> <span class="user-name"></span></div>
+                         <div class="identify-code"><span class="psptType"></span> <span class="psptId"></span></div>
+                    </div>-->
+                    <div class="placeholder">{{tourist.name}}</div>
+                </div>
+
+                <div class="content-cell empty" ng-repeat="tourist in selectedChildTourist">
+                    <div class="user">
+                        <div><i class="icon icon-account"></i> <span class="user-name"></span></div>
+                        <div class="identify-code"><span class="psptType"></span> <span class="psptId"></span></div>
+                    </div>
+                    <div class="placeholder">{{tourist.name}}</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="box" id="touristsRestrict" style="margin-bottom:0">
+            <div class="title">
+                <!--<div class="sp-box">
+                    <div class="sp"></div>
+                </div>-->
+                <div class="text">出游人群限制</div>
+            </div>
+            <div class="content" id="confirmLabel">
+
+                <div class="content-cell limit-cell" data-id="1" data-limit="1">
+                    <div>不接受大于65周岁(含)出游人</div>
+                </div>
+
+                <div class="content-cell limit-cell" data-id="4" data-limit="1">
+                    <div>不接受20周岁(含)至65(含)周岁之外出游人</div>
+                </div>
+
+                <div class="content-cell limit-cell" data-id="5" data-limit="1">
+                    <div>不接受外籍友人(含台湾同胞)</div>
+                </div>
+
+                <div class="content-cell limit-cell" data-id="6" data-limit="1">
+                    <div>不支持全是未成年人出游</div>
+                </div>
+                <div class="limit-agree order2_agree">
+                    <i class="icon-choice agree-icon Qorder_agree" id="limit-agree" style="margin-left:5px"></i>
+                    <span>我确认全部出游人满足出游条件</span>
+                </div>
+            </div>
+        </div>
+        <div class="agree_agreement order2_agree">
+            <i class="icon-choice agree-icon" id="note-agree"></i>
+            <span>我已阅读</span>
+            <a class="agreement" ui-sref="orderbooking">预定须知和合同</a>
+        </div>
+    </div>
+
+    <!--<div class="btn-box-placeholder">-->
+        <div class="btn-box fix order_ft">
+            <a class="btn btn-em fr" ng-click="submitOrder()">立即支付</a>
+            <div class="v-center-info">
+                <div class="date">
+                    套餐价：
+                    <span class="price"><i>￥</i><span>{{totalPrice + insurancePrice}}</span></span>
+                    <span class="details fare_green" id="fare_detail">费用明细</span>
+                </div>
+            </div>
+        </div>
+    <!--</div>-->
+    <div class="fare_detail">
+        <ul>
+            <li><span class="fare_leftSpan">出游团费</span><span class="fare_rightSpan"><em>￥{{totalPrice}}</em></span></li>
+            <li><span class="fare_leftSpan">成人 ×{{adultNum}}</span><span class="fare_rightSpan">￥{{adultPrice}}/人 ×{{adultNum}}</span></li>
+            <li ng-if="childNum > 0"><span class="fare_leftSpan">儿童 ×{{childNum}}</span><span class="fare_rightSpan">￥{{childPrice}}/人 ×{{childNum}}</span></li>
+            <li ng-if="oasiaHotel > 0"><span class="fare_leftSpan">单房差：</span><span class="fare_rightSpan"><em>￥{{oasiaHotel}}</em></span></li>
+            <li><span class="fare_leftSpan">保险费用：</span><span class="fare_rightSpan"><em>￥{{insurancePrice}}</em></span></li>
+        </ul>
+    </div>
+</div>
+</div>

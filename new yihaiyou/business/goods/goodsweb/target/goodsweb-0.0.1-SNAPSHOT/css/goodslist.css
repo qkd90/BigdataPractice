@@ -1,0 +1,66 @@
+
+#linetable {
+    width: 100%; height: 100%;
+}
+
+#addbtn{
+    /*position: absolute;*/
+    /*right: 30px;*/
+    /*top: 4px;*/
+    /*z-index: 1000;*/
+}
+
+#exinfo{
+    /*position: absolute;*/
+    /*left: 230px;*/
+    /*top: 10px;*/
+}
+
+.c-panel{
+    width: 500px;
+}
+.c-form{
+    width: 500px;
+    padding-left: 20px;
+}
+
+ul li {
+    list-style-type:none;
+}
+.title1 {
+    height: 46px;
+    line-height: 46px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #00acee;
+}
+
+.greyblock {
+    color: #888;
+}
+.valuezone {
+    display:inline
+}
+em {
+    padding: 0 3px 0 0;
+    color: #ff7575;
+    font-size: 13px;
+    font-family: "宋体";
+}
+.leftpadding {
+    padding-left: 70px;
+}
+.c-subbtn {
+    padding: 1px;
+    margin-left: 160px;
+    font-weight: bold;
+    overflow: visible;
+    cursor: pointer;
+}
+li {
+    margin-bottom:20px
+}
+ul {
+    padding-top: 20px;
+}

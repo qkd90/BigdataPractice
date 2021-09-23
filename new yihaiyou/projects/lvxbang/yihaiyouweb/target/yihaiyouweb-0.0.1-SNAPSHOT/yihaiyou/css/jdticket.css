@@ -1,0 +1,187 @@
+
+/*门票首页*/
+.ticket-index .header-box.fixed_ticket i{
+    color: white!important;
+}
+.ticket-index .header-box.fixed_ticket i{
+    color: white!important;
+    padding-top: 10px;
+    position: absolute;
+}
+.ticket-index .header-box h1{
+    padding-top: 13px;
+}
+.wrapper-ticket{
+    position: absolute;
+    top:45px;
+    padding-top: 0!important;
+}
+
+.ticket-index .header-box.fixed_ticket {
+    background-color: #3d98ff;
+    color: white;
+}
+.city-select:after {
+
+    border-bottom:none;
+    border-right:none;
+}
+.produ_lis_header .pro_header_main .gty_center{
+    text-indent:0!important;
+}
+.content-container-ticket .hot-scenic .hot-scenic-content ul li .des-content-ticket .price .money{
+    color: #ff7d13;
+}
+ .pro_header_main{
+    background: #3d98ff!important;
+}
+
+.s_left1{
+    color: #ff7d13;
+    font-size: 16px;
+}
+.s_left2{
+    color: #ff7d13;
+    padding: 2px 3px;
+}
+/*去除目的地的选项。下方变成三个弹框*/
+.produc_main .produc_under_ul li{
+    width: 33.33%;
+}
+/*景点详情*/
+.product-info .product-table .product-cell-icon{
+    color: #88ce36;
+}
+.scenicDetail .tab .ticket-price .new-price{
+    color: #ff7d12;
+}
+
+.scenicDetail .tab .ticket-btn .book{
+    background: #ffa60b;
+}
+.scenicDetail .tab .ticket-detail .block-title{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    /*margin-left: 10px;*/
+}
+.scenicDetail .tab .ticket-btn .tips{
+    background: #ffeac7;
+}
+.scenicDetail .tab .ticket-detail .block-content{
+    /*margin-left: 5px;*/
+    margin-right: 5px;
+}
+.scenicDetail .block-title{
+    padding-left: 10px;
+}
+.scenicDetail .block-content{
+   padding-left: 5px;
+    font-size:1.3rem;
+}
+
+
+
+
+/*景点页面弹框颜色修改*/
+.pro_desDay_picture span{
+    /*color: #3d98ff!important;*/
+    color: black!important;
+}
+.pro_desDay_green{
+    color: #3d98ff!important;
+}
+.pro_desSel_bg{
+    color: #3d98ff!important;
+}
+.pro_green{
+    color: #3d98ff!important;
+}
+
+
+/*门票页面 去掉筛选栏*/
+.produc_main .swiper-container{
+    display: none;
+}
+.produc_main .produc_contain_ul li:nth-child(3){
+    margin-top: 0px!important;
+}
+.produc_main .produc_contain_span{
+    height: 90px;
+}
+.produc_main .produc_contain_detail{
+    height:105px;
+}
+.produc_main .jdweizhi li{
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+/*搜索页面*/
+.m_header_search .search_bar .search_cancel{
+    color: #3d98ff!important;
+}
+.m_header_search .search_bar .search_main .search_button{
+    color: #3d98ff!important;
+}
+.search_pop .search_history .clear_history{
+    color: #3d98ff!important;
+}
+.search_pop .search_more_destinations a{
+    color: #3d98ff!important;
+}
+
+/*填写订单页*/
+.header-box .header{
+    background: #3d98ff!important;
+}
+.header-box .header .title{
+    color: white;
+}
+.header-box .header .back_icon_control .icon-arrow-left{
+    color: white;
+}
+.fc-view, .fc-view > table{
+    border: none;
+}
+
+
+/*去除浮动返回箭头*/
+.scenicDetail .header .history-opration{
+    display: none;
+}
+
+
+.ticketTouristListCtrl .topbg{
+    background: #3d98ff;
+}
+.ticketTouristListCtrl .sirendz{
+    background:  #ff7800;
+}
+.editTouristCtrl .ticketTouristListCtrl #fxtop li a.goback{
+    background: url(../images/icon-go-back.png) 10px center no-repeat!important;
+    background-size: 10px 20px!important;
+}
+.mybottom.sirendz.text-center span{
+    background: none;
+    padding-left: 0px;
+}
+
+.editTouristCtrl .btn-logout, .btn-logout:hover, .btn-logout.active{
+    background:  #ff7800;
+}
+#fxtop li a.goback{
+    /*background: url(../images/icon-go-back.png) 10px center no-repeat!important;*/
+    background-size: 10px 20px!important;
+}
+.editTouristCtrl .topbg{
+    background: #3d98ff;
+}
+
+
+.red11{color:red!important;background-color: grey;}
+
+.bodystop {
+    position:fixed;
+    left:0;
+    top:0;
+}

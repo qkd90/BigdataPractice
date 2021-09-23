@@ -1,0 +1,1657 @@
+
+.hotelOrder {
+    background-color: #f3f3f3;
+}
+
+.body_order {
+    width: 1200px;
+    margin: auto;
+    font-family: '微软雅黑';
+}
+
+.body_order .progress {
+    width: 1200px;
+    height: 30px;
+    margin-top: 20px;
+    background: url(/image/progress_01.png) no-repeat center center;
+}
+
+.body_order .progress2 {
+    background: url(/image/progress_02.png) no-repeat center center;
+}
+
+.body_order .progress3 {
+    background: url(/image/progress_03.png) no-repeat center center;
+}
+
+.body_order .progress span {
+    width: 33%;
+    height: 100%;
+    float: left;
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+    color: #666;
+}
+
+.body_order .progress .active {
+    color: #fff;
+}
+
+.body_order .orderMessage {
+    width: 1200px;
+    margin-top: 30px;
+}
+
+.orderMessage .messageLeft {
+    float: left;
+    width: 780px;
+}
+
+.orderMessage .messageLeft .messBox {
+    width: 777px;
+    background-color: #f3f8fe;
+}
+
+.orderMessage .messageLeft .roomMess {
+    border: 1px solid #e0e0e0;
+}
+
+.orderMessage .messageLeft .hostMess {
+    border: 1px solid #e0e0e0;
+    border-top: none;
+}
+
+.messageLeft .messBox .messTitle {
+    width: 100px;
+    float: left;
+    line-height: 90px;
+    font-size: 15px;
+    color: #3f3f3f;
+    text-align: center;
+}
+
+.messageLeft .messBox .messContain {
+    width: 655px;
+    float: right;
+    position:relative;
+    padding: 30px 10px;
+    background-color: #fff;
+    border-left: 1px solid #e0e0e0;
+}
+
+.roomMess .messContain p {
+    line-height: 40px;
+    font-family: 'AdobeInvisFont';
+}
+
+.roomMess .messContain p span {
+    padding-left: 10px;
+}
+
+.roomMess .messContain p .data_in {
+    font-family: 'SimSun';
+    font-size: 12px;
+    color: #666;
+}
+
+.roomMess .messContain p .date_during {
+    font-size: 14px;
+    font-family: '微软雅黑';
+}
+
+.roomMess .messContain p .date_bold {
+    /*font-weight: 600;*/
+}
+
+.roomMess .messContain p .modify {
+    color: #3488e2;
+    font-size: 13px;
+    font-family: 'SimSun';
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.roomMess .messContain p .dataNum {
+    border: 1px solid #e0e0e0;
+    padding: 5px 0;
+    margin-left: 10px;
+}
+
+.roomMess .messContain p .dataNum span {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.roomMess .messContain p .dataNum .sub {
+    font-weight: 600;
+    color: #999;
+    cursor: pointer;
+}
+
+.roomMess .messContain p .dataNum .add {
+    font-weight: 600;
+    color: #3996fa;
+    cursor: pointer;
+}
+
+.roomMess .messContain p .dataNum .r_num {
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    padding: 5px 23px;
+}
+
+.roomMess .messContain p span.rmb {
+    vertical-align: super;
+}
+
+.roomMess .messContain p span.price {
+    color: #ff8800;
+    font-family: '微软雅黑'
+}
+
+.roomMess .messContain p span.num {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 0 2px;
+    font-family: '微软雅黑'
+}
+
+.roomMess .messContain p span.qi {
+    font-size: 12px;
+    padding-left: 0;
+}
+
+.hostMess .messContain .p {
+    line-height: 36px;
+    font-size: 12px;
+    font-family: 'AdobeInvisFont';
+}
+
+.hostMess .messContain .p .host_lefttitle {
+    display: inline-block;
+    font-family: 'SimSun';
+    font-size: 12px;
+    color: #666;
+    padding-left: 10px;
+    width: 64px;
+}
+
+/*.hostMess .messContain .p .yzcode {*/
+    /*display:inline-block;*/
+/*}*/
+
+.hostMess .messContain .p .host_lefttitle label {
+    color: #f00;
+    vertical-align: super;
+}
+
+.messContain .p .host_room, .messContain .p .host_smessage {
+    height: 27px;
+    width: 137px;
+    padding: 5px;
+    color: #868686;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    font-family: 'AdobeInvisFont';
+    margin-top: 8px;
+    box-sizing: border-box;
+}
+
+.messContain .p .host_smessage {
+    width: 137px;
+}
+
+.messContain .p .phoNum {
+    width: 130px;
+    height: 25px;
+    padding-left: 5px;
+    color: #000;
+    line-height: 25px;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    font-family: 'AdobeInvisFont';
+}
+
+.messContain .p .phoNum .down {
+    float: right;
+    width: 22px;
+    height: 100%;
+    cursor: pointer;
+    border-left: 1px solid #e0e0e0;
+    background: url(/image/icon-down.png) no-repeat center center;
+}
+
+.messContain .p .phoneNum {
+    width: 140px;
+    left: 75px;
+    top: 36px;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+}
+
+.messContain .p .phoneNum ul {
+    border: 1px solid #e0e0e0;
+    border-bottom: 0;
+}
+
+.messContain .p .phoneNum ul li {
+    width: 100%;
+    height: 27px;
+    font-size: 12px;
+    text-indent: 1em;
+    line-height: 27px;
+    font-family: 'SimSun';
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.messContain .p .host_email {
+    height: 27px;
+    width: 300px;
+    padding: 5px;
+    color: #868686;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    font-family: 'AdobeInvisFont';
+    box-sizing: border-box;
+}
+
+.messContain .p .save_code {
+    width: 80px;
+    height: 27px;
+    margin: 8px 10px 0 10px;
+    float:left;
+}
+
+.messContain .p .yzs {
+    float:left;
+}
+
+.messContain .p .ml {
+    margin-left:4px;
+}
+
+.messContain .p .save_change {
+    display: inline-block;
+    padding: 0 6px;
+    color: #3996fa;
+    line-height: 42px;
+}
+
+.messageLeft .handin {
+    width: 738px;
+    height: 66px;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #3996fa;
+    background-color: #f3f8fe;
+}
+
+.handin .return {
+    width: 105px;
+    height: 100%;
+    line-height: 90px;
+    float: left;
+    font-family: '微软雅黑';
+    color: #000;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.handin .pay {
+    width: 365px;
+    float: right;
+}
+
+.handin .pay .payNum {
+    width: 220px;
+    height: 100%;
+    float: left;
+}
+
+.handin .pay .payNum p {
+    font-size: 13px;
+    padding-left: 20px;
+    font-family: '微软雅黑';
+}
+
+.handin .pay .payNum p.p1 {
+    color: #ff8800;
+    font-size: 13px;
+    font-family: 'SimHei';
+}
+
+.handin .pay .payNum p.p2 {
+    background: url(/image/icon-true.png) no-repeat left center;
+    background-size: 13px;
+    cursor: pointer;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 24px;
+}
+
+.handin .pay .payNum p.p3 {
+    background: url(/image/icon-false.png) no-repeat left center;
+    background-size: 13px;
+    color: #999;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 24px;
+}
+
+.payNum p span.yuan {
+    color: #000;
+    vertical-align: super;
+}
+
+.payNum p span.rmb {
+    vertical-align: super;
+}
+
+.payNum p span.price {
+    color: #ff8800;
+    font-family: '微软雅黑'
+}
+
+.payNum p span.num {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0 2px;
+}
+
+.handin .pay .payBtn,.handin .pay .guaranteeBtn {
+    width: 144px;
+    height: 51px;
+    float: right;
+    color: #fff;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 12px;
+    line-height: 51px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #3996fa;
+}
+
+.orderMessage .messageRight {
+    float: right;
+    width: 360px;
+    padding: 20px 20px 0 20px;
+    background-color: #f3f8fe;
+    border: 1px solid #e0e0e0;
+}
+
+.messageRight .mess_right_top {
+    width: 100%;
+}
+
+.messageRight .mess_right_top .pictrue {
+    width: 100%;
+    height: 161px;
+}
+
+.messageRight .mess_right_top .pictrue img {
+    width: 100%;
+    height: 100%;
+}
+
+.mess_right_top .address {
+    padding: 7px 0 15px 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.mess_right_top .address p.h_name {
+    font-size: 16px;
+    line-height: 34px;
+}
+
+.mess_right_top .address p.h_room {
+    font-size: 14px;
+    line-height: 34px;
+}
+
+.mess_right_top .address p.h_address {
+    color: #555;
+    font-size: 12px;
+    line-height: 22px;
+    font-family: 'SimSun';
+}
+
+.messageRight .mess_right_bottom {
+    padding-top: 13px;
+    height: 250px;
+}
+
+.messageRight .mess_right_bottom p {
+    color: #555;
+    font-size: 12px;
+    padding-bottom: 16px;
+    font-family: 'AdobeInvisFont';
+}
+
+.messageRight .mess_right_bottom .fir_p {
+    color: #000;
+    font-size: 14px;
+    font-family: '微软雅黑';
+}
+
+.shadow {
+    top: 0;
+    left: 0;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);
+}
+
+.handInbox {
+    z-index: 7;
+    padding: 20px;
+    width: 522px;
+    height: 549px;
+    position: fixed;
+    display: none;
+    background-color: #fff;
+}
+
+.handInbox .closeBtn {
+    float: right;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: url(/image/icon_close.png) no-repeat center center;
+}
+
+.handInbox .handin_state {
+    clear: both;
+    padding-bottom: 30px;
+    font-family: '微软雅黑';
+    border-bottom: 1px dashed #e0e0e0;
+    background: url(/image/order_pro.png) no-repeat 40px 0;
+}
+
+.handInbox .handin_state .att_pic {
+    color: #555;
+    font-size: 24px;
+    line-height: 40px;
+    text-indent: 100px;
+}
+
+.handInbox .handin_state .lett {
+    color: #aaa;
+    font-size: 14px;
+    padding-top: 15px;
+    text-indent: 100px;
+}
+
+.handInbox .handin_mess {
+    padding: 30px 30px 10px 30px;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.handInbox .handin_mess p {
+    color: #555;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-family: '微软雅黑';
+}
+
+.handInbox .handin_mess .p_name {
+    color: #666;
+    font-size: 20px;
+    font-family: 'SimSun';
+}
+
+.handInbox .handin_mess .p_name i {
+    padding: 0 40px;
+}
+
+.handInbox .handin_mess .p_name i.star0 {
+    background: url(/image/x-star00.png) no-repeat center center;
+}
+
+.handInbox .handin_mess .p_name i.star1 {
+    background: url(/image/x-star01.png) no-repeat center center;
+}
+
+.handInbox .handin_mess .p_name i.star2 {
+    background: url(/image/x-star02.png) no-repeat center center;
+}
+
+.handInbox .handin_mess .p_name i.star3 {
+    background: url(/image/x-star03.png) no-repeat center center;
+}
+
+.handInbox .handin_mess .p_name i.star4 {
+    background: url(/image/x-star04.png) no-repeat center center;
+}
+
+.handInbox .handin_mess .p_name i.star5 {
+    background: url(/image/x-star05.png) no-repeat center center;
+}
+
+.handInbox .handin_mess p .t_order {
+    color: #4e4e4e;
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 3px 10px;
+    display: inline-block;
+    border: 1px solid #ff8800;
+}
+
+.handInbox .handin_mess p .p_left {
+    padding-right: 20px;
+}
+
+.handInbox .handin_mess p span.yi {
+    font-size: 12px;
+    color: #333;
+    padding: 3px 11px;
+    text-align: right;
+    display: inline-block;
+    margin-left: 20px;
+    background: url(/image/yi_bq.png) no-repeat center center;
+}
+
+.handInbox .handin_mess p span.rmb {
+    color: #ff8800;
+    font-size: 14px;
+    vertical-align: super;
+}
+
+.handInbox .handin_mess p span.num {
+    padding: 0 2px;
+    color: #ff8800;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'SimHei';
+}
+
+.handInbox .handin_mess p span.qi {
+    color: #ff8800;
+    font-size: 1.0rem;
+}
+
+.handInbox .handin_mess p .s_pay {
+    color: #999;
+    font-size: 13px;
+    padding-left: 20px;
+    font-family: 'AdobeInvisFont';
+}
+
+.handInbox .handin_btn .center_box {
+    width: 246px;
+    height: 40px;
+    margin: 30px auto;
+}
+
+.handInbox .handin_btn .center_box span {
+    width: 100px;
+    height: 38px;
+    color: #3996fa;
+    font-size: 18px;
+    line-height: 38px;
+    text-align: center;
+    font-family: 'SimSun';
+    border: 1px solid #3996fa;
+}
+
+.handInbox .handin_btn .center_box span.checkorder {
+    float: left;
+}
+
+.handInbox .handin_btn .center_box span.continue {
+    float: right;
+}
+
+.handInbox .handin_btn .center_box span.checkorder a, .handin_btn .center_box span.continue a {
+    display: block;
+    color: #3996fa;
+}
+
+.dateChange {
+    z-index: 7;
+    width: 562px;
+    height: 117px;
+    display: none;
+    position: fixed;
+    background-color: #fff;
+}
+
+.dateChange h3 {
+    color: #555;
+    font-size: 16px;
+    line-height: 30px;
+    text-indent: 10px;
+    font-family: '微软雅黑';
+    background-color: #f7f7f7;
+}
+
+.dateChange h3 span.closeBtn {
+    width: 30px;
+    height: 30px;
+    float: right;
+    background: url(/image/icon_close.png) no-repeat center center;
+}
+
+.dateChange .date_during {
+    width: 174px;
+    height: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+}
+
+.date_left {
+    margin-left: 34px;
+}
+
+.dateChange .date_during span {
+    line-height: 30px;
+    font-family: 'SimSun';
+}
+
+.dateChange .date_during span.state {
+    color: #555;
+    font-size: 12px;
+}
+
+.dateChange .date_during input.time {
+    color: #000;
+    font-size: 14px;
+    width: 82px;
+    border: none;
+    height: 24px;
+    outline: none;
+}
+
+.dateChange .date_during span.change {
+    width: 30px;
+    height: 30px;
+    float: right;
+    background: url(/image/icon-h-date.png) no-repeat center 40%;
+}
+
+.dateChange .zhi {
+    color: #555;
+    font-size: 12px;
+    padding: 20px 10px;
+    display: inline-block;
+}
+
+.dateChange .change_btn {
+    width: 80px;
+    color: #fff;
+    height: 32px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-left: 10px;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+    font-family: '微软雅黑';
+    background-color: #3996fa;
+}
+
+.stopScroll {
+    overflow: hidden;
+}
+
+.orderPay {
+    width: 1200px;
+    margin-top: 30px;
+    border-bottom: 3px solid #3996fa;
+}
+
+.orderPay .payTop {
+    width: 1160px;
+    height: 110px;
+    padding: 12px 20px;
+    font-family: '微软雅黑';
+    background-color: #f3f8fe;
+}
+
+.orderPay .payTop .picture {
+    width: 165px;
+    height: 100%;
+    float: left;
+}
+
+.payTop .picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.orderPay .payTop .order_mess {
+    width: 975px;
+    float: right;
+}
+
+.payTop .order_mess h3 {
+    color: #3996fa;
+    font-size: 16px;
+}
+
+.payTop .order_mess p {
+    color: #404040;
+    font-size: 13px;
+    line-height: 28px;
+}
+
+.payTop .order_mess p .l_title {
+    display:inline-block;
+    width:68px;
+    text-align:right;
+}
+
+.payTop .order_mess p.order_timer {
+    text-indent: 55px;
+    background: url(/image/icon-timer.png) no-repeat 36px center;
+}
+
+.payTop .order_mess p.order_timer span {
+    color: #ff8800;
+}
+
+.payTop .order_mess p span.date {
+    margin-left: 10px;
+    width: 130px;
+    display: inline-block;
+}
+
+.payTop .order_mess p span.week {
+    width: 100px;
+    display: inline-block;
+}
+
+.payTop .order_mess p span.roomNum {
+    margin-left: 114px;
+    width: 160px;
+    display: inline-block;
+}
+
+.payTop .order_mess p span.host {
+    width: 160px;
+    display: inline-block;
+}
+
+.payTop .order_mess p span.ferryhost {
+    margin-left:140px;
+}
+
+.payTop .order_mess p span.total {
+    color: #000;
+    width:235px;
+    font-size: 14px;
+    margin-left: 126px;
+    display: inline-block;
+}
+
+.payTop .order_mess p span.ferrypay {
+    margin-left: 229px;
+}
+
+.payTop .order_mess p span.planpay {
+    margin-left:125px;
+}
+
+.payTop .order_mess p span.rmb {
+    vertical-align: sub;
+    color: #ff8800;
+    font-size: 16px;
+}
+
+.payTop .order_mess p span.num {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0 2px;
+    color: #ff8800;
+    font-family: 'SimHei'
+}
+
+.write {
+    width: 1200px;
+    height: 660px;
+    padding-top: 1px;
+    background-color: #fff;
+}
+
+.write .center_box {
+    width: 812px;
+    height: 507px;
+    margin: 30px auto;
+    border: 1px solid #e0e0e0;
+}
+
+.write .center_box .wr_left {
+    width: 540px;
+    float: left;
+    padding: 20px;
+}
+
+.write .center_box .wr_left p {
+    margin-bottom: 20px;
+}
+
+.write .center_box .wr_left p span {
+    color: #666;
+    width: 7em;
+    padding-right: 1em;
+    font-size: 12px;
+    text-align: right;
+    font-family: 'SimSun';
+    display: inline-block;
+}
+
+.write .center_box .wr_left p input, .write .center_box .wr_left p select {
+    height: 28px;
+    outline: none;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+}
+
+.wr_left p input::-webkit-input-placeholder {
+    　　color: #868686;
+    font-size: 12px;
+    text-indent: 8px;
+    font-family: 'AdobeInvisFont';
+}
+
+.wr_left p input::-moz-placeholder {
+    color: #868686;
+    font-size: 12px;
+    text-indent: 8px;
+    font-family: 'AdobeInvisFont';
+}
+
+.wr_left p select.bank {
+    width: 118px;
+}
+
+.wr_left p input.bankCode {
+    width: 240px;
+}
+
+.wr_left p .save_code {
+    width:60px;
+}
+
+.wr_left p.codeP span,.wr_left p.codeP input,.wr_left p.codeP img,.wr_left p.codeP .save_change {
+    float:left;
+}
+
+.wr_left p.codeP span,.wr_left p.codeP .save_change {
+    margin-top:5px;
+}
+
+.wr_left p.codeP img {
+    margin:2px 5px;
+}
+
+.wr_left p.atention {
+    color: #ff8800;
+    font-size: 12px;
+    text-indent: 2em;
+    font-family: 'AdobeInvisFont';
+}
+
+.wr_left span.pay {
+    display: block;
+    width: 140px;
+    height: 40px;
+    background-color: #3996fa;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+    font-family: '微软雅黑';
+    font-size: 22px;
+    border-radius: 5px;
+    margin: 45px 108px;
+    clear:both;
+}
+
+.wr_left span.pay a {
+    display: block;
+    color: #fff;
+}
+
+.write .center_box .wr_right {
+    width: 224px;
+    height: 505px;
+    float: right;
+    background-color: #f9fbfe;
+    border: 1px solid #3996fa;
+    background: url(/image/ve_se.png) no-repeat center 430px;
+}
+
+.write .center_box .wr_right h3 {
+    color: #000;
+    font-size: 13px;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.write .center_box .wr_right ul li {
+
+    width: 148px;
+    margin: 0 40px 0 50px;
+    font-size: 12px;
+    padding: 10px 0;
+    line-height: 18px;
+    border-bottom: 1px dashed #e0e0e0;
+    list-style-type: decimal-leading-zero;
+}
+
+.payBox {
+    width: 1200px;
+    margin: auto;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: #fff;
+}
+
+.recharge {
+    width: 812px;
+    height: 60px;
+    line-height: 56px;
+    margin: 36px auto;
+    border: 1px solid #e0e0e0;
+}
+
+.recharge span.total {
+    display: inline-block;
+    color: #333;
+    font-size: 14px;
+    text-indent: 55px;
+    cursor: pointer;
+    font-family: '微软雅黑';
+    background: url(/image/icon-false.png) no-repeat 18px center;
+}
+
+.recharge span.balancepay {
+    background: url(/image/icon-true.png) no-repeat 18px center;
+}
+
+.recharge span.total span.rmb {
+    color: #ff8800;
+}
+
+.recharge span.total span.num {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 2px;
+    color: #ff8800;
+    font-family: 'SimHei'
+}
+
+.recharge span.recha {
+    color: #3996fa;
+    font-size: 16px;
+    text-decoration: underline;;
+}
+
+.recharge span.balance_disable {
+    width: 166px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    float: right;
+    margin: 15px 18px;
+    border-radius: 5px;
+    color: #f5f5f5;
+    font-size: 15px;
+    background-color: #ccc;
+}
+
+.recharge span.balance {
+    background-color: #3996fa;
+    color: #fff;
+    cursor: pointer;
+}
+
+.payList {
+    width: 812px;
+    margin: auto;
+    border-left: 1px solid #e0e0e0;
+}
+
+.payList ul {
+    position: relative;
+    height: 50px;
+    line-height: 50px
+}
+
+.payList ul li {
+    width: 190px;
+    height: 48px;
+    top: 0;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 48px;
+    text-indent: 70px;
+    position: absolute;
+    background-color: #f7f7f7;
+    border-right: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.payList ul li.t_indent {
+    text-indent:80px;
+}
+
+.payList .pay_active {
+    font-weight: 600;
+    background-color: #fff;
+    border-top: 3px solid #3996fa;
+    border-bottom: none;
+    top: -2px;
+}
+
+.payList ul li.blank {
+    width: 240px;
+    height: 49px;
+    background-color: #fff;
+    border-top: none;
+    border-right: none;
+    left: 574px;
+}
+
+.payList ul li.wechat {
+    background: url(/image/wechat_gray.png) no-repeat 40px center;
+    left: 1px;
+}
+
+.payList ul li.wechatActive {
+    background: url(/image/wechat_color.png) no-repeat 40px center;
+    left: 1px;
+}
+
+.payList ul li.zhifubao {
+    background: url(/image/zhifubao_gray.png) no-repeat 40px center;
+    left: 192px;
+}
+
+.payList ul li.zhifubaoActive {
+    background: url(/image/zhifubao_color.png) no-repeat 40px center;
+    left: 192px;
+}
+
+.payList ul li.bank {
+    background: url(/image/bank_gray.png) no-repeat 40px center;
+    left: 383px;
+}
+
+.payList ul li.bankActive {
+    background: url(/image/bank_color.png) no-repeat 40px center;
+    left: 383px;
+}
+
+.payContain {
+    width: 812px;
+    height: 508px;
+    margin: 0 auto 40px auto;
+    padding-top: 1px;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    display: none;
+}
+
+.payContain.payNext {
+    background: none;
+}
+
+.payContain.payNext .paystyle,.payContain.payNext .at_word,.payContain.payNext .bypicture {
+    display:none;
+}
+
+.payNext .pre_nex{
+    width:166px!important;
+}
+
+.payContain.active {
+    display: block;
+}
+
+.payContain.payNext .img {
+    height: 200px;
+    width: 200px;
+    margin: 134px auto 115px 300px;
+    display: none;
+}
+
+.payContain.payNext .img {
+    display: block;
+}
+
+.payferry .pre_nex {
+    width:350px;
+    height:34px;
+    margin: 0 auto;
+}
+
+.payferry .pre_nex span {
+    width: 166px;
+    height: 34px;
+    font-size: 16px;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.payferry .pre_nex .next {
+    margin:0;
+    float:right;
+}
+
+.payContain .next {
+    display: block;
+    width: 166px;
+    height: 34px;
+    background-color: #ff8800;
+    font-size: 16px;
+    line-height: 34px;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.payContain .prev {
+    background-color: #3996fa;
+    float:left;
+}
+
+.payContain.payNext .next {
+    display: none;
+}
+
+.payContain .next a,.payContain .prev a{
+    display: block;
+    color: #fff;
+}
+
+.payContain p {
+    text-align: center;
+    margin-top: 15px;
+    color: #3996fa;
+    font-size: 13px;
+}
+
+.orderover {
+    width: 1160px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.orderover .checktention {
+    height: 86px;
+    margin-bottom: 7px;
+    background: #f3f8fe url(/image/success.png) no-repeat 58px 9px;
+}
+
+.orderover .checktention p {
+    padding-left: 150px;
+    font-family: '微软雅黑';
+}
+
+.orderover .checktention p.conG {
+    color: #3996fa;
+    font-size: 16px;
+    padding-top: 15px
+}
+
+.orderover .checktention p.stylein {
+    font-size: 13px;
+    color: #404040;
+    padding-top: 15px;
+}
+
+.orderover .checktention .totalCount {
+    float: right;
+    font-size: 14px;
+    color: #000;
+    padding-top: 15px;
+    margin-right: 40px;
+}
+
+p.conG .totalCount span.rmb {
+    font-size: 14px;
+    color: #ff8800;
+}
+
+p.conG .totalCount span.num {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0 2px;
+    color: #ff8800;
+    font-family: 'SimHei';
+}
+
+.orderover .check_returnmess {
+    padding-left: 150px;
+}
+
+.orderover .check_returnmess p span {
+    display: inline-block;
+    width: 350px;
+    color: #404040;
+    font-size: 13px;
+    padding-top: 17px;
+}
+
+.orderover .check_returnmess p label.ordrcode {
+    color: #3996fa;
+}
+
+.orderover .check_returnmess .lastbtn {
+    width: 290px;
+    height: 30px;
+    margin: 30px 0 30px 237px;
+}
+
+.orderover .check_returnmess .lastbtn div {
+    width: 128px;
+    height: 100%;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.check_returnmess .lastbtn .watchOrder {
+    float: left;
+    background-color: #ff8800;
+}
+
+.check_returnmess .lastbtn .toIndex {
+    float: right;
+    background: #3996fa url(/image/toindex.png) no-repeat 96px center;
+}
+
+.check_returnmess .lastbtn .toIndex a {
+    display: block;
+    color: #fff;
+}
+
+.orderover .hot_produc {
+    width: 893px;
+    height: 317px;
+    padding: 20px;
+    margin: auto;
+    position: relative;
+    border: 2px solid #e0e0e0;
+}
+
+.hot_produc ul li {
+    float: left;
+    margin-right: 19px;
+}
+
+.hot_produc ul li:nth-child(3n) {
+    margin-right: 0;
+}
+
+.hot_produc ul li:nth-child(n+4) {
+    margin-top: 20px;
+}
+
+.hot_produc ul li .pic {
+    float: left;
+    width: 179px;
+    height: 150px;
+}
+
+.hot_produc ul li .pic img {
+    width: 100%;
+    height: 100%;
+}
+
+.hot_produc ul li .intro {
+    float: right;
+    width: 102px;
+    height: 138px;
+    font-size: 12px;
+    color: #b3b3b3;
+    padding: 10px 2px 0 2px;
+    position: relative;
+    font-family: 'SimSun';
+    background-color: #f3f8fe;
+    border-top: 2px solid #ff8800;
+}
+
+.hot_produc ul li .intro span.rmb {
+    vertical-align: super;
+    font-family: '微软雅黑'
+}
+
+.hot_produc ul li .intro span.num {
+    font-size: 26px;
+    color: #ff8800;
+    font-family: 'SimHei';
+}
+
+.hot_produc ul li .intro p {
+    line-height: 22px;
+}
+
+.hot_produc ul li .intro p.price {
+    text-align: center;
+}
+
+.hot_produc ul li .intro .bk {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #ff8800;
+    color: #fff;
+    text-align: center;
+    width: 106px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    font-family: '微软雅黑'
+}
+
+.hot_produc span.hotTitle {
+    position: absolute;
+    left: 20px;
+    top: -33px;
+    display: block;
+    width: 105px;
+    height: 30px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #3996fa;
+    font-weight: 600;
+    font-family: '微软雅黑';
+    border-bottom: 3px solid #3996fa;
+    background: url(/image/icon-upB.png) no-repeat bottom center;
+}
+
+.windowPayShadow {
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    position:fixed;
+    top:0;
+    left:0;
+    display:none;
+}
+
+.payPasswordBox, .payPassConfirm {
+    width:358px;
+    height:224px;
+    background:#fff;
+    position:absolute;
+    z-index: 2000;
+    font-family:'微软雅黑';
+    display:none;
+}
+
+.payPasswordBox .closebtn,.payPassConfirm .closebtn {
+    width:40px;
+    height:40px;
+    float:right;
+    cursor: pointer;
+    background:url(/image/atten_close.png) no-repeat center center;
+}
+
+.payPasswordBox h3,.payPassConfirm h3 {
+    clear:both;
+    color:#333;
+    font-size:22px;
+    text-align:Center;
+    padding:3px 0 20px 0;
+}
+
+.payPasswordBox .attenContain,.payPassConfirm .attenContain {
+    width:320px;
+    height:60px;
+    margin:auto;
+    color:#a3a3a3;
+    font-size:20px;
+    line-height:25px;
+    text-align:center;
+}
+
+.payPasswordBox .btn,.payPassConfirm .btn {
+    width:258px;
+    height:34px;
+    background:#ff8800;
+    text-align:Center;
+    font-size:18px;
+    color:#fff;
+    line-height:34px;
+    border-radius:5px;
+    margin:auto;
+    cursor: pointer;
+}
+
+.payPasswordBox .paykey,.payPassConfirm .paykey {
+    width:160px;
+    height:34px;
+    line-height:34px;
+    color:#4f4f4f;
+    text-align:Center;
+    outline: none;
+    border:1px solid #ccc;
+    font-size:24px;
+    box-shadow:inset 1px 1px 6px #bbb;
+}
+
+.payPassConfirm .btn_double {
+    width:320px;
+    height:34px;
+    margin:auto;
+}
+
+.payPassConfirm .btn_double .yes,.payPassConfirm .btn_double .no {
+    width:150px;
+    height:34px;
+    color:#fff;
+    font-size:18px;
+    text-align:Center;
+    line-height:34px;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+.payPassConfirm .btn_double .yes {
+    background:#ff8800;
+    float:left;
+}
+
+.payPassConfirm .btn_double .no {
+    background:#3996fa;
+    float:right;
+}
+
+.payContain .paystyle {
+    font-size:28px;
+    color:#333;
+    height:50px;
+    line-height:48px;
+    margin-top:45px;
+    font-weight:600;
+    letter-spacing: 2px;
+}
+
+.payContain .at_word {
+    font-size:13px;
+    color:#999;
+    margin-top:0px;
+    font-weight:600;
+}
+
+.payContain .bypicture {
+    width:100%;
+    height:285px;
+    background: url(/image/atw_same.png) no-repeat center 23px;
+}
+
+.payContain.wechatPay .paystyle {
+    padding-left: 60px;
+    background:url(/image/atw_wechat.png) no-repeat 315px 3px;
+}
+
+.payContain.zhifubaopay .paystyle {
+    padding-left: 40px;
+    background:url(/image/atw_alipay.png) no-repeat 300px 3px;
+}
+
+.payContain.bankpay .paystyle {
+    padding-left: 80px;
+    background:url(/image/atw_bank.png) no-repeat 300px 3px;
+}
+
+.tourbox {
+    width: 740px;
+    position: fixed;
+    left: 200px;
+    top: 150px;
+    z-index: 11;
+    background: #fff;
+    font-family: '微软雅黑';
+    display: none;
+}
+
+.tourbox .title_close {
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    color: #333;
+    text-indent:30px;
+    border-bottom:1px solid #e0e0e0;
+}
+
+.tourbox .title_close span {
+    width: 60px;
+    height: 60px;
+    float: right;
+    cursor: pointer;
+    background:url(/image/icon_close.png) no-repeat center center;
+}
+
+.tourbox .edited {
+    margin: 20px 0 0 72px;
+    height:120px;
+    overflow:auto;
+}
+
+.tourbox .edited p {
+    margin-bottom:15px;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer;
+    text-indent: 20px;
+    background:url(/image/icon_normal.png) no-repeat left center;
+}
+
+.tourbox .edited p.checked {
+    background:url(/image/icon_selected.png) no-repeat left center;
+}
+
+.tourbox .edited p span.adult {
+    padding:0 24px;
+}
+
+.tourbox .savebtn {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    margin:30px auto;
+    background-color: #ff8800;
+    display: block;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tourbox .savebtn a {
+    display: block;
+    color: #fff;
+}
+
+#roomPeople {
+    width:230px;
+}
+
+.addtourbtn {
+    width:30px;
+    height:30px;
+    position:absolute;
+    top:36px;
+    left:235px;
+    background:url(/image/addtour.png) no-repeat center center;
+    cursor:pointer;
+    background-size:22px;
+}
+
+.tourbox .addtour {
+    margin-top: 15px;
+    padding-left: 45px;
+}
+
+.tourbox .addtour ul li {
+    width: 273px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin-top: 20px;
+}
+
+.addtour ul li label {
+    width: 54px;
+    font-size: 13px;
+    color: #333;
+    padding-right: 18px;
+    text-align: right;
+    line-height: 30px;
+    display: inline-block;
+}
+
+.addtour ul li input {
+    width: 200px;
+    height: 30px;
+    float: right;
+    outline: none;
+    padding:3px 15px;
+    border-radius:2px;
+    border:1px solid #e0e0e0;
+}
+
+.addtour ul li.card {
+    position: relative;
+}
+
+.addtour ul li.card input {
+    background:url(/image/icon-down2.png) no-repeat 180px center;
+}
+
+.addtour ul li.card .cardlist {
+    width: 198px;
+    position: absolute;
+    right: 0;
+    top: 29px;
+    border:1px solid #e0e0e0;
+    border-bottom: none;
+    display: none;
+}
+
+.addtour ul li.card .cardlist p {
+    border-bottom:1px solid #e0e0e0;
+    padding-left: 15px;
+    cursor: pointer;
+}

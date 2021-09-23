@@ -1,0 +1,146 @@
+body{background-color: #F1F1F1}
+.main{
+    float: left;
+    width: 100%;
+    max-width: 1240px;
+    padding: 20px 0 0 20px;
+}
+.mod_header {
+	font-family: "Microsoft YaHei";
+	height: 46px;
+	line-height: 46px;
+	border: 1px solid #dedede;
+	background: #fff;
+	box-shadow: none;
+}
+.mod_header .tit {
+	height: 46px;
+	line-height: 46px;
+	color: #00acee;
+    position:relative;
+}
+.mod_header .tit{
+    font-family:"microsoft yahei";
+    font-size:16px;
+    font-weight:700;
+    margin-left:20px;
+    margin-right:20px;
+    height: 40px;
+    line-height: 40px;
+}
+.mod_basic {
+	margin: 12px 0 12px 0;
+	border: 1px solid #dedede;
+	box-shadow: none;
+}
+.mod_basic.bg_gray {
+	border: 0;
+	background: none;
+}
+.mod_basic.bg_gray .mod_info {
+	border: 1px solid #dedede;
+	background: #fff;
+}
+.mod_info{
+    padding:20px 10px 15px 10px;
+}
+.mod_info .tit{
+    color:#666;
+    font-size:14px;
+    font-weight:700;
+    border-left:4px solid #999;
+    padding-left:10px;
+    height:14px;
+    line-height:14px;
+    margin-bottom:10px;
+    margin-left:3px;
+}
+.mod_info .tit .tip{
+    font-size:12px;
+    font-weight:normal;
+    color:#999;
+    margin-left:15px;
+}
+.input_text {
+	border: 1px solid #d9d9d9;
+}
+.input_text input {
+	margin-top: 4px;
+}
+.input_text{
+    vertical-align:top;
+    display:inline-block;
+    height:28px;
+    border:1px solid #c5c5c5;
+    overflow:hidden;
+    background:#fff;
+    position:relative;
+}
+.input_text input{
+    border:0;
+    height:20px;
+    line-height:18px;
+    outline:none;
+    margin:5px 5px 0px 5px;
+    width:100%;
+    vertical-align:top;
+    color:#555;
+    text-align:left;
+}
+.w_300{width:300px;}
+.w_400{width:400px;}
+.m_l10{margin-left:10px;}
+.btn_common{
+    display:inline-block;
+    padding:0 15px;
+    height:28px;
+    line-height:28px;
+    background:#ffab48;
+    cursor:pointer;
+    color:#fff;
+    border:1px solid #ffab48;
+    vertical-align:top;
+    font-size: 12px;
+    cursor:pointer;
+    font-weight:normal;
+    font-family:微软雅黑;
+    border-radius:2px;
+}
+.btn_common {
+	font-size: 14px;
+	line-height: 27px;
+	background: #ff9419;
+	border: 1px solid #ff9419;
+}
+.m_t10{margin-top:10px;}
+.tips_area{
+    border-top:1px solid #ddd;
+    padding-top:17px;
+    margin:0 10px;
+    color:#666;
+}
+.tips_area, .mod_basic.bg_gray .tips_area {
+	border: 1px solid #dedede;
+	background: #fff;
+	margin: 0;
+	padding: 0 10px 10px 10px;
+	margin-top: 10px;
+}
+.tips_area h3, .mod_basic.bg_gray .tips_area h3 {
+	height: 50px;
+	line-height: 50px;
+	font-family: "Microsoft Yahei";
+	font-size: 14px;
+	font-weight: bold;
+	color: #666666;
+	padding: 0;
+	margin: 0;
+}
+.tips_area .item, .mod_basic.bg_gray .tips_area .item {
+	margin-bottom: 8px;
+	font-size: 14px;
+	color: #444;
+}
+a:hover {
+    text-decoration:none;
+}

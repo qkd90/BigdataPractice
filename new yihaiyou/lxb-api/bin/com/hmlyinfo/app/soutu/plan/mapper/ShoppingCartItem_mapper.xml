@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.ShoppingCartItemMapper">
+	<insert id="insert" parameterType="ShoppingCartItem" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_shopping_cart_item
+			(
+				plan_id,
+				user_id,
+				ticket_id,
+				ticket_type,
+				passenger_id,
+				play_date,
+				days,
+				additional1,
+				additional2,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{planId},
+				#{userId},
+				#{ticketId},
+				#{ticketType},
+				#{passengerId},
+				#{playDate},
+				#{days},
+				#{additional1},
+				#{additional2},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="ShoppingCartItem">
+		update tb_shopping_cart_item
+		<set>
+			<if test="planId != null"> plan_id = #{planId},</if>
+			<if test="userId != null"> user_id = #{userId},</if>
+			<if test="ticketId != null"> ticket_id = #{ticketId},</if>
+			<if test="ticketType != null"> ticket_type = #{ticketType},</if>
+			<if test="passengerId != null"> passenger_id = #{passengerId},</if>
+			<if test="playDate != null"> play_date = #{playDate},</if>
+			<if test="days != null"> days = #{days},</if>
+			<if test="additional1 != null"> additional1 = #{additional1},</if>
+			<if test="additional2 != null"> additional2 = #{additional2},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="ShoppingCartItem">
+		delete from
+			tb_shopping_cart_item
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="ShoppingCartItem">
+		select
+			*
+		from
+			tb_shopping_cart_item
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="ShoppingCartItem">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_shopping_cart_item
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="planId != null and '' != planId"> and plan_id = #{planId} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="ticketId != null and '' != ticketId"> and ticket_id = #{ticketId} </if>
+			<if test="ticketType != null and '' != ticketType"> and ticket_type = #{ticketType} </if>
+			<if test="passengerId != null and '' != passengerId"> and passenger_id = #{passengerId} </if>
+			<if test="playDate != null and '' != playDate"> and play_date = #{playDate} </if>
+			<if test="days != null and '' != days"> and days = #{days} </if>
+			<if test="additional1 != null and '' != additional1"> and additional1 = #{additional1} </if>
+			<if test="additional2 != null and '' != additional2"> and additional2 = #{additional2} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt;#{ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt;#{tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+	</sql>
+</mapper>

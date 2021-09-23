@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.PlanDaysMapper">
+	<insert id="insert" parameterType="PlanDays" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_plan_days
+			(
+				id,
+				plan_id,
+				days,
+				spend_time,
+				kilometre,
+				date,
+				ticket_cost,
+				include_seasonticket_cost,
+				traffic_cost,
+				hotel_cost,
+				food_cost,
+				play_time,
+				traffic_time,
+				hotel_id,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				
+				#{id},
+				#{planId},
+				#{days},
+				#{spendTime},
+				#{kilometre},
+				#{date},
+				#{ticketCost},
+				#{includeSeasonticketCost},
+				#{trafficCost},
+				#{hotelCost},
+				#{foodCost},
+				#{playTime},
+				#{trafficTime},
+				#{hotelId},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<insert id="insertmore" parameterType="list" useGeneratedKeys="true" keyProperty="id">  
+        insert into tb_plan_days  
+          (     id,
+				plan_id,
+				days,
+				spend_time,
+				kilometre,
+				date,
+				ticket_cost,
+				include_seasonticket_cost,
+				traffic_cost,
+				hotel_cost,
+				food_cost,
+				play_time,
+				traffic_time,
+				hotel_id,
+				modify_time
+          )  
+          VALUES  
+          <foreach collection="list" item="item" index="index" separator="," >  
+          (  
+          		#{item.id},
+				#{item.planId},
+				#{item.days},
+				#{item.spendTime},
+				#{item.kilometre},
+				#{item.date},
+				#{item.ticketCost},
+				#{includeSeasonticketCost},
+				#{item.trafficCost},
+				#{item.hotelCost},
+				#{item.foodCost},
+				#{item.playTime},
+				#{item.trafficTime},
+				#{item.hotelId},
+				#{item.modifyTime}
+          )  
+          </foreach>  
+    </insert>  
+	
+	<update id="update" parameterType="PlanDays">
+		update tb_plan_days
+		<set>
+			<if test="planId != null and '' != planId"> plan_id = #{planId},</if>
+			<if test="days != null and '' != days"> days = #{days},</if>
+			<if test="spendTime != null and '' != spendTime"> spend_time = #{spendTime},</if>
+			<if test="kilometre != null and '' != kilometre"> kilometre = #{kilometre},</if>
+			<if test="date != null and '' != date"> date = #{date},</if>
+			<if test="ticketCost != null"> ticket_cost = #{ticketCost},</if>
+			<if test="includeSeasonticketCost != null"> include_seasonticket_cost = #{includeSeasonticketCost},</if>
+			<if test="trafficCost != null"> traffic_cost = #{trafficCost},</if>
+			<if test="hotelCost != null"> hotel_cost = #{hotelCost},</if>
+			<if test="foodCost != null"> food_cost = #{foodCost},</if>
+			<if test="playTime != null"> play_time = #{playTime},</if>
+			<if test="trafficTime != null"> traffic_time = #{trafficTime},</if>
+			<if test="hotelId != null"> hotel_id = #{hotelId},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<update id="updateHotel" parameterType="Plan">
+		update tb_plan_days set hotel_id = #{hotelId} where plan_id = #{planId} and days = #{days}
+	</update>
+	
+	<delete id="del" parameterType="PlanDays">
+		delete from
+			tb_plan_days
+		where
+			id = #{id}
+	</delete>
+	<delete id="delByPlan" parameterType="PlanDays">
+		delete from
+			tb_plan_days
+		where
+			plan_id = #{id}
+	</delete>
+	
+	<select id="getMaxId" resultType="long">
+		select max(id) from tb_plan_days
+	</select>
+
+	<select id="selById" resultType="PlanDays">
+		select
+				*
+		from
+			tb_plan_days
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="PlanDays">
+		select 
+			 	*
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_plan_days
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="planId != null and '' != planId"> and plan_id = #{planId} </if>
+			<if test="days != null and '' != days"> and days = #{days} </if>
+			<if test="spendTime != null and '' != spendTime"> and spend_time = #{spendTime} </if>
+			<if test="kilometre != null and '' != kilometre"> and kilometre = #{kilometre} </if>
+			<if test="date != null and '' != date"> and date = #{date} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		</where>
+		order by days
+	</sql>
+</mapper>

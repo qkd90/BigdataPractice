@@ -1,0 +1,54 @@
+body {background-color: #eef0f5;}
+.hide {display: none}
+.top-wrap { position: relative; height: 260px; width: 100%; min-width: 1280px; background: url("/images/helpcenter_bg01.jpg") no-repeat center; background-size: cover; }
+.top-wrap .intro { position: absolute; left: 50%; top: 50%; width: 590px; height: 100px; padding: 40px 0; margin-left: -295px; margin-top: -90px; }
+.top-wrap .intro p { position: relative; text-align: center; color: #fffedf; font-size: 18px; line-height: 40px; z-index: 1; }
+.top-wrap .intro p.big { font-size: 54px; line-height: 70px; }
+.top-wrap .intro .bg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: 0.5; filter: alpha(opacity=50); }
+
+.middle-wrap { position: relative; width: 800px; min-height: 660px; padding-left: 285px; padding-bottom: 120px; padding-right: 15px; margin: 0 auto; }
+.middle-wrap .help-nav { position: absolute; left: 0; top: 0; width: 200px; background: #f5f5f5; padding: 10px 0; }
+
+.middle-wrap .help-nav p { padding-left: 30px; line-height: 50px;; font-size: 16px; font-weight: bold; }
+.middle-wrap .help-nav .active p { color: #22ae58; }
+.middle-wrap .help-nav .sec-tab li { padding-left: 30px; line-height: 40px; border-left: 6px solid transparent; color: #666; font-size: 14px; cursor: pointer; }
+.middle-wrap .help-nav .sec-tab li:HOVER {  color: #22ae58; }
+.middle-wrap .help-nav .sec-tab li.active { border-color: #22ae58 ; color: #22ae58; background-color: #fff; }
+.help-cont h1 { border-bottom: 1px solid #e5e5e5; line-height: 50px; font-size: 16px; color: #000; }
+.help-cont h2 { padding-top: 10px; font-size: 15px; color: #666; font-weight: bold; }
+.help-cont .cont { line-height: 26px; padding: 10px 0 0px 20px; font-size: 14px; color: #999; word-wrap: break-word; }
+.help-cont .cont-img { padding: 70px 0 20px 20px; }
+.help-cont .panel { position: relative; padding: 20px 5px; }
+.help-cont .panel .w70 { width: 620px; height: 80px; padding: 5px; border-color: #dcdcdc; resize: none; }
+.help-cont .panel .countword { color: #999; font-size: 13px; }
+.help-cont .panel .btn-green { position: absolute; right: 20px; top: 42px; width: 100px; height: 40px; text-shadow: none; border: none; }
+
+.advice-wrap { padding: 0 30px; margin-top: 20px; border: 1px solid #dcdcdc; }
+.advice-wrap .list-item { position: relative; padding: 15px 0 15px 50px; border-top: 1px solid #dcdcdc; }
+.advice-wrap .list-item:FIRST-CHILD { border-top: none; }
+.advice-wrap .list-item img { position: absolute; left: 0; top: 15px; width: 40px; height: 40px; border-radius: 50px; }
+.advice-wrap .list-item .content { word-break : break-word; }
+.grey-1 { color: #999; }
+.name { margin-right: 15px; }
+.mb5 { margin-bottom: 5px; }
+.mt5 {  margin-top: 5px;}
+.reply { color: #22ae58 }
+.emptyContent { position: relative; padding-top: 94px; display: none; z-index: 2;}
+.emptyContent h2 { line-height: 32px; text-align: center;}
+.emptyContent .personal-bg-primary { font-size: 16px; line-height: 32px; padding-top: 6px; padding-bottom: 6px;}
+
+.link-wrap { padding: 45px 0 0 55px; }
+.link-wrap li {  width: 202px; height: 54px; margin-bottom: 35px; margin-right: 45px; }
+.link-wrap li a { display: block; width: 100%; height:100%; cursor: default; }
+.yidao a { background: url("../img/helpcentering/help-logo1.png") no-repeat center; }
+.zhima a { background: url("../img/helpcentering/help-logo2.png") no-repeat center; }
+.dazhong a { background: url("../img/helpcentering/help-logo3.png") no-repeat center; }
+.qunaer a { background: url("../img/helpcentering/help-logo4.png") no-repeat center; }
+.xmtc a { background: url("../img/helpcentering/help-logo5.png") no-repeat center; }
+.weishanhu a { background: url("../img/helpcentering/help-logo6.png") no-repeat center; }
+.sijiache a { background: url("../img/helpcentering/help-logo7.png") no-repeat center; }
+.fangzhanggui a { background: url("../img/helpcentering/help-logo8.png") no-repeat center; }
+.lutong a { background: url("../img/helpcentering/help-logo9.png") no-repeat center; }
+
+
+

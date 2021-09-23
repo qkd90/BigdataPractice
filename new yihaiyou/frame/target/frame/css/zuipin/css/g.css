@@ -1,0 +1,91 @@
+﻿/*常用字体大小*/
+.g-fs-12{font-size:12px;}
+.g-fs-14{font-size:14px;}
+.g-fs-16{font-size:16px;}
+.g-fs-20 {
+ font-size:20px;
+}
+.g-fs-24 {
+ font-size:24px;
+}
+
+/*常用边距*/
+.g-m10{ margin:10px;}
+.g-m20{ margin:20px;}
+.g-mt5{ margin-top:5px;}
+.g-mt7{ margin-top:7px;}
+.g-mt9{ margin-top:9px;}
+.g-mt10{ margin-top:10px;}
+.g-mt15{ margin-top:15px;}
+.g-mt20{ margin-top:20px;}
+.g-ml5{ margin-left:5px;}
+.g-ml10{ margin-left:10px;}
+.g-ml15{ margin-left:15px;}
+.g-ml20{margin-left:20px;}
+.g-mb10{ margin-bottom:10px;}
+.g-mb20{ margin-bottom:20px;}
+.g-mr5{ margin-right:5px;}
+.g-mr10{ margin-right:10px;}
+.g-mr15{ margin-right:15px;}
+.g-mr20{margin-right:20px;}
+
+.g-pr5{ padding-right:5px;}
+.g-pr10{ padding-right:10px;}
+.g-pr15{ padding-right:15px;}
+.g-pr20{ padding-right:20px;}
+.g-pl5{ padding-left:5px;}
+.g-pl10{ padding-left:10px;}
+.g-pl15{ padding-left:15px;}
+.g-pl20{ padding-left:20px;}
+.g-pt5{ padding-top:5px;}
+.g-pt10{ padding-top:10px;}
+.g-pt15{ padding-top:15px;}
+.g-pt20{ padding-top:20px;}
+.g-pb4{ padding-bottom:4px;}
+.g-pb5{ padding-bottom:5px;}
+.g-pb10{ padding-bottom:10px;}
+.g-pb15{ padding-bottom:15px;}
+.g-pb20{ padding-bottom:20px;}
+
+
+.g-bill-f {
+    padding:21px 19px 20px 19px;
+}
+.g-bill-note{
+    padding:3px 6px 3px 56px; margin-top:2px;
+}
+.g-bill-check {
+    padding-right:68px; margin-top:2px; 
+}
+.g-statement-f {
+    padding:9px;
+}
+
+
+/*对齐方式*/
+.g-al{ text-align:left;}
+.g-ar{ text-align:right;}
+.g-ac{ text-align:center;}
+.g-vt{ vertical-align:top;}
+.g-vm{ vertical-align:middle;}
+.g-vb{ vertical-align:bottom;}
+.g-vn1{ vertical-align: -2px;}
+.g-v1{ vertical-align: 1px;}
+.g-v2{ vertical-align: 2px;}
+.g-em { text-indent:0.5em;}
+
+/*字体样式*/
+.g-bold{ font-weight:bold;}
+.g-nobold{ font-weight:normal;}
+.g-italic{ font-style:italic;}
+.g-noitalic{ font-style:normal;}
+
+/* 颜色 */
+.g-c-red{ color:red;}
+.g-c-green {
+    color:#2d8302;
+}
+.g-c3{ color:#333;}
+.g-blue{
+    color:#2497d9;
+}

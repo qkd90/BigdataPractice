@@ -1,0 +1,116 @@
+<header class="header-box fixed" id="header">
+            <a href="javascript: history.go(-1)"><span class="header-back">
+                <i class="icon-title-back effect-active"></i>
+            </span></a>
+    <h1>订单详情</h1>
+</header>
+<div ng-controller="ticketOrderDetailCtrl">
+
+    <div class="main wrapper" style="margin-top: 10px;">
+        <div class="ticket_name">
+            <span class="ticket_name_left"></span>
+            <div class="ticket_name_content">
+                <a class="ticket_name_content" ui-sref="scenicDetail({scenicId: order.scenicId})">
+                    <span>{{order.name}}</span>
+                    <div class="go_product_detail_bar"><i class="go_product_detail"></i></div>
+                </a>
+            </div>
+            <span class="ticket_name_right"></span>
+        </div>
+        <div class="block block_top_border">
+            <p class="block_title">
+                <span></span>
+                订单信息
+            </p>
+            <div class="block_content">
+                <table>
+                    <tbody><tr><td class="table_title">订单编号</td><td class="table_content">{{order.orderNo}}</td></tr>
+                    <tr><td class="table_title">订单状态</td><td class="table_content"><span class="table_content_price">{{order.status}}</span></td></tr>
+                    <tr><td class="table_title">订单总价</td><td class="table_content"><span class="table_content_price">￥{{order.price}}</span></td></tr>
+                    <tr><td class="table_title">付款方式</td><td class="table_content">网上支付</td></tr>
+                    <tr><td class="table_title">下单时间</td><td class="table_content">{{order.orderDate}}</td></tr>
+                    </tbody></table>
+            </div>
+        </div>
+
+        <!--支付按钮-->
+        <!--支付按钮---e-->
+
+        <div class="block">
+            <p class="block_title">
+                <span></span>
+                门票信息
+            </p>
+            <div class="block_content">
+                <table>
+                    <tbody>
+                    <!--<tr><td class="table_title">门票类型</td><td class="table_content">电子票</td></tr>-->
+                    <tr><td class="table_title">数量</td><td class="table_content">{{order.num}}张</td></tr>
+                    <tr><td class="table_title">出游日期</td><td class="table_content">{{order.startDate}}</td></tr>
+                    </tbody></table>
+            </div>
+        </div>
+
+        <div class="block">
+            <p class="block_title">
+                <span></span>
+                取票方式
+            </p>
+            <div class="block_content">
+                <table>
+                    <tbody><tr><td class="table_title">取票方式</td><td class="table_content">{{order.getTicket}}</td></tr>
+                    <!--<tr><td class="table_title">取票地址</td><td class="table_content"></td></tr>-->
+                    </tbody></table>
+            </div>
+        </div>
+
+        <div class="block">
+            <p class="block_title">
+                <span></span>
+                游客信息
+            </p>
+            <style>
+                .block_table_border {
+                    border-bottom: 1px solid #d4d4d4;
+                }
+            </style>
+            <div class="block_content" ng-repeat="tourist in order.tourists">
+                <table ng-class="{block_table_border: !$last}">
+                    <tbody>
+                    <tr>
+                        <td class="table_title">取票人姓名</td>
+                        <td class="table_content">{{tourist.name}}</td>
+                    </tr>
+                    <tr>
+                        <td class="table_title">取票人身份证</td>
+                        <td class="table_content">{{tourist.idNumber}}</td>
+                    </tr>
+                    <tr>
+                        <td class="table_title">取票人手机</td>
+                        <td class="table_content">{{tourist.telephone}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="block" style="margin-bottom: 50px;">
+            <p class="block_title">
+                <span></span>
+                取票人信息
+            </p>
+            <div class="block_content">
+                <table>
+                    <tbody><tr><td class="table_title">取票人姓名</td><td class="table_content">{{order.contact.name}}</td></tr>
+                    <tr><td class="table_title">取票人手机</td><td class="table_content">{{order.contact.telephone}}</td></tr>
+                    </tbody></table>
+            </div>
+        </div>
+
+        <div class="order_btn active" ng-if="order.orderStatus == 'WAIT'">
+            <a ng-click="toPay()" class="submit" style="width: 100%; text-align: center; font-size: 20px">去支付</a>
+        </div>
+
+        <!-- 如果不能支付，但是能在PC上支付，而且有银行优惠活动 -->
+    </div>
+</div>

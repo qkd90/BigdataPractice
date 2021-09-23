@@ -1,0 +1,30 @@
+<div ng-controller="myorderCtrl">
+  <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+    <ul>
+      <li class="pull-left"><a ui-sref="my" class="goback">我的订单</a></li>
+    </ul>
+  </div>
+  <div id="mycontainer" class="clearfix" infinite-scroll="orderList()" infinite-scroll-distance='1' infinite-scroll-disabled='loading'>
+    <div class="subheader orderheader text-center"><a ui-sref="my-order" class="active">已支付</a><a ui-sref="my-order-dfk">待付款</a><a ui-sref="my-order-tk">退款</a></div>
+    <div class="orderlist clearfix">
+    <div class="my-orderlist clearfix" ng-repeat="data in myorders">
+      <h3 class="clearfix"><span class="pull-left ordernum"><a ng-click="orderDetail(data.type, data.id)">订单号：{{data.orderNo}}</a></span><span class="pull-right trash"><a ng-click="deleteRow(this);" class="img-circle"><img src="images/ico/trash.png" /></a></span></h3>
+      <div class="my-orderinfo media">
+        <div class="media-left"><a ng-click="orderDetail(data.type, data.id)">
+          <img bn-lazy-src="{{data.cover}}" class="img-rounded" style="width: 230px; height: 160px;" ng-if="data.type != 'train' && data.type != 'flight'"/>
+          <img src="images/order/{{data.type}}.jpg" class="img-rounded" style="width: 230px; height: 160px;" ng-if="data.type == 'train' || data.type == 'flight'"/>
+        </a></div>
+        <div class="media-body">
+          <h2><a ng-click="orderDetail(data.type, data.id)">{{data.name}}</a></h2>
+          <p class="text"><span class="day" ng-if="data.type == 'plan'">{{data.day}}天</span><span class="from">{{data.startDate}}
+            <span ng-if="data.type == 'plan' || data.type == 'flight' || data.type == 'train'">出发</span><span ng-if="data.type == 'ticket'">游玩</span><span ng-if="data.type == 'hotel'">入住</span>
+          </span></p>
+          <p class="payment"><span class="price">￥{{data.price}}</span> <a class="pay disabled pull-right">已支付</a></p>
+        </div>
+      </div>
+    </div>
+      <div ng-show="loading"><div class="yuloading"><span>加载数据中...</span></div></div>
+      <div ng-show="nomore" class="alert alert-danger text-center">没有更多数据了</div>
+    </div>
+  </div>
+</div>

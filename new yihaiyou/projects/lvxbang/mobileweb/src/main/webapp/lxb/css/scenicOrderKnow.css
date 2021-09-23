@@ -1,0 +1,37 @@
+.main_cont {
+    padding: 0 20px;
+}
+
+.ticket-notice {
+    border-bottom: 1px solid #d5d3d3
+}
+
+.notice-title {
+    font-size: 14px;
+    color: #ff6204;
+    padding-top: 10px;
+}
+
+.notice-content {
+    font-size: 12px;
+    color: #666;
+    padding: 15px 0;
+}
+
+.label-begin {
+    display: inline-block;
+    width: 4px;
+    height: 14px;
+    background-color: #ff6000
+}
+/** 修正冲突样式 **/
+.scenicOrderKnow .icon-title-back:before {
+    color: #fff !important;
+}
+.scenicOrderKnow .gty_left {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.scenicOrderKnow #index {
+    padding-top: 0px;
+}

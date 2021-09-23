@@ -1,0 +1,94 @@
+<div style="height:550px;width:100%">
+<header class="header-box fixed" id="header">
+            <span class="header-back">
+                <a href="javascript:history.go(-1)"><i class="icon-title-back effect-active icon-green"></i></a>
+            </span>
+    <h1>1/2选择资源</h1>
+</header>
+
+<div class="wrapper" id="totalDiv" ng-controller="orderOneCtrl">
+    <div id="container">
+        <div class="simple-box">
+            <div class="title">&lt;{{line.name}}&gt;{{line.appendTitle}}</div>
+            <div class="content">
+                <span class="order_sel">产品编号</span>
+                <span>{{line.productNo}}</span>
+            </div>
+            <div class="content">
+                <span class="order_sel">出发日期</span>
+                <span>{{lineStartDate}}</span>
+            </div>
+            <div class="content">
+                <span class="order_sel">出游人数</span>
+                <span>{{adultNum}}成人</span>
+                <span ng-if="childNum > 0">{{childNum}}儿童</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="box">
+        <div>
+            <div class="sp-title">
+                <div class="sp-text">保险信息</div>
+                <div class="sp-right pr0 edit-hide" ng-click="insuChange($event)">更改保险</div>
+            </div>
+            <div class="sp-container">
+
+
+
+                <div class="sp-content insurance-content " ng-repeat="insurance in insuranceList" ng-show="insurance.show">
+                    <div class="sp-content-cell insurance-handler">
+                        保险{{$index + 1}}：
+                        单价<span class="price">￥{{insurance.price}}</span>/人
+                        <span class="forsure for_green" ng-if="insurance.selected" ng-click="forSure($event, this)"></span>
+                        <span class="forsure for_gray" ng-if="!insurance.selected" ng-click="forSure($event, this)"></span>
+                    </div>
+                    <div class="sp-content-cell">{{insurance.name}}</div>
+
+                    <div class="sp-desc tog-cell">
+                        <div class="sp-text">保险类型</div>
+                        <div class="sp-right" ng-bind-html="insurance.category | trustHtml"></div>
+                    </div>
+
+
+                    <div class="sp-desc tog-cell">
+                        <div class="sp-text">保险描述</div>
+                        <div class="sp-right" ng-bind-html="insurance.description | trustHtml"></div>
+                    </div>
+
+
+                    <div class="sp-desc tog-cell">
+                        <div class="sp-text">投保须知</div>
+                        <div class="sp-right" ng-bind-html="insurance.notice | trustHtml"></div>
+                    </div>
+
+                    <div class="toggle-handler icon-down4" ng-click="insuranceInfo($event)"></div>
+                </div>
+
+                <div class="sp-tips" id="noInsurance">不购买保险</div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="btn-box-placeholder"></div>-->
+    <div class="btn-box fix">
+        <a class="btn btn-em fr" ng-click="next()">填写订单</a>
+        <div class="v-center-info">
+            <div class="date">
+                套餐价：
+                <span class="price"><i>￥</i><span>{{totalPrice + insurancePrice}}</span></span>
+                <span class="details fare_green" id="fare_detail">费用明细</span>
+            </div>
+        </div>
+    </div>
+    <div class="fare_detail">
+        <ul>
+            <li><span class="fare_leftSpan">出游团费</span><span class="fare_rightSpan"><em>￥{{totalPrice}}</em></span></li>
+            <li><span class="fare_leftSpan">成人 ×{{adultNum}}</span><span class="fare_rightSpan">￥{{adultPrice}}/人 ×{{adultNum}}</span></li>
+            <li ng-if="childNum > 0"><span class="fare_leftSpan">儿童 ×{{childNum}}</span><span class="fare_rightSpan">￥{{childPrice}}/人 ×{{childNum}}</span></li>
+            <li ng-if="oasiaHotel > 0"><span class="fare_leftSpan">单房差：</span><span class="fare_rightSpan"><em>￥{{oasiaHotel}}</em></span></li>
+            <li><span class="fare_leftSpan">保险费用：</span><span class="fare_rightSpan"><em>￥{{insurancePrice}}</em></span></li>
+        </ul>
+    </div>
+</div>
+</div>>

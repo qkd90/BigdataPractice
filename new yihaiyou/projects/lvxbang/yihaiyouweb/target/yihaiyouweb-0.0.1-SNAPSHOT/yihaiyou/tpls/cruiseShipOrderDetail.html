@@ -1,0 +1,38 @@
+<div class="personal_cruiseDetail" ng-controller="cruiseShipOrderDetailCtrl" screenheight>
+    <div class="header">
+        <a ng-click="back()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        邮轮订单详情
+    </div>
+    <div class="orderDetailTitle">
+        <p class="sta_end">{{order.name}}</p>
+    </div>
+    <div class="ticketdetail">
+        <h3>订单信息</h3>
+
+        <p><span>订单编号</span>{{order.orderNo}}</p>
+
+        <p><span>出发城市：</span>{{order.startCity}}</p>
+
+        <p><span>出发时间：</span>{{order.startDate}}</p>
+
+        <p><span>归来时间：</span>{{order.endDate}}</p>
+
+        <p><span>出游人数：</span>{{order.num}}成人</p>
+
+        <p><span>订单状态：</span>{{order.status}}</p>
+    </div>
+    <div class="ticketdetail">
+        <h3>联系人信息</h3>
+
+        <p><span>姓名：</span>{{order.contact.name}}</p>
+
+        <p><span>手机：</span>{{order.contact.telephone}}</p>
+
+        <!--<p><span>邮箱：</span>36059636@qq.com</p>-->
+
+        <!--<p><span>固话：</span>36059636</p>-->
+    </div>
+    <div class="blank"></div>
+    <!--<div class="savechange">申请退款</div>-->
+    <div class="personalTopay" ui-sref="orderPay({orderId: order.id})" ng-if="order.orderStatus == 'WAIT'">去支付</div>
+</div>

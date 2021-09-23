@@ -1,0 +1,54 @@
+<div class="bk_main shangche" ng-controller="shangcheCtrl">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        上车地点
+    </div>
+    <div class="car_offx">
+        <div class="selplaceoff"><input type="text" class="selplaceipt" placeholder="请输入上车地址" ng-keyup="showplace()"
+                                        ng-model="where" ng-focus="review()"/></div>
+        <div class="tagplace">
+            <h3>厦鼓码头候车点</h3>
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <ul class="clearfix">
+                            <li ng-repeat='place in tempList ' ng-click="transfer(place.index,place)"
+                                ng-class="{true: 'tagbgx', false: 'tagbg'}[hotplace.item == place.index]"
+                                    >{{place.title}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="searchhistory">
+        <h3>历史记录</h3>
+        <ul>
+            <li ng-repeat="messa in historymess"
+                ng-class="{true: 'tagorange', false: 'tagwhite'}[toggleObject.item == $index]"
+                ng-click="sel($index,messa)">
+                <p class="history_p1">{{messa.title}}</p>
+
+                <p class="history_p2">{{messa.road}}</p>
+            </li>
+        </ul>
+    </div>
+    <div class="mysearch">
+        <ul class="clearfix">
+            <li ng-repeat='search in searchs' ng-class="{true: 'bgpx', false: 'bgp'}[mysearching.item == $index]"
+                ng-click="mysearch($index,search)" ng-show="searchList">{{search.title}}
+            </li>
+        </ul>
+    </div>
+    <div class="shadowbox2" ng-show="shadow" ng-click="hidethis()"></div>
+</div>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: false,
+        pagination: '.swiper-pagination'
+    })
+</script>
+

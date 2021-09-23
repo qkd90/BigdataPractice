@@ -1,0 +1,1215 @@
+* {
+  font-family: arial, "微软雅黑";
+}
+h3,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+/*工具样式*/
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+  border-top: 3px solid #3996fa;
+}
+.wrap .container-box {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.wrap .container-box h3 {
+  font-size: 15px;
+  text-align: left;
+  line-height: 48px;
+  color: #737373;
+}
+.wrap .container-box h3 a {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #ff8800;
+}
+.wrap .container-box h3 span {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #737373;
+}
+.wrap .container-box .search-wrap {
+  border-top: 3px solid #2869af;
+  background: #3996fa;
+  padding: 12px 50px;
+  margin-bottom: 20px;
+}
+.wrap .container-box .search-wrap .search-group {
+  float: left;
+  position: relative;
+}
+.wrap .container-box .search-wrap .search-group label {
+  float: left;
+  font-size: 14px;
+  line-height: 36px;
+  color: #fff;
+}
+.wrap .container-box .search-wrap .search-group input {
+  float: left;
+  border: 1px solid #1571d4;
+  line-height: 34px;
+  height:34px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #8d8d8d;
+  padding-left: 14px;
+}
+.wrap .container-box .search-wrap .search-group .route-input {
+  width: 276px;
+  padding-right: 26px;
+  background: #fff;
+  background-image:url("/image/ticket-index-icon-routedown.png");
+  background-position:95% 50%;
+  background-repeat:no-repeat;
+  margin-right: 130px;
+  box-shadow: inset 1px 1px 3px #ccc;
+}
+.wrap .container-box .search-wrap .search-group .route-datalist {
+  position: absolute;
+  left: 43px;
+  top: 36px;
+  z-index: 999;
+  border-bottom: none;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.506);
+}
+.wrap .container-box .search-wrap .search-group .route-datalist li {
+  width: 276px;
+  padding-right: 26px;
+  padding-left: 14px;
+  border-bottom: 1px solid #33aaff;
+  background: #fff;
+  font-size: 14px;
+  color: #8d8d8d;
+  line-height: 40px;
+  cursor: pointer;
+}
+.wrap .container-box .search-wrap .search-group .route-datalist li:last-of-type {
+  border-bottom: none;
+}
+.wrap .container-box .search-wrap .search-group .route-datalist li:hover {
+  box-shadow: inset 3px 3px 8px #238bfa,inset -3px -3px 8px #238bfa;
+  background: #3c97fb;
+  color: #fff;
+}
+.wrap .container-box .search-wrap .search-group .date-input {
+  width: 214px;
+  padding-right: 13px;
+  background:#ffffff;
+  background-image:url("/image/ticket-index-search-icon-calendar.png");
+  background-position:95% center;
+  background-repeat:no-repeat;
+  margin-right: 95px;
+}
+.wrap .container-box .search-wrap .search-group .search-btn {
+  width: 182px;
+  height: 36px;
+  background: #ffa01f;
+  display: inline-block;
+  line-height: 36px;
+  text-align: center;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 6px;
+}
+.wrap .container-box .search-wrap .search-group .search-btn i {
+  display: inline-block;
+  width: 17px;
+  height: 36px;
+  background: url("/image/icon-search.png") no-repeat center 9px;
+  margin-right: 5px;
+  vertical-align: bottom;
+}
+.wrap .container-box .search-wrap .search-group .search-btn:hover {
+  background: #f80;
+}
+.wrap .container-box .date-wrap {
+  margin-bottom: 13px;
+}
+.wrap .container-box .date-wrap .date-btn {
+  float: left;
+  width: 17px;
+  height: 37px;
+  border: 1px solid #3996fa;
+  border-bottom: 2px solid #66a8ef;
+}
+.wrap .container-box .date-wrap .date-prev {
+  background:#ebf4fe;
+  background-image: url("/image/ticket-icon-prev.png");
+  background-position:center;
+  background-repeat:no-repeat;
+
+}
+.wrap .container-box .date-wrap .not-allowed {
+  cursor: not-allowed;
+}
+.wrap .container-box .date-wrap .date-prev:hover {
+  background:#ebf4fe;
+  background-image: url("/image/ticket-icon-prev-hover.png");
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.wrap .container-box .date-wrap .date-next {
+  background:#ebf4fe;
+  background-image: url("/image/ticket-icon-next.png");
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.wrap .container-box .date-wrap .date-next:hover {
+  background: #ebf4fe;
+  background-image: url("/image/ticket-icon-next-hover.png");
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.wrap .container-box .date-wrap .date-content {
+  float: left;
+}
+.wrap .container-box .date-wrap .date-content li {
+  float: left;
+  width: 128px;
+  height: 37px;
+  border-top: 1px solid #3996fa;
+  border-right: 1px solid #3996fa;
+  border-bottom: 2px solid #66a8ef;
+  background: #ebf4fe;
+  font-size: 12px;
+  line-height: 37px;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+}
+.wrap .container-box .hidden {
+  display: none;
+}
+.wrap .container-box .none-data .nonedata-img {
+  height: 243px;
+  background: url("/image/ticket-img-nonedata.png") no-repeat center bottom;
+}
+.wrap .container-box .none-data .nonedata-tips {
+  width: 134px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ced1d5;
+  text-align: center;
+}
+
+.wrap .container-box .date-wrap .date-content li:last-of-type {
+  border-right: none;
+}
+.wrap .container-box .date-wrap .date-content li:hover {
+  background: #f80;
+  color: #fff;
+  border-top-color: #f80;
+}
+.wrap .container-box .date-wrap .date-content .active {
+  width: 125px;
+  height: 36px;
+  border: 2px solid #66a8ef;
+  border-bottom-color: #fff;
+  font-weight: bold;
+}
+.wrap .container-box .table-wrap {
+  margin-bottom: 40px;
+  border: 1px solid #e0e0e0;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #fff;
+  position: relative;
+}
+.wrap .container-box .table-wrap .mask-left {
+  width: 10px;
+  height: 36px;
+  background: #f7f7f7;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.wrap .container-box .table-wrap .mask-right {
+  width: 10px;
+  height: 36px;
+  background: #f7f7f7;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.wrap .container-box .table-wrap .line {
+  height: 1px;
+  background: #e0e0e0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 36px;
+}
+.wrap .container-box .table-wrap table {
+  border-collapse: collapse;
+  width:100%;
+}
+.wrap .container-box .table-wrap table thead {
+  background: #f7f7f7;
+  border-bottom: 1px solid #e0e0e0;
+}
+.wrap .container-box .table-wrap table thead tr th {
+  font-size: 14px;
+  color: #6c6c6c;
+  line-height: 36px;
+  font-weight: normal;
+  text-align: center;
+}
+.wrap .container-box .table-wrap table thead tr .one {
+  width: 120px;
+  margin-right: 10px;
+}
+.wrap .container-box .table-wrap table thead tr .two {
+  width: 170px;
+}
+.wrap .container-box .table-wrap table thead tr .three {
+  width: 170px;
+}
+.wrap .container-box .table-wrap table thead tr .four {
+  width: 164px;
+}
+.wrap .container-box .table-wrap table thead tr .five {
+  width: 175px;
+}
+.wrap .container-box .table-wrap table thead tr .six {
+  width: 138px;
+}
+.wrap .container-box .table-wrap table thead tr .seven {
+  width: 138px;
+}
+.wrap .container-box .table-wrap table thead tr .eight {
+  width: 158px;
+}
+.wrap .container-box .table-wrap table tbody {
+  font-size: 14px;
+  color: #555;
+  line-height: 80px;
+  text-align: center;
+}
+.wrap .container-box .table-wrap table tbody tr {
+  border-bottom: 1px dashed #e0e0e0;
+}
+.wrap .container-box .table-wrap table tbody tr .price {
+  font-size: 22px;
+  line-height: 78px;
+  color: #f80;
+}
+.wrap .container-box .table-wrap table tbody tr .price sub {
+  font-size: 14px;
+  color: #f80;
+  vertical-align: baseline;
+}
+.wrap .container-box .table-wrap table tbody tr td .gobuy {
+  display: inline-block;
+  width: 80px;
+  height: 24px;
+  color: #fff;
+  background: #ffa319;
+  line-height: 24px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.wrap .container-box .table-wrap table tbody tr td .gobuy:hover {
+  background: #f80;
+}
+.wrap .container-box .table-wrap table tbody tr:last-of-type {
+  border-bottom: none;
+}
+.wrap .container-box .table-wrap table tbody tr:hover {
+  background: #f3f8fe;
+}
+.wrap .container-box .paging {
+  width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: none;
+  margin-bottom: 40px;
+}
+.wrap .container-box .paging li {
+  display: inline-block;
+  font-size: 12px;
+  color: #8e8e8e;
+}
+.wrap .container-box .paging li a {
+  display: inline-block;
+  border: 1px solid #b5b5b5;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  line-height: 30px;
+  font-family: 'Arial';
+  color: #8e8e8e;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.wrap .container-box .paging li a:hover {
+  border: 1px solid #ff8800;
+}
+.wrap .container-box .paging li .active {
+  background: #ff8800;
+  color: #fff;
+  border: 1px solid #ff8800;
+}
+.wrap .container-box .paging li .paging-left {
+  background: #fafcff;
+  background-image:url("/image/list-paging-left.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  margin-right: 15px;
+}
+.wrap .container-box .paging li .paging-right {
+  background: #fafcff;
+  background-image:url("/image/list-paging-right.png");
+  background-repeat:no-repeat;
+  background-position:center;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+.wrap .container-box .paging li .paging-num {
+  width: 30px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #8e8e8e;
+  border: 1px solid #d3d3d3;
+  outline: none;
+  text-align: center;
+  vertical-align: middle;
+  margin: -4px 4px 0px 4px;
+}
+.wrap .container-box .paging li .paging-jump {
+  width: 30px;
+  height: 20px;
+  margin-left: 12px;
+  color: #000;
+  font-size: 12px;
+  margin-top: -4px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+/*弹窗*/
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.shadow .collapse {
+  width: 358px;
+  height: 487px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.shadow .collapse .login-computer {
+  background: #fff;
+  width: 100%;
+  height: 472px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 15px;
+}
+.shadow .collapse .login-computer .close-btn {
+  float: right;
+  width: 17px;
+  height: 17px;
+  background: url("/image/modal-close.png") no-repeat center;
+  margin-right: 16px;
+}
+.shadow .collapse .login-computer .logo {
+  width: 260px;
+  margin: 0 auto;
+  height: 55px;
+  background: url("/image/logo.png") no-repeat center bottom;
+}
+.shadow .collapse .login-computer .login-3thpart {
+  width: 260px;
+  margin: 0 auto;
+}
+.shadow .collapse .login-computer .login-3thpart .part3-header {
+  font-size: 16px;
+  line-height: 50px;
+  color: #a3a3a3;
+  text-align: center;
+}
+.shadow .collapse .login-computer .login-3thpart .part3-header i {
+  width: 66px;
+  height: 2px;
+  background: #d4d4d4;
+  margin-top: 24px;
+}
+.shadow .collapse .login-computer .login-3thpart .part3-header i:first-of-type {
+  float: left;
+}
+.shadow .collapse .login-computer .login-3thpart .part3-header i:last-of-type {
+  float: right;
+}
+.shadow .collapse .login-computer .login-3thpart .part3-header span {
+  float: left;
+  width: 128px;
+  text-align: center;
+}
+.shadow .collapse .login-computer .login-3thpart .part3-body {
+  margin-bottom: 4px;
+  padding-top: 9px;
+}
+.shadow .collapse .login-computer .login-3thpart .part3-body a {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin: 0 21px;
+}
+.shadow .collapse .login-computer .login-3thpart .part3-body .microblog {
+  background: url("/image/ticket-icon-microblog.png") no-repeat center;
+  background-size: contain;
+}
+.shadow .collapse .login-computer .login-3thpart .part3-body .qq {
+  background: url("/image/ticket-icon-qq.png") no-repeat center;
+  background-size: contain;
+}
+.shadow .collapse .login-computer .login-3thpart .part3-body .weichart {
+  background: url("/image/ticket-icon-weichart.png") no-repeat center;
+  background-size: contain;
+}
+.shadow .collapse .login-computer .login-telemail {
+  width: 260px;
+  margin: 0 auto;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-header {
+  font-size: 16px;
+  line-height: 50px;
+  color: #a3a3a3;
+  text-align: center;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-header i {
+  width: 45px;
+  height: 2px;
+  background: #d4d4d4;
+  margin-top: 24px;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-header i:first-of-type {
+  float: left;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-header i:last-of-type {
+  float: right;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-header span {
+  float: left;
+  width: 170px;
+  text-align: center;
+  color: #3996fa;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap {
+  position: relative;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap input {
+  display: block;
+  border: 1px solid #c9c9c9;
+  box-shadow: inset 0px 1px 4px #e0e0e0;
+  width: 211px;
+  padding-left: 13px;
+  padding-right: 32px;
+  height: 34px;
+  outline: none;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #8d8d8d;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap input:focus {
+  border: 1px solid #1571d4;
+  box-shadow: inset 0px 1px 7px #a2cbff;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .telemail-input-wrap #eyeicon {
+  position: absolute;
+  width: 22px;
+  height: 34px;
+  display: inline-block;
+  background: url("/image/icon-passwordeye.png") no-repeat center;
+  background-size: contain;
+  top: 56px;
+  right: 9px;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips {
+  margin-bottom: 23px;
+  font-size: 12px;
+  color: #999;
+  line-height: 13px;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips label {
+  float: left;
+  position: relative;
+  cursor: pointer;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips label input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips label .radiomask {
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  float: left;
+  border: 1px solid #3996fa;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips label span {
+  float: left;
+  padding-left: 5px;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips label input[type=checkbox]:checked + .radiomask {
+  border: 1px solid #f80;
+  background: url("/image/list-checkbox-selected.png") no-repeat center;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips a {
+  float: right;
+  font-size: 12px;
+  color: #999;
+  line-height: 13px;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .telemail-tips a:hover {
+  color: #3996fa;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .next-box a {
+  display: block;
+  height: 34px;
+  line-height: 34px;
+  background: #f80;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 10px;
+}
+.shadow .collapse .login-computer .login-telemail .telemail-body .next-box a:hover {
+  background: #ca8c34;
+}
+.shadow .collapse .login-computer .login-computer-footer {
+  padding-left: 50px;
+}
+.shadow .collapse .login-computer .login-computer-footer span {
+  float: left;
+  font-size: 12px;
+  line-height: 42px;
+  color: #000;
+}
+.shadow .collapse .login-computer .login-computer-footer span a {
+  font-size: 13px;
+  line-height: 42px;
+  color: #3996fa;
+}
+.shadow .collapse .login-computer .login-computer-footer #weichartJump {
+  float: right;
+  width: 64px;
+  height: 64px;
+  background: url("/image/icon-Pc-switch.png") no-repeat center;
+  background-size: 64px 64px;
+}
+.shadow .collapse .login-weichart {
+  background: #fff;
+  width: 100%;
+  height: 472px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 15px;
+}
+.shadow .collapse .login-weichart .close-btn {
+  float: right;
+  width: 17px;
+  height: 17px;
+  background: url("/image/modal-close.png") no-repeat center;
+  margin-right: 16px;
+}
+.shadow .collapse .login-weichart h4 {
+  font-size: 16px;
+  color: #a3a3a3;
+  text-align: center;
+  line-height: 76px;
+  margin-top: 44px;
+}
+.shadow .collapse .login-weichart .weichartcode-wrap {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  border: 1px solid #e2e2e2;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.shadow .collapse .login-weichart .weichartcode-wrap img {
+  width: 100%;
+  height: 100%;
+}
+.shadow .collapse .login-weichart p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #a3a3a3;
+  text-align: center;
+}
+.shadow .collapse .login-weichart .yhylink {
+  font-size: 16px;
+  line-height: 22px;
+  color: #3996fa;
+  text-align: center;
+  display: block;
+}
+.shadow .collapse .login-weichart #pcJump {
+  margin-top: 25px;
+  float: right;
+  display: inline-block;
+  width: 79px;
+  height: 79px;
+  background: url("/image/icon-weichart-switch.png") no-repeat center;
+}
+.shadow .collapse .password-forget {
+  background: #fff;
+  width: 100%;
+  height: 417px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 15px;
+}
+.shadow .collapse .password-forget .close-btn {
+  float: right;
+  width: 17px;
+  height: 17px;
+  background: url("/image/modal-close.png") no-repeat center;
+  margin-right: 16px;
+}
+.shadow .collapse .password-forget h4 {
+  font-size: 16px;
+  color: #3996fa;
+  text-align: center;
+  line-height: 16px;
+  padding-top: 8px;
+  padding-bottom: 11px;
+  border-bottom: 2px solid #d4d4d4;
+  width: 258px;
+  margin: 0 auto;
+  margin-bottom: 90px;
+}
+.shadow .collapse .password-forget .username-input {
+  width: 243px;
+  border: 1px solid #c9c9c9;
+  margin: 0 auto;
+  display: block;
+  box-shadow: inset 0 2px 6px #e0e0e0;
+  height: 34px;
+  line-height: 34px;
+  padding-left: 13px;
+  outline: none;
+  color: #8d8d8d;
+  font-size: 14px;
+}
+.shadow .collapse .password-forget .username-input:focus {
+  box-shadow: inset 0 2px 6px #c7e2ff;
+  border: 1px solid #1571d4;
+}
+.shadow .collapse .password-forget .username-tips {
+  font-size: 12px;
+  color: #f80;
+  margin-left: 65px;
+  line-height: 24px;
+  margin-bottom: 22px;
+}
+.shadow .collapse .password-forget .username-tips:before {
+  content: "*";
+  font-size: 16px;
+  color: #f80;
+  line-height: 24px;
+  vertical-align: sub;
+}
+.shadow .collapse .password-forget .passwordforget-group {
+  margin-left: 50px;
+  width: 266px;
+  margin-bottom: 70px;
+}
+.shadow .collapse .password-forget .passwordforget-group input {
+  float: left;
+  width: 114px;
+  height: 34px;
+  border: 1px solid #c9c9c9;
+  box-shadow: inset 0 2px 6px #e0e0e0;
+  padding-left: 14px;
+  outline: none;
+  color: #8d8d8d;
+  font-size: 14px;
+  line-height: 34px;
+  margin-right: 8px;
+}
+.shadow .collapse .password-forget .passwordforget-group input:focus {
+  box-shadow: inset 0 2px 6px #c7e2ff;
+  border: 1px solid #1571d4;
+}
+.shadow .collapse .password-forget .passwordforget-group span {
+  float: left;
+  width: 80px;
+  height: 36px;
+  overflow: hidden;
+  margin-right: 3px;
+}
+.shadow .collapse .password-forget .passwordforget-group a {
+  color: #3996fa;
+  font-size: 14px;
+  line-height: 36px;
+}
+.shadow .collapse .password-forget .next-box {
+  width: 258px;
+  margin: 0 auto;
+}
+.shadow .collapse .password-forget .next-box a {
+  display: block;
+  width: 100%;
+  height: 34px;
+  text-align: center;
+  background: #f80;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 34px;
+}
+.shadow .collapse .password-forget .next-box a:hover {
+  background: #ca8c34;
+}
+.shadow .collapse .realname-check {
+  background: #fff;
+  width: 100%;
+  height: 432px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 15px;
+}
+.shadow .collapse .realname-check .close-btn {
+  float: right;
+  width: 17px;
+  height: 17px;
+  background: url("/image/modal-close.png") no-repeat center;
+  margin-right: 16px;
+}
+.shadow .collapse .realname-check h4 {
+  font-size: 16px;
+  color: #3996fa;
+  text-align: center;
+  line-height: 16px;
+  padding-top: 8px;
+  padding-bottom: 11px;
+  border-bottom: 2px solid #d4d4d4;
+  width: 258px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.shadow .collapse .realname-check input {
+  width: 243px;
+  border: 1px solid #c9c9c9;
+  margin: 0 auto;
+  display: block;
+  box-shadow: inset 0 2px 6px #e0e0e0;
+  height: 34px;
+  line-height: 34px;
+  padding-left: 13px;
+  outline: none;
+  color: #8d8d8d;
+  font-size: 14px;
+  margin-bottom: 26px;
+}
+.shadow .collapse .realname-check input:focus {
+  box-shadow: inset 0 2px 6px #c7e2ff;
+  border: 1px solid #1571d4;
+}
+.shadow .collapse .realname-check input:first-of-type {
+  margin-bottom: 0;
+}
+.shadow .collapse .realname-check input:last-of-type {
+  margin-bottom: 30px;
+}
+.shadow .collapse .realname-check .input-tips {
+  font-size: 12px;
+  color: #f80;
+  margin-left: 65px;
+  line-height: 26px;
+}
+.shadow .collapse .realname-check .input-tips:before {
+  content: "*";
+  font-size: 16px;
+  color: #f80;
+  line-height: 24px;
+  vertical-align: sub;
+}
+.shadow .collapse .realname-check .next-box {
+  width: 258px;
+  margin: 0 auto;
+}
+.shadow .collapse .realname-check .next-box a {
+  display: block;
+  width: 100%;
+  height: 34px;
+  text-align: center;
+  background: #f80;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 34px;
+}
+.shadow .collapse .realname-check .next-box a:hover {
+  background: #ca8c34;
+}
+.shadow .collapse .account-signin {
+  background: #fff;
+  width: 100%;
+  height: 417px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 15px;
+}
+.shadow .collapse .account-signin .close-btn {
+  float: right;
+  width: 17px;
+  height: 17px;
+  background: url("/image/modal-close.png") no-repeat center;
+  margin-right: 16px;
+}
+.shadow .collapse .account-signin h4 {
+  font-size: 16px;
+  color: #3996fa;
+  text-align: center;
+  line-height: 16px;
+  padding-top: 8px;
+  padding-bottom: 11px;
+  border-bottom: 2px solid #d4d4d4;
+  width: 258px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.shadow .collapse .account-signin input {
+  width: 243px;
+  border: 1px solid #c9c9c9;
+  margin: 0 auto;
+  display: block;
+  box-shadow: inset 0 2px 6px #e0e0e0;
+  height: 34px;
+  line-height: 34px;
+  padding-left: 13px;
+  outline: none;
+  color: #8d8d8d;
+  font-size: 14px;
+  margin-bottom: 26px;
+}
+.shadow .collapse .account-signin input:focus {
+  box-shadow: inset 0 2px 6px #c7e2ff;
+  border: 1px solid #1571d4;
+}
+.shadow .collapse .account-signin input:first-of-type {
+  margin-bottom: 0;
+}
+.shadow .collapse .account-signin input:last-of-type {
+  margin-bottom: 30px;
+}
+.shadow .collapse .account-signin .input-tips {
+  font-size: 12px;
+  color: #f80;
+  margin-left: 65px;
+  line-height: 26px;
+}
+.shadow .collapse .account-signin .input-tips:before {
+  content: "*";
+  font-size: 16px;
+  color: #f80;
+  line-height: 24px;
+  vertical-align: sub;
+}
+.shadow .collapse .account-signin .account-signin-group {
+  margin-left: 50px;
+  width: 266px;
+  margin-bottom: 30px;
+}
+.shadow .collapse .account-signin .account-signin-group input {
+  float: left;
+  width: 114px;
+  height: 34px;
+  border: 1px solid #c9c9c9;
+  box-shadow: inset 0 2px 6px #e0e0e0;
+  padding-left: 14px;
+  outline: none;
+  color: #8d8d8d;
+  font-size: 14px;
+  line-height: 34px;
+  margin-right: 8px;
+}
+.shadow .collapse .account-signin .account-signin-group input:focus {
+  box-shadow: inset 0 2px 6px #c7e2ff;
+  border: 1px solid #1571d4;
+}
+.shadow .collapse .account-signin .account-signin-group span {
+  float: left;
+  width: 80px;
+  height: 36px;
+  overflow: hidden;
+  margin-right: 3px;
+}
+.shadow .collapse .account-signin .account-signin-group a {
+  color: #3996fa;
+  font-size: 14px;
+  line-height: 36px;
+}
+.shadow .collapse .account-signin .next-box {
+  width: 258px;
+  margin: 0 auto;
+}
+.shadow .collapse .account-signin .next-box a {
+  display: block;
+  width: 100%;
+  height: 34px;
+  text-align: center;
+  background: #f80;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 34px;
+}
+.shadow .collapse .account-signin .next-box a:hover {
+  background: #ca8c34;
+}
+.shadow .collapse .account-check {
+  background: #fff;
+  width: 100%;
+  height: 417px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 15px;
+}
+.shadow .collapse .account-check .close-btn {
+  float: right;
+  width: 17px;
+  height: 17px;
+  background: url("/image/modal-close.png") no-repeat center;
+  margin-right: 16px;
+}
+.shadow .collapse .account-check h4 {
+  font-size: 16px;
+  color: #3996fa;
+  text-align: center;
+  line-height: 16px;
+  padding-top: 8px;
+  padding-bottom: 11px;
+  border-bottom: 2px solid #d4d4d4;
+  width: 258px;
+  margin: 0 auto;
+  margin-bottom: 63px;
+}
+.shadow .collapse .account-check p {
+  margin-left: 50px;
+  font-size: 14px;
+  color: #8d8d8d;
+  line-height: 30px;
+  text-align: left;
+}
+.shadow .collapse .account-check input {
+  width: 243px;
+  border: 1px solid #c9c9c9;
+  margin: 0 auto;
+  display: block;
+  box-shadow: inset 0 2px 6px #e0e0e0;
+  height: 34px;
+  line-height: 34px;
+  padding-left: 13px;
+  outline: none;
+  color: #8d8d8d;
+  font-size: 14px;
+  margin-top: 20px;
+}
+.shadow .collapse .account-check input:focus {
+  box-shadow: inset 0 2px 6px #c7e2ff;
+  border: 1px solid #1571d4;
+}
+.shadow .collapse .account-check .time-tips {
+  font-size: 12px;
+  color: #f80;
+  line-height: 50px;
+  margin-bottom: 50px;
+}
+.shadow .collapse .account-check .next-box {
+  width: 258px;
+  margin: 0 auto;
+}
+.shadow .collapse .account-check .next-box a {
+  display: block;
+  width: 100%;
+  height: 34px;
+  text-align: center;
+  background: #f80;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff;
+  line-height: 34px;
+}
+.shadow .collapse .account-check .next-box a:hover {
+  background: #ca8c34;
+}
+
+#elseTicketTable{
+  width: 1198px;
+  margin-bottom: 30px;
+  border:1px solid #e0e0e0;
+  border-bottom:none;
+}
+#elseTicketTable table{
+  border-collapse: collapse;
+  width: 100%;
+}
+#elseTicketTable table .else-one{
+  width: 126px;
+  text-align: center;
+}
+#elseTicketTable table .else-two{
+  width: 231px;
+  text-align: left;
+}
+#elseTicketTable table .else-three{
+  width: 399px;
+  text-align: center;
+}
+#elseTicketTable table .else-four{
+  width: 174px;
+  text-align: center;
+}
+#elseTicketTable table .else-five{
+  width: 88px;
+  text-align: center;
+}
+#elseTicketTable table .else-six{
+  width: 180px;
+  text-align: center;
+}
+#elseTicketTable table th{
+  font-size: 14px;
+  color: #6c6c6c;
+  line-height: 36px;
+  font-weight: normal;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e0e0e0;
+}
+#elseTicketTable table tbody tr{
+  border-bottom: 1px solid #e0e0e0;
+}
+#elseTicketTable table tbody tr td{
+  font-size: 14px;
+  color: #6c6c6c;
+  line-height: 72px;
+  font-weight: normal;
+}
+#elseTicketTable table tbody tr .else-five a{
+  line-height: 72px;
+  color: #3996fa;
+}
+#elseTicketTable table tbody tr .else-six a{
+  display: inline-block;
+  width: 80px;
+  height: 24px;
+  color: #fff;
+  background: #ffa319;
+  line-height: 24px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+#elseTicketTable table tbody .else-five .detail-pop{
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  background: rgba(0,0,0,.5);
+  display: none;
+  z-index: 9999;
+}
+#elseTicketTable table tbody .else-five .detail-pop .detail-popWrap{
+  width: 560px;
+  height: 414px;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  background: #fff;
+  margin-left: -280px;
+  margin-top: -207px;
+}
+#elseTicketTable table tbody .else-five .detail-pop .detail-popWrap .pop-header{
+  position: relative;
+  background: #f3f8fe;
+  font-size: 18px;
+  line-height: 48px;
+  padding-left: 53px;
+  color: #333;
+  text-align: left;
+}
+#elseTicketTable table tbody .else-five .detail-pop .detail-popWrap .pop-header .pop-close{
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  right: 0;
+  top:0;
+  cursor: pointer;
+  background: url("/image/icon_close.png") no-repeat center;
+  background-size: 17px 17px;
+}
+#elseTicketTable table tbody .else-five .detail-pop .detail-popWrap .pop-body{
+  padding: 13px 25px;
+  height: 330px;
+  overflow: auto;
+  text-align: left;
+  line-height: 20px;
+}

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.invitation.mapper.InvitationMapper">
+	<insert id="insert" parameterType="Invitation" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_invitation
+			(
+				id,
+				user_id,
+				plan_id,
+				plan_days,
+				intro,
+				tel,
+				tel_flag,
+				start_date,
+				addr,
+				lat,
+				lng,
+				pub_citycode,
+				author_sex,
+				citys,
+				like_counts,
+				comment_counts,
+				join_counts,
+				modify_time,
+				type
+			)
+		values
+			(
+				#{id},
+				#{userId},
+				#{planId},
+				#{planDays},
+				#{intro},
+				#{tel},
+				#{telFlag},
+				#{startDate},
+				#{addr},
+				#{lat},
+				#{lng},
+				#{pubCitycode},
+				#{authorSex},
+				#{citys},
+				#{likeCounts},
+				#{commentCounts},
+				#{joinCounts},
+				#{modifyTime},
+				#{type}
+			)
+	</insert>
+	
+	<update id="update" parameterType="Invitation">
+		update tb_invitation
+		<set>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="planId != null and '' != planId"> plan_id = #{planId},</if>
+			<if test="planDays != null and '' != planDays"> plan_days = #{planDays},</if>
+			<if test="intro != null and '' != intro"> intro = #{intro},</if>
+			<if test="tel != null"> tel = #{tel},</if>
+			<if test="telFlag != null and '' != telFlag"> tel_flag = #{telFlag},</if>
+			<if test="startDate != null and '' != startDate"> start_date = #{startDate},</if>
+			<if test="addr != null and '' != addr"> addr = #{addr},</if>
+			<if test="lat != null and '' != lat"> lat = #{lat},</if>
+			<if test="lng != null and '' != lng"> lng = #{lng},</if>
+			<if test="pubCitycode != null and '' != pubCitycode"> pub_citycode = #{pubCitycode},</if>
+			<if test="authorSex != null and '' != authorSex"> author_sex = #{authorSex},</if>
+			<if test="citys != null"> citys = #{citys},</if>
+			<if test="likeCounts != null and '' != likeCounts"> like_counts = #{likeCounts},</if>
+			<if test="commentCounts != null and '' != commentCounts"> comment_counts = #{commentCounts},</if>
+			<if test="joinCounts != null and '' != joinCounts"> join_counts = #{joinCounts},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="type != null and '' != type"> type = #{type},</if>
+			<if test="cityCode != null and '' != cityCode"> city_code = #{cityCode},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	<update id="changeNum" parameterType="Map">
+		update tb_invitation
+		<set>
+			<if test="likeCounts != null and '' != likeCounts"> like_counts = like_counts + #{likeCounts},</if>
+			<if test="commentCounts != null and '' != commentCounts"> comment_counts = comment_counts + #{commentCounts},</if>
+			<if test="joinCounts != null and '' != joinCounts"> join_counts = join_counts + #{joinCounts},</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="Invitation">
+		delete from
+			tb_invitation
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="Invitation">
+		select
+			*
+		from
+			tb_invitation
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="Invitation">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_invitation
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="planId != null and '' != planId"> and plan_id = #{planId} </if>
+			<if test="planDays != null and '' != planDays"> and plan_days = #{planDays} </if>
+			<if test="intro != null and '' != intro"> and intro = #{intro} </if>
+			<if test="tel != null and '' != tel"> and tel = #{tel} </if>
+			<if test="telFlag != null and '' != telFlag"> and tel_flag = #{telFlag} </if>
+			<if test="startDate != null and '' != startDate"> and start_date = #{startDate} </if>
+			<if test="addr != null and '' != addr"> and addr = #{addr} </if>
+			<if test="authorSex != null and '' != authorSex"> and author_sex = #{authorSex} </if>
+			<if test="citys != null and '' != citys"> and citys like '%${citys}%' </if>
+			<if test="pubCitycode != null and '' != pubCitycode"> and pub_citycode = #{pubCitycode} </if>
+			<if test="likeCounts != null and '' != likeCounts"> and like_counts = #{likeCounts} </if>
+			<if test="commentCounts != null and '' != commentCounts"> and comment_counts = #{commentCounts} </if>
+			<if test="joinCounts != null and '' != joinCounts"> and join_counts = #{joinCounts} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="type != null and '' != type"> and type = #{type} </if>
+			<if test="cityCode != null and '' != cityCode">
+				<if test="cityFlag != null and cityFlag != 1"> and citys NOT LIKE '%${cityCode}%' and (pub_citycode &lt;&gt; #{cityCode} or pub_citycode is null)</if>
+				<if test="cityFlag != null and cityFlag == 1"> and (citys LIKE  '%${cityCode}%' or pub_citycode = #{cityCode})</if>
+
+			</if>
+
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		<if test="planIds != null and planIds.size() > 0">
+			and plan_id in
+			<foreach item="item" index="index" collection="planIds" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+		order by create_time desc
+	</sql>
+</mapper>

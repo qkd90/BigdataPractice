@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.GalleryImageMapper">
+	<insert id="insert" parameterType="GalleryImage">
+		insert into tb_gallery_image
+			(
+				id,
+				gallery_id,
+				address_large,
+				address_medium,
+				address_small,
+				title,
+				content,
+				image_order,
+				modify_time,
+				create_time,
+				width,
+				height
+			)
+		values
+			(
+				#{id},
+				#{galleryId},
+				#{addressLarge},
+				#{addressMedium},
+				#{addressSmall},
+				#{title},
+				#{content},
+				#{imageOrder},
+				#{modifyTime},
+				#{createTime},
+				#{width},
+				#{height}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="GalleryImage">
+		update tb_gallery_image
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="galleryId != null and '' != galleryId"> gallery_id = #{galleryId},</if>
+			<if test="addressLarge != null and '' != addressLarge"> address_large = #{addressLarge},</if>
+			<if test="addressMedium != null and '' != addressMedium"> address_medium = #{addressMedium},</if>
+			<if test="addressSmall != null and '' != addressSmall"> address_small = #{addressSmall},</if>
+			<if test="title != null and '' != title"> title = #{title},</if>
+			<if test="content != null and '' != content"> content = #{content},</if>
+			<if test="imageOrder != null and '' != imageOrder"> image_order = #{imageOrder},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="width != null and '' != width"> width = #{width},</if>
+			<if test="height != null and '' != height"> height = #{height},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="GalleryImage">
+		delete from
+			tb_gallery_image
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="GalleryImage">
+		select
+			*
+		from
+			tb_gallery_image
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="GalleryImage">
+		select 
+			*
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_gallery_image
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="galleryId != null and '' != galleryId"> and gallery_id = #{galleryId} </if>
+			<if test="addressLarge != null and '' != addressLarge"> and address_large = #{addressLarge} </if>
+			<if test="addressMedium != null and '' != addressMedium"> and address_medium = #{addressMedium} </if>
+			<if test="addressSmall != null and '' != addressSmall"> and address_small = #{addressSmall} </if>
+			<if test="title != null and '' != title"> and title = #{title} </if>
+			<if test="content != null and '' != content"> and content = #{content} </if>
+			<if test="imageOrder != null and '' != imageOrder"> and image_order = #{imageOrder} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; #{ta} </if>
+            <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; #{tb} </if>
+            <if test="width != null and '' != width"> and width = #{width} </if>
+			<if test="height != null and '' != height"> and height = #{height} </if>
+		</where>
+		<choose>
+            <when test="orderColumn != null and '' != orderColumn">
+                order by ${orderColumn}
+                <if test="orderType != null and '' != orderType">
+                    ${orderType}
+                </if>
+            </when>
+			<otherwise>
+				order by create_time desc
+			</otherwise>
+		</choose>
+	</sql>
+</mapper>

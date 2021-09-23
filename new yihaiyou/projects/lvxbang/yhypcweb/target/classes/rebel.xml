@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.zeroturnaround.com"
+             xsi:schemaLocation="http://www.zeroturnaround.com http://www.zeroturnaround.com/alderaan/rebel-2_0.xsd"
+        >
+    <classpath>
+        <dir name="E:/workspace/data/coressh4/target/classes"></dir>
+        <dir name="E:/workspace/data/frame/target/classes"></dir>
+        <dir name="E:/workspace/data/logic/common/target/classes"></dir>
+        <dir name="E:/workspace/data/business/other/otherservice/target/classes"></dir>
+        <dir name="E:/workspace/data/business/other/otherweb/target/classes"></dir>
+        <dir name="E:/workspace/data/logic/builder/target/classes"></dir>
+        <dir name="E:/workspace/data/projects/lvxbang/lvxbangservice/target/classes"></dir>
+        <dir name="E:/workspace/data/projects/lvxbang/lvxbangweb/target/classes"></dir>
+    </classpath>
+    <web>
+        <link target="/">
+            <dir name="E:/workspace/data/frame/src/main/webapp"></dir>
+            <dir name="E:/workspace/data/business/other/otherweb/src/main/webapp"></dir>
+            <dir name="E:/workspace/data/logic/builder/src/main/webapp"></dir>
+            <dir name="E:/workspace/data/projects/lvxbang/lvxbangweb/src/main/webapp"></dir>
+        </link>
+    </web>
+</application>

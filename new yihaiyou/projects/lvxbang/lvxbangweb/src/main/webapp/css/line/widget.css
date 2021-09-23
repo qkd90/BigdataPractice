@@ -1,0 +1,83 @@
+.index1200
+.aside_tab{width:253px}.index1200
+.order_tab{}.index1200 .order_tab .tabs
+li{width:63px;font-size:14px}.index1200 .aside_tab .tabs
+.separator{width:1px}.index1200 .order_tab .form_field
+.field_input{width:140px}.index1200 .order_tab
+.field_select_2.w_93{width:158px}.index1200 .order_tab .field_select_2.w_93
+input{width:148px}.index1200 .order_tab
+.field_select{width:158px}.aside_tab{font-size:12px;background:#fff;font-family:"宋体";width:188px;border:1px
+solid #e5e5e5;border-top:none;position:relative;z-index:1}.aside_tab
+.tabs{font-size:14px;color:#666;font-family:"microsoft yahei";overflow:hidden}.aside_tab .tabs
+li{float:left;width:84px;_width:83px;height:32px;line-height:32px;text-align:center;border-color:#e5e5e5;background:#f7f7f7;cursor:pointer;border-top:1px solid #e5e5e5}.aside_tab .tabs
+.current{border-top:1px solid #37c249;color:#37c249;background:#fff}.aside_tab .tabs
+.separator{height:32px;width:1px;display:none}.aside_tab .tabs .separator
+span{display:inline-block;height:14px;background:#eaeaea;width:1px;margin-top:9px}
+.aside_tab .tab_contents .categories_Addmore2 li{padding: 0px; display: list-item;}
+.form_field{height:26px;line-height:26px;margin-bottom:5px}
+.form_field .field_name{color:#999;width:60px;display:inline-block;text-align:right}.form_field
+.field_input{border:1px
+solid #dcdcdc;font-size:12px;padding:6px
+8px;width:75px;height:12px;outline:none;line-height:12px}.form_field
+.field_btn{cursor:pointer;height:26px;line-height:26px;background:#ff931a;color:#fff;padding:0
+10px;border:none;border-radius:2px;outline:none;font-family:"宋体";font-weight:bold}.form_field
+.field_note{color:#999}.form_field
+.error{border-color:red}.order_tab{height:auto;margin-top:10px;padding-top:0px;border:1px
+solid #e5e5e5}.order_tab .tab_contents>li{padding:15px
+0px 15px 10px;display:none;overflow:visible}.order_tab .tab_contents
+.current{display:block}.order_tab .form_field
+*{vertical-align:middle}.order_tab .form_field
+.w_34{width:34px}.order_tab .form_field
+.w_42{width:42px}.order_tab .form_field
+.w_auto{width:auto}#flightSearchForm{position:relative;z-index:0}#flightSearchForm
+.switch_btn{position:absolute;right:0;top:6px;cursor:pointer}.order_tab .tabs
+li{width:47px;position:relative;z-index:1;margin-left:-1px;font-size:12px}.order_tab .tabs
+.current{z-index:3}.order_tab .tabs
+.separator{z-index:2;display:block}.order_tab
+.tabs{padding-left:1px;_margin-left:1px}.field_select{border:1px
+solid #dcdcdc;font-size:14px;height:26px;outline:none;line-height:26px;width:93px}.field_select_2{display:inline-block;*display:inline;position:relative;font-size:0}.field_select_2
+.icon_arrow{position:absolute;top:12px;right:4px}.field_select_2
+input{width:44px;height:12px;padding:6px
+4px;border:1px
+solid #dcdcdc;font:normal normal 12px/12px "microsoft yahei";position:relative;z-index:1}.index1200
+.dropdown_list{width:156px}.index1200 .diy_type_field label input, .index1200 .ticket_type_field label
+input{margin-right:5px}.field_select_2
+.dropdown_list{height:160px;width:91px;position:absolute;top:23px;left:0;background:#fff;border:1px
+solid #dcdcdc;height:120px;overflow-y:scroll;display:none;z-index:2;font-size:12px}.field_select_2 .dropdown_list
+li{height:24px;padding:0;display:block;font:normal normal 12px/24px "microsoft yahei";color:#666;text-align:center;cursor:pointer}.field_select_2 .dropdown_list li:hover{background:#f5f5f5}.field_select_2.w_93{width:93px}.field_select_2.w_93
+input{width:83px}.cities{position:absolute;z-index:999;display:none;width:580px;padding:5px
+10px 14px;border:1px
+solid #ddd;background:#fff}.cities_tit{height:20px;line-height:20px;color:#999}.cities_cat{height:30px;border-bottom:1px solid #ddd;margin-right:-2px}.cities_list_cat.hide{display:none}.cities_cat
+li{position:relative;top:1px;float:left;width:68px;height:22px;margin-top:6px;margin-right:2px;border:1px
+solid #ddd;cursor:pointer;text-align:center;line-height:22px}.cities_cat
+.pkg_city_cat_long{width:72px}.cities_cat
+.last{margin-right:0}.cities_cat
+li.current{border-top-color:#2e9700;border-bottom-color:#fff}.cities_list
+li{float:left;width:60px;height:24px;padding:0
+0 0 11px;line-height:24px;color:#666}.pcities_list a:hover{color:#2e9700}.cities
+.layer{display:none;position:absolute;left:0;top:0;z-index:9999;width:100%;height:100%}.cities
+.mask{position:absolute;left:0;top:0;z-index:1;width:100%;height:100%;background:#000;opacity:0.3;filter:alpha(opacity = 30)}.citySplit{padding-left:5px;background:#eee;color:#555;margin:5px
+0;display:block;font-weight:bold;width:570px !important}#trainSearchForm{position:relative;z-index:0}#trainSearchForm
+.form_field{margin-bottom:10px}#trainSearchForm
+.last{margin-top:23px}#trainSearchForm
+.switch_btn{position:absolute;right:0;top:10px;cursor:pointer}.pkg_citys{position:absolute;z-index:999;display:none;width:432px;padding:5px
+10px 14px;border:1px
+solid #ddd;background:#fff}.pkg_city_tit{height:20px;line-height:20px;color:#999}.pkg_city_cat{height:30px;border-bottom:1px solid #ddd;margin-right:-2px}.pkg_city_list_cat.hide{display:none}.pkg_city_cat
+li{position:relative;top:1px;float:left;width:68px;height:22px;margin-top:6px;margin-right:2px;border:1px
+solid #ddd;cursor:pointer;text-align:center;line-height:22px}.pkg_city_cat
+.pkg_city_cat_long{width:72px}.pkg_city_cat
+.last{margin-right:0}.pkg_city_cat
+li.current{border-top-color:#2e9700;border-bottom-color:#fff}.pkg_city_list
+li{float:left;width:49px;height:24px;padding:0
+0 0 11px;line-height:24px;color:#666}.pkg_city_list a:hover{color:#2e9700}.pkg_citys
+.layer{display:none;position:absolute;left:0;top:0;z-index:9999;width:100%;height:100%}.pkg_citys
+.mask{position:absolute;left:0;top:0;z-index:1;width:100%;height:100%;background:#000;opacity:0.3;filter:alpha(opacity=30)}.diy_type_field,.ticket_type_field{height:20px;line-height:20px;margin-bottom:5px}.index1200 .diy_type_field label,
+.index1200 .ticket_type_field
+label{width:100px}.diy_type_field label,
+.ticket_type_field
+label{width:auto;display:inline-block}.diy_type_field label input,
+.ticket_type_field label
+input{}.diy_type_field label *,
+.ticket_type_field label
+*{vertical-align:middle}.sideblock{position:relative;z-index:0}.adult_num_field
+.field_select_2{z-index:2}

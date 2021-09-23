@@ -1,0 +1,334 @@
+<div class="produc_main" ng-controller="scenicListCtrl">
+    <div class="header">
+        <a ui-sref="ticket/index"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        {{cityName}}门票
+    </div>
+    <div class="produc_section" style="margin-top: 47px;background-color: white;">
+        <style>
+            .swiper-container {
+                position: fixed;
+                top: 45px;
+                left: 0px;
+                border-bottom: 1px solid #ccc;
+                width: 100%;
+                background-color: #fff;
+                z-index: 300
+            }
+
+            .swiper-slide {
+                width: 75px;
+            }
+
+            .swiper-slide span {
+                padding: 5px 0;
+                display: block;
+                height: 42px;
+                line-height: 35px;
+                float: left;
+                width: 100%;
+                text-align: center;
+                font-size: 15px;
+            }
+
+            .swiper-wrapper {
+                width: 100%;
+            }
+
+        </style>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="width:75px;">
+                    <span id="jingpinLi" ng-click="tabChange(1)">精品定制</span>
+                </div>
+                <div class="swiper-slide" style="width:75px;">
+                    <span id="zizhuLi" ng-click="tabChange(2)">自助游</span>
+                </div>
+                <div class="swiper-slide" style="width:75px;">
+                    <span id="zijiaLi" ng-click="tabChange(3)">自驾游</span>
+                </div>
+                <div class="swiper-slide" style="width:75px;">
+                    <span id="gentuanLi" ng-click="tabChange(4)">跟团游</span>
+                </div>
+                <div class="swiper-slide" style="width:75px;">
+                    <span class="top_list_bg">门票</span>
+                    <!--<span>邮轮</span>-->
+                </div>
+            </div>
+        </div>
+
+        <!--精品定制-->
+        <div class="produc_contain" style="display: block; position: absolute; top: 45px;left:0 " infinite-scroll="getScenicList()"
+             infinite-scroll-disabled='loading' infinite-scroll-distance='1'>
+            <!--<a class="produc_contain_detail clearfix" ng-repeat="ticket in scenicList" style="border-bottom:1px solid #ccc; display: block; position: relative;" ui-sref="scenicDetail({scenicId:{{ticket.id}}})">
+               <span class="produc_contain_span">
+                    <img bn-lazy-src="{{ticket.cover}}?imageView2/1/w/640/h/480/q/75">
+                    &lt;!&ndash;<span style="background-color: #98d;">{{productAttr}}</span>&ndash;&gt;
+                </span>
+            <ul class="produc_contain_ul">
+                <li style="font-size: 14px; height: 20px;">{{ticket.name}}</li>
+                &lt;!&ndash;固定高度两行，字体数量需控制&ndash;&gt;
+                <li style="height: 40px;">开放时间: {{ticket.openTime | cutByLength : 22}}</li>
+                <li style="/*margin-top: 30px;*/">
+                    <span class="s_left1" ng-if="ticket.price > 0">￥</span>
+                    <span class="s_left2" ng-if="ticket.price > 0"><strong>{{ticket.price}}</strong></span>
+                    <span class="s_left3" ng-if="ticket.price > 0">起</span>
+                    <span class="s_left4">满意度{{ticket.productScore}}%</span>
+                </li>
+            </ul>
+        </a>-->
+
+            <div class="produc_contain_detail clearfix" style="border-bottom:1px solid #ccc;"
+                 ng-repeat="ticket in scenicList">
+                <a ui-sref="scenicDetail({scenicId:{{ticket.id}}})">
+                   <span class="produc_contain_span">
+                        <img bn-lazy-src="{{ticket.cover}}?imageView2/1/w/640/h/480/q/75">
+                        <!--<span style="background-color: #98d;">{{productAttr}}</span>-->
+                    </span>
+                    <ul class="produc_contain_ul">
+                        <li style="font-size: 14px; height: 20px;">{{ticket.name}}</li>
+                        <!--固定高度两行，字体数量需控制-->
+                        <li style="height: 40px;">开放时间: {{ticket.openTime | cutByLength : 22}}</li>
+                        <li style="/*margin-top: 30px;*/">
+                            <span class="s_left1" ng-if="ticket.price > 0">￥</span>
+                            <span class="s_left2" ng-if="ticket.price > 0"><strong>{{ticket.price}}</strong></span>
+                            <span class="s_left3" ng-if="ticket.price > 0">起</span>
+                            <span class="s_left4">满意度{{ticket.productScore}}%</span>
+                        </li>
+                    </ul>
+                </a>
+            </div>
+
+            <!--<div ng-show="loading">-->
+                <!--<div class="yuloading"><span>加载数据中...</span></div>-->
+            <!--</div>-->
+            <div ng-show="nomore" class="alert alert-danger text-center bg_loading">没有更多了...</div>
+        </div>
+
+
+        <!--底部固定栏-->
+        <div class="produc_under">
+            <ul class="produc_under_ul">
+                <!--<li id="pro_destination" ng-click="clickFooter(1)"><p class="filter-icon icon-destination2"></p>-->
+
+                    <!--<p>目的地</p></li>-->
+                <li id="pro_daytime" ng-click="clickFooter(2)"><p class="filter-icon icon-time2 p_pic"></p>
+                    <p>价格区间</p></li>
+                <li id="pro_selection" ng-click="clickFooter(3)"><p class="filter-icon icon-sift p_pic"></p>
+                    <p>特色筛选</p></li>
+                <li id="pro_order" ng-click="clickFooter(4)"><p class="filter-icon icon-sequence p_pic"></p>
+                    <p>推荐筛选</p></li>
+            </ul>
+        </div>
+        <!--
+        <div class="pro tank" ng-show="destinationFlag" style="display: block">
+            <div class="pro_desCity_all">
+                <div class="pro_desCity_top">
+                    <span style="width:25%;color:#777d84;" id="desGo_cancel" ng-click="hideFooter()">取消</span>
+                    &lt;!&ndash;<span style="width:50%;color:#777d84;" id="desGo_empty" ng-click="clearDestination()">清空已选</span>&ndash;&gt;
+                    <span style="width:50%;color:#777d84;" id="desGo_empty"></span>
+                    <span style="width:25%;color:#f5f5f7;float: right;" id="desGo_ensure" ng-click="searchScenicList()">确定</span>
+                </div>
+                <ul class="pro_province">
+                    <li ng-repeat="provice in provinceList" id="province_{{provice.id}}"
+                        class="provinceClass {{provice.selectClass}}" ng-click="selectProvince(provice.id)">
+                        {{provice.name}}
+                    </li>
+                </ul>
+                <ul class="pro_municipality" style="display:block">
+                    &lt;!&ndash;<li ng-repeat="city in cityList" province-id="{{city.id}}"><span>{{city.name}}</span><input class="pro_desCity_check1" ng-model="x" ng-checked="city.master" ng-click="chk(city.id, city.name, x)" id="{{city.id}}" type="checkbox"></input></li>&ndash;&gt;
+                    <li ng-repeat="city in cityList" province-id="{{city.id}}">
+                        <label>
+                            <span>{{city.name | cutByLength:5}}</span>
+                            <span class="bingo1 {{city.cityClass}}"
+                                  style="float: right;line-height: 10px;margin: 10px 18px;"
+                                  id="bingo_{{city.id}}"></span>
+                            &lt;!&ndash;<input class="pro_desCity_check1" ng-model="x" ng-checked="city.master"&ndash;&gt;
+                                   &lt;!&ndash;ng-click="chk(city.id, city.name)" id="{{city.id}}" type="radio" name="citySelect">&ndash;&gt;
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </div>-->
+
+        <!--价格区间-->
+        <div class="pro_desDay tank" ng-show="priceFlag" style="display: block">
+            <div class="pro_desCity_all">
+                <div class="pro_desCity_top">
+                    <span style="width:25%;color:#777d84;" id="desDay_cancel" ng-click="hideFooter()">取消</span>
+                    <span style="width:50%;color:#777d84;" id="desDay_empty" ng-click="clearDestination()">清空已选</span>
+                    <span style="width:25%;color:#f5f5f7;" id="desDay_ensure" ng-click="searchScenicList()">确定</span>
+                </div>
+                <ul class="pro_desSel_ul" data-data-index="2" data-change="0">
+                    <label>
+                        <li class="filter-data default  active" ng-click="selectPrice(0, -1, -1)">
+                            <span ng-class="{true:'pro_desDay_green', false: ''}[priceIndex == 0]">不限</span>
+                            <span class="bingo1" id="price0" style="float: right;line-height: 26px;padding: 0px 9px;"
+                                  ng-class="{true:'pro_green', false: ''}[priceIndex == 0]"></span>
+                        </li>
+                    </label>
+                    <label>
+                        <li class="filter-data" data-index="0" ng-click="selectPrice(1, 0, 50)">
+                            <span ng-class="{true:'pro_desDay_green', false: ''}[priceIndex == 1]">￥0 ~ ￥50</span>
+                            <span class="bingo1" id="price1" style="float: right;line-height: 26px;padding: 0px 9px;"
+                                  ng-class="{true:'pro_green', false: ''}[priceIndex == 1]"></span>
+                        </li>
+                    </label>
+                    <label>
+                        <li class="filter-data" data-index="1" ng-click="selectPrice(2, 50, 100)">
+                            <span ng-class="{true:'pro_desDay_green', false: ''}[priceIndex == 2]">￥50 ~ ￥100</span>
+                            <span class="bingo1" id="price2" style="float: right;line-height: 26px;padding: 0px 9px;"
+                                  ng-class="{true:'pro_green', false: ''}[priceIndex == 2]"></span>
+                        </li>
+                    </label>
+                    <label>
+                        <li class="filter-data" data-index="2" ng-click="selectPrice(3, 100, -1)">
+                            <span ng-class="{true:'pro_desDay_green', false: ''}[priceIndex == 3]">￥100以上</span>
+                            <span class="bingo1" id="price3" style="float: right;line-height: 26px;padding: 0px 9px;"
+                                  ng-class="{true:'pro_green', false: ''}[priceIndex == 3]"></span>
+                        </li>
+                    </label>
+                </ul>
+            </div>
+        </div>
+        <!--特色筛选页面-->
+        <div class="pro_desSel tank" ng-show="featuresFlag" style="display: block">
+            <div class="pro_desCity_all">
+                <div class="pro_desCity_top">
+                    <span style="width:25%;color:#777d84;" id="desSel_cancel" ng-click="hideFooter()">取消</span>
+                    <span style="width:50%;color:#777d84;" id="desSel_empty" ng-click="clearDestination()">清空已选</span>
+                    <span style="width:25%;color:#f5f5f7;" id="desSel_ensure" ng-click="searchScenicList()">确定</span>
+                </div>
+            </div>
+
+            <div class="pro_desDay_picture">
+                <ul class="jdweizhi">
+                    <li switch-hotel-plus-condition-tab class="" ng-click="selectFeatures(1)"> <span>位 &nbsp 置</span></li>
+                    <li switch-hotel-plus-condition-tab class="active" ng-click="selectFeatures(2)"> <span>景区主题</span></li>
+
+               </ul>
+            </div>
+            <ul class="pro_desDay_ul" id="pro_desDay_ul2" ng-show="locationFlag">
+                <label ng-click="selectLocation(1)">
+                    <li>
+                        <span class="pro_desDay_num" ng-class="{true:'pro_desDay_green', false: ''}[locationIndex == 1]">不限</span>
+                        <span class="bingo1"  style="float: right;line-height: 26px;"
+                              ng-class="{true:'pro_green', false: ''}[locationIndex == 1]"></span>
+
+                    </li>
+                </label>
+                <label ng-click="selectLocation(2,'岛内')">
+                    <li>
+                        <span class="pro_desDay_num" ng-class="{true:'pro_desDay_green', false: ''}[locationIndex == 2]">岛内</span>
+                        <span class="bingo1"  style="float: right;line-height: 26px;"
+                              ng-class="{true:'pro_green', false: ''}[locationIndex == 2]"></span>
+
+                    </li>
+                </label>
+                <label ng-click="selectLocation(3, '岛外')">
+                    <li>
+                        <span class="pro_desDay_num" ng-class="{true:'pro_desDay_green', false: ''}[locationIndex == 3]">岛外</span>
+                        <span class="bingo1" id="theme15" style="float: right;line-height: 26px;"
+                              ng-class="{true:'pro_green', false: ''}[locationIndex == 3]"></span>
+                    </li>
+                </label>
+                <label ng-click="selectLocation(4, '鼓浪屿')">
+                    <li>
+                        <span class="pro_desDay_num" ng-class="{true:'pro_desDay_green', false: ''}[locationIndex == 4]">鼓浪屿</span>
+                        <span class="bingo1" id="theme13" style="float: right;line-height: 26px;"
+                              ng-class="{true:'pro_green', false: ''}[locationIndex == 4]"></span>
+                    </li>
+                </label>
+
+
+            </ul>
+
+            <ul class="pro_desDay_ul" id="pro_desDay_ul1" ng-show="themeFlag">
+                <label ng-click="selectTheme(0)">
+                    <li>
+                        <span class="pro_desDay_num" ng-class="{true:'pro_desDay_green', false: ''}[themeIndex == 0]">不限</span>
+                        <span class="bingo1" id="theme0" style="float: right;line-height: 26px;" ng-class="{true:'pro_green', false: ''}[themeIndex == 0]"></span>
+                    </li>
+                </label>
+                <label ng-repeat="theme in themeList" ng-click="selectTheme(theme.id, theme.name)" >
+                    <li>
+                        <span class="pro_desDay_num" ng-class="{true:'pro_desDay_green', false: ''}[themeIndex == theme.id]">{{theme.name}}</span>
+                        <span class="bingo1" style="float: right;line-height: 26px;"
+                              ng-class="{true:'pro_green', false: ''}[themeIndex == theme.id]"></span>
+                    </li>
+                </label>
+            </ul>
+
+
+
+        </div>
+        <!--推荐筛选页面-->
+        <div class="pro_desOrd tank" ng-show="adviseFlag" style="display: block">
+            <div class="pro_desCity_all">
+                <div class="pro_desCity_top">
+                    <span style="width:25%;color:#777d84;" id="desOrd_cancel" ng-click="hideFooter()">取消</span>
+                    <span style="width:50%;color:#777d84;" id="desOrd_empty" ng-click="clearDestination()">清空已选</span>
+                    <span style="width:25%;color:#f5f5f7;" id="desOrd_ensure" ng-click="searchScenicList()">确定</span>
+                </div>
+            </div>
+            <ul class="pro_desSel_ul">
+                <label>
+                    <li ng-class="{true:'pro_desSel_bg', false: ''}[sortIndex == 0]" ng-click="checkSort(0, 'ranking', 'asc')">
+                        <span>推荐排序</span>
+                        <span class="bingo1" id="sort0" style="float: right;line-height: 26px;"
+                              ng-class="{true:'pro_green', false: ''}[sortIndex == 0]"></span>
+                        <!--<input class="pro_desCity_check pro_desCity_radio" type="radio" name="sort" ng-model="sort"-->
+                               <!--value="0" ng-click="checkSort(0)">-->
+                    </li>
+                </label>
+                <label>
+                    <li ng-class="{true:'pro_desSel_bg', false: ''}[sortIndex == 1]" ng-click="checkSort(1, 'orderNum', 'desc')">
+                        <span>30天销量最高</span>
+                        <span class="bingo1" id="sort1" style="float: right;line-height: 26px;"
+                              ng-class="{true:'pro_green', false: ''}[sortIndex == 1]"></span>
+                        <!--<input class="pro_desCity_check pro_desCity_radio" type="radio" name="sort" ng-model="sort"-->
+                               <!--value="1" ng-click="checkSort(1)">-->
+                    </li>
+                </label>
+                <label>
+                    <li ng-class="{true:'pro_desSel_bg', false: ''}[sortIndex == 2]" ng-click="checkSort(2, 'productScore', 'desc')">
+                        <span>满意度最高</span>
+                        <span class="bingo1" id="sort2" style="float: right;line-height: 26px;"
+                              ng-class="{true:'pro_green', false: ''}[sortIndex == 2]"></span>
+                        <!--<input class="pro_desCity_check pro_desCity_radio" type="radio" name="sort" ng-model="sort"-->
+                               <!--value="2" ng-click="checkSort(2)">-->
+                    </li>
+                </label>
+                <label>
+                    <li ng-class="{true:'pro_desSel_bg', false: ''}[sortIndex == 3]" ng-click="checkSort(3, 'price', 'desc')">
+                        <span>价格从高到低</span>
+                        <span class="bingo1" id="sort3" style="float: right;line-height: 26px;"
+                              ng-class="{true:'pro_green', false: ''}[sortIndex == 3]"></span>
+                        <!--<input class="pro_desCity_check pro_desCity_radio" type="radio" name="sort" ng-model="sort"-->
+                               <!--value="3" ng-click="checkSort(3)">-->
+                    </li>
+                </label>
+                <label>
+                    <li ng-class="{true:'pro_desSel_bg', false: ''}[sortIndex == 4]" ng-click="checkSort(4, 'price', 'asc')">
+                        <span>价格从低到高</span>
+                        <span class="bingo1" id="sort4" style="float: right;line-height: 26px;"
+                              ng-class="{true:'pro_green', false: ''}[sortIndex == 4]"></span>
+                        <!--<input class="pro_desCity_check pro_desCity_radio" type="radio" name="sort" ng-model="sort"-->
+                               <!--value="4" ng-click="checkSort(4)">-->
+                    </li>
+                </label>
+            </ul>
+        </div>
+        <div class="list_shade" style="position: fixed;" ng-show="darkShow" ng-click="hideFooter()"></div>
+    </div>
+</div>
+</div>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        slidesPerView: 4,
+        initialSlide: 2,
+        loop: false,
+        pagination: '.swiper-pagination',
+        freeMode: true,
+    })
+</script>

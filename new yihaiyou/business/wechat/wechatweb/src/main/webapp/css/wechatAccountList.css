@@ -1,0 +1,17 @@
+.keyzone {
+    padding-left: 20px;
+}
+
+.valuezone {
+    padding-left: 70px;
+}
+
+.opt a.ena{
+    color: #0000cc;
+    text-decoration: underline;
+}
+.opt a.disa{
+    color: #8F8F8F;
+    text-decoration: none;
+    cursor: not-allowed;
+}

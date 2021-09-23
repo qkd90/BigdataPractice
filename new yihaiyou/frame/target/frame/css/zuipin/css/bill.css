@@ -1,0 +1,205 @@
+﻿/*销售收银首页*/
+.bill{ 
+    background:none  scroll 0 0 #ffffff; font: 12px/1.5 tahoma,arial,宋体; color:#303030; 
+}
+
+/*头部栏目*/
+.bill .topbar {
+    height:44px;  background:none scroll 0 0 rgba(250,250,250,1); position:relative;
+}
+.bill .topbar .left {
+    float:left;
+}
+.bill .topbar .right {
+     float:right;
+}
+.bill .topbar ul li {
+    float:left; line-height:43px; position:relative; 
+}
+
+/*.bill .topbar ul li button.btn01{ 
+    position:absolute; top:9px; right:1px; border-radius:0 3px 3px 0;
+}*/
+.bill .topbar ul li button.btn01{ 
+    position:absolute; top:13px; right:4px;
+}
+
+.bill .topbar ul li button.btn02{ 
+    position:absolute; top:13px; right:4px;
+}
+.bill .topbar ul li input.txt01{
+    width:198px;
+}
+.bill .topbar ul li input.txt02{
+    width:84px; border-radius:0;
+}
+.bill .topbar ul li.time {
+    font-size:14px; font-weight:bold;
+}
+
+/*底部栏目*/
+.bill .footerbar {
+    border:1px solid #fefefe; background:none scroll 0 0 rgba(250,250,250,1); overflow:hidden; font-size:14px;   
+}
+.bill .footerbar .tag{ 
+    float:left; background:none scroll 0 0 #54a6e0; border:1px solid #2479ba; border-bottom:1px solid #cfd7dc; border-radius:3px;  box-shadow:0px 2px 3px rgba(21,21,21,0.2) inset;  display:block; position:relative; 
+}
+.bill .footerbar .textlist{
+     clear:both; 
+}
+.bill .footerbar textarea{
+    width:268px; height:70px; 
+}
+.bill .footerbar h6 ,.bill .footerbar h4{
+    font-weight: normal;
+}
+.bill .footerbar button{
+    cursor:pointer;
+}
+.bill .footerbar .checkout{
+    height:58px; border:1px solid #bdbdbd; border-radius:6px; background: -webkit-linear-gradient(top,#f4f4f4,#fdfdfd);  
+}
+
+.bill .footerbar .checkout button{
+    width:69px; height:69px; font-size:22px; font-family:微软雅黑; position:absolute; top:-5px; right:-1px; 
+}
+.bill .footerbar .checknot{
+    height:62px;  
+}
+.bill .footerbar .return button {
+    width:238px; height:60px; font-size:30px; font-family:微软雅黑; border-radius:6px;
+}
+
+.bill .footerbar .notebar{ 
+    float:left;
+}
+
+.bill .footerbar .notebar ul li{
+    display:block;
+}
+.bill .footerbar .notebar ul li .icon{
+    width:56px; position:absolute;  left:-1px; top:-3px; 
+}
+
+
+.bill .footerbar .totalbar{ 
+    float:left;
+}
+.bill .footerbar .totalbar ul{
+    border:1px solid #bdbdbd; border-bottom:none;  min-width:188px;
+}
+.bill .footerbar .totalbar ul li{
+    display:block; border-bottom:1px solid #bdbdbd; box-shadow: 0px 0px 1px rgba(250,250,250,1) inset; line-height:36px;
+}
+.bill .footerbar .totalbar ul li span{
+    position:relative; 
+}
+.bill .footerbar .totalbar ul li span.g-fs-20{
+    top:3px;
+}
+.bill .footerbar .totalbar ul li h4{
+    position:relative; top:-3px;
+}
+
+
+.bill .footerbar .discountbar{ 
+    float:left;
+}
+.bill .footerbar .discountbar input{
+    width:105px; height:25px; 
+}
+.bill .footerbar .discountbar ul{ 
+    min-width:160px;
+}
+.bill .footerbar .discountbar ul li{
+    display:block;
+}
+.bill .footerbar .discountbar .totalFix{
+    position:relative; top:-5px;
+}
+.bill .footerbar .discountbar label{
+    width:60px; display:block; float:left; text-align:right;
+}
+
+
+.bill .footerbar .checkoutbar{ 
+    float:right;
+}
+.bill .footerbar .checkoutbar ul{
+    min-width:238px;
+}
+.bill .footerbar .checkoutbar ul.checkout-207{
+    min-width:207px;
+}
+
+.bill .footerbar .checkoutbar ul li{
+    position:relative;
+}
+
+/*销售历史底部*/
+.bill .footer-bg{
+    background: -webkit-linear-gradient(top,#eaeef1,#fefefe);
+}
+.bill .footerbar .historyBar {
+    height:35px; line-height:35px; overflow:hidden; font-size:14px;
+}
+.bill .footerbar .historyBar ul li{
+    float:left;
+}
+.bill .footerbar .historyBar ul li.right{
+    float:right;
+}
+.bill .footerbar .stagingBar {
+    height:29px; line-height:29px; overflow:hidden; font-size:14px;
+}
+
+
+/* 结帐弹窗 */
+.bill .coform{ padding:5px 5px 10px 5px; background:none scroll 0 0 #f8f8f8; color:#303030;}
+.bill .coform ul li {
+    padding:5px 10px 5px 5px; border-radius:6px; border:1px solid #e0e0e0; background:none scroll 0 0 #ffffff; display:block; margin:10px 5px 0;
+}
+.bill .coform ul li label{
+    width:80px; text-align:center; display:block; float:left; font-size:16px; font-weight:bold; word-spacing:15px;
+}
+.bill .coform ul li.collection{
+    height:70px;
+}
+.bill .coform ul li.collection span{
+    clear:both; font-size:35px; display:block; float:right; text-align:right;
+}
+.bill .coform ul li.change{
+    height:50px; background:none scroll 0 0 #fff4d4; line-height:50px;
+}
+.bill .coform ul li.change input{
+    width:205px; color:#ff0000; padding:5px 0 5px 5px; font-size:24px; float:right; border:0; background:none scroll 0 0 transparent; text-align:right; line-height:50px;
+}
+.bill .coform ul li.invoicing{
+    height:50px; line-height:50px;
+}
+.bill .coform ul li.invoicing span{
+    font-size:24px; display:block; float:right; text-align:right;
+}
+.bill .coform ul li.icon {
+    border:0; background:none scroll 0 0 transparent; padding:0; margin-top:15px;
+}
+.bill .coform ul li button{
+    width:306px; height:48px; border:1px solid #e0e0e0; border-radius:6px; background: -webkit-linear-gradient(top,#f4f4f4,#fdfdfd);box-shadow: 0px 0px 1px rgba(255,255,255,1) inset; font-size:16px;
+}
+.bill .coform ul li button:hover{
+    border:1px solid #67a3c8; background: -webkit-linear-gradient(top,#bfe1f1,#ffffff);box-shadow: 0px 0px 1px rgba(255,255,255,0.56) inset;
+}
+
+/* 快速新增商品 */
+.bill .quickaddgood td{ padding:3px 5px;}
+
+/*VIP小弹窗*/
+.bill .vipPopup{
+    padding:5px 6px; background:#fff4d4; border:1px solid #dcdcdc; border-radius:3px;
+}
+.bill span{
+    position:relative;
+}
+.bill span i.ui-btn-clos01{
+    position:absolute; right:-6px; top:-6px;
+}

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.HdScenicInfoMapper">
+	<insert id="insert" parameterType="HdScenicInfo">
+		insert into tb_hd_scenic_info
+			(
+				id,
+				scenic_id,
+				city_code,
+				zoom_level,
+				style,
+				width,
+				height,
+				lng,
+				lat,
+				operable,
+				modify_time,
+				create_time,
+				spell_name,
+				rank,
+				scenic_name
+			)
+		values
+			(
+				#{id},
+				#{scenicIds},
+				#{cityCode},
+				#{zoomLevel},
+				#{style},
+				#{width},
+				#{height},
+				#{lng},
+				#{lat},
+				#{operable},
+				#{modifyTime},
+				#{createTime},
+				#{spellName},
+				#{rank},
+				#{scenicName}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="HdScenicInfo">
+		update tb_hd_scenic_info
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="scenicIds != null and '' != scenicIds"> scenic_id = #{scenicIds},</if>
+			<if test="cityCode != null and '' != cityCode"> city_code = #{cityCode},</if>
+			<if test="zoomLevel != null and '' != zoomLevel"> zoom_level = #{zoomLevel},</if>
+			<if test="style != null and '' != style"> style = #{style},</if>
+			<if test="width != null and '' != width"> width = #{width},</if>
+			<if test="height != null and '' != height"> height = #{height},</if>
+			<if test="lng != null and '' != lng"> lng = #{lng},</if>
+			<if test="lat != null and '' != lat"> lat = #{lat},</if>
+			<if test="operable != null and '' != operable"> operable = #{operable},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="spellName != null and '' != spellName"> spell_name = #{spellName},</if>
+			<if test="rank != null and '' != rank"> rank = #{rank},</if>
+			<if test="scenicName != null and '' != scenicName"> scenic_name = #{scenicName},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="HdScenicInfo">
+		delete from
+			tb_hd_scenic_info
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="HdScenicInfo">
+		select
+			*
+		from
+			tb_hd_scenic_info
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="HdScenicInfo">
+		select
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			*
+		</if>
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_hd_scenic_info
+		<where>
+		    scenic_id &lt;&gt; 0
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="scenicIds != null and '' != scenicIds"> and scenic_id = #{scenicIds} </if>
+			<if test="cityCode != null and '' != cityCode"> and city_code = #{cityCode} </if>
+			<if test="zoomLevel != null and '' != zoomLevel"> and zoom_level = #{zoomLevel} </if>
+			<if test="style != null and '' != style"> and style = #{style} </if>
+			<if test="width != null and '' != width"> and width = #{width} </if>
+			<if test="height != null and '' != height"> and height = #{height} </if>
+			<if test="lng != null and '' != lng"> and lng = #{lng} </if>
+			<if test="lat != null and '' != lat"> and lat = #{lat} </if>
+			<if test="operable != null and '' != operable"> and operable = #{operable} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="spellName != null and '' != spellName"> and spell_name like "%"#{spellName}"%" </if>
+			<if test="rank != null and '' != rank"> and rank = #{rank} </if>
+			<if test="scenicName != null and '' != scenicName"> and scenic_name like "%"#{scenicName}"%" </if>
+		</where>
+		<choose>
+			<when test="orderColumn != null and '' != orderColumn">
+				ORDER BY case when ${orderColumn} is null then 1 else 0 end ,${orderColumn}
+				<if test="orderType != null and '' != orderType">
+					${orderType}
+				</if>
+			</when>
+		</choose>
+	</sql>
+</mapper>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="lvxbangweb:war">
+    <output-path>$PROJECT_DIR$/lvxbang/lvxbangweb/target</output-path>
+    <root id="archive" name="lvxbangweb-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="lvxbangweb:war exploded" />
+    </root>
+  </artifact>
+</component>

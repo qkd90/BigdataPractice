@@ -1,0 +1,19 @@
+<div class="diymarch_changeHotel" ng-controller="planChangeHotelCtrl">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+       更换酒店
+        <span class="save picSearch"></span>
+    </div>
+    <section class="hotellist" infinite-scroll="getHotelList()" infinite-scroll-distance="1" infinite-scroll-disabled='loading'>
+        <ul>
+            <li class="clearfix" ng-repeat="hotel in hotelList" ui-sref="planChangeHotelDetail({hotelId: hotel.id})">
+                <div class="hotelpic"><img bn-lazy-src="{{hotel.cover}}"></div>
+                <ul class="hotelmess">
+                    <li>{{hotel.name}}</li>
+                    <li><span class="hotel_address">{{hotel.address}}</span><span class="hotelscore planscore">{{hotel.score}}分</span></li>
+                    <li><span>￥{{hotel.price}}</span></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</div>

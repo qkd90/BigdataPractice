@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.account.mapper.OAuthClientMapper">
+	<insert id="insert" parameterType="OAuthClient">
+		insert into tb_oauth_client
+		(
+		id,
+		client_id,
+		client_secret,
+		redirect_uri,
+		scope,
+		last_login_time,
+		create_time
+		)
+		values
+		(
+		#{id},
+		#{clientId},
+		#{clientSecret},
+		#{redirectUri},
+		#{scope},
+		#{lastLoginTime},
+		#{createTime}
+		)
+	</insert>
+
+	<update id="update" parameterType="OAuthClient">
+		update tb_oauth_client
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="clientId != null and '' != clientId"> client_id = #{clientId},</if>
+			<if test="clientSecret != null and '' != clientSecret"> client_secret = #{clientSecret},</if>
+			<if test="redirectUri != null and '' != redirectUri"> redirect_uri = #{redirectUri},</if>
+			<if test="scope != null"> scope = #{scope},</if>
+			<if test="lastLoginTime != null and '' != lastLoginTime"> last_login_time = #{lastLoginTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+		id = #{id}
+	</update>
+
+	<delete id="del" parameterType="OAuthClient">
+		delete from
+		tb_oauth_client
+		where
+		id = #{id}
+	</delete>
+
+	<select id="selById" resultType="OAuthClient">
+		select
+		*
+		from
+		tb_oauth_client
+		where
+		id = #{id}
+	</select>
+
+	<select id="count" resultType="int">
+		select
+		count(*)
+		<include refid="byProperty" />
+	</select>
+
+	<select id="list" resultType="OAuthClient">
+		select
+		*
+		<include refid="byProperty" />
+	</select>
+
+	<sql id="byProperty">
+		from
+		tb_oauth_client
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="clientId != null and '' != clientId"> and client_id = #{clientId} </if>
+			<if test="clientSecret != null and '' != clientSecret"> and client_secret = #{clientSecret} </if>
+			<if test="redirectUri != null and '' != redirectUri"> and redirect_uri = #{redirectUri} </if>
+			<if test="scope != null"> and scope = #{scope} </if>
+			<if test="lastLoginTime != null and '' != lastLoginTime"> and last_login_time = #{lastLoginTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		</where>
+	</sql>
+</mapper>

@@ -1,0 +1,4866 @@
+.gticon {
+    background: url(http://img2.tuniucdn.com/img/20150302/gentuancms/gticon.png) no-repeat
+}
+
+.bodybg {
+    background: #f5f5f5;
+    position: relative
+}
+
+.hide {
+    display: none
+}
+
+.maintit {
+    background-color: #fff;
+    height: 50px
+}
+
+.index1200 .maintit
+.block {
+    width: 1190px;
+    margin: 0 auto
+}
+
+.index1000 .maintit
+.block {
+    width: 990px;
+    margin: 0 auto;
+    overflow: hidden
+}
+
+/*/!*2016.06.24 Add*!/*/
+/*.index1000 .maintit*/
+/*.block {*/
+    /*width: 1000px;*/
+/*}*/
+
+.topslide {
+    height: 470px;
+    overflow: hidden;
+    width: 100%;
+    position: absolute
+}
+
+.topslide
+.ffslide {
+    height: 470px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -960px
+}
+
+.topslide .ffslide
+li {
+    display: none
+}
+
+.topslide .ffslide
+li.cur {
+    display: block
+}
+
+.topslide
+.pagebtn {
+    position: absolute;
+    left: 46%;
+    bottom: 160px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    height: 10px;
+    background-position: 0 -579px
+}
+
+.topslide .pagebtn
+a {
+    display: block;
+    float: left;
+    width: 12px;
+    height: 12px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    margin-right: 5px;
+    background: #ccc;
+    z-index: 3
+}
+
+.topslide .pagebtn
+a.cur {
+    background: #f80
+}
+
+.topslide
+.prev {
+    background: url(http://img1.tuniucdn.com/site/file/tn-slide/img/sprite.png) no-repeat 0 0;
+    width: 45px;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    top: 140px;
+    display: none;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    opacity: 0.4;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease
+}
+
+.topslide:hover
+.prev {
+    display: block
+}
+
+.topslide .prev:hover {
+    opacity: 1;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease
+}
+
+.topslide
+.next {
+    background: url(http://img1.tuniucdn.com/site/file/tn-slide/img/sprite.png) no-repeat right top;
+    width: 45px;
+    height: 100px;
+    position: absolute;
+    right: 0px;
+    top: 140px;
+    display: none;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    opacity: 0.4;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease
+}
+
+.topslide:hover
+.next {
+    display: block
+}
+
+.topslide .next:hover {
+    opacity: 1;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease
+}
+
+/*.index1200*/
+/*.topcon {*/
+/*width: 1190px;*/
+/*height: 470px;*/
+/*margin: 0 auto;*/
+/*position: relative*/
+/*}*/
+
+/*2016.06.22 Modify*/
+/*.index1000*/
+/*.topcon {*/
+/*width: 990px;*/
+/*height: 470px;*/
+/*margin: 0 auto;*/
+/*position: relative*/
+/*}*/
+
+.topcon
+.navi {
+    width: 200px;
+    height: 460px;
+    background: url(http://img2.tuniucdn.com/img/20150302/gentuancms/nav24.png) no-repeat;
+    padding-top: 10px
+}
+
+.topcon .navi
+li {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #2f3437;
+    overflow: visible;
+    position: relative
+}
+
+.topcon .navi li:hover {
+    background: #2f3437
+}
+
+.topcon .navi li
+span.arrow {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    font-size: 18px;
+    color: #fff
+}
+
+.topcon .navi li
+a {
+    display: inline-block;
+    padding: 0 5px 0 0;
+    font: 13px/20px microsoft yahei;
+    color: #bbb
+}
+
+.topcon .navi li a:hover {
+    color: #f60
+}
+
+.topcon .navi li
+.outer {
+    position: absolute;
+    left: 200px;
+    width: 610px;
+    height: 405px;
+    border-left: 0 none;
+    z-index: 30;
+    color: #eee;
+    font: 12px microsoft yahei;
+    display: none
+}
+
+.topcon .navi li
+.outerbox {
+    width: 305px;
+    height: 470px;
+    float: left;
+    background: #fff
+}
+
+.topcon .navi li .outer
+dl {
+    width: 245px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    padding-top: 10px
+}
+
+.topcon .outer
+dd {
+    font: bold 14px/30px microsoft yahei;
+    color: #333
+}
+
+.topcon .navi li .outer
+span {
+    padding-left: 5px
+}
+
+.topcon .navi li .outer
+a {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #666;
+    display: inline-block
+}
+
+.topcon .navi li .outer a:hover {
+    color: #f60
+}
+
+.topcon .navi li:hover
+.outer {
+    display: block
+}
+
+.topcon .navi li
+.outer1 {
+    top: -10px
+}
+
+.topcon .navi li
+.outer2 {
+    top: -72px
+}
+
+.topcon .navi li
+.outer3 {
+    top: -134px
+}
+
+.topcon .navi li
+.outer4 {
+    top: -196px
+}
+
+.topcon .navi li
+.outer5 {
+    top: -258px
+}
+
+.topcon .navi li
+.outer6 {
+    top: -320px
+}
+
+.navi
+h4 {
+    font: 15px/25px microsoft yahei;
+    color: #fff
+}
+
+.navi
+i {
+    display: inline-block;
+    width: 14px;
+    height: 16px;
+    background: url(http://img2.tuniucdn.com/img/20150302/gentuancms/gticon.png) no-repeat;
+    margin-right: 5px
+}
+
+.navi
+i.i1 {
+    background-position: 0 -604px
+}
+
+.navi
+i.i2 {
+    background-position: -14px -604px
+}
+
+.navi
+i.i3 {
+    background-position: -30px -604px
+}
+
+.navi
+i.i4 {
+    background-position: -46px -604px
+}
+
+.navi
+i.i5 {
+    background-position: -63px -604px
+}
+
+.navi
+i.i6 {
+    background-position: -77px -604px
+}
+
+.navi
+i.i7 {
+    background-position: -96px -604px
+}
+
+.navi
+i.i8 {
+    background-position: -114px -604px
+}
+
+.navi
+i.i9 {
+    background-position: -130px -604px
+}
+
+.topr_myd {
+    width: 225px;
+    height: 80px;
+    background: #fff;
+    position: absolute;
+    right: 0px;
+    top: 15px;
+    padding: 15px;
+    padding-bottom: 0;
+    box-shadow: 0px 2px 5px #ddd;
+    z-index: 2
+}
+
+.topr_myd
+.myd {
+    width: 62px;
+    height: 41px;
+    background-position: -138px -426px;
+    float: left;
+    margin-right: 13px;
+    text-align: center;
+    padding-top: 35px;
+    font: 22px Arial;
+    color: #fff
+}
+
+.topr_myd .myd
+em {
+    font-size: 12px
+}
+
+.topr_myd
+.gzs {
+    width: 150px;
+    float: left
+}
+
+.topr_myd .gzs
+p {
+    font: 12px/19px microsoft yahei;
+    color: #666
+}
+
+.topr_myd .gzs p
+em {
+    font-weight: bold;
+    color: #f80
+}
+
+.topr_myd .gzs
+p.tip {
+    background-position: 0 -551px;
+    width: 160px;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 10px;
+    color: #d19c60;
+    font-size: 11px;
+    margin-top: 5px
+}
+
+.topr_ph {
+    width: 225px;
+    height: 330px;
+    background: #f5f5f5;
+    position: absolute;
+    right: 0px;
+    top: 110px;
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 0
+}
+
+.topr_ph
+h4 {
+    font: bold 14px/25px microsoft yahei;
+    color: #333
+}
+
+.topr_ph
+dl {
+    height: 50px;
+    background: #fff;
+    margin-top: 6px
+}
+
+.topr_ph dl:hover .name
+p.des {
+    color: #f60
+}
+
+.topr_ph dd, .topr_ph
+dt {
+    float: left
+}
+
+.topr_ph
+dd {
+    width: 18px;
+    height: 50px;
+    text-align: center;
+    font: bold 12px/50px Simsun
+}
+
+.topr_ph
+dd.dd1 {
+    background: #ffe992;
+    color: #f90
+}
+
+.topr_ph
+dd.dd2 {
+    background: #d9e6eb;
+    color: #839eaf
+}
+
+.topr_ph
+dd.dd3 {
+    background: #fad6c3;
+    color: #dd885c
+}
+
+.topr_ph
+dd.dd4 {
+    background: #dfdfdf;
+    color: #fff
+}
+
+.topr_ph
+dd.dd5 {
+    background: #dfdfdf;
+    color: #fff
+}
+
+.topr_ph
+dt {
+    padding-top: 5px
+}
+
+.topr_ph dt
+.name {
+    width: 106px;
+    padding: 0 10px;
+    float: left;
+    font-family: microsoft yahei
+}
+
+.topr_ph dt .name
+p.rs {
+    color: #999
+}
+
+.topr_ph dt
+.pic {
+    width: 75px;
+    height: 40px;
+    overflow: hidden;
+    float: left
+}
+
+.topr_ph dt .pic
+img {
+    width: 75px
+}
+
+.threecolad {
+    width: 690px;
+    height: 120px;
+    position: absolute;
+    top: 332px;
+    left: 223px;
+    overflow: hidden
+}
+
+.index1000
+.threecolad {
+    width: 460px;
+    left: 237px
+}
+
+.threecolad
+.adbox {
+    width: 230px;
+    height: 120px;
+    position: relative;
+    float: left;
+    display: block;
+    overflow: hidden
+}
+
+.threecolad .adbox
+img {
+    width: 230px;
+    position: absolute;
+    left: 0px;
+    top: 0px
+}
+
+.niurenzhuanxian {
+    background: url(http://img2.tuniucdn.com/img/20150302/gentuancms/sanjiao.jpg) no-repeat center top;
+    height: 355px;
+    width: 100%;
+    padding-top: 25px;
+    position: relative;
+    overflow: hidden
+}
+
+.niurenzhuanxian
+ul {
+    width: 195px;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    height: 158px;
+    background: url(http://img2.tuniucdn.com/img/20150302/gentuancms/verbg.jpg) no-repeat;
+    padding-top: 150px;
+    padding-left: 5px;
+    z-index: 10
+}
+
+.index1200 .niurenzhuanxian
+ul {
+    margin-left: -595px
+}
+
+.index1000 .niurenzhuanxian
+ul {
+    margin-left: -495px
+}
+
+.niurenzhuanxian ul
+li {
+    width: 175px;
+    height: 38px;
+    line-height: 38px;
+    background: none;
+    padding-left: 20px
+}
+
+.niurenzhuanxian ul li
+a {
+    font: 14px/38px microsoft yahei;
+    color: #4c3600
+}
+
+.niurenzhuanxian ul
+li.on {
+    background: #ffe8ac
+}
+
+.niurenzhuanxian ul li:hover {
+    background: #ffe8ac
+}
+
+.index1200 .niurenzhuanxian .line-con {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    margin-left: -595px;
+    width: 970px;
+    height: 308px;
+    padding-left: 220px;
+    background: #ffe8ac
+}
+
+.index1000 .niurenzhuanxian .line-con {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    margin-left: -495px;
+    width: 770px;
+    height: 308px;
+    padding-left: 220px;
+    background: #ffe8ac
+}
+
+.index1200 .niurenzhuanxian
+.linebox {
+    width: 1050px;
+    display: none
+}
+
+.index1000 .niurenzhuanxian
+.linebox {
+    width: 950px;
+    margin-left: 10px;
+    display: none
+}
+
+.niurenzhuanxian
+.linebox.now {
+    display: block
+}
+
+.block
+.prdbox {
+    width: 220px;
+    height: 270px;
+    margin-top: 20px;
+    background: #fff;
+    float: left;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    position: relative
+}
+
+.index1200 .block
+.prdbox {
+    margin-right: 23px
+}
+
+.index1000 .block
+.prdbox {
+    margin-right: 35px
+}
+
+.block .prdbox
+.pic {
+    width: 220px;
+    height: 125px;
+    position: relative;
+    overflow: hidden
+}
+
+.block .prdbox .pic
+img {
+    width: 220px
+}
+
+.block .prdbox .pic
+.picmask {
+    width: 220px;
+    height: 125px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    background: url(http://img2.tuniucdn.com/img/2015021001/gentuancms/itemmask.png) no-repeat 0 0px
+}
+
+.block .prdbox .pic .picmask
+p {
+    color: #fff;
+    font: 14px/20px microsoft yahei;
+    width: 180px;
+    height: 80px;
+    margin: 20px;
+    overflow: hidden;
+    text-align: left
+}
+
+.block .prdbox:hover
+.picmask {
+    display: block;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.block .prdbox .pic
+.sta {
+    position: absolute;
+    width: 210px;
+    height: 22px;
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 20px;
+    bottom: 0px;
+    left: 0px;
+    color: #fff;
+    background: url(http://img2.tuniucdn.com/img/20150117/niuline/transp.png) no-repeat 0 -137px
+}
+
+.block .prdbox:hover
+.sta {
+    background: none
+}
+
+.block .prdbox .pic .sta
+span.myd {
+    float: left;
+    display: block;
+    width: 105px
+}
+
+.block .prdbox .pic .sta
+span.xiaoliang {
+    float: right;
+    display: block;
+    width: 105px;
+    text-align: right
+}
+
+.block .prdbox
+.price {
+    color: #f60;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px;
+    line-height: 24px
+}
+
+.block .prdbox .price
+span {
+    font-size: 12px;
+    font-weight: normal;
+    color: #f90
+}
+
+.block .prdbox
+.name {
+    color: #333;
+    font-size: 12px;
+    height: 40px;
+    line-height: 16px;
+    overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    height: 32px;
+    overflow: hidden
+}
+
+.block .prdbox .name a:hover {
+    color: #f60
+}
+
+.block .prdbox
+.dis {
+    background: #f2f2f2;
+    height: 40px;
+    padding: 10px;
+    padding-top: 20px;
+    color: #999;
+    font: 12px/20px Simsun;
+    position: relative
+}
+
+.block .prdbox .dis
+p {
+    height: 40px;
+    overflow: hidden;
+    line-height: 22px
+}
+
+.block .prdbox .dis
+i {
+    position: absolute;
+    top: -35px;
+    right: 10px;
+    width: 67px;
+    height: 50px
+}
+
+.block .prdbox .dis
+i.im {
+    background-position: 0 -497px
+}
+
+.block .prdbox .dis
+i.ifm {
+    background-position: 0 -435px
+}
+
+.block .prdbox:hover .pic
+.picmask {
+    display: block
+}
+
+.index1200
+.horizontal {
+    width: 1190px;
+    margin: 0 auto 25px
+}
+
+.index1000
+.horizontal {
+    width: 990px;
+    margin: 0 0 25px 0;
+}
+ /*2016.06.24 Add*/
+.index1000
+.horizontal {
+    width: 1000px;
+}
+
+.horizontal
+.linebox {
+    background: #fff;
+    display: none
+}
+
+.index1200 .horizontal
+.linebox {
+    width: 1190px;
+    border-top: 2px solid #666;
+    background: #fff;
+    position: relative
+}
+
+.index1000 .horizontal
+.linebox {
+    width: 990px;
+    border-top: 2px solid #666;
+    background: #fff;
+    position: relative
+}
+
+/*2016.06.24 Add*/
+.index1000 .horizontal
+.linebox {
+    width: 1000px;
+}
+
+.index1200 .dangjizhutituijian
+.linebox {
+    width: 1190px;
+    border: 2px solid #e74f42;
+    border-left: 0 none;
+    background: #fff;
+    display: none;
+    position: relative
+}
+
+.index1000 .dangjizhutituijian
+.linebox {
+    width: 990px;
+    border: 2px solid #e74f42;
+    border-left: 0 none;
+    background: #fff;
+    display: none;
+    position: relative
+}
+
+
+/*2016.06.24 Add*/
+.index1000 .dangjizhutituijian
+.linebox {
+    width: 1000px;
+}
+
+.horizontal .linebox
+a.more {
+    position: absolute;
+    right: 0px;
+    top: -25px;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    color: #999;
+    font-size: 14px
+}
+
+.horizontal .linebox a.more:hover {
+    color: #f80
+}
+
+.horizontal
+.linebox.now {
+    display: block
+}
+
+.horizontal .line-con {
+    padding-top: 35px
+}
+
+.horizontal {
+    margin-bottom: 35px
+}
+
+.horizontal ul
+li {
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 10px;
+    margin-top: 5px
+}
+
+.horizontal ul li
+a {
+    height: 22px;
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    font-size: 14px;
+    color: #666
+}
+
+.horizontal ul li.on a, .horizontal ul li:hover
+a {
+    height: 22px;
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    color: #fff;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #555
+}
+
+.horizontal
+h2 {
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    font-size: 20px;
+    line-height: 35px;
+    color: #555;
+    font-weight: bold;
+    padding-left: 15px;
+    width: 235px;
+    float: left;
+    height: 35px;
+    background: url(http://img2.tuniucdn.com/img/20150302/gentuancms/gticon.png) no-repeat;
+    background-position: 0 -66px
+}
+
+.index1200
+.leftad {
+    width: 200px;
+    float: left;
+    position: relative;
+    margin-right: 20px
+}
+
+.index1000
+.leftad {
+    width: 200px;
+    float: left;
+    position: relative;
+    margin-right: 35px
+}
+
+.leftad
+img {
+    position: absolute;
+    right: 0px;
+    top: 0px
+}
+
+.leftad
+.whitemask {
+    position: absolute;
+    bottom: 10%;
+    left: 24px;
+    width: 152px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.75);
+    color: #000;
+    font-family: "Hiragino Sans GB", "microsoft yahei"
+}
+
+.leftad .whitemask
+.tit {
+    width: 120px;
+    border-bottom: 1px solid #333;
+    margin: 0 auto;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold
+}
+
+.leftad .whitemask
+.subtit {
+    padding: 10px;
+    width: 128px;
+    margin: 0 auto;
+    height: 26px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px
+}
+
+.leftad_1 {
+    height: 255px
+}
+
+.leftad_2 {
+    height: 490px
+}
+
+.leftad_3 {
+    height: 320px
+}
+
+.index1200 .horizontal
+.block {
+    width: 1192px
+}
+
+.index1200 .horizontal .block
+.leftad_5 {
+    width: 472px;
+    height: 240px;
+    overflow: hidden
+}
+
+.index1000 .horizontal
+.block {
+    width: 992px
+}
+
+.index1000 .horizontal .block
+.leftad_5 {
+    width: 488px;
+    height: 240px
+}
+
+.index1000 .horizontal .block .leftad_5
+img {
+    position: absolute;
+    right: 0px;
+    left: -33px
+}
+
+.admod {
+    position: relative
+}
+
+a.more {
+    position: absolute;
+    right: 55px;
+    top: -25px;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    color: #999;
+    font-size: 14px
+}
+
+a.more:hover {
+    color: #f80
+}
+
+.block
+.item {
+    width: 220px;
+    height: 215px;
+    float: left;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    position: relative;
+    box-shadow: 0px 0px 5px #ddd;
+    border: 1px solid #eae3df\9;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+/*2016.06.22 Add*/
+.item {
+    text-align: left;
+}
+.block
+.item a{
+    width: auto;
+    height: auto;
+    line-height: 20px;
+    background-image: none;
+    text-align: left;
+    margin-right: 0px;
+    cursor: pointer;
+    display: block;
+}
+.index1200 .bodybg
+.item {
+    margin: 20px 23px 0 0
+}
+
+/*.index1000 .bodybg*/
+/*.item {*/
+/*margin: 20px 32px 0 0*/
+/*}*/
+
+/*2016.06.22 Modify*/
+.index1000 .bodybg
+.item {
+    margin: 32px 32px 0 0
+}
+
+.block .item
+.pic {
+    width: 220px;
+    height: 125px;
+    position: relative;
+    overflow: hidden
+}
+
+.block .item .pic
+img {
+    width: 220px
+}
+
+.block .item .pic
+.picmask {
+    width: 220px;
+    height: 125px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    background: url(http://img2.tuniucdn.com/img/2015021001/gentuancms/itemmask.png) no-repeat 0 0px;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.block .item:hover
+.picmask {
+    display: block;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.block .item .pic
+.words {
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 180px;
+    height: 80px;
+    color: #fff;
+    margin: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    display: none
+}
+
+.block .item:hover
+.words {
+    display: block
+}
+
+.block .item
+.price {
+    color: #f80;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 15px
+}
+
+.block .item .price
+span {
+    font-size: 12px;
+    font-weight: normal;
+    color: #f90
+}
+
+.block .item .price
+span.myd {
+    float: right;
+    line-height: 22px;
+    color: #999;
+    font-family: microsoft yahei
+}
+
+.block .item .price span.myd
+em {
+    color: #f60
+}
+
+.block .item
+.name {
+    color: #333;
+    font-size: 14px;
+    width: 86%;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.block .item .name a:hover {
+    color: #f80
+}
+
+.block .item:hover {
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    box-shadow: 0px 0px 5px #f80
+}
+
+.guanzhu {
+    width: 160px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 20
+}
+
+.guanzhu
+dl {
+    height: 15px;
+    line-height: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+    opacity: 0.9;
+    filter: alphy(90);
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font: 14px microsoft yahei
+}
+
+.guanzhu dd, .guanzhu
+dt {
+    float: left;
+    width: 70px;
+    text-align: left
+}
+
+.guanzhu
+dd {
+    width: 45px
+}
+
+.guanzhu
+dt {
+    width: 95px
+}
+
+.square {
+    background: #fff;
+    padding-bottom: 10px
+}
+
+.square
+.block {
+    border-top: 2px solid #666;
+    margin: 0 auto;
+    background: #f5f5f5
+}
+
+.index1200 .square
+.block {
+    width: 1190px
+}
+
+.index1000 .square
+.block {
+    width: 990px
+}
+
+.square
+h2 {
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    font-size: 20px;
+    line-height: 35px;
+    color: #555;
+    margin: 0 auto;
+    font-weight: bold;
+    padding-left: 15px;
+    width: 235px;
+    height: 35px;
+    background: url(http://img2.tuniucdn.com/img/20150302/gentuancms/gticon.png) no-repeat;
+    background-position: 0 -66px
+}
+
+.index1200 .square
+h2 {
+    width: 1175px
+}
+
+.index1000 .square
+h2 {
+    width: 975px
+}
+
+.block
+.item_ {
+    width: 200px;
+    height: 200px;
+    float: left;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    position: relative;
+    box-shadow: 0px 0px 5px #ddd;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.index1200
+.item_ {
+    margin-top: 20px;
+    margin-left: 20px
+}
+
+.index1000
+.item_ {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.block .item_
+.pic {
+    width: 200px;
+    height: 120px;
+    position: relative;
+    overflow: hidden
+}
+
+.block .item_ .pic
+img {
+    width: 220px
+}
+
+.block .item_
+.price {
+    color: #f80;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 15px
+}
+.myd_po{
+    float:right;
+}
+.pp_po{
+    float:left;
+}
+.block .item_ .price
+span {
+    font-size: 12px;
+    font-weight: normal;
+    color: #f90
+}
+
+.block .item_
+.name {
+    color: #333;
+    font-size: 14px;
+    width: 86%;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.block .item_ .name a:hover {
+    color: #f80
+}
+
+.block .item_ .price
+span.myd {
+    float: right;
+    line-height: 30px;
+    color: #999;
+    font-family: microsoft yahei
+}
+
+.block .item_ .price span.myd
+em {
+    color: #f60
+}
+
+.block .item_:hover {
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    box-shadow: 0px 0px 5px #f80
+}
+
+.block .item_:hover .pic
+.picmask {
+    display: block
+}
+
+.block .item_:hover .pic
+.words {
+    display: block
+}
+
+.block .item_:hover .pic
+.sta {
+    display: block
+}
+
+.block .item_ .no, .block .horitem
+.no {
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    padding-top: 8px;
+    padding-left: 8px;
+    color: #fff;
+    font: bold 16px Arial
+}
+
+.block .item_
+.no1 {
+    background-position: -5px -377px
+}
+
+.block .item_
+.no2 {
+    background-position: -57px -377px
+}
+
+.block .item_
+.no3 {
+    background-position: -108px -377px
+}
+
+.block .horitem
+.no4 {
+    background-position: -160px -377px
+}
+
+.index1200 .block
+.horbox {
+    width: 490px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px
+}
+
+.index1000 .block
+.horbox {
+    width: 290px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px
+}
+
+.horbox
+.horitem {
+    height: 90px;
+    margin-bottom: 20px;
+    font-family: microsoft yahei;
+    background: #fff;
+    box-shadow: 0px 0px 5px #ddd;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.horbox .horitem:hover {
+    box-shadow: 0px 0px 5px #f60;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.horbox .horitem
+.pic {
+    width: 160px;
+    height: 90px;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    overflow: hidden
+}
+
+.index1000 .horbox .horitem
+.pic {
+    display: none
+}
+
+.horbox .horitem .pic
+img {
+    width: 160px
+}
+
+.horbox .horitem
+.det {
+    width: 300px;
+    padding-right: 10px;
+    float: left
+}
+
+.index1000 .horbox .horitem
+.det {
+    width: 280px;
+    padding: 10px;
+    float: left
+}
+
+.horbox .horitem .det
+.price {
+    height: 32px;
+    line-height: 30px
+}
+
+.horbox .horitem .det .price
+.pp {
+    float: left;
+    color: #f60;
+    font-size: 18px;
+    font-weight: bold
+}
+
+.horbox .horitem .det .price .pp
+em {
+    font-size: 14px;
+    font-weight: normal
+}
+
+.horbox .horitem .det .price
+.mm {
+    float: right;
+    color: #bbb;
+    font-size: 14px;
+    padding-right: 10px
+}
+
+.horbox .horitem .det .price .mm
+em {
+    color: #f60;
+    font-size: 12px
+}
+
+.horbox .horitem .det
+a.name {
+    display: block;
+    height: 40px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 10px
+}
+
+.horbox .horitem .det a.name:hover {
+    color: #f60
+}
+
+.glitem {
+    width: 210px;
+    height: 278px;
+    float: left;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    position: relative;
+    background: #f7f7f7
+}
+
+.index1200
+.glitem {
+    margin-top: 20px;
+    margin-left: 14px;
+    margin-right: 15px
+}
+
+.index1000
+.glitem {
+    margin: 20px 40px 0 0
+}
+
+.glitem
+.pic {
+    width: 210px;
+    height: 195px;
+    position: relative;
+    overflow: hidden
+}
+
+.glitem .pic
+img {
+    width: 250px;
+    position: absolute;
+    left: 50%;
+    margin-left: -125px;
+    top: 0
+}
+
+.glitem .name
+a {
+    color: #999;
+    font-size: 12px;
+    line-height: 25px;
+    padding: 5px 15px;
+    background: #f7f7f7
+}
+
+.glitem
+.det {
+    color: #333;
+    font-size: 14px;
+    height: 60px;
+    line-height: 20px;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #f7f7f7
+}
+
+.glitem .det
+a {
+    display: block;
+    height: 40px;
+    overflow: hidden
+}
+
+.glitem .name a:hover {
+    color: #f80
+}
+
+.rexiaopaihangbang {
+    padding-top: 10px
+}
+
+.youjigonglue
+.block {
+    background: #fff;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.index1000 .youjigonglue
+.leftad {
+    margin-right: 40px
+}
+
+.guess
+h2 {
+    width: 5px;
+    background-position: 0 -625px
+}
+
+.guess ul li.on
+a {
+    background: #efad07
+}
+
+.index1200 .bodybg .guess
+.item {
+    margin: 20px 0 15px 15px
+}
+
+.index1000 .bodybg
+.guess {
+    height: 295px;
+    overflow: hidden
+}
+
+.index1000 .bodybg .guess
+.item {
+    margin: 20px 0 20px 22px
+}
+
+.recommend {
+    background: #fff;
+    padding: 20px 0
+}
+
+.horizontal.guess .line-con {
+    padding-top: 35px !important
+}
+
+.linebox.guess {
+    border-color: #f0ad07 !important
+}
+
+.chaojiziyouxing
+.block {
+    margin-top: 20px;
+    background: #dcf3ff
+}
+
+.chaojiziyouxing ul li.on a, .chaojiziyouxing ul li:hover
+a {
+    background: #00aefe;
+    color: #fff
+}
+
+.chaojiziyouxing
+.linebox {
+    border-top: 3px solid #eceef4
+}
+
+.index1200 .chaojiziyouxing
+.linebox {
+    border-top: 3px solid #eceef4
+}
+
+.super_leftad {
+    width: 200px;
+    float: left;
+    position: relative;
+    height: 225px;
+    margin-right: 35px;
+    overflow: hidden
+}
+
+.super_leftad
+img {
+    position: absolute;
+    right: 0px;
+    top: 0px
+}
+
+.super_leftad
+.whitemask {
+    position: absolute;
+    bottom: 10%;
+    left: 24px;
+    width: 152px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.75);
+    color: #000;
+    font-family: "Hiragino Sans GB", "microsoft yahei"
+}
+
+.super_leftad .whitemask
+.tit {
+    width: 120px;
+    border-bottom: 1px solid #333;
+    margin: 0 auto;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold
+}
+
+.super_leftad .whitemask
+.subtit {
+    padding: 10px;
+    width: 128px;
+    margin: 0 auto;
+    height: 26px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px
+}
+
+.index1200
+.super_leftad {
+    width: 200px;
+    float: left;
+    position: relative;
+    margin-right: 20px;
+    height: 225px
+}
+
+.item_super {
+    width: 220px;
+    height: 205px;
+    float: left;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    position: relative;
+    margin: 10px 30px 0 0;
+    box-shadow: 0 0 5px #ddd;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.item_super:hover {
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    box-shadow: 0px 0px 5px #f80
+}
+
+.item_super
+.pic {
+    width: 220px;
+    height: 125px;
+    position: relative;
+    overflow: hidden
+}
+
+.item_super .pic
+.words {
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    color: #fff;
+    margin: 15px 20px 10px 15px;
+    line-height: 20px;
+    overflow: hidden;
+    display: none
+}
+
+.item_super .pic .words
+span {
+    color: #2F9A00;
+    padding-right: 5px;
+}
+
+.item_super .pic
+img {
+    width: 220px
+}
+
+.item_super .pic
+.picmask {
+    width: 220px;
+    height: 125px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    background: url(http://img2.tuniucdn.com/img/2015021001/gentuancms/itemmask.png) no-repeat 0 0px;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.item_super:hover
+.picmask {
+    display: block;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.item_super:hover
+.words {
+    display: block
+}
+
+.super-item-content {
+    height: 66px;
+    width: 204px;
+    background: #fff;
+    padding: 7px 5px 7px 10px;
+    position: relative
+}
+
+.super-rec-tit {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.super-rec-tit:hover {
+    color: #f80
+}
+
+.super-rec-subtit {
+    color: #999;
+    font-size: 12px;
+    width: 210px;
+    height: 37px;
+    overflow: hidden
+}
+
+.index1000 .chaojiziyouxing .linebox
+.more {
+    width: auto;
+    height: 25px;
+    left: auto;
+    right: 0;
+    text-align: right
+}
+
+.index1200 .chaojiziyouxing .linebox
+.more {
+    width: auto;
+    height: 25px;
+    left: auto;
+    right: 0;
+    text-align: right
+}
+
+.index1200
+.item_super {
+    margin: 10px 23px 0 0
+}
+
+.hot-point {
+    display: none;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url(http://img1.tuniucdn.com/img/201510121406/super/hot-icon.png) no-repeat;
+    background-position: 0 100px;
+    color: #fff;
+    text-align: center;
+    top: 5px;
+    right: 5px
+}
+
+.hot-point
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.hot-num {
+    display: block;
+    font-size: 24px;
+    position: absolute;
+    top: 6px;
+    left: 15px
+}
+
+.hot-du {
+    position: absolute;
+    top: 7px;
+    right: 12px
+}
+
+.hot-txt {
+    display: block;
+    font-size: 12px;
+    position: absolute;
+    bottom: 7px;
+    left: 18px
+}
+
+.item_super:hover
+.hot-point {
+    opacity: 0
+}
+
+.chaojiziyouxingtaocan
+.cmspackage {
+    background: url(//img4.tuniucdn.com/img/201605181100/gentuancms/cmspackage.png) no-repeat
+}
+
+.chaojiziyouxingtaocan {
+    margin: 10px 25px 0 0
+}
+
+.chaojiziyouxingtaocan .super-rec-traffic {
+    width: 40px;
+    height: 74px;
+    float: left;
+    position: relative;
+    z-index: 1
+}
+
+.chaojiziyouxingtaocan .super-traffic-flight {
+    width: 20px;
+    height: 20px;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 10px;
+    background-position: 0 -1px
+}
+
+.chaojiziyouxingtaocan .super-traffic-train {
+    width: 20px;
+    height: 20px;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 10px;
+    background-position: 0 -42px
+}
+
+.chaojiziyouxingtaocan .super-traffic-hotel {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: 10px;
+    background-position: 0 -22px;
+    display: block
+}
+
+.chaojiziyouxingtaocan .super-traffic-line {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left: 15px;
+    color: #666;
+    font-size: 12px;
+    display: block;
+    font-style: normal
+}
+
+.chaojiziyouxingtaocan .super-rec-tit {
+    height: 44px;
+    line-height: 22px;
+    white-space: normal;
+    font-family: "microsoft yahei";
+    font-size: 14px;
+    color: #333
+}
+
+.chaojiziyouxingtaocan .super-rec-tit:hover {
+    color: #f80
+}
+
+.chaojiziyouxingtaocan .super-rec-detail {
+    width: 175px;
+    height: 73px;
+    overflow: hidden;
+    float: left;
+    padding-left: 10px;
+    padding-top: 7px;
+    background: #fff
+}
+
+.chaojiziyouxingtaocan .super-item-content {
+    height: 80px;
+    width: 225px;
+    background: #fff;
+    padding: 0;
+    background: #eff7ff
+}
+
+.chaojiziyouxingtaocan {
+    width: 225px
+}
+
+.chaojiziyouxingtaocan
+.pic {
+    width: 225px
+}
+
+.chaojiziyouxingtaocan .pic
+img {
+    width: 225px
+}
+
+.chaojiziyouxingtaocan .pic
+.picmask {
+    width: 225px;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50)
+}
+
+.chaojiziyouxingtaocan .pic
+.words {
+    width: 175px;
+    margin: 40px 5px 10px 30px;
+    height: 67px;
+    line-height: 25px
+}
+
+.chaojiziyouxingtaocan .super-rec-price {
+    width: 175px;
+    height: 24px;
+    line-height: 24px;
+    font-family: "microsoft yahei"
+}
+
+.chaojiziyouxingtaocan .super-rec-price
+.price {
+    float: left;
+    width: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f60
+}
+
+.chaojiziyouxingtaocan .super-rec-price
+.depart {
+    display: block;
+    float: right;
+    width: 65px;
+    text-align: right;
+    overflow: hidden;
+    height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #999;
+    margin-right: 10px;
+    font-size: 12px
+}
+
+.chaojiziyouxingtaocan .super-rec-price .price
+span {
+    font-size: 14px;
+    font-weight: normal
+}
+
+.index1200
+.chaojiziyouxingtaocan {
+    margin: 10px 18px 0 0
+}
+
+/*chujingchangxian 来自于index.css*/
+/*列表中每一项*/
+.block .block_item {
+    width: 220px;
+    height: 215px;
+    float: left;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    position: relative;
+    box-shadow: 0px 0px 5px #ddd;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.block_item {
+    margin: 20px 32px 0 0
+}
+
+.block .block_item .pic {
+    width: 220px;
+    height: 125px;
+    position: relative;
+    overflow: hidden
+}
+
+.block .block_item .pic img {
+    width: 220px
+}
+
+.block .block_item .pic .picmask {
+    width: 220px;
+    height: 125px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    background: url(../../images/itemmask.png) no-repeat 0 0px;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.block .block_item:hover .picmask {
+    display: block;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.block .block_item .pic .words {
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 180px;
+    height: 80px;
+    color: #fff;
+    margin: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    display: none
+}
+
+.block .block_item:hover .words {
+    display: block
+}
+
+.block .block_item .price {
+    color: #f80;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 15px
+}
+
+.block .block_item .price span {
+    font-size: 12px;
+    font-weight: normal;
+    color: #f90
+}
+
+.block .block_item .price span.myd {
+    float: right;
+    line-height: 30px;
+    color: #999;
+    font-family: microsoft yahei
+}
+
+.block .block_item .price span.myd em {
+    color: #f60
+}
+
+.block .block_item .name {
+    color: #333;
+    font-size: 14px;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.block .block_item .name a {
+    color: #333
+}
+
+.block .block_item .name a:hover {
+    color: #f80
+}
+
+.block .block_item:hover {
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    box-shadow: 0px 0px 5px #f80
+}
+
+/*游记攻略*/
+.glitem {
+    width: 210px;
+    height: 278px;
+    float: left;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    position: relative;
+    background: #f7f7f7
+}
+
+.glitem {
+    margin: 20px 40px 0 0
+}
+
+.glitem .pic {
+    width: 210px;
+    height: 195px;
+    position: relative;
+    overflow: hidden
+}
+
+.glitem .pic img {
+    width: 250px;
+    position: absolute;
+    left: 50%;
+    margin-left: -125px;
+    top: 0
+}
+
+.glitem .name a {
+    color: #333;
+    font-size: 12px;
+    line-height: 25px;
+    padding: 5px 15px;
+    background: #f7f7f7
+}
+
+.glitem .name a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.glitem .det {
+    color: #333;
+    font-size: 14px;
+    height: 60px;
+    line-height: 20px;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #f7f7f7
+}
+
+.glitem .det a {
+    color: #999
+}
+
+.glitem .det a {
+    display: block;
+    height: 40px;
+    overflow: hidden
+}
+
+.glitem .name a:hover {
+    color: #f80
+}
+
+.rexiaopaihangbang {
+    padding-top: 10px
+}
+
+.youjigonglue .block {
+    background: #fff;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.youjigonglue .leftad {
+    margin-right: 40px
+}
+
+.guess h2 {
+    width: 5px;
+    background-position: 0 -625px
+}
+
+.guess ul li.on a {
+    background: #efad07
+}
+
+.guess {
+    height: 295px;
+    overflow: hidden
+}
+
+.guess .block_item {
+    margin: 20px 0 20px 22px
+}
+
+.recommend {
+    background: #fff;
+    padding: 20px 0
+}
+
+/*旗帜标语类*/
+.flag_niuzhuan, .flag_niuzunxiang, .flag_shihui, .flag_renzheng, .flag_shouhang {
+    display: inline-block;
+    width: 64px;
+    height: 19px;
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.flag_qinziyou {
+    display: inline-block;
+    width: 72px;
+    height: 20px;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.flag_icon
+.flag_qinziyou {
+    position: static
+}
+
+.flag_niuzhuan {
+    background: url(../../images/flag_bangzhuan.jpg) 0 0 no-repeat;
+    height: 20px
+}
+
+.flag_niuzunxiang {
+    background: url(//ssl1.tuniucdn.com/img/2015051314/common/flag/flag_niuzunxiang.png) 0 0 no-repeat
+}
+
+.flag_shihui {
+    background: url(//ssl1.tuniucdn.com/img/2015051314/common/flag/flag_shihui.png) 0 0 no-repeat
+}
+
+.flag_renzheng {
+    background: url(//ssl1.tuniucdn.com/img/2015051314/common/flag/flag_renzheng.png) 0 0 no-repeat
+}
+
+.flag_baokuan {
+    display: inline-block;
+    background: url(//ssl1.tuniucdn.com/img/20150211/common/flag/flag_baokuan_i.png) 0 0 no-repeat;
+    width: 61px;
+    height: 19px;
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.dis_block {
+    display: block !important
+}
+
+.flag_discount {
+    background: url(//ssl1.tuniucdn.com/img/201503041340/common/icon_discount.png) 0 0 no-repeat;
+    width: 55px;
+    height: 22px;
+    line-height: 24px;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    font-family: "Arial";
+    color: #fff;
+    font-size: 14px;
+    left: -3px;
+    bottom: 10px;
+    font-style: normal
+}
+
+.flag_qinziyou {
+    background: url("../../images/flag_qinziyou.jpg") 0 0 no-repeat
+}
+
+.flag_activity {
+    vertical-align: middle
+}
+
+.flag_shouhang {
+    display: inline-block;
+    width: 82px;
+    height: 20px;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(//ssl1.tuniucdn.com/img/20160314/common/flag_shouhang.jpg) no-repeat
+}
+
+.flag_icon .flag_shouhang {
+    position: static
+}
+
+/*左边关注区域*/
+.guanzhu {
+    width: 160px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 20
+}
+
+.guanzhu dl {
+    height: 15px;
+    line-height: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+    opacity: 0.9;
+    filter: alphy(90);
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font: 14px microsoft yahei
+}
+
+.guanzhu dd, .guanzhu dt {
+    float: left;
+    width: 70px;
+    text-align: left
+}
+
+.guanzhu dd {
+    width: 45px
+}
+
+.guanzhu dt {
+    width: 95px
+}
+
+.guanzhu a {
+    color: #333
+}
+
+/*整体水平区块*/
+.horizontal {
+    width: 990px;
+    margin: 0 auto 25px
+}
+
+/*2016.06.24 Add*/
+.horizontal {
+    width: 1000px;
+}
+
+.horizontal .linebox {
+    background: #fff;
+    display: none
+}
+
+.horizontal .linebox {
+    width: 990px;
+    border-top: 2px solid #666;
+    background: #fff;
+    position: relative
+}
+
+
+/*2016.06.24 Add*/
+.horizontal .linebox {
+    width: 1000px;
+}
+
+.dangjizhutituijian .linebox {
+    width: 990px;
+    border: 2px solid #e74f42;
+    border-left: 0 none;
+    background: #fff;
+    display: none;
+    position: relative
+}
+
+/*2016.06.24 Add*/
+.dangjizhutituijian .linebox {
+    width: 1000px;
+}
+
+.horizontal .linebox a.more {
+    position: absolute;
+    right: 0px;
+    top: -25px;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    color: #999;
+    font-size: 14px
+}
+
+.horizontal .linebox a.more:hover {
+    color: #f80
+}
+
+.horizontal .linebox.now {
+    display: block
+}
+
+.horizontal .line-con {
+    padding-top: 35px
+}
+
+.horizontal {
+    margin-bottom: 35px
+}
+
+.horizontal ul li {
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 10px;
+    margin-top: 5px
+}
+
+.horizontal ul li a {
+    height: 22px;
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    font-size: 14px;
+    color: #666
+}
+
+.horizontal ul li.on a, .horizontal ul li:hover
+a {
+    height: 22px;
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    color: #fff;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #555
+}
+
+.horizontal h2 {
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    font-size: 20px;
+    line-height: 35px;
+    color: #555;
+    font-weight: bold;
+    padding-left: 15px;
+    width: 235px;
+    float: left;
+    height: 35px;
+    background: url(../../images/gticon.png) no-repeat;
+    background-position: 0 -66px
+}
+
+.leftad {
+    width: 200px;
+    float: left;
+    position: relative;
+    margin-right: 35px
+}
+
+.leftad img {
+    position: absolute;
+    right: 0px;
+    top: 0px
+}
+
+.leftad .whitemask {
+    position: absolute;
+    bottom: 10%;
+    left: 24px;
+    width: 152px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.75);
+    color: #000;
+    font-family: "Hiragino Sans GB", "microsoft yahei"
+}
+
+.leftad .whitemask .tit {
+    width: 120px;
+    border-bottom: 1px solid #333;
+    margin: 0 auto;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold
+}
+
+.leftad .whitemask .subtit {
+    padding: 10px;
+    width: 128px;
+    margin: 0 auto;
+    height: 26px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px
+}
+
+.leftad_1 {
+    height: 255px
+}
+
+.leftad_2 {
+    height: 470px
+}
+
+.leftad_3 {
+    height: 320px
+}
+
+.horizontal .block {
+    width: 992px
+}
+
+.horizontal .block .leftad_5 {
+    width: 472px;
+    height: 240px;
+    overflow: hidden
+}
+
+.horizontal .block {
+    width: 992px
+}
+
+.horizontal .block .leftad_5 {
+    width: 488px;
+    height: 240px
+}
+
+.horizontal .block .leftad_5 img {
+    position: absolute;
+    right: 0px;
+    left: -33px
+}
+
+.admod {
+    position: relative
+}
+
+a.more {
+    position: absolute;
+    right: 55px;
+    top: -25px;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    color: #999;
+    font-size: 14px
+}
+
+a.more:hover {
+    color: #f80
+}
+
+.horizontal {
+    margin-top: 40px;
+}
+
+.horizontal .line-con {
+    padding-top: 0;
+}
+
+/*自助游页面*/
+.guanzhu_new dd {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.guanzhu_new {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 225px;
+    font-family: "microsoft yahei";
+    z-index: 20;
+    margin-top: 15px
+}
+
+.guanzhu_new .title {
+    margin-bottom: 10px
+}
+
+.guanzhu_new dl {
+    border: 1px dashed #e5e5e5;
+    background: #fff;
+    padding: 0 10px;
+    font: 14px "microsoft yahei";
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 10px
+}
+
+.guanzhu_new dl:hover {
+    border: 1px solid #f80;
+    background: #fffaf2
+}
+
+.guanzhu_new dl:hover dd, .guanzhu_new dl:hover dd i {
+    color: #f80
+}
+
+.guanzhu_new dt, .guanzhu_new dd {
+    float: left;
+    text-align: left
+}
+
+.guanzhu_new dd {
+    width: 125px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.guanzhu_new dt {
+    width: 75px;
+    text-align: left
+}
+
+.guanzhu_new a {
+    color: #333
+}
+
+.leftpic {
+    float: left;
+    margin-right: 5px;
+    position: relative;
+    width: 225px;
+    height: 370px;
+    overflow: hidden
+}
+
+.leftpic a {
+    height: 83px;
+    width: 225px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+
+.leftpic img {
+    display: block;
+    height: 83px;
+    width: 225px
+}
+
+.leftpic2 {
+    height: 470px;
+}
+
+.block .line_item {
+    margin: 15px 0px 0px 15px;
+    width: 225px;
+    height: 169px
+}
+
+.block .line_item .pic, .bodybg .block .line_item .pic img {
+    width: 225px
+}
+
+.block .line_item .pic
+.words {
+    display: none
+}
+
+.block .line_item:hover .pic .words {
+    display: block
+}
+
+.block .line_item .pro_name {
+    height: 35px;
+    left: 0;
+    padding: 0 5px;
+    position: absolute;
+    top: 89px;
+    width: 215px;
+    overflow: hidden
+}
+
+.block .line_item .pro_name a {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    height: 36px;
+    line-height: 16px;
+    overflow: hidden
+}
+
+.block .line_item .price {
+    padding-left: 10px;
+    padding-right: 2px
+}
+
+.block .line_item .price, .block .line_item .price span {
+    color: #f60;
+    font-size: 14px
+}
+
+.block .line_item .price .qi {
+    font-size: 12px
+}
+
+.block .line_item .price .money {
+    font-size: 20px;
+    font-weight: bold
+}
+
+.block .line_item .price
+.ss {
+    font-size: 12px;
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 3px
+}
+
+.block .line_item .price .ss
+b {
+    font-weight: normal
+}
+
+.block .line_item .price
+span.myd {
+    line-height: 34px
+}
+
+.block .line_item .price span.myd, .block .line_item .price span.myd
+em {
+    font-size: 12px;
+    color: #999
+}
+
+.flag_icon {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.flag_icon
+.flag_sale {
+    display: block;
+    width: 64px;
+    height: 18px;
+    line-height: 18px;
+    background: #ffb536;
+    font-style: normal;
+    color: #fff;
+    text-align: center
+}
+
+.flag_icon
+.flag_sale.hide {
+    display: none
+}
+
+.flag_icon
+.flag_niuzhuan {
+    position: static;
+    display: block
+}
+
+.flag_icon .flag_sale
+b {
+    font-weight: bold
+}
+
+/*嵌入样式*/
+.horizontal .linebox a.more {
+    height: 25px;
+}
+
+.chujingchangxian ul li.on a, .chujingchangxian ul li:hover a {
+    background: #90cbed;
+}
+
+.chujingduanxian ul li.on a, .chujingduanxian ul li:hover a {
+    background: #a8d1a5;
+}
+
+.guoneigentuanyou ul li.on a, .guoneigentuanyou ul li:hover a {
+    background: #e694a6;
+}
+
+.zhoubiangentuanyou ul li.on a, .zhoubiangentuanyou ul li:hover a {
+    background: #85cecf;
+}
+
+.guoneizizhu ul li.on a, .guoneizizhu ul li:hover a {
+    background: #a8d1a5
+}
+
+.chujingchangxian .linebox {
+    border-top: 2px solid #90cbed;
+}
+
+.chujingduanxian .linebox {
+    border-top: 2px solid #a8d1a5;
+}
+
+.guoneigentuanyou .linebox {
+    border-top: 2px solid #e694a6;
+}
+
+.zhoubiangentuanyou .linebox {
+    border-top: 2px solid #85cecf;
+}
+
+.guanzhu dd {
+    width: 60px;
+}
+
+.guanzhu dt {
+    width: 80px;
+    text-align: right;
+}
+
+.guanzhu dl {
+    position: relative;
+    left: 0;
+    transition: all ease .3s;
+}
+
+.guanzhu dd {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/*自由行页面*/
+.card-block {
+    width: 990px;
+    margin: 0 auto
+}
+
+.card-block
+.block {
+    width: auto !important
+}
+
+.card-block
+h2 {
+    float: none;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background: url("") no-repeat center top;
+    margin-top: 40px;
+    line-height: 48px;
+    padding-top: 2px;
+    font-size: 26px;
+    color: #333;
+    font-family: "Hiragino Sans GB", "microsoft yahei"
+}
+
+.card-block h2
+span {
+    color: #1ab772
+}
+
+.card-block h2
+.chengse {
+    color: #f80
+}
+
+.card-list {
+    margin-top: 5px;
+    padding-bottom: 1px;
+    border: 1px solid #e5eef0;
+    background: #fff
+}
+
+.card-list-inner {
+    height: auto;
+    padding: 18px 10px 0;
+    overflow: hidden
+}
+
+.card-box {
+    float: left;
+    width: 220px;
+    margin: 0 11px 18px;
+    background: #fff;
+    transition: box-shadow .5s
+}
+
+.card-box-inner {
+    position: relative;
+    display: block
+}
+
+.card-up {
+    position: relative;
+    height: 127px
+}
+
+.card-thumb {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-transition: -webkit-filter .5s;
+    -moz-transition: -moz-filter .5s;
+    -ms-transition: -ms-filter .5s
+}
+
+.card-thumb
+img {
+    width: 100%
+}
+
+.card-medal {
+    position: absolute;
+    z-index: 1;
+    top: -1px;
+    right: 4px;
+    width: 29px;
+    height: 31px;
+    padding-top: 7px;
+    background: url(../../images/card-medals.png) -45px -2px no-repeat;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: bold
+}
+
+.card-tags {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 4px;
+    text-align: left
+}
+
+.card-tag {
+    display: inline-block;
+    height: 20px;
+    margin: 6px 3px;
+    padding: 0 11px;
+    line-height: 20px;
+    text-align: center;
+    background: #000;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 12px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.card-mask {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    transition: opacity .5s
+}
+
+.card-mask
+span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 139px;
+    height: 41px;
+    margin: -20px 0 0 -69px;
+    border: 1px solid #CDCDCD;
+    border-radius: 20px;
+    line-height: 41px;
+    background-color: rgba(255, 255, 255, .1);
+    font-size: 16px
+}
+
+.card-bottom {
+    height: 34px;
+    padding-bottom: 9px;
+    overflow: hidden;
+    line-height: 34px
+}
+
+.card-title {
+    float: left;
+    display: inline;
+    padding-left: 9px;
+    font-size: 18px;
+    color: #333
+}
+
+.card-multip .card-title {
+    width: 208px;
+    height: 32px;
+    overflow: hidden;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.card-amount {
+    display: none;
+    float: right;
+    display: inline;
+    padding-right: 9px;
+    color: #999;
+    font-size: 12px
+}
+
+.card-box:hover {
+    box-shadow: 0 0 5px 0 #fe8800
+}
+
+.card-box:hover .card-tags {
+    display: none
+}
+
+.card-box:hover .card-mask {
+    display: block;
+    opacity: 1
+}
+
+.card-box:hover .card-thumb {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=2, MakeShadow=false)
+}
+
+.card-box-first .card-medal {
+    background-position: -2px -2px
+}
+
+/*玩法推荐*/
+.countryMore
+a {
+    float: right;
+    display: block;
+    width: 78px;
+    height: 25px;
+    border: #fca640 solid thin;
+    margin-top: -35px;
+    border-radius: 12px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 25px;
+    padding-left: 8px;
+    color: #fca640;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 130px;
+    cursor: pointer
+}
+
+.countryMore a
+span {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    float: right;
+    margin-top: 4px;
+    margin-right: 4px;
+    background-image: url(../../images/icon.jpg);
+    background-repeat: no-repeat
+}
+
+.countryMore a:hover
+span {
+    background-image: url(../../images/icon.gif)
+}
+
+.block {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative
+}
+
+.tuijian .linebox {
+    border: none;
+}
+
+.tuijian
+h2 {
+    float: none;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background: url("") no-repeat center top;
+    margin-top: 40px;
+    line-height: 48px;
+    padding-top: 2px;
+    font-size: 26px;
+    color: #333
+}
+
+.tuijian h2
+span {
+    color: #f80
+}
+
+.mytab {
+    text-align: center;
+    margin-top: 18px
+}
+
+.tuijian ul
+li {
+    float: none;
+    display: inline-block;
+    *display: inline;
+    _display: inline;
+    margin: 0;
+    height: 26px
+}
+
+.tuijian ul li
+a {
+    padding: 0 15px;
+    border-radius: 0;
+    border-right: 1px dotted #000;
+    display: inline;
+    font-size: 15px;
+    height: 26px;
+    line-height: 26px;
+    color: #333
+}
+
+.tuijian ul li:last-child a,
+.tuijian ul li.last-child
+a {
+    border: none
+}
+
+.tuijian ul li.on,
+.tuijian ul li:hover {
+    background: #FE8800;
+    margin-left: -2px
+}
+
+.tuijian ul li.on a,
+.tuijian ul li:hover
+a {
+    background: none;
+    border-radius: 0;
+    padding: 0 16px;
+    border-right: none;
+    display: inline;
+    font-size: 15px;
+    height: 26px;
+    line-height: 26px
+}
+
+.tuijian .line-con {
+    padding-top: 11px
+}
+
+.item-line {
+    height: 28px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 10px;
+    width: 176px;
+    color: #666;
+    font-family: '宋体'
+}
+
+.item-line
+span {
+    color: #2F9A00
+}
+
+.play-rec {
+    width: 990px;
+    background-color: #fff;
+    height: 575px;
+    border: 1px solid #e5eef0
+}
+
+.rec-item {
+    float: left;
+    margin: 15px 0 0 15px;
+    width: 230px;
+    height: 255px;
+    box-shadow: 0 0 0 0 #fff;
+    transition: all .5s
+}
+
+.rec-item:hover {
+    box-shadow: 0 0 5px 0 #FE8800
+}
+
+.rec-item-pic {
+    position: relative;
+    width: 220px;
+    height: 157px;
+    overflow: hidden
+}
+
+.rec-item-img {
+    width: 100%;
+    height: 100%
+}
+
+.rec-points {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    line-height: 20px;
+    margin-left: 10px
+}
+
+.rec-points
+span {
+    padding: 0 10px;
+    background: #000;
+    background: rgba(0, 0, 0, .5);
+    height: 20px;
+    display: inline-block;
+    border-radius: 10px
+}
+
+.rec-item-content {
+    height: 78px;
+    width: 210px;
+    padding: 7px 10px;
+    position: relative
+}
+
+.rec-tit {
+    font-size: 16px;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.rec-subtit {
+    color: #999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.rec-item .item-line {
+    width: 210px;
+    text-overflow: clip
+}
+
+.bottom-ad {
+    width: 1190px;
+    height: 106px;
+    background: url("") no-repeat center -241px
+}
+
+.banner-b {
+    background-color: #fff;
+    border-bottom: 1px solid #EAEFF0;
+    margin-top: 40px
+}
+
+.super-logo {
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    margin-left: -589px
+}
+
+.hot-point {
+    display: none;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url(../../images/hot-icon.png) no-repeat;
+    background-position: 0 100px;
+    color: #fff;
+    text-align: center;
+    top: 5px;
+    right: 5px
+}
+
+.test
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.hot-num {
+    display: block;
+    font-size: 24px;
+    position: absolute;
+    top: 6px;
+    left: 15px
+}
+
+.hot-du {
+    position: absolute;
+    top: 7px;
+    right: 12px
+}
+
+.hot-txt {
+    display: block;
+    font-size: 12px;
+    position: absolute;
+    bottom: 7px;
+    left: 18px
+}
+
+.pic-mask {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0
+}
+
+.pic-mask
+span {
+    width: 139px;
+    height: 41px;
+    line-height: 41px;
+    background-color: rgba(255, 255, 255, .1);
+    display: inline-block;
+    margin-top: 55px;
+    border-radius: 20px;
+    border: 1px solid #CDCDCD;
+    font-size: 16px
+}
+
+.pic-mask, .hot-point, .rec-points {
+    transition: opacity .5s
+}
+
+.hot-item-img, .rec-item-img {
+    -webkit-transition: -webkit-filter .5s;
+    -moz-transition: -moz-filter .5s;
+    -ms-transition: -ms-filter .5s
+}
+
+.hot-item:hover .hot-point,
+.hot-item:hover .rec-points,
+.rec-item:hover .hot-point,
+.rec-item:hover .rec-points {
+    opacity: 0
+}
+
+.hot-item:hover .pic-mask,
+.rec-item:hover .pic-mask {
+    opacity: 1
+}
+
+.hot-item:hover .hot-item-img,
+.rec-item:hover .rec-item-img {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=2, MakeShadow=false)
+}
+
+.hot-point
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.index1000
+.horizontal {
+    width: 990px;
+}
+
+.index1000
+.horizontal {
+    width: 1000px;
+}
+
+.index1000 .horizontal
+.block {
+    width: 1000px
+}
+
+.index1000 .horizontal
+.linebox {
+    width: 990px;
+    border: none
+}
+
+
+/*2016.06.24 Add*/
+.index1000 .horizontal
+.linebox {
+    width: 1000px;
+}
+
+/*2016.06.24 Add*/
+.index1000 .horizontal
+.linebox {
+    width: 1000px;
+}
+
+/*2016.06.24 Add */
+.index1000 .horizontal
+.linebox {
+    width: 1000px;
+}
+
+.index1000 .hot-item-pic {
+    width: 210px
+}
+
+.index1000 .hot-item-content {
+    width: 126px
+}
+
+.index1000 .item-line {
+    width: 126px
+}
+
+.index1000 .hot-item {
+    width: 356px
+}
+
+.index1000 .hot-right {
+    width: 754px
+}
+
+.index1000 .rec-item .item-line {
+    width: 210px
+}
+
+.index1000 .rec-item-content {
+    width: 210px
+}
+
+.index1000 .rec-item-pic {
+    width: 230px
+}
+
+.index1000 .rec-item {
+    width: 230px
+}
+
+.index1000 .play-rec {
+    width: 990px
+}
+
+/*热销排行榜*/
+.gticon {
+    background: url(../../images/gticon.png) no-repeat
+}
+
+.square {
+    background: #fff;
+    padding-bottom: 10px
+}
+
+.square
+.block {
+    border-top: 2px solid #666;
+    margin: 0 auto;
+    background: #f5f5f5
+}
+
+.square
+.block {
+    width: 990px
+}
+
+.square
+h2 {
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    font-size: 20px;
+    line-height: 35px;
+    color: #555;
+    margin: 0 auto;
+    font-weight: bold;
+    padding-left: 15px;
+    width: 235px;
+    height: 35px;
+    background: url(../../images/gticon.png) no-repeat;
+    background-position: 0 -66px
+}
+
+.square
+h2 {
+    width: 975px
+}
+
+.block .block_item_ {
+    width: 200px;
+    height: 200px;
+    float: left;
+    font-family: "Hiragino Sans GB", "microsoft yahei";
+    position: relative;
+    box-shadow: 0px 0px 5px #ddd;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.block_item_ {
+    margin-top: 20px;
+    margin-left: 20px
+}
+
+.block .block_item_ .pic {
+    width: 200px;
+    height: 120px;
+    position: relative;
+    overflow: hidden
+}
+
+.block .block_item_ .pic
+img {
+    width: 220px
+}
+
+.block .block_item_ .price {
+    color: #f80;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 15px
+}
+
+.block .block_item_ .price span {
+    font-size: 12px;
+    font-weight: normal;
+    color: #f90
+}
+
+.block .block_item_ .name {
+    color: #333;
+    font-size: 14px;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.block .block_item_ .name a {
+    color: #333
+}
+
+.block .block_item_ .name a:hover {
+    color: #f80
+}
+
+.block .block_item_ .price span.myd {
+    float: right;
+    line-height: 30px;
+    color: #999;
+    font-family: microsoft yahei
+}
+
+.block .block_item_ .price span.myd em {
+    color: #f60
+}
+
+.block .block_item_:hover {
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    box-shadow: 0px 0px 5px #f80
+}
+
+.block .block_item_:hover .pic .picmask {
+    display: block
+}
+
+.block .block_item_:hover .pic .words {
+    display: block
+}
+
+.block .block_item_:hover .pic .sta {
+    display: block
+}
+
+.block .block_item_ .no, .block .horitem .no {
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    padding-top: 8px;
+    padding-left: 8px;
+    color: #fff;
+    font: bold 16px Arial
+}
+
+.block .block_item_ .no1 {
+    background-position: -5px -377px
+}
+
+.block .block_item_ .no2 {
+    background-position: -57px -377px
+}
+
+.block .block_item_ .no3 {
+    background-position: -108px -377px
+}
+
+.block .horitem .no4 {
+    background-position: -160px -377px
+}
+
+.block .horbox {
+    width: 290px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px
+}
+
+.horbox .horitem {
+    height: 90px;
+    margin-bottom: 20px;
+    font-family: microsoft yahei;
+    background: #fff;
+    box-shadow: 0px 0px 5px #ddd;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.horbox .horitem:hover {
+    box-shadow: 0px 0px 5px #f60;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s
+}
+
+.horbox .horitem .pic {
+    width: 160px;
+    height: 90px;
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    overflow: hidden
+}
+
+.horbox .horitem .pic {
+    display: none
+}
+
+.horbox .horitem .pic img {
+    width: 160px
+}
+
+.horbox .horitem .det {
+    width: 300px;
+    padding-right: 10px;
+    float: left
+}
+
+.horbox .horitem .det {
+    width: 280px;
+    padding: 10px;
+    float: left
+}
+
+.horbox .horitem .det .price {
+    height: 32px;
+    line-height: 30px
+}
+
+.horbox .horitem .det .price .pp {
+    float: left;
+    color: #f60;
+    font-size: 18px;
+    font-weight: bold
+}
+
+.horbox .horitem .det .price .pp em {
+    font-size: 14px;
+    font-weight: normal
+}
+
+.horbox .horitem .det .price .mm {
+    float: right;
+    color: #bbb;
+    font-size: 14px;
+    padding-right: 10px
+}
+
+.horbox .horitem .det .price .mm em {
+    color: #f60;
+    font-size: 12px
+}
+
+.horbox .horitem .det a {
+    color: #333;
+}
+
+.horbox .horitem .det a.name {
+    display: block;
+    height: 40px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 20px;
+    padding-right: 10px
+}
+
+.horbox .horitem .det a.name:hover {
+    color: #f60
+}
+
+/*导航菜单*/
+.navigation ul li {
+    overflow: visible;
+
+}
+
+/*导航下的广告条幅*/
+
+.top-states-h {
+    overflow: hidden;
+    line-height: 57px;
+    color: #666666;
+    float: right;
+}
+
+.top-states-h .grayline {
+    width: 1px;
+    height: 35px;
+    transform: rotate(30deg);
+    float: left;
+    background-color: #ededed;
+    position: relative;
+    bottom: -14px;
+    /*margin-right: 15px;*//*2016.06.24 Modify*/
+}
+
+.top-states-h .orange {
+    color: #ff8800;
+}
+
+.top-states-h .sati-rate {
+    float: left;
+    margin-right: 15px;
+}
+
+.top-states-h .sati-rate em {
+    font-size: 24px;
+}
+
+.top-states-h .promotion {
+    float: left;
+    margin-right: 15px;
+    position: relative;
+    bottom: -17px;
+}
+
+.top-states-h .promotion em {
+    color: #ff8800;
+}
+
+.top-states-h .promotion .tip {
+    width: 160px;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 10px;
+    color: #d19c60;
+    font-size: 11px;
+    margin-top: 5px;
+    background-position: 0 -551px;
+}
+
+.top-states-h .fans-count {
+    float: left;
+    margin-right: 15px;
+    position: relative;
+    bottom: -4px;
+}
+
+.top-states-h .fans-count em {
+    color: #ff8800;
+}
+
+.top-states-h .comments-count {
+    float: left;
+    margin-right: 15px;
+    position: relative;
+    bottom: -4px;
+}
+
+.top-states-h .comments-count em {
+    color: #ff8800;
+}
+
+.top-states-h .icon-fans {
+    margin-right: 5px;
+    display: inline-block;
+    width: 12px;
+    height: 11px;
+    background: url(http://img3.tuniu.com/site/file/zt/niuren/images/icon-fans.png) top center no-repeat;
+    vertical-align: middle;
+}
+
+.top-states-h .icon-sati {
+    margin-right: 5px;
+    display: inline-block;
+    width: 13px;
+    height: 14px;
+    background: url(http://img3.tuniu.com/site/file/zt/niuren/images/icon-sati.png) top center no-repeat;
+    vertical-align: middle;
+}
+
+.top-states-h .icon-comments {
+    margin-right: 5px;
+    display: inline-block;
+    width: 13px;
+    height: 11px;
+    background: url(http://img3.tuniu.com/site/file/zt/niuren/images/icon-comments.png) top center no-repeat;
+    vertical-align: middle;
+}
+
+.guanzhu dd {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.slider-inited .tall {
+    height: auto !important;
+}
+
+.navi h4 {
+    font: 15px/22px microsoft yahei;
+}
+
+.topcon {
+    z-index: 5;
+}
+
+.topcon .block {
+    height: 0;
+}
+
+/*.index1200 .topcon {*/
+/*position: absolute;*/
+/*top: 53px;*/
+/*left: 50%;*/
+/*height: auto;*/
+/*margin-left: -595px;*/
+/*}*/
+
+.maintit img {
+    float: left;
+}
+
+.index1000 .maintit img {
+    max-width: 470px !important;
+}
+
+/*2016.06.22 Modify*/
+/*.index1000 .topcon {*/
+/*position: absolute;*/
+/*top: 53px;*/
+/*left: 50%;*/
+/*height: auto;*/
+/*margin-left: -500px;*/
+/*}*/
+
+/*2016.06.20*/
+.maintit .block {
+    background: none;
+}
+
+.custom {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slideme {
+    position: relative;
+    right: -99px;
+}
+
+.top-states-h {
+    line-height: 48px !important;
+}
+
+/*2016.06.22 Modify*/
+/*.index1000 .top-states-h {*/
+/*max-width: 518px !important;*/
+/*}*/
+.index1000 .top-states-h {
+    max-width: 689px !important;
+}
+
+
+.maintit {
+    height: 53px;
+}
+
+.top-states-h .promotion {
+    bottom: -13px !important;
+    curosr: pointer;
+}
+
+.index1200 .topcon .navi {
+    width: 190px;
+}
+
+/*2016.06.22 Add*/
+.index1000 .topcon .navi {
+    width: 190px;
+}
+
+.topcon .navi {
+    height: 367px;
+    padding-top: 0;
+    background: url(http://img2.tuniucdn.com/img/20150302/gentuancms/nav24.png) repeat-x;
+}
+
+.topcon .navi li {
+    height: 35px;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 12px;
+}
+
+.index1000 .topcon .navi {
+    height: 367px;
+}
+
+/*2016.06.22 Modify*/
+/*.index1000 .promotion {*/
+/*display: none;*/
+/*}*/
+
+.top-states-h .icon-sati {
+    position: relative;
+    top: -2px;
+}
+
+.topcon .navi li .outer {
+    left: 190px;
+}
+
+.topcon .navi li .outer1 {
+    top: 0px;
+}
+
+.topcon .navi li .outer2 {
+    top: -52px;
+}
+
+.topcon .navi li .outer3 {
+    top: -104px;
+}
+
+.topcon .navi li .outer4 {
+    top: -156px;
+}
+
+.topcon .navi li .outer5 {
+    top: -208px;
+}
+
+.topcon .navi li .outer6 {
+    top: -260px;
+}
+
+.topcon .navi li .outerbox {
+    height: 367px;
+}
+
+.topcon .navi li .outer7 {
+    top: -312px;
+}
+
+div.slider-inited .dot.active, div.slider-inited .dot:hover, div.slider-inited .dot:focus, div.slider-inited div.dot:active {
+    background: #f80 !important;
+}
+
+div.slider-inited .dot {
+    background: #ccc !important;
+}
+
+/* 2016.06.21 */
+.index1000 .slider-inited .prev {
+    right: -200px !important;
+}
+
+.index1000 .slider-inited .next {
+    left: -110px !important;
+}
+
+.slider-inited .dot.active, .slider-inited .dot:hover, .slider-inited .dot:focus, .slider-inited .dot:active {
+    background: #fff !important;
+}
+
+.tall {
+    height: 322px !important;
+}
+
+.prev, .next {
+    opacity: .8;
+}
+
+.prev:hover, .next:hover {
+    opacity: 1;
+}
+
+/* 2016.06.21 */
+.hidden {
+    display: none;
+}
+
+.index1200 .horizontal,
+.index1000 .horizontal {
+    margin-top: 40px;
+}
+
+.horizontal .line-con {
+    padding-top: 0;
+}
+
+.niurenzhuanxian h2 {
+    display: none;
+}
+
+.linebox .more {
+    font: 14px microsoft yahei;
+    color: #666;
+}
+
+.linebox .more:hover {
+    color: #f60;
+}
+
+.index1200 .linebox .more {
+    position: absolute;
+    top: -25px;
+    left: 1123px;
+}
+
+.index1000 .linebox .more {
+    position: absolute;
+    top: -25px;
+    left: 923px;
+}
+
+.guanzhu dd {
+    width: 60px;
+}
+
+.guanzhu dt {
+    width: 80px;
+    text-align: right;
+}
+
+.index1000 .topslide .prev, .index1000 .topslide .next {
+    display: none;
+}
+
+.maintit .block {
+    background: url(http://img1.tuniucdn.com/img/20150215/gentuancms/mantit.png) no-repeat top right;
+}
+
+.index1200 .dangjiretuizhuti .linebox, .index1000 .dangjiretuizhuti .linebox {
+    border: 2px solid #e74f42;
+    border-left: 0 none;
+}
+
+.dangjiretuizhuti h2 {
+    background-position: 0 -35px;
+}
+
+.mingsufengqing h2 {
+    background-position: 0 -96px;
+}
+
+.wanzhuangudu h2 {
+    background-position: 0 -35px;
+}
+
+.youyouguzhen h2 {
+    background-position: 0 -127px;
+}
+
+.rexiaopaihangbang h2 {
+    background-position: 0 -163px;
+}
+
+.youjigonglue h2 {
+    background-position: 0 -198px;
+}
+
+.index1200 .langmanhaibin .linebox, .index1000 .langmanhaibin .linebox {
+    border-top: 2px solid #0887d1;
+}
+
+.index1200 .mingsufengqing .linebox, .index1000 .mingsufengqing .linebox {
+    border-top: 2px solid #579458;
+}
+
+.index1200 .wanzhuangudu .linebox, .index1000 .wanzhuangudu .linebox {
+    border-top: 2px solid #c8506c;
+}
+
+.index1200 .youyouguzhen .linebox, .index1000 .youyouguzhen .linebox {
+    border-top: 2px solid #35aeb0;
+}
+
+.index1200 .zuimeixibu .linebox, .index1000 .zuimeixibu .linebox {
+    border-top: 2px solid #efd24c;
+}
+
+.langmanhaibin ul li.on a, .langmanhaibin ul li:hover a {
+    background: #0887d1;
+}
+
+.dangjiretuizhuti ul li.on a, .dangjiretuizhuti ul li:hover a {
+    background: #e04235;
+}
+
+.mingsufengqing ul li.on a, .mingsufengqing ul li:hover a {
+    background: #579458;
+}
+
+.wanzhuangudu ul li.on a, .wanzhuangudu ul li:hover a {
+    background: #c8506c;
+}
+
+.youyouguzhen ul li.on a, .youyouguzhen ul li:hover a {
+    background: #35aeb0;
+}
+
+.zuimeixibu ul li.on a, .zuimeixibu ul li:hover a {
+    background: #efd24c;
+}
+
+.glitem .name a {
+    font-size: 15px;
+    font-weight: bold;
+    color: #444;
+}
+
+.glitem .det a {
+    color: #666;
+}
+
+.topslide {
+    position: relative;
+}
+
+.topslide .block {
+    width: 100%;
+    overflow: hidden;
+}
+/*2016.06.22 Modify*/
+/*.index1000 .topcon {*/
+/*position: absolute;*/
+/*top: 50px;*/
+/*left: 50%;*/
+/*height: auto;*/
+/*margin-left: -500px;*/
+/*}*/
+
+.index1000 .topcon {
+    position: relative;
+}
+
+.topcon .block {
+    height: 0;
+}
+
+.index1200 .topcon {
+    position: relative;
+    /*top: 0px;*/
+    /*left: 50%;*/
+    /*height: auto;*/
+    /*margin-left: -595px;*/
+}
+
+.topslide .pagebtn {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.flag_niuzhuan {
+    background: url("http://img.tuniucdn.com/img/20150211/common/flag_niuzhuan.jpg") no-repeat;
+    display: inline-block;
+    height: 19px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 64px;
+}
+
+.guanzhu dl {
+    position: relative;
+    left: 0;
+    transition: all ease .3s;
+}
+
+.floating-nav {
+    position: fixed;
+    left: 200px;
+    top: 200px;
+}
+
+.floating-nav .inner {
+}
+
+.floating-nav .inner .nav-item {
+    color: #999;
+    padding: 5px;
+    width: 31px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 14px;
+    background: #fff;
+}
+
+.floating-nav .inner .nav-item:hover,
+.floating-nav .inner .nav-item:focus,
+.floating-nav .inner .nav-item:active,
+.floating-nav .inner .nav-item.active {
+    background: rgb(239, 128, 8);
+    color: #fff;
+}
+
+.guanzhu dd {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.more-cat, .more-links {
+    display: none;
+}
+
+.horizontal .linebox a.more {
+    height: 25px;
+}
+
+.navi i.icon-sea {
+    background: url(http://img3.tuniu.com/site/file/zt/domestic/images/haibin.png) no-repeat;
+    background-position: top center;
+    vertical-align: bottom;
+}
+
+.navi i.icon-south {
+    background: url(http://img3.tuniu.com/site/file/zt/domestic/images/nanfang.png) no-repeat;
+    background-position: top center;
+    vertical-align: bottom;
+}
+
+.navi i.icon-north {
+    background: url(http://img3.tuniu.com/site/file/zt/domestic/images/beifang.png) no-repeat;
+    background-position: top center;
+    vertical-align: bottom;
+}
+
+.navi i.icon-west {
+    background: url(http://img3.tuniu.com/site/file/zt/domestic/images/xibu.png) no-repeat;
+    background-position: top center;
+    vertical-align: bottom;
+}
+
+div.topcon .navi li {
+    height: 56px;
+}
+
+div.topcon .navi li .outerbox {
+    width: 530px;
+}
+
+div.topcon .navi li .outer dl {
+    float: left;
+    margin-left: 15px;
+    height: 100px;
+    border: none;
+}
+
+div.topcon .navi li .outer2 {
+    top: -73px;
+}
+
+div.topcon .navi li .outer3 {
+    top: -146px;
+}
+
+div.topcon .navi li .outer4 {
+    top: -219px;
+}
+
+div.topcon .navi li .outer5 {
+    top: -292px;
+}
+
+.chujingchangxian ul li.on a, .chujingchangxian ul li:hover a {
+    background: #90cbed;
+}
+
+.chujingduanxian ul li.on a, .chujingduanxian ul li:hover a {
+    background: #a8d1a5;
+}
+
+.guoneigentuanyou ul li.on a, .guoneigentuanyou ul li:hover a {
+    background: #e694a6;
+}
+
+.zhoubiangentuanyou ul li.on a, .zhoubiangentuanyou ul li:hover a {
+    background: #85cecf;
+}
+
+.index1200 .chujingchangxian .linebox, .index1000 .chujingchangxian .linebox {
+    border-top: 2px solid #90cbed;
+}
+
+.index1200 .chujingduanxian .linebox, .index1000 .chujingduanxian .linebox {
+    border-top: 2px solid #a8d1a5;
+}
+
+.index1200 .guoneigentuanyou .linebox, .index1000 .guoneigentuanyou .linebox {
+    border-top: 2px solid #e694a6;
+}
+
+.index1200 .zhoubiangentuanyou .linebox, .index1000 .zhoubiangentuanyou .linebox {
+    border-top: 2px solid #85cecf;
+}
+
+.bodybg {
+    background-color: #fff;
+}
+
+.slideme .prev {
+    right: -83px !important;
+    display: none;
+}
+
+.slideme .next {
+    left: -83px !important;
+    display: none;
+}
+
+.mask-left .mask-inner {
+    opacity: 1 !important;
+}
+
+.mask-right .mask-inner {
+    opacity: 1 !important;
+}
+
+.custom {
+    height: 371px;
+    overflow: hidden;
+}
+
+.slidegroups {
+    height: 0px;
+    overflow: hidden;
+}
+
+
+/* 2016.06.22 Add */
+.hidden {display:none;}
+.index1200 .horizontal,
+.index1000 .horizontal {margin-top:40px;}
+.horizontal .line-con{padding-top:0;}
+.niurenzhuanxian h2{display:none;}
+.linebox .more{font:14px microsoft yahei; color:#666;}
+.linebox .more:hover{color:#f60;}
+.index1200 .linebox .more{position: absolute; top:-25px; left:1123px;}
+.index1000 .linebox .more{position: absolute; top:-25px; left:923px;}
+.guanzhu dd{width:60px;}
+.guanzhu dt{width:80px; text-align:right;}
+.index1000 .topslide .prev,.index1000 .topslide .next{display:none;}
+.maintit .block{background:url(http://img1.tuniucdn.com/img/20150215/gentuancms/mantit.png) no-repeat top right;}
+.index1200 .dangjiretuizhuti .linebox,.index1000 .dangjiretuizhuti .linebox{border:2px solid #e74f42; border-left:0 none;}
+.dangjiretuizhuti h2{background-position:0 -35px;}
+.mingsufengqing h2{background-position:0 -96px;}
+.wanzhuangudu h2{background-position:0 -35px;}
+.youyouguzhen h2{background-position:0 -127px;}
+.rexiaopaihangbang h2{background-position:0 -163px;}
+.youjigonglue h2{background-position:0 -198px;}
+.index1200 .langmanhaibin .linebox,.index1000 .langmanhaibin .linebox{border-top:2px solid #0887d1;}
+.index1200 .mingsufengqing .linebox,.index1000 .mingsufengqing .linebox{border-top:2px solid #579458;}
+.index1200 .wanzhuangudu .linebox,.index1000 .wanzhuangudu .linebox{border-top:2px solid #c8506c;}
+.index1200 .youyouguzhen .linebox,.index1000 .youyouguzhen .linebox{border-top:2px solid #35aeb0;}
+.index1200 .zuimeixibu .linebox,.index1000 .zuimeixibu .linebox{border-top:2px solid #efd24c;}
+.langmanhaibin ul li.on a, .langmanhaibin ul li:hover a{background:#0887d1;}
+.dangjiretuizhuti ul li.on a, .dangjiretuizhuti ul li:hover a{background:#e04235;}
+.mingsufengqing ul li.on a, .mingsufengqing ul li:hover a{background:#579458;}
+.wanzhuangudu ul li.on a, .wanzhuangudu ul li:hover a{background:#c8506c;}
+.youyouguzhen ul li.on a, .youyouguzhen ul li:hover a{background:#35aeb0;}
+.zuimeixibu ul li.on a, .zuimeixibu ul li:hover a{background:#efd24c;}
+.glitem .name a{font-size:15px; font-weight:bold; color:#444;}
+.glitem .det a{color:#666;}
+
+.topslide {
+    position: relative;
+}
+.topslide .block {
+    width: 100%;
+    overflow: hidden;
+}
+/*2016.06.22 Modify*/
+/*.index1000 .topcon {*/
+/*position: absolute;*/
+/*top: 50px;*/
+/*left: 50%;*/
+/*height: auto;*/
+/*margin-left: -500px;*/
+/*}*/
+.topcon .block {
+    height: 0;
+}
+/*2016.06.22 Modify*/
+/*.index1200 .topcon {*/
+/*position: absolute;*/
+/*top: 50px;*/
+/*left: 50%;*/
+/*height: auto;*/
+/*margin-left: -595px;*/
+/*}*/
+.topslide .pagebtn{background:rgba(0,0,0,0.5);}
+.flag_niuzhuan {
+    background: url("http://img.tuniucdn.com/img/20150211/common/flag_niuzhuan.jpg") no-repeat;
+    display: inline-block;
+    height: 19px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 64px;
+}
+.guanzhu dl {position:relative;left:0; transition:all ease .3s;}
+
+.floating-nav {position: fixed; left: 200px;top:200px;}
+.floating-nav .inner {}
+.floating-nav .inner .nav-item { color: #999; padding: 5px;width: 31px;text-align: center;cursor: pointer;line-height: 14px;background: #fff;}
+.floating-nav .inner .nav-item:hover,
+.floating-nav .inner .nav-item:focus,
+.floating-nav .inner .nav-item:active,
+.floating-nav .inner .nav-item.active {background: rgb(239, 128, 8);color: #fff;}
+.guanzhu dd {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.more-cat,.more-links {display:none;}
+
+.horizontal .linebox a.more {height:25px;}
+.navi i.icon-sea {background:url(/images/haibin.png) no-repeat; background-position:top center;vertical-align:bottom;}
+.navi i.icon-south {background:url(/images/nanfang.png) no-repeat; background-position:top center;vertical-align:bottom;}
+.navi i.icon-north {background:url(/images/beifang.png) no-repeat; background-position:top center;vertical-align:bottom;}
+.navi i.icon-west {background:url(/images/xibu.png) no-repeat; background-position:top center;vertical-align:bottom;}
+
+div.topcon .navi li {height:56px;}
+div.topcon .navi li .outerbox {width:530px;}
+div.topcon .navi li .outer dl {
+    float: left;
+    margin-left: 15px;
+    height: 100px;border:none;
+}
+div.topcon .navi li .outer2 {
+    top: -73px;
+}
+div.topcon .navi li .outer3 {
+    top: -146px;
+}
+div.topcon .navi li .outer4 {
+    top: -219px;
+}
+div.topcon .navi li .outer5 {
+    top: -292px;
+}
+
+
+.chujingchangxian ul li.on a, .chujingchangxian ul li:hover a {
+    background: #90cbed;
+}
+
+.chujingduanxian ul li.on a, .chujingduanxian ul li:hover a {
+    background: #a8d1a5;
+}
+
+.guoneigentuanyou ul li.on a, .guoneigentuanyou ul li:hover a {
+    background: #e694a6;
+}
+
+.zhoubiangentuanyou ul li.on a, .zhoubiangentuanyou ul li:hover a {
+    background: #85cecf;
+}
+
+
+/*2016.06.24 Add*/
+.index1200 .horizontal .linebox, .index1000 .horizontal .linebox {
+    border-top: 2px solid #85cecf;
+}
+
+.index1200 .chujingchangxian .linebox, .index1000 .chujingchangxian .linebox {
+    border-top: 2px solid #90cbed;
+}
+
+.index1200 .chujingduanxian .linebox, .index1000 .chujingduanxian .linebox {
+    border-top: 2px solid #a8d1a5;
+}
+
+.index1200 .guoneigentuanyou .linebox, .index1000 .guoneigentuanyou .linebox {
+    border-top: 2px solid #e694a6;
+}
+
+.index1200 .zhoubiangentuanyou .linebox, .index1000 .zhoubiangentuanyou .linebox {
+    border-top: 2px solid #85cecf;
+}
+
+
+.bodybg {
+    background-color: #fff;
+}
+.bodybg .section {
+    margin: 0 auto;
+    height: 398px;
+}
+
+.slideme .prev {right:-83px !important; display:none;}
+.slideme .next {left:-83px !important;display:none;}
+.mask-left .mask-inner { opacity: 1 !important;}
+.mask-right .mask-inner { opacity:1 !important;}
+.custom {height:371px; overflow:hidden;}
+.slidegroups {height:0px; overflow:hidden;}
+
+
+
+
+
+
+
+
+
+/*各线路首页图片幻灯样式 start*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.slide a, img {
+    border: 0;
+}
+
+.slide img {
+    border: 0;
+    height: auto;
+}
+
+/* slide */
+.slide {
+    width: 800px;
+    float: right;
+    /*margin: 15px auto;*/
+    overflow: hidden;
+}
+
+.slide h2 {
+    height: 70px;
+    line-height: 50px;
+    font-size: 22px;
+    font-weight: normal;
+    font-family: "Microsoft YaHei", SimHei;
+    text-align: center;
+}
+
+/* focus */
+#focus {
+    position: relative;
+    width: 800px;
+    height: 367px;
+    overflow: hidden;
+}
+
+#focus ul {
+    height: 367px;
+    position: absolute;
+}
+
+#focus ul li {
+    float: left;
+    width: 800px;
+    height: 367px;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+}
+
+#focus ul li div {
+    position: absolute;
+    overflow: hidden;
+}
+
+#focus .btnBg {
+    /*position: absolute;*/
+    /*width: 800px;*/
+    /*height: 40px;*/
+    /*left: 0;*/
+    /*bottom: 0;*/
+    /*background: #000;*/
+}
+
+#focus .btn {
+    position: absolute;
+    /*height: 30px;*/
+    left: 43.125%;
+    bottom: 4px;
+    background: rgba(0,0,0,0.4999);
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -ms-border-radius: 12px;
+    padding: 0px 5px;
+}
+
+#focus .btn span {
+    float: left;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    /*margin-right: 10px;*/
+    margin: 5px;
+    cursor: pointer;
+    background: #cccccc;
+    color: #ffffff;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -ms-border-radius: 15px;
+}
+
+#focus .btn span.on {
+    background: #ff6600;
+    color: #ffffff;
+    width: 20px;
+    transition: all 200ms linear;
+}
+
+#foot_bm a, #foot_bm, p, p a {
+    color: #666;
+}
+
+/*各线路首页图片幻灯样式 end */

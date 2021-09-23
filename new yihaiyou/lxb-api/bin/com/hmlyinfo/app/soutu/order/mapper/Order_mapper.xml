@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.order.mapper.OrderMapper">
+	<insert id="insert" parameterType="Order" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_order
+			(
+				user_id,
+				price,
+				status,
+				pay_type,
+				pay_order_id,
+				modify_time,
+				create_time,
+				order_num,
+				source_type,
+				source_id,
+				plan_name,
+				start_date,
+				end_date
+			)
+		values
+			(
+				#{userId},
+				#{price},
+				#{status},
+				#{payType},
+				#{payOrderId},
+				#{modifyTime},
+				#{createTime},
+				#{orderNum},
+				#{sourceType},
+				#{sourceId},
+				#{planName},
+				#{startDate},
+				#{endDate}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="Order">
+		update tb_order
+		<set>
+			<if test="userId != null"> user_id = #{userId},</if>
+			<if test="price != null"> price = #{price},</if>
+			<if test="status != null"> status = #{status},</if>
+			<if test="payType != null"> pay_type = #{payType},</if>
+			<if test="payOrderId != null"> pay_order_id = #{payOrderId},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+			<if test="orderNum != null"> order_num = #{orderNum},</if>
+			<if test="sourceType != null"> source_type = #{sourceType},</if>
+			<if test="sourceId != null"> source_id = #{sourceId},</if>
+			<if test="planName != null"> plan_name = #{planName},</if>
+			<if test="startDate != null"> start_date = #{startDate},</if>
+			<if test="endDate != null"> end_date = #{endDate},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="Order">
+		delete from
+			tb_order
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="Order">
+		select
+			*
+		from
+			tb_order
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="Order">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_order
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="price != null and '' != price"> and price = #{price} </if>
+			<if test="status != null and '' != status"> and status = #{status} </if>
+			<if test="payType != null and '' != payType"> and pay_type = #{payType} </if>
+			<if test="payOrderId != null and '' != payOrderId"> and pay_order_id = #{payOrderId} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="orderNum != null and '' != orderNum"> and order_num = #{orderNum} </if>
+			<if test="sourceType != null and '' != sourceType"> and source_type = #{sourceType} </if>
+			<if test="sourceId != null and '' != sourceId"> and source_id = #{sourceId} </if>
+			<if test="planName != null and '' != planName"> and plan_name = #{planName} </if>
+			<if test="startDate != null and '' != startDate"> and start_date = #{startDate} </if>
+			<if test="endDate != null and '' != endDate"> and end_date = #{endDate} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; # {ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; # {tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+	</sql>
+</mapper>

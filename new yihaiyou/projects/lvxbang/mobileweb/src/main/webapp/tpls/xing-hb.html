@@ -1,0 +1,27 @@
+<div ng-controller="xinghbCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">购买线路可用红包</a></li>
+        </ul>
+    </div>
+    <div id="mycontainer" class="clearfix">
+        <div id="hongbaotab">
+            <div class="tab-content">
+                <div class="media hongbao" ng-repeat="data in coupons">
+                    <div class="media-left"><span class="nouse">￥{{data.faceValue}}</span></div>
+                    <div class="media-body">
+                        <h4>{{data.limitProductTypes}}</h4>
+                        <!--<p class="num">编号：{{data.couponCode}}</p>-->
+                        <p class="time">有效期至{{data.validEnd}}</p>
+                    </div>
+                    <div class="media-right">
+                        <input couponselected type="checkbox" name="coupon" checked ng-if="data.check"/>
+                        <input couponselected type="checkbox" name="coupon" ng-if="!data.check"/>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

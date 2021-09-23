@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.pay.allin.mapper.PaymentResultMapper">
+	<insert id="insert" parameterType="PaymentResult" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_all_in_payment_result
+			(
+				merchantId,
+				version,
+				`language`,
+				signType,
+				payType,
+				issuerId,
+				paymentOrderId,
+				orderNo,
+				orderDatetime,
+				orderAmount,
+				payDatetime,
+				payAmount,
+				ext1,
+				ext2,
+				payResult,
+				errorCode,
+				returnDatetime,
+				signMsg,
+				`key`,
+				refundAmount,
+				refundDatetime,
+				refundResult,
+				userName,
+				credentialsType,
+				credentialsNo,
+				txOrgId,
+				pan,
+				certPath
+			)
+		values
+			(
+				#{merchantId},
+				#{version},
+				#{language},
+				#{signType},
+				#{payType},
+				#{issuerId},
+				#{paymentOrderId},
+				#{orderNo},
+				#{orderDatetime},
+				#{orderAmount},
+				#{payDatetime},
+				#{payAmount},
+				#{ext1},
+				#{ext2},
+				#{payResult},
+				#{errorCode},
+				#{returnDatetime},
+				#{signMsg},
+				#{key},
+				#{refundAmount},
+				#{refundDatetime},
+				#{refundResult},
+				#{userName},
+				#{credentialsType},
+				#{credentialsNo},
+				#{txOrgId},
+				#{pan},
+				#{certPath}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="PaymentResult">
+		update tb_all_in_payment_result
+		<set>
+			<if test="merchantId != null"> merchantId = #{merchantId},</if>
+			<if test="version != null"> version = #{version},</if>
+			<if test="language != null"> language = #{language},</if>
+			<if test="signType != null"> signType = #{signType},</if>
+			<if test="payType != null"> payType = #{payType},</if>
+			<if test="issuerId != null"> issuerId = #{issuerId},</if>
+			<if test="paymentOrderId != null"> paymentOrderId = #{paymentOrderId},</if>
+			<if test="orderNo != null"> orderNo = #{orderNo},</if>
+			<if test="orderDatetime != null"> orderDatetime = #{orderDatetime},</if>
+			<if test="orderAmount != null"> orderAmount = #{orderAmount},</if>
+			<if test="payDatetime != null"> payDatetime = #{payDatetime},</if>
+			<if test="payAmount != null"> payAmount = #{payAmount},</if>
+			<if test="ext1 != null"> ext1 = #{ext1},</if>
+			<if test="ext2 != null"> ext2 = #{ext2},</if>
+			<if test="payResult != null"> payResult = #{payResult},</if>
+			<if test="errorCode != null"> errorCode = #{errorCode},</if>
+			<if test="returnDatetime != null"> returnDatetime = #{returnDatetime},</if>
+			<if test="signMsg != null"> signMsg = #{signMsg},</if>
+			<if test="key != null"> key = #{key},</if>
+			<if test="refundAmount != null"> refundAmount = #{refundAmount},</if>
+			<if test="refundDatetime != null"> refundDatetime = #{refundDatetime},</if>
+			<if test="refundResult != null"> refundResult = #{refundResult},</if>
+			<if test="userName != null"> userName = #{userName},</if>
+			<if test="credentialsType != null"> credentialsType = #{credentialsType},</if>
+			<if test="credentialsNo != null"> credentialsNo = #{credentialsNo},</if>
+			<if test="txOrgId != null"> txOrgId = #{txOrgId},</if>
+			<if test="pan != null"> pan = #{pan},</if>
+			<if test="certPath != null"> certPath = #{certPath},</if>
+		</set>
+		where
+	</update>
+	
+	<delete id="del" parameterType="PaymentResult">
+		delete from
+			tb_all_in_payment_result
+		where
+	</delete>
+	
+	<select id="selById" resultType="PaymentResult">
+		select
+			*
+		from
+			tb_all_in_payment_result
+		where
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="PaymentResult">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">$ {item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_all_in_payment_result
+		<where>
+			<if test="merchantId != null and '' != merchantId"> and merchantId = #{merchantId} </if>
+			<if test="version != null and '' != version"> and version = #{version} </if>
+			<if test="language != null and '' != language"> and language = #{language} </if>
+			<if test="signType != null and '' != signType"> and signType = #{signType} </if>
+			<if test="payType != null and '' != payType"> and payType = #{payType} </if>
+			<if test="issuerId != null and '' != issuerId"> and issuerId = #{issuerId} </if>
+			<if test="paymentOrderId != null and '' != paymentOrderId"> and paymentOrderId = #{paymentOrderId} </if>
+			<if test="orderNo != null and '' != orderNo"> and orderNo = #{orderNo} </if>
+			<if test="orderDatetime != null and '' != orderDatetime"> and orderDatetime = #{orderDatetime} </if>
+			<if test="orderAmount != null and '' != orderAmount"> and orderAmount = #{orderAmount} </if>
+			<if test="payDatetime != null and '' != payDatetime"> and payDatetime = #{payDatetime} </if>
+			<if test="payAmount != null and '' != payAmount"> and payAmount = #{payAmount} </if>
+			<if test="ext1 != null and '' != ext1"> and ext1 = #{ext1} </if>
+			<if test="ext2 != null and '' != ext2"> and ext2 = #{ext2} </if>
+			<if test="payResult != null and '' != payResult"> and payResult = #{payResult} </if>
+			<if test="errorCode != null and '' != errorCode"> and errorCode = #{errorCode} </if>
+			<if test="returnDatetime != null and '' != returnDatetime"> and returnDatetime = #{returnDatetime} </if>
+			<if test="signMsg != null and '' != signMsg"> and signMsg = #{signMsg} </if>
+			<if test="key != null and '' != key"> and key = #{key} </if>
+			<if test="refundAmount != null and '' != refundAmount"> and refundAmount = #{refundAmount} </if>
+			<if test="refundDatetime != null and '' != refundDatetime"> and refundDatetime = #{refundDatetime} </if>
+			<if test="refundResult != null and '' != refundResult"> and refundResult = #{refundResult} </if>
+			<if test="userName != null and '' != userName"> and userName = #{userName} </if>
+			<if test="credentialsType != null and '' != credentialsType"> and credentialsType = #{credentialsType} </if>
+			<if test="credentialsNo != null and '' != credentialsNo"> and credentialsNo = #{credentialsNo} </if>
+			<if test="txOrgId != null and '' != txOrgId"> and txOrgId = #{txOrgId} </if>
+			<if test="pan != null and '' != pan"> and pan = #{pan} </if>
+			<if test="certPath != null and '' != certPath"> and certPath = #{certPath} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt;#{ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt;#{tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+	</sql>
+</mapper>

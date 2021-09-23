@@ -1,0 +1,27 @@
+<div class="personal_index" ng-controller="personalIndexCtrl" screenheight>
+    <div class="header">
+        <a ng-click="back()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        我的海游
+    </div>
+    <div class="person_facebox">
+        <div class="person_name">
+            <a ui-sref="personalInfo">
+                <div class="face">
+                    <img bn-lazy-src="{{user.head}}" ng-if="user.head.length > 0">
+                </div>
+                <p>{{user.nickName}}</p>
+            </a>
+        </div>
+    </div>
+    <div class="person_messlist">
+        <ul>
+            <li ng-click="toPersonalOrder()"><span class="icon_personal per_order"><i class="yhyfont per_font">&#xe655;</i></span>我的订单</li>
+            <li ui-sref="personalMarchList"><span class="icon_personal per_perdiy"><i class="yhyfont per_font">&#xe65a;</i></span>我的行程</li>
+            <li ui-sref="personalWallet"><span class="icon_personal per_wallet"><i class="yhyfont per_font">&#xe65b;</i></span>我的钱包</li>
+            <li ui-sref="personalSelection"><span class="icon_personal per_collect"><i class="yhyfont per_font">&#xe651;</i></span>我的收藏</li>
+            <li ui-sref="personalComment"><span class="icon_personal per_common"><i class="yhyfont per_font">&#xe656;</i></span>我的点评</li>
+            <li ui-sref="personalTouristList"><span class="icon_personal per_evaluation"><i class="yhyfont per_font">&#xe657;</i></span>常用出行人</li>
+            <li ng-click="resetStorage()"><span class="icon_personal per_remove"><i class="yhyfont per_font">&#xe658;</i></span>清除缓存</li>
+        </ul>
+    </div>
+</div>

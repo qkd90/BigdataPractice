@@ -1,0 +1,90 @@
+<div ng-controller="myxianluCtrl">
+<div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+  <ul>
+    <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">我的线路</a></li>
+  </ul>
+</div>
+<div id="yjcontainer" class="clearfix">
+  <div class="my-xl-list" infinite-scroll="planList()" infinite-scroll-distance='1' infinite-scroll-disabled='loading'>
+    <ul>
+      <li class="clearfix xlinfo" ng-repeat="myxianlu in data">
+        <a ui-sref="xing-xianlu-info({id:myxianlu.id})">
+          <span class="thumb"><img bn-lazy-src="{{myxianlu.cover}}?imageView2/1/w/600/h/300/q/75" class="img-responsive" /></span>
+          <h2 class="title text-center">{{myxianlu.name}}</h2>
+          <p class="time"><span class="day">{{myxianlu.day}}天</span><span class="start">{{myxianlu.startDate}} 出发</span></p>
+        </a>
+        <a ng-click="deleteRow(this)" class="trash img-circle"><span><img src="images/ico/trash.png" class="img-responsive center-block" /></span></a>
+      </li>
+    </ul>
+    <div ng-show="loading"><div class="yuloading"><span>加载数据中...</span></div></div>
+    <div ng-show="nomore" class="alert alert-danger text-center">没有更多数据了</div>
+  </div>
+</div>
+<div class="mybottom sirendz text-center col-xs-12"><a ui-sref="xing"><span>私人定制</span></a></div>
+</div>
+<script>
+////删除线路
+//function deleteRow(obj) {
+//    obj.parents(".xlinfo").remove();
+//}
+</script>
+
+<script>
+//$(function(){
+//    var counter = 0;
+//    // 每页展示数量
+//    var num = 1;
+//    var pageStart = 0,pageEnd = 0;
+//
+//    // dropload
+//    $('.lxbcontainer').dropload({
+//        scrollArea : window,
+//        domDown : {
+//            domClass   : 'dropload-down',
+//            domRefresh : '<div class="dropload-refresh">↑上拉加载更多</div>',
+//            domLoad    : '<div class="dropload-load"><span class="loading"></span>加载中...</div>',
+//            domNoData  : '<div class="dropload-noData">暂无数据</div>'
+//        },
+//        loadDownFn : function(me){
+//            $.ajax({
+//                type: 'GET',
+//                url: '../data/my-xl-more.json',
+//                dataType: 'json',
+//                success: function(data){
+//                    var result = '';
+//                    counter++;
+//                    pageEnd = num * counter;
+//                    pageStart = pageEnd - num;
+//
+//                    for(var i = pageStart; i < pageEnd; i++){
+//                        result +=   '<li class="clearfix xlinfo ng-scope"><a href="/xing-xianlu-info">'
+//                                        +'<span class="thumb"><img src="'+data.lists[i].image+'" alt="" class="img-responsive"></span>'
+//										+'<h2 class="title text-center">'+data.lists[i].title+'</h2>'
+//                                        +'<p class="time"><span class="day">'+data.lists[i].day+'天</span><span class="start">'+data.lists[i].time+'出发</span></p></a>'
+//                                        +'<a class="trash img-circle" ng-click="deleteRow(this)"><span><img class="img-responsive center-block" src="..images/ico/trash.png"></span></a>'
+//										+'</li>';
+//                        if((i + 1) >= data.lists.length){
+//                            // 锁定
+//                            me.lock();
+//                            // 无数据
+//                            me.noData();
+//                            break;
+//                        }
+//                    }
+//                    // 为了测试，延迟1秒加载
+//                    setTimeout(function(){
+//                        $('.my-xl-list').append(result);
+//                        // 每次数据加载完，必须重置
+//                        me.resetload();
+//                    },1000);
+//                },
+//                error: function(xhr, type){
+//                    alert('Ajax error!');
+//                    // 即使加载出错，也得重置
+//                    me.resetload();
+//                }
+//            });
+//        }
+//    });
+//});
+</script>

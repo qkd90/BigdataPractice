@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.order.mapper.OrderPassengerMapper">
+	<insert id="insert" parameterType="OrderPassenger" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_order_passenger
+			(
+				user_id,
+				name,
+				phone,
+				id_card,
+				pinyin,
+				passport,
+				taiwan_permit,
+				hk_and_macau_permit,
+				user_defined_i,
+				user_defined_ii,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{userId},
+				#{name},
+				#{phone},
+				#{idCard},
+				#{pinyin},
+				#{passport},
+				#{taiwanPermit},
+				#{hkAndMacauPermit},
+				#{userDefinedI},
+				#{userDefinedIi},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="OrderPassenger">
+		update tb_order_passenger
+		<set>
+			<if test="userId != null"> user_id = #{userId},</if>
+			<if test="name != null"> name = #{name},</if>
+			<if test="phone != null"> phone = #{phone},</if>
+			<if test="idCard != null"> id_card = #{idCard},</if>
+			<if test="pinyin != null"> pinyin = #{pinyin},</if>
+			<if test="passport != null"> passport = #{passport},</if>
+			<if test="taiwanPermit != null"> taiwan_permit = #{taiwanPermit},</if>
+			<if test="hkAndMacauPermit != null"> hk_and_macau_permit = #{hkAndMacauPermit},</if>
+			<if test="userDefinedI != null"> user_defined_i = #{userDefinedI},</if>
+			<if test="userDefinedIi != null"> user_defined_ii = #{userDefinedIi},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="OrderPassenger">
+		delete from
+			tb_order_passenger
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="OrderPassenger">
+		select
+			*
+		from
+			tb_order_passenger
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="OrderPassenger">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_order_passenger
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="name != null and '' != name"> and name = #{name} </if>
+			<if test="phone != null and '' != phone"> and phone = #{phone} </if>
+			<if test="idCard != null and '' != idCard"> and id_card = #{idCard} </if>
+			<if test="pinyin != null and '' != pinyin"> and pinyin = #{pinyin} </if>
+			<if test="passport != null and '' != passport"> and passport = #{passport} </if>
+			<if test="taiwanPermit != null and '' != taiwanPermit"> and taiwan_permit = #{taiwanPermit} </if>
+			<if test="hkAndMacauPermit != null and '' != hkAndMacauPermit"> and hk_and_macau_permit = #{hkAndMacauPermit} </if>
+			<if test="userDefinedI != null and '' != userDefinedI"> and user_defined_i = #{userDefinedI} </if>
+			<if test="userDefinedIi != null and '' != userDefinedIi"> and user_defined_ii = #{userDefinedIi} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; # {ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; # {tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+	</sql>
+</mapper>

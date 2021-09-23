@@ -1,0 +1,37 @@
+/*!
+ * 厦门旅游集散服务中心 v0.1
+ * Author Jeffrey.
+ * Copyright 2011-2015.
+ */
+
+/*banner*/
+#banner{position:relative; height:450px;}
+#banner .carousel-indicators{margin-bottom:0; bottom:5px;}
+#banner .carousel-indicators li{width:30px; height:3px; background:#99a9ab; border:none; border-radius:0;}
+#banner .carousel-indicators .active{background:#f0884a;}
+/*首页登录框*/
+#homefloat{ position:absolute; z-index:999; width:300px;margin-top: -410px; margin-left: 920px}
+
+/*首页线路模块*/
+.box-title{height:37px; margin:20px 0;}
+.box-title span.title{border-radius:5px 5px 0 0; color:#fff; padding:0 20px; height:35px; line-height:35px; display:inline-block;}
+.box-title a.more{border:1px solid #a2a2a2; color:#a2a2a2; height:30px; line-height:26px; font-size:14px; padding:0 10px;}
+.box{margin-bottom:20px;}
+.box .content{background:#f7f7f7; padding:15px;}
+.box .content h2{font-size:16px; margin:0;}
+.box .content h2 span{display:block;}
+.box .content h2 span.price{padding-top:10px;}
+.box .content h2 span.price b{font-size:24px; font-weight:normal;}
+.lyxl{border-bottom:2px solid #1c96d9;}
+.lyxl span.title{background:#1c96d9;}
+.xianlu .content h2 span.price{color:#1c96d9;}
+.jdmp-title{border-bottom:2px solid #ff6e54;}
+.jdmp-title span.title{background:#ff6e54;}
+.jdmp .content h2 span.price{color:#ef5a00;}
+.gys-title{border-bottom:2px solid #00ca98;}
+.gys-title span.title{background:#00ca98;}
+.gyslist .media{border:1px solid #d3d3d3;}
+.gyslist .media-left{padding:0 20px;}
+.gyslist .media-body h2{font-size:18px; color:#000; margin-top:30px;}
+.gyslist .media-body span{font-size:16px; color:#8d8d8d;}
+.gyslist .info{color:#8d8d8d; padding:10px 0;}

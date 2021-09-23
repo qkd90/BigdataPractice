@@ -1,0 +1,228 @@
+<div ng-controller="mHotelIndexCtrl" id="hotel_index" class="yi_hotel">
+    <div class="m_header_hotel header">
+        <a class="go_to_home_hotel" ui-sref="index"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        <span>酒店民宿</span>
+    </div>
+    <div id="hotel_main">
+        <!-- country-hotel start -->
+        <!-- ads start -->
+        <div class="i-swipe-banner swiper-container ads-area" id="htei-top-slider-container">
+            <ul class="swiper-wrapper ads-slider" id="slide">
+                <li class="swiper-slide" ng-repeat="ad in result.topBannerAds" is-over="finish.over">
+                    <a ng-href="{{ad.url}}"><img ng-src="{{ad.imgPath | getImgUrl}}?imageView2/1/w/400/h/123/q/85"></a>
+                    <!--<a ng-href="{{ad.url}}"><img src="/yihaiyou/image/fc{{$index + 1}}.jpg"></a>-->
+                </li>
+            </ul>
+            <div class="swipe-pagenavi swiper-pagination" id="htei-top-slide-page"></div>
+        </div>
+        <!-- ads end -->
+        <!-- search start -->
+        <div class="search-area">
+            <ul>
+                <!--<li class="location" call-back-select-city city-code-key="'hotelCityCode'" city-name-key="'hotelCityName'">-->
+                    <!--<span class="position"> <i class="icon-trip location"></i><p>我的位置</p></span>-->
+                <!--&lt;!&ndash;<span class="dest"><em>目的地</em><div style="font-size: 1.8rem;">{{hotelCityName}}</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<i class="icon-arrow arrow-hotel"></i></span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                 <!--<span class="dest"><em>目的地</em><div style="font-size: 1.8rem;">{{hotelCityName}}</div>-->
+                    <!--<i class="icon-arrow arrow-hotel"></i>-->
+                 <!--</span>-->
+                <!--</li>-->
+
+                <li class="location">
+                    <!--<span class="position"> <i class="icon-trip location"></i><p>我的位置</p></span>-->
+                    <!--<span class="dest"><em>目的地</em><div style="font-size: 1.8rem;">{{hotelCityName}}</div>-->
+                    <!--<i class="icon-arrow arrow-hotel"></i></span>-->
+                    <!--</li>-->
+                 <span class="dest"><em>目的地</em><div style="font-size: 1.8rem;">{{hotelCityName}}</div></span>
+                </li>
+
+                <li class="date" select-hotel-date is-first="isFirst" hotel-date-range="hotelDateRange">
+                    <div class="date-label"><em>日期</em></div>
+                    <div class="right_side">
+                        <div class="information_time">
+                            <div class="date-duration">
+                                <div class="check-in"><span>{{startDateStr}}</span><em>入住</em></div>
+                                <div class="check-out"><span>{{endDateStr}}</span><em>离店</em></div>
+                            </div>
+                            <div class="date-sum">共{{nights}}晚</div>
+                            <div class="arrow-hotel"><i class="icon-arrow arrow-hotel"></i></div>
+                        </div>
+                    </div>
+                </li>
+                <li show-hotel-plus-condition-area>
+                <!--<span id="clear_hotel_plus" class="remove hide"><i clear-hotel-plus-info ng-click="clearHotelPlusCondition()" class="icon-close"></i></span>-->
+                <span class="filter">
+                    <p id="hotel_plus_show" class="show">{{hotelPlusCondition}}</p><i
+                        class="icon-arrow arrow-hotel"></i>
+                </span>
+                </li>
+                <li hotel-index-star-area>
+                <!--<span id="clear_hotel_price" class="remove hide"><i clear-hotel-price-info ng-click="clearHotelPriceCondition()" class="icon-close"></i></span>-->
+                <span class="hotel_price">
+                    <p id="hotel_price_show" class="show">{{hotelPriceCondition}}</p><i
+                        class="icon-arrow arrow-hotel"></i>
+                </span>
+                </li>
+            </ul>
+
+            <a class="hotel-search-btn" id="search" ng-click="goHotelList()">查询</a>
+        </div>
+        <!-- search end -->
+    </div>
+
+    <!-- calendar start -->
+    <div id="calendarArea" class="hide">
+        <!--<header class="header-box fixed">-->
+        <!--<span class="header-back" hotel-date-back hotel-date-range="hotelDateRange"><i class="icon-title-back effect-active"></i></span>-->
+            <!--<h1>选择入住/离店日期</h1>-->
+        <!--</header>-->
+        <div class="header-box fixed header" style="padding:0;">
+            <a class="go_to_home_hotel" ui-sref="index"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+            <span>选择入住/离店日期</span>
+        </div>
+        <div id="calendar"></div>
+    </div>
+
+    <!-- calendar end -->
+
+    <!-- price && star start -->
+    <div class="price-star-area hide" ng-click="showPriceCondition()">
+        <div class="price-star" no-hotel-index-star-area>
+            <div class="hotel_price">
+                <div class="des">价格（单选）</div>
+                <ul class="list" id="hotel_price_list">
+                    <li select-hotel-price price-info="priceInfo" min-hotel-price="minHotelPrice"
+                        max-hotel-price="maxHotelPrice" class="hotel_selected on">不限</li>
+                    <li select-hotel-price price-info="priceInfo" min-price="1" min-hotel-price="minHotelPrice"
+                        max-hotel-price="maxHotelPrice" max-price="150" class="">¥150以下</li>
+                    <li select-hotel-price price-info="priceInfo" min-price="150" min-hotel-price="minHotelPrice"
+                        max-hotel-price="maxHotelPrice" max-price="300" class="">¥150-¥300</li>
+                    <li select-hotel-price price-info="priceInfo" min-price="301" min-hotel-price="minHotelPrice"
+                        max-hotel-price="maxHotelPrice" max-price="450" class="br">¥301-¥450</li>
+                    <li select-hotel-price price-info="priceInfo" min-price="451" min-hotel-price="minHotelPrice"
+                        max-hotel-price="maxHotelPrice" max-price="600" class="">¥451-¥600</li>
+                    <li select-hotel-price price-info="priceInfo" min-price="601" min-hotel-price="minHotelPrice"
+                        max-hotel-price="maxHotelPrice" max-price="1000" class="">¥601-¥1000</li>
+                    <li select-hotel-price price-info="priceInfo" min-price="1000" min-hotel-price="minHotelPrice"
+                        max-hotel-price="maxHotelPrice" class="">¥1000以上</li>
+                </ul>
+            </div>
+            <div class="star">
+                <div class="des">星级（单选）</div>
+                <ul class="list" id="hotel_star_list">
+                    <li select-single-hotel-star star-info-arr="starInfoArr" select-star-arr="selectStarArr" class="hotel_selected on">不限</li>
+                    <li select-single-hotel-star star-info-arr="starInfoArr" select-star-arr="selectStarArr" star="2">民宿</li>
+                    <li select-single-hotel-star star-info-arr="starInfoArr" select-star-arr="selectStarArr" star="3" class="br">三星/舒适</li>
+                    <li select-single-hotel-star star-info-arr="starInfoArr" select-star-arr="selectStarArr" star="4" class="">四星/高档</li>
+                    <li select-single-hotel-star star-info-arr="starInfoArr" select-star-arr="selectStarArr" star="5" class="">五星/豪华</li>
+                </ul>
+            </div>
+            <a ng-click="showPriceCondition()" class="confirm">确定</a>
+        </div>
+    </div>
+    <!-- price && star end -->
+
+    <!-- positon & brand & service start-->
+    <div ng-click="showHotelPlusCondition()" id="hotel_plus_condition_area" class="filter-bar-back show-1 show-func"
+         style="min-height: 580px;">
+        <div no-hotel-plus-condition-area class="filter-box" style="bottom:40px;" id="filter_box">
+            <div class="filter-func filter-func-hotel">
+                <div class="input-search focus" id="fil_seacher">
+                    <i class="icon-search"></i>
+                    <input ng-model="keyword" type="text" placeholder="关键字/位置/品牌/酒店名" id="seachinput">
+                    <i class="icon-delete hide"></i>
+                </div>
+                <!--<div class="filter-cancel fontcolore0">取消</div>-->
+                <!--<div class="filter-clear fontcolore0">清空已选<i class="icon-delete2 filter-delete-icon filter-delete filter-hotel"></i></div>-->
+                <!--<div class="filter-confirm fontcolore0">确定</div>-->
+            </div>
+
+            <div class="filter-content-box">
+
+                <div class="filter-content" data-type="2">
+                    <div class="filter-sidebar-box">
+                        <div class="filter-sidebar left filter-need-scroll" style="height:310px">
+                            <ul id="hotel-plus-condition-cat">
+                                <li switch-hotel-plus-condition-tab class="active">
+                                    <div class="text">酒店位置<i class="filter-changed-icon"></i></div>
+                                </li>
+                                <li switch-hotel-plus-condition-tab class="">
+                                    <div class="text">品牌<i class="filter-changed-icon"></i></div>
+                                </li>
+                                <li switch-hotel-plus-condition-tab class="">
+                                    <div class="text">服务<i class="filter-changed-icon"></i></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="hotel-plus-condition-list" class="filter-sidebar right filter-need-scroll" style="height:310px">
+                            <div class="filter-sidebar-content active">
+                                <ul id="hotel-region-list" class="filter-list filter-data-box" data-data-index="1">
+                                    <li select-hotel-region class="filter-data default only gou" data-ori="true">不限
+                                        <!--<i class="filter-icon filter-checkbox icon-choice filter-icon-hotel"></i>-->
+                                    </li>
+                                    <li select-hotel-region ng-repeat="region in result.hotelRegions"
+                                        select-hotel-region region-id="region.id" region-name="region.name"
+                                        hotel-region-id="hotelRegionId" hotel-region-name="hotelRegionName"
+                                        class="filter-data" data-index="{{$index}}">{{region.name}}
+                                        <!--<i class="filter-icon filter-checkbox icon-no-choice filter-icon-hotel"></i>-->
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="filter-sidebar-content">
+                                <ul id="hotel-brand-list" class="filter-list filter-data-box" data-data-index="2">
+                                    <li select-hotel-brand class="filter-data default only gou" data-ori="true">不限
+                                        <!--<i class="filter-icon filter-checkbox icon-choice filter-icon-hotel"></i>-->
+                                    </li>
+                                    <li ng-repeat="brand in result.hotelCityBrands"
+                                        select-hotel-brand brand-id="brand.brandId" brand-name="brand.brandName"
+                                        hotel-brand-id="hotelBrandId" hotel-brand-name="hotelBrandName"
+                                        class="filter-data" data-index="{{$index}}">{{brand.brandName}}
+                                        <!--<i class="filter-icon filter-checkbox icon-no-choice filter-icon-hotel "></i>-->
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="filter-sidebar-content">
+                                <ul id="hotel-service-list" class="filter-list filter-data-box" data-data-index="3">
+                                    <li select-hotel-service class="filter-data default only gou" data-ori="true">不限
+                                        <!--<i class="filter-icon filter-checkbox icon-choice filter-icon-hotel"></i>-->
+                                    </li>
+                                    <li ng-repeat="hotelService in result.hotelCityServices"
+                                        select-hotel-service service-id="hotelService.serviceId"
+                                        service-name="hotelService.serviceName"
+                                        hotel-service-id="hotelServiceId" hotel-service-name="hotelServiceName"
+                                        class="filter-data" data-index="{{$index}}">{{hotelService.serviceName}}
+                                        <!--<i class="filter-icon filter-checkbox icon-no-choice filter-icon-hotel"></i>-->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="confirm" ng-click="showHotelPlusCondition()" id="fil_sure">确定</a>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- positon & brand & service end-->
+</div>
+<!--<script>
+    $('#fil_seacher').click(function(){
+        $(this).css({'position':'fixed','left':'0','bottom':'45px'});
+    });
+    $('#fil_sure').click(function(){
+        $('#fil_seacher').css({'position':'static'});
+    });
+    $('#hotel_plus_condition_area').click(function(){
+        $('#fil_seacher').css({'position':'static'});
+    })
+</script>-->
+<!--<script>
+    $('#fil_seacher').click(function(){
+        $(this).css({'position':'fixed','left':'0','bottom':'45px'});
+    });
+    $('#seachinput').blur(function(){
+        $('#fil_seacher').css({'position':'static'});
+    });
+</script>-->

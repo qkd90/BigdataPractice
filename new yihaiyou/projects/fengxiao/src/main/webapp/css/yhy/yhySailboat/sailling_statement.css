@@ -1,0 +1,294 @@
+.statementList {
+	width: 1200px;
+	margin: auto;
+	background-color: #fff;
+	margin-top:10px;
+	padding-top:0.1px;
+}
+
+.statementList .pageTitle {
+	font-size: 19px;
+	color: #000;
+	background: url(/images/yhy/background.png) repeat 0 0;
+	background-size: 1px 1px;
+    padding: 15px 0;
+    font-weight: 600;
+    font-family: 'microsoft yahei','微软雅黑';
+}
+
+.statementList .pageTitle .firTitle {
+	float: left;
+}
+
+.messageList_header>div.dataTables_wrapper>div.dataTables_length, .sailPrice .messageList_header>div.dataTables_wrapper>div.dataTables_length, .financeList .financeTable>div.dataTables_wrapper>div.dataTables_length {
+	position: absolute;
+	bottom: 2px;
+	right: 0px;
+	width: 160px;
+}
+.messageList_header>div.dataTables_wrapper>div.dataTables_length label, .sailPrice .messageList_header>div.dataTables_wrapper>div.dataTables_length label, .financeList .financeTable>div.dataTables_wrapper>div.dataTables_length label {
+	font-weight: normal;
+	margin-bottom: 0px;
+}
+.messageList_header>div.dataTables_wrapper>div.dataTables_processing, .sailPrice .messageList_header>div.dataTables_wrapper>div.dataTables_processing, .financeList .financeTable>div.dataTables_wrapper>div.dataTables_processing {
+	width: 15%;
+	height: 50px;
+	padding: 0px;
+	margin-left: -6%;
+	margin-top: -38px;
+	line-height: 50px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background: rgba(18, 18, 18, 0.7);
+	background: #121212\0;
+	color: #fff;
+}
+
+.statementList .pageTitle span.forSure,.statementList .pageTitle span.reTurn {
+	float: right;
+	font-size: 14px;
+	color: #fff;
+	width: 100px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	border-radius:4px;
+	cursor: pointer;
+	/*background:url(/images/yhy/button—cdqr.png);*/
+	background: #729d14;
+	box-shadow: inset 0 -1px 3px #ccc;
+	font-family: SimSum;
+}
+
+.statementList .pageTitle span.forSure:hover {
+	/*background:url(/images/yhy/button—cdqr01.png);*/
+	background:#509d14;
+}
+
+.statementList .pageTitle span.reTurn {
+	margin-right:20px;
+	background-color: #fc9a44;
+	/*background:url(/images/yhy/button—cdfh.png);*/
+}
+
+.statementList .pageTitle span.reTurn:hover {
+	background-color: #ff8800;
+	/*background:url(/images/yhy/button—cdfh01.png);*/
+}
+
+table {
+	margin-bottom: 0!important;
+}
+
+.statementList .selectBar {
+	height:137px;
+	clear: both;
+	background:none;
+	border:1px solid #ddd;
+}
+
+.selB_1 {
+	float: left;
+	margin:20px 0 20px 20px;
+	font-size:12px;
+	color: #333;
+	border:1px solid #edeef2;
+	box-shadow: 0 1px 2px #d8d9dd;
+}
+
+.selB_1 span {
+	font-size: 15px;
+	font-weight: 600;
+	margin-left:8px;
+}
+
+.selB_1 .left {
+	width: 70px;
+	height:94px;
+	float: left;
+	color: #fff;
+}
+
+.selB_1 .right {
+	float: right;
+	width: 140px;
+	padding:18px 0 0 10px;
+
+}
+
+.selB_1 .right p {
+	margin-bottom:0;
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.selB_1 .right p.p2 {
+	font-size: 18px;
+}
+
+.statementList  .statementNum {
+	width: 220px;
+}
+
+.statementList  .statementNum .left {
+	background: #ff8762 url(/images/yhy/icon_BSaccount.png) no-repeat center center;
+}
+
+.statementList  .statementNum .right p.p1 {
+	color: #ff8762;
+}
+
+.statementList  .statementTime {
+	width: 220px
+}
+
+.statementList  .statementTime .left {
+	background: #4cb3ff url(/images/yhy/icon_BSclock.png) no-repeat center center;
+}
+
+.statementList  .statementTime .right p.p1 {
+	color: #4cb3ff;
+}
+
+.statementList  .statementType {
+	width: 220px
+}
+
+.statementList  .statementType .left {
+	background: #b199dd url(/images/yhy/icon_BSsettlement.png) no-repeat center center;
+}
+
+.statementList  .statementType .right p.p1 {
+	color: #b199dd;
+}
+
+.statementList  .statementGet {
+	width: 435px;
+	padding:10px;
+}
+
+.statementList  .statementGet .left {
+	background: #6cc7bf url(/images/yhy/icon_BScollection.png) no-repeat center center;
+}
+
+.statementList  .statementGet .abox {
+	width:106px;
+	height:74px;
+	float:left;
+}
+
+.statementList  .statementGet .fuhao {
+	width:45px;
+	height:74px;
+	float:left;
+	font-size:33px;
+	color:#888;
+	line-height:74px;
+	text-align:center;
+}
+
+.statementList  .statementGet .abox .aname {
+	padding:5px 15px;
+	background:#3996fa;
+	color:#fff;
+	font-size:18px;
+	border-radius:5px;
+	display:inline-block;
+	margin:0;
+	cursor: pointer;
+}
+
+.statementList  .statementGet .abox .bname {
+	background:#ff8800;
+}
+
+.statementList  .statementGet .abox .cname {
+	background:none;
+	color:#333;
+	cursor: auto;
+}
+
+.statementList  .statementGet .abox .pr_count {
+	padding: 10px 0px;
+	font-size: 24px;
+	border-radius: 5px;
+	display: inline-block;
+	margin: 0;
+	width: 100px;
+	text-align: center;
+}
+
+.statementList  .statementGet .abox .pr_count lable {
+	font-size:14px;
+	padding-right:3px;
+	vertical-align:super;
+}
+
+.statementList  .statementGet .left {
+	background: #6cc7bf url(/images/yhy/icon_BScollection.png) no-repeat center center;
+}
+
+.statementList  .statementGet .right p.p1 {
+	color: #6cc7bf;
+}
+
+.statementList  .statementGet .right p.p2 {
+	color: #ff4444;
+	font-size: 22px;
+}
+
+
+.statementList .statementBy .btn {
+	width: 100px;
+	height:30px;
+	background-color: #478ff1;
+	text-align: center;
+	color: #fff;
+	line-height:30px;
+	padding:0;
+	font-size: 12px;
+	float: left
+}
+
+.statementList .statementTable {
+	display:none;
+	margin-top:30px;
+}
+
+.statementList .statementTable table tr th {
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+	height: 35px;
+	line-height:35px;
+	background-color: #f0f0f0;
+	width: 299px;
+	font-weight:600;
+}
+
+.statementList .statementTable table tr td {
+	font-size: 12px;
+	color: #666;
+	text-align: center;
+	height: 30px;
+	line-height:30px;
+	font-family: AdobeInvisFont;
+	border-right:1px solid #ddd;
+}
+
+.statementList .statementTable table tr td.checkNum {
+	border-left:1px solid #ddd;
+}
+
+.statementList .statementTable table tr td.checkNum:hover {
+	color: #478ff1;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.statementList .dataTables_paginate  {
+	margin-top:0!important;
+	padding-top:20px!important;
+}

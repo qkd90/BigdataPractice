@@ -1,0 +1,35 @@
+.customreq_dialog {
+    padding: 0 10px;
+    background: #f9f9f9;
+}
+.customreq_dialog .fl{
+    float: left;
+}
+.customreq_dialog input{
+    width: 150px;
+    font-size: 13px;
+}
+.customreq_dialog textarea{
+    width: 350px;
+    padding: 3px;
+}
+.customreq_dialog li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.customreq_dialog .disa{
+    background: none;
+    border: none;
+}
+.customreq_dialog .vam{
+    vertical-align: middle;
+}
+.opt a.ena{
+    color: #0000cc;
+    text-decoration: underline;
+}
+.opt a.disa{
+    color: #8F8F8F;
+    text-decoration: none;
+    cursor: not-allowed;
+}

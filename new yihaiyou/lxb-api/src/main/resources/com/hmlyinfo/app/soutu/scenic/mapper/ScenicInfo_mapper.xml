@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.ScenicInfoMapper">
+	<insert id="insert" parameterType="ScenicInfo">
+		insert into tb_scenic_info
+			(
+				id,
+				user_id,
+				name,
+				city_code,
+				score,
+				star,
+				price,
+				came_count,
+				going_count,
+				open_time,
+				advice_time,
+				advice_hours,
+				best_time,
+				ticket,
+				comment_num,
+				short_comment,
+				cover_large,
+				cover_medium,
+				cover_small,
+				father,
+				if_has_child,
+				longitude,
+				latitude,
+				gcj_lng,
+				gcj_lat,
+				url,
+				modify_time,
+				create_time,
+				is_city,
+				is_station,
+				lowest_price,
+				market_price,
+				highest_price,
+				flag_has_taxi,
+				flag_has_bus,
+				flag_three_level_region,
+				parents_three_level_region
+			)
+		values
+			(
+				#{id},
+				#{name},
+				#{cityCode},
+				#{score},
+				#{star},
+				#{price},
+				#{cameCount},
+				#{goingCount},
+				#{openTime},
+				#{adviceTime},
+				#{adviceHours},
+				#{bestTime},
+				#{ticket},
+				#{commentNum},
+				#{shortComment},
+				#{userId},
+				#{coverLarge},
+				#{coverMedium},
+				#{coverSmall},
+				#{father},
+				#{ifHasChild},
+				#{longitude},
+				#{latitude},
+				#{gcjLng},
+				#{gcjLat},
+				#{url},
+				#{modifyTime},
+				#{createTime},
+				#{isCity},
+				#{isStation},
+				#{lowestPrice},
+				#{marketPrice},
+				#{highestPrice},
+				#{flagHasTaxi},
+				#{flagHasBus},
+				#{flagThreeLevelRegion},
+				#{parentsThreeLevelRegion}
+			)
+	</insert>
+	
+	<update id="updateShareNum" parameterType="map">
+		update tb_scenic_info
+		set came_count = came_count + 1 where id in
+		<foreach collection="list" item="ids" index="index" open="("
+			close=")" separator=",">
+			#{ids}
+		</foreach>
+	</update>
+	
+	<update id="update" parameterType="ScenicInfo">
+		update tb_scenic_info
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="name != null and '' != name"> name = #{name},</if>
+			<if test="cityCode != null and '' != cityCode"> city_code = #{cityCode},</if>
+			<if test="score != null and '' != score"> score = #{score},</if>
+			<if test="star != null and '' != star"> star = #{star},</if>
+			<if test="price != null and '' != price"> price = #{price},</if>
+			<if test="cameCount != null and '' != cameCount"> came_count = #{cameCount},</if>
+			<if test="goingCount != null and '' != goingCount"> going_count = #{goingCount},</if>
+			<if test="openTime != null and '' != openTime"> open_time = #{openTime},</if>
+			<if test="adviceTime != null and '' != adviceTime"> advice_time = #{adviceTime},</if>
+			<if test="adviceHours != null and '' != adviceHours"> advice_hours = #{adviceHours},</if>
+			<if test="bestTime != null and '' != bestTime"> best_time = #{bestTime},</if>
+			<if test="ticket != null and '' != ticket"> ticket = #{ticket},</if>
+			<if test="commentNum != null and '' != commentNum"> comment_num = #{commentNum},</if>
+			<if test="shortComment != null and '' != shortComment"> short_comment = #{shortComment},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="coverLarge != null and '' != coverLarge"> cover_large = #{coverLarge},</if>
+			<if test="coverMedium != null and '' != coverMedium"> cover_medium = #{coverMedium},</if>
+			<if test="coverSmall != null and '' != coverSmall"> cover_small = #{coverSmall},</if>
+			<if test="father != null and '' != father"> father = #{father},</if>
+			<if test="ifHasChild != null and '' != ifHasChild"> if_has_child = #{ifHasChild},</if>
+			<if test="longitude != null and '' != longitude"> longitude = #{longitude},</if>
+			<if test="latitude != null and '' != latitude"> latitude = #{latitude},</if>
+			<if test="gcjLng != null and '' != gcjLng"> gcj_lng = #{gcjLng},</if>
+			<if test="gcjLat != null and '' != gcjLat"> gcj_lat = #{gcjLat},</if>
+			<if test="url != null and '' != url"> url = #{url},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="isCity != null and '' != isCity"> is_city = #{isCity},</if>
+			<if test="isStation != null and '' != isStation"> is_station = #{isStation},</if>
+			<if test="lowestPrice != null and '' != lowestPrice"> lowest_price = #{lowestPrice},</if>
+			<if test="marketPrice != null and '' != marketPrice"> market_price = #{marketPrice},</if>
+			<if test="highestPrice != null and '' != highestPrice"> highest_price = #{highestPrice},</if>
+			<if test="flagHasTaxi != null and '' != flagHasTaxi"> flag_has_taxi = #{flagHasTaxi},</if>
+			<if test="flagHasBus != null and '' != flagHasBus"> flag_has_bus = #{flagHasBus},</if>
+			<if test="flagThreeLevelRegion != null and '' != flagThreeLevelRegion"> flag_three_level_region = #{flagThreeLevelRegion},</if>
+			<if test="parentsThreeLevelRegion != null and '' != parentsThreeLevelRegion"> parents_three_level_region = #{parentsThreeLevelRegion},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="ScenicInfo">
+		delete from
+			tb_scenic_info
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="Map">
+		select
+			i.*,
+			o.*,
+			u.nickname,
+			u.userface
+		from
+			tb_scenic_info as i left join tb_scenic_other as o on i.id = o.scenic_info_id
+			left join tb_user as u on i.user_id = u.id
+		where
+			i.id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+
+    <select id="listBrief" resultType="ScenicInfo">
+        select
+        scenic.*,
+        user.nickname,
+        user.userface
+        <if test="longitude!=null and longitude!=''">,
+        ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) as distance
+        </if>
+        <if test="gcjLng!=null and gcjLng!=''">,
+        ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000) as distance
+        </if>
+        <include refid="byProperty"/>
+    </select>
+
+	<sql id="byProperty">
+		from
+			tb_scenic_info scenic
+			left join tb_user as user on scenic.user_id = user.id
+		<where>
+			scenic.status = 1
+			<if test="name != null and '' != name"> and name like '%${name}%'</if>
+			<if test="cityCode != null and '' != cityCode"> and city_code = #{cityCode}</if>
+			<if test="score != null and '' != score"> and score = #{score} </if>
+			<if test="star != null and '' != star"> and star = #{star} </if>
+			<if test="price != null and '' != price"> and price = #{price} </if>
+			<if test="cameCount != null and '' != cameCount"> and came_count = #{cameCount} </if>
+			<if test="goingCount != null and '' != goingCount"> and going_count = #{goingCount} </if>
+			<if test="openTime != null and '' != openTime"> and open_time = #{openTime} </if>
+			<if test="adviceTime != null and '' != adviceTime"> and advice_time = #{adviceTime} </if>
+			<if test="adviceHours != null and '' != adviceHours"> and advice_hours = #{adviceHours} </if>
+			<if test="bestTime != null and '' != bestTime"> and best_time = #{bestTime} </if>
+			<if test="ticket != null and '' != ticket"> and ticket = #{ticket} </if>
+			<if test="commentNum != null and '' != commentNum"> and comment_num = #{commentNum} </if>
+			<if test="shortComment != null and '' != shortComment"> and short_comment = #{shortComment} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			 <if test="coverLarge != null and '' != coverLarge"> and cover_large = #{coverLarge} </if>
+			<if test="coverMedium != null and '' != coverMedium"> and cover_medium = #{coverMedium} </if>
+			<if test="coverSmall != null and '' != coverSmall"> and cover_small = #{coverSmall} </if>
+			<if test="father != null and '' != father"> and father = #{father} </if>
+			<if test="ifHasChild != null and '' != ifHasChild"> and if_has_child = #{ifHasChild} </if>
+			<if test="url != null and '' != url"> and url like '%${url}%'</if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="isCity != null and '' != isCity"> and is_city = #{isCity} </if>
+			<if test="isStation != null and '' != isStation"> and is_station = #{isStation} </if>
+			<if test="lowestPrice != null and '' != lowestPrice"> and lowest_price = #{lowestPrice} </if>
+			<if test="marketPrice != null and '' != marketPrice"> and market_price = #{marketPrice} </if>
+			<if test="highestPrice != null and '' != highestPrice"> and highest_price = #{highestPrice} </if>
+			<if test="flagHasTaxi != null and '' != flagHasTaxi"> and flag_has_taxi = #{flagHasTaxi} </if>
+			<if test="flagHasBus != null and '' != flagHasBus"> and flag_has_bus = #{flagHasBus} </if>
+			<if test="flagThreeLevelRegion != null and '' != flagThreeLevelRegion"> and flag_three_level_region = #{flagThreeLevelRegion} </if>
+			<if test="parentsThreeLevelRegion != null and '' != parentsThreeLevelRegion"> and parents_three_level_region = #{parentsThreeLevelRegion} </if>
+			<if test="fatherName != null and '' != fatherName"> and father_name = #{fatherName} </if>
+			<if test="ids != null and '' != ids">
+                and scenic.id in ( <if test="ids.size() == 0">-1000</if>
+                <foreach collection="ids" item="item" index="index" separator=",">#{item}
+                </foreach>
+                )
+            </if>
+			<if test="cityCodes != null">
+				and city_code in ( <if test="cityCodes.size() == 0">-1000</if>
+				<foreach collection="cityCodes" item="item" index="index" separator=",">#{item}
+				</foreach>
+				)
+			</if>
+        </where>
+        <choose>
+			<when test="orderColumn != null and 'ticket' == orderColumn">
+                 order by case when isnull(lowest_price) then price else lowest_price end
+					<if test="orderType != null and '' != orderType">
+						${orderType}
+					</if>
+                <if test="longitude!=null and longitude!=''">
+                    ,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)),
+                    ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)
+                </if>
+                <if test="gcjLng!=null and gcjLng!=''">
+                    ,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)),
+                    ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)
+                </if>
+			</when>
+			<when test="orderColumn != null and '' != orderColumn">
+						ORDER BY ${orderColumn}
+					<if test="orderType != null and '' != orderType">
+						${orderType}
+					</if>
+                <if test="longitude!=null and longitude!=''">
+                    ,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)),
+                    ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)
+                </if>
+                <if test="gcjLng!=null and gcjLng!=''">
+                    ,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)),
+                    ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)
+                </if>
+			</when>
+            <when test="longitude!=null and longitude!=''">
+                order by
+                ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)),
+                ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)
+            </when>
+            <when test="gcjLng!=null and gcjLng!=''">
+                order by
+                ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)),
+                ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)
+            </when>
+            <when test="priceFlag != null and '' != priceFlag">
+                order by price ASC
+            </when>
+            <when test="scoreFlag != null and '' != scoreFlag">
+                order by score DESC
+            </when>
+            <otherwise>
+                ORDER BY ISNULL(order_num), order_num
+            </otherwise>
+		</choose>
+    </sql>
+
+
+    <select id="list" resultType="map">
+        select
+        <if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 i.*,
+             o.*,
+             u.nickname,
+             u.userface
+		</if>
+		<if test="longitude!=null and longitude!=''">,
+        ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) as distance
+        </if>
+        <if test="gcjLng!=null and gcjLng!=''">,
+        ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000) as distance
+        </if>
+        <include refid="byPropertyJoin"/>
+    </select>
+
+	<sql id="byPropertyJoin">
+		from
+			tb_scenic_info as i left join tb_scenic_other as o on i.id = o.scenic_info_id
+			left join tb_user as u on i.user_id = u.id
+		<where>
+			i.status = 1
+			<if test="id != null and '' != id"> and i.id = #{id} </if>
+			<if test="name != null and '' != name"> and name like '%${name}%'</if>
+			<if test="sname != null and '' != sname"> and name = #{sname}</if>
+			<if test="cityCode != null and '' != cityCode"> and city_code = #{cityCode}</if>
+			<if test="score != null and '' != score"> and score = #{score} </if>
+			<if test="star != null and '' != star"> and star = #{star} </if>
+			<if test="price != null and '' != price"> and price = #{price} </if>
+			<if test="cameCount != null and '' != cameCount"> and came_count = #{cameCount} </if>
+			<if test="goingCount != null and '' != goingCount"> and going_count = #{goingCount} </if>
+			<if test="openTime != null and '' != openTime"> and open_time = #{openTime} </if>
+			<if test="adviceTime != null and '' != adviceTime"> and advice_time = #{adviceTime} </if>
+			<if test="adviceHours != null and '' != adviceHours"> and advice_hours = #{adviceHours} </if>
+			<if test="bestTime != null and '' != bestTime"> and best_time = #{bestTime} </if>
+			<if test="ticket != null and '' != ticket"> and ticket = #{ticket} </if>
+			<if test="commentNum != null and '' != commentNum"> and comment_num = #{commentNum} </if>
+			<if test="shortComment != null and '' != shortComment"> and short_comment = #{shortComment} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="coverLarge != null and '' != coverLarge"> and cover_large = #{coverLarge} </if>
+			<if test="coverMedium != null and '' != coverMedium"> and cover_medium = #{coverMedium} </if>
+			<if test="coverSmall != null and '' != coverSmall"> and cover_small = #{coverSmall} </if>
+			<if test="father != null and '' != father"> and father = #{father} </if>
+			<if test="ifHasChild != null and '' != ifHasChild"> and if_has_child = #{ifHasChild} </if>
+			<if test="url != null and '' != url"> and url like '%${url}%'</if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="isCity != null and '' != isCity"> and is_city = #{isCity} </if>
+			<if test="isStation != null and '' != isStation"> and is_station = #{isStation} </if>
+			<if test="lowestPrice != null and '' != lowestPrice"> and lowest_price = #{lowestPrice} </if>
+			<if test="marketPrice != null and '' != marketPrice"> and market_price = #{marketPrice} </if>
+			<if test="flagHasTaxi != null and '' != flagHasTaxi"> and flag_has_taxi = #{flagHasTaxi} </if>
+			<if test="flagHasBus != null and '' != flagHasBus"> and flag_has_bus = #{flagHasBus} </if>
+			<if test="flagThreeLevelRegion != null and '' != flagThreeLevelRegion"> and flag_three_level_region = #{flagThreeLevelRegion} </if>
+			<if test="parentsThreeLevelRegion != null and '' != parentsThreeLevelRegion"> and parents_three_level_region = #{parentsThreeLevelRegion} </if>
+			<if test="highestPrice != null and '' != highestPrice"> and highest_price = #{highestPrice} </if>
+            <if test="ids != null and ids.size() != 0">
+                and i.id in (
+                <foreach collection="ids" item="item" index="index" separator=",">#{item}
+                </foreach>
+                )
+            </if>
+            <if test="cityCodes != null">
+                and i.city_code in ( <if test="cityCodes.size() == 0">-1000</if>
+                <foreach collection="cityCodes" item="item" index="index" separator=",">#{item}
+                </foreach>
+                )
+            </if>
+            <if test="longitude!=null and longitude!='' and distance != null and '' != distance">
+                and ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) &lt; #{distance}
+            </if>
+            <if test="gcjLng!=null and gcjLng!='' and distance != null and '' != distance">
+        		and ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000) &lt; #{distance}
+        	</if>
+        </where>
+        <choose>
+            <when test="orderColumn != null and 'ticket' == orderColumn">
+                order by case when isnull(lowest_price) then price else lowest_price end
+                <if test="orderType != null and '' != orderType">
+                    ${orderType}
+                </if>
+                <if test="longitude!=null and longitude!=''">
+                    ,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)),
+                    ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)
+                </if>
+                <if test="gcjLng!=null and gcjLng!=''">
+                    ,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)),
+                    ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)
+                </if>
+            </when>
+			<when test="orderColumn != null and '' != orderColumn">
+						ORDER BY isnull(${orderColumn}),${orderColumn}
+					<if test="orderType != null and '' != orderType">
+                        ${orderType}
+                    </if>
+                    <if test="longitude!=null and longitude!=''">
+                        ,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)),
+                        ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)
+                    </if>
+                    <if test="gcjLng!=null and gcjLng!=''">
+                    	,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)),
+                    	ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)
+                	</if>
+			</when>
+			<when test="longitude!=null and longitude!='' and distanceFlag != null">
+                    order by
+                    ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)),
+                    ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)
+            </when>
+            <when test="gcjLng!=null and gcjLng!='' and distanceFlag != null">
+                	order by
+                	ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)),
+                	ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)
+            </when>
+            <when test="priceFlag != null and '' != priceFlag">
+                order by price ASC
+            </when>
+            <when test="scoreFlag != null and '' != scoreFlag">
+                order by score DESC
+            </when>
+			<otherwise>
+                    ORDER BY ISNULL(order_num), order_num
+			</otherwise>
+
+		</choose>
+    </sql>
+
+    <select id="selectByPosition" resultType="ScenicInfo">
+        SELECT *,
+        <if test="longitude!=null and longitude!=''">
+        ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) as distance
+        </if>
+        <if test="gcjLng!=null and gcjLng!=''">
+        ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000) as distance 
+        </if>
+        from tb_scenic_info
+        <where>
+            <if test="distance != null and '' != distance">
+                <if test="longitude!=null and longitude!=''">
+        			and ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) &lt;#{distance}
+        		</if>
+        		<if test="gcjLng!=null and gcjLng!=''">
+        			and ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000) &lt;#{distance}
+        		</if>
+            </if>
+        </where>
+        order by ISNULL(distance),distance
+    </select>
+    
+    <select id="addScennic" resultType="ScenicInfo">
+        SELECT id, father, longitude, latitude, advice_hours,
+        ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) as distance
+        from tb_scenic_info
+		<where>
+            ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) &lt;#{distance}
+            <if test="adviceHours != null and '' != adviceHours"> and advice_hours &lt; #{adviceHours} </if>
+            <if test="cityCode != null and '' != cityCode"> and city_code = #{cityCode} </if>
+        </where>
+        ORDER BY ISNULL(order_num), order_num asc
+    </select>
+
+    <select id="countByPosition" resultType="int">
+        SELECT count(1) from tb_scenic_info
+        <where>
+            <if test="distance != null and '' != distance">
+            	<if test="longitude!=null and longitude!=''">
+        			and ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) &lt;#{distance}
+        		</if>
+        		<if test="gcjLng!=null and gcjLng!=''">
+        			and ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000) &lt;#{distance}
+        		</if>
+            </if>
+        </where>
+        order by 
+        <if test="longitude!=null and longitude!=''">
+        	ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)
+        </if>
+        <if test="gcjLng!=null and gcjLng!=''">
+        	ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)
+        </if>
+        
+
+    </select>
+
+	<select id="listColumns" resultType="ScenicInfo">
+		select
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		from
+		tb_scenic_info
+		<where>
+			status = 1
+			<if test="id != null and '' != id"> and id = #{id}</if>
+			<if test="name != null and '' != name"> and name like '%${name}%'</if>
+			<if test="cityCode != null and '' != cityCode"> and city_code = #{cityCode}</if>
+			<if test="score != null and '' != score"> and score = #{score} </if>
+			<if test="star != null and '' != star"> and star = #{star} </if>
+			<if test="price != null and '' != price"> and price = #{price} </if>
+			<if test="cameCount != null and '' != cameCount"> and came_count = #{cameCount} </if>
+			<if test="goingCount != null and '' != goingCount"> and going_count = #{goingCount} </if>
+			<if test="openTime != null and '' != openTime"> and open_time = #{openTime} </if>
+			<if test="adviceTime != null and '' != adviceTime"> and advice_time = #{adviceTime} </if>
+			<if test="adviceHours != null and '' != adviceHours"> and advice_hours = #{adviceHours} </if>
+			<if test="bestTime != null and '' != bestTime"> and best_time = #{bestTime} </if>
+			<if test="ticket != null and '' != ticket"> and ticket = #{ticket} </if>
+			<if test="commentNum != null and '' != commentNum"> and comment_num = #{commentNum} </if>
+			<if test="shortComment != null and '' != shortComment"> and short_comment = #{shortComment} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="coverLarge != null and '' != coverLarge"> and cover_large = #{coverLarge} </if>
+			<if test="coverMedium != null and '' != coverMedium"> and cover_medium = #{coverMedium} </if>
+			<if test="coverSmall != null and '' != coverSmall"> and cover_small = #{coverSmall} </if>
+			<if test="father != null and '' != father"> and father = #{father} </if>
+			<if test="ifHasChild != null and '' != ifHasChild"> and if_has_child = #{ifHasChild} </if>
+			<if test="longitude != null and '' != longitude"> and longitude = #{longitude}</if>
+			<if test="latitude != null and '' != latitude"> and latitude = #{latitude}</if>
+			<if test="url != null and '' != url"> and url like '%${url}%'</if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="isCity != null and '' != isCity"> and is_city = #{isCity} </if>
+			<if test="isStation != null and '' != isStation"> and is_station = #{isStation} </if>
+			<if test="lowestPrice != null and '' != lowestPrice"> and lowest_price = #{lowestPrice} </if>
+			<if test="marketPrice != null and '' != marketPrice"> and market_price = #{marketPrice} </if>
+			<if test="highestPrice != null and '' != highestPrice"> and highest_price = #{highestPrice} </if>
+			<if test="flagHasTaxi != null and '' != flagHasTaxi"> and flag_has_taxi = #{flagHasTaxi} </if>
+			<if test="flagHasBus != null and '' != flagHasBus"> and flag_has_bus = #{flagHasBus} </if>
+			<if test="flagThreeLevelRegion != null and '' != flagThreeLevelRegion"> and flag_three_level_region = #{flagThreeLevelRegion} </if>
+			<if test="parentsThreeLevelRegion != null and '' != parentsThreeLevelRegion"> and parents_three_level_region = #{parentsThreeLevelRegion} </if>
+			<if test="fatherName != null and '' != fatherName"> and father_name = #{fatherName} </if>
+			<if test="ids != null and ids.size() != 0">
+				and id in (
+				<foreach collection="ids" item="item" index="index" separator=",">#{item}
+				</foreach>
+				)
+			</if>
+			<if test="cityCodes != null and cityCodes.size() != 0">
+				and city_code in (
+				<foreach collection="cityCodes" item="item" index="index" separator=",">#{item}
+				</foreach>
+				)
+			</if>
+			<if test="fathers != null and fathers.size() != 0">
+				and father in (
+				<foreach collection="fathers" item="item" index="index" separator=",">#{item}
+				</foreach>
+				)
+			</if>
+		</where>
+		<choose>
+            <when test="orderColumn != null and 'ticket' == orderColumn">
+                order by case when isnull(lowest_price) then price else lowest_price end
+                <if test="orderType != null and '' != orderType">
+                    ${orderType}
+                </if>
+                <if test="longitude!=null and longitude!=''">
+                    ,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)),
+                    ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000)
+                </if>
+                <if test="gcjLng!=null and gcjLng!=''">
+                    ,ISNULL(ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)),
+                    ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000)
+                </if>
+            </when>
+			<when test="orderColumn != null and '' != orderColumn">
+				ORDER BY ${orderColumn}
+				<if test="orderType != null and '' != orderType">
+					${orderType}
+				</if>
+			</when>
+		</choose>
+	</select>
+	
+	<select id="listAndOrder" resultType="map">
+		select
+			i.*,
+            o.*,
+            u.nickname,
+            u.userface
+            <if test="longitude!=null and longitude!=''">,
+        		ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{latitude}*PI()/180-latitude*PI()/180)/2),2)+COS(#{latitude}*PI()/180)*COS(latitude*PI()/180)*POW(SIN((#{longitude}*PI()/180-longitude*PI()/180)/2),2)))*1000) as distance
+        	</if>
+        	<if test="gcjLng!=null and gcjLng!=''">,
+        		ROUND(6378.138*2*ASIN(SQRT(POW(SIN((#{gcjLat}*PI()/180-gcj_lat*PI()/180)/2),2)+COS(#{gcjLat}*PI()/180)*COS(gcj_lat*PI()/180)*POW(SIN((#{gcjLng}*PI()/180-gcj_lng*PI()/180)/2),2)))*1000) as distance
+        	</if>
+		from
+			tb_scenic_info as i left join tb_scenic_other as o on i.id = o.scenic_info_id
+			left join tb_user as u on i.user_id = u.id
+		where i.id in (<if test="ids.size() == 0">-1</if>
+				<foreach item="item" index="index" collection="ids"
+						 separator="," >
+					#{item}
+				</foreach>
+				)
+		order by field (i.id,<if test="ids.size() == 0">-1</if>
+				<foreach item="item" index="index" collection="ids"
+						 separator="," >
+					#{item}
+				</foreach>
+				)
+	</select>
+	
+</mapper>

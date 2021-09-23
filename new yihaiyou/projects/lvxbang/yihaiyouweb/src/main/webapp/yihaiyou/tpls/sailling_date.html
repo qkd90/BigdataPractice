@@ -1,0 +1,35 @@
+
+<div class="header-box" id="header">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        选择日期
+    </div>
+</div>
+<div class="saillingDate" ng-controller="sailboatDateCtrl">
+    <div style="width:100%;" id="tagHeight">
+        <div class="order_time">
+            <div class="calendar" id="calendar" full-calendar calendar-data="{{calendarData}}"
+                 calendar-event-click="eventClick(calEvent)" calendar-day-click="dayClick(date)">
+            </div>
+            <div class="order_btn active">
+                <p class="trans_bg"></p>
+
+                <div class="order_info" style="margin:0;line-height: 24px;">
+                    <a class="submit" ng-click="goNext()">下一步</a>
+
+                    <p ng-show="price > 0">
+                        <span class="ticket-price">单价</span>：<span class="ticket-price highlight">{{price}}元</span><br>
+                        <span class="ticket-date">已选日期：</span>
+                        <span class="ticket-date highlight">{{date}}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+<script>
+//    var docHeight = $(window).height();
+//    $('#tagHeight').css({'height': docHeight});
+</script>

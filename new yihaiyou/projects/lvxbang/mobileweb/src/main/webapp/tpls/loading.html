@@ -1,0 +1,18 @@
+<div id="container" class="clearfix xieganxiang" ng-controller="YxCtrl">
+ <div id="loading" class="owl-carousel">
+   <a class="item"><img src="images/load/1.jpg" class="img-responsive" /></a>
+   <a class="item"><img src="images/load/2.jpg" class="img-responsive" /></a>
+   <a class="item"><img src="images/load/3.jpg" class="img-responsive" /></a>
+ </div>
+</div>
+<link href="/css/owl.carousel.css" rel="stylesheet">
+<link href="/css/owl.theme.css" rel="stylesheet">
+<script src="/js/owl.carousel.min.js"></script>
+<script>
+$(function(){
+    $('#loading').owlCarousel({
+        singleItem: true,
+		autoHeight: true
+    });
+});
+</script>

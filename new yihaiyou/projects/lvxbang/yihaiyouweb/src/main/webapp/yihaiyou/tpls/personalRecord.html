@@ -1,0 +1,23 @@
+<div class="personalRecord" ng-controller="personalRecordCtrl">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        消费记录
+    </div>
+    <div class="allrecorde">
+        <ul class="recordeUl">
+            <li ng-repeat="balanceLog in balanceLogList">
+                <ul class="clearfix">
+                    <li><p>{{balanceLog.createWeek}}</p>
+                        <p>{{balanceLog.createTime}}</p></li>
+                    <li class="yhyfont {{balanceLog.showClass}}"></li>
+                    <li><p><span ng-if="balanceLog.type == 'consume' || balanceLog.type == 'withdraw'">-</span><span
+                            ng-if="balanceLog.type == 'recharge' || balanceLog.type == 'refund'">+</span>{{balanceLog.money}}</p>
+
+                        <p>{{balanceLog.orderTypeDesc}}<span ng-if="balanceLog.type == 'refund'">（退款）</span><span ng-if="balanceLog.type == 'withdraw'">({{balanceLog.status}})</span></p></li>
+                    <li><p>{{balanceLog.balance}}</p>
+                        <p>余额</p></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

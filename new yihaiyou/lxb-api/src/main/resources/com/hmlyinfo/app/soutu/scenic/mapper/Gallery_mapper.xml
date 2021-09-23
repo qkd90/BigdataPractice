@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.GalleryMapper">
+	<insert id="insert" parameterType="Gallery">
+		insert into tb_gallery
+			(
+				id,
+				scenic_id,
+				category,
+				content,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{scenicIds},
+				#{category},
+				#{content},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="Gallery">
+		update tb_gallery
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="scenicIds != null and '' != scenicIds"> scenic_id = #{scenicIds},</if>
+			<if test="category != null and '' != category"> category = #{category},</if>
+			<if test="content != null and '' != content"> content = #{content},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="Gallery">
+		delete from
+			tb_gallery
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="Gallery">
+		select
+			id,
+			scenic_id,
+			category,
+			content,
+			modify_time,
+			create_time
+		from
+			tb_gallery
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="Gallery">
+		select 
+			id,
+			scenic_id,
+			category,
+			content,
+			modify_time,
+			create_time
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_gallery
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="scenicIds != null and '' != scenicIds"> and scenic_id = #{scenicIds} </if>
+			<if test="category != null and '' != category"> and category = #{category} </if>
+			<if test="content != null and '' != content"> and content = #{content} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		</where>
+	</sql>
+</mapper>

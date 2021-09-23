@@ -1,0 +1,154 @@
+<div ng-controller="lineDetailCtrl">
+    <header class="m_header ">
+        <div class="gty_toppst">
+                <span class="gty_left">
+                    <a ui-sref="index"><i class="icon icon-home3"></i></a>
+                    <i class="icon icon-search_list" ng-click="toList()"></i>
+                </span>
+                <span class="gty_center">
+                    {{line.productAttr}}
+                </span>
+            <span class="gty_right"></span>
+        </div>
+    </header>
+
+    <div class="index">
+        <div class="product-detail">
+            <div class="topic_image">
+                <img alt="产品图片" bn-lazy-src="http://7u2inn.com2.z0.glb.qiniucdn.com/{{line.cover}}">
+
+                <div class="product_info"><span class="product_num">产品编号：{{line.productNo}}</span>{{line.productAttr}}
+                </div>
+            </div>
+            <div class="basic_info">
+                <div class="base">
+                    <div class="title">&lt;{{line.name}}&gt;{{line.appendTitle}}</div>
+                    <div class="priceInfo">
+                        <div class="price ordinary">
+			<span class="promoCommon">
+					促销价：<span ng-if="price > 0"><strong>￥{{price}}</strong>起</span>
+				           <strong ng-if="price == 0" style="font-size: 12px;">￥来电咨询</strong>
+			</span>
+                        </div>
+                    </div>
+                    <div class="depart-city" ng-if="line.startCity != ''">
+                        <span class="startplace">出发地：</span>
+
+                        <div class="select disabled">
+                            <div class="arrow-down">
+                                <i class="icon-more"></i>
+                            </div>
+                            <div class="select-option selected">{{line.startCity}}</div>
+                        </div>
+                    </div>
+                    <div class="bookingStyle" ng-show="line.linetypepriceList.length > 1">
+                        <ul class="clearfix">
+                            <li>预定类型：</li>
+                            <li ng-repeat="typePrice in line.linetypepriceList" ng-class="typePrice.checked"
+                                ng-click="changeTypePrice(this)"><span>{{typePrice.name}}</span></li>
+                            <div style="clear:both;height:1px"></div>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <section class="choose-calendar clearfix" ng-if="priceDate != ''">
+                <div class="cc-title">查看和选择团期</div>
+                <p class="choose-calendar_p" ui-sref="orderDate({lineTypePriceId: typePriceId})">{{priceDate}}</p>
+            </section>
+            <div class="contents">
+                <div class="summary" ng-if="line.lineLightPoint != ''">
+                    <div class="box">
+                        <div class="label clearfix">
+                            <span class="product_logo"><img src="/lxb/images/product_detail.png"></span>
+                            <span class="product_title">产品特色</span>
+                        </div>
+                        <div class="box-list pro-feature">
+                            <section>
+
+                                <div class="pm-recom-main" ng-bind-html="line.lineLightPoint | trustHtml">
+                                </div>
+                                <div class="more-feature" show-more show-height="200" complete-flag="{{completeFlag}}"
+                                     show-text="收起" hide-text="更多特色" style="display: none;">
+                                    <a>更多特色</a>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                </div>
+                <ul class="product-links" id="links">
+                    <li ui-sref="lineDay({lineId: lineId})">
+                        <span class=" picture_logo"><img src="/lxb/images/product_detail.png"></span><span
+                            class="title_logo">行程介绍</span><span class="turn_right"><img
+                            src="/lxb/images/turnright.png"></span>
+                    </li>
+
+                    <li ui-sref="lineFareDetail({lineTypePriceId: typePriceId})">
+                        <span class=" picture_logo"><img src="/lxb/images/product_detail.png"></span><span
+                            class="title_logo">费用说明</span><span class="turn_right"><img
+                            src="/lxb/images/turnright.png"></span>
+                    </li>
+                    <li ui-sref="lineBooking({lineId: lineId})">
+                        <span class=" picture_logo"><img src="/lxb/images/product_detail.png"></span><span
+                            class="title_logo">预订须知</span><span class="turn_right"><img
+                            src="/lxb/images/turnright.png"></span>
+                    </li>
+                </ul>
+                <!--<div class="space"></div>-->
+                <div class="product_buttons">
+                    <style>
+                        .tel-consult {
+                            float: left;
+                            color: #999;
+                            line-height: 1.9;
+                            width: 21%;
+                            font-size: 1.1rem;
+                        }
+
+                        .c-order-btn {
+                            background-color: #ff8800 !important;
+                            height: 40px !important;
+                            line-height: 40px !important;
+                            margin-top: 5px;
+                            margin-right: 5% !important;
+                            font-size: 1.8rem !important;
+                        }
+
+                        .c-order-btn:active {
+                            color: #fff;
+                        }
+
+                        .larger-btn {
+                            width: 70% !important;
+                        }
+
+                        .c-icon {
+                            width: 2rem;
+                            height: 1.5rem;
+                        }
+                    </style>
+                    <a href="tel:4000131770" class="tel-consult">
+                        <img class="c-icon"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABECAYAAAA4E5OyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RkY5RDNFNjdFMkYzMTFFNUExRkI4RUIzQThDOUE1MEYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RkY5RDNFNjhFMkYzMTFFNUExRkI4RUIzQThDOUE1MEYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQTVFQkVDMkUyODYxMUU1QTFGQjhFQjNBOEM5QTUwRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGRjlEM0U2NkUyRjMxMUU1QTFGQjhFQjNBOEM5QTUwRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrbSai4AAAYpSURBVHja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"
+                             alt="">
+
+                        <p class="c-txt">
+                            电话咨询
+                        </p>
+                    </a>
+                    <a ui-sref="orderDate({lineTypePriceId: typePriceId})"
+                       class="order_product to-order-btn c-order-btn larger-btn" ng-if="price > 0">
+                        立即预订
+                    </a>
+                    <a class="order_product to-order-btn c-order-btn larger-btn" ng-if="price == 0"
+                       style="background-color: #999!important;">
+                        立即预订
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/business/area/areaweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/contract/contractweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/cruiseship/cruiseshipweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/customer/customerweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/goods/goodsweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/hotel/hotelweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/line/lineweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/lxbcommon/lxbcommonweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/order/orderweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/other/otherweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/plan/planweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/restaurant/restaurantweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/sales/salesweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/scemanager/scemanagerweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/scenic/scenicweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/ticket/ticketweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/traffic/trafficweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/transportation/transportationweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/user/userweb" />
+    <file type="web" url="file://$PROJECT_DIR$/business/wechat/wechatweb" />
+    <file type="web" url="file://$PROJECT_DIR$/frame" />
+    <file type="web" url="file://$PROJECT_DIR$/logic/builder" />
+    <file type="web" url="file://$PROJECT_DIR$/logic/pay/payweb" />
+    <file type="web" url="file://$PROJECT_DIR$/logic/product/productweb" />
+    <file type="web" url="file://$PROJECT_DIR$/logic/shopcart/shopcartweb" />
+    <file type="web" url="file://$PROJECT_DIR$/projects/datamgr" />
+    <file type="web" url="file://$PROJECT_DIR$/projects/fengxiao" />
+    <file type="web" url="file://$PROJECT_DIR$/projects/lvxbang/lvxbangweb" />
+    <file type="web" url="file://$PROJECT_DIR$/projects/scheduler" />
+    <file type="web" url="file://$PROJECT_DIR$/projects/weixin/weixinweb" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

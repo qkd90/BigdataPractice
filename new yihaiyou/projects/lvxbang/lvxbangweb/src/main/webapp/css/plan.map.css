@@ -1,0 +1,52 @@
+.map-container { position: relative; width: 0; height: 0; overflow: hidden; z-index: 88889; }
+.map-container.bigger { position: fixed !important;width: 1250px; height: 700px; left: 0; right: 0; top: 10%; margin: auto;}
+.map-container .close { background: #ffffff;padding: 14px; display: block; position: absolute; right: 0; top: 0;}
+.map-container .close i {width: 22px;height: 22px; cursor: pointer; display: block; background: url(../images/closex.png) no-repeat;}
+.map-container .to-bigger-button { position: absolute; right: 15px; bottom: 15px; background: rgba(0, 0, 0, 0.6) url(/images/jiantou.png) no-repeat 10px; background-size: 15px; border-radius: 3px; color: #fff; padding: 6px 10px 6px 30px; cursor: pointer; /*behavior: url(PIE.htc);*/ *background-color: #000; filter: alpha(opacity=60); filter: alpha(opacity=60) \9; background: #000 url(/images/jiantou.png) no-repeat 10px \9; }
+.map-container.bigger .to-bigger-button { display: none; }
+.map-container .to-bigger-button i { }
+.map-container .posiR { background: none; }
+#baidu-map-main.bigger {width: 1200px !important; height: 700px !important;}
+.Itinerary #baidu-map-main.bigger {width: 950px !important; }
+.Travel_editor #baidu-map-main.bigger {width: 950px !important; }
+.map-container .location .location_l { transition: all .2s ease; width: 29px; height: 38px; display: block; background: url(/images/map/lv.png) no-repeat; position: absolute; left: 0; }
+.map-container .location div { transition: all 0.4s ease; padding: 0 14px; width: 0; overflow: hidden; }
+.map-container .location:hover div { padding: 0 15px 0 40px; width: auto; }
+.map-container .location_l b { display: none }
+.map-container.day-map .location_l .title-day { display: block }
+.map-container.whole-map .location_l .title-whole { display: block }
+.map-container .location_l.red { background: url(/images/map/hong.png) no-repeat; }
+.map-container .location_l.orange { background: url(/images/map/cheng.png) no-repeat; }
+.map-container .location_l.green { background: url(/images/map/lv.png) no-repeat; }
+.map-container .location_l.indigo { background: url(/images/map/dian.png) no-repeat; }
+.map-container .location_l.blue { background: url(/images/map/lan.png) no-repeat; }
+.map-container .location_l.pink { background: url(/images/map/meihong.png) no-repeat; }
+.map-container .location_l.purple { background: url(/images/map/zi.png) no-repeat; }
+.map-container .location.on .location_l { background: url(/images/map/hi.png) no-repeat; width: 34px; height: 44px; margin-top: -5px; margin-left: -3px; }
+.map-container .location.on .location_l b { display: none }
+.map-container .hqxqdtx_fr .title { font-weight: bold; text-align: center; color: #000; height: 50px; line-height: 50px; background: #fff; cursor: pointer; border-bottom: 1px solid #ddd; border-right: 1px solid #ddd; }
+.map-container .hqxqdtx_fr .title.checked { color: #34bf82; }
+.map-container .Pop_ups, .map-container .Pop_ups_div { width: 230px; height: 280px; }
+.map-container .closex { width: 21px; height: 21px; background: url(../images/H_drawing_ico.png) -546px 0 no-repeat; display: block; right: 6px; position: absolute; top: 6px; z-index: 9; padding: 0px; }
+.map-container .Pop_ups .img, .map-container .Pop_ups_ul, .map-container .Pop_ups_ul li { width: 230px; height: 130px; }
+.map-container .Pop_ups .img img {min-width: 100%;max-height: 100%;}
+.hqxqdtx_fr .checked .jieshao { color: #34bf82 }
+.hqxqdtx_fr .plan-map-scenic { cursor: pointer; }
+.hqxqdtx_fr .plan-map-scenic:hover { text-decoration: underline; color: #34bf82; }
+
+.map-container.bigger .close{right: 0px;}
+.map-container.bigger .hqxqdtx_fr .title{color:#ff5f01;font-family:Microsoft YaHei, Tohoma, Arial;}
+.hqxqdtx_fr .jieshao .name:hover{color:#333; font-weight:normal;}
+.hqxqdtx_fr .jieshao .name span{color:#32be7f; font-weight:bold;font-size:14px;}
+.hqxqdtx_fr .alltravel {cursor: pointer;}
+.hqxqdtx_fr .alltravel.checked {cursor: default;}
+.hqxqdtx_fr li {cursor: pointer;}
+.hqxqdtx_fr li.checked{background:#35bf83;cursor: default;}
+.hqxqdtx_fr li.checked .jieshao .name,
+.hqxqdtx_fr li.checked .jieshao .name span,
+.hqxqdtx_fr li.checked .plan-map-scenic{color:#fff;}
+.hqxqdtx_fr .jieshao i{display:none}
+.hqxqdtx_fr .alltravel{height:60px;line-height:60px;color:#333;font-size:14px;padding-left:45px;border-bottom:1px solid #e6e6e6;position:relative;}
+.hqxqdtx_fr .alltravel.checked{background:#35bf83; color: #fff;font-weight: bold;;}
+.hqxqdtx_fr .alltravel i{width: 20px; height: 21px; display: block; background: url(/images/xingchengluxian.png) no-repeat; position: absolute; top: 21px; left: 17px; }
+.hqxqdtx_fr .alltravel.checked i{width: 20px; height: 21px; display: block; background: url(/images/xingchengguihuabaise.png) no-repeat; position: absolute; top: 21px; left: 17px; }

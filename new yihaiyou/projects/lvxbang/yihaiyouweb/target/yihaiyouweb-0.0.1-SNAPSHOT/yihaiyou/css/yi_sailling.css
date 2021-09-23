@@ -1,0 +1,492 @@
+.sailling_orderdetail {
+    background-color: #f0f0f0;
+}
+
+.sailling_orderdetail .dingdanxinxi {
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 2px solid #e9ecf1;
+    margin-top: 50px;
+}
+
+.sailling_orderdetail .dingdanxinxi p {
+    height: auto;
+    line-height: 23px;
+}
+
+.sailling_orderdetail .dingdanxinxi .youluninfo {
+    color: #3f3f3f;
+    font-size: 16px;
+}
+
+.sailling_orderdetail .dingdanxinxi .paymentinfo {
+    color: #aaa;
+    font-size: 13px;
+    background: url(/yihaiyou/image/sailling/icon-jiantou.png) no-repeat right center;
+    background-size: 7px;
+}
+
+.sailling_orderdetail .dingdanxinxi .buyinfo span.rebook {
+    float: left;
+    display: block;
+    width: 70px;
+    text-indent: 23px;
+    font-size: 13px;
+    color: #ff9900;
+}
+
+.sailling_orderdetail .dingdanxinxi .buyinfo .false {
+    background: url(/yihaiyou/image/personal/icon-xuan.png) no-repeat left center;
+    background-size: 16px;
+}
+
+.sailling_orderdetail .dingdanxinxi .buyinfo .true {
+    background: url(/yihaiyou/image/personal/icon-xuanzhong.png) no-repeat left center;
+    background-size: 16px;
+}
+
+.sailling_orderdetail .paying {
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 2px solid #e9ecf1;
+    margin-top: 8px;
+    border-top: 2px solid #e9ecf1;
+}
+
+.sailling_orderdetail .paying ul li {
+    width: 100%;
+    height: 30px;
+    color: #aaa;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+.sailling_orderdetail .paying ul li .totalprice {
+    color: #ff9900;
+    margin-left: 25px;
+    font-weight: 600;
+}
+
+.sailling_orderdetail .paying ul li .pricedetail {
+    color: #777;
+    padding-right: 14px;
+    float: right;
+    background: url(/yihaiyou/image/icon-graydown.png) no-repeat right center;
+    background-size: 8px;
+}
+
+.sailling_orderdetail .paying ul li .ticketcount {
+    color: #4f4f4f;
+    margin-left: 25px;
+}
+
+.sailling_orderdetail .paying ul li .ordernum {
+    color: #4f4f4f;
+    margin-left: 38px;
+    padding-right:10px;
+}
+
+.sailling_orderdetail .paying ul li .ordernum span {
+    padding-right:10px;
+}
+
+.sailling_orderdetail .paying ul li .wait_pay {
+    float: right;
+    color: #ff9900;
+}
+
+.sailling_orderdetail .paying .paynow {
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    background-color: #ff9900;
+    margin: 5px auto 0 auto;
+    border-radius: 2px;
+}
+
+.sailling_orderdetail .tiyan {
+    margin-top: 8px;
+    padding: 5px 15px;
+    border-top: 2px solid #e9ecf1;
+    background: #fff url(/yihaiyou/image/sailling/icon-jiantou.png) no-repeat calc(100% - 15px) center;
+    background-size: 7px;
+}
+
+.sailling_orderdetail .tiyan p {
+    line-height: 22px;
+}
+
+.sailling_orderdetail .tiyan p:nth-child(1) {
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.sailling_orderdetail .tiyan p:nth-child(2) {
+    color: #aaa;
+    font-size: 1.3rem;
+}
+
+.sailling_orderdetail .faredetail {
+    padding: 15px;
+    margin-top: 8px;
+    border-top: 2px solid #e9ecf1;
+    border-bottom: 2px solid #e9ecf1;
+    background-color: #fff;
+}
+
+.sailling_orderdetail .faredetail ul li {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.sailling_orderdetail .faredetail ul li p {
+    line-height: 20px;
+    color: #333;
+    font-size:1.25rem;
+}
+
+.sailling_orderdetail .faredetail ul li p:nth-child(1) {
+    font-size:1.35rem;
+}
+
+.sailling_orderdetail .compmess {
+    padding: 10px 15px;
+    background-color: #fff;
+    margin-top: 8px;
+    border-top: 2px solid #e9ecf1;
+    font-size:1.2rem;
+}
+
+.sailling_orderdetail .compmess p {
+    line-height: 20px;
+    color: #aaa;
+}
+
+.sailling_orderdetail .compmess p span {
+    color: #333;
+}
+
+.sailling_orderdetail .compmess p .buyingtime {
+    margin-left: 35px;
+}
+
+.sailling_orderdetail .compmess p .company {
+    margin-left: 47px;
+}
+
+.sailling_orderdetail .compmess p:nth-child(3) {
+    margin-top: 15px;
+}
+
+.sailling_orderdetail .compmess p i {
+    padding: 0 4px;
+    color: #fff;
+}
+
+.sailling_commend {
+    padding-bottom: 45px;
+}
+
+.sailling_commend .levalstar {
+    padding: 15px;
+    margin-top: 50px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sailling_commend .levalstar .levalscore {
+    float: left;
+    width: 47%;
+}
+
+.sailling_commend .levalstar .levalscore .scorebox {
+    width: 70px;
+    height: 90px;
+    padding: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+.sailling_commend .levalstar .levalscore .scorebox ul li {
+    width: 100%;
+    text-align: center;
+}
+
+.sailling_commend .levalstar .levalscore .scorebox ul li:nth-child(1) {
+    font-size: 20px;
+    color: #ff9900;
+    border-bottom: 1px solid #e0e0e0;
+    height: 45px;
+    line-height: 45px;
+    font-weight: 600;
+}
+
+.sailling_commend .levalstar .levalscore .scorebox ul li:nth-child(2) {
+}
+
+.sailling_commend .levalstar .levalscore .scorebox ul li:nth-child(2) p:nth-child(1) {
+    line-height: 23px;
+    font-size: 16px;
+    color: #007eff;
+}
+
+.sailling_commend .levalstar .levalscore .scorebox ul li:nth-child(2) p:nth-child(2) {
+    height: 10px;
+    /*background: url(/yihaiyou/image/personal/icon-star5.png) no-repeat center center;*/
+    /*background-size: 100%;*/
+}
+
+.sailling_commend .levalstar .levalscore .scorebox ul li:nth-child(2) .pstar5{
+    background: url(/yihaiyou/image/personal/icon-star5.png) no-repeat center center;
+    background-size: 100%;
+}
+.sailling_commend .levalstar .levalscore .scorebox ul li:nth-child(2) .pstar4{
+    background: url(/yihaiyou/image/personal/icon-star4.png) no-repeat center center;
+    background-size: 100%;
+}
+.sailling_commend .levalstar .levalscore .scorebox ul li:nth-child(2) .pstar3{
+    background: url(/yihaiyou/image/personal/icon-star3.png) no-repeat center center;
+    background-size: 100%;
+}
+.sailling_commend .levalstar .levalscore .scorebox ul li:nth-child(2) .pstar2{
+    background: url(/yihaiyou/image/personal/icon-star2.png) no-repeat center center;
+    background-size: 100%;
+}
+.sailling_commend .levalstar .levalscore .scorebox ul li:nth-child(2) .pstar1{
+    background: url(/yihaiyou/image/personal/icon-star1.png) no-repeat center center;
+    background-size: 100%;
+}
+.sailling_commend .levalstar .levalscore .scorebox ul li:nth-child(2) .pstar0{
+    background: url(/yihaiyou/image/personal/icon-star0.png) no-repeat center center;
+    background-size: 100%;
+}
+
+.sailling_commend .levalstar .levalline {
+    float: right;
+    width: 53%;
+}
+
+.sailling_commend .levalstar .levalline ul {
+    width: 100%;
+}
+
+.sailling_commend .levalstar .levalline ul:nth-child(n+2) {
+    margin-top: 2px;
+}
+
+.sailling_commend .levalstar .levalline ul li {
+    float: left;
+    line-height: 20px;
+    font-size: 13px;
+}
+
+.sailling_commend .levalstar .levalline ul li:nth-child(1) {
+    width: 15%;
+    height: 20px;
+    text-align: center;
+}
+
+.sailling_commend .levalstar .levalline ul li:nth-child(2) {
+    width: 64%;
+    height: 5px;
+    background-color: #e0e0e0;
+    margin-top: 8px;
+    position: relative;
+}
+
+.sailling_commend .levalstar .levalline ul li:nth-child(3) {
+    width: 21%;
+    height: 20px;
+    text-align: right;
+}
+
+.sailling_commend .levalstar .levalline ul li:nth-child(2) span {
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #007eff;
+    z-index: 11;
+}
+
+.sailling_commend .onecommend {
+    padding: 15px 15px 0 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sailling_commend .onecommend ul li {
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+}
+
+.sailling_commend .onecommend ul li.username {
+    font-size: 13px;
+    color: #666;
+}
+
+.sailling_commend .onecommend ul li.comstar {
+    font-size: 12px;
+    text-indent: 90px;
+    color: #aaa;
+}
+.sailling_commend .onecommend ul li.star5 {
+    background: url(/yihaiyou/image/personal/icon-star5.png) no-repeat left center;
+    background-size: 70px;
+}
+.sailling_commend .onecommend ul li.star4 {
+    background: url(/yihaiyou/image/personal/icon-star4.png) no-repeat left center;
+    background-size: 70px;
+}
+.sailling_commend .onecommend ul li.star3 {
+    background: url(/yihaiyou/image/personal/icon-star3.png) no-repeat left center;
+    background-size: 70px;
+}
+.sailling_commend .onecommend ul li.star2 {
+    background: url(/yihaiyou/image/personal/icon-star2.png) no-repeat left center;
+    background-size: 70px;
+}
+.sailling_commend .onecommend ul li.star1 {
+    background: url(/yihaiyou/image/personal/icon-star1.png) no-repeat left center;
+    background-size: 70px;
+}
+.sailling_commend .onecommend ul li.star0 {
+    background: url(/yihaiyou/image/personal/icon-star0.png) no-repeat left center;
+    background-size: 70px;
+}
+
+.sailling_commend .onecommend ul li.com {
+    margin-top: 5px;
+    height: auto;
+    font-size:1.2rem;
+}
+
+.sailling_commend .onecommend ul li.compic {
+    height: 42px;
+}
+
+.sailling_commend .onecommend ul li.compic span {
+    display: block;
+    float: left;
+    width: 45px;
+    height: 42px;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.sailling_commend .onecommend ul li.compic span img {
+    width: 100%;
+}
+
+.sailling_commend .onecommend ul li.sailname {
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.sailling_commend .onecommend .recommend {
+    padding: 0 8px;
+    background-color: #f7f7f6;
+}
+
+.sailling_commend .onecommend .recommend h3 {
+    color: #4f4f4f;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 34px;
+    font-size:1.2rem;
+}
+
+.sailling_commend .onecommend .recommend p {
+    color: #ff9900;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-size:1.2rem;
+}
+
+.sailling_commend .watchall {
+    padding: 0 15px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    color: #4f4f4f;
+    /*background: #fff url(/yihaiyou/image/sailling/icon-jiantou.png) no-repeat calc(100% - 15px) center;*/
+    background-size: 7px;
+}
+
+.sailling_commend .combottom {
+    width: 100%;height: 50px;background-color: #f2f4f7;font-size:1.2rem;  position: fixed!important;
+}
+.sailling_commend .combottom_extend {
+    position: absolute;
+    bottom: 0;
+}
+
+.sailling_commend .combottom ul li {
+    width: 33%;float: left;text-align: center;line-height: 75px;height:50px;
+}
+
+.sailling_commend .combottom ul li:nth-child(1) {
+    background: url(/yihaiyou/image/icon-fuzxz.png) no-repeat center 13%;
+    background-size: 21px;
+}
+
+.sailling_commend .combottom ul li:nth-child(2) {
+    background: url(/yihaiyou/image/icon-mac.png) no-repeat center 13%;
+    background-size: 21px;
+}
+
+.sailling_commend .combottom ul li:nth-child(3) {
+    background: url(/yihaiyou/image/icon-me_gray.png) no-repeat center 13%;
+    background-size: 21px;
+}
+
+.sailling_commend .combottom ul li.li1 {
+    background: url(/yihaiyou/image/icon-fu.png) no-repeat center 13%;
+    background-size: 21px;
+    color: #007eff
+}
+
+.sailling_commend .combottom ul li.li2 {
+    background: url(/yihaiyou/image/icon-macblue.png) no-repeat center 13%;
+    background-size: 21px;
+    color: #007eff
+}
+
+.sailling_commend .combottom ul li.li3 {
+    background: url(/yihaiyou/image/icon-me_blue.png) no-repeat center 13%;
+    background-size: 21px;
+    color: #007eff
+}
+.sailling_album{
+    height: 100%;
+    width:100%;
+    background-color:#000;
+}
+.sailling_album .pagenum{
+    width:100%;
+    height:45px;
+    line-height:45px;
+    text-align:center;
+    color:#fff;
+    font-size:1.7rem;
+    font-weight:600;
+}
+.sailling_album .swiper-container{
+    position:absolute;
+}
+.sailling_album .swiper-container,.sailling_album .swiper-container .swiper-wrapper{
+    width:100%;
+}
+
+.sailling_album .swiper-container .swiper-slide{
+    width:100%;
+    height:215px;
+    text-align:center;
+}
+.sailling_album .swiper-slide img{
+    width:100%;
+    height:100%;
+}

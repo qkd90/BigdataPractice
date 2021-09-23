@@ -1,0 +1,31 @@
+/*!
+ * 个人中心 v0.1
+ * Author Jeffrey.
+ * Copyright 2011-2015.
+ */
+
+
+/*导航*/
+#topnav{background:#1c96d9; height:45px; line-height:45px;}
+.mainnav a{color:#fff; font-size:16px; display:inline-block; padding:0 30px; margin-right:10px;}
+.mainnav a:hover,.mainnav a.curr{background:#265aa5;}
+.mainnav span.cart{background:url(../images/cart.png) center center no-repeat; width:40px; height:45px;}
+
+.gr-order-box{background:#fff; min-height:780px;}
+
+.order-left h4{font-size:18px; margin:0 0 10px 0; padding-top:15px;}
+.order-tab{border-bottom:1px solid #e5e5e5;border-top:1px solid #e5e5e5;}
+.order-tab a{display:inline-block; padding:10px 30px;border-left:1px solid #e5e5e5;}
+.order-tab a:hover,.order-tab a.curr{border-top:2px solid #1c96d9;}
+
+.order-form{padding:20px; line-height:30px;}
+.order-form .col-xs-2,.order-form .col-xs-6{padding-left:5px; padding-right:5px;}
+.orderlist th{text-align:center;}
+.order-info h5{padding:0 20px; height:44px; line-height:44px; margin:0; display:block;}
+.order-info h5.sku{background:#f7f7f7;}
+.order-info h5.sku a{margin-top:5px;}
+.order-info hr{margin:0;}
+.order-info p{padding:0 20px;}
+.order-info p b.price{font-size:18px;}
+.order-info label{padding-left:20px; float:left;}
+.order-info textarea.form-control{width:70%; display:inline-block;}

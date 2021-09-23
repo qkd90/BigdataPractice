@@ -1,0 +1,35 @@
+
+<!--位置地图 s-->
+<div class="scenery-map" ng-controller="sceneryDetailMapController">
+    <div class="header">
+        <div class="history-opration">
+            <a class="back icon-title-back" ng-click="backDetail()"></a>
+        </div>
+        <div class="collect-bar">
+            <!--<a class="collect" ng-class="{true: 'icon-star collected', false: 'icon-star1'}[favorite]" id="J_collcet" ng-click="doFavorite()"></a>-->
+        </div>
+    </div>
+    <div id="baiduMap" class="scenery-content-map">
+        <!--<div class="scenery-childcontent-map">-->
+        <!--<div id="baiduMap" class="scenery-BMap_mask"></div>-->
+        <!--</div>-->
+    </div>
+    <div class="scenery-lg">
+        <p>
+            {{name}}
+        </p>
+    </div>
+    <div class="scenery-body">
+        <div class="scenery-title">
+            <ul>
+                <li page-id="page-self-driving" class="w99percent"><s></s>交通指南</li>
+            </ul>
+            <div class="scenery-clear">
+            </div>
+        </div>
+        <div class="scenery-body-content" id="page-self-driving">
+            {{trafficInfo}}
+        </div>
+    </div>
+</div>
+<!--位置地图 e-->

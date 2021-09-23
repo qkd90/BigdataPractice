@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.RouteResultBaiduMapper">
+	<insert id="insert" parameterType="RouteResultBaidu" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_route_result_baidu
+			(
+				id,
+				startCitycode,
+				startLat,
+				startLng,
+				endCitycode,
+				endLat,
+				endLng,
+				trafficType,
+				travelTime,
+				travelDist,
+				travelCost,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{startCitycode},
+				#{startLat},
+				#{startLng},
+				#{endCitycode},
+				#{endLat},
+				#{endLng},
+				#{trafficType},
+				#{travelTime},
+				#{travelDist},
+				#{travelCost},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="RouteResultBaidu">
+		update tb_route_result_baidu
+		<set>
+			<if test="id != null"> id = #{id},</if>
+			<if test="startCitycode != null"> startCitycode = #{startCitycode},</if>
+			<if test="startLat != null"> startLat = #{startLat},</if>
+			<if test="startLng != null"> startLng = #{startLng},</if>
+			<if test="endCitycode != null"> endCitycode = #{endCitycode},</if>
+			<if test="endLat != null"> endLat = #{endLat},</if>
+			<if test="endLng != null"> endLng = #{endLng},</if>
+			<if test="trafficType != null"> trafficType = #{trafficType},</if>
+			<if test="travelTime != null"> travelTime = #{travelTime},</if>
+			<if test="travelDist != null"> travelDist = #{travelDist},</if>
+			<if test="travelCost != null"> travelCost = #{travelCost},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="RouteResultBaidu">
+		delete from
+			tb_route_result_baidu
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="RouteResultBaidu">
+		select
+			*
+		from
+			tb_route_result_baidu
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="RouteResultBaidu">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">$ {item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_route_result_baidu
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="startCitycode != null and '' != startCitycode"> and startCitycode = #{startCitycode} </if>
+			<if test="startLat != null and '' != startLat"> and startLat = #{startLat} </if>
+			<if test="startLng != null and '' != startLng"> and startLng = #{startLng} </if>
+			<if test="endCitycode != null and '' != endCitycode"> and endCitycode = #{endCitycode} </if>
+			<if test="endLat != null and '' != endLat"> and endLat = #{endLat} </if>
+			<if test="endLng != null and '' != endLng"> and endLng = #{endLng} </if>
+			<if test="trafficType != null and '' != trafficType"> and trafficType = #{trafficType} </if>
+			<if test="travelTime != null and '' != travelTime"> and travelTime = #{travelTime} </if>
+			<if test="travelDist != null and '' != travelDist"> and travelDist = #{travelDist} </if>
+			<if test="travelCost != null and '' != travelCost"> and travelCost = #{travelCost} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; # {ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; # {tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				# {item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+	</sql>
+</mapper>

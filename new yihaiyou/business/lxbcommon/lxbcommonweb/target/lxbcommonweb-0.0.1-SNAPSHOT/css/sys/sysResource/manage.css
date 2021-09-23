@@ -1,0 +1,18 @@
+#edit_panel td{
+	padding: 4px;
+}
+#show_panel td{
+	padding: 4px;
+}
+#edit_panel input{width: 300px;}
+#show_panel input{border: 0;width: 300px;}
+.wd360 {width: 360px;}
+
+#searchform td{
+	padding:8px 0;
+}
+#reloadBtn{
+	top: 20px;
+	right: 30px;
+	position: absolute;
+}

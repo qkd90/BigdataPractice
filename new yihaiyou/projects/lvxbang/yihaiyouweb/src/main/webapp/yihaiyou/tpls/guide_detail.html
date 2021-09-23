@@ -1,0 +1,47 @@
+<div class="youjigonglve" ng-controller="guideDetailCtrl">
+	<div class="header">
+		<a href="javascript:history.go(-1);">
+			<span>
+				<img src="/yihaiyou/image/historyback.png">
+			</span>
+		</a>
+		游记攻略
+	</div>
+	<div class="infoimg" style="background: url('{{recommendPlan.coverPath}}') no-repeat; background-position: center center; background-size: {{bgWidth}}; ">
+	</div>
+
+	<div class="ticket_qiehuan">
+		<p style="line-height: 30px;  height: 25px;">{{recommendPlan.planName | textCutLength:12:'':'...'}} </p>
+		<p style="line-height: 30px;"><span class="date"> 出发时间：{{recommendPlan.startTime | textCutLength:10}}</span>  <span class="iconright"> <span class="yuedulaing"> {{recommendPlan.viewNum}}</span>  <span class="shoucang">{{recommendPlan.collectNum}}</span>  </span> </p>
+	</div>
+
+   <div class="jingdianlist">
+	   <div ng-repeat="planDay in recommendPlanDays">
+		   <p class="playdijitian">第{{planDay.day}}天</p>
+		   <p>{{planDay.description}}</p>
+		   <div class="jingdianinfo" ng-repeat="planTrip in planDay.recommendPlanTrips">
+			   <div class="jingdianming">
+				   {{planTrip.scenicName}}
+			   </div>
+			   <div ng-repeat="planPhoto in planTrip.recommendPlanPhotos">
+				   <div class="jingdianpic"  style=" width: 100%; height: 220px; background: url('{{planPhoto.photoLarge}}') no-repeat; background-position: center center; background-size: {{bgWidth}};">
+					   <!--<img bn-lazy-src="{{planPhoto.photoLarge}}">-->
+				   </div>
+				   <div class="ingdianjieshao">
+					   {{planPhoto.description}}
+				   </div>
+			   </div>
+			   <!--<div class="pinglunshoucang">
+				   <img src="/yihaiyou/image/sailling/icon-xinxi.png">
+				   <img src="/yihaiyou/image/sailling/icon-star1.png">
+			   </div>-->
+		   </div>
+	   </div>
+	   <div class="jingdianpic" >
+		   <div class="collect-bar"><img class="shoucang" ng-click="goGuideComment()"  src="/yihaiyou/image/sailling/icon-xinxi.png" style="  height: 35px;width: 35px; padding: 6px;"></div>
+		   <div class="collect-bar1"> <a class="pinglun collect" ng-click="doFavorite()" ng-class="{true: 'collected', false: ''}[favorite]"></a> </div>
+		   <div class="collect-bar2" ng-if="recommendPlan.collectNum != null && recommendPlan.collectNum != 0"> <span class="pinglunshu">{{recommendPlan.collectNum}}</span></div>
+	   </div>
+   </div>
+	<div class="totop_dark" ng-click="gotosky()" ng-if="guideHeight > 1200">顶</div>
+</div>

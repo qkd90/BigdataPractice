@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.delicacy.mapper.RestaurantCommentMapper">
+	<insert id="insert" parameterType="RestaurantComment" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_restaurant_comment
+			(
+				id,
+				user_id,
+				nickname,
+				user_face,
+				restaurant_id,
+				taste_score,
+				environment_score,
+				service_score,
+				average_score,
+				content,
+				create_time,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{userId},
+				#{nickname},
+				#{userFace},
+				#{restaurantId},
+				#{tasteScore},
+				#{environmentScore},
+				#{serviceScore},
+				#{averageScore},
+				#{content},
+				#{createTime},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="RestaurantComment">
+		update tb_restaurant_comment
+		<set>
+			<if test="userId != null"> user_id = #{userId},</if>
+			<if test="nickname != null"> nickname = #{nickname},</if>
+			<if test="userFace != null"> user_face = #{userFace},</if>
+			<if test="restaurantId != null"> restaurant_id = #{restaurantId},</if>
+			<if test="tasteScore != null"> taste_score = #{tasteScore},</if>
+			<if test="environmentScore != null"> environment_score = #{environmentScore},</if>
+			<if test="serviceScore != null"> service_score = #{serviceScore},</if>
+			<if test="averageScore != null"> average_score = #{averageScore},</if>
+			<if test="content != null"> content = #{content},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="RestaurantComment">
+		delete from
+			tb_restaurant_comment
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="RestaurantComment">
+		select
+			*
+		from
+			tb_restaurant_comment
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="RestaurantComment">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_restaurant_comment
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="nickname != null and '' != nickname"> and nickname = #{nickname} </if>
+			<if test="userFace != null and '' != userFace"> and user_face = #{userFace} </if>
+			<if test="restaurantId != null and '' != restaurantId"> and restaurant_id = #{restaurantId} </if>
+			<if test="tasteScore != null and '' != tasteScore"> and taste_score = #{tasteScore} </if>
+			<if test="environmentScore != null and '' != environmentScore"> and environment_score = #{environmentScore} </if>
+			<if test="serviceScore != null and '' != serviceScore"> and service_score = #{serviceScore} </if>
+			<if test="averageScore != null and '' != averageScore"> and average_score = #{averageScore} </if>
+			<if test="content != null and '' != content"> and content = #{content} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; #{ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; #{tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+        <choose>
+            <when test="orderColumn != null and '' != orderColumn">
+                ORDER BY ${orderColumn}
+                <if test="orderType != null and '' != orderType">
+                    ${orderType}
+                </if>
+            </when>
+        </choose>
+	</sql>
+</mapper>

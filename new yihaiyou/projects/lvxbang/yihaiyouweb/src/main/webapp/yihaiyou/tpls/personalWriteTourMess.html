@@ -1,0 +1,30 @@
+<div class=" personal_writeTourMess" ng-controller="personalWriteTourMessCtrl">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        编辑游客信息
+    </div>
+    <div class="setTour" ng-click="clearidbox()">
+        <h3>基本信息</h3>
+        <ul>
+            <li><span class="redstar">*</span>姓<i>填充</i>名：<input type="text" placeholder="请输入姓名" ng-model="tourist.name"/></li>
+            <li>
+                <span class="whitestar">*</span>性<i>填充</i>别：<span class="messSex" ng-class="{true:Sex == 1}" ng-click="selSex(1)">男</span>
+                                 <span class="messSex" ng-class="{true:Sex == 0}" ng-click="selSex(0)" style="margin-left:20px">女</span>
+            </li>
+            <li class="idcar">
+                <span class="redstar">*</span>证件类型：<span ng-click="showidcar($event)">{{tag}}<img src="/yihaiyou/image/icon-graydown.png"></span>
+                <div class="moretype" ng-show="idcar">
+                    <ul>
+                        <li ng-repeat="id in idcarlist" ng-click="selid(id)">{{id.name}}</li>
+                    </ul>
+                </div>
+            </li>
+            <li><span class="redstar">*</span>证件号码：<input type="text" placeholder="请输入证件号码" ng-model="tourist.idNumber"/></li>
+        </ul>
+        <h3>联系方式</h3>
+        <ul>
+            <li><span class="redstar">*</span>手机号码：<input type="telephone" placeholder="请输入联系电话" ng-model="tourist.telephone"/></li>
+        </ul>
+    </div>
+    <div class="savechange" ng-click="save()">保存</div>
+</div>

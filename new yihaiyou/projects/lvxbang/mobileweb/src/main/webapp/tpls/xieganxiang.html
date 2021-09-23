@@ -1,0 +1,42 @@
+<div ng-controller="xieganxiangCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a ui-sref="yinxiang" class="goback"></a></li>
+            <li class="pull-right">
+                <button type="button" class="fabu btn" data-toggle="modal" ng-click="submit()">发布</button>
+            </li>
+        </ul>
+    </div>
+    <div id="subcontainer" class="clearfix xieganxiang">
+        <div class="col-xs-12">
+            <div class="clearfix">
+                <textarea class="form-control" rows="3" ng-model="content" placeholder="请输入感想"></textarea>
+            </div>
+            <div class="gxpiclist clearfix">
+                <li ng-repeat="photo in gallery"><img ng-click="lookPhoto()" src="{{photo.imgUrl}}" class="img-responsive"/>
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{photo.percent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{photo.percent}}%; height: 20px;" ng-if="photo.isView"></div>
+                </li>
+                <li><img ng-click="addPhoto()" src="images/ganxiang/jia.png" class="img-responsive"/><input type="file" accept="image/*" id="add-photo" style="display: none;"></li>
+            </div>
+            <div class="gxnow1 clearfix" ng-if="place.name == null || place.name == ''">这个地方是？</div>
+            <div class="gxnow1 clearfix" ng-if="place.name != null && place.name != ''">{{place.name}}</div>
+            <div class="clearfix tags col-xs-12 pl0pr0">
+                <ul>
+                    <li class="col-xs-4 pl0pr0"><a ng-click="selectPlace('scenic')" class="img-circle"><img src="images/ganxiang/gx1.png"
+                                                                            class="center-block"/></a></li>
+                    <li class="col-xs-4 pl0pr0"><a ng-click="selectPlace('hotel')" class="img-circle"><img src="images/ganxiang/gx2.png"
+                                                                            class="center-block"/></a></li>
+                    <li class="col-xs-4 pl0pr0"><a ng-click="selectPlace('food')" class="img-circle"><img src="images/ganxiang/gx3.png"
+                                                                            class="center-block"/></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="jinggao" tabindex="-1" role="dialog" aria-labelledby="jinggao">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content text-center">
+                您未选择景点、酒店、美食
+            </div>
+        </div>
+    </div>
+</div>

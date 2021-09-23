@@ -1,0 +1,25 @@
+<div class="personal_myOrder_shenzhou personal_fareDetail" ng-controller="takeorderDetail" screenheight>
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        费用明细
+    </div>
+    <div class="finalpaying cartype">
+        <p>{{order.carType}}</p>
+        <!--<p>(起租价 + ¥2.5/公里 + ¥0.5/分钟)</p>-->
+    </div>
+    <ul>
+        <li class="all_fare">
+            <p>起租价<span>¥{{order.startPrice}}</span></p>
+
+            <p>里程费<span>¥{{order.kilometrePrice}}</span></p>
+
+            <p>时长费<span>¥{{order.timePrice}}</span></p>
+
+            <p>远途费<span>¥{{order.longDistancePrice}}</span></p>
+        </li>
+        <li>总计<span>¥{{totalPrice}}</span></li>
+        <li>抹零<span>-¥{{-order.countChange}}</span></li>
+        <!--<li  class="quan">代金券<span>-¥6</span></li >-->
+        <li class="final">最终支付<span>¥{{order.totalPrice}}</span></li>
+    </ul>
+</div>

@@ -1,0 +1,8 @@
+/*!
+ * 问题反馈 v0.1
+ * Author Jeffrey.
+ * Copyright 2011-2015.
+ */
+#feedback{padding:50px 30px;}
+#feedback .leixin span{background:#ededef; padding:10px 20px; margin-right:15px;}
+#feedback .btn-warning{width:240px; height:50px; margin:20px 0;}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.browse.mapper.BrowseMapper">
+	<insert id="insert" parameterType="Browse">
+		insert into tb_browse
+			(
+				ip,
+				url,
+				create_time,
+				user_id,
+				browser_type
+			)
+		values
+			(
+				#{ip},
+				#{url},
+				#{createTime},
+				#{userId},
+				#{browserType}
+			)
+	</insert>
+	
+	<update id="update" parameterType="Browse">
+		update tb_browse
+		<set>
+			<if test="ip != null and '' != ip"> ip = #{ip},</if>
+			<if test="url != null and '' != url"> url = #{url},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="browserType != null and '' != browserType"> browser_type = #{browserType},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="Browse">
+		delete from
+			tb_browse
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="Browse">
+		select
+			*
+		from
+			tb_browse
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="Browse">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_browse
+		<where>
+			<if test="ip != null and '' != ip"> id = #{ip},</if>
+			<if test="url != null and '' != url"> id = #{url},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="browserType != null and '' != browserType"> browser_type = #{browserType},</if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+</mapper>

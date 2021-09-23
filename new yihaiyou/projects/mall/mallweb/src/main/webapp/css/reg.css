@@ -1,0 +1,22 @@
+/*!
+ * 注册页面 v0.1
+ * Author Jeffrey.
+ * Copyright 2011-2015.
+ */
+
+.toplinks a{color:#4c4c4c; font-weight:bold; margin:56px 0 0 30px; display:inline-block;}
+.toplinks a.btn-primary{margin-top:-5px; color:#fff; background:#00a7f5; border:1px solid #00a7f5; padding:3px 20px;}
+
+.reg-bg{background:#ededef; padding:25px 0;}
+.reg-pic{padding-top:38px;}
+#reg-form h4{margin-bottom:7px;}
+#reg-form h4 span{padding:5px 20px;}
+#reg-form h4 span.curr,#reg-form .reg-content{background:#fff;}
+#reg-form .reg-content{padding:100px 70px 30px 100px; min-height:422px;}
+#reg-form .reg-1{background-image:url(../images/bz.jpg); background-position:140px 50px; background-repeat:no-repeat;}
+#reg-form .reg-2{background-image:url(../images/bz-2.jpg); background-position:140px 50px; background-repeat:no-repeat;}
+#reg-form .reg-3{background-image:url(../images/bz-3.jpg); background-position:140px 50px; background-repeat:no-repeat;}
+#reg-form a.next{width:280px; height:50px; line-height:40px; font-size:16px;}
+#reg-form .reg-ok{background:url(../images/ok.jpg) left center no-repeat; height:119px; padding:10px 0 0 160px; margin:100px auto 0 100px;}
+#reg-form .reg-ok h4{font-size:30px; color:#1c96d9; padding-bottom:20px;}
+#reg-form .reg-ok span a{color:#737373; margin-right:20px;}

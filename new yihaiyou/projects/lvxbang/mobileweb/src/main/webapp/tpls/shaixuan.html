@@ -1,0 +1,226 @@
+<div ng-controller="shaixuanCtrl" class="shaixuan">
+<div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+  筛选
+  <ul style="position:absolute;left:0;top:0">
+    <li class="pull-left"><a href="javascript:;" class="goback-close" ng-click="goBack()"><img src="images/ico/close.png" /></a></li>
+    <li class="text-center sx-title"></li>
+    <li class="pull-right" style="float:right">
+      <button type="button" class="fabu btn" ng-click="searchList()">完成</button>
+    </li>
+  </ul>
+</div>
+<div id="subcontainer" class="clearfix">
+   <div class="sxlist clearfix boxbg bg_turen">
+     <ul>
+       <li><button type="button" class="sx1 btn-block" data-toggle="modal" data-target="#sx1">目的地</button></li>
+       <li><button type="button" class="sx2 btn-block" data-toggle="modal" data-target="#sx2">出行时间<span>不限</span></button></li>
+       <li><button type="button" class="sx3 btn-block" data-toggle="modal" data-target="#sx3">游玩天数<span>不限</span></button></li>
+       <li><button type="button" class="sx4 btn-block" data-toggle="modal" data-target="#sx4">人均预算<span>不限</span></button></li>
+       <!--<li><button type="button" class="sx5 btn-block" data-toggle="modal" data-target="#sx5">出发地</button></li>-->
+       <li><button type="button" class="sx6 btn-block" data-toggle="modal" data-target="#sx6">特色排序<span>不限</span></button></li>
+     </ul>
+   </div>
+</div>
+
+  <!-- 目的地-->
+  <div class="modal fade sxmodal" id="sx1" tabindex="-1" role="dialog" aria-labelledby="sx1">
+    <div class="modal-dialog" role="document">
+
+      <div class="clearfix hotlist modal-content row">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tab vertical-tab pull-left col-xs-4" role="tablist" id="vtab">
+          <li role="hotlist" class="active">
+            <a data-target="#hot" aria-controls="hot" role="tab" data-toggle="tab">热门</a></li>
+          <li role="hotlist"><a data-target="#ad" aria-controls="ad" role="tab" data-toggle="tab">ABCD</a>
+          </li>
+          <li role="hotlist"><a data-target="#eh" aria-controls="eh" role="tab" data-toggle="tab">EFGH</a>
+          </li>
+          <li role="hotlist"><a data-target="#il" aria-controls="il" role="tab" data-toggle="tab">IJKL</a>
+          </li>
+          <li role="hotlist"><a data-target="#mp" aria-controls="mp" role="tab" data-toggle="tab">MNOP</a>
+          </li>
+          <li role="hotlist"><a data-target="#qt" aria-controls="qt" role="tab" data-toggle="tab">QRST</a>
+          </li>
+          <li role="hotlist"><a data-target="#ux" aria-controls="ux" role="tab" data-toggle="tab">UVWX</a>
+          </li>
+          <li role="hotlist"><a data-target="#yz" aria-controls="yz" role="tab" data-toggle="tab">YZ</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content vertical-tab-content pull-left col-xs-8" id="shaixuanhuadong">
+          <div role="tabpanel" class="tab-pane active" id="hot">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in hotCity" ng-click="changeEndCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="ad">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_ABCD" ng-click="changeEndCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="eh">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_EFGH" ng-click="changeEndCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="il">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_IJKL" ng-click="changeEndCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="mp">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_MNOP" ng-click="changeEndCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="qt">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_QRST" ng-click="changeEndCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="ux">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_UVWX" ng-click="changeEndCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="yz">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_YZ" ng-click="changeEndCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+<!--出行时间弹窗-->
+<div class="modal fade sxmodal" id="sx2" tabindex="-1" role="dialog" aria-labelledby="sx2">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content text-center lis">
+      <ul>
+        <li ng-click="changeMonth(undefined, undefined, '不限')">不限</li>
+        <li ng-click="changeMonth(1, 3, '1-3月')">1-3月</li>
+        <li ng-click="changeMonth(4, 6, '4-6月')">4-6月</li>
+        <li ng-click="changeMonth(7, 9, '7-9月')">7-9月</li>
+        <li ng-click="changeMonth(10, 12, '10-12月')">10-12月</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--游玩天数-->
+<div class="modal fade sxmodal" id="sx3" tabindex="-1" role="dialog" aria-labelledby="sx3">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content text-center lis">
+      <ul>
+        <li ng-click="changeDay(undefined, undefined, '不限')">不限</li>
+        <li ng-click="changeDay(1, 3, '1-3天')">1-3天</li>
+        <li ng-click="changeDay(4, 7, '4-7天')">4-7天</li>
+        <li ng-click="changeDay(7, 10, '7-10天')">7-10天</li>
+        <li ng-click="changeDay(10, 999, '10天以上')">10天以上</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--人均预算-->
+<div class="modal fade sxmodal" id="sx4" tabindex="-1" role="dialog" aria-labelledby="sx4">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content text-center lis">
+      <ul>
+        <li ng-click="changeCost(undefined, undefined, '不限')">不限</li>
+        <li ng-click="changeCost(1, 1000, '1-1000')">1-1000</li>
+        <li ng-click="changeCost(1000, 3000, '1000-3000')">1000-3000</li>
+        <li ng-click="changeCost(3000, 5000, '3000-5000')">3000-5000</li>
+        <li ng-click="changeCost(5000, 7000, '5000-7000')">5000-7000</li>
+        <li ng-click="changeCost(7000, 999999, '7000元以上')">7000元以上</li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <!-- 出发地-->
+  <div class="modal fade sxmodal" id="sx5" tabindex="-1" role="dialog" aria-labelledby="sx5">
+    <div class="modal-dialog" role="document">
+
+      <div class="clearfix hotlist modal-content row">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tab vertical-tab pull-left col-xs-4" role="tablist" id="vtab">
+          <li role="hotlist" class="active">
+            <a data-target="#chot" aria-controls="chot" role="tab" data-toggle="tab">热门</a></li>
+          <li role="hotlist"><a data-target="#cad" aria-controls="cad" role="tab" data-toggle="tab">ABCD</a>
+          </li>
+          <li role="hotlist"><a data-target="#ceh" aria-controls="ceh" role="tab" data-toggle="tab">EFGH</a>
+          </li>
+          <li role="hotlist"><a data-target="#cil" aria-controls="cil" role="tab" data-toggle="tab">IJKL</a>
+          </li>
+          <li role="hotlist"><a data-target="#cmp" aria-controls="cmp" role="tab" data-toggle="tab">MNOP</a>
+          </li>
+          <li role="hotlist"><a data-target="#cqt" aria-controls="cqt" role="tab" data-toggle="tab">QRST</a>
+          </li>
+          <li role="hotlist"><a data-target="#cux" aria-controls="cux" role="tab" data-toggle="tab">UVWX</a>
+          </li>
+          <li role="hotlist"><a data-target="#cyz" aria-controls="cyz" role="tab" data-toggle="tab">YZ</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content vertical-tab-content pull-left col-xs-8">
+          <div role="tabpanel" class="tab-pane active" id="chot">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in hotCity" ng-click="changeStartCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="cad">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_ABCD" ng-click="changeStartCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="ceh">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_EFGH" ng-click="changeStartCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="cil">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_IJKL" ng-click="changeStartCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="cmp">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_MNOP" ng-click="changeStartCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="cqt">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_QRST" ng-click="changeStartCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="cux">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_UVWX" ng-click="changeStartCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="cyz">
+            <ul class="clearfix" id="hotcitylist">
+              <li citid="{{city.id}}" ng-repeat="city in citys_YZ" ng-click="changeStartCity(city.id, city.name)"><a>{{city.name}}</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+<!--排序-->
+<div class="modal fade sxmodal" id="sx6" tabindex="-1" role="dialog" aria-labelledby="sx6">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content text-center lis">
+      <ul>
+        <li ng-click="changeOrder(undefined, undefined, '不限')">不限</li>
+        <li ng-click="changeOrder('viewNum', 'desc', '浏览次数从高到低')">浏览次数从高到低</li>
+        <li ng-click="changeOrder('viewNum', 'asc', '浏览次数从低到高')">浏览次数从低到高</li>
+        <li ng-click="changeOrder('quoteNum', 'desc', '复制次数从高到低')">复制次数从高到低</li>
+        <li ng-click="changeOrder('quoteNum', 'asc', '复制次数从低到高')">复制次数从低到高</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>

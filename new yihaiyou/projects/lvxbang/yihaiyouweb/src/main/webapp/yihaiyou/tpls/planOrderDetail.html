@@ -1,0 +1,83 @@
+<div class="diymarch_orderdetail2" ng-controller="planOrderDetailCtrl">
+    <div class="header">
+        <a ng-click="back()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        订单详情
+    </div>
+    <div class="blank"></div>
+    <div class="someoneorder">
+        {{order.name}}
+    </div>
+    <div class="ordermessage">
+        <h3>订单信息</h3>
+        <div class="oneticket">
+            <p class="or_code">订单编号：<span>{{order.orderNo}}</span></p>
+
+            <p class="or_state">订单状态：<span>{{order.status}}</span></p>
+
+            <p class="or_code">出发时间：<span>{{order.startDate}}</span></p>
+
+            <p class="or_state or_price">订单总价：<span>¥ {{order.price}}</span></p>
+        </div>
+    </div>
+    <div class="ordermessage boatmessage" ng-if="order.ferry != null">
+        <h3>船票信息</h3>
+
+        <div class="oneticket">
+            <p class="or_code">航<i>填充</i>线：<span>{{order.ferry.name}}</span></p>
+
+            <p class="or_state">旅<i>填充</i>班：<span>{{order.ferry.flightNumber}}</span></p>
+
+            <p class="or_code or_time">出发时间：<span>{{order.ferry.startDate}}</span></p>
+
+            <p class="or_code or_num">票<i>填充</i>数：<span>{{order.ferry.touristList.length}}张</span></p>
+
+            <p class="or_code or_num">旅<i>填充</i>客：<span ng-repeat="tourist in order.ferry.touristList">{{tourist.name}}</span>
+            </p>
+
+            <p class="or_state or_price">订单价格：<span>¥ {{order.ferry.price}}</span></p>
+        </div>
+    </div>
+    <div class="ordermessage hotelmessage" ng-if="order.hotels.length > 0">
+        <h3>酒店民宿</h3>
+
+        <div class="oneticket" ng-repeat="hotel in order.hotels">
+            <p class="or_code">{{hotel.name}}</p>
+
+            <p class="or_code or_room" ng-repeat="price in hotel.hotelPrices">房型{{number[$index]}}：<span>{{price.priceName}}{{price.num}}晚</span>
+            </p>
+
+            <p class="or_code or_num">入<i>填充</i>离：<span>{{hotel.startDate}}至{{hotel.endDate}}</span></p>
+
+            <p class="or_code or_num">旅<i>填充</i>客：<span ng-repeat="tourist in hotel.tourists">{{tourist.name}}</span>
+            </p>
+
+            <p class="or_code or_num" ng-if="hotel.codes.length > 0">验证码：<span ng-repeat="code in hotel.codes">{{code.code}}<span ng-if="code.used == 1">（已使用）</span><span ng-if="code.used == -1">（无效）</span> </span>
+            </p>
+
+            <p class="or_state or_price">订单价格：<span>¥ {{hotel.price}}</span></p>
+        </div>
+    </div>
+    <div class="ordermessage hotelmessage" ng-if="order.scenics.length > 0">
+        <h3>景点门票</h3>
+
+        <div class="oneticket" ng-repeat="scenic in order.scenics">
+            <p class="or_code">{{scenic.scenicName}}</p>
+
+            <p class="or_code or_room" ng-repeat="ticket in scenic.tickets">门票{{number[$index]}}：<span>{{ticket.ticketName}}</span><span>{{ticket.num}}张</span>
+            </p>
+
+            <p class="or_code or_time">游玩日期：<span>{{scenic.playDate}}</span></p>
+
+            <p class="or_code or_num">旅<i>填充</i>客：<span ng-repeat="tourist in scenic.tourists">{{tourist.name}}</span>
+            </p>
+
+            <p class="or_code or_num" ng-if="scenic.codes.length > 0">验证码：<span ng-repeat="code in scenic.codes">{{code.code}}<span ng-if="code.used == 1">（已使用）</span><span ng-if="code.used == -1">（无效）</span> </span>
+            </p>
+
+            <p class="or_state or_price">订单价格：<span>¥ {{scenic.price}}</span></p>
+        </div>
+    </div>
+    <div class="blank"></div>
+    <!--<div class="savechange">申请退款</div>-->
+    <div class="personalTopay" ui-sref="orderPay({orderId: order.id})" ng-if="order.orderStatus == 'WAIT'">去支付</div>
+</div>

@@ -1,0 +1,172 @@
+<div class="youlun_list" ng-controller="cruiseShipListCtrl">
+    <!-- 公共页头 -->
+    <div id="publicNotice" data-channel="youlun"></div>
+    <!-- 页面内容块 -->
+    <div id="mainPage" ng-show="!search1">
+        <div class="filter-wrap">
+            <!--<div class="search-box yl_list_search" ng-click="showSearchbox()">-->
+                <!--<a class="search-btn" href="javascript:;" style="height: 2rem;">目的地、船队或关键词</a>-->
+            <!--</div>-->
+            <div class="header">
+                <a ui-sref="cruiseShipIndex"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+                <span>邮轮</span>
+                <span class="save picSearch" ng-click="showSearchbox()"></span>
+            </div>
+            <div class="blank"></div>
+
+            <div class="filter-box">
+                <div class="filter-title">
+                    <a class="" ng-click="showSel(0)">{{showList1Str}}</a>
+                    <a ng-click="showSel(1)">{{showList5Str}}</a>
+                    <a ng-click="showSel(2)">筛选</a>
+                    <a ng-click="showSel(3)">销量优先</a>
+                </div>
+                <div class="filter-dropdown">
+                    <div class="filter-line" ng-show="showNum == 0">
+                        <div class="filter-list wordlist">
+                            <a ng-click="showlist1(0, '不限')" ng-class="{active: showList1 == 0}"><p>不限</p></a>
+
+                            <div ng-repeat="route in routes" style="border-bottom: 1px solid #e6e6e6;">
+                                <a ng-click="showlist1(route.id, route.name)"
+                                   ng-class="{active: showList1 == route.id}"><p>
+                                    {{route.name}}</p></a>
+                                <a ng-repeat="child in route.children" ng-click="showlist1(child.id, child.name)"
+                                   class="fl-sub"
+                                   ng-class="{active: showList1 == child.id}"><p>{{child.name}}</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-ships" ng-show="showNum == 1">
+                        <div class="fs-left">
+                            <div class="filter-list">
+                                <a ng-repeat="brand in brands" ng-click="showlist2(brand.id)"
+                                   ng-class="{active: showList2 == brand.id}"><p class="brand_p">{{brand.name}}</p></a>
+                            </div>
+                        </div>
+                        <div class="fs-right al_cruise">
+                            <div ng-repeat="brand in brands" class="filter-list" ng-show="showList2 == brand.id">
+                                <a ng-click="showlist5(brand.id, brand.name)"
+                                   ng-class="{active: showList5 == brand.id}">不限</a>
+                                <a ng-repeat="child in brand.children" ng-click="showlist5(child.id, child.name)"
+                                   ng-class="{active: showList5 == child.id}">{{child.name}}<span class="fs-icon"
+                                                                                                  ng-if="$index < 4"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-sub" ng-show="showNum == 2">
+                        <div class="fsub-selected" ng-show="selected.length > 0">
+                            <span ng-repeat="str in selected">{{str}}<a href="javascript:;"></a></span>
+                        </div>
+                        <div class="fsub-option">
+                            <div class="fsub-left">
+                                <div class="filter-list time_pri_day">
+                                    <a ng-click="showlist3(0)" ng-class="{active: showList3 == 0}">出游时间</a>
+                                    <a ng-click="showlist3(1)" ng-class="{active: showList3 == 1}">价格区间</a>
+                                    <a ng-click="showlist3(2)" ng-class="{active: showList3 == 2}">行程天数</a>
+                                </div>
+                            </div>
+                            <div class="fsub-right">
+                                <div class="filter-list time_pri_days" ng-show="showList3 == 0">
+                                    <a ng-click="changeDate('2016-09', '2016年09月')">2016年09月</a>
+                                    <a ng-click="changeDate('2016-10', '2016年10月')">2016年10月</a>
+                                    <a ng-click="changeDate('2016-11', '2016年11月')">2016年11月</a>
+                                    <a ng-click="changeDate('2016-12', '2016年12月')">2016年12月</a>
+                                    <a ng-click="changeDate('2017-01', '2017年01月')">2017年01月</a>
+                                    <a ng-click="changeDate('2017-02', '2017年02月')">2017年02月</a>
+                                    <a ng-click="changeDate('2017-03', '2017年03月')">2017年03月</a>
+                                    <a ng-click="changeDate('2017-04', '2017年04月')">2017年04月</a>
+                                </div>
+                                <div class="filter-list" ng-show="showList3 == 1">
+                                    <a ng-click="changePriceRange(0, 2000, '¥2000以下')">¥2000以下</a>
+                                    <a ng-click="changePriceRange(2001, 4000, '¥2001-¥4000')">¥2001-¥4000</a>
+                                    <a ng-click="changePriceRange(4001, 6000, '¥4001-¥6000')">¥4001-¥6000</a>
+                                    <a ng-click="changePriceRange(6001, 10000, '¥6001-¥10000')">¥6001-¥10000</a>
+                                    <a ng-click="changePriceRange(10001, 9999999, '¥10000以上')">¥10000以上</a>
+                                </div>
+                                <div class="filter-list" ng-show="showList3 == 2">
+                                    <a ng-click="changeDayRange(0, 3, '3天以内')">3天以内</a>
+                                    <a ng-click="changeDayRange(4, 7, '4至7天')">4至7天</a>
+                                    <a ng-click="changeDayRange(8, 14, '8至14天')">8至14天</a>
+                                    <a ng-click="changeDayRange(15, 999, '14天以上')">14天以上</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fsub-btn">
+                            <a class="btn-reset" ng-click="reset()">重置全部</a>&nbsp;&nbsp;
+                            <a class="btn-submit" ng-click="init();shipList()">确定</a>
+                        </div>
+                    </div>
+                    <div class="filter-sort betterace" ng-show="showNum == 3">
+                        <a ng-click="showlist4(0, 'orderNum', 'desc')" ng-class="{active: showList4 == 0}">销量优先</a>
+                        <a ng-click="showlist4(1)" ng-class="{active: showList4 == 1}">航期最近</a>
+                        <a ng-click="showlist4(2, 'price', 'asc')" ng-class="{active: showList4 == 2}">价格最低</a>
+                        <a ng-click="showlist4(3, 'satisfaction', 'desc')" ng-class="{active: showList4 == 3}">好评优先</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="layer none"></div>
+        <div class="pro2" infinite-scroll="shipList()" infinite-scroll-distance='1' infinite-scroll-disabled='loading'>
+            <div ng-repeat="ship in ships" ui-sref="cruiseShipDetail({id: ship.id})" class="shipslists">
+                <div class="pro_list goodlist">
+                    <div class="con_l"><em class="pro_label none">多个航期</em>
+                        <img class="pro_img" bn-lazy-src="{{ship.coverImage}}">
+
+                        <p class="act_city">{{ship.showStartCity}}上船</p></div>
+                    <div class="con_r "><p class="rp_title"><span class="title">{{ship.name}}</span>
+                        <span class="sub-title">{{ship.playDay - 1}}晚{{ship.playDay}}日游</span></p>
+
+                        <p class="tc_price"><i>￥</i><em>{{ship.price}}</em>/人起</p>
+                        <span>{{ship.startDate}}</span>
+                        <span class="curise_rate">{{ship.satisfaction}}%满意</span></div>
+                </div>
+            </div>
+            <div id="loadmsg" class="data-loader" ng-show="loading"><span>正在加载数据</span></div>
+            <div id="loadmsg" class="data-loader" ng-show="nomore"><span>无更多数据</span></div>
+        </div>
+    </div>
+    <div id="searchPage" class="page" style="position:absolute;left:0;top:0;display: block;background-color: #e9ecf1;"
+         ng-show="search1" ng-click="hideHistory()">
+        <div class="search">
+            <div class="search-ipt">
+                <input type="search" id="Cruisedest" style="padding-left:50px;" placeholder="目的地、船队或关键词"
+                       autocomplete="off" ng-model="name" ng-click="showHistory($event)"
+                       ng-keyup="showSearchResult($event)">
+                <a class="none search-clear" href="javascript:;"></a>
+                <a href="javascript:;" class="search-back" ng-click="consoleSearchbox()">取消</a>
+            </div>
+            <div class="search-rs" ng-show="showresult">
+                <a ng-repeat="suggestion in suggestions" ng-click="changeName(suggestion.name)">{{suggestion.name}}</a>
+            </div>
+            <dl class="search-history" ng-show="showhistory">
+                <ul>
+                    <li ng-repeat="place in searchHistory track by $index"><a ng-click="changeName(place)">{{place}}</a><a
+                            href="javascript:;" ng-click="deleteHistory($index, $event)"></a></li>
+                </ul>
+                <div class="clearHistory" ng-show="searchHistory.length > 0" ng-click="clearHistory($event)"><img src="/yihaiyou/image/garbage.jpg">清除历史记录</div>
+                <div class="clearHistory" ng-show="searchHistory.length == 0"><img src="/yihaiyou/image/garbage.jpg">暂无历史记录</div>
+            </dl>
+        </div>
+        <div class="module-route" ng-show="!showresult && !showhistory">
+            <p class="route-title route-histroy" ng-show="searchHistory.length > 0">历史记录</p>
+
+            <div class="route-list clearfix" ng-show="searchHistory.length > 0">
+                <a ng-repeat="place in searchHistory track by $index" ng-click="changeName(place)">{{place}}</a>
+            </div>
+            <p class="route-title route-hotline">热门线路</p>
+
+            <div class="route-list clearfix">
+                <a ng-repeat="route in hotRoutes" ng-click="consoleSearchbox();showlist1(route.id, route.name)">{{route.name}}</a>
+            </div>
+
+            <p class="route-title route-hotship">热门船队</p>
+
+            <div class="route-list clearfix">
+                <a ng-repeat="brand in hotBrands" ng-click="consoleSearchbox();showlist5(brand.id, brand.name)">{{brand.name}}</a>
+            </div>
+        </div>
+    </div>
+    <div class="shadow" ng-show="shadow" ng-click="hideShadow()"></div>
+</div>

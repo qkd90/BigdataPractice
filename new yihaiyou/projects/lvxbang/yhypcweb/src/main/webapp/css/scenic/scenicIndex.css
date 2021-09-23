@@ -1,0 +1,771 @@
+.jdticket_column .lunbo {
+    width: 100%;
+    height: 350px;
+    border: 1px solid red;
+}
+
+.jdticket_column .lunbo .jd_search {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.jdticket_column .lunbo .jd_search .jd_searchbar {
+    height: 290px;
+    background-color: black;
+    opacity: 0.75;
+    position: absolute;
+    top: 8.5%;
+    width: 415px;
+}
+
+.jdticket_column .lunbo .jd_search .jd_searchbar .search_title {
+    width: 337px;
+    color: #ff8800;
+    font-size: 18px;
+}
+
+.jdticket_column .lunbo .jd_search .jd_searchbar .search_title .tilte {
+    margin: 6px;
+}
+
+.jdticket_column .lunbo .jd_search .jd_searchbar .searchdizhi {
+    width: 100%;
+    height: 35px;
+    margin-top: 50px;
+    padding-left: 5px;
+}
+
+.jdticket_column .lunbo .jd_search .jd_searchbar .hotjd {
+    color: white;
+    list-style: none;
+    padding-left: 0;
+}
+
+.jdticket_column .lunbo .jd_search .jd_searchbar .hotjd li {
+    float: left;
+    width: 20%;
+    font-size: 12px;
+}
+
+.jdticket_column .lunbo .jd_search .jd_searchbar .search_button {
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    background: #ff8800;
+    width: 180px;
+    height: 34px;
+    border-radius: 5px;
+}
+
+.hotelIndex .dateBox .searchdizhi {
+    width: 98%;
+    height: 35px;
+    margin-top: 15px;
+    padding-left: 5px;
+    line-height: 35px;
+}
+
+.hotelIndex .dateBox .clear {
+    margin-bottom: 65px;
+}
+
+.hotelIndex .dateBox .hotjd {
+    color: white;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.hotelIndex .dateBox .hotjd li {
+    float: left;
+    width: 20%;
+    font-size: 12px;
+}
+
+.hotelIndex .dateBox .hotjd li:hover {
+    cursor: pointer;
+    color:#ff8800;
+}
+
+.hotelIndex .dateBox .search_button {
+    background: url(/image/icon-search.png) no-repeat center;
+    background-position: 55px;
+    padding-left: 10px;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    background-color: #ff8800;
+    text-align: center;
+    width: 170px;
+    letter-spacing: 4px;
+    height: 34px;
+    border-radius: 5px;
+    line-height: 34px;
+    margin: auto;
+    font-family: "黑体"！important;
+    cursor: pointer;
+}
+
+.advert {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow:hidden;
+}
+
+.advertBox {
+    width: 1200px;
+    height: 350px;
+    margin: auto;
+    position: relative;
+}
+
+.dateBox {
+    width: 345px;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    top: 32px;
+    z-index: 6;
+    padding: 20px 35px;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+}
+
+.dateBox ul li {
+    color: #fff;
+    font-size: 13px;
+}
+
+.dateBox ul li.interBox {
+    margin-top: 20px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.dateBox ul li.dateTitle {
+    margin: auto;
+    height: 18px;
+}
+
+.dateBox ul li.dateTitle .line_l {
+    display: block;
+    float: left;
+    width: 130px;
+    height: 10px;
+    border-bottom: 2px solid #fff;
+}
+
+.dateBox ul li.dateTitle .line_t {
+    float: left;
+    border: none;
+    font-size: 18px;
+    color: #ff8800;
+    margin: 0 4px;
+    font-weight: 600;
+}
+
+.dateBox ul li input {
+    height: 35px;
+    width: 275px;
+    float: right;
+    padding: 0 10px;
+    color: #aaa;
+}
+
+.dateBox ul li label {
+    float: right;
+    width: 70px;
+}
+
+.jd_content {
+    width: 1200px;
+    margin: auto;
+    font-family: "微软雅黑";
+}
+
+.jd_content .remenjd {
+    width: 100%;
+}
+
+.jd_content .remenjd .remenheader {
+    border-bottom: 2px solid #3996fa;
+    width: 100%;
+    margin-top: 40px;
+    color: #3996fa;
+    padding-bottom: 10px;
+}
+
+.jd_content .remenjd .remenheader .header_title {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.jd_content .remenjd .remenheader a {
+    color: #3996fa;
+    text-decoration: none;
+    float: right;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.jd_content .remenjd .remennr {
+    margin-top: 20px;
+
+}
+
+.jd_content .remenjd .remennr .remennr_left {
+    width: 240px;
+    height: 424px;
+    border: 1px solid #3996fa;
+    float: left;
+    overflow:hidden;
+}
+
+.jd_content .remenjd .remennr .remennr_left .ulleft {
+    width: 50%;
+    float: left;
+}
+
+.jd_content .remenjd .remennr .remennr_left .ulleft ul li {
+    border: 1px solid #3996fa;
+    height: 33%;
+    line-height: 140px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    font-size: 18px;
+
+}
+
+.jd_content .remenjd .remennr .remennr_left .ulleft ul li,
+.jd_content .remenjd .remennr .remennr_left .ulright ul li {
+    cursor: pointer;
+}
+
+.jd_content .remenjd .remennr .remennr_left .ulleft ul .left1 {
+    background: #55ddd8;
+    line-height: 138px;
+}
+
+.jd_content .remenjd .remennr .remennr_left .ulleft ul .left2 {
+    background: #68c1a9;
+}
+
+.jd_content .remenjd .remennr .remennr_left .ulleft ul .left3 {
+    background: #89c6ff;
+}
+
+.jd_content .remenjd .remennr .remennr_left .ulright {
+    width: 50%;
+    float: right;
+}
+
+.jd_content .remenjd .remennr .remennr_left .ulright ul li {
+    border: 1px solid #3996fa;
+    line-height: 140px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    font-size: 18px;
+}
+
+.jd_content .remenjd .remennr .remennr_left .ulright ul .right1 {
+    background: #fba858;
+    height: 38%;
+    line-height: 155px;
+}
+
+.jd_content .remenjd .remennr .remennr_left .ulright ul .right2 {
+    background: #39ccfa;
+    height: 36%;
+    line-height: 153px;
+}
+
+.jd_content .remenjd .remennr .remennr_left .ulright ul .right3 {
+    background: #5de79b;
+    height: 25%;
+    line-height: 110px;
+    border-bottom: 6px solid #3996fa;
+}
+
+.jd_content .remenjd .remennr .remennr_right {
+    width: 956px;
+    height: 426px;
+    float: right;
+
+}
+
+/*热门景点样式*/
+.jd_content .remenjd .remennr .remennr_right .right_up {
+    height: 47%;
+    width: 100%;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_up ul {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.jd_content .remenjd .remennr .remennr_right .right_up ul li {
+    width: 100%;
+    height: 100%;
+    margin-left: 22px;
+    float: left;
+    background-color: #f6f6f6;
+}
+.jd_content .remenjd .remennr .remennr_right .right_up ul li:hover {
+    background-color: #f3f8fe;
+}
+
+
+.jd_content .remenjd .remennr .remennr_right .right_up ul .rightup_jd1 {
+    height: 100%;
+    width: 24%;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_up ul .img {
+    width: 100%;
+    height: 140px;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_up ul .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_up ul .rightup_jd2 {
+    height: 100%;
+    width: 24%;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_up ul .rightup_jd3 {
+    height: 100%;
+    width: 45%;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_up ul li .titleprice {
+    padding: 10px;
+    /*background-color: #f6f6f6;*/
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_up ul li .jdbiaoti {
+    font-size: 14px;
+    color: #292929;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_up ul li .jdjiage {
+    font-size: 12px;
+    color: #b8b8b8;
+    margin-top: 5px;
+    height: 16px;
+}
+.jd_content .remenjd .remennr .remennr_right .right_up ul li span.jdbiaoti:hover,
+.jd_content .remenjd .remennr .remennr_right .right_down ul li span.jdbiaoti:hover{
+    color: #ff8800;
+}
+
+.jd_content .remenjd .remennr .remennr_right ul li .jdjiage .manyidu {
+    background: url(/image/icon-zan.png) no-repeat left center;
+    background-size: 12px;
+    padding-left: 16px;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_up ul li .jdjiage .jiage {
+    float: right;
+    display: block;
+    margin-top: -10px;
+    position: relative;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_up ul li .jdjiage .jiage .price_number {
+    color: #459cfa;
+    font-size: 26px;
+    font-family: "黑体";
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_up ul li .jdjiage .jiage .rmb_fuhao {
+    color: #459cfa;
+    position: absolute;
+    left: -10px;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down {
+    height: 47%;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul {
+    width: 100%;
+    height: 100%;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul li {
+    width: 100%;
+    height: 100%;
+    margin-left: 22px;
+    float: left;
+    background: #f6f6f6;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul li:hover {
+    background-color: #f3f8fe;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul .rightdown_jd1 {
+    height: 100%;
+    width: 44%;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul .img {
+    width: 100%;
+    height: 140px;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul .rightdown_jd2 {
+    height: 100%;
+    width: 24%;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul .rightdown_jd3 {
+    height: 100%;
+    width: 25%;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul li .titleprice {
+    padding: 10px;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul li .jdbiaoti {
+    font-size: 14px;
+    color: #292929;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul li .jdjiage {
+    font-size: 12px;
+    color: #b8b8b8;
+    margin-top: 5px;
+    height: 16px;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul li .jdjiage .jiage {
+    float: right;
+    display: block;
+    margin-top: -10px;
+    position: relative;
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul li .jdjiage .jiage .price_number {
+    color: #459cfa;
+    font-size: 26px;
+    font-family: "黑体";
+}
+
+.jd_content .remenjd .remennr .remennr_right .right_down ul li .jdjiage .jiage .rmb_fuhao {
+    color: #459cfa;
+    position: absolute;
+    left: -10px;
+}
+
+/*主题推荐样式*/
+.zhutituijian {
+    width: 1200px;
+    margin: 0 auto 20px;
+    font-family: "微软雅黑";
+}
+
+.zhutituijian .remenjd {
+    width: 100%;
+}
+
+.zhutituijian .remenjd .remenheader {
+    border-bottom: 2px solid #3996fa;
+    width: 100%;
+    margin-top: 40px;
+    color: #3996fa;
+    padding-bottom: 10px;
+}
+
+.zhutituijian .remenjd .remenheader .header_title {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.zhutituijian .remenjd .remenheader a {
+    color: #3996fa;
+    text-decoration: none;
+    float: right;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.zhutituijian .remenjd .remennr {
+    margin-top: 20px;
+
+}
+
+.zhutituijian .remenjd .remennr .remennr_left {
+    width: 240px;
+    height: 424px;
+    border: 1px solid #3996fa;
+    float: left;
+}
+
+.zhutituijian .remenjd .remennr .remennr_left .ulleft {
+    width: 50%;
+    float: left;
+}
+
+.zhutituijian .remenjd .remennr .remennr_left .ulleft ul li {
+    border: 1px solid #3996fa;
+    height: 33%;
+    line-height: 140px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    font-size: 18px;
+
+}
+
+.zhutituijian .remenjd .remennr .remennr_left .ulleft ul li,
+.zhutituijian .remenjd .remennr .remennr_left .ulright ul li{
+    cursor: pointer;
+}
+
+.zhutituijian .remenjd .remennr .remennr_left .ulleft ul .left1 {
+    background: #8bbff6;
+}
+
+.zhutituijian .remenjd .remennr .remennr_left .ulleft ul .left2 {
+    background: #ddaa6e;
+}
+
+.zhutituijian .remenjd .remennr .remennr_left .ulleft ul .left3 {
+    line-height: 138px;
+    background: #9ea2e4;
+}
+
+.zhutituijian .remenjd .remennr .remennr_left .ulright {
+    width: 50%;
+    float: right;
+}
+
+.zhutituijian .remenjd .remennr .remennr_left .ulright ul li {
+    border: 1px solid #3996fa;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    font-size: 18px;
+}
+
+.zhutituijian .remenjd .remennr .remennr_left .ulright ul .right1 {
+    background: #fba858;
+    height: 38%;
+    line-height: 155px;
+}
+
+.zhutituijian .remenjd .remennr .remennr_left .ulright ul .right2 {
+    background: #4fc0e4;
+    height: 36%;
+    line-height: 153px;
+}
+
+.zhutituijian .remenjd .remennr .remennr_left .ulright ul .right3 {
+    background: #5de79b;
+    height: 25%;
+    line-height: 110px;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right {
+    width: 956px;
+    height: 426px;
+    float: right;
+
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up {
+    height: 47%;
+    width: 100%;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul {
+    width: 100%;
+    height: 100%;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul li {
+    width: 100%;
+    height: 100%;
+    margin-left: 22px;
+    float: left;
+    background:#f6f6f6;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul li:hover {
+    background:#f3f8fe;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul .rightup_jd1 {
+    height: 100%;
+    width: 24%;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul .img {
+    width: 100%;
+    height: 140px;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul .rightup_jd2 {
+    height: 100%;
+    width: 24%;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul .rightup_jd3 {
+    height: 100%;
+    width: 45%;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul li .titleprice {
+    padding: 10px;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul li .jdbiaoti {
+    font-size: 14px;
+    color: #292929;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul li .jdjiage {
+    font-size: 12px;
+    color: #b8b8b8;
+    margin-top: 5px;
+    height: 16px;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul li .jdjiage .jiage {
+    float: right;
+    display: block;
+    margin-top: -10px;
+    position: relative;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul li .jdjiage .jiage .price_number {
+    color: #459cfa;
+    font-size: 26px;
+    font-family: "黑体";
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul li .jdjiage .jiage .rmb_fuhao {
+    color: #459cfa;
+    position: absolute;
+    left: -10px;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_up ul li span.jdbiaoti:hover,
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul li span.jdbiaoti:hover{
+    color: #ff8800;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right ul li .jdjiage .manyidu {
+    background: url(/image/icon-zan.png) no-repeat left center;
+    background-size: 15px;
+    padding-left: 20px;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down {
+    height: 47%;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul {
+    width: 100%;
+    height: 100%;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul li {
+    width: 100%;
+    height: 100%;
+    margin-left: 22px;
+    float: left;
+    background:#f6f6f6;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul li:hover {
+    background:#f3f8fe;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul .rightdown_jd1 {
+    height: 100%;
+    width: 44%;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul .img {
+    width: 100%;
+    height: 140px;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul .rightdown_jd2 {
+    height: 100%;
+    width: 24%;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul .rightdown_jd3 {
+    height: 100%;
+    width: 25%;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul li .titleprice {
+    padding: 10px;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul li .jdbiaoti {
+    font-size: 14px;
+    color: #292929;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul li .jdjiage {
+    font-size: 12px;
+    color: #b8b8b8;
+    margin-top: 5px;
+    height: 16px;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul li .jdjiage .jiage {
+    float: right;
+    display: block;
+    margin-top: -10px;
+    position: relative;
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul li .jdjiage .jiage .price_number {
+    color: #459cfa;
+    font-size: 26px;
+    font-family: "黑体";
+}
+
+.zhutituijian .remenjd .remennr .remennr_right .right_down ul li .jdjiage .jiage .rmb_fuhao {
+    color: #459cfa;
+    position: absolute;
+    left: -10px;
+}

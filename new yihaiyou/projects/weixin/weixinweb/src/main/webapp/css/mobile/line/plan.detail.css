@@ -1,0 +1,210 @@
+body { overflow-x: hidden; }
+body.rcd-body .body-loading { display: none; }
+body.rcd-body .footer-wrap { z-index: 94; }
+.lh17 { line-height: 17px; }
+.ft11 { font-size: 11px; }
+.load-all { height: 55px; text-align: center; color: #999; }
+.main-wrap { padding-top: 44px; padding-bottom: 44px; background: #f5f5f5; }
+.main-wrap .plan-title { position: relative; font-size: 15px; max-height: 36px; margin-bottom: 10px; border-bottom: 1px solid #ddd; background: #fff; line-height: 35px;/*  overflow: hidden; */ box-shadow: 0 0 5px #ccc; }
+.plan-title .title-span { float: left; padding: 0 5px 0 10px; color: #999; box-sizing: border-box; }
+.plan-title .title-span.time { text-align: left; }
+.plan-title .title-span.price { position: relative; text-align: right; }
+.plan-title .title-span.count { text-align: center; }
+.start-time-wrap .left-tag {    background: url("/images/lvx_b1.png") center no-repeat;
+    width: 36px;
+    float: left;
+    height: 36px;
+}
+i.down { position: absolute; width: 16px; height: 16px; top: 10px; /* right: -8px; */ background: url("/images/planimg/arrow-pr.png") no-repeat center; background-size: 8px;  }
+i.down.small { top: 7px; }
+/* .plan-title .title-span i { display: inline-block; width: 16px; height: 16px; vertical-align: top; margin-top: 10px; margin-right: 5px; }
+.plan-title .title-span.time i { background: url("/images/recommendimg/lvx_b1.png?__sprite") no-repeat center left; background-size: 16px; }
+.plan-title .title-span.price i { background: url("/images/recommendimg/lvx_2.png?__sprite") no-repeat center left; background-size: 16px; }
+.plan-title .title-span.count i { background: url("/images/recommendimg/lvx_1.png?__sprite") no-repeat center left; background-size: 16px; } */
+
+.plan-title .red { color: #fd5e4f; }
+.line { padding: 0 5px; }
+.main-wrap .detail-wrap { position: relative; background: #f5f5f5; }
+.detail-wrap .select-day { position: absolute; top: 10px; left: 10px; background: #f5f5f5; border: 1px solid #d8d8d8; border-radius: 5px; z-index: 1; }
+.detail-wrap .select-day .select-btn { display: block; width: 60px; padding-left: 10px; font-size: 14px; color: #333; background: url("/images/planimg/slt.png?__sprite") no-repeat 55px; background-size: 8px; line-height: 25px; }
+.everyDay-ul .every-day { padding-bottom: 10px; background: #f5f5f5; }
+.everyDay-ul .every-day.no-pad { padding-bottom: 0; }
+.every-day .title { position: relative; padding: 10px 60px 10px 10px; margin-bottom: 10px; background: #fff; border-bottom: 1px solid #ddd; border-top: 1px solid #ddd; /* border-bottom: 1px solid #18aaf2; border-top: 1px solid #18aaf2; */ }
+.every-day .title .map-btn { position: absolute; top: 15px; right: 10px; padding-top: 30px; background: url("/images/planimg/map.png?__sprite") no-repeat top; background-size: 30px; }
+.every-day .title p { height: 25px; padding-left: 28px; font-size: 16px; font-weight: bold; color: #333; background: url("/images/recommendimg/i_t.png?__sprite") no-repeat left; background-size: 22px; line-height: 25px; }
+.every-day .title span { line-height: 28px; font-size: 13px; }
+.every-day .title span.ml5 { margin: 0 5px; }
+/* .every-day .title span.day-scenic-count { background: url("/images/recommendimg/lvx_3.png?__sprite") no-repeat center left; background-size: 14px; }
+.every-day .title span.about-price { background: url("/images/recommendimg/lvx_b2.png?__sprite") no-repeat center left; background-size: 14px; }
+.every-day .title span.about-time { background: url("/images/recommendimg/lvx_b3.png?__sprite") no-repeat center left; background-size: 14px; } */
+.every-day .title span.max-span { position: relative; float: left; /* max-width: 94px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; */ }
+.every-day .scenic-empty { padding: 40px 0; }
+.every-day .scenic-empty .empty-tips { display: block; padding-left: 25px; font-size: 16px; color: #999; text-align: center; background: url("/images/planimg/hint.png?__sprite") no-repeat 65px; background-size: 25px; line-height: 25px; }
+.every-day .panel-wrap { margin-bottom: 10px; background: #fff; border-bottom: 1px solid #ddd; }
+.panel-wrap .recommend-wrap { padding: 10px 0 0 10px; background: #fff;/*  border-bottom: 1px solid #ddd; */ border-top-right-radius: 5px; border-top-left-radius: 5px; }
+.panel-wrap .recommend-wrap li { position: relative; padding: 9px 10px 9px 0; margin-left: 30px; border-top: 1px solid #ddd; line-height: 20px; }
+.panel-wrap .recommend-wrap li .rctitle { font-size: 16px; }
+.panel-wrap .recommend-wrap li:FIRST-CHILD { border-top: none; }
+.panel-wrap .recommend-wrap li i { display: none; position: absolute; top: 9px; left: -30px; width: 20px; height: 20px; }
+.panel-wrap .recommend-wrap li:FIRST-CHILD i { display: block; }
+.panel-wrap .recommend-wrap li i.session-ticket { background: url("/images/planimg/01-5.png") no-repeat center; background-size: 20px; }
+.panel-wrap .recommend-wrap li .sticket-des { position: relative; padding-right: 100px; }
+.panel-wrap .recommend-wrap li .sticket-des { position: relative; padding-right: 100px; }
+.sticket-des .right-btn { position: absolute; right: 0; top: 50%; margin-top: -16px; padding: 6px 7px; background: #fd5e4f; border-radius: 6px; color: #fff; font-size: 14px; line-height: initial; box-sizing: border-box; }
+.sticket-des .right-btn span { margin-left: 5px; }
+.sticket-des .right-btn span:FIRST-CHILD { margin-right: 5px; margin-left: 0; }
+
+.cost-detail { position: absolute; top: 30px; right: -20%; height: 20px; white-space: nowrap; padding: 5px 15px; border: 1px solid #ddd; background: #fff4ef; line-height: 20px; z-index: 2; box-shadow: 1px 1px 3px #eee; }
+.cost-detail i { position: absolute; top: -7px; left: 80%; width: 10px; height: 10px; background: url("/images/planimg/ar-tl.png") no-repeat center; background-size: 10px; }
+.cost-detail span.cost-span, .cost-detail span.red { line-height: 20px; }
+.cost-detail span.ml20 { margin-left: 10px; }
+
+.item-signel.fadeOut { opacity: 0; transition: all 0.4s ease-out; }
+.item-body { position: relative; background: #fff; border: solid #ddd; border-width: 1px 0; }
+.item-scenic .item-body .scenic-body { padding: 10px 0 10px 10px; }
+.item-scenic .scenic-index { display: block; width: 30pt; height: 30pt; margin-right: 8px; background: #34ad37; font-size: 18pt; color: #fff; text-align: center; border-radius: 5px; line-height: 30pt; }
+.item-scenic .start-time { display: block; width: 28pt; height: 12pt; margin-top: 5px; background: #34ad37; font-size: 9pt; color: #fff; text-align: center; border-radius: 5px; line-height: 12pt; }
+.item-detail { max-width : 85% ; }
+.item-detail .img-wrap { position: relative; margin-top: 5px; padding-left: 170px; min-height: 100px; width: 100%; box-sizing: border-box; }
+.other-info-msg { width: 100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; }
+.item-detail .img-wrap img { position: absolute; top: 0; left: 0; width: 160px; height: 95px; }
+.item-detail p.scenic-name { font-size: 18px; color: #333; line-height: 37px; }
+.item-detail span { font-size: 12px; color: #999; }
+.traffic-panel { position: relative; padding: 10px 0; font-size: 13px; line-height: 38px; }
+.traffic-panel .traffic-panel-icon { position: absolute;top: 0; left: 22px; height: 100%; width: 1px; border-left: 1px #ccc dashed; }
+.traffic-panel .traffic-panel-icon i { position: absolute; top: 50%; left: -5px; margin-top: -5px; width: 9px; height: 9px; border-radius: 10px; background: #fd5e4f; }
+.more-detail { position: relative; height: 35px; background: #fff; border-bottom: 1px solid #ddd; }
+.item-scenic .how-wrap .how-cont { position: relative; padding-left: 55px; border: solid #ddd; border-width: 1px 1px 0 1px; }
+.how-wrap .how-cont .how-span { position: absolute; top: 0; left: 0; width: 55px; padding-top: 40px; color: #34ad37; text-align: center; }
+.how-wrap .how-cont .how-span.how-go { background: url("/images/recommendimg/lvx_zn.png?__sprite") no-repeat center 10px; background-size: 30px; }
+.how-wrap .how-cont .how-span.tips { background: url("/images/recommendimg/lvx_xts.png?__sprite") no-repeat center 10px; background-size: 30px; }
+.how-wrap .how-cont .how-desc { float: left; min-height: 44px; padding: 8px 5px; border-left: 1px solid #ddd; }
+.hotel-more-detail { position: relative; height: 35px; background: #fff; border-top: 1px solid #ddd; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; }
+.more-detail li, .hotel-more-detail li { position: relative; float: left; width: 33.33%; padding-left: 25px; font-size: 16px; color: #34ad37; text-align: center; line-height: 35px; box-sizing: border-box; background: no-repeat 15px; }
+.more-detail li.scenic-detail { border-right: 1px solid #ddd; background-image: url("/images/planimg/lv_detail.png?__sprite"); background-size: 18px; }
+.more-detail.has-book a { width: 25%; }
+.more-detail.has-book .scenic-detail { background: url("/images/planimg/lv_detail.png?__sprite") no-repeat 17%; background-size: 18px; }
+.more-detail.has-book .how-go { margin-left: -1px; border-right: 1px solid #ddd; background: url("/images/planimg/lv_tohere.png?__sprite") no-repeat 18%; background-size: 16px; }
+.more-detail.has-book .ticket-book { background: url("/images/scenicimg/yd.png?__sprite") no-repeat 18%; background-size: 16px; }
+.hotel-more-detail .scenic-detail { margin-left: -1px; border-right: 1px solid #ddd; background-image: url("/images/planimg/lv_detail.png?__sprite"); background-size: 18px; }
+.more-detail .how-go { background-image: url("/images/planimg/lv_tohere.png?__sprite"); background-size: 16px; }
+.hotel-more-detail .how-go { background-image: url("/images/planimg/lv_tohere.png?__sprite"); background-size: 16px; }
+.station-path-summary { background: #fff; padding-left: 25px; border: #ddd solid; border-width: 1px 0; }
+.station-path-summary .route-distance { max-width: 115px; padding-left: 10px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.station-path-summary .route-ul { max-width: 100%; height: 38px; /* padding-left: 10px;  */overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+/* .station-path-summary .route-ul li { display: none; }
+.station-path-summary .route-ul li.active { color: #34ad37; } */
+.station-path-summary .route-ul i { width: 10px; height: 38px; margin-right: 5px; }
+.station-path-summary .route-ul i.bus-icon { background: url("/images/planimg/lv_bus.png?__sprite") no-repeat center center; background-size: 10px; }
+.station-path-summary .route-ul li.active i.bus-icon { background: url("/images/recommendimg/lv_bus_h.png?__sprite") no-repeat center center; background-size: 10px; }
+.station-path-summary .route-ul i.car-icon { background: url("/images/planimg/lv_car.png?__sprite") no-repeat center center; background-size: 10px; }
+.station-path-summary .route-ul li.active i.car-icon { background: url("/images/recommendimg/lv_car_h.png?__sprite") no-repeat center center; background-size: 10px; }
+.station-path-summary .route-ul i.walk-icon { background: url("/images/planimg/lv_walk.png?__sprite") no-repeat center center; background-size: 10px; }
+.station-path-summary .route-ul li.active i.walk-icon { background: url("/images/recommendimg/lv_walk_h.png?__sprite") no-repeat center center; background-size: 10px; }
+
+/* 行程总览 */
+.plan-summary { position: fixed; top: 44px; left: 0; width: 100%; z-index: 10000; -webkit-box-sizing: border-box; -webkit-transition: -webkit-transform 700ms ease; -webkit-transform: translate3d(-100%, 0, 0); }
+.plan-summary .cont { float: left; width: 65%; height: 100%; background: rgba(0,0,0,0.8); color: #fff; }
+.plan-summary .transparent { float: left; width: 35%; height: 100%; }
+.guidei-title { height: 42px; padding: 0 10px; line-height: 42px; border-bottom: 1px #aaa solid; -webkit-box-sizing: border-box; }
+.plan-summary .guidei-title .title-name { font-size: 16px; }
+.plan-summary .guide-wrap { padding-top: 10px; overflow: auto; box-sizing: border-box; -webkit-overflow-scrolling: touch; }
+.plan-summary .guide-wrap .guidei-first-menu { padding: 0 50px 0 10px; min-height: 100%; }
+.plan-summary .sum-arrow { position: absolute; top: 0; right: 35%; width: 50px; height: 100%; background: url("/images/orderimg/lv_ar.png?__sprite") no-repeat 50% 50%; background-size: 20px; }
+.plan-summary .guide-wrap li{ line-height: 40px; font-size: 16px; }
+.plan-summary .guide-wrap span { display: block; padding-left: 40px; color: #fff; }
+.plan-summary .guide-wrap .first-menu-cont .which-day { padding-left: 0; font-size: 16px; line-height: 25px; }
+.plan-summary .guide-wrap .first-menu-cont .which-day i {font-size: 18px; font-style: normal; }
+.plan-summary .guide-wrap .end-tag { line-height: 40px; background: url("/images/planimg/list_03.png?__sprite") 17px no-repeat; }
+.plan-summary .guide-wrap .guidei-second-menu li a { display: block; padding-left: 40px; color: #fff;  background: url("/images/planimg/list_00.png?__sprite") 18px no-repeat; background-size: 5px; width: 100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap; }
+/* .plan-summary .guide-wrap .guidei-second-menu li a:HOVER, .plan-summary .guide-wrap .guidei-second-menu li a:focus  {  background-color: rgba(0,0,0,0.8);  } */
+/* 旅行贴士 */
+.travel-tips { width: 260px; background: #f5f5f5; border-radius: 3px; }
+.travel-tips .pop-title { height: 48px; line-height: 50px; padding: 0 10px; font-size: 18px; border-bottom: 2px solid #33ad36; }
+.travel-tips .pop-content { padding: 0 10px; border-bottom: 1px #ddd solid; }
+.travel-tips .pop-content .label-wrap { position: relative; display: block; padding: 5px 0; color: #333; font-size: 14px; min-height: 40px; }
+.travel-tips a { display: block; color: #333; text-align: center; line-height: 35px; }
+.day-list { width: 100px; margin: -9px; }
+.day-list li { height: 35px; font-size: 14px; color: #333; text-align: center; border-top: 1px solid #d8d8d8; line-height: 35px; }
+.day-list li:FIRST-CHILD { border: none; }
+.day-list li.odd { background: #f5f5f5; }
+.summary-btn { position: fixed; left: 0; top: 50%; margin-top: -20px; background: url("/images/recommendimg/xcbg.png?__sprite") no-repeat; width: 15px; padding: 15px 8px 20px 3px; color: #fff; text-align: center; border-radius: 0 5px 5px 0; background-size: 23px; line-height: 16px; }
+/* .summary-btn:HOVER { opacity: 0.5; } */
+.publish-btn { position: fixed; bottom: 54px; right: 20px; width: 50px; height: 50px; color: #fff; text-align: center; background: #18aaf2; border: 1px solid #079ce6; border-radius: 50%; box-shadow: 0 0 10px #999; padding: 4px 10px; box-sizing: border-box; }
+.publish-btn i { position: absolute; top: 1px; right: 3px; width: 40px; height: 20px; background: url("/images/planimg/yb.png?__sprite") no-repeat center; background-size: 30px; }
+/* .publish-btn:hover, .publish-btn:focus { background-color: #ace; border: 1px solid #ace; } */
+.publish-btn:link, .publish-btn:visited, .publish-btn:active { color: #fff; }
+#J_now-map { height: 100px; }
+.dayInfoMap { width: 100px; height: 100px; }
+.footer-wrap .btn-wrap { padding: 7px 10px 7px 5px; width: 50%; box-sizing: border-box; }
+.footer-wrap .order-btn { margin-left: 25% }
+.footer-wrap .btn-wrap:FIRST-CHILD {padding: 7px 5px 7px 10px;}
+.btn-wrap a { display: block; position: relative; height: 30px; padding-left: 28px; padding-right: 25px; color: #fff; text-align: center; border-radius: 5px; line-height: 30px; }
+.btn-wrap i { position: absolute; top: 0; right: 5px; width: 15px; height: 30px; background: url("/images/planimg/l_i_jt8.png?__sprite") no-repeat center; background-size: 9px; }
+.btn-wrap a.posts-btn { background: #18aaf2 url("/images/cart.png?__sprite") no-repeat 5px; background-size: 18px; }
+.btn-wrap a.route-btn { background: #18aaf2 url("/images/planimg/l_i_yls.png?__sprite") no-repeat 5px; background-size: 18px; }
+.btn-wrap a.disable { background-color: #ddd; }
+
+.quote-wrap { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 200; -webkit-transition: all 0.2s ease-in-out; -webkit-transform: translate3d(100%, 0, 0); }
+.quote-wrap.panel--show { -webkit-transform: translate3d(0, 0, 0); }
+.quote-wrap .header { background-color: #33ad37; height: 44px; width: 100%;}
+.quote-wrap h1 { padding: 0 12%; line-height: 44px; text-align: center; }
+.quote-wrap .pageTitle { font-size: 16px; color: #fff}
+.quote-wrap a.left-btn { position: absolute; top: 0; left: 0; height: 44px; width: 44px; background: url("/images/planimg/back.png?__sprite") no-repeat center; background-size: 20px; line-height: 44px; }
+.quote-wrap .input-wrap { padding: 0 10px; }
+.quote-wrap .input-wrap input { width: 100%; height: 45px; border: none; border-bottom: 1px solid #d8d8d8; }
+.quote-wrap .date-wrap { position: relative; height: 44px; padding-right: 33px; background: url("/images/friendimg/l_i_jt2.png?__sprite") no-repeat 98%; background-size: 15px; border-bottom: 1px solid #d8d8d8; }
+.quote-wrap .date-wrap span { line-height: 44px; color: #999; }
+.quote-wrap .date-wrap input { position: absolute;top: 0;right: 0;width: 50%;height: 44px; padding: 0 33px 0 0; text-align: right;line-height: 44px;background: initial;border: none;box-sizing: border-box; outline: none; }
+
+.header-wrap h1 { padding-right: 70px; }
+.header-wrap .quote-btn { position: absolute; top: 7px; right: 10px; padding: 0 5px 0 23px; height: 28px; background: #34ad37 url("/images/planimg/lv_yiny.png?__sprite") no-repeat 7px; background-size: 12px; color: #fff; text-align: center; border: 1px solid #fff; border-radius: 3px; line-height: 28px; }
+.more-detail .more-func { border-left: 1px #ddd solid; background-image: url("/images/planimg/lv_more.png?__sprite"); background-size: 16px; }
+.more-detail .more-func_div { position: absolute; bottom: -1px; left: -1px; width: 100%; background: #fff; z-index: 1; border: 1px #eee solid; box-shadow: 0 0 3px rgba(0,0,0,0.2); }
+.more-detail .more-func_div li { border-top: 1px #eee solid;  width: 100%; padding: 0; }
+.more-detail .more-func_div li:FIRST-CHILD { border: none; }
+.more-detail .more-func_div li, .hotel-more-detail .more-func_div li { width: 100%; float: initial; display: block; } 
+.more-bg { position: fixed; left: 0; top: 0; width: 100%; height: 100%; }
+.more-list { position: relative; z-index: 1; }
+
+.top-title { position: relative; padding: 6px 120px 6px 45px; line-height: 30px; font-size: 16px; box-sizing: border-box; height: 42px; }
+.top-title .title-name { display: block; max-width: 100%;text-overflow: ellipsis; white-space: nowrap; overflow: hidden; } 
+.top-title .left-tag { position: absolute; left: 10px; top: 7px; height: 30px; line-height: 30px; width: 30px; background: url("/images/planimg/lv_jd.png?__sprite") no-repeat left center; background-size: 25px; font-size: 16px }
+.top-title .right-btn { position: absolute; right: 10px; top: 7px; padding: 6px 7px; background: #fd5e4f; border-radius: 6px; color: #fff; font-size: 14px; line-height: initial; box-sizing: border-box; }
+.top-title .right-btn.grey-bg { background: #ccc; }
+.top-title .right-span { position: absolute; right: 10px; top: 7px; padding: 6px 0; color: #999; font-size: 14px; line-height: initial; box-sizing: border-box; }
+.top-title .right-btn span { margin-left: 5px; }
+.top-title .right-btn span:FIRST-CHILD { margin-right: 5px; margin-left: 0; }
+.top-title .right-btn.hotel span { margin: 0; }
+.top-title .include-seasion-ticket { position: absolute; right: 10px; top: -24px; width: 270px; height: 25px; padding-left: 10px; padding-right: 70px; font-size: 12px; background: rgba(0,0,0,0.7); border-radius: 5px; box-sizing: border-box; line-height: 25px; }
+.top-title .include-seasion-ticket span { color: #fff; }
+.top-title .include-seasion-ticket i { position: absolute; right: 50px; top: 24px; width: 8px; height: 5px; background: url("/images/planimg/01.png") no-repeat center; background-size: 9px; }
+.top-title .include-seasion-ticket a { position: absolute; right: 10px; top: 0; font-size: 12px; color: #18aaf2; line-height: 25px; }
+
+.mid-img-cont {  margin: 0 10px 10px 10px; }
+.mid-img-wrap { position: relative; overflow: hidden; padding-bottom: 50%; height: 0; background: #eee url("/images/scenicimg/em_lv.png?__sprite") no-repeat center; background-size: 60px; }
+.mid-img-wrap img { position: absolute;left: 0; bottom: 0; width: 100%; }
+.img-text { position: absolute; max-width: 100%; padding: 3px 5px 3px 10px; right: 0; bottom: 0; background: rgba(0,0,0,0.5); color: #fff; text-align: right; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+
+.hotel-wrap, .scenic-wrap { background: #fff;}
+.scenic-wrap .left-tag { background: #33ad36; border-radius: 5px; text-align: center; color: #fff; }
+.scenic-wrap .mid-img-wrap img { top: 0; }
+.how-wrap { padding: 10px; border-top: 1px #ddd solid; }
+.nav-a{ width: 100%; float: initial; display: block;background: no-repeat 15px; padding-left:25px; text-align: center; box-sizing: border-box; }
+
+.nav-a.scenic { color: #666; background-size: 20px; background: url("/images/planimg/lv_s_jd.png?__sprite") 12px; }
+.nav-a.food { color: #666; background-image: url("/images/recommendimg/lvx_ms.png?__sprite"); background-size: 16px;}
+.nav-a.hotel { color: #666; background-size: 19px; background: url("/images/planimg/lv_jd.png?__sprite") 13px; }
+.nav-a.del { color: #999; background-size: 19px; background: url("/images/planimg/del.png?__sprite") 13px; }
+.nav-a.more-func { border: #33ad36 solid; border-width: 1px 0 0 0; }
+.panel-wrap .recommend-wrap li a.arr { position: absolute; top:0; width: 30px; height: 35px; right: 5px; left: initial; background: url("/images/friendimg/l_i_jt2.png?__sprite") center no-repeat; background-size: 15px; -webkit-transition: all 0.2s ease;}
+.panel-wrap .recommend-wrap li a.arr.active { -webkit-transform: rotate(90deg); -webkit-animation-name: myfirst; }
+@-webkit-keyframes myfirst{from {-webkit-transform: rotate(0deg)}to {-webkit-transform: rotate(90deg)}}
+
+.hidden_hash{
+    position: relative;
+    top: -54px;
+    display: block;
+    height: 0;
+    overflow: hidden;
+}

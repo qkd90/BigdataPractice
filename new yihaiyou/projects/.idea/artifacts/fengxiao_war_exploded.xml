@@ -1,0 +1,55 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="fengxiao:war exploded">
+    <output-path>$PROJECT_DIR$/fengxiao/target/fengxiao-0.0.1-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="fengxiao" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.data.data:frame:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:payweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:orderweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:userweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:lineweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:cruiseshipweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:goodsweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:customerweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:lxbcommonweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:otherweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:ticketweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:scemanagerweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:wechatweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:areaweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:scenicweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:restaurantweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:planweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:hotelweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:transportationweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:trafficweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:salesweb:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:contractweb:classes:0.0.1-SNAPSHOT" />
+          <element id="archive" name="datamgr-0.0.1-SNAPSHOT-classes.jar">
+            <element id="module-output" name="datamgr" />
+          </element>
+          <element id="library" level="project" name="Maven: com.data.data:builder:classes:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:scenicservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:restaurantservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:areaservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:ticketservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.data.data:planservice:0.0.1-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.3.1" />
+          <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.3" />
+          <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.1.3" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.6" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/fengxiao/target/fengxiao-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="fengxiao/web/Web" />
+      <element id="artifact" artifact-name="datamgr:war exploded" />
+    </root>
+  </artifact>
+</component>

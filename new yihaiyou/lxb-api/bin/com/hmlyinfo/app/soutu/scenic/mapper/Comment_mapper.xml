@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.CommentMapper">
+	<insert id="insert" parameterType="Comment" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_comment
+			(
+				id,
+				user_id,
+				scenic_id,
+				content,
+				publish_time,
+				good_count,
+				status,
+				if_has_image,
+				score,
+				modify_time,
+				create_time,
+				publish_ip
+			)
+		values
+			(
+				#{id},
+				#{userId},
+				#{scenicIds},
+				#{content},
+				#{publishTime},
+				#{goodCount},
+				#{status},
+				#{ifHasImage},
+				#{score},
+				#{modifyTime},
+				#{createTime},
+				#{publishIP}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="Comment">
+		update tb_comment
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="scenicIds != null and '' != scenicIds"> scenic_id = #{scenicIds},</if>
+			<if test="content != null and '' != content"> content = #{content},</if>
+			<if test="publishTime != null and '' != publishTime"> publish_time = #{publishTime},</if>
+			<if test="goodCount != null and '' != goodCount"> good_count = #{goodCount},</if>
+			<if test="status != null and '' != status"> status = #{status},</if>
+			<if test="ifHasImage != null and '' != ifHasImage"> if_has_image = #{ifHasImage},</if>
+			<if test="score != null and '' != score"> score = #{score},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="publishIP != null and '' != publishIP"> publish_ip = #{publishIP},</if>
+		</set>
+		where
+			id = #{id} and
+			user_id = #{userId}
+	</update>
+	
+	<!-- ******* 2014-06-03 吴竹静********* -->
+	<update id="updateCommentGood" parameterType="Comment">
+		update tb_comment
+		set good_count = good_count + 1
+		where
+			id = #{id} and
+			user_id = #{userId}
+	</update>
+	<!-- *******                 ********* -->
+	
+	<delete id="del" parameterType="Comment">
+		delete from
+			tb_comment
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="Comment">
+		select
+			id,
+			user_id,
+			scenic_id,
+			score,
+			content,
+			publish_time,
+			good_count,
+			status,
+			if_has_image,
+			score,
+			modify_time,
+			create_time,
+			publish_ip
+		from
+			tb_comment
+		where
+			id = #{id}
+	</select>
+	
+	
+	
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="Comment">
+		select 
+			tb_comment.id,
+			tb_comment.user_id,
+			tb_comment.scenic_id,
+            tb_comment.score,
+			tb_comment.content,
+			tb_comment.publish_time,
+			tb_comment.good_count,
+			tb_comment.status,
+			tb_comment.if_has_image,
+			tb_comment.score,
+			tb_comment.modify_time,
+			tb_comment.create_time,
+			tb_comment.publish_ip,
+			tb_user.nickname,
+			tb_user.userface
+		<include refid="byPropertyJoin"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_comment comment
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="scenicIds != null and '' != scenicIds"> and scenic_id = #{scenicIds} </if>
+			<if test="content != null and '' != content"> and content = #{content} </if>
+			<if test="publishTime != null and '' != publishTime"> and publish_time = #{publishTime} </if>
+			<if test="goodCount != null and '' != goodCount"> and good_count = #{goodCount} </if>
+			<if test="status != null and '' != status"> and status = #{status} </if>
+			<if test="ifHasImage != null and '' != ifHasImage"> and if_has_image = #{ifHasImage} </if>
+			<if test="score != null and '' != score"> and score = #{score} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="publishIP != null and '' != publishIP"> and publish_ip = #{publishIP} </if>
+			<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; #{ta} </if>
+            <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; #{tb} </if>
+		</where>
+		<choose>
+            <when test="orderColumn != null and '' != orderColumn">
+                ORDER BY comment.${orderColumn}
+                <if test="orderType != null and '' != orderType">
+                    ${orderType}
+                </if>
+            </when>
+			<otherwise>
+				order by comment.create_time desc
+			</otherwise>
+		</choose>
+	</sql>
+	
+	<sql id="byPropertyJoin">
+		from
+			tb_comment, tb_user
+		<where>
+			tb_user.id = tb_comment.user_id
+			<if test="id != null and '' != id"> and tb_comment.id = #{id} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="scenicIds != null and '' != scenicIds"> and scenic_id = #{scenicIds} </if>
+			<if test="content != null and '' != content"> and content = #{content} </if>
+			<if test="publishTime != null and '' != publishTime"> and publish_time = #{publishTime} </if>
+			<if test="goodCount != null and '' != goodCount"> and good_count = #{goodCount} </if>
+			<if test="status != null and '' != status"> and status = #{status} </if>
+			<if test="ifHasImage != null and '' != ifHasImage"> and if_has_image = #{ifHasImage} </if>
+			<if test="score != null and '' != score"> and score = #{score} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="publishIP != null and '' != publishIP"> and publish_ip = #{publishIP} </if>
+			<if test="ta != null and '' != ta"> and unix_timestamp(tb_comment.create_time) * 1000 &gt; #{ta} </if>
+            <if test="tb != null and '' != tb"> and unix_timestamp(tb_comment.create_time) * 1000 &lt; #{tb} </if>
+		</where>
+		<choose>
+            <when test="orderColumn != null and '' != orderColumn">
+                order by tb_comment.${orderColumn}
+                <if test="orderType != null and '' != orderType">
+                    ${orderType}
+                </if>
+            </when>
+			<otherwise>
+				order by tb_comment.create_time desc
+			</otherwise>
+		</choose>
+	</sql>
+</mapper>

@@ -1,0 +1,116 @@
+    <link rel="stylesheet" type="text/css" href="../../appfiles/src/css/header_seaching.css">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://m.tuniu.com/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://m.tuniu.com/apple-touch-icon-retina.png">
+<div class="fullpage-fixed" ng-controller="SearchCtrl">
+    <div class="m_header  sticky_head" id="J_header">
+        <div class="m_header_bar J_header-bar hide">
+            <div class="mhb_left">
+                <a class="go_to_home" href="http://m.tuniu.com/" m="点击_通用头部_样式2_首页__返回首页"><i class="icon icon-home3"></i></a>
+                <div class="go_to_search J_header_search-trigger" m="点击_通用头部_样式2_搜索__进入搜索页"><i class="icon icon-search5"></i></div>
+            </div>
+            <div class="mhb_center mhb_center_across">
+                <h2 class="title">日本 产品推荐</h2><h2 class="sub_title">861个结果</h2>
+            </div>
+            <div class="mhb_right">
+                <a class="account" href="http://dynamic.m.tuniu.com/m2015/user/userCenter" m="点击_通用头部_样式2_会员中心__进入会员中心"><i class="icon icon-mine"></i></a>
+                <div class="navi J_header-navi-trigger">导航</div>
+            </div>
+
+        </div>
+
+        <div class="m_header_search" id="J_header-search">
+            <div class="search_bar">
+                <div class="search_cancel" ng-click="backPage()">取消</div>
+                <div class="search_main">
+                    <input id="input_search" contenteditable="true" style="padding: 0px 5px;" ng-model="keyword" placeholder="厦门" id="searchId" ng-change="lisChange()" class="J_hs-input">
+                    <!--<input type="text" data-defaultvalue="云南" class="J_hs-input" placeholder="云南">-->
+                    <span class="search_clear icon-delete"></span>
+                    <span class="search_button icon-search4" m="点击_通用头部_样式2_搜索__搜索列表页" ng-click="searchLine()"></span>
+                </div>
+            </div>
+            <div class="search_pop">
+
+                <div class="search_hot J_hs-hotword" ng-show="hotShow">
+                    <!--<div class="search_hot J_hs-hotword hide">-->
+                    <div class="title">热门搜索</div>
+                    <ul class="keys clearfix">
+                        <li ng-repeat="hot in hotAreaList" ng-click="selectCityCode(hot.id, hot.name)"><div class="item">{{hot.name}}</div></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="search_more_destinations"><a href="#" ui-sref="selectCity"><i class="icon icon-overseas"></i>更多热门目的地</a></div>
+                <div class="search_history J_hs-history">
+                    <div class="title">历史搜索</div>
+                    <ul class="lr-list">
+                        <li ng-repeat="his in hisKeywordList" ng-click="selectKeyword(his.keyword)">{{his.keyword}}</li>
+                    </ul>
+
+                    <!--<ul class="lr-list">-->
+                    <!--<li>日本</li>-->
+                    <!--<li>日本</li>-->
+                    <!--<li>日本</li>-->
+                    <!--<li>日本</li>-->
+                    <!--</ul>-->
+                    <div class="clear_history J_hs-clear-history" ng-click="clearHis()">清除历史</div>
+                </div>
+            </div>
+            <!--<div class="searching_shade" ng-show="darkShow"></div>-->
+            <div class="searching_shade" ng-show="false"></div>
+            <div class="search-result no-result J_hs-result hide" style="text-align: left;position:absolute;left:0;top:45px;z-index:101;background-color:white;width:100%" ng-show="searchShow" id="seachList">
+
+
+                <!--<ul class="lr-list">-->
+                    <!--<li class="Qseaching_moreli"  ng-repeat="line in resultList" ui-sref="lineDetail({id:{{line.id}}})" ng-bind-html="line.name | cutByLength:38:keyword | to_trusted"></li>-->
+                <!--</ul>-->
+            </div>
+            <ul class="lxb_search_suggestion J_hs-suggestion" ng-show="searchShow">
+
+                <li class="link-li_parent J_suggest-link noneborder">
+                    <!--<h1>厦门</h1>-->
+                    <!--<span class="tip">约821个结果</span>-->
+                    <ul class="sub-ul" style="border-top: none;">
+                        <li class="link-li J_suggest-link" ng-show="lineShow">
+                            <div class="sub-title">
+                                <span class="title-icon bg-line2"><i class="icon-line2"></i></span>
+                                <h2 h-title keyword="keyword" pro-type="'lineList'"><em>{{keyword}}</em>的产品线路</h2>
+                                <!--<span class="tip">约821个结果</span>-->
+                            </div>
+                            <div class="tag-ctn">
+                                <ul class="lr-list">
+                                    <li class="Qseaching_moreli"  ng-repeat="line in lineList" ui-sref="lineDetail({id:{{line.id}}})" ng-bind-html="line.name | cutByLength:38:keyword | to_trusted"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="link-li J_suggest-link" ng-show="scenicShow">
+                            <div class="sub-title">
+                                <span class="title-icon bg-ticket"><i class="icon-ticket"></i></span>
+                                <h2 h-title keyword="keyword" pro-type="'scenicList'"><em>{{keyword}}</em>的景点</h2>
+                                <!--<span class="tip">约54个结果</span>-->
+                            </div>
+                            <div class="tag-ctn">
+                                <ul class="lr-list">
+                                    <li class="Qseaching_moreli"  ng-repeat="scenic in scenicList" ui-sref="scenicDetail({scenicId:{{scenic.id}}})" ng-bind-html="scenic.name | cutByLength:38:keyword | to_trusted"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--<li class="link-li J_suggest-link" data-appurl="tuniuapp://travel/hotel/home?citycode=414&amp;cityname=厦门&amp;lat=24.48985&amp;lng=118.137415" data-url="http://m.tuniu.com/hotel" data-name="厦门&nbsp;&nbsp;酒店">-->
+                            <!--<div class="sub-title">-->
+                                <!--<span class="title-icon bg-hotel3"><i class="icon-hotel3"></i></span>-->
+                                <!--<h2><em>厦门</em>的酒店</h2>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                        <!--<li class="link-li J_suggest-link" data-appurl="tuniuapp://travel/poidetail?poi_id=414&amp;poi_type=1&amp;poi_name=厦门&amp;poi_lat=24.495501&amp;poi_lng=118.143997" data-url="http://m.tuniu.com/g414/guide-0-0/" data-name="厦门&nbsp;&nbsp;攻略">-->
+                            <!--<div class="sub-title">-->
+                                <!--<span class="title-icon bg-raiders"><i class="icon-raiders"></i></span>-->
+                                <!--<h2><em>厦门</em>的攻略</h2>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="diymarch_addTour personal_addTour" ng-controller="ticketTouristListCtrl">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        选择常用游客
+        <span class="save"><a ng-click="submit()">完成</a></span>
+    </div>
+    <div class="blank"></div>
+    <div class="searchbox clearfix">
+        <input type="text" placeholder="搜索" ng-model="keyword" ng-keyup="search()" /><label class="editor" ui-sref="personalWriteTourMess"><label style="padding: 0 8px">+</label></label>
+    </div>
+    <div class="seltour">
+        <ul>
+            <li ng-repeat="tourist in touristList" ng-class="{true:tourist.check,false:!tourist.check}"
+                ng-click="selectTourist(tourist, $event)" ng-if="tourist.show">
+                <!--<span><img src="/yihaiyou/image/plan/icon-shuru.png"></span>-->
+                <span>{{tourist.name}}</span>
+                <span>{{tourist.showType}}</span>
+                <span class="phone">{{tourist.telephone}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

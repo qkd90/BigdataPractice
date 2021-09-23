@@ -1,0 +1,477 @@
+.wrap-box{
+    background: #f2f2f2;
+}
+.wrap-box .wrap{
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap-box .wrap .wrap-header{
+    padding-top: 32px;
+    padding-bottom: 53px;
+}
+.wrap-box .wrap .wrap-header .header-group{
+    width: 33.33%;
+    position: relative;
+    height: 6px;
+    background: #dbdbdb;
+}
+.wrap-box .wrap .wrap-header .header-group.active{
+    background: #ff8800;
+}
+.wrap-box .wrap .wrap-header .header-group .header-content{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top:-8px;
+}
+.wrap-box .wrap .wrap-header .header-group .header-content i{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(/image/choose_carbin_header_icon_circle.png) no-repeat center;
+    background-size: contain;
+    margin: 0 auto;
+}
+.wrap-box .wrap .wrap-header .header-group.active .header-content i{
+    background: url(/image/choose_carbin_header_icon_circle_active.png) no-repeat center;
+    background-size: contain;
+}
+.wrap-box .wrap .wrap-header .header-group .header-content span{
+    font-size: 12px;
+    color: #999;
+    line-height: 28px;
+    display: block;
+    text-align: center;
+}
+.wrap-box .wrap .wrap-header .header-group.active .header-content span{
+    color: #ff8800;
+}
+.wrap-box .wrap .product-title h4{
+    font-size: 20px;
+    color: #333;
+    line-height: 20px;
+    text-align: left;
+    font-weight: normal;
+}
+.wrap-box .wrap .product-title p{
+    font-size: 14px;
+    color: #999;
+    line-height: 42px;
+}
+.wrap-box .wrap .information .information-left{
+    width: 832px;
+}
+.wrap-box .wrap .information .information-left .information-contact{
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.wrap-box .wrap .information .information-left .information-contact h5{
+    font-size: 18px;
+    color: #999;
+    line-height: 64px;
+    text-align: left;
+    font-weight: normal;
+}
+.wrap-box .wrap .information .information-left .information-contact .contact-group {
+    margin-bottom: 10px;
+}
+.wrap-box .wrap .information .information-left .information-contact .contact-group label{
+    width: 100px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+    text-align: right;
+}
+.wrap-box .wrap .information .information-left .information-contact .contact-group label mark{
+    color: #ca1b1b;
+    background: transparent;
+}
+.wrap-box .wrap .information .information-left .information-contact .contact-group input{
+    width: 200px;
+    outline: none;
+    border: 1px solid #dbdbdb;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 10px;
+    margin: 0;
+}
+.wrap-box .wrap .information .information-left .information-contact .contact-group span{
+    line-height: 30px;
+    font-size: 12px;
+    color: #999;
+    text-align: right;
+    margin-left: 10px;
+}
+.wrap-box .wrap .information .information-left .information-person{
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+.wrap-box .wrap .information .information-left .information-person h5{
+    font-size: 18px;
+    color: #999;
+    line-height: 64px;
+    text-align: left;
+    font-weight: normal;
+}
+.wrap-box .wrap .information .information-left .information-person h5 span{
+    font-size: 12px;
+    color: #ff9813;
+    margin-left: 10px;
+}
+.wrap-box .wrap .information .information-left .information-person .cabin-category{
+    display: inline-block;
+    width: 140px;
+    height: 34px;
+    background: url(/image/customer_information_title_background_img.png) no-repeat center;
+    background-size: contain;
+    color: #fff;
+    padding-left: 20px;
+    line-height: 28px;
+    margin-left: -26px;
+    margin-bottom: 24px;
+}
+.wrap-box .wrap .information .information-left .information-person .person-group{
+    margin-bottom: 30px;
+}
+.wrap-box .wrap .information .information-left .information-person .person-group .group-header{
+    border-top: 1px solid #dbdbdb;
+    position: relative;
+    margin-bottom: 30px;
+}
+.wrap-box .wrap .information .information-left .information-person .person-group .group-header span{
+    font-size: 12px;
+    line-height: 22px;
+    color: #fff;
+    display: inline-block;
+    width: 42px;
+    height: 23px;
+    background: url(/image/customer_information_input_title_background_img.png) no-repeat center;
+    background-size: contain;
+    padding-left: 6px;
+    position: absolute;
+    left: 0;
+    top:-1px;
+}
+.wrap-box .wrap .information .information-left .information-person .person-group .group-input .input-group{
+    margin-bottom: 10px;
+}
+.wrap-box .wrap .information .information-left .information-person .person-group .group-input .input-group .input-label{
+    width: 100px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+    text-align: right;
+}
+.wrap-box .wrap .information .information-left .information-person .person-group .group-input .input-group .input-label mark{
+    color: #ca1b1b;
+    background: transparent;
+}
+.wrap-box .wrap .information .information-left .information-person .person-group .group-input .chinese-name input{
+    width: 222px;
+    outline: none;
+    border: 1px solid #dbdbdb;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 10px;
+    margin: 0;
+}
+.wrap-box .wrap .information .information-left .information-person .person-group .group-input .english-name input{
+    width: 95px;
+    outline: none;
+    border: 1px solid #dbdbdb;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 10px;
+    margin: 0;
+    margin-right: 10px;
+}
+.wrap-box .wrap .information .information-left .information-person .person-group .group-input .sex .input-radio label{
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    line-height: 32px;
+    margin-right: 30px;
+}
+.wrap-box .wrap .information .information-left .information-person .person-group .group-input .sex .input-radio label i{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #dbdbdb;
+    margin-right: 4px;
+}
+.wrap-box .wrap .information .information-left .information-person .person-group .group-input .sex .input-radio label.active i{
+    border-color: #3996fa;
+    background: #3996fa;
+}
+.wrap-box .wrap .information .information-left .information-person .person-group .group-input .birthday input{
+    width: 222px;
+    outline: none;
+    border: 1px solid #dbdbdb;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.wrap-box .wrap .information .information-left .information-bill{
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+.wrap-box .wrap .information .information-left .information-bill h5{
+    font-size: 18px;
+    color: #999;
+    line-height: 64px;
+    text-align: left;
+    font-weight: normal;
+}
+.wrap-box .wrap .information .information-left .information-bill .bill .bill-label{
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+    text-align: right;
+    margin-right: 10px;
+}
+.wrap-box .wrap .information .information-left .information-bill .bill .input-radio label{
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    line-height: 32px;
+    margin-right: 30px;
+}
+.wrap-box .wrap .information .information-left .information-bill .bill .input-radio label input{
+    display: none;
+}
+.wrap-box .wrap .information .information-left .information-bill .bill .input-radio label i{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #dbdbdb;
+    margin-right: 4px;
+}
+.wrap-box .wrap .information .information-left .information-bill .bill .input-radio label.active i{
+    border-color: #3996fa;
+    background: #3996fa;
+}
+.wrap-box .wrap .information .information-left .information-limit{
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+.wrap-box .wrap .information .information-left .information-limit h5{
+    font-size: 18px;
+    color: #999;
+    line-height: 64px;
+    text-align: left;
+    font-weight: normal;
+}
+.wrap-box .wrap .information .information-left .information-limit .limit-txt{
+    font-size: 12px;
+    color: #333;
+    text-align: left;
+    line-height: 20px;
+}
+.wrap-box .wrap .information .information-left .information-pay{
+    border: 1px solid #ff8800;
+    background: #fff;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.wrap-box .wrap .information .information-left .information-pay .pay-prev{
+    font-size: 12px;
+    color: #333;
+    line-height: 60px;
+}
+.wrap-box .wrap .information .information-left .information-pay .pay-next .pay-price{
+    font-size: 14px;
+    color: #333;
+    line-height: 60px;
+}
+.wrap-box .wrap .information .information-left .information-pay .pay-next .pay-price span{
+    font-size: 24px;
+    color: #f60;
+    line-height: 60px;
+}
+.wrap-box .wrap .information .information-left .information-pay .pay-next .pay-price span i{
+    font-size: 14px;
+    color: #f60;
+    font-style: normal;
+    line-height: 24px;
+    margin-left: 3px;
+}
+.wrap-box .wrap .information .information-left .information-pay .pay-next{
+    height: 60px;
+}
+.wrap-box .wrap .information .information-left .information-pay .pay-next .pay-btn {
+    width: 212px;
+    background: #f60;
+    text-align: center;
+    font-size: 22px;
+    line-height: 60px;
+    display: inline-block;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.wrap-box .wrap .information .information-left .information-contract{
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+.wrap-box .wrap .information .information-left .information-contract .contract-header{
+    border-bottom: 1px solid #dbdbdb;
+}
+.wrap-box .wrap .information .information-left .information-contract .contract-header h5{
+    font-size: 18px;
+    color: #999;
+    line-height: 64px;
+    text-align: left;
+    font-weight: normal;
+}
+.wrap-box .wrap .information .information-left .information-contract .contract-header .contract-agree{
+    font-size: 14px;
+    color: #333;
+    line-height: 64px;
+    text-align: left;
+    font-weight: normal;
+    cursor: pointer;
+}
+.wrap-box .wrap .information .information-left .information-contract .contract-header .contract-agree i{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+.wrap-box .wrap .information .information-left .information-contract .contract-header .contract-agree.active i{
+    background: url(/image/customer_contract_icon_agree.png) no-repeat center;
+    background-size: contain;
+    border: none;
+    width: 14px;
+    height: 14px;
+}
+.wrap-box .wrap .information .information-left .information-contract .contract-txt{
+    margin-top: 10px;
+    height: 382px;
+    overflow: auto;
+    font-size: 12px;
+    color: #333;
+    line-height: 20px;
+}
+.wrap-box .wrap .information .information-right{
+    width: 330px;
+    border-top:4px solid #ff6600;
+}
+.wrap-box .wrap .information .information-right .information-order{
+    border: 1px solid #dbdbdb;
+    border-top:none;
+    background: #fff;
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+}
+.wrap-box .wrap .information .information-right .information-order .order-header{
+    background: #fff3eb;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.wrap-box .wrap .information .information-right .information-order .order-header span{
+    font-size: 14px;
+    color: #333;
+    line-height: 60px;
+}
+.wrap-box .wrap .information .information-right .information-order .order-header .price{
+    font-size: 24px;
+    color: #f60;
+}
+.wrap-box .wrap .information .information-right .information-order .order-header .price sub{
+    font-size: 14px;
+    line-height: 14px;
+    vertical-align: baseline;
+    margin-right: 3px;
+}
+.wrap-box .wrap .information .information-right .information-order table{
+    text-align: left;
+    width: 310px;
+    margin-left: 20px;
+}
+.wrap-box .wrap .information .information-right .information-order table th{
+    border-bottom: 1px solid #f0f0f0;
+}
+.wrap-box .wrap .information .information-right .information-order table .th01{
+    width: 170px;
+    font-size: 18px;
+    color: #999;
+    font-weight: normal;
+    line-height: 46px;
+}
+.wrap-box .wrap .information .information-right .information-order table .th02{
+    width: 60px;
+}
+.wrap-box .wrap .information .information-right .information-order table .th03{
+    width: 80px;
+    font-size: 14px;
+    color: #f60;
+    font-weight: normal;
+}
+.wrap-box .wrap .information .information-right .information-order table tbody tr td{
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 12px;
+    color: #666;
+    line-height: 22px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.wrap-box .wrap .information .information-right .order-operation{
+    border: 1px solid #dbdbdb;
+}
+.wrap-box .wrap .information .information-right .order-operation a{
+    box-sizing: border-box;
+    width: 50%;
+    text-align: center;
+    background: #fff;
+    font-size: 12px;
+    color: #333;
+    line-height: 60px;
+}
+.wrap-box .wrap .information .information-right .order-operation a:hover{
+    background: #eff6fc;
+}
+.wrap-box .wrap .information .information-right .order-operation a.operation-contact{
+    border-right: 1px solid #dbdbdb;
+}
+.wrap-box .wrap .information .information-right .order-operation a i{
+    display: inline-block;
+    width: 21px;
+    height: 22px;
+    margin-right: 13px;
+    vertical-align: sub;
+}
+.wrap-box .wrap .information .information-right .order-operation a.operation-contact i{
+    background: url(/image/customer_information_icon_contactServer.png) no-repeat center;
+    background-size: contain;
+}
+.wrap-box .wrap .information .information-right .order-operation a.operation-save i{
+    background: url(/image/customer_information_icon_saveOrder.png) no-repeat center;
+    background-size: contain;
+}

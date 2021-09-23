@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.TransTimeMapper">
+    <insert id="insert" parameterType="TransTime">
+        insert into tb_trans_time
+        (
+        positions,
+        transit,
+        driving,
+        walking
+        )
+        values
+        (
+        #{positions},
+        #{transit},
+        #{driving},
+        #{walking}
+        )
+    </insert>
+
+    <update id="update" parameterType="TransTime">
+        update tb_trans_time
+        <set>
+            <if test="positions != null and '' != positions"> positions = #{positions},</if>
+            <if test="transit != null and '' != transit"> transit = #{transit},</if>
+            <if test="driving != null and '' != driving"> driving = #{driving},</if>
+            <if test="walking != null and '' != walking"> walking = #{walking},</if>
+        </set>
+        where
+        id = #{id}
+    </update>
+
+    <delete id="del" parameterType="TransTime">
+        delete from
+        tb_trans_time
+        where
+        id = #{id}
+    </delete>
+
+    <select id="selById" resultType="TransTime">
+        select
+        *
+        from
+        tb_trans_time
+        where
+        id = #{id}
+    </select>
+
+    <select id="count" resultType="int">
+        select
+        count(*)
+        <include refid="byProperty"/>
+    </select>
+
+    <select id="list" resultType="TransTime">
+        select
+        *
+        <include refid="byProperty"/>
+    </select>
+
+    <sql id="byProperty">
+        from
+        tb_trans_time
+        <where>
+            <if test="id != null and '' != id"> and id = #{id} </if>
+            <if test="positions != null and '' != positions"> and positions = #{positions} </if>
+            <if test="transit != null and '' != transit"> and transit = #{transit} </if>
+            <if test="driving != null and '' != driving"> and driving = #{driving} </if>
+            <if test="walking != null and '' != walking"> and walking = #{walking} </if>
+        </where>
+    </sql>
+</mapper>

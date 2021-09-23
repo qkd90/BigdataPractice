@@ -1,0 +1,40 @@
+<div ng-controller="yxlistCtrl">
+    <div class="fixtop topbg col-xs-12 navtop" id="fxtop">
+        <ul>
+            <!--<li><a ui-sref="youji">游记</a></li>-->
+            <li><a ui-sref="xianlu">线路</a></li>
+            <li class="active"><a ui-sref="yinxiang">印象</a></li>
+            <!--<li><a ui-sref="search">搜索</a></li>-->
+            <li class="pull-right xj"><a ui-sref="xieganxiang"></a></li>
+        </ul>
+    </div>
+    <div id="mycontainer" class="clearfix">
+        <div class="content yxlist" infinite-scroll="impressionList()" infinite-scroll-distance='1'
+             infinite-scroll-disabled='loading'>
+            <div class="clearfix" ng-repeat="data in yxlist">
+                <a ui-sref="yxdetail({id: data.id})"><img bn-lazy-src="{{data.cover}}?imageView2/1/w/600/h/300/q/75" style="width:100%;height: 200px;" class="img-responsive">
+
+                    <div class="info">
+                        <h4 class="name clearfix">
+                            <span class="pull-left">{{data.placeName}}</span>
+                            <span class="pull-right" style="font-size: 12px;">
+                                <span class="view">{{data.browsingNum}}</span>
+                                <span class="time">{{data.createTime}}</span>
+                            </span>
+                        </h4>
+                        <p class="text">{{data.content}}</p>
+                    </div>
+                </a>
+            </div>
+            <div ng-show="loading">
+                <div class="yuloading"><span>加载数据中...</span></div>
+            </div>
+            <div ng-show="nomore" class="alert alert-danger text-center">没有更多数据了</div>
+        </div>
+    </div>
+    <div class="fixbottom col-xs-12" id="appbottom">
+        <a ui-sref="yinxiang" class="active"><span class="fx">发现</span></a>
+        <a ui-sref="xing"><span class="dz">私人定制</span></a>
+        <a ui-sref="my"><span class="my">我的</span></a>
+    </div>
+</div>

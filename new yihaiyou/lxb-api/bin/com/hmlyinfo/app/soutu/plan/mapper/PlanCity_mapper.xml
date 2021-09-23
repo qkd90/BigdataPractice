@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.PlanCityMapper">
+	<insert id="insert" parameterType="PlanCity" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_plan_city
+			(
+				plan_id,
+				plan_days_id,
+				city_id,
+				order_num,
+				arrive_traffic,
+				leave_traffic,
+				modify_time
+			)
+		values
+			(
+				#{planId},
+				#{planDaysId},
+				#{cityId},
+				#{orderNum},
+				#{arriveTraffic},
+				#{leaveTraffic},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<insert id="insertmore" parameterType="List" useGeneratedKeys="true" keyProperty="id">  
+        insert into tb_plan_city  
+          (  	id,
+				plan_id,
+				plan_days_id,
+				city_id,
+				order_num,
+				arrive_traffic,
+				leave_traffic,
+				modify_time
+          )  
+          VALUES  
+          <foreach collection="list" item="item" index="index" separator="," >  
+          (  
+          		#{item.id},
+				#{item.planId},
+				#{item.planDaysId},
+				#{item.cityId},
+				#{orderNum},
+				#{arriveTraffic},
+				#{leaveTraffic},
+				#{item.modifyTime}
+          )  
+          </foreach>  
+    </insert>  
+	
+	<update id="update" parameterType="PlanCity">
+		update tb_plan_city
+		<set>
+			<if test="planId != null and '' != planId"> plan_id = #{planId},</if>
+			<if test="planDaysId != null and '' != planDaysId"> plan_days_id = #{planDaysId},</if>
+			<if test="cityId != null and '' != cityId"> city_id = #{cityId},</if>
+			<if test="orderNum != null and '' != cityId"> order_num = #{orderNum},</if>
+			<if test="arriveTraffic != null and '' != cityId"> arrive_traffic = #{arriveTraffic},</if>
+			<if test="leaveTraffic != null and '' != cityId"> leave_traffic = #{leaveTraffic},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<select id="getMaxId" resultType="long">
+		select max(id) from tb_plan_city
+	</select>
+	
+	<delete id="del" parameterType="PlanCity">
+		delete from
+			tb_plan_city
+		where
+			id = #{id}
+	</delete>
+	
+	<delete id="deleteByPlan" parameterType="Long">
+		delete from tb_plan_city where plan_id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="PlanCity">
+		select
+				*
+		from
+			tb_plan_city
+		where
+			id = #{id}
+	</select>
+	
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="PlanCity">
+		select 
+			*
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="listDistinct" resultType="long">
+		select 
+				distinct city_id
+				
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_plan_city
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="planId != null and '' != planId"> and plan_id = #{planId} </if>
+			<if test="planDaysId != null and '' != planDaysId"> and plan_days_id = #{planDaysId} </if>
+			<if test="cityId != null and '' != cityId"> and city_id = #{cityId} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		</where>
+		order by id
+	</sql>
+</mapper>

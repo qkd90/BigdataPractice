@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.PlanTripMapper">
+	<insert id="insert" parameterType="PlanTrip" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_plan_trip
+			(
+				<if test="id != null">
+				id,
+				</if>
+				plan_id,
+				user_id,
+				plan_days_id,
+				scenic_id,
+				travel_type,
+				trip_type,
+				start_time,
+				order_num,
+				travel_detail,
+				travel_mileage,
+				travel_time,
+				travel_hours,
+				custom_trip_name,
+				trip_desc,
+				modify_time,
+				travel_price,
+				source,
+				source_id,
+				delicacy_id
+			)
+		values
+			(
+				<if test="id != null ">
+				#{id},
+				</if>
+				#{planId},
+				#{userId},
+				#{planDaysId},
+				#{scenicIds},
+				#{trafficType},
+				#{tripType},
+				#{startTime},
+				#{orderNum},
+				#{travelDetail},
+				#{travelMileage},
+				#{travelTime},
+				#{travelHours},
+				#{customTripName},
+				#{tripDesc},
+				#{modifyTime},
+				#{travelPrice},
+				#{source},
+				#{sourceId},
+				#{delicacyIds}
+			)
+	</insert>
+	
+	<insert id="insertmore" parameterType="list" useGeneratedKeys="true" keyProperty="id">
+        insert into tb_plan_trip
+          (
+          		id,
+				plan_id,
+				user_id,
+				plan_days_id,
+				scenic_id,
+				travel_type,
+				trip_type,
+				start_time,
+				order_num,
+				travel_detail,
+				travel_mileage,
+				travel_time,
+				travel_hours,
+				custom_trip_name,
+				trip_desc,
+				modify_time,
+				travel_price,
+				source,
+				source_id,
+				delicacy_id
+          )
+          VALUES
+          <foreach collection="list" item="item" index="index" separator="," >
+          (
+          		#{item.id},
+				#{item.planId},
+				#{item.userId},
+				#{item.planDaysId},
+				#{item.scenicIds},
+				#{item.trafficType},
+				#{item.tripType},
+			  	#{item.startTime},
+				#{item.orderNum},
+				#{item.travelDetail},
+				#{item.travelMileage},
+				#{item.travelTime},
+				#{item.travelHours},
+				#{item.customTripName},
+				#{item.tripDesc},
+				#{item.modifyTime},
+				#{item.travelPrice},
+				#{item.source},
+				#{item.sourceId},
+				#{item.delicacyIds}
+          )
+          </foreach>
+    </insert>
+
+	<update id="update" parameterType="PlanTrip">
+		update tb_plan_trip
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="planId != null and '' != planId"> plan_id = #{planId},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="planDaysId != null and '' != planDaysId"> plan_days_id = #{planDaysId},</if>
+			<if test="scenicIds != null and '' != scenicIds"> scenic_id = #{scenicIds},</if>
+			<if test="trafficType != null and '' != trafficType"> travel_type = #{trafficType},</if>
+			<if test="tripType != null and '' != tripType"> trip_type = #{tripType},</if>
+			<if test="startTime != null and '' != startTime"> start_time = #{startTime},</if>
+			<if test="orderNum != null and '' != orderNum"> order_num = #{orderNum},</if>
+			<if test="travelDetail != null and '' != travelDetail"> travel_detail = #{travelDetail},</if>
+			<if test="travelMileage != null and '' != travelMileage"> travel_mileage = #{travelMileage},</if>
+			<if test="travelTime != null and '' != travelTime"> travel_time = #{travelTime},</if>
+			<if test="travelHours != null and '' != travelHours"> travel_hours = #{travelHours},</if>
+			<if test="customTripName != null and '' != customTripName"> custom_trip_name = #{customTripName},</if>
+			<if test="tripDesc != null and '' != tripDesc"> trip_desc = #{tripDesc},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="travelPrice != null and '' != travelPrice"> travel_price = #{travelPrice},</if>
+			<if test="source != null and '' != source"> source = #{source},</if>
+			<if test="sourceId != null and '' != sourceId"> source_id = #{sourceId},</if>
+			<if test="delicacyIds != null and '' != delicacyIds"> delicacy_id = #{delicacyIds},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+
+	<delete id="del" parameterType="PlanTrip">
+		delete from
+			tb_plan_trip
+		where
+			id = #{id}
+	</delete>
+	
+	<delete id="delByPlan" parameterType="long">
+		delete from tb_plan_trip where plan_id = #{planId}
+	</delete>
+	
+	<select id="getMaxId" resultType="long">
+		select max(id) from tb_plan_trip
+	</select>
+
+	<select id="selById" resultType="PlanTrip">
+		select
+				id,
+				plan_id,
+				user_id,
+				plan_days_id,
+				scenic_id,
+				travel_type,
+				trip_type,
+				start_time,
+				order_num,
+				travel_detail,
+				travel_mileage,
+				travel_time,
+				travel_hours,
+				custom_trip_name,
+				trip_desc,
+				modify_time,
+				create_time,
+				travel_price
+		from
+			tb_plan_trip
+		where
+			id = #{id}
+	</select>
+
+	<select id="count" resultType="int">
+		select
+			count(id,
+			plan_id,
+				plan_days_id,
+				scenic_id,
+				travel_type,
+				trip_type,
+				start_time,
+				order_num,
+				travel_detail,
+				travel_mileage,
+				travel_time,
+				travel_hours,
+				custom_trip_name,
+				trip_desc,
+				modify_time,
+				create_time,
+				travel_price)
+		<include refid="byProperty"/>
+	</select>
+
+	<select id="list" resultType="PlanTrip">
+		select
+				*
+		<include refid="byProperty"/>
+	</select>
+
+	<sql id="byProperty">
+		from
+			tb_plan_trip
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="planId != null and '' != planId"> and plan_id = #{planId} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="planDaysId != null and '' != planDaysId"> and plan_days_id = #{planDaysId} </if>
+			<if test="scenicIds != null and '' != scenicIds"> and scenic_id = #{scenicIds} </if>
+			<if test="trafficType != null and '' != trafficType"> travel_type = #{trafficType},</if>
+			<if test="tripType != null and '' != tripType"> and trip_type = #{tripType} </if>
+			<if test="startTime != null and '' != startTime"> and start_time = #{startTime} </if>
+			<if test="orderNum != null and '' != orderNum"> and order_num = #{orderNum} </if>
+			<if test="travelDetail != null and '' != travelDetail"> and travel_detail = #{travelDetail} </if>
+			<if test="travelMileage != null and '' != travelMileage"> and travel_mileage = #{travelMileage} </if>
+			<if test="travelTime != null and '' != travelTime"> and travel_time = #{travelTime} </if>
+			<if test="travelHours != null and '' != travelHours"> and travel_hours = #{travelHours} </if>
+			<if test="customTripName != null and '' != customTripName"> and custom_trip_name = #{customTripName} </if>
+			<if test="tripDesc != null and '' != tripDesc"> and trip_desc = #{tripDesc} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="travelPrice != null and '' != travelPrice"> and travel_price = #{travelPrice} </if>
+			<if test="source != null and '' != source"> and source = #{source} </if>
+			<if test="sourceId != null and '' != sourceId"> and source_id = #{sourceId} </if>
+			<if test="delicacyIds != null and '' != delicacyIds"> and delicacy_id = #{delicacyIds} </if>
+			<if test="days !=null and planId != null"> and plan_days_id = (select min(id) from tb_plan_days where plan_id = #{planId} and days = #{days}) </if>
+		</where>
+		order by plan_days_id,order_num
+	</sql>
+
+    <delete id="delByDay" parameterType="long">
+        delete from tb_plan_trip where plan_days_id=#{planDaysId}
+    </delete>
+</mapper>

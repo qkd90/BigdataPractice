@@ -1,0 +1,335 @@
+
+.mainBox {
+	width: 1198px;
+	background: #fff;
+	margin: 40px auto;
+	padding: 15px;
+	font-family: '微软雅黑';
+	border:1px solid #e0e0e0;
+}
+
+.createbox {
+	width:1160px;
+	margin:auto;
+}
+
+.createMarch {
+	width: 125px;
+	height: 33px;
+	line-height: 33px;
+	text-align: center;
+	color: #fff;
+	background: #ff8800;
+	font-size: 14px;
+	float: left;
+	cursor: pointer;
+	margin:30px 0 20px 0;
+	border-radius: 4px;
+}
+
+.createMarch label {
+	font-size: 18px;
+}
+
+.contact_header {
+	padding-bottom: 8px;
+	border-bottom: 1px solid #eee;
+}
+
+.contact_body {
+	line-height: 90px;
+}
+
+.contact_header span {
+	display: inline-block;
+	color: #999;
+	font-size: 14px;
+	text-align: center;
+}
+
+.contact_body span {
+	color: #333;
+	font-size: 16px;
+}
+
+.contact_header span.index {
+	width: 105px;
+}
+
+.contact_header span.name {
+	width: 145px;
+}
+
+.contact_header span.sex {
+	width: 145px;
+}
+
+.contact_header span.carid {
+	width: 240px;
+}
+
+.contact_header span.cartype {
+	width: 110px;
+}
+
+.contact_header span.phonenum {
+	width: 200px;
+}
+
+.contact_header span.tratype {
+	width: 100px;
+}
+
+.contact_body span.index {
+	/*text-indent: 20px;*/
+	cursor: pointer;
+	/*background: url(/image/icon-dislimit.png) no-repeat 38px center;*/
+}
+
+.contact_body span.check {
+	background: url(/image/icon-limited.png) no-repeat 38px center;
+}
+
+.contact_body span.operate {
+	width: 100px;
+}
+
+.contact_body span.operate .edi {
+	color: #3996fa;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.contact_body span.operate .del {
+	color: #ff1100;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.mainBox .page {
+	width: 1200px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.shadow {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 6;
+	display: none;
+}
+
+.setpswordBox {
+	width: 760px;
+	height: 580px;
+	background: #fff;
+	position: fixed;
+	left:calc(50% - 380px);
+	top:calc(50% - 290px);
+	z-index: 7;
+	display: none;
+}
+
+.chromBox {
+	left:-webkit-calc(50% - 380px);
+	top:-webkit-calc(50% - 290px);
+}
+
+.FirefoxBox {
+	left:-moz-calc(50% - 90px);
+	top:-moz-calc(50% - 290px);
+}
+
+.with_header {
+	width: 100%;
+	color: #333;
+	height: 50px;
+	font-size: 18px;
+	text-indent: 25px;
+	line-height: 50px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.with_header span.closebtn {
+	width: 50px;
+	height: 50px;
+	float: right;
+	cursor: pointer;
+	background: url(/image/icon_close.png) no-repeat center center;
+}
+
+.with_body {
+	padding: 25px 40px;
+	font-family: '微软雅黑';
+}
+
+.newUser {
+	
+}
+
+.newUser ul li {
+	height: 30px;
+	line-height: 30px;
+	margin-bottom: 18px;
+}
+
+.newUser ul li span.user_l {
+	width: 6em;
+	float: left;
+	text-align: right;
+	font-size: 14px;
+	color: #333;
+	margin-right: 15px;
+}
+
+.newUser ul li span.user_l label {
+	color:#ff8800;
+	margin-right:5px;
+	display:inline-block;
+}
+
+.newUser ul li span.user_l i {
+	color: #fff;
+}
+
+.newUser ul li input {
+	width: 200px;
+	height: 30px;
+	border: 1px solid #e0e0e0;
+	outline: none;
+	border-radius: 2px;
+	padding: 3px 10px;
+	font-size: 13px;
+	color: #333;
+}
+
+.newUser ul li input.bir {
+	width: 115px;
+	float: left;
+	border:none;
+	padding: 3px 10px;
+	font-size: 15px;
+	color: #333;
+}
+
+.newUser ul li .sex {
+	width: 200px;
+	height: 30px;
+	font-size: 14px;
+	color: #333;
+	float: left;
+	line-height: 30px;
+}
+
+.newUser ul li .cartype {
+	width: 550px;
+}
+
+.newUser ul li .button {
+	width: 410px;
+	float: left;
+}
+
+.newUser ul li .birth {
+	width: 150px;
+	/*height: 30px;*/
+	margin-right: 10px;
+	border:1px solid #e0e0e0;
+	float: left;
+	border-radius: 2px;
+	position: relative;
+}
+
+.newUser ul li span.advice {
+	color: #999;
+	font-size: 12px;
+	padding-left: 15px;
+}
+
+.newUser ul li .checksel span {
+	display: inline-block;
+	/*width: 16px;*/
+	padding-left: 18px;
+	margin-right: 32px;
+	cursor: pointer;
+	background: url(/image/icon-NO.png) no-repeat left center;
+} 
+
+.newUser ul li .checksel .checksex {
+	background: url(/image/icon-YES.png) no-repeat left center;
+}
+
+.newUser ul li .cartype span {
+	width: 82px;
+	margin-right: 0;
+	padding-left: 20px;
+	background: url(/image/icon_normal2.png) no-repeat left center;
+}
+
+.newUser ul li .cartype .checksex {
+	background: url(/image/icon_selected.png) no-repeat left center;
+}
+
+.newUser ul li .button span.save {
+	color: #fff;
+	width: 130px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 16px;
+	margin: 10px 25px 0 0;
+	border-radius: 4px;
+	background: #ff8800;
+	float: left;
+	cursor: pointer;
+}
+
+.newUser ul li .button span.cancle {
+	border:1px solid #e0e0e0;
+	color: #666;
+	background: #fff;
+	cursor: pointer;
+}
+
+.newUser ul li .button span.save-msg {
+    line-height: 50px;
+    color: #ff8800;
+}
+
+.newUser .birth .downbtn {
+	width: 30px;
+	height: 14px;
+	float: right;
+	margin-top:8px;
+	cursor: pointer;
+	border-left: 1px solid #e0e0e0;
+	background: url(/image/icon_down_e.png) no-repeat center center;
+}
+
+.newUser .birth .downlist {
+	width: 115px;
+	position: absolute;
+	left: 0;
+	top: 30px;
+	border: 1px solid #e0e0e0;
+	background: #fff;
+	display: none;
+}
+
+.newUser .birth .downlist p {
+	line-height: 30px;
+	border-bottom: 1px solid #e0e0e0;
+	text-align: center;
+	font-size: 15px;
+	cursor: pointer;
+}

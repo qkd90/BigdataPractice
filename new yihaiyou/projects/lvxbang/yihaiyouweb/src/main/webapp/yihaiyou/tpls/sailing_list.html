@@ -1,0 +1,83 @@
+
+<div class="sailling_selection" ng-controller="sailboatYachListCtrl">
+    <div class="header">
+        <a ng-click="goSailboatYachtIndex()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        <span>海上休闲</span>
+        <!--<span class="save pic1"></span>-->
+        <span class="save pic2" ui-sref="personalIndex"></span>
+    </div>
+    <div class="selbar">
+        <!--<ul class="clearfix">-->
+            <!--<li ng-class="{titleColor: titleNum == 1}" ng-click="showselectList(1)">-->
+                <!--<span>{{tempSupplierName}}</span><i class="icon iconfont" ng-bind-html="down1 | trustHtml"></i>-->
+            <!--</li>-->
+            <!--<li ng-class="{titleColor: titleNum == 2}" ng-click="showselectList(2)">-->
+                <!--<span>{{sailSel}}</span><i class="icon iconfont" ng-bind-html="down2 | trustHtml"></i>-->
+            <!--</li>-->
+            <!--<li ng-class="{titleColor: titleNum == 3}" ng-click="showselectList(3)">-->
+                <!--<span>{{sailSort}}</span><i class="icon iconfont" ng-bind-html="down3 | trustHtml"></i>-->
+            <!--</li>-->
+        <!--</ul>-->
+        <ul class="clearfix">
+            <li ng-class="{titleColor: titleNum == 1}" ng-click="showselectList(1)">
+                <span>{{tempSupplierName}}</span>
+                <i ng-class="{blue_down: titleNum == 1}"></i>
+            </li>
+            <li ng-class="{titleColor: titleNum == 2}" ng-click="showselectList(2)">
+                <span>{{sailSel}}</span>
+                <i ng-class="{blue_down: titleNum == 2}"></i>
+            </li>
+            <li ng-class="{titleColor: titleNum == 3}" ng-click="showselectList(3)">
+                <span>{{sailSort}}</span>
+                <i ng-class="{blue_down: titleNum == 3}"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="selbar2">
+        <ul class="ul2">
+            <!--ng-class="{selrange:selrangeone == type.index}" -->
+            <li ng-repeat="type in typelist" ng-class="{selrange:selrangeone == type.index}" ng-click="selranges(type.index)">{{type.name}}</li>
+        </ul>
+    </div>
+    <div class="sailSelectList" infinite-scroll="getSailboatYachtList()"
+         infinite-scroll-disabled='loading' infinite-scroll-distance='1'>
+        <ul>
+            <li class="clearfix" ng-repeat="goods in commodities" ng-click="goSailboatYachtDetail(goods.id)">
+                <div class="pic"><img bn-lazy-src="{{goods.productImg}}"><span ng-if="goods.isTodayValid">今日可订</span></div>
+                <ul class="sailListContain">
+                    <li>{{goods.name}}</li>
+                    <li>
+                        <div class="star" ng-class="goods.xing"><!--<img src="/yihaiyou/image/ico/3xing.png">--></div>
+                        <div class="score">{{goods.productScore}}分</div>
+                        <!---->
+                        <!--<div class="booking" ng-if="goods.orderNum != null && goods.orderNum >= 0">{{goods.orderNum}}人预定</div>-->
+                    </li>
+                    <li><span><span class="rmb1">¥</span>{{goods.disCountPrice}}</span> 起/人</li>
+                    <li><span>地点：</span>{{goods.address}}</li>
+                    <div class="linebooking">在线预定</div>
+                </ul>
+            </li>
+
+        </ul>
+        <div ng-show="loading">
+            <!--<div class="yuloading"><span>加载数据中...</span></div>-->
+        </div>
+        <div ng-show="nomore" class="alert alert-danger text-center bg_loading">没有更多了...</div>
+    </div>
+    <div class="expSel" ng-show="listNum == 1">
+        <ul>
+            <li ng-repeat="supplier in supplierList" ng-class="{true:'sailling_selection_color', false:''}[supplier.index == supplierIndex]" ng-click="replaceSupplier(supplier.name, supplier.index)">{{supplier.name}}</li>
+        </ul>
+    </div>
+    <div class="all" ng-show="listNum == 2">
+        <ul>
+            <li ng-repeat="tprice in Tprice" ng-class="{true:'sailling_selection_color', false:''}[tprice.index == tpriceIndex]" ng-click="replacePrice(tprice.name, tprice.index)">{{tprice.name}}</li>
+        </ul>
+    </div>
+    <div class="sorting" ng-show="listNum == 3">
+        <ul>
+            <li ng-repeat="sort in Sorts" ng-class="{true:'sailling_selection_color', false:''}[sort.index == sortIndex]" ng-click="replaceSort(sort.name, sort.index)">{{sort.name}}</li>
+        </ul>
+    </div>
+    <div class="shadowbox" ng-show="shadowbox" ng-click="hideshadow()"></div>
+</div>

@@ -1,0 +1,630 @@
+label.rmb {
+	vertical-align: super;
+	font-size: 18px;
+}
+
+label.num {
+	font-size: 30px;
+}
+
+
+.detailTop {
+	width: 100%;
+	padding-bottom: 1px;
+	font-family: '微软雅黑';
+	border-top:2px solid #3996fa;
+	background-color: #f3f8fe;
+}
+
+.detailTop .outrangestate {
+	width: 100%;
+	background: #fff;
+}
+
+.detailTop .outrangestatein {
+	width:1200px;
+	margin:auto;
+}
+
+.detailTop .rangestate {
+	width: 1200px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 15px;
+	color: #333;
+}
+
+.detailTop .rangestate a {
+	color:#ff8800;
+}
+
+.detailTop .rangestate a:hover {
+	text-decoration:underline;
+}
+
+.detailTop .rangestate .history {
+	color: #ff8800;
+}
+
+.detailTop .finalbox {
+	width: 1200px;
+	height: 68px;
+	border:1px solid #3996fa;
+	top:0;
+	background:#fff;
+	z-index: 10;
+}
+
+.detailTop .finashadow {
+	box-shadow:0 1px 3px #3996fa;
+}
+
+.finalbox .suggestman {
+	width: 350px;
+	float: left;
+}
+
+.finalbox .suggestman span.face {
+	float: left;
+	width: 70px;
+	height: 100%;
+}
+
+.suggestman span.face img {
+	display: block;
+	width: 56px;
+	height: 56px;
+	border-radius: 50px;
+	margin: 7px auto;
+}
+
+.suggestman p.yours {
+	color: #333;
+	font-weight: 600;
+	font-size: 16px;
+	padding-top: 12px;
+	font-family: 'simsun';
+}
+
+.suggestman p.yours input {
+	width:150px;
+	height:22px;
+	outline:none;
+	line-height:22px;
+	margin-right:5px;
+	text-indent:5px;
+	border-radius:3px;
+	display:none;
+	border:1px solid #ccc;
+}
+
+.suggestman p.yours i {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	color: #fff;
+	cursor:pointer;
+	text-align:right;
+	background: url(/image/pencil.png) no-repeat bottom center;
+}
+
+.suggestman p.yours .save {
+	background: url(/image/icon-kuang02.png) no-repeat bottom center;
+	background-size:15px;
+}
+
+.suggestman p.suggester {
+	color: #333;
+	font-size: 12px;
+	padding-top: 8px;
+	font-family: 'adobeinvisfont'
+}
+
+.finalbox .fare {
+	width: 480px;
+	float: left;
+	color: #333;
+	font-size: 18px;
+	text-indent: 20px;
+	line-height: 60px;
+	background: url(/image/icon_weizhi.png) no-repeat center left;
+}
+
+.finalbox .fare span {
+	color: #ff8800;
+}
+
+.finalbox .buy {
+	width: 360px;
+	float: right;
+}
+
+.finalbox .buy span {
+	float: right;
+	width: 160px;
+	height: 48px;
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	line-height: 48px;
+	margin: 11px 11px 0 0;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.finalbox .buy .buying {
+	background-color: #3996fa;
+}
+
+.finalbox .buy .save {
+	background-color: #ff8800;
+}
+
+.marchdetail {
+	width: 1200px;
+	margin: 30px auto;
+	font-family: '微软雅黑'
+}
+
+.marchdetail .march_left {
+	width: 790px;
+	float: left;
+}
+
+.marchdetail span.t_title {
+	display: block;
+	height: 30px;
+	width:790px;
+	line-height: 30px;
+	text-indent: 10px;
+	color: #3996fa;
+	font-size: 18px;
+	border-left: 3px solid #3996fa;
+	background-color: #f7f7f7;
+}
+
+.march_left .aday {
+	
+}
+
+.march_left .final_aday {
+	width: 100%;
+	height: 48px;
+	font-size: 16px;
+	color: #333;
+	line-height: 40px;
+	margin-top: 20px;
+	text-indent: 12px;
+	background-color: #f3f8fe;
+}
+
+.march_left .final_aday span {
+	color: #ff8800;
+}
+
+.march_left .boat_hotel {
+	height: 210px;
+	margin-top: 20px;
+	border:1px solid #e0e0e0;
+	border-top: 3px solid #e0e0e0;
+}
+
+.march_left .boat_hotel.noHotel {
+	background: #f0f0ef;
+	border: 1px solid #dddddd;
+	font-size: 20px;
+	color: #999999;
+}
+
+.march_left .boat_hotel.noHotel .noHotelInfo {
+	margin-left: 160px;
+	margin-top: 85px;
+	position: absolute;
+}
+
+.march_left .scenic {
+	height: 300px;
+	margin-top: 20px;
+	border:1px solid #e0e0e0;
+	border-top: 3px solid #e0e0e0;
+}
+
+.boat_hotel .pic {
+	width: 200px;
+	height: 150px;
+	float: left;
+	overflow: hidden;
+	margin: 30px 20px 30px 30px;
+}
+
+.scenic .pic {
+	margin: 20px 20px 30px 30px;
+}
+
+.boat_hotel .pic img {
+	width: 100%;
+	height: 100%;
+}
+
+.boat_hotel .mess {
+	width: 410px;
+	float: left;
+	margin: 26px 0;
+}
+
+.scenic .mess {
+	width: 510px;
+}
+
+.boat_hotel .mess p {
+	line-height: 28px;
+}
+
+.boat_hotel .mess span.lef {
+	padding:0 5px 0 23px;
+	color: #666;
+	font-size: 18px;
+}
+
+.boat_hotel .mess span.line {
+	background: url(/image/icon_weizhi.png) no-repeat left center;
+}
+
+.boat_hotel .mess span.date {
+	background: url(/image/iocn_riqi.png) no-repeat left center;
+}
+
+.boat_hotel .mess span.price {
+	background: url(/image/icon_jiage.png) no-repeat left center;
+}
+
+.boat_hotel .mess span.hotel {
+	background: url(/image/icon_jiudian.png) no-repeat left center;
+}
+
+.boat_hotel .mess span.intro {
+	float: left;
+	background: url(/image/icon-copy.png) no-repeat left center;
+}
+
+.boat_hotel .mess span.clock {
+	float: left;
+	background: url(/image/icon-clock.png) no-repeat left center;
+}
+
+.boat_hotel .mess label.rmb {
+	color: #ff8800;
+}
+
+.boat_hotel .mess label.num {
+	font-size: 24px;
+	color: #ff8800;
+}
+
+.boat_hotel .mess span.product {
+	font-size: 16px;
+	color: #333;
+	font-weight: 600;
+}
+
+.boat_hotel .mess span.time {
+	font-size : 16px;
+	color: #666;
+}
+
+.boat_hotel .mess span.pri {
+	font-size: 16px;
+	color: #333;
+}
+
+.boat_hotel .mess span.qi {
+	color: #555;
+	font-size: 14px;
+}
+
+.boat_hotel .change {
+	width: 100px;
+	float: left;
+	margin: 30px 0;
+	height: 150px;
+	position: relative;
+}
+
+.boat_hotel.noHotel .change {
+	left: 660px;
+}
+
+.boat_hotel .changebox {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 6;
+	width: 90px;
+	height: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: center;
+	border-radius:4px;
+	cursor: pointer;
+	background-color: #ff8800;
+}
+
+.boat_hotel .changebox a {
+	display: block;
+	color: #fff;
+}
+
+.boat_hotel .mess .introbox {
+	float: right;
+	width: 300px;
+	color: #999;
+	height: 55px;
+	overflow: hidden;
+	padding-right:25px; 
+	font-size: 14px;
+}
+
+.scenic .mess .introbox {
+	width: 425px;
+	padding-right: 0;
+}
+
+.scenic .scen_name {
+	padding-left: 30px;
+	color: #333;
+	height: 68px;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 68px;
+}
+
+.scenic .scen_name span {
+	color: #fff;
+	font-size: 26px;
+	padding: 20px 5px;
+	margin-right: 15px;
+	background: url(/image/icon-namebg.png) no-repeat center 68%;
+}
+
+.scenic span.ad_time {
+	font-size: 16px;
+    color: #333;
+}
+
+.scenic span.ad_time span {
+	color: #ff8800;
+	font-weight: 600;
+}
+
+.marchdetail .march_right {
+	width: 390px;
+	float: right;
+	margin-top:-30px;
+}
+
+.march_right .map {
+	width: 100%;
+	height: 420px;
+	overflow: hidden;
+}
+
+.march_right .map img {
+	width: 100%;
+}
+
+.march_right .dayline {
+	width: 386px;
+	border-left: 1px solid #e0e0e0;
+}
+
+.march_right p.line_title {
+	font-size: 16px;
+	color: #555;
+	padding: 28px 0 10px 0;
+	font-weight: 600;
+	font-family: 'simsun';
+}
+
+.march_right .dayline ul li {
+	position: relative;
+	line-height: 26px;
+}
+
+.march_right .dayline ul li span.pointer:hover {
+	cursor:pointer;
+}
+
+.dayline .boat {
+	background: url(/image/icon-boat.png) no-repeat 30px 5px;
+}
+
+.dayline .scen {
+	background: url(/image/icon-scenic.png) no-repeat 30px 5px;
+}
+
+.dayline .hotel {
+	background: url(/image/icon_jiudian.png) no-repeat 30px 5px;
+}
+
+.dayline .daynum {
+	font-size: 15px;
+	color: #666;
+	text-indent: 15px;
+}
+
+.dayline i {
+	z-index: 6;
+	display: block;
+	position: absolute;
+}
+
+.dayline .daynum i {
+	width: 15px;
+	height: 12px;
+	top: 7px;
+	left: -6px;
+	background: url(/image/icon-daymarch.png) no-repeat center center;
+}
+
+.dayline .sec {
+	font-size: 14px;
+	color: #777;
+	text-indent: 50px;
+}
+
+.dayline .sec i {
+	width: 6px;
+	height: 6px;
+	top: 7px;
+	left: -3px;
+	background-color: #bbb;
+	border-radius: 50%;
+}
+
+.dayline .sec p {
+	text-indent: 60px;
+	font-size: 12px;
+	line-height: 26px;
+}
+
+.shadowbox {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 11;
+	display: none;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+}
+
+.tourbox {
+	width: 740px;
+	/*height: 510px;*/
+	position: fixed;
+	left: 200px;
+	top: 150px;
+	z-index: 11;
+	background: #fff;
+	font-family: '微软雅黑';
+	display: none;
+}
+
+.tourbox .title_close {
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;
+	color: #333;
+	text-indent:30px;
+	border-bottom:1px solid #e0e0e0;
+}
+
+.tourbox .title_close span {
+	width: 60px;
+	height: 60px;
+	float: right;
+	cursor: pointer;
+	background:url(/image/icon_close.png) no-repeat center center;
+}
+
+.tourbox .edited {
+	margin: 20px 0 0 72px;
+	height:120px;
+	overflow:auto;
+}
+
+.tourbox .edited p {
+	margin-bottom:15px;
+	font-size: 13px;
+	color: #333;
+	cursor: pointer;
+	text-indent: 20px;
+	background:url(/image/icon_normal.png) no-repeat left center;
+}
+
+.tourbox .edited p.checked {
+	background:url(/image/icon_selected.png) no-repeat left center;
+}
+
+.tourbox .edited p span.adult {
+	padding:0 24px;
+}
+
+.tourbox .savebtn {
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	margin:30px auto;
+	background-color: #ff8800;
+	display: block;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.tourbox .savebtn a {
+	display: block;
+	color: #fff;
+}
+
+.tourbox .addtour {
+	margin-top: 15px;
+	padding-left: 45px;
+}
+
+.tourbox .addtour ul li {
+	width: 275px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	margin-top: 20px;
+}
+
+.addtour ul li label {
+	width: 54px;
+	font-size: 13px;
+	color: #333;
+	padding-right: 18px;
+	text-align: right;
+	line-height: 30px;
+	display: inline-block;
+}
+
+.addtour ul li input {
+	width: 200px;
+	height: 30px;
+	float: right;
+	outline: none;
+	line-height:30px;
+	padding:3px 0;
+	text-indent:15px;
+	border-radius:2px;
+	border:1px solid #e0e0e0;
+}
+
+.addtour ul li.card {
+	position: relative;
+}
+
+.addtour ul li.card input {
+	background:url(/image/icon-down2.png) no-repeat 180px center;
+}
+
+.addtour ul li.card .cardlist {
+	width: 198px;
+	position: absolute;
+	right: 0;
+	top: 29px;
+	border:1px solid #e0e0e0;
+	border-bottom: none;
+	display: none;
+}
+
+.addtour ul li.card .cardlist p {
+	border-bottom:1px solid #e0e0e0;
+	padding-left: 15px;
+	cursor: pointer;
+}

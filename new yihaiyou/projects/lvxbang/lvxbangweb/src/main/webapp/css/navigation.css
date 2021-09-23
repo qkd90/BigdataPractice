@@ -1,0 +1,140 @@
+﻿.navBanner {
+    position: relative;
+    z-index: 10;
+}
+
+.nav_bg {
+    z-index: 99;
+    left: 50%;
+    height: 320px;
+}
+
+.nav_bg .mailTablePlan {
+    width: 100%;
+
+    float: left;
+    position: relative;
+}
+
+.searchBox {
+    padding: 40px 0 40px 0;
+    margin: 0 auto;
+    /*border: 1px solid #ddd;*/
+    /*padding: 0 5px;*/
+    /**padding: 0 5px 10px;*/
+    overflow: hidden;
+}
+
+.selected label {
+    color: #666666;
+    font-weight: bold;
+}
+
+.selected span {
+    color: #666666;
+    font-weight: bold;
+}
+
+.selected label, .selected span, .select_plan, .select_list4 ul li {
+    float: left;
+}
+
+.select {
+    margin-top: -1px;
+    height: auto;
+    overflow: hidden;
+}
+
+.select_div {
+    /*border-top: 1px solid #f0f0f0;*/
+    color: #3CB371;
+    margin: 0 15px 0;
+    /*padding: 16px 0;*/
+    clear: both;
+}
+
+.select label {
+    float: left;
+    width: 120px;
+    font-weight: bold;
+    /*text-align: right;*/
+    line-height: 20px;
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    /*margin-bottom: 16px;*/
+    /*margin-right: 21px;*/
+}
+
+.select span {
+    float: left;
+    width: 120px;
+    font-weight: bold;
+    /*text-align: right;*/
+    line-height: 20px;
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    /*margin-bottom: 16px;*/
+    /*margin-right: 21px;*/
+}
+.select ul {
+    float: left;
+    width: 840px;
+}
+
+.select ul li {
+    width: 120px;
+    float: left;
+    line-height: 20px;
+    height: 20px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+/*.select ul li.whole {*/
+/*width: 75px;*/
+/*}*/
+
+.select ul a {
+    /*color: #666;*/
+    padding: 3px 4px;
+}
+
+.select a:hover, .select a.checked {
+    text-decoration: underline;
+}
+
+
+.nav1 {
+    background-color: #696969;
+    margin: 0 auto;
+    width: 100%;
+    list-style: none;
+    clear: both;
+}
+
+.nav2 {
+    background-color: #2F4F4F;
+    margin: auto;
+    width: 100%;
+    display: list-item;
+    list-style: none;
+}
+
+.nav1 a {
+    margin: auto;
+    color: white;
+}
+
+.nav2 a {
+    margin: auto;
+    color: white;
+}
+
+.navLogo {
+    height: 460px;
+    overflow: hidden;
+    position: relative;
+
+}

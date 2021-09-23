@@ -1,0 +1,773 @@
+.wrap-box{
+    background: #f2f2f2;
+}
+.wrap-box .wrap{
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap-box .wrap .wrap-header{
+    padding-top: 32px;
+    padding-bottom: 53px;
+}
+.wrap-box .wrap .wrap-header .header-group{
+    width: 33.33%;
+    position: relative;
+    height: 6px;
+    background: #dbdbdb;
+}
+.wrap-box .wrap .wrap-header .header-group.active{
+    background: #ff8800;
+}
+.wrap-box .wrap .wrap-header .header-group .header-content{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top:-8px;
+}
+.wrap-box .wrap .wrap-header .header-group .header-content i{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(/image/choose_carbin_header_icon_circle.png) no-repeat center;
+    background-size: contain;
+    margin: 0 auto;
+}
+.wrap-box .wrap .wrap-header .header-group.active .header-content i{
+    background: url(/image/choose_carbin_header_icon_circle_active.png) no-repeat center;
+    background-size: contain;
+}
+.wrap-box .wrap .wrap-header .header-group .header-content span{
+    font-size: 12px;
+    color: #999;
+    line-height: 28px;
+    display: block;
+    text-align: center;
+}
+.wrap-box .wrap .wrap-header .header-group.active .header-content span{
+    color: #ff8800;
+}
+.wrap-box .wrap .product{
+    background: #fff;
+    border:1px solid #dbdbdb;
+    padding: 15px 20px 25px 20px;
+    margin-bottom: 20px;
+}
+.wrap-box .wrap .product .product-img{
+    width: 224px;
+    height: 154px;
+    overflow: hidden;
+}
+.wrap-box .wrap .product .product-img img{
+    width: 100%;
+    height: 100%;
+}
+.wrap-box .wrap .product .product-intro{
+    margin-left: 22px;
+}
+.wrap-box .wrap .product .product-intro h5{
+    font-size: 18px;
+    color: #1a1a1a;
+    line-height: 20px;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.wrap-box .wrap .product .product-intro .product-star{
+    margin-bottom: 50px;
+}
+.wrap-box .wrap .product .product-intro .product-star .star{
+    width: 85px;
+    height: 15px;
+    display: block;
+    margin-right:14px;
+}
+.wrap-box .wrap .product .product-intro .product-star .star01{
+    background: url(/image/choose_cabin_icon_star01.png) no-repeat center;
+    background-size: contain;
+}
+.wrap-box .wrap .product .product-intro .product-star .star02{
+    background: url(/image/choose_cabin_icon_star01.png) no-repeat center;
+    background-size: contain;
+}
+.wrap-box .wrap .product .product-intro .product-star .star03{
+    background: url(/image/choose_cabin_icon_star03.png) no-repeat center;
+    background-size: contain;
+}
+.wrap-box .wrap .product .product-intro .product-star .star04{
+    background: url(/image/choose_cabin_icon_star04.png) no-repeat center;
+    background-size: contain;
+}
+.wrap-box .wrap .product .product-intro .product-star .star05{
+    background: url(/image/choose_cabin_icon_star05.png) no-repeat center;
+    background-size: contain;
+}
+.wrap-box .wrap .product .product-intro .product-star span{
+    font-size: 16px;
+    color: #333;
+    line-height: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+.wrap-box .wrap .product .product-intro .product-star span sub{
+    font-size: 12px;
+    color: #999;
+    margin-left: 2px;
+    vertical-align: baseline;
+}
+.wrap-box .wrap .product .product-intro .product-star .custom-recommend{
+    font-size: 12px;
+    color: #999;
+    font-weight: bold;
+    padding-top: 2px;
+}
+.wrap-box .wrap .product .product-intro .boat-time .time-group{
+    margin-right: 50px;
+}
+.wrap-box .wrap .product .product-intro .boat-time .time-group label{
+    font-size: 14px;
+    line-height: 16px;
+    color: #1a1a1a;
+    text-align: left;
+    margin-bottom: 13px;
+    display: block;
+}
+.wrap-box .wrap .product .product-intro .boat-time .time-group .time span{
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: left;
+    margin-right: 2px;
+}
+.wrap-box .wrap .product .product-intro .boat-time .time-group .time .week{
+    font-style: normal;
+    font-size: 14px;
+    color: #333;
+    margin-right: 8px;
+    line-height: 18px;
+}
+.wrap-box .wrap .product .product-intro .boat-time .time-group .time a{
+    font-size: 14px;
+    line-height: 18px;
+    color: #3996fa;
+}
+.wrap-box .wrap .product .product-intro .boat-time .time-group .time a i{
+    width: 18px;
+    height: 18px;
+    background: url(/image/choose_cabin_icon_warning.png) no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 10px;
+}
+.wrap-box .wrap .product .product-link{
+    font-size: 14px;
+    color: #3996fa;
+    line-height: 28px;
+}
+.wrap-box .wrap .product-select .select-wrap{
+    background: #fff;
+    border: 1px solid #dbdbdb;
+}
+.wrap-box .wrap .product-select .select-wrap .select-nav li{
+    width: 160px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 18px;
+    border-right: 1px solid #dbdbdb;
+}
+.wrap-box .wrap .product-select .select-wrap .select-nav li span{
+    font-size: 16px;
+    color: #333;
+    display: block;
+    line-height: 40px;
+    text-align: center;
+}
+.wrap-box .wrap .product-select .select-wrap .select-nav li i{
+    font-size: 14px;
+    color: #ff9813;
+    font-style: normal;
+    text-align: center;
+}
+.wrap-box .wrap .product-select .select-wrap .select-nav li.active{
+    background: #3996fa;
+}
+.wrap-box .wrap .product-select .select-wrap .select-nav li.active span{
+    color: #fff;
+}
+.wrap-box .wrap .product-select .select-wrap .select-nav li.active i{
+    color: #fff;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips{
+    background: #fff3eb;
+    width: 534px;
+    text-align: center;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-nodata span{
+    font-size: 14px;
+    color: #999;
+    line-height: 85px;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-nodata .tips-icon{
+    color: #666;
+    margin-left: 20px;
+    position: relative;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-nodata .tips-icon i{
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background: url(/image/choose_cabin_icon_warning.png) no-repeat center;
+    background-size: contain;
+    vertical-align: sub;
+    margin-left: 8px;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-nodata .tips-icon .tips-details{
+    border: 1px solid #dbdbdb;
+    border-top:4px solid #269ded;
+    padding: 25px 30px 25px 30px;
+    width: 374px;
+    background: #fff;
+    z-index: 999999;
+    position: absolute;
+    right: 0;
+    top:24px;
+    text-align: left;
+    line-height: 24px;
+    box-shadow: 2px 2px 6px #dbdbdb,-2px 0px 6px #dbdbdb;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data{
+    border: 2px solid #fff3eb;
+    box-sizing: border-box;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data.active{
+    border: 2px solid #ff8800;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-left{
+    margin-top: 20px;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-left p{
+    width: 106px;
+    padding-left: 20px;
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+    text-align: left;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right{
+    position: relative;
+    width: 230px;
+    margin-top: 12px;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-all .all-left{
+    font-size: 12px;
+    color: #666;
+    line-height: 30px;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-all .all-left span{
+    font-size: 18px;
+    color: #ff8800;
+    line-height: 30px;
+    font-weight: bold;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-all .all-left span sub{
+    font-size: 12px;
+    line-height: 12px;
+    vertical-align: baseline;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-all .all-details-btn{
+    color: #209aed;
+    line-height: 30px;
+    padding-left: 6px;
+    cursor: pointer;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-all .all-details-btn span{
+    font-size: 12px;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-all .all-details-btn i{
+    width: 10px;
+    height: 6px;
+    background: url(/image/icon_new_cabin_more_down.png) no-repeat center;
+    background-size: contain;
+    display: inline-block;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-all .all-details-btn.active i{
+    background: url(/image/icon_new_cabin_more_up.png) no-repeat center;
+    background-size: contain;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-average{
+    font-size: 12px;
+    color: #333;
+    line-height: 20px;
+    text-align: left;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-average{
+
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-details{
+    position: absolute;
+    right: -176px;
+    top:70px;
+    width: 480px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: 2px solid #ff8800;
+    background: #fff;
+    border-top: none;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-details table{
+    width: 480px;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-details table td{
+    text-align: left;
+    font-size: 12px;
+    color: #333;
+    line-height: 32px;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-details table td a{
+    text-align: left;
+    font-size: 12px;
+    color: #333;
+    line-height: 24px;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-details table td a:hover{
+    color: #ff8800;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-details .tips{
+    text-align: left;
+    font-size: 12px;
+    color: #333;
+    line-height: 20px;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .data-right .price-details .warning{
+    text-align: left;
+    font-size: 12px;
+    color: #333;
+    line-height: 20px;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 10px;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .select-submit{
+    background: #fe9900;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .select-submit a{
+    display: block;
+    width: 174px;
+    height: 82px;
+    background: #fe9900;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .select-submit a i{
+    display: block;
+    padding-left: 25px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 16px;
+    font-style: normal;
+    padding-top: 25px;
+    text-align: left;
+}
+.wrap-box .wrap .product-select .select-wrap .select-tips .select-data .select-submit a span{
+    display: block;
+    padding-left: 25px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 26px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+}
+.wrap-box .wrap .product-select .select-input{
+    border:1px solid #dbdbdb;
+    background: #fff;
+    padding-left: 10px;
+    border-top: none;
+    font-size: 12px;
+    line-height: 42px;
+}
+.wrap-box .wrap .product-select .select-input label{
+    color: #333;
+    text-align: left;
+}
+.wrap-box .wrap .product-select .select-input .person{
+    position: relative;
+    width: 96px;
+}
+.wrap-box .wrap .product-select .select-input .person .person-show{
+    cursor: pointer;
+}
+.wrap-box .wrap .product-select .select-input .person .person-show span{
+    color: #3996fa;
+}
+.wrap-box .wrap .product-select .select-input .person .person-show i{
+    width: 10px;
+    height: 6px;
+    display: inline-block;
+    background: url(/image/icon_new_cabin_more_down.png) no-repeat center;
+    background-size: contain;
+    margin-top: 18px;
+}
+.wrap-box .wrap .product-select .select-input .person .person-list{
+    position: absolute;
+    left: 0;
+    top:0;
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    width: 100%;
+    display: none;
+}
+.wrap-box .wrap .product-select .select-input .person .person-list li{
+    cursor: pointer;
+    font-size: 12px;
+    color: #666;
+    line-height: 28px;
+    padding: 0px 6px;
+}
+.wrap-box .wrap .product-select .select-input .person .person-list li:hover{
+    background: #209aed;
+    color: #fff;
+}
+.wrap-box .wrap .product-select .select-input .person-favorable{
+    margin-left: 10px;
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    line-height: 24px;
+    margin-top: 9px;
+    padding-left: 46px;
+}
+.wrap-box .wrap .product-select .select-input .person-favorable .favorable-group{
+    cursor: pointer;
+    margin-right: 46px;
+}
+.wrap-box .wrap .product-select .select-input .person-favorable .favorable-group i{
+    width: 12px;
+    height: 12px;
+    border: 1px solid #999;
+    border-radius: 2px;
+    margin-right: 4px;
+    margin-top: 6px;
+}
+.wrap-box .wrap .product-select .select-input .person-favorable .favorable-group.active i{
+    background: url(/image/choose_cabin_icon_favorable.png) no-repeat center;
+    background-size: contain;
+    border-color: #1397f1;
+}
+.wrap-box .wrap .product-select .select-input .person-favorable-clear{
+    font-size: 12px;
+    color: #333;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.wrap-box .wrap .product-select .select-input .person-favorable-clear:hover{
+    color: #ff8800;
+}
+.wrap-box .wrap .cabin-category{
+    margin-top: 8px;
+}
+.wrap-box .wrap .cabin-category h5{
+    font-size: 16px;
+    color: #1a1a1a;
+    line-height: 46px;
+    text-align: left;
+    font-weight: normal;
+}
+.wrap-box .wrap .cabin-category .cabin-group{
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    margin-bottom: 10px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-left{
+    border-right: 1px solid #dbdbdb;
+    width: 316px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-left img{
+    width: 78px;
+    height: 78px;
+    margin-right: 10px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-left .cabin-txt{
+    width: 200px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-left .cabin-txt h5{
+    font-size: 16px;
+    color: #3996fa;
+    line-height: 18px;
+    margin-bottom: 4px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-left .cabin-txt .txt-group span{
+    width: 50%;
+    font-size: 12px;
+    color: #1a1a1a;
+    line-height: 22px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-left .cabin-txt .txt-group span sup{
+    font-size: 12px;
+    vertical-align: super;
+    line-height: 12px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-center{
+    width: 304px;
+    border-right: 1px solid #dbdbdb;
+    padding-left: 20px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-center .sales{
+    margin-left: 18px;
+    margin-top:30px;
+    height: 66px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-center .sales .price{
+    display: block;
+    font-size: 18px;
+    color: #ff6600;
+    font-weight: bold;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-center .sales .price i{
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    background: #ff9813;
+    font-style: normal;
+    display: inline-block;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-right: 6px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-center .sales .price sub{
+    font-size: 14px;
+    line-height: 14px;
+    vertical-align: baseline;
+    margin-right: 2px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-center .sales .favorable{
+    font-size: 12px;
+    color: #333;
+    line-height: 22px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-center .sales .favorable mark{
+    background: transparent;
+    color: #ff9813;
+    font-size: 12px;
+    line-height: 22px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-center .no-sales{
+    text-align: left;
+    font-size: 12px;
+    color: #999;
+    line-height: 95px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-center .no-sales span{
+    font-size: 18px;
+    color: #ff6600;
+    font-weight: bold;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-center .no-sales span sub{
+    font-size: 14px;
+    line-height: 14px;
+    vertical-align: baseline;
+    margin-right: 2px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right{
+    width: 526px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .room{
+    margin-left: 35px;
+    margin-top: 15px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .room label{
+    font-size: 12px;
+    color: #333;
+    line-height: 24px;
+    text-align: left;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .room .count a{
+    width: 20px;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #dbdbdb;
+    cursor: pointer;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .room .count a.minus{
+    background: url(/image/choose_cabin_new_icon_minus.png) no-repeat center;
+    background-size: 10px 10px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .room .count a.plus{
+    background: url(/image/choose_cabin_new_icon_plus.png) no-repeat center;
+    background-size: 10px 10px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .room .count input{
+    width: 32px;
+    text-align: center;
+    border:none;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    outline: none;
+    margin: 0;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .room .room-tips{
+    font-size: 12px;
+    color: #999;
+    line-height: 34px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price{
+    margin-left: 30px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-init{
+    width: 84px;
+    font-size: 12px;
+    color: #999;
+    line-height: 26px;
+    margin-top: 20px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-error{
+    width: 140px;
+    font-size: 12px;
+    color: #ff6600;
+    line-height: 26px;
+    padding-top: 20px;
+    position: relative;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-error .clear{
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    right: -12px;
+    top: 0;
+    cursor: pointer;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal{
+    width: 158px;
+    position: relative;
+    padding-top: 15px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .original-price{
+    font-size: 12px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .last-price .last-price-previews{
+    font-size: 18px;
+    font-weight: bold;
+    color: #f60;
+    cursor: pointer;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .last-price .last-price-previews sub{
+    font-size: 12px;
+    vertical-align: baseline;
+    margin-right: 3px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .last-price .last-price-previews .last-price-icon {
+    width: 18px;
+    height: 18px;
+    background: url(/image/choose_cabin_icon_warning_yellow.png) no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: 3px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .last-price .last-price-previews .average-price{
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+    font-weight: normal;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .last-price .clear{
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    right: 0px;
+    top: 6px;
+    cursor: pointer;
+    font-weight: normal;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .last-price-views{
+    position: absolute;
+    left: -100px;
+    width: 260px;
+    border:1px solid #dbdbdb;
+    border-top: 4px solid #f60;
+    background: #fff;
+    top: 60px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .last-price-views .views-title{
+    font-size: 14px;
+    color: #666;
+    line-height: 60px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .last-price-views .views-title span{
+    font-size: 18px;
+    color: #ff8800;
+    font-weight: bold;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .last-price-views .views-title span sup{
+    font-size: 12px;
+    line-height: 12px;
+    vertical-align: baseline;
+    margin-right: 3px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .last-price-views .views-title span sub{
+    font-size: 12px;
+    line-height: 12px;
+    vertical-align: baseline;
+    margin-right: 3px;
+    color: #666;
+    font-weight: normal;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .last-price-views table{
+    width: 260px;
+    font-size: 12px;
+    color: #333;
+    line-height: 28px;
+    margin-top: 10px;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .last-price-views .views-txt{
+    font-size: 12px;
+    color: #333;
+    line-height: 20px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.wrap-box .wrap .cabin-category .cabin-group .group-right .price .price-normal .last-price-views .views-tips{
+    font-size: 12px;
+    color: #333;
+    line-height: 20px;
+    margin-top: 10px;
+}
+/*导航浮动样式*/
+.wrap-box .wrap .product-select.fixed{
+    position: fixed;
+    top:0;
+    left: 50%;
+    margin-left: -590px;
+    z-index: 99999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

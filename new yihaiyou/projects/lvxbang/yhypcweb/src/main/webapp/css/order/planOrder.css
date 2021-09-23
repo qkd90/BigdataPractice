@@ -1,0 +1,458 @@
+.header_order {
+	width: 100%;
+	background-color: #fff;
+}
+
+.header_order .head_order {
+	width: 1200px;
+	height: 96px;
+	margin:auto;
+	font-family: 'SimSun';
+}
+
+.header_order .head_order .logo {
+	width: 266px;
+	height: 48px;
+	margin-top: 24px;
+	float: left;
+	border-right:1px solid #e0e0e0;
+}
+
+.head_order .logo img {
+	width: 90%;
+	margin: auto;
+	display: block;
+}
+
+.header_order .head_order .myonehaiyou {
+	float: left;
+	width: 70px;
+	height: 48px;
+	margin-top: 24px;
+	padding-left: 20px;
+}
+
+.head_order .myonehaiyou p {
+	line-height: 24px;
+}
+
+.head_order .myonehaiyou p.p1 {
+	color: #3996fa;
+}
+
+.header_order .head_order .service {
+	float: right;
+	width: 235px;
+	height: 36px;
+	font-size: 12px;
+	margin-top: 18px;
+	padding:12px 20px;
+	border-radius: 60px;
+	background-color: #efefef;
+}
+
+.head_order .service .serve_line {
+	width: 88px;
+	float: left;
+	background: url(/image/serve.png) no-repeat left center;
+}
+
+.service .serve_line p {
+	padding-left: 36px;
+	line-height: 18px;
+	color: #ff8800;
+}
+
+.head_order .service .serve_phone {
+	width: 130px;
+	float: right;
+	background: url(/image/phone.png) no-repeat left center;
+}
+
+.service .serve_phone p {
+	padding-left: 36px;
+	line-height: 19px;
+	color: #3996fa;
+}
+
+.service .serve_phone p.code {
+	font-weight: 600;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+
+
+
+.hotelOrder {
+	background-color: #f6f6f6;
+}
+
+.body_order {
+	width: 1200px;
+	margin: auto;
+	font-family: '微软雅黑';
+}
+
+.body_order .progress {
+	width: 1200px;
+	height: 30px;
+	margin: 40px 0 10px 0;
+	background:url(/image/progress_01.png) no-repeat center center;
+}
+
+.body_order .progress2 {
+	background:url(/image/progress_02.png) no-repeat center center;
+}
+
+.body_order .progress3 {
+	background:url(/image/progress_03.png) no-repeat center center;
+}
+
+.body_order .progress span {
+	width: 33%;
+	height: 100%;
+	float: left;
+	font-size: 15px;
+	text-align: center;
+	line-height: 30px;
+	color: #666;
+}
+
+.body_order .progress .active {
+	color: #fff;
+}
+
+.product_left {
+	width: 790px;
+	float: left;
+	margin-bottom: 40px;
+	background-color: #f6f6f6;
+}
+
+.product_right {
+	width: 390px;
+	float: right;
+	margin-top: 20px;
+	border:1px solid #e0e0e0;
+	background-color: #f3f8fe;
+}
+
+.product_left .a_contain {
+	margin-top:20px;
+	background-color: #fff;
+	border:1px solid #e0e0e0;
+}
+
+.product_left .pro_title {
+	color: #333;
+	font-size: 16px;
+	cursor: pointer;
+	text-indent: 42px;
+	line-height: 56px;
+	background: url(/image/icon_normal2.png) no-repeat 20px center;
+}
+
+.g_blue {
+	background: url(/image/icon_selected_b.png) no-repeat 20px center!important;
+}
+
+.product_left .pro_contain {
+	cursor: pointer;
+	padding:20px 20px 30px 0;
+	border-top: 1px solid #e0e0e0;
+	background: url(/image/icon_normal2.png) no-repeat 20px center;
+}
+
+.pro_contain .sel_box {
+	width: 60px;
+	float: left;
+	height: 200px;
+}
+
+.pro_contain .picture {
+	width: 180px;
+	height: 180px;
+	float: left;
+	margin-right: 28px;
+}
+
+.pro_contain .picture img {
+	width: 100%;
+	height: 100%;
+}
+
+.pro_contain .message {
+	float: left;
+	width: 408px;
+	font-size: 16px;
+}
+
+.pro_contain .message p {
+	line-height: 36px;
+	color: #333;
+}
+
+.message span.p_title {
+	color: #666;
+	margin-right: 8px;
+}
+
+.message .tour {
+	margin-top: 8px;
+}
+
+.message .tour .p_title {
+	float: left;
+}
+
+.message .tour .p_price {
+	color: #ff8800;
+}
+
+.message .tour .p_proadd {
+	float: left;
+	width: 300px;
+}
+
+.message .tour .p_produ {
+	float: left;
+	margin-bottom:8px;
+	width: 190px;
+}
+
+.message .tour .numbox {
+	float: left;
+	width: 79px;
+	height: 20px;
+	margin-bottom: 8px;
+	border:1px solid #e0e0e0;
+}
+
+.tour .numbox span {
+	float:left;
+	text-align: center;
+	line-height: 20px;
+	font-size: 16px;
+}
+
+.tour .numbox .sub,.tour .numbox .add {
+	width: 24px;
+	font-size: 19px;
+	color: #ff8800;
+}
+
+.tour .numbox .num {
+	width: 28px;
+	color: #666;
+	border-left: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+}
+
+.message .tour .tourlist {
+	float: left;
+	width: 350px;
+}
+
+.message .tour .tourlist span {
+	width: 110px;
+	height: 20px;
+	color: #666;
+	text-indent: 20px;
+	display: inline-block;
+	margin-bottom:5px;
+	float: left;
+	background: url(/image/icon_normal2.png) no-repeat left center;
+}
+
+.message .tour .tourlist .tickettype {
+	width:170px;
+	height: 25px;
+	float: left;
+	position: relative;
+	line-height:25px;
+	font-size:15px;
+	color: #666;
+	text-indent: 10px;
+	border:1px solid #aaa;
+	margin-bottom: 10px;
+	background: url(/image/icon-down.png) no-repeat 150px center;
+}
+
+.orangeborder {
+	border:1px solid #ff8800!important;
+}
+
+.message .tour .tourlist .tickettype:last-child {
+	margin-bottom: 0px;
+}
+
+.message .tour .tourlist .tickettype .typelist {
+	width: 170px;
+	position: absolute;
+	left: -1px;
+	top: 25px;
+	z-index: 6;
+	background: #fff;
+	border: 1px solid #ff8800;
+	display: none;
+}
+
+.tickettype .typelist p {
+	line-height: 25px;
+	border-bottom: 1px solid #ff8800;
+	text-indent: 10px;
+	font-size: 15px;
+	color: #666;
+}
+
+.tickettype .typelist p:hover {
+	background: #ff8800;
+	color: #fff;
+}
+
+.tickettype .typelist p:last-child {
+	border: none;
+}
+
+.message .tour .tourlist .takeit {
+	color: #ff8800;
+	background: url(/image/icon_selected.png) no-repeat left center;
+}
+
+.pro_contain .total_price {
+	float: left;
+	width: 90px;
+	height: 70px;
+	color: #ff8800;
+	line-height: 70px;
+	text-align: center;
+	font-size: 24px;
+	margin: 65px auto;
+	border-left: 1px dashed #e0e0e0;
+}
+
+.pro_contain .total_price .ferryPrice,.pro_contain .total_price .hotelPrice {
+	font-size:24px;
+}
+
+.pro_contain .total_price span {
+	font-size: 24px;
+}
+
+.product_right .fare_title {
+	color: #333;
+	font-size: 18px;
+	line-height: 56px;
+	text-indent: 45px;
+	border-bottom: 1px solid #e0e0e0;
+	background: url(/image/icon_feiyong.png) no-repeat 18px center;
+}
+
+.product_right .totallist {
+	color: #333;
+	width: 352px;
+	margin: auto;
+	padding-bottom: 10px;
+}
+
+.totallist .one_head {
+	font-size: 16px;
+	line-height: 50px;
+	text-indent: 35px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #3996fa;
+	background: url(/image/icon_chuanpiao.png) no-repeat left center;
+}
+
+.totallist .one_head_orange {
+	margin-bottom: 0;
+	border-bottom: 1px solid #ff8800;
+	background: url(/image/icon_jiu_dian.png) no-repeat left center;
+}
+
+.totallist .one_head_green {
+	margin-bottom: 0;
+	border-bottom: 1px solid #6abfa8;
+	background: url(/image/icon_jingdian.png) no-repeat left center;
+}
+
+.totallist .thir {
+	font-size: 16px;
+	padding-bottom: 20px;
+}
+
+.bottom {
+	border-bottom: 1px dashed #e0e0e0;
+}
+
+.totallist .thir span {
+	float: left;
+}
+
+.totallist .fourth {
+	font-size: 16px;
+	color: #333;
+	padding: 20px 0;
+}
+
+.totallist .thir span.s_left {
+	width: 125px;
+	color: #666;
+}
+
+.totallist .thir span.s_center {
+	width: 100px;
+	color: #ff8800;
+	text-align: center;
+}
+
+.totallist .thir span.s_right {
+	width: 125px;
+	color: #999;
+	text-align: right;
+}
+
+.totalprice {
+	height: 55px;
+	color: #333;
+	font-size: 16px;
+	line-height: 55px;
+}
+
+.totalprice .count {
+	float: right;
+	font-size: 30px;
+	color: #ff8800;
+}
+
+.totalprice .count label {
+	font-size: 18px;
+	vertical-align: super;
+}
+
+.submit {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 10px;
+	margin-top: 10px;
+	background-color: #3996fa;
+	font-size: 24px;
+	display: block;
+	text-align: center;
+}
+
+.submit a {
+	display: block;
+	color: #fff;
+}
+
+.readOlny {
+	background: #f5f5f5;
+	color: #666;
+}
+
+.hidden {
+	display: none;
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.RecommendPlanTripMapper">
+	<insert id="insert" parameterType="RecommendPlanTrip">
+		insert into tb_recommend_plan_trip
+			(
+				id,
+				scenic_id,
+				recommend_plan_id,
+				recommend_plan_day_id,
+				plan_trip_id,
+				how_to_go,
+				how_to_play,
+				tips_content,
+				create_time,
+				modify_time,
+				traffic_time,
+				traffic_hours,
+				traffic_mileage,
+				traffic_price,
+				traffic_type
+			)
+		values
+			(
+				#{id},
+				#{scenicIds}
+				#{recommendPlanId},
+				#{recommendPlanDayId},
+				#{planTripId},
+				#{howToGo},
+				#{howToPlay},
+				#{tipsContent},
+				#{createTime},
+				#{modifyTime},
+				#{trafficTime},
+				#{trafficHours},
+				#{trafficMileage},
+				#{trafficPrice},
+				#{trafficType}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="RecommendPlanTrip">
+		update tb_recommend_plan_trip
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="scenicIds != null and '' != scenicIds"> scenic_id = #{scenicIds},</if>
+			<if test="recommendPlanId != null and '' != recommendPlanId"> recommend_plan_id = #{recommendPlanId},</if>
+			<if test="recommendPlanDayId != null and '' != recommendPlanDayId"> recommend_plan_day_id = #{recommendPlanDayId},</if>
+			<if test="planTripId != null and '' != planTripId"> plan_trip_id = #{planTripId},</if>
+			<if test="howToGo != null and '' != howToGo"> how_to_go = #{howToGo},</if>
+			<if test="howToPlay != null and '' != howToPlay"> how_to_play = #{howToPlay},</if>
+			<if test="tipsContent != null and '' != tipsContent"> tips_content = #{tipsContent},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="trafficTime != null and '' != trafficTime"> traffic_time = #{trafficTime},</if>
+			<if test="trafficHours != null and '' != trafficHours"> traffic_hours = #{trafficHours},</if>
+			<if test="trafficMileage != null and '' != trafficMileage"> traffic_mileage = #{trafficMileage},</if>
+			<if test="trafficPrice != null and '' != trafficPrice"> traffic_price = #{trafficPrice},</if>
+			<if test="trafficType != null and '' != trafficType"> traffic_type = #{trafficType},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="RecommendPlanTrip">
+		delete from
+			tb_recommend_plan_trip
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="RecommendPlanTrip">
+		select
+			*
+		from
+			tb_recommend_plan_trip
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="RecommendPlanTrip">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_recommend_plan_trip
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="scenicIds != null and '' != scenicIds"> and scenic_id = #{scenicIds} </if>
+			<if test="recommendPlanId != null and '' != recommendPlanId"> and recommend_plan_id = #{recommendPlanId} </if>
+			<if test="recommendPlanDayId != null and '' != recommendPlanDayId"> and recommend_plan_day_id = #{recommendPlanDayId}</if>
+			<if test="planTripId != null and '' != planTripId"> and plan_trip_id = #{planTripId} </if>
+			<if test="howToGo != null and '' != howToGo"> and how_to_go = #{howToGo} </if>
+			<if test="howToPlay != null and '' != howToPlay"> and how_to_play = #{howToPlay} </if>
+			<if test="tipsContent != null and '' != tipsContent"> and tips_content = #{tipsContent} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="trafficTime != null and '' != trafficTime"> and traffic_time = #{trafficTime} </if>
+			<if test="trafficHours != null and '' != trafficHours"> and traffic_hours = #{trafficHours} </if>
+			<if test="trafficMileage != null and '' != trafficMileage"> and traffic_mileage = #{trafficMileage} </if>
+			<if test="trafficPrice != null and '' != trafficPrice"> and traffic_price = #{trafficPrice} </if>
+			<if test="trafficType != null and '' != trafficType"> and traffic_type = #{trafficType} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				# {item}
+			</foreach>
+		</if>
+		</where>
+		order by recommend_plan_day_id, order_num
+	</sql>
+</mapper>

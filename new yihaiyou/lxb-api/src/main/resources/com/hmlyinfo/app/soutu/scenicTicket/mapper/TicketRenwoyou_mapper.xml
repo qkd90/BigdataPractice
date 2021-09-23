@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenicTicket.mapper.TicketRenwoyouMapper">
+	<insert id="insert" parameterType="TicketRenwoyou" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_ticket_renwoyou
+			(
+				id,
+				scenic_id,
+				outer_ticket_id,
+				status,
+				name,
+				description,
+				sale_price,
+				suggest_price,
+				market_price,
+				lvxbang_price,
+				discount,
+				comment_discount,
+				end_of_time,
+				notice,
+				order_advance_days,
+				order_before_hour,
+				order_before_min,
+				max_order_advance_days,
+				refund_advance_hours,
+				additional_info,
+				effective_date,
+				valid_weeks,
+				valid_dates,
+				is_invt_limit,
+				is_real_name,
+				id_card_needed,
+				start_date_flag,
+				scenic_name,
+				primary_flag,
+				season_ticket_flag,
+				create_time,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{scenicIds},
+				#{outerTicketId},
+				#{status},
+				#{name},
+				#{description},
+				#{salePrice},
+				#{suggestPrice},
+				#{marketPrice},
+				#{lvxbangPrice},
+				#{discount},
+				#{commentDiscount},
+				#{endOfTime},
+				#{notice},
+				#{orderAdvanceDays},
+				#{orderBeforeHour},
+				#{orderBeforeMin},
+				#{maxOrderAdvanceDays},
+				#{refundAdvanceHours},
+				#{additionalInfo},
+				#{effectiveDate},
+				#{validWeeks},
+				#{validDates},
+				#{isInvtLimit},
+				#{isRealName},
+				#{idCardNeeded},
+				#{startDateFlag},
+				#{scenicName},
+				#{primaryFlag},
+				#{seasonTicketFlag},
+				#{createTime},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="TicketRenwoyou">
+		update tb_ticket_renwoyou
+		<set>
+			<if test="scenicIds != null"> scenic_id = #{scenicIds},</if>
+			<if test="outerTicketId != null"> outer_ticket_id = #{outerTicketId},</if>
+			<if test="status != null"> status = #{status},</if>
+			<if test="name != null"> name = #{name},</if>
+			<if test="description != null"> description = #{description},</if>
+			<if test="salePrice != null"> sale_price = #{salePrice},</if>
+			<if test="suggestPrice != null"> suggest_price = #{suggestPrice},</if>
+			<if test="marketPrice != null"> market_price = #{marketPrice},</if>
+			<if test="endOfTime != null"> end_of_time = #{endOfTime},</if>
+			<if test="notice != null"> notice = #{notice},</if>
+			<if test="orderAdvanceDays != null"> order_advance_days = #{orderAdvanceDays},</if>
+			<if test="orderBeforeHour != null"> order_before_hour = #{orderBeforeHour},</if>
+			<if test="orderBeforeMin != null"> order_before_min = #{orderBeforeMin},</if>
+			<if test="maxOrderAdvanceDays != null"> max_order_advance_days = #{maxOrderAdvanceDays},</if>
+			<if test="refundAdvanceHours != null"> refund_advance_hours = #{refundAdvanceHours},</if>
+			<if test="additionalInfo != null"> additional_info = #{additionalInfo},</if>
+			<if test="effectiveDate != null"> effective_date = #{effectiveDate},</if>
+			<if test="validWeeks != null"> valid_weeks = #{validWeeks},</if>
+			<if test="validDates != null"> valid_dates = #{validDates},</if>
+			<if test="isInvtLimit != null"> is_invt_limit = #{isInvtLimit},</if>
+			<if test="isRealName != null"> is_real_name = #{isRealName},</if>
+			<if test="idCardNeeded != null"> id_card_needed = #{idCardNeeded},</if>
+			<if test="startDateFlag != null"> start_date_flag = #{startDateFlag},</if>
+			<if test="scenicName != null"> scenic_name = #{scenicName},</if>
+			<if test="primaryFlag != null"> primary_flag = #{primaryFlag},</if>
+			<if test="seasonTicketFlag != null"> season_ticket_flag = #{seasonTicketFlag},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="TicketRenwoyou">
+		delete from
+			tb_ticket_renwoyou
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="TicketRenwoyou">
+		select
+			*
+		from
+			tb_ticket_renwoyou
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="TicketRenwoyou">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">$ {item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_ticket_renwoyou
+		<where>
+			(end_of_time &gt;= now() or end_of_time is null) and status=1
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="scenicIds != null and '' != scenicIds"> and scenic_id = #{scenicIds} </if>
+			<if test="outerTicketId != null and '' != outerTicketId"> and outer_ticket_id = #{outerTicketId} </if>
+			<if test="status != null and '' != status"> and status = #{status} </if>
+			<if test="name != null and '' != name"> and name = #{name} </if>
+			<if test="description != null and '' != description"> and description = #{description} </if>
+			<if test="salePrice != null and '' != salePrice"> and sale_price = #{salePrice} </if>
+			<if test="suggestPrice != null and '' != suggestPrice"> and suggest_price = #{suggestPrice} </if>
+			<if test="marketPrice != null and '' != marketPrice"> and market_price = #{marketPrice} </if>
+			<if test="endOfTime != null and '' != endOfTime"> and end_of_time = #{endOfTime} </if>
+			<if test="notice != null and '' != notice"> and notice = #{notice} </if>
+			<if test="orderAdvanceDays != null and '' != orderAdvanceDays"> and order_advance_days = #{orderAdvanceDays} </if>
+			<if test="orderBeforeHour != null and '' != orderBeforeHour"> and order_before_hour = #{orderBeforeHour} </if>
+			<if test="orderBeforeMin != null and '' != orderBeforeMin"> and order_before_min = #{orderBeforeMin} </if>
+			<if test="maxOrderAdvanceDays != null and '' != maxOrderAdvanceDays"> and max_order_advance_days = #{maxOrderAdvanceDays} </if>
+			<if test="refundAdvanceHours != null and '' != refundAdvanceHours"> and refund_advance_hours = #{refundAdvanceHours} </if>
+			<if test="additionalInfo != null and '' != additionalInfo"> and additional_info = #{additionalInfo} </if>
+			<if test="effectiveDate != null and '' != effectiveDate"> and effective_date = #{effectiveDate} </if>
+			<if test="validWeeks != null and '' != validWeeks"> and valid_weeks = #{validWeeks} </if>
+			<if test="validDates != null and '' != validDates"> and valid_dates = #{validDates} </if>
+			<if test="isInvtLimit != null and '' != isInvtLimit"> and is_invt_limit = #{isInvtLimit} </if>
+			<if test="isRealName != null and '' != isRealName"> and is_real_name = #{isRealName} </if>
+			<if test="idCardNeeded != null and '' != idCardNeeded"> and id_card_needed = #{idCardNeeded} </if>
+			<if test="startDateFlag != null and '' != startDateFlag"> and start_date_flag = #{startDateFlag} </if>
+			<if test="scenicName != null and '' != scenicName"> and scenic_name = #{scenicName} </if>
+			<if test="primaryFlag != null and '' != primaryFlag"> and primary_flag = #{primaryFlag} </if>
+			<if test="seasonTicketFlag != null and '' != seasonTicketFlag"> and season_ticket_flag = #{seasonTicketFlag} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+
+		<if test="scenicIds != null ">
+			and scenic_id in
+			<if test="scenicIds.size() == 0">
+				(-1)
+			</if>
+			<if test="scenicIds.size() > 0">
+				<foreach item="item" index="index" collection="scenicIds" open="("
+						 separator="," close=")">
+					#{item}
+				</foreach>
+			</if>
+
+		</if>
+		</where>
+	</sql>
+</mapper>

@@ -1,0 +1,44 @@
+<div class="ljOrder" ng-controller="lvjiOrderDetailController">
+    <div class="ljOrder-header">
+        <i class="back" ui-sref="personalOrder({index: 8})"></i>
+        驴记订单详情
+    </div>
+    <div class="ljOrderDetail">
+        <div class="ljOrderDetail-wrap">
+            <div class="label-group clearfix">
+                <label class="pull-left">驴记订单号：</label>
+                <span class="pull-left">{{order.orderNo}}</span>
+            </div>
+            <div class="label-group clearfix">
+                <label class="pull-left">产品名称：</label>
+                <span class="pull-left">{{order.recName}}-手机语音导航</span>
+            </div>
+            <div class="label-group clearfix">
+                <label class="pull-left">下单时间：</label>
+                <span class="pull-left">{{order.startDate}}</span>
+            </div>
+            <div class="label-group clearfix">
+                <label class="pull-left">旅客：</label>
+                <span class="pull-left">{{order.name}}</span>
+            </div>
+            <div class="label-group clearfix">
+                <label class="pull-left">订单状态：</label>
+                <span class="pull-left">{{order.status}}</span>
+            </div>
+            <div class="label-group clearfix">
+                <label class="pull-left">订单价格：</label>
+                <span class="orderDetail-price pull-left">￥{{order.price}}</span>
+            </div>
+        </div>
+        <div class="ljOrderDetail-operation">
+            <a class="orderUse" href="javascript:;" ng-show="order.orderStatus == 'PAYED'" ng-click="daolan(order.url)">电子导览</a>
+            <a class="orderRefund" href="javascript:;" ng-show="order.orderStatus == 'PAYED'" ng-click="returnLvjiOrder()">申请退款</a>
+        </div>
+    </div>
+    <style>
+        .bootbox .modal-footer .btn.confirmBoxBtn {
+            width: 50%;
+        }
+    </style>
+
+</div>

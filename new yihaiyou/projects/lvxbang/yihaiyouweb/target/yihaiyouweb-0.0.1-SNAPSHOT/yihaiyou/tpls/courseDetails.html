@@ -1,0 +1,36 @@
+<div ng-controller="routeDetails">
+<div class="y-course-header">
+    <i class="back" ui-sref="cruiseDetails({dateId: dateId})"></i>
+    航程详情
+</div>
+<ul class="y-course-list" >
+    <li ng-repeat="planDay in planDays">
+        <div class="y-course-date clearBoth">
+            <span class="course-date-d pull-left">{{planDay.beginDay}}</span>
+            <div class="course-date-m pull-left">
+                <p>{{planDay.beginMonth}}月</p>
+                <p>{{planDay.beginYear}}年</p>
+            </div>
+        </div>
+        <div class="y-course-tips clearBoth" >
+            <div class="y-course-left pull-left">
+                <div class="day-number">DAY {{planDay.day}}</div>
+                <div class="leave-time-wrap">
+                    <div class="leave-time">{{planDay.leaveTime}}</div>
+                    <div class="leave-tips">启航</div>
+                </div>
+            </div>
+            <div class="y-course-right pull-left">
+                <h5 class="course-port">
+                    <i class="gray-dot"></i>
+                    {{planDay.dayDesc}}
+                </h5>
+                <p class="course-txtContent">
+                    <i class="blue-boat"></i>
+                    {{planDay.arrange}}
+                </p>
+            </div>
+        </div>
+    </li>
+</ul>
+    </div>

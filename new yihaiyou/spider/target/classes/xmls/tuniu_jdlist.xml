@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<var-def name="html">
+		<http url="${url}" charset="utf-8"></http>
+	</var-def>
+	<var-def name="content">
+		<html-to-xml>
+			<var name="html"></var>
+		</html-to-xml>
+	</var-def>
+	<var-def name="products">
+		<![CDATA[<tuniulist>]]>
+		<xquery>
+			<xq-param name="n" type="node()">
+				<var name="content" />
+			</xq-param>
+			<xq-expression><![CDATA[
+			                            declare variable $n as node() external;
+			                            let $as := $n//div[@class='diytour']//li[@class='list_item']
+			                            for $a in $as		
+			                            let $name := $a/h3/a/text()			                            
+			                            let $data_source_url := $a/h3/a/@href
+				                        return 
+				                        	<scenic>
+				                                <name>{data($name)}</name>
+				                                <data_source_url>{data($data_source_url)}</data_source_url>        		 				                                
+				                            </scenic>			                           
+			                    ]]></xq-expression>
+		</xquery>
+		<![CDATA[</tuniulist>]]>
+	</var-def>
+	<!-- <var-def name="result"> <![CDATA[<root>]]> <var name="nextHref"></var> <var name="products"></var> <![CDATA[</root>]]> </var-def> -->
+	<!-- <file action="write" charset="utf-8" path="d:\jd.xml"> <var name="products"></var> </file> -->
+</config>

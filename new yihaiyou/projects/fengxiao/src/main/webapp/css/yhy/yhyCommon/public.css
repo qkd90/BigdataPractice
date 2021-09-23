@@ -1,0 +1,527 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background: url(/images/yhy/background.png) repeat 0 0;
+	background-size: 1px 1px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/yhy/background.png',  sizingMethod='scale');
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset, img {
+    border: 0
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal
+}
+
+ol, ul, li {
+    list-style: none
+}
+
+.clear {
+	clear: both;
+}
+.clearfix:after {
+	content:"\200B"; display:block; height:0; clear:both; 
+}
+.clearfix { 
+	*zoom:1;
+}
+
+.header {
+	width:100%;
+	min-width: 1200px;
+	background: linear-gradient(#414141, #383838, #2f2f2f);
+	border-bottom: 1px solid #000;
+}
+
+.header .header_nav {
+	width:1200px;
+	height: 70px;
+	margin:0 auto;
+	color: #f0f0f0;
+	line-height:70px;
+}
+
+.header .logoName {
+	width:127px;
+	height:70px;
+	text-align: right;
+	font-size:24px;
+	float:left;
+	background:url(/images/yhy/logo.png) no-repeat left center;
+	background-size:42px 52px;
+	font-weight: 600;
+}
+
+.header .header_nav .hostArea {
+	width: 350px;
+	float: right;
+	height:70px;
+	margin-left:10px;
+}
+
+.header .header_nav .hostArea button {
+	width: 185px;
+	height: 34px;
+	line-height:34px;
+	background: url(/images/yhy/search.png) no-repeat center center;
+	background-size:100% 100%;
+	border:none;
+	color: #f0f0f0!important;
+	font-family: AdobeInvisFont;
+	padding:0;
+	font-size: 12px;
+    text-shadow: none;
+}
+
+.header .header_nav .hostArea span.downcar {
+	float: right;
+	display: block;
+	width: 34px;
+	height:34px;
+	border-left:1px solid #111;
+	white-space: normal;
+}
+
+.header .header_nav .hostArea span.downcar .downcar_inner {
+	border-left:1px solid #666;
+	display: block;
+	width: 33px;
+	height: 32px;
+	float: right;
+	margin-top:1px;
+	background: url(/images/yhy/icon-up02.png) no-repeat center center;
+	background-size: 10px;
+}
+.top-dropdown-menu {
+    padding: 2px;
+    top: 73%;
+}
+
+.top-dropdown-menu>li.select {
+    background-color: #353535;
+    background-image: none;
+}
+.top-dropdown-menu>li.select>a {
+    color: #fff;
+    background: none;
+}
+.top-dropdown-menu>li.select:hover {
+    background-color: #353535;
+    background-image: none;
+}
+.top-dropdown-menu>li.select>a:hover {
+    color: #fff;
+    background: none;
+}
+
+.header .header_nav .hostArea span.hostName {
+	float: right;
+	text-align: right;
+	color: #f0f0f0;
+	font-weight: 600;
+	font-size:12px;
+}
+
+.header .header_nav .hostArea span.hostName a:hover {
+	color:#fff;
+}
+
+.header .header_nav .hostArea span.hostName a {
+	color:#f0f0f0;
+}
+
+.header .header_nav .hostArea .hotelList {
+	width: 185px;
+	float: left;
+}
+
+.header .header_list {
+	/*width: 500px;*/
+	background-color: #2f2f2f;
+	float:right;
+	background:url(/images/yhy/bg-02.png) no-repeat center center;
+	background-size:100% 100%;
+	height:68px;
+}
+
+.header .header_list ul{
+	margin-bottom:0;
+}
+
+.header .header_list ul li{
+	width: 100px;
+	height:70px;
+	border-left:1px solid #4a4a4a;
+	border-right:1px solid #282828;
+	font-size:16px;
+	float:left;
+	text-align:center;
+	color: #f0f0f0;
+	font-weight: 600;
+	cursor:pointer;
+}
+
+.header .header_list a {
+	display: block;
+	color:#959892;
+	text-decoration: none; 
+	font-weight: 600;
+}
+
+/*.header .HS_active {
+	color:#fff!important;
+}*/
+
+.header .secnav{
+	width: 100%;
+	height: 40px;
+	border-bottom:1px solid #c2c2c2;
+	box-shadow: 0 1px 2px #c2c2c2;
+	background-color: #3c3c3c;
+}
+
+.header .secnav_list{
+	width:1200px;
+	margin:auto;
+}
+
+.header .secnav_list ul {
+	width:372px;
+	float:right;
+	margin-right:350px;
+}
+
+.header .secnav_list ul li{
+	width:100px;
+	height:40px;
+	float:left;
+	font-size:12px;
+	text-align:center;
+	line-height:40px;
+	color:#888;
+	cursor: pointer;
+	font-weight: 600
+}
+
+.header .secnav_list .HSsec_active{
+	border-bottom:4px solid #bbb;
+	color:#999!important;
+}
+
+
+/*分页样式*/
+.pageChange {
+	width: 1200px;
+	background: url(/images/yhy/background.png) repeat 0 0;
+	background-size: 1px 1px;
+}
+
+.pageChange nav ul {
+	width: auto;
+	margin: 20px auto;
+}
+
+.pageChange nav ul li a{
+	color: #666;
+	font-size:14px;
+	padding:6px 18px;
+}
+
+.pageChange nav ul li.active a {
+	background-color: #478ff1;
+	color: #fff;
+	border: 1px solid #478ff1;
+}
+
+/*底部*/
+.footer {
+	width: 100%;
+	height: 115px;
+	background: url(/images/yhy/footBackground.png) no-repeat center center;
+	background-size: 100% 100%;
+	margin-top:40px;
+	padding-top:1px;
+}
+
+.footer p {
+	text-align: center;
+	color: #adb5bb;
+	font-size: 14px;
+	font-family: '微软雅黑';
+}
+
+.footer p.firstP {
+	margin-top: 25px;
+}
+
+.footer p span.fenge {
+	padding:0 18px;
+}
+
+.footer p.secondP {
+	color: #82878b;
+	margin-top:14px;
+}
+button, a {
+    text-shadow: none!important;
+}
+
+.tagHeaderList a {
+	color: #fff!important;
+}
+.btcombo span.label {
+    color: #333;
+	font-size:12px;
+	font-weight:500;
+}
+.disb {
+    display: block!important;
+}
+
+.btn-default {
+	background-image:none;
+}
+
+.table {
+	border:1px solid #ddd!important;
+}
+
+.selectBar {
+	height: 70px;
+	clear: both;
+	background: url(/images/yhy/background.png) repeat 0 0;
+	background-size: 1px 1px;
+}
+
+.dataTables_paginate {
+	background: url(/images/yhy/background.png) repeat 0 0;
+	background-size: 1px 1px;
+	margin-top:20px!important;
+}
+
+.dataTables_paginate .paginate_button {
+	border:1px solid #ddd!important;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+	float: none!important;
+	text-align: center;
+	padding-top: 0.25em;
+}
+
+.fixedBottom {
+	position:fixed;
+	bottom:0;
+	left:0;
+}
+
+#product-drop-menu {
+	height:300px;
+	overflow: auto;
+	min-width:186px;
+}
+.yhy-form-group {
+	float: left;
+	margin-bottom: 0px;
+}
+.yhy-form-ctrl {
+	float: left;
+	height:30px;
+	font-size:12px;
+	color:#333;
+	border-radius:4px!important;
+	border:1px solid #d1d1d1;
+	background:none;
+}
+.selectBar .selectBar_1 div.status-dropdown {
+	box-shadow: none;
+}
+
+.selectBar .btn-group .search-btn {
+	width:100px;
+	height:30px;
+	line-height: 18px;
+	background:url(/images/yhy/button-02.png) no-repeat center center;
+	background-size: 100% 100%;
+	font-size:12px;
+	border-radius:7px;
+	box-shadow: 0 1px 1px #ddd;
+	color:#fff;
+	outline:none;
+}
+.selectBar .btn-group .search-btn:hover {
+	background:url(/images/yhy/button-022.png) no-repeat center center;
+}
+
+
+.selectBar .btn-group .status-sel,
+.selectBar .btn-group .status-sel {
+	width:100px;
+	height:30px;
+	line-height:16px;
+	text-align:left;
+	font-size: 12px;
+}
+
+.selectBar .btn-group .status-sel span.caret,
+.selectBar .btn-group .status-sel span.caret{
+	float: right;
+	margin-top: 7px;
+}
+
+.selectBar .addmore button.btn,
+.selectBar .addmore a.btn {
+	width: 100px;
+	height: 30px;
+	line-height: 18px;
+	background: url(/images/yhy/button-01.png) no-repeat center center;
+	background-size: 100% 100%;
+	color: #fff;
+	font-size: 12px;
+	border-radius: 7px;
+	box-shadow: 0 1px 1px #ddd;
+}
+
+.selectBar .addmore button.btn:hover,
+.selectBar .addmore a.btn:hover {
+	background:url(/images/yhy/button-011.png) no-repeat center center!important;
+}
+.link-span {
+	padding: 0 5px;
+	width: auto;
+	line-height: 40px;
+	color: #118ed1;
+	text-align: center;
+	display: block;
+	float:left;
+	cursor:pointer;
+}
+
+.rank-span {
+	width:70%!important;
+	color:#666;
+	display:block;
+	margin:auto;
+	text-align: left;
+	text-indent:10px;
+	background:url(/images/yhy/icon-edit.png) no-repeat 70% center;
+}
+
+.rank-input {
+	width: 45px;
+	height: 30px;
+	border:1px solid #999;
+	border-radius:4px;
+	text-align:center;
+}
+
+.rank-bottn {
+	width:16px;
+	height:16px;
+	padding:12px 13px;
+	cursor: pointer;
+	background:url(/images/yhy/icon-sure.png) no-repeat center center;
+}
+
+.rank-error {
+	background:url(/images/yhy/icon-error.png) no-repeat center center;
+}
+
+.homestayRoomState .dataTable  tbody tr td a.link-span {
+	width: 50%;
+	display: inline;
+	float: none;
+}
+
+.blank {
+	width:100%;
+	height:115px;
+}
+.shadow {
+	background-color:#000;
+	opacity: 0.5;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+}
+.shadow.disn{
+	display: none;
+}
+
+#productName{
+	display: block;
+	width: 10em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin: auto;
+}
+
+.hostArea .dropdown-menu li a {
+	width: 11em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/*弹出框*/
+.containBody {
+	margin-top:0px!important;
+	text-align: center;
+	background:url(/images/yhy/icon-gt.png) no-repeat center 30%;
+	background-size: 40px;
+}
+
+.containBody p {
+	margin-bottom: 0;
+	margin-top: 55px;
+	font-size: 12px;
+}
+
+.yhy-modal-footer {
+	/*width: 280px;*/
+	border: none!important;
+	padding:5px 15px 15px 15px!important;
+}
+.yhy-modal-footer .btn-area{
+    text-align: center;
+}
+.yhy-modal-footer .btn {
+	padding:6px 25px;
+	/*margin-right:85px;*/
+}
+
+.yhy-modal-dialog {
+	width:280px!important;
+}
+
+/*提交成功提示框*/
+.successSub {
+	margin-top:0px!important;
+	text-align: center;
+	background:url(/images/yhy/bingo.png) no-repeat center 25%;
+	background-size: 26px;
+	height: 100px;
+}
+
+.successSub p {
+	margin-top: 35px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.successSub button span {
+	color: #fff;
+}

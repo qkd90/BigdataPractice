@@ -1,0 +1,24 @@
+{
+  "processing": "加载数据中...",
+  "lengthMenu": "每页显示_MENU_项结果",
+  "zeroRecords": "没有匹配结果",
+  "info": "显示第_START_至_END_项结果，共_TOTAL_项",
+  "infoEmpty": "显示第0至0项结果，共0项",
+  "infoFiltered": "(由_MAX_项结果过滤)",
+  "infoPostFix": "",
+  "search": "搜索:",
+  "url": "",
+  "emptyTable": "暂无数据",
+  "loadingRecords": "载入中...",
+  "infoThousands": ",",
+  "paginate": {
+    "first": "首页",
+    "previous": "上页",
+    "next": "下页",
+    "last": "末页"
+  },
+  "aria": {
+    "sortAscending": ":以升序排列此列",
+    "sortDescending": ":以降序排列此列"
+  }
+}

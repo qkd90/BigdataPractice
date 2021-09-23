@@ -1,0 +1,29 @@
+#edit_panel {
+    padding: 0 10px;
+    background: #FFFFCC;
+}
+
+#edit_panel input{
+    width: 150px;
+    font-size: 13px;
+}
+
+#edit_panel li{
+    margin-top: 8px;
+    float: left;
+}
+
+#edit_panel label{
+    font-size: 13px;
+}
+
+#edit_panel .disa{
+    background: none;
+    border: none;
+}
+#edit_panel .fl{
+    float: left;
+}
+#edit_panel .ml8{
+    margin-left: 8px;
+}

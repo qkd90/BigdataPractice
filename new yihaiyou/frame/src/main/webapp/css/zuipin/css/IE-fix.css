@@ -1,0 +1,25 @@
+﻿
+.home-win{ }
+.home-win .sysbtn{ text-align:right;}
+.home-win .sysbtn .ui-ico{ float:none;}
+.home-win .sysbtn .systitle{ *position:relative; *top:-6px; _top:-7px; _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../themes/default/images/home_03.png');}
+.home-win .sysbtn .ui-ico-min{
+    _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../themes/default/images/home_min.png');
+}
+.home-win .sysbtn .ui-ico-close{
+    _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../themes/default/images/home_close.png');
+}
+.ui-ico-menu10 {
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../themes/default/images/topup-ico02.png');
+    _background-image:none;
+}
+.ui-ico-menu09 {
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../themes/default/images/topup-ico01.png');
+    _background-image:none;
+}
+
+.home-win .smenu .j-smenu.select {
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../themes/default/images/home_select.png');
+    _background-image:none;
+}
+.footer{_width:100%;bottom:-1px;}

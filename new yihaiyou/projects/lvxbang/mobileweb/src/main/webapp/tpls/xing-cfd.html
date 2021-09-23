@@ -1,0 +1,50 @@
+<div ng-controller="xingcfdCtrl" class="sel_pla_day">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">选择出发地/时间</a></li>
+        </ul>
+    </div>
+    <div id="yjcontainer" class="clearfix">
+        <div id="xingcfd" class="clearfix">
+            <div class="panel panel-default" ng-if="!fromQuote">
+                <div class="panel-heading" style="background-color:#fff;color:#35bf83">已选目的地</div>
+                <div style="width:100%;height:6px;background-color:#eff2f7;"></div>
+                <div class="panel-body panel_message1">
+                    <div class="mudidi col-xs-12 padleft sel_pla pac" ng-repeat="city in selectCitys">
+                        <!--<span class="address text-center col-xs-4 pl0pr0">{{city.name}}</span>-->
+                        <!--<span class="days col-xs-2 pl0pr0" style="text-align: right;">天数</span>-->
+                        <!--<div class="spinner pull-right col-xs-6 pl0pr0" style="text-align: center;">-->
+                        <span class="address text-center pl0pr0 cicyname" style="float:left">{{city.name}}</span>
+                        <div class="spinner pull-right  pl0pr0 citychose">
+                            <input type="text" class="num" spinner id="{{city.id}}" value="{{city.day}}"/>
+                        </div>
+                        <span class="days pl0pr0 cityday">天数</span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+
+                <div class="panel-heading">出发地</div>
+                <div class="panel-body bguper">
+                    <a ng-click="gotoCity()">
+                        <button class="chufadi btn-block" type="button"><span class="pull-left bgsize">{{fromCity.name}}</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">出发时间</div>
+                <div class="panel-body bguper">
+                    <span class="chufatime-ico bgsize"><input ng-model="startDay" class="chufatime" id="appDate"
+                                                       placeholder="点此选择出发时间"/></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mybottom text-center col-xs-12 orderpay" ng-if="!fromQuote"><a class="xiugai col-xs-6"
+                                                                               ng-click="cankao()">参考线路</a><a
+            ng-click="yuanchuang()">原创线路</a>
+    </div>
+    <div class="mybottom xing-next text-center col-xs-12" ng-if="fromQuote"><a
+            ng-click="nextjiaotong()"><span style="width:200px;">下一步添加酒店</span></a></div>
+</div>

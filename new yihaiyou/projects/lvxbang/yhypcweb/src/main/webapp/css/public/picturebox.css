@@ -1,0 +1,123 @@
+
+.out_picbox {
+    position: absolute;
+    left:100px;
+    top:100px;
+    z-index:10002;
+    display:none;
+}
+
+.com_pictrue {
+    width: 670px;
+    clear:both;
+    background: #fff;
+    margin:30px auto;
+    box-shadow: 0 0 20px #aaa;
+}
+
+.com_pictrue .pic_max {
+    width: 100%;
+    height: 465px;
+    overflow: hidden;
+    position: relative;
+    border:1px solid #ddd;
+}
+
+.com_pictrue .pic_max img {
+    width: 670px;
+    height: 465px;
+    float: left;
+}
+
+.com_pictrue .pic_min {
+    width: 100%;
+    height: 95px;
+    clear:both;
+    margin-top:15px;
+    overflow: hidden;
+    position: relative;
+    border:1px solid #ddd;
+}
+
+.com_pictrue .pic_min img {
+    width: 100%;
+    height: 100%;
+}
+
+.com_pictrue .pic_min label {
+    display: inline-block;
+    width: 25px;
+    color: white;
+    line-height: 105px;
+    text-align: center;
+    top: 0px;
+    z-index: 10;
+    position: absolute;
+    font-size: 30px;
+}
+
+.com_pictrue .pic_min label.t_left {
+    background: #b0d5fd;
+    /*background: #b0d5fd url(/image/icon-left.png) no-repeat center center;*/
+    background-size: 10px;
+    left: 0;
+}
+.com_pictrue .pic_min label.t_left:hover {
+    background: #3996fa!important;
+
+}
+
+.com_pictrue .pic_min label.t_right {
+    /*background: #3996fa url(/image/icon-right.png) no-repeat center center;*/
+    /*background-size: 10px;*/
+    right: 0;
+    background: #b0d5fd;
+}
+.com_pictrue .pic_min label.t_right:hover {
+    background: #3996fa!important;
+
+}
+
+
+.com_pictrue .pic_min ul {
+    float: left;
+    display: inline-block;
+    position: absolute;
+    left: 25px;
+    top: 7px;
+}
+
+.com_pictrue .pic_min ul li {
+    height: 82px;
+    width: 112px;
+    float: left;
+    cursor: pointer;
+    margin-left: 10px;
+    line-height: 62px;
+    text-align: center;
+}
+
+.com_pictrue .pic_min ul li.on {
+    box-shadow: 0 0 13px #3996fa;
+}
+
+.closeArea {
+    float:right;
+    width:30px;
+    height:30px;
+    display:block;
+    cursor: pointer;
+    border-radius:50%;
+    position:fixed;
+    right:20px;
+    top:20px;
+    z-index:1;
+    background: #fff url(/image/modal-close.png) no-repeat center center;
+}
+
+.out_picbox {
+    width: 730px;
+    height: 635px;
+    background: #fff;
+    border:1px solid #ddd;
+}

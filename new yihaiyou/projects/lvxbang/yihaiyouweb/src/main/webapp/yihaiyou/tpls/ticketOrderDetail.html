@@ -1,0 +1,39 @@
+<div class="personal_cruiseDetail" ng-controller="ticketOrderDetailCtrl" screenheight>
+    <div class="header">
+        <a ng-click="back()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        景点门票订单详情
+    </div>
+    <div class="orderDetailTitle">
+        <p class="sta_end">{{order.name}}</p>
+    </div>
+    <div class="ticketdetail">
+        <h3>订单信息</h3>
+
+        <p><span>订单编号：</span>{{order.orderNo}}</p>
+
+        <p class="yi_orange"><span>订单状态：</span>{{order.status}}</p>
+
+        <p><span>订单总价：</span><span class="tick_price">¥{{order.price}}</span></p>
+
+        <p><span>付款方式：</span>网上支付</p>
+
+        <p><span>下单时间：</span>{{order.orderDate}}</p>
+        <p ng-if="order.codes.length > 0"><span>验 证 码：</span><span ng-repeat="code in order.codes">{{code.code}}<span ng-if="code.used == 1">（已使用）<span ng-if="code.used == -1">（无效）</span> </span></span></p>
+    </div>
+    <div class="ticketdetail">
+        <h3>门票信息</h3>
+
+        <p ng-if="order.codes.length > 0"><span>验证码：</span><span ng-repeat="code in order.codes" style="color: #7c7b7b;">{{code.code}}<span ng-if="code.used == 1">（已使用）</span> </span>
+        </p>
+
+        <p><span>门票信息：</span>电子票</p>
+
+        <p><span>数量：</span>{{order.num}}张</p>
+
+        <p><span>出游日期：</span>{{order.startDate}}</p>
+
+    </div>
+    <div class="blank"></div>
+    <!--<div class="personalTopay">申请退款</div>-->
+    <div class="personalTopay" ui-sref="orderPay({orderId: order.id})" ng-if="order.orderStatus == 'WAIT'">去支付</div>
+</div>

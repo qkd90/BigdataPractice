@@ -1,0 +1,21 @@
+#fm {margin: 0;padding: 10px 30px;}
+.ftitle {font-size: 14px;font-weight: bold;padding: 5px 0;margin-bottom: 10px;border-bottom: 1px solid #ccc;}
+.fitem {margin-bottom: 5px;}
+.fitem label {display: inline-block;width: 80px;}
+.form-table tr{
+	height:25px;
+}
+.icon-find{
+	background:url('images/find.png') no-repeat;
+}
+.icon-check{
+	background:url('images/check.png') no-repeat;
+}
+.icon-open{
+	background:url('images/open.png') no-repeat;
+}
+.icon-saves{
+	background:url('images/filesaveas.png') no-repeat;
+}
+/*20170118表格表头样式*/
+.datagrid-header .datagrid-cell span {font-weight:bold;font-size:14px;}

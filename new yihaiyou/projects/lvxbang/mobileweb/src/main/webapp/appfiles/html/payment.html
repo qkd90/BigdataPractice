@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!-- saved from url=(0103)http://dynamic.m.tuniu.com/m2015/book/groupTourBook/stepOne?bookId=NDA2MTkwMjcmODI2MzY2Ng==&rebateCode= -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../src/css/header_payment.css">
+    <title>2/2填写订单</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="width">
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="applicable-device" content="mobile">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://dynamic.m.tuniu.com/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://dynamic.m.tuniu.com/apple-touch-icon-retina.png">
+<script src="../src/js/jquery-1.8.0.min.js"></script>
+<script src="../src/js/function.js"></script>
+</head>
+<body>
+
+        <header class="header-box fixed" id="header">
+            <span class="header-back">
+                <i class="icon-title-back effect-active"></i>
+            </span>
+        <h1>2/2填写订单</h1>
+        </header>
+        <!-- contain start -->
+        <div class="wrapper">
+<div class="container" id="container"><div class="box">
+		<div class="title">
+			<div class="sp-box">
+				<div class="sp"></div>
+			</div>
+			<div class="text">联系人信息</div>
+		</div>
+		<div class="content form">
+			<div class="content-cell">
+				<div class="cell-title">姓名</div><div class="cell-input">
+					<input type="text" name="realname" id="realname" placeholder="必填" value="">
+				</div>
+			</div>
+			<div class="content-cell" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(224, 224, 224);">
+				<div class="cell-title">手机</div><div class="cell-input">
+					<span class="interCode" id="AreaCode">+86</span>
+					<div class="interIcon"></div>
+					<input type="tel" name="tel" id="tel" placeholder="必填，用于接收订单确认信息" value="">
+				</div>
+				<div id="newUser" class="new-user" style="display:none;">
+					<div class="cell-title"></div><div class="cell-input">
+						<i id="confirmation" class="icon-choice">&nbsp;我确认以上信息，并同意途牛会员协议</i>
+					</div>
+				</div>
+			</div>
+			<div class="loginIframe hide"></div>
+			<div class="content-cell" id="login" style="display:none;">
+				<div class="cell-row">
+					<div class="cell-title">密码</div><div class="cell-input">
+						<input type="password" name="password" id="password" placeholder="您已是途牛会员，请输入登录密码">
+					</div>
+				</div>
+				<div class="cell-row" id="captcha" style="display:none;">
+					<div class="cell-title"></div><div class="cell-input">
+						<div class="need-captcha">
+							<div class="captcha-data">
+								<input id="veryPicCode" type="text" placeholder="请输入右侧验证码">
+							</div>
+							<img class="captcha-img" id="imgTelObj">
+						</div>
+					</div>
+				</div>
+				<div class="login-btn-box cell-row">
+					<div class="cell-title"></div><div class="cell-input">
+						<span class="btn-confirm" id="loginBtn">登录</span><span id="forget" class="forget">忘记密码？</span>
+					</div>
+				</div>
+			</div>
+			<div class="content-cell">
+				<div class="cell-title">邮箱</div><div class="cell-input">
+					<input type="email" name="email" id="email" placeholder="必填" value="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box" id="changeTourists">
+		<div class="title">
+			<div class="sp-box">
+				<div class="sp"></div>
+			</div>
+			<div class="text">游客信息</div>
+			<div class="right">编辑游客信息&gt;</div>
+		</div>
+		<div class="content tourists">
+			
+				<div class="content-cell empty">
+					<div class="user">
+						<div><i class="icon icon-account"></i> <span class="user-name"></span></div>
+						<div class="identify-code"><span class="psptType"></span> <span class="psptId"></span></div>
+					</div>
+					<div class="placeholder">游客1</div>
+				</div>
+			
+		</div>
+	</div>
+	<div class="box" id="touristsRestrict">
+		<div class="title">
+			<div class="sp-box">
+				<div class="sp"></div>
+			</div>
+			<div class="text">出游人群限制</div>
+		</div>
+		<div class="content" id="confirmLabel">
+			
+				<div class="content-cell limit-cell" data-id="1" data-limit="1">
+					<div>不接受大于65周岁(含)出游人</div>
+				</div>
+			
+				<div class="content-cell limit-cell" data-id="4" data-limit="1">
+					<div>不接受20周岁(含)至65(含)周岁之外出游人</div>
+				</div>
+			
+				<div class="content-cell limit-cell" data-id="5" data-limit="1">
+					<div>不接受外籍友人(含台湾同胞)</div>
+				</div>
+			
+				<div class="content-cell limit-cell" data-id="6" data-limit="1">
+					<div>不支持全是未成年人出游</div>
+				</div>
+			
+			 	<div class="limit-agree">
+					<i class="icon-no-choice agree-icon" id="limit-agree"></i> 
+					<span>我确认全部出游人满足出游条件</span>
+			 	</div>
+		</div>
+	</div>
+	
+
+	<div class="agree_agreement">
+		<i class="icon-no-choice agree-icon" id="note-agree"></i>
+		<span>我已阅读签证材料信息且可提供所需材料，并接受</span>
+        
+			<a class="agreement" href="http://dynamic.m.tuniu.com/m2015/book/groupTourBook/bookAgreement?type=agreement">预定须知、合同、保险等条款</a> 
+        
+	</div></div>
+<div class="btn-box-placeholder">
+	<div class="btn-box fix">
+		<a class="btn btn-em fr" id="nextStep">立即付款</a>
+		<div class="v-center-info">
+			<div class="date" id="checkedDate">
+				总价：<span class="price"><i>￥</i><span id="totalPrice">4119</span></span>
+                <span class="details fare_green" id="fare_detail">费用明细</span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="fare_detail">
+    <ul>
+        <li><span class="fare_leftSpan">出游团费</span><span class="fare_rightSpan"><em>￥666666</em></span></li>
+        <li><span class="fare_leftSpan">成人 ×2</span><span class="fare_rightSpan">￥66666/人 ×2</span></li>
+        <li><span class="fare_leftSpan">保险费用：</span><span class="fare_rightSpan"><em>￥666666</em></span></li>
+    </ul>
+</div>
+</body></html>

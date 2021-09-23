@@ -1,0 +1,79 @@
+<div class="hotelDateFilter" ng-controller="hotelDateFilterCtrl">
+    <header class="produ_lis_header">
+        <div class="pro_header_main">
+            <span class="gty_left">
+                <i class="icon icon-title-back" ng-click="back()"></i>
+            </span>
+            <span class="gty_center">
+               选择入住/离店日期
+            </span>
+            <span class="gty_right"></span>
+        </div>
+    </header>
+    <div id="calendar">
+        <div class="tn-container">
+            <div class="information hide">当天凌晨6点前入住，请选择<span></span>入住</div>
+            <div class="tn-item-container" ng-repeat="monthItem in months">
+                <div class="tn-c-header"><span class="tn-c-title">{{monthItem.name}}&nbsp;&nbsp;&nbsp;&nbsp;{{monthItem.year}}</span></div>
+                <div class="tn-c-body">
+                    <table>
+                        <tbody>
+                        <tr class="tn-c-week">
+                            <th>日</th>
+                            <th>一</th>
+                            <th>二</th>
+                            <th>三</th>
+                            <th>四</th>
+                            <th>五</th>
+                            <th>六</th>
+                        </tr>
+                        <tr ng-repeat="weekItem in monthItem.weeks">
+                            <td data-date="{{weekItem.sun.date}}" room-date-select ng-class="{disabled:weekItem.sun.date<=today,selected:(weekItem.sun.date===tipInDate)||(weekItem.sun.date===tipOutDate),beselected:(weekItem.sun.date>tipInDate)&&(weekItem.sun.date<tipOutDate)}">
+                                {{weekItem.sun.dayOfMonth}}
+                                <p ng-if="weekItem.sun.date===tipInDate">入住</p>
+                                <p ng-if="weekItem.sun.date===tipOutDate">离店</p>
+                            </td>
+                            <td data-date="{{weekItem.mon.date}}" room-date-select ng-class="{disabled:weekItem.mon.date<=today,selected:(weekItem.mon.date===tipInDate)||(weekItem.mon.date===tipOutDate),beselected:(weekItem.mon.date>tipInDate)&&(weekItem.mon.date<tipOutDate)}">
+                                {{weekItem.mon.dayOfMonth}}
+                                <p ng-if="weekItem.mon.date===tipInDate">入住</p>
+                                <p ng-if="weekItem.mon.date===tipOutDate">离店</p>
+                            </td>
+                            <td data-date="{{weekItem.tue.date}}" room-date-select ng-class="{disabled:weekItem.tue.date<=today,selected:(weekItem.tue.date===tipInDate)||(weekItem.tue.date===tipOutDate),beselected:(weekItem.tue.date>tipInDate)&&(weekItem.tue.date<tipOutDate)}">
+                                {{weekItem.tue.dayOfMonth}}
+                                <p ng-if="weekItem.tue.date===tipInDate">入住</p>
+                                <p ng-if="weekItem.tue.date===tipOutDate">离店</p>
+                            </td>
+                            <td data-date="{{weekItem.wed.date}}" room-date-select ng-class="{disabled:weekItem.wed.date<=today,selected:(weekItem.wed.date===tipInDate)||(weekItem.wed.date===tipOutDate),beselected:(weekItem.wed.date>tipInDate)&&(weekItem.wed.date<tipOutDate)}">
+                                {{weekItem.wed.dayOfMonth}}
+                                <p ng-if="weekItem.wed.date===tipInDate">入住</p>
+                                <p ng-if="weekItem.wed.date===tipOutDate">离店</p>
+                            </td>
+                            <td data-date="{{weekItem.thu.date}}" room-date-select ng-class="{disabled:weekItem.thu.date<=today,selected:(weekItem.thu.date===tipInDate)||(weekItem.thu.date===tipOutDate),beselected:(weekItem.thu.date>tipInDate)&&(weekItem.thu.date<tipOutDate)}">
+                                {{weekItem.thu.dayOfMonth}}
+                                <p ng-if="weekItem.thu.date===tipInDate">入住</p>
+                                <p ng-if="weekItem.thu.date===tipOutDate">离店</p>
+                            </td>
+                            <td data-date="{{weekItem.fri.date}}" room-date-select ng-class="{disabled:weekItem.fri.date<=today,selected:(weekItem.fri.date===tipInDate)||(weekItem.fri.date===tipOutDate),beselected:(weekItem.fri.date>tipInDate)&&(weekItem.fri.date<tipOutDate)}">
+                                {{weekItem.fri.dayOfMonth}}
+                                <p ng-if="weekItem.fri.date===tipInDate">入住</p>
+                                <p ng-if="weekItem.fri.date===tipOutDate">离店</p>
+                            </td>
+                            <td data-date="{{weekItem.sat.date}}" room-date-select ng-class="{disabled:weekItem.sat.date<=today,selected:(weekItem.sat.date===tipInDate)||(weekItem.sat.date===tipOutDate),beselected:(weekItem.sat.date>tipInDate)&&(weekItem.sat.date<tipOutDate)}">
+                                {{weekItem.sat.dayOfMonth}}
+                                <p ng-if="weekItem.sat.date===tipInDate">入住</p>
+                                <p ng-if="weekItem.sat.date===tipOutDate">离店</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="calendarTipIn" class="calendar-tip-in" ng-class="{hide:tipInDate}">
+        <div>请选择入住日期</div>
+    </div>
+    <div id="calendarTipOut" class="calendar-tip-out" ng-class="{hide:(!tipInDate)||tipOutDate}">
+        <div>请选择离店日期</div>
+    </div>
+</div>

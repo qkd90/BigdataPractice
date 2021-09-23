@@ -1,0 +1,71 @@
+﻿
+/*销售收银首页*/
+.report{ 
+    background:none  scroll 0 0 #ffffff; font: 12px/1.5 tahoma,arial,宋体; color:#303030;
+}
+.report .left{float:left; border:solid 1px #d3d3d3; border-left:none; width:190px; background-color:#fcfcfc; overflow:auto;}
+.report h2 .select {color:red; font-weight:bold;}
+.report .left .ui-tree{ height:503px;  overflow:auto; padding-right:2px; overflow-x:hidden;}
+.report .left .ui-tree li .ui-ico-cfg{ position:absolute; right:3px; top:8px; display:none;}
+.report .left .ui-tree li .namecon{ cursor:pointer;}
+.report .left .ui-tree li.select{ color:Red; font-weight:bold;}
+
+.report .right{ margin-left: 191px; position:relative;}
+/*头部栏目*/
+.report .topbar {
+    height:43px;  background:none scroll 0 0 rgba(250,250,250,1); position:relative;
+}
+.report .topbar h2{
+    width:191px; float:left; font-weight:normal; text-align:center;
+}
+.report .topbar ul li.left {
+    float:left;
+}
+.report .topbar ul li.right {
+     float:right;
+}
+.report .topbar ul li {
+    float:left;  line-height:43px; position:relative; 
+}
+
+.report .topbar ul li button.btn01{ 
+    position:absolute; top:9px; right:1px; border-radius:0 3px 3px 0;
+}
+.report .topbar ul li button.btn02{ 
+    position:absolute; top:13px; right:4px;
+}
+.report .topbar ul li input.txt01{
+    width:198px; color:#606060;
+}
+.report .topbar ul li input.txt02{
+    width:116px; 
+}
+.report .topbar ul li input.txt03{
+    width:84px; border-radius:0;
+}
+.report .topbar ul li.name {
+    font-size:14px; font-weight:bold;
+}
+.report .topbar ul li.time {
+    font-size:14px; font-weight:bold;
+}
+.report .topbar .ui-select02{
+    width:90px;
+}
+
+
+/*底部栏目*/
+.report .footerbar {
+    clear:both; height:42px; line-height:42px; font-size:14px; overflow:hidden;    
+}
+.report .footerbar ul li{
+    display:block; float:left; white-space:pre; position:absolute;
+}
+
+
+.report .footerbar ul li.right{
+    float:right; position:relative;
+}
+
+
+

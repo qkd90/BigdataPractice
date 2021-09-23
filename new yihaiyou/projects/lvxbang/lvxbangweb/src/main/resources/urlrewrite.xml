@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN"
+        "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+<urlrewrite>
+
+    <!--改用nginx映射-->
+   <!-- <rule>
+        <from>/place/</from>
+        <to>/lvxbang/destination/index.jhtml</to>
+    </rule>
+    <rule>
+        <from>/plan/</from>
+        <to>/lvxbang/plan/index.jhtml</to>
+    </rule>
+    <rule>
+        <from>/map/</from>
+        <to>/lvxbang/handDraw/index.jhtml?cityId=350200</to>
+    </rule>
+    <rule>
+        <from>/guide/</from>
+        <to>/lvxbang/recommendPlan/index.jhtml</to>
+    </rule>
+    <rule>
+        <from>/jd/</from>
+        <to>/lvxbang/scenic/index.jhtml</to>
+    </rule>
+    <rule>
+        <from>/traffic/</from>
+        <to>/lvxbang/traffic/index.jhtml</to>
+    </rule>
+    <rule>
+        <from>/hotel/</from>
+        <to>/lvxbang/hotel/index.jhtml</to>
+    </rule>
+    <rule>
+        <from>/food/</from>
+        <to>/lvxbang/delicacy/index.jhtml</to>
+    </rule>-->
+    <!-- 省详情页-->
+    <rule>
+        <from>/province_([1-8][0-9]0{4}).html</from>
+        <to>/lvxbang/destination/detail.jhtml?cityCode=$1</to>
+    </rule>
+    <!-- 市详情页-->
+    <rule>
+        <from>/city_([1-8][0-9]{5}).html</from>
+        <to>/lvxbang/destination/detail.jhtml?cityCode=$1</to>
+    </rule>
+    <!-- 景点详情页-->
+    <rule>
+        <from>/scenic_detail_([1-9][0-9]*).html</from>
+        <to>/lvxbang/scenic/detail.jhtml?scenicId=$1</to>
+    </rule>
+    <!-- 游记详情页-->
+    <rule>
+        <from>/guide_detail_([1-9][0-9]*).html</from>
+        <to>/lvxbang/recommendPlan/detail.jhtml?recplanId=$1</to>
+    </rule>
+    <!-- 酒店详情页-->
+    <rule>
+        <from>/hotel_detail_([1-9][0-9]*).html</from>
+        <to>/lvxbang/hotel/detail.jhtml?hotelId=$1</to>
+    </rule>
+    <!-- 美食详情页-->
+    <rule>
+        <from>/food_detail_([1-9][0-9]*).html</from>
+        <to>/lvxbang/delicacy/detail.jhtml?delicacyId=$1</to>
+    </rule>
+    <!-- 行程详情页-->
+    <rule>
+        <from>/plan_detail_([1-9][0-9]*).html</from>
+        <to>/lvxbang/plan/detail.jhtml?planId=$1</to>
+    </rule>
+    <!-- 线路详情页 -->
+    <rule>
+        <from>/line_detail_([1-9][0-9]*).html</from>
+        <to>/lvxbang/line/detail.jhtml?lineId=$1</to>
+    </rule>
+
+    <!-- 景点列表页 -->
+    <rule>
+        <from>/scenic_list.html</from>
+        <to>/lvxbang/scenic/list.jhtml</to>
+    </rule>
+    <!-- 游记列表页 -->
+    <rule>
+        <from>/guide_list.html</from>
+        <to>/lvxbang/recommendPlan/list.jhtml</to>
+    </rule>
+    <!-- 酒店列表页 -->
+    <rule>
+        <from>/hotel_list.html</from>
+        <to>/lvxbang/hotel/list.jhtml</to>
+    </rule>
+    <!-- 美食列表页 -->
+    <rule>
+        <from>/food_list.html</from>
+        <to>/lvxbang/delicacy/delicacyList.jhtml</to>
+    </rule>
+    <!-- 行程列表页 -->
+    <rule>
+        <from>/plan_list.html</from>
+        <to>/lvxbang/plan/list.jhtml</to>
+    </rule>
+    <!-- 定制精品线路列表页 -->
+    <rule>
+        <from>/custom_made_([1-8][0-9]{5}).html</from>
+        <to>/lvxbang/line/customMadeList.jhtml?cityId=$1</to>
+    </rule>
+    <!-- 跟团游线路列表页 -->
+    <rule>
+        <from>/group_tour_([1-8][0-9]{5}).html</from>
+        <to>/lvxbang/line/groupTourList.jhtml?cityId=$1</to>
+    </rule>
+    <!-- 自助游线路列表页 -->
+    <rule>
+        <from>/self_tour_([1-8][0-9]{5}).html</from>
+        <to>/lvxbang/line/selfTourList.jhtml?cityId=$1</to>
+    </rule>
+    <!-- 自助游线路列表页 -->
+    <rule>
+        <from>/self_driver_([1-8][0-9]{5}).html</from>
+        <to>/lvxbang/line/selfDriverList.jhtml?cityId=$1</to>
+    </rule>
+    <!-- 定制精品首页-->
+    <rule>
+        <from>/tour/custom/index.html</from>
+        <to>/lvxbang/line/customTourIndex.jhtml</to>
+    </rule>
+    <!-- 跟团游首页-->
+    <rule>
+        <from>/tour/group/index.html</from>
+        <to>/lvxbang/line/groupTourIndex.jhtml</to>
+    </rule>
+    <!-- 自助自驾游首页-->
+    <rule>
+        <from>/tour/self/index.html</from>
+        <to>/lvxbang/line/selfTourIndex.jhtml</to>
+    </rule>
+
+    <!--<rule>-->
+        <!--<from>/scenic_list_([1-8][0-9]{5}).html</from>-->
+        <!--<to>/lvxbang/scenic/list.jhtml?cityCode=$1</to>-->
+    <!--</rule>-->
+
+    <!--<rule>-->
+        <!--<from>/plan_list_([1-8][0-9]{5}).html</from>-->
+        <!--<to>/lvxbang/recommendPlan/list.jhtml?cityIds=$1</to>-->
+    <!--</rule>-->
+
+    <!--<rule>-->
+        <!--<from>/hotel_list_([1-8][0-9]{5}).html</from>-->
+        <!--<to>/lvxbang/hotel/list.jhtml?hotelCityId=$1</to>-->
+    <!--</rule>-->
+
+    <!--<rule>-->
+        <!--<from>/food_list_([1-8][0-9]{5}).html</from>-->
+        <!--<to>/lvxbang/delicacy/delicacyList.jhtml?cityCode=$1</to>-->
+    <!--</rule>-->
+    <!-- 全局搜索页 -->
+    <rule>
+        <from>/search_(.+)_(all|scenic|hotel|guide|food|plan|line).html</from>
+        <to>/lvxbang/index/headerSearch.jhtml?keyword=$1&amp;type=$2</to>
+    </rule>
+    <!-- 手绘地图 -->
+    <rule>
+        <from>/map_([1-8][0-9]{5}).html</from>
+        <to>/lvxbang/handDraw/index.jhtml?cityId=$1</to>
+    </rule>
+    
+    <rule>
+        <from>/hongbao.html</from>
+        <to>/lvxbang/index/hongbao.jhtml</to>
+    </rule>
+</urlrewrite>

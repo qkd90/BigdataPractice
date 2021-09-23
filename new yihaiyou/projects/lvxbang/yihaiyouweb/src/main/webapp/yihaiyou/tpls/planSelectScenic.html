@@ -1,0 +1,53 @@
+<div class="diymarch_selScenic" ng-controller="planSelectScenicCtrl">
+    <div class="header">
+        <a ui-sref="planDemand"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        选择景点
+        <span class="save picSearch" ng-click="toSearch()"></span>
+    </div>
+    <div class="blank"></div>
+    <section class="sceniclist" infinite-scroll="getScenicList()" infinite-scroll-distance="1"
+             infinite-scroll-disabled='loading'>
+        <div class="scenicex clearfix" ng-repeat="scenic in scenicList"
+             ui-sref="planScenicDetail({params: scenic.id + '-1'})">
+            <div class="scenicpic"><img src="{{scenic.cover}}"></div>
+            <ul>
+                <li>{{scenic.name}}</li>
+                <li><span class="starLevel level{{scenic.scoreStar}}"></span>{{scenic.score}}分</li>
+                <li>
+                    <label ng-if="scenic.price == 0"><span>暂无门票</span><span></span></label>
+                    <label ng-if="scenic.price > 0"><span>¥</span><span>{{scenic.price}}</span>/人</label><span></span><span>建议游玩<span>{{scenic.adviceMinute / 60}}</span>小时</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="progress" style="height: auto;">
+        <!--<div class="probar"></div>-->
+        <!--<div class="proname">-->
+        <!--<ul>-->
+        <!--<li>填写需求</li>-->
+        <!--<li>选择景点</li>-->
+        <!--<li>行程详情</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+    </section>
+    <div class="nex_pre">
+        <span ng-click="showsellist()">已选择景点</span>
+        <span ng-click="next()">生成行程</span>
+    </div>
+    <div class="selectedScenic" ng-show="showSelectedScenic">
+        <h3 ng-if="hasScenic">以下是您选择的景点</h3>
+        <h3 ng-if="!hasScenic" class="notSel">您还未选择景点</h3>
+        <ul>
+            <li class="clearfix" ng-repeat="(id, item) in selectedScenic">
+                <h4>{{item.name}}<span class="deleteScenic" ng-click="removeSelectedScenic(id)"></span></h4>
+                <ul>
+                    <li ng-repeat="price in item.prices">
+                        <span class="sel_Scenic">{{price.name}}</span>
+                        <span class="deleteScenic" ng-click="removeSelectedPrice(id, price.id)"></span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="shadow" ng-show="sellist" ng-click="hideshadow()"></div>
+</div>

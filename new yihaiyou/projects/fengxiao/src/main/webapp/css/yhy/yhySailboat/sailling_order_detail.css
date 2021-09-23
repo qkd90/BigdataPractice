@@ -1,0 +1,224 @@
+.orderDetail {
+	width: 1200px;
+	margin: auto;
+	background-color: #fff;
+	margin-top:20px;
+	padding-top:1px;
+	border:1px solid #dcdedf;
+	/*height:284px;*/
+}
+
+.orderDetail .detail_header {
+	margin:21px 20px 0 20px;
+	border-bottom:1px solid #e6e6e6;
+}
+
+.orderDetail .detail_header .detail_title {
+	display: block;;
+	height: 38px;
+	line-height: 35px;
+	width: 6em;
+	border-bottom: 1px solid #478ff1;
+	font-size: 16px;
+	color: #666;
+	font-weight: 600;
+	text-indent: 0.2em;
+	font-family: SimSun;
+	float: left;
+}
+
+.orderDetail .detail_header .reTurn {
+	float: right;
+	width: 106px;
+	height: 28px;
+	line-height: 28px;
+	background-color: #fc9a44;
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	border-radius:5px;
+}
+
+.orderDetail .order_detailUl {
+	padding:10px 20px;
+}
+
+.orderDetail .order_detailUl li {
+	line-height: 24px;
+	color: #666;
+	font-family: AdobeInvisFont;
+	font-size: 13px;
+}
+
+.orderDetail .order_detailUl li .orderState {
+	color: red;
+	font-weight: 600;
+}
+
+.orderDetailTop {
+	border-top: 2px solid #4a95ff;
+	height:230px;
+	padding:20px;
+	margin-bottom: 20px;
+	margin-top:12px;
+}
+
+.orderDetailTop .table .headTr {
+	background-color:#fff;
+}
+
+.orderDetailTop .table .headTr td,.orderDetailTop .table .headTr th {
+	border-top:none;
+}
+
+.orderDetailTop .table .headTr th {
+	font-size: 14px;
+	color: #666;
+	text-align: center;
+	font-weight: bold;
+	font-family: SimSun;
+}
+
+.orderDetailTop .table .headTr_sec {
+	border:1px solid #dcdedf;
+	border-left:0;
+}
+
+.orderDetailTop .table .headTr_sec td {
+	border-left:1px solid #dcdedf;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 12px;
+	color: #666;
+	font-family: AdobeInvisFont;
+	padding:0 12px;
+}
+
+.orderDetailTop .table .headTr_sec td.finalPrice,.orderDetailTop .table .headTr_sec td.sailPrice {
+	font-size:14px;
+	font-weight: 600;
+}
+
+.orderDetailTop .table .productMessTi {
+	font-size: 16px!important;
+}
+
+.orderDetailTop .table .productMess {
+	text-align: left!important;
+	padding:0 12px;
+}
+
+.orderButtom {
+	width: 250px;
+	margin: auto;
+}
+
+.orderDetailTop button {
+	width: 106px;
+	height: 30px;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: SimSum;
+}
+
+.orderDetailTop button.console {
+	color: #666;
+	margin-left:20px;
+}
+
+.orderDetailTop button.console:hover{
+	background-color: #f5f5f5;
+}
+
+.orderDetailTop button.sure {
+	background-color: #478ff1;
+	color: #fff;
+}
+
+.orderDetailTop button.sure:hover {
+	background-color: #4a84f0;
+}
+
+.orderDetailBody {
+	margin-top:0px!important;
+	text-align: center;
+	background:url(/images/yhy/addpic.png) no-repeat center 30%;
+	background-size: 40px;
+}
+
+.refuseReason {
+	position: fixed;
+	left: 750px;
+	top:300px;
+	z-index: 101;
+	width: 370px;
+	background-color: #fff;
+	display: none;
+}
+
+.refuseReason .closex {
+	width: 100%;
+	height: 30px;
+}
+
+.refuseReason .closex .closeBtn {
+	display: block;
+	width: 30px;
+	height: 30px;
+	float: right;
+	background:url(/images/yhy/icon-down.png) no-repeat left bottom;
+	background-size: 14px;
+}
+
+.refuseReason .reheader {
+	padding:0 30px;
+	height: 40px;
+	clear:both;
+}
+
+.refuseReason .reheader span.stitle {
+	display: inline-block;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+}
+
+.refuseReason .reheader select {
+	width: 225px;
+	height: 26px;
+	border:1px solid #ddd;
+	border-radius:3px;
+	outline: none;
+}
+
+.refuseReason .text {
+	padding:0 30px;
+}
+
+.refuseReason .text textarea {
+	border:1px solid #ddd;
+	border-radius:4px;
+	width: 100%;
+	min-height: 100px;
+	outline: none;
+}
+
+.refuseReason .submit {
+	padding:15px 30px;
+}
+
+.refuseReason .submit span {
+	display: block;
+	float: right;
+	width: 60px;
+	height: 28px;
+	background-color: #4a84f0;
+	color: #fff;
+	text-align: center;
+	line-height: 28px;
+	border-radius: 4px;
+	font-size: 12px;
+}
+

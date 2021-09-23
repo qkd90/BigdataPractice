@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.ScenicOtherMapper">
+	<insert id="insert" parameterType="ScenicOther">
+		insert into tb_scenic_other
+			(
+				id,
+				scenic_info_id,
+				introduction,
+				advice,
+				address,
+				telephone,
+				website,
+				warning,
+				best_time,
+				hospital,
+				custom,
+				recommend,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{scenicInfoId},
+				#{introduction},
+				#{advice},
+				#{address},
+				#{telephone},
+				#{website},
+				#{warning},
+				#{bestTime},
+				#{hospital},
+				#{custom},
+				#{recommend},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="ScenicOther">
+		update tb_scenic_other
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="scenicInfoId != null and '' != scenicInfoId"> scenic_info_id = #{scenicInfoId},</if>
+			<if test="introduction != null and '' != introduction"> introduction = #{introduction},</if>
+			<if test="advice != null and '' != advice"> advice = #{advice},</if>
+			<if test="address != null and '' != address"> address = #{address},</if>
+			<if test="telephone != null and '' != telephone"> telephone = #{telephone},</if>
+			<if test="website != null and '' != website"> website = #{website},</if>
+			<if test="warning != null and '' != warning"> warning = #{warning},</if>
+			<if test="bestTime != null and '' != bestTime"> best_time = #{bestTime},</if>
+			<if test="hospital != null and '' != hospital"> hospital = #{hospital},</if>
+			<if test="custom != null and '' != custom"> custom = #{custom},</if>
+			<if test="recommend != null and '' != recommend"> recommend = #{recommend},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="ScenicOther">
+		delete from
+			tb_scenic_other
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="ScenicOther">
+		select
+			*
+		from
+			tb_scenic_other
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="ScenicOther">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_scenic_other
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="scenicInfoId != null and '' != scenicInfoId"> and scenic_info_id = #{scenicInfoId} </if>
+			<if test="introduction != null and '' != introduction"> and introduction = #{introduction} </if>
+			<if test="advice != null and '' != advice"> and advice = #{advice} </if>
+			<if test="address != null and '' != address"> and address = #{address} </if>
+			<if test="telephone != null and '' != telephone"> and telephone = #{telephone} </if>
+			<if test="website != null and '' != website"> and website = #{website} </if>
+			<if test="warning != null and '' != warning"> and warning = #{warning} </if>
+			<if test="bestTime != null and '' != bestTime"> and best_time = #{bestTime} </if>
+			<if test="hospital != null and '' != hospital"> and hospital = #{hospital} </if>
+			<if test="custom != null and '' != custom"> and custom = #{custom} </if>
+			<if test="recommend != null and '' != recommend"> and recommend = #{recommend} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="ids != null and ids.size() != 0">
+                and id in (
+                <foreach collection="ids" item="item" index="index" separator=",">#{item}
+                </foreach>
+                )
+            </if>
+            <if test="scenicIds != null and scenicIds.size() != 0">
+                and scenic_info_id in (
+                <foreach collection="scenicIds" item="item" index="index" separator=",">#{item}
+                </foreach>
+                )
+            </if>
+		</where>
+	</sql>
+</mapper>

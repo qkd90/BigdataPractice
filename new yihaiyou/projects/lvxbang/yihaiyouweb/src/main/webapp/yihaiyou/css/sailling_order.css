@@ -1,0 +1,113 @@
+.ticket_main .dingdanbody{margin-top: 45px;margin-bottom:40px;}
+.ticket_main .dingdanbody .dingdanxinxi{padding:10px;background-color:#fff;border-bottom:2px solid #e9ecf1;}
+.ticket_main .dingdanbody .dingdanxinxi p{height: auto;line-height: 23px;}
+.ticket_main .dingdanbody .dingdanxinxi .youluninfo{color: #3f3f3f;font-size: 16px;}
+
+.ticket_main .dingdanbody .dingdanxinxi .paymentinfo{color: #6ab1ff;font-size: 13px;}
+
+.ticket_main .dingdanbody .dingdanxinxi .paymentinfo .payonline {border: 1px solid #ff8700;padding: 3px;border-radius: 3px;color: #ff8700;}
+.ticket_main .dingdanbody .dingdanxinxi .paymentinfo .danjia{float: right;}
+.ticket_main .dingdanbody .dingdanxinxi .paymentinfo .price{color: #ff8700;font-weight: bold;  font-size: 20px;}
+.ticket_main .dingdanbody .dingdanxinxi .paymentinfo .rmbfuhao{color: #ff8700;}
+.ticket_main .dingdanbody .dingdanxinxi .buyinfo span.rebook{float:left;display:block;width:70px;text-indent:23px;font-size:13px;color:#ff9900;}
+.ticket_main .dingdanbody .dingdanxinxi .buyinfo .false{background:url(../image/personal/icon-xuan.png) no-repeat left center;background-size:16px;}
+.ticket_main .dingdanbody .dingdanxinxi .buyinfo .true{background:url(../image/personal/icon-xuanzhong.png) no-repeat left center;background-size:16px;}
+.ticket_main .dingdanbody .dingdanxinxi .buyinfo span.beknow{float:right;display:block;width:76px;font-size:14px;}
+.ticket_main .dingdanbody .dingdanxinxi .buyinfo .down{background:url(../image/icon-bluedown.png) no-repeat right 60%;background-size:13px;color:#007eff;}
+.ticket_main .dingdanbody .dingdanxinxi .buyinfo .up{background:url(../image/icon-blueup.png) no-repeat right 60%;background-size:13px;color:#007eff;}
+.ticket_main .dingdanbody .startdate p{height: 33.3%;line-height: 40px;font-size:1.4rem;  padding-left: 10px;  padding-right: 10px;}
+.ticket_main .dingdanbody .startdate{height: 135px;border-top: 2px solid #e9ecf1;color:#666;margin-top:10px;background-color:#fff;}
+.ticket_main .dingdanbody .startdate ul{height: 26px;line-height: 20px;font-size: 14px;width: 80px;border: 1px solid #a8a7a7;border-radius: 3px; float: right;  margin-top: -33px;  margin-right: 10px;}
+.ticket_main .dingdanbody .startdate ul li{width: calc(32% - 1px);float: left;  text-align: center; height:100%;line-height:26px;}
+.ticket_main .dingdanbody .startdate ul li:nth-child(2){width:36%;}
+.ticket_main .dingdanbody .startdate ul .days{border-left: 1px solid #a8a7a7;border-right: 1px solid #a8a7a7;}
+
+.ticket_main .dingdanbody .startdate .chufatime{border-bottom: 1px solid #e9ecf1;}
+.ticket_main .dingdanbody .startdate .chufatime .datechoose{float: right;}
+.ticket_main .dingdanbody .startdate .chufatime .aprice{float:right;color:#007eff}
+
+.ticket_main .dingdanbody .startdate .shuliang{color: #464646;} 
+.ticket_main .dingdanbody .startdate .shuliang span{width: 30px;}
+
+
+.ticket_main .dingdanbody .personaliofo{height: 120px;width: 100%;}
+.ticket_main .dingdanbody .personaliofo ul{height:100%;  padding-left: 10px; padding-right: 10px;}
+.ticket_main .dingdanbody .personaliofo ul li{border-bottom: 1px solid #e9ecf1;height: 33.3%;}
+.ticket_main .dingdanbody .personaliofo ul li label {  margin-top: 17px; position: absolute; font-size: 14px;  color: #464646;  font-weight: normal !important;}
+.ticket_main .dingdanbody .personaliofo ul li input.lvkename {   margin-top: 2px;height: 90%;float: right; width: 70%;text-align: right;border: none;background-color: #fafafa;font-size: 14px; padding-right: 2px;
+}
+
+.ticket_main .footer{height: 40px;bottom: 0px;  position: fixed;width: 100%;line-height:40px;text-align:center;}
+.ticket_main .footer ul{height: 100%;}
+.ticket_main .footer ul li{height: 100%;float: left;}
+.ticket_main .footer ul .zhifujine{width: 60%;background-color: #fff;color: #333;font-size: 16px;}
+.ticket_main .footer ul .zhifujine span{color:#ff932a;font-size:17px;font-weight:600;}
+.ticket_main .footer ul .paybutton{width: 40%;background-color: #ff6600;color: white;font-size: 17px;}
+
+.ticket_main .dingdanbody .beknowdetail {
+    position: absolute;
+    left: 0;
+    top: 91px;
+    background-color: #fff;
+    padding: 15px;
+    z-index: 11;
+    width: 100%;
+}
+
+/*.ticket_main .dingdanbody .beknowdetail .rline {*/
+    /*border-bottom: 1px solid #e0e0e0;*/
+/*}*/
+
+.ticket_main .dingdanbody .beknowdetail p {
+    line-height:30px;
+    color: #333;;
+}
+
+.ticket_main .dingdanbody .beknowdetail p.pFir {
+    color: #ff932a;
+    font-size:1.4rem;
+}
+
+.ticket_main .dingdanbody .beknowdetail p.pSec {
+    font-size:1.3rem;
+}
+.ticket_main .shadowbox{width:100%;height:calc(100% - 141px);background-color:rgba(0 0 0 0.5);position:fixed;left:0;top:141px;z-index: 10;}
+
+.ticket_main .tab {
+    margin:0;
+}
+
+.ticket_main .tab .tab-title {
+    background-color: #fff;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+    font-size:1.4rem;
+}
+
+.ticket_main .tab .tab-title h3 {
+    background:none;
+    line-height:40px;
+    padding:0 0 0 10px;
+}
+
+.ticket_main .tab .tab-content {
+    border:none;
+    border-bottom:#dbdbdb 1px solid;
+    background-color: #fbfbfb;
+    text-indent:10px;
+    overflow:hidden;
+}
+
+.ticket_main .tab .tab-content .span-head {
+    font-size:1.4rem;
+    color: #666;
+}
+
+.ticket_main .tab .tab-content .span input {
+    font-size: 1.3rem;
+    height: 28px;
+    line-height: 26px;
+    border:none;
+    width:180px;
+}

@@ -1,0 +1,62 @@
+/*!
+ * 供应商主页 v0.1
+ * Author Jeffrey.
+ * Copyright 2011-2015.
+ */
+
+/*顶部*/
+#top{background:#f7f7f7; border-bottom:1px solid #ededed; height:36px; line-height:36px;}
+.toplinks a{margin-left:20px; float:left;}
+.toplinks a.top-wx{background:url(../images/top-wx.png) center center no-repeat; width:30px; height:36px; line-height:36px;}
+.toplinks a.top-wb{background:url(../images/top-wb.png) center center no-repeat; width:30px; height:36px; line-height:36px;}
+.toplinks a.top-qq{background:url(../images/top-qq.png) center center no-repeat; width:30px; height:36px; line-height:36px;}
+/*头部*/
+#gys-header{padding-top:10px; padding-bottom:20px;}
+#gys-header h1 a{font-size:30px; color:#1c96d9;}
+/*导航*/
+#topnav{background:#1c96d9; height:45px; line-height:45px;}
+.mainnav a{color:#fff; font-size:16px; display:inline-block; padding:0 30px; margin-right:10px;}
+.mainnav a:hover,.mainnav a.curr{background:#265aa5;}
+.mainnav span.cart{background:url(../images/cart.png) center center no-repeat; width:40px; height:45px;}
+
+/*企业动态*/
+.qybox h4 span.title{color:#fff; display:inline-block; padding:10px 20px;border-radius:5px 5px 0 0}
+.qydt h4{border-bottom:2px solid #1c96d9;}
+.qydt h4 span.title{background:#1c96d9;}
+.jptj h4{border-bottom:2px solid #00ca98;}
+.jptj h4 span.title{background:#00ca98;}
+.allpro h4{border-bottom:2px solid #ff6e54;}
+.allpro h4 span.title{background:#ff6e54;}
+.gstp h4{border-bottom:2px solid #ff7700;}
+.gstp h4 span.title{background:#ff7700;}
+.gsjj h4{border-bottom:2px solid #a9a9a9;}
+.gsjj h4 span.title{background:#a9a9a9;}
+
+.cpdtall{background:#1c96d9 url(../images/gys-cpdt.jpg) 10px center no-repeat; height:110px; color:#fff; padding:30px 0 0 80px; margin-bottom:10px;}
+.qydtall{background:#ff6e54 url(../images/gys-qydt.jpg) 10px center no-repeat; height:110px; color:#fff; padding:40px 0 0 80px;}
+
+.gys-newslist{border:1px solid #cecece; padding:10px;}
+.gys-newslist li{line-height:30px;}
+
+.jplist .col-xs-4{margin-bottom:20px;}
+.jplist .content{background:#ededef; padding:20px;}
+.jplist .content h2{font-size:14px; font-weight:bold; margin:0;}
+.jplist .content p.price{color:#04ae84; margin:0;}
+
+.allprolist{border-bottom:1px solid #ededed; padding-bottom:20px; margin-bottom:20px;}
+.allprolist .media-left{padding-right:20px;min-width: 200px;}
+.allprolist .media-body h2{margin:0; font-size:16px; color:#515152; font-weight:bold;}
+.allprolist .media-body p.price{color:#ff6e54; padding-top:20px;}
+
+.tplist{margin-bottom:20px;}
+.gsjj .content{padding:20px; color:#666; border:1px solid #d0d0d0; margin-bottom:20px; line-height:180%;}
+
+/*上架排行*/
+.sjpx{margin:20px 0;}
+.sjpx h4{background:#f2f2f2; padding:10px; margin:0;}
+.sjpx ul{border:1px solid #cecece; padding:15px;}
+.sjpx li{border-bottom:1px dashed #d6d6d6; padding-bottom:10px; margin-bottom:10px;}
+.sjpx li span{display:inline-block; background:#d6d6d6; padding:1px 5px; margin-right:5px; color:#000;}
+.sjpx li a{font-size:16px;}
+.sjpx li p{margin:0;}
+.sjpx li p.num{padding-left:20px; color:#9a9a9a;}

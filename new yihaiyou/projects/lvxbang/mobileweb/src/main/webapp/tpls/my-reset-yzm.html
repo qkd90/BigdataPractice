@@ -1,0 +1,22 @@
+<div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+    <ul>
+        <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">找回密码</a></li>
+    </ul>
+</div>
+<div id="subcontainer" class="clearfix" ng-controller="myresetyzmCtrl">
+    <div class="my-reset-pw col-xs-12 pl0pr0">
+        <form>
+            <div class="input-group">
+                <input type="text" class="form-control tel" placeholder="输入收到的验证码" ng-model="checkNum">
+                <div class="input-group-addon"><img src="images/checkNum.jsp" style="height: 28px;
+    width: 79px;"></div>
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control tel" id="yzm" placeholder="输入收到的验证码" ng-model="smsCode">
+                <div class="input-group-addon" ng-click="sendSms()">发送验证码</div>
+            </div>
+            <button type="submit" class="btn btn-default btn-lg btn-block" ng-click="nextPw()">下一步
+            </button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="warp" ng-controller="orderLineGuaranteeCtrl">
+
+    <div class="bankConent bankcolor">
+        <table class="bankUserInfo bn" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:separate;">
+            <tbody>
+            <tr>
+                <td class="tl">银行卡</td>
+                <td><input type="tel" id="cardNo" class="gray" placeholder="请输入银行卡号"
+                           oninput="value=value.replace(/[^\d]/g,'')" ng-model="cardNum"></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class=" red errorTips errorlog cardno" style="display: none;">请输入正确的银行卡号</div>
+        <table class="bankUserInfo m30 bn m15" id="creditFlag" cellpadding="0" cellspacing="0" width="100%"
+               style="border-collapse:separate;">
+            <tbody>
+            <tr class="m10">
+                <td class="tl">有效期</td>
+                <td><input type="tel" id="creditValidity" class="gray" placeholder="示例：2016/08,输入201608" maxlength="6"
+                           oninput="value=value.replace(/[^\d]/g,'')" ng-model="expiration"></td>
+            </tr>
+            <tr>
+                <td class="tl">CVV2</td>
+                <td><input type="tel" id="creditCVV" class="gray" placeholder="请输入卡片背面末三位" maxlength="3"
+                           oninput="value=value.replace(/[^\d]/g,'')" ng-model="cvv"></td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="bankUserInfo m30 bn m15" cellpadding="0" cellspacing="0" width="100%"
+               style="border-collapse:separate;">
+            <tbody>
+            <tr class="m10">
+                <td class="tl">持卡人</td>
+                <td><input id="accName" type="text" class="gray" placeholder="请输入持卡人姓名" ng-model="holderName">
+                </td>
+            </tr>
+            <tr>
+                <td class="tl">身份证</td>
+                <td><input id="idCode" type="text" class="gray" placeholder="请输入持卡人身份证号码" ng-model="idNo"></td>
+            </tr>
+            </tbody>
+        </table>
+        <div class=" red errorTips errorlog idcode" style="display: none;">请输入正确的身份证号</div>
+        <div class=" red errorTips errorlog other" style="display: none;">
+            错误提示信息
+        </div>
+    </div>
+    <div class="resultBtn module bdr clearfix db-box">
+        <div class="cp_price">
+            <p class="sgray"></p>
+        </div>
+        <a class="R-OrgBtn" ng-click="submit()">确定</a>
+    </div>
+
+</div>

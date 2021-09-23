@@ -1,0 +1,45 @@
+<div class="sailling_fir" ng-controller="saillingIndexCtrl">
+    <div class="header">
+        <a href="" ng-click="goIndex()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        海上休闲
+    </div>
+    <div class="sailling_index-pic"><img src="/yihaiyou/image/banner-fan.png"></div>
+    <section class="playing">
+        <div class="playing_hot clearfix">
+            <h3 class="clearfix"><span>帆船推荐</span></h3>
+            <ul class="clearfix">
+                <li ng-repeat="sailboat in sailboatList">
+                    <ul class="playing_hot_list clearfix" ng-click="goSailboatYachtDetail(sailboat.id)">
+                        <li><img bn-lazy-src="{{sailboat.productImg}}"></li>
+                        <li>{{sailboat.name}}</li>
+                        <li><span>￥{{sailboat.disCountPrice}}</span>/人</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <div class="sailling_index-pic sailling_index-pic2"><img src="/yihaiyou/image/banner-you.png"></div>
+    <section class="playing">
+        <div class="playing_hot clearfix">
+            <h3 class="clearfix"><span>游艇推荐</span><span ng-click="goYachtList()">更多>></span></h3>
+            <ul class="clearfix">
+                <li ng-repeat="yacht in yachtList">
+                    <ul class="playing_hot_list clearfix" ng-click="goSailboatYachtDetail(yacht.id)">
+                        <li><img bn-lazy-src="{{yacht.productImg}}"></li>
+                        <li>{{yacht.name}}</li>
+                        <li><span>￥{{yacht.disCountPrice}}</span>/人</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+<!--<script src="yihaiyou/js/swiper-3.3.1.min.js"></script>-->
+<script>
+  var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    loop: false,
+    autoplay:5000,
+    pagination: '.swiper-pagination'
+  })
+</script>

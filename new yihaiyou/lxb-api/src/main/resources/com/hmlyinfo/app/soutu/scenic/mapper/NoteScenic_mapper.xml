@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.NoteScenicMapper">
+	<insert id="insert" parameterType="NoteScenic">
+		insert into tb_note_scenic
+			(
+				id,
+				note_id,
+				noteday_id,
+				scenic_id,
+				scenic_type,
+				scenic_desc,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{noteId},
+				#{notedayId},
+				#{scenicIds},
+				#{scenicType},
+				#{scenicDesc},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="NoteScenic">
+		update tb_note_scenic
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="noteId != null and '' != noteId"> note_id = #{noteId},</if>
+			<if test="notedayId != null and '' != notedayId"> noteday_id = #{notedayId},</if>
+			<if test="scenicIds != null and '' != scenicIds"> scenic_id = #{scenicIds},</if>
+			<if test="scenicType != null and '' != scenicType"> scenic_type = #{scenicType},</if>
+			<if test="scenicDesc != null and '' != scenicDesc"> scenic_desc = #{scenicDesc},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="NoteScenic">
+		delete from
+			tb_note_scenic
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="NoteScenic">
+		select
+			*
+		from
+			tb_note_scenic
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="NoteScenic">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_note_scenic
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="noteId != null and '' != noteId"> and note_id = #{noteId} </if>
+			<if test="notedayId != null and '' != notedayId"> and noteday_id = #{notedayId} </if>
+			<if test="scenicIds != null and '' != scenicIds"> and scenic_id = #{scenicIds} </if>
+			<if test="scenicType != null and '' != scenicType"> and scenic_type = #{scenicType} </if>
+			<if test="scenicDesc != null and '' != scenicDesc"> and scenic_desc = #{scenicDesc} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ids != null">
+			and id in ( <if test="ids.size() == 0">-1000</if>
+            <foreach collection="ids" item="item" index="index" separator=",">#{item}
+            </foreach>
+            )
+		</if>
+            <if test="orderFlag != null and '' != orderFlag">
+                order by #{orderFlag}
+            </if>
+		</where>
+	</sql>
+</mapper>

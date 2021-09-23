@@ -1,0 +1,51 @@
+<div ng-controller="MyuserCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><img src="/lxb/images/index.png" ng-click="homePage()"></li>
+        </ul>
+    </div>
+    <div id="mycontainer" class="clearfix">
+        <div class="mytop clearfix" ng-if="user.id != null">
+            <a class="touxiang center-block" ui-sref="my-geren">
+                <span class="thumb" ng-if="user.head.length > 0"><img src="{{user.head}}" class="img-circle"/></span>
+                <span class="thumb" ng-if="user.head.length == 0"><img src="images/my/toux.png" class="img-circle"/></span>
+                <span class="loginbt">{{user.nickName}}</span>
+            </a>
+        </div>
+        <div class="mytop clearfix" ng-if="user.id == null">
+            <a class="touxiang center-block" ui-sref="login"><span class="thumb">
+            <img src="images/my/toux.png" class="img-circle"/></span>
+                <span class="loginbt">点击登录</span>
+            </a>
+        </div>
+        <div class="mymenu clearfix">
+            <ul>
+                <!--<li ng-repeat="data in myusers.my"><a ui-sref="{{data.url}}"><span class="pull-left {{data.class}}">{{data.menu}}</span><span
+                        class="pull-right"></span></a></li>-->
+                <li><a ui-sref="my-lt"><span class="pull-left my-lt">我的印象</span><span class="pull-right"></span></a>
+                </li>
+                <li><a ui-sref="my-xl"><span class="pull-left my-xl">我的线路</span><span class="pull-right"></span></a>
+                </li>
+                <li><a ui-sref="my-order"><span class="pull-left my-order">我的订单</span><span
+                        class="pull-right"></span></a>
+                </li>
+                <!--<li><a ui-sref="my-sc"><span class="pull-left my-sc">我的收藏</span><span class="pull-right"></span></a>-->
+                <!--</li>-->
+                <li><a ui-sref="my-hb"><span class="pull-left my-hb">我的红包</span><span class="pull-right"></span></a>
+                </li>
+                <li><a ui-sref="balance"><span class="pull-left my-hb">余额</span><span class="pull-right"></span></a>
+                </li>
+                <li><a ng-click="clean()"><span class="pull-left my-qc">清空缓存</span><span class="pull-right"></span></a>
+                </li>
+                <li ng-if="login && !isWeixin" ng-click="logout()"><a><span class="pull-left my-tc">退出</span><span
+                        class="pull-right"></span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="fixbottom col-xs-12" id="appbottom">
+        <a ui-sref="xianlu"><span class="fx">发现</span></a>
+        <a ui-sref="xing"><span class="dz">私人定制</span></a>
+        <a ui-sref="my" class="active"><span class="my">我的</span></a>
+    </div>
+</div>

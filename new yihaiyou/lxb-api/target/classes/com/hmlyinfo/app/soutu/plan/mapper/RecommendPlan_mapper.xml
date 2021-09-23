@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.RecommendPlanMapper">
+	<insert id="insert" parameterType="RecommendPlan" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_recommend_plan
+			(
+				id,
+				plan_id,
+				user_id,
+				city_id,
+				recommend_weight,
+				recommend_name,
+				recommend_reason,
+				label,
+				modify_time,
+				create_time,
+				tag,
+				cities,
+				sale_price,
+				cover,
+				mark,
+				rec_loc
+			)
+		values
+			(
+				#{id},
+				#{planId},
+				#{userId},
+				#{cityId},
+				#{recommendWeight},
+				#{recommendName},
+				#{recommendReason},
+				#{label},
+				#{modifyTime},
+				#{createTime},
+				#{tag},
+				#{cities},
+				#{salePrice},
+				#{cover},
+				#{mark},
+				#{recLoc}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="RecommendPlan">
+		update tb_recommend_plan
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="planId != null and '' != planId"> plan_id = #{planId},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="cityId != null and '' != cityId"> city_id = #{cityId},</if>
+			<if test="recommendWeight != null and '' != recommendWeight"> recommend_weight = #{recommendWeight},</if>
+			<if test="recommendName != null and '' != recommendName"> recommend_name = #{recommendName},</if>
+			<if test="recommendReason != null and '' != recommendReason"> recommend_reason = #{recommendReason},</if>
+			<if test="label != null and '' != label"> label = #{label},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="recommendStatus != null and '' != recommendStatus"> recommend_status = #{recommendStatus},</if>
+			<if test="tag != null and '' != tag"> tag = #{tag},</if>
+			<if test="cities != null and '' != cities"> cities = #{cities},</if>
+			<if test="salePrice != null and '' != salePrice"> sale_price = #{salePrice},</if>
+			<if test="cover != null and '' != cover"> cover = #{cover},</if>
+			<if test="mark != null and '' != mark"> mark = #{mark},</if>
+			<if test="recLoc != null and '' != recLoc"> rec_loc = #{recLoc}</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="RecommendPlan">
+		delete from
+			tb_recommend_plan
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="RecommendPlan">
+		select
+			*
+		from
+			tb_recommend_plan
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="listColumns" resultType="RecommendPlan">
+		select
+		<if test="needColumns!=null and needColumns.size()!=0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}</foreach>
+		</if>
+		from
+			tb_recommend_plan
+		<where>
+            published=1
+			<if test="id != null and '' != id"> and rpl.id = #{id} </if>
+			<if test="planId != null and '' != planId"> and plan_id = #{planId} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="cityId != null and '' != cityId"> and city_id = #{cityId} </if>
+			<if test="singleCityId != null and '' != singleCityId"> and city_id like '${singleCityId}%'</if>
+			<if test="recommendWeight != null and '' != recommendWeight"> and recommend_weight = #{recommendWeight} </if>
+			<if test="label != null and '' != label"> and label = #{label} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="recommendStatus != null and '' != recommendStatus"> and recommend_status = #{recommendStatus} </if>
+			<if test="planCostL != null and '' != planCostL"> and plan_cost &gt;= #{planCostL} </if>
+			<if test="planCostU != null and '' != planCostU"> and plan_cost &lt;= #{planCostU} </if>
+			<if test="cover != null and '' != cover"> and cover = #{cover} </if>
+			<if test="mark != null and '' != mark"> and mark = #{mark} </if>
+			<if test="recLoc != null and '' != recLoc"> and rec_loc = #{recLoc} </if>
+			<if test="dayL != null and '' != dayL"> and plan_days &gt;= #{dayL} </if>
+			<if test="dayU != null and '' != dayU"> and plan_days &lt;= #{dayU} </if>
+			<if test="tag != null"> and tag like '%${tag}%' </if>
+			<if test="tags != null">
+				and (
+				<foreach collection="tags" item="item" index="index" separator="or">
+					rpl.tag like '%${item}%'
+				</foreach>
+				)
+			</if>
+			<if test="salePrice != null"> and sale_price =  #{salePrice} </if>
+			<if test="cities != null">
+				and (
+				<foreach collection="cities" item="item" index="index" separator="or">
+					cities like '%${item}%'
+				</foreach>
+				)
+			</if>
+		</where>
+	</select>
+	
+	<select id="list" resultType="RecommendPlan">
+		select 
+			 	rpl.*, pl.plan_name, pl.quote_num
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_recommend_plan rpl join tb_plan pl on rpl.plan_id = pl.id
+		<where>
+            published=true
+			<if test="id != null and '' != id"> and rpl.id = #{id} </if>
+			<if test="planId != null and '' != planId"> and plan_id = #{planId} </if>
+			<if test="userId != null and '' != userId"> and rpl.user_id = #{userId} </if>
+			<if test="cityId != null and '' != cityId"> and rpl.city_id = #{cityId} </if>
+			<if test="singleCityId != null and '' != singleCityId"> and rpl.city_id like '${singleCityId}%'</if>
+			<if test="recommendWeight != null and '' != recommendWeight"> and rpl.recommend_weight = #{recommendWeight} </if>
+			<if test="label != null and '' != label"> and rpl.label = #{label} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and rpl.modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and rpl.create_time = #{createTime} </if>
+			<if test="recommendStatus != null and '' != recommendStatus"> and rpl.recommend_status = #{recommendStatus} </if>
+			<if test="planDays != null and '' != planDays"> and rpl.plan_days = #{planDays} </if>
+			<if test="cover != null and '' != cover"> and cover = #{cover} </if>
+			<if test="mark != null and '' != mark"> and mark = #{mark} </if>
+			<if test="recLoc != null and '' != recLoc"> and rec_loc = #{recLoc} </if>
+			<if test="planCostL != null and '' != planCostL"> and rpl.plan_cost &gt;= #{planCostL} </if>
+			<if test="planCostU != null and '' != planCostU"> and rpl.plan_cost &lt;= #{planCostU} </if>
+			<if test="dayL != null and '' != dayL"> and rpl.plan_days &gt;= #{dayL} </if>
+			<if test="dayU != null and '' != dayU"> and rpl.plan_days &lt;= #{dayU} </if>
+			<if test="planName != null"> and pl.plan_name like '%${planName}%' </if>
+			<if test="tag != null"> and rpl.tag like '%${tag}%' </if>
+			<if test="tags != null">
+				and (
+				<foreach collection="tags" item="item" index="index" separator="or">
+					rpl.tag like '%${item}%'
+				</foreach>
+				)
+			</if>
+			<if test="salePrice != null"> and rpl.sale_price = #{salePrice} </if>
+			<if test="cities != null">
+				and (
+				<foreach collection="cities" item="item" index="index" separator="or">
+					rpl.cities like '%${item}%'
+				</foreach>
+				)
+			</if>
+		</where>
+		<choose>
+			<when test="orderColumn != null and '' != orderColumn">
+				ORDER BY ${orderColumn}
+				<if test="orderType != null and '' != orderType">
+					${orderType}
+				</if>
+			</when>
+			<otherwise>
+				order by pl.quote_num DESC,rpl.plan_cost asc
+			</otherwise>
+		</choose>
+	</sql>
+</mapper>

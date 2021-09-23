@@ -1,0 +1,124 @@
+*{
+	margin:0;
+	padding:0;
+}
+.clear {
+	clear: both;
+}
+.clearfix:after {
+	content:"\200B"; display:block; height:0; clear:both; 
+}
+.clearfix { 
+	*zoom:1;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+ol, ul, li {
+    list-style: none
+}
+
+a {
+	text-decoration: none;
+}
+
+.advert {
+	width: 100%;
+	height: 300px;
+	background: url(/image/ft_banner.png) no-repeat center center;
+}
+
+.total {
+	width: 1200px;
+	margin:70px auto 0 auto;
+	font-family: '微软雅黑';
+}
+
+.total .ft_left {
+	float:left;
+	width:822px;
+}
+
+.total .ft_right {
+	float: right;
+	width:240px;
+	background:#f3f8fe;
+	/*position: absolute;*/
+	/*top:0;*/
+	/*right:0;*/
+}
+
+.ft_left .apic {
+	width:100%;
+	height:400px;
+	margin-bottom:35px;
+}
+
+.ft_left .apic img {
+	width:100%;
+	height:100%;
+}
+
+.ft_left .line1 {
+	background:#3996fa;
+	width:42px;
+	height:5px;
+	display: block;
+	margin-bottom:2px;
+}
+
+.ft_left .line2 {
+	background:#3996fa;
+	width:26px;
+	height:4px;
+	display: block;
+	margin-bottom:29px;
+}
+.describcontian h3 {
+	font-size:22px;
+	margin-bottom:38px;
+}
+
+.describcontian p {
+	font-size: 12px;
+	font-family: 'simsun';
+	color:#555;
+	text-indent: 3em;
+	line-height:24px;
+}
+
+.describcontian .textmess {
+	margin-bottom:16px;
+}
+
+.total .ft_right ul {
+	font-size:16px;
+}
+
+.total .ft_right ul h3 {
+	background:#3996fa;
+	color:#fff;
+	line-height:44px;
+	text-indent:62px;
+}
+
+.total .ft_right ul a {
+    color: #000;
+}
+
+.total .ft_right ul li {
+	margin:2px 22px;
+	line-height:40px;
+	text-align:center;
+	border-bottom:1px solid #9edafc;
+}
+
+.total .ft_right ul li:last-child {
+	border-bottom:none;
+}
+
+.total .ft_right ul li.li_active {
+	background:#9edafc;
+}

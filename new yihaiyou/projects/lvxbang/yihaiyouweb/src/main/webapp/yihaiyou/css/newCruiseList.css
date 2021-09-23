@@ -1,0 +1,131 @@
+.clearBoth:before,
+.clearBoth:after {
+    content: "";
+    display: table;
+}
+.clearBoth:after {
+    clear: both;
+}
+
+.y-list-header{
+    width: 100%;
+    position: relative;
+    background: #007eff;
+    color: #fff;
+    line-height: 55px;
+    font-size: 18px;
+    text-align: center;
+}
+.y-list-header .back{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    left: 0;
+    top:0;
+    background: url("../image/historyback.png") no-repeat center;
+    background-size: 10px 15px;
+}
+.y-list-header .glasses{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    right: 0;
+    top:0;
+    background: url("../image/gg_icon_top_glasses.png") no-repeat center;
+    background-size: 16px 16px;
+}
+.y-list-nav{
+    border-bottom: 1px solid #dbdbdb;
+}
+.y-list-nav .y-nav-group{
+    width: 50%;
+    text-align: center;
+}
+.y-list-nav .y-nav-group span{
+    display: inline-block;
+    width: 94px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 2px solid #fff;
+    line-height: 36px;
+}
+.y-list-nav .y-nav-group span.active{
+    color: #007eff;
+    border-color: #007eff;
+}
+.y-list-content li{
+    border-bottom: 1px solid #dbdbdb;
+    padding: 12px;
+}
+.y-list-content li .y-content-left{
+    width: 100px;
+    height: 72px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-right: 12px;
+}
+.y-list-content li .y-content-left img{
+    width: 100%;
+    height: 100%;
+}
+.y-list-content li .y-content-right{
+    width: 180px;
+
+}
+
+.y-list-content li .y-content-right h5{
+    font-size: 16px;
+    text-align: left;
+    line-height: 20px;
+    height: 20px;
+    overflow: hidden;
+    color: #333;
+    margin-bottom: 2px;
+}
+.y-list-content li .y-content-right .depart-info{
+    margin-bottom: 12px;
+}
+.y-list-content li .y-content-right .depart-info span{
+    font-size: 12px;
+    line-height: 16px;
+    color: #666;
+    margin-right: 6px;
+}
+.y-list-content li .y-content-right .content-price{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #cc9030;
+}
+.y-list-content li .y-content-right .content-price sup{
+    color: #cc9030;
+    vertical-align: baseline;
+    font-weight: normal;
+    font-size: 10px;
+    top:1px;
+}
+.y-list-content li .y-content-right .content-price sub{
+    vertical-align: baseline;
+    font-weight: normal;
+    font-size: 10px;
+    bottom: 1px;
+}
+
+.y-list-footer{
+    padding-left: 12px;
+    height: 36px;
+    line-height: 36px;
+    position: relative;
+}
+.y-list-footer .icon-right{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: url("../image/Tright_gray.png") no-repeat center;
+    background-size: 22px;
+    position: absolute;
+    right: 0;
+    top:0;
+}

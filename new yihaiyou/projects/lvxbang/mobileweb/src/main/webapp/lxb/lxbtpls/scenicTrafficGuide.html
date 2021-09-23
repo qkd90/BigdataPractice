@@ -1,0 +1,41 @@
+<div ng-controller="scenicTrafficGuideCtrl" class="scenicOrderKnow">
+    <header class="produ_lis_header">
+        <div class="pro_header_main">
+            <span class="gty_left">
+                <i class="icon icon-title-back" ng-click="back()"></i>
+            </span>
+            <span class="gty_center">
+                &lt;{{scenicName}}&gt;交通信息
+            </span>
+            <span class="gty_right"></span>
+        </div>
+    </header>
+    <div class="wrapper" id="wrapper">
+        <div id="index">
+            <!-- 预订须知 -->
+            <div class="main_cont">
+                <!-- Notice BEGIN -->
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        景区地址
+                    </div>
+                    <div class="notice-content">
+                        <p>{{address}}</p>
+                    </div>
+                </div>
+                <div class="ticket-notice">
+                    <div class="notice-title">
+                        <span class="label-begin"></span>
+                        交通说明
+                    </div>
+                    <div class="notice-content">
+                        <p>{{trafficGuide}}</p>
+                    </div>
+                </div>
+                <!-- Notice END -->
+            </div>
+        </div>
+        <div ng-show="loading"><div class="yuloading"><span>加载数据中...</span></div></div>
+    </div>
+</div>

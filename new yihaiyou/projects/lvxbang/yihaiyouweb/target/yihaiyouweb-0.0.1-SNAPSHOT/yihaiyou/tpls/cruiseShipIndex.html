@@ -1,0 +1,93 @@
+<div class="youlun" ng-controller="cruiseShipIndexCtrl">
+    <div class="header">
+        <a ui-sref="index"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        <span>邮轮</span>
+    </div>
+
+    <div class="content">
+        <!--航线-->
+        <div class="low_line">
+            <div class="low_c fn-clear">
+                <a ng-click="toList(1000035, 'route')">
+                            <span class="logoImg">
+                                <img src="/yihaiyou/image/HSPZ7e.png">
+                            </span>
+                    <span class="logoWord">东南亚</span>
+                </a>
+                <a ng-click="toList(1000039, 'route')">
+                            <span class="logoImg">
+                                <img src="/yihaiyou/image/UHCWe6.png">
+                            </span>
+                    <span class="logoWord">日韩</span>
+                </a>
+                <a ng-click="toList(1000040, 'route')">
+                            <span class="logoImg">
+                                <img src="/yihaiyou/image/Taiwan.png">
+                            </span>
+                    <span class="logoWord">台湾</span>
+                </a>
+                <a ng-click="toList(1000041, 'route')">
+                            <span class="logoImg">
+                                <img src="/yihaiyou/image/HongKong.png">
+                            </span>
+                    <span class="logoWord">香港</span>
+                </a>
+                <a ng-click="toList(1000042, 'route')">
+                            <span class="logoImg">
+                                <img src="/yihaiyou/image/SeOrz5.png">
+                            </span>
+                    <span class="logoWord">皇家</span>
+                </a>
+                <a ng-click="toList(1000043, 'route')">
+                            <span class="logoImg">
+                                <img src="/yihaiyou/image/LXGEyu.png">
+                            </span>
+                    <span class="logoWord">丽星</span>
+                </a>
+                <a ng-click="toList(1000044, 'route')">
+                            <span class="logoImg">
+                                <img src="/yihaiyou/image/Costa.png">
+                            </span>
+                    <span class="logoWord">歌诗达</span>
+                </a>
+                <a ui-sref="cruiseShipList">
+                            <span class="logoImg">
+                                <img src="/yihaiyou/image/00DZI2.png">
+                            </span>
+                    <span class="logoWord">更多</span>
+                </a>
+            </div>
+        </div>
+        <!--精选航线-->
+        <div class="pro_featured">
+            <h3><span class="linetit">为您精选</span></h3>
+
+            <div class="pro_list" ng-repeat="ship in ships" ui-sref="cruiseShipDetail({id: ship.id})">
+                <a>
+                    <section>
+                        <div class="p_content">
+                            <div class="p_img">
+                                <img bn-lazy-src="{{ship.coverImage}}">
+                            </div>
+                            <div class="p_t">
+                                <div class="p_l" >
+                                    <p class="p_add">{{ship.name}}</p>
+
+                                    <p class="p_time" style="overflow: inherit;">{{ship.playDay - 1}}晚{{ship.playDay}}日游</p>
+
+                                    <p class="cruisdate">{{ship.startDate}}</p>
+
+                                    <p>{{ship.route}}</p>
+                                </div>
+                                <div class="p_r">
+                                    <span class="price">¥<em>{{ship.price}}</em><i>/人起</i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </a>
+            </div>
+            <a ui-sref="cruiseShipList" class="see_more">查看更多航线 &gt;&gt;</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,502 @@
+
+.mainBox {
+	width: 1198px;
+	background: #fff;
+	margin: 25px auto;
+	padding: 15px;
+	font-family: '微软雅黑';
+	border:1px solid #eee;
+}
+
+.mainBox .page {
+	width: 1200px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.mainBox .wallet_header {
+	width: 1155px;
+	height: 138px;
+	margin: 18px auto;
+	border:1px solid #e0e0e0;
+}
+
+.wallet_header ul li {
+	float: left;
+	width: 287px;
+	height: 100%;
+	color: #101010;
+	font-size: 18px;
+	cursor: pointer;
+	text-indent: 145px;
+	line-height: 138px;
+	border-right: 1px solid #e0e0e0;
+}
+
+.wallet_header ul li:last-child {
+	border-right: none;
+	cursor: auto;
+}
+
+.wallet_header ul li a {
+	display: block;
+	color: #101010;
+}
+
+.wallet_header ul li .bankar {
+	font-size:15px;
+	color: #3996fa;
+	cursor: pointer;
+	padding-left:10px;
+	text-decoration: underline;
+}
+
+.wallet_header ul li .mainword:hover,.wallet_header ul li .mainword:hover a {
+	color: #3996fa;
+	text-decoration: underline;
+}
+
+.wallet_header ul li.recharge {
+	background: url(/image/icon-recharge.png) no-repeat 75px center;
+}
+
+.wallet_header ul li.withdraw {
+	background: url(/image/icon-withdraw.png) no-repeat 75px center;
+	text-indent:145px;
+	position:relative;
+}
+
+.wallet_header ul li.withdraw p.bankname {
+	position:absolute;
+	left:0;
+	bottom:5px;
+	line-height:30px;
+	font-size: 15px;
+	text-indent: 28px;
+}
+
+.wallet_header ul li.withdraw p .reban {
+	color:#3396fa;
+	text-decoration:underline;
+}
+
+.wallet_header ul li.setpsword {
+	background: url(/image/icon-setpsword.png) no-repeat 75px center;
+}
+
+.wallet_header ul li.balance {
+	cursor: default;
+	text-indent: 45px;
+	text-decoration: none;
+}
+
+.wallet_header ul li.balance:hover {
+	color: #101010;
+}
+
+.wallet_header ul li.balance span {
+	color: #ff8800;
+	font-size: 14px;
+	margin-left: 5px;
+}
+
+.wallet_header ul li.balance span label {
+	font-size: 24px;
+}
+
+h3.recodertitle {
+	font-size: 18px;
+	color: #626262;
+	margin:22px 0 22px 20px;
+	padding: 2px 5px;
+	border-left: 2px solid #3996fa;
+}
+
+.recorder {
+	width: 1158px;
+	margin: auto;
+	border:1px solid #e0e0e0;
+}
+
+.recorder_header,.recorder_body {
+	width: 1158px;
+	height: 40px;
+	background: #f7f7f7;
+	border-bottom:1px solid #e0e0e0;
+}
+
+.recorder_body {
+	width: 1122px;
+}
+
+.recorder_body {
+	height: auto;
+	background: #fff;
+	padding: 0 18px;
+}
+
+.recorder_body ul {
+	border-bottom: 1px dashed #e6e6e6;
+}
+
+.recorder_body ul:last-child {
+	border-bottom: none;
+}
+
+.recorder_header ul li,.recorder_body ul li {
+	color: #626262;
+	font-size: 14px;
+	float: left;
+	line-height: 40px;
+	text-indent: 40px;
+}
+
+.recorder_body ul li {
+	line-height: 64px;
+	text-indent: 22px;
+}
+
+.recorder_header ul li.time,.recorder_body ul li.time {
+	width: 320px;
+}
+
+.recorder_header ul li.type,.recorder_body ul li.type {
+	width: 340px;
+}
+
+.recorder_header ul li.count,.recorder_body ul li.count {
+	width: 305px;
+}
+
+.recorder_header ul li.balance {
+	width: 190px;
+}
+
+.recorder_body ul li.balance {
+	width: 154px;
+	color: #ff8800;
+}
+
+
+.shadow {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 6;
+	display: none;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000);
+}
+
+.withdrawBox,.setpswordBox {
+	width: 358px;
+	height: 385px;
+	background: #fff;
+	position: fixed;
+	z-index: 7;
+	display: none;
+}
+
+.with_header {
+	width: 100%;
+	color: #333;
+	height: 40px;
+	font-size: 18px;
+	text-indent: 25px;
+	line-height: 40px;
+}
+
+.with_header span.closebtn {
+	width: 50px;
+	height: 50px;
+	float: right;
+	cursor: pointer;
+	background: url(/image/icon_close.png) no-repeat center center;
+}
+
+.with_body {
+	width: 260px;
+	margin: auto;
+	position:relative;
+	font-family: '微软雅黑';
+}
+
+.with_body .title {
+	display: block;
+	height: 60px;
+	color: #3996fa;
+	font-size: 16px;
+	text-align: center;
+}
+
+.with_body input {
+	width: 258px;
+	height: 34px;
+	line-height:34px;
+	padding: 3px 10px;
+	font-size: 14px;
+	color: #666;
+	outline: none;
+	 font-family: '微软雅黑';
+	border:1px solid #e0e0e0;
+	box-shadow: inset 0 1px 3px #ddd;
+}
+
+.with_body .attention {
+	line-height: 30px;
+	height: 30px;
+	color: #ff8800;
+	font-size: 12px;
+	display: block;
+}
+
+.with_body .attention .hidden {
+	display: none;
+}
+
+.with_body .attention label {
+	font-size: 14px;
+	margin: 3px 3px 0 10px;
+	float: left;
+}
+
+.with_body .submit {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	background: #ff8800;
+	font-size: 16px;
+	display: block;
+	text-align: center;
+	border-radius: 5px;
+	margin-top:5px;
+	cursor: pointer;
+}
+
+.with_body input:-ms-input-placeholder{
+    font-size: 12px;
+    color: #8d8d8d;
+    font-family: '微软雅黑'
+}
+
+.with_body input::-webkit-input-placeholder{
+    font-size: 12px;
+    color: #8d8d8d;
+    font-family: '微软雅黑'
+}
+
+.outline {
+	border:1px solid #3996fa!important;
+	box-shadow: inset 0px 1px 3px #3996fa!important;
+}
+
+.windowShadow {
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.5);
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:100;
+	display:none;
+}
+
+.bindBank {
+	width: 530px;
+	height: 465px;
+	background: #fff;
+	position: fixed;
+	z-index: 101;
+	left: 50%;
+	top: 50%;
+	margin-left: -265px;
+	margin-top: -232px;
+	color:#333;
+	font-family: '微软雅黑';
+	display:none;
+}
+
+.bindBank h3 {
+	font-size:18px;
+	line-height:50px;
+	text-indent:26px;
+	padding-top:6px;
+	border-bottom: 1px solid #ddd;
+}
+
+.bindBank .leftcheck {
+	width:5em;
+	height:30px;
+	float:left;
+	cursor: pointer;
+	margin-right:16px;
+	background: url(/image/icon_normal2.png) no-repeat center center;
+}
+
+.bindBank .leftcheckin {
+	background: url(/image/icon_selected.png) no-repeat center center;
+}
+
+.bindBank .carid {
+	float:left;
+	color: #999;
+	font-size:15px;
+	line-height: 30px;
+}
+
+.bindBank .carcolor {
+	color: #333;
+}
+
+.bindBank .carid .atten {
+	margin-left:10px;
+	color: #ff8800;
+}
+
+.bindBank .closebtn {
+	width:40px;
+	height:48px;
+	float:right;
+	cursor: pointer;
+	background:url(/image/icon_close.png) no-repeat center center;
+	background-size:16px;
+	margin-right: 5px;
+}
+
+.bindBank .line {
+	margin: 20px 0 0 57px;
+}
+
+.bindBank .line.historyCard {
+	display: none;
+}
+
+.bindBank .line .leftex {
+	float:left;
+	width:5em;
+	height:30px;
+	font-size:14px;
+	margin-right:16px;
+	line-height:30px;
+}
+
+.bindBank .line .inputbox {
+	float:left;
+	width:200px;
+	height:30px;
+	line-height:30px;
+	border:1px solid #ddd;
+	box-shadow: inset 0 1px 3px #e5e5e5;
+	background:url(/image/icon_down_e.png) no-repeat 175px center;
+	background-size:13px 7px;
+	position:relative;
+}
+
+.bindBank .line input.reinput {
+	width:100%;
+	height:20px;
+	border:none;
+	outline: none;
+	margin-top:6px;
+	text-indent:15px;
+}
+
+.bindBank .line .contain {
+	width:100%;
+	height:30px;
+	text-indent:15px;
+	display:inline-block;
+}
+
+.bindBank .line .banklist,.bindBank .line .citylist,.bindBank .line .provincelist {
+	width:200px;
+	max-height:184px;
+	position:absolute;
+	left:-1px;
+	top:30px;
+	z-index:103;
+	border:1px solid #ddd;
+	background:#fff;
+	display:none;
+	overflow:auto;
+}
+
+.bindBank .line .banklist li {
+	width:100%;
+	height:30px;
+	line-height:30px;
+	cursor:pointer;
+	text-indent:15px;
+	border-bottom:1px solid #ddd;
+}
+
+.bindBank .line .banklist li:last-child {
+	border-bottom:none;
+}
+
+.bindBank .line .provincelist li,.bindBank .line .citylist li {
+	width:59px;
+	height:30px;
+	line-height:30px;
+	cursor:pointer;
+	text-align:center;
+	float:left;
+	overflow: hidden;
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+
+.bindBank .line .provincelist li:hover,.bindBank .line .citylist li:hover {
+	background:#ff8800;
+	color:#fff;
+}
+
+.bindBank .line .provincelist li:nth-child(5n),.bindBank .line .citylist li:nth-child(5n){
+	border-right:none;
+}
+
+.bindBank .line .provincelist {
+	width:320px;
+}
+
+.bindBank .line .citylist {
+	width:300px;
+}
+
+.bindBank .line .bottom {
+	display:block;
+	width:131px;
+	height:34px;
+	line-height:34px;
+	text-align:Center;
+	color:#fff;
+	background:#ff8800;
+	font-size:16px;
+	margin:32px 88px;
+	border-radius:4px;
+}
+
+.with_body .nowP,.with_body .newPa,.with_body .newPb {
+	position:absolute;
+	color:#666;
+	font-size:14px;
+	display:none;
+}
+
+.with_body .nowP {
+	left:10px;
+	top:72px;
+}
+
+.with_body .newPa {
+	left:10px;
+	top:145px;
+}
+
+.with_body .newPb {
+	left:10px;
+	top:218px;
+}

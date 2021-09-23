@@ -1,0 +1,34 @@
+<div class="ticket_main" ng-controller="ferryListCtrl">
+    <div class="header" >
+        <a href="" ui-sref="ferrySearch"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        <!--{{ferryListParams.flightLine.name}}-->
+        添加船票
+        <span class="save pic2 pic2_1" ui-sref="personalIndex"></span>
+        <span class="save pic2  pic3"></span>
+    </div>
+    <div class="sel_day">
+        <span ng-click="changeDate(-1)">前一天</span>
+        <span ng-click="changeDate(1)">后一天</span>
+        <div class="sel_today">
+            <input type="text" readonly id="time" data-lcalendar="" ng-model="ferryListParams.date" ng-change="getFlightList()"/>
+            <!--<img src="/yihaiyou/image/icon-date.png">-->
+        </div>
+    </div>
+    <div class="section_day">
+        <ul>
+            <a ng-repeat="ferry in flightList" ng-click="goVisitorOrOrder(ferry)">
+            <li class="sec_list">
+                <div class="list_left">
+                    <p>航班时间：{{ferry.startTime}}</p>
+                    <p>{{ferry.number}}</p>
+                </div>
+                <div class="list_right">
+                    <p>往返船票：<span>¥{{ferry.price}}</span></p>
+                    <p>剩余{{ferry.freeCount}}张</p>
+                </div>
+            </li>
+            </a>
+        </ul>
+        <div class="nothingPic" ng-if="flightList.length == 0"></div>
+    </div>
+</div>

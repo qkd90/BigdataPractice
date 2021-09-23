@@ -1,0 +1,17 @@
+/* 地图覆盖物 */
+.mark-normal-scenic { position: absolute; }
+.mark-normal-scenic.mark-normal-focus { z-index: 1; }
+.normal-scenic-mark { width: 100%; height: 100%; }
+.normal-scenic-labelwrap { display: none;background-color: #22ac38; position: absolute; top: -49px; left: -43px; width: 80px; padding: 0 10px; border-radius: 2px; line-height: 40px;}
+.mark-normal-scenic:hover .normal-scenic-labelwrap { display: block; }
+.normal-scenic-labelwrap .arrow { position: absolute; bottom: -6px; left: 50%; width: 11px; height: 6px; margin-left: -6px; }
+.normal-scenic-labelwrap .arrow { background: url("/img/jiao_jingdian.png") no-repeat center; }
+.normal-scenic-mark--food.mark-normal-focus .normal-scenic-labelwrap .arrow { background: url("/img/jiao_meishi.png") no-repeat center; }
+.normal-scenic-mark--food.mark-normal-focus .normal-scenic-labelwrap { background-color: #f34949; }
+.normal-scenic-label { position: relative; }
+.mark-normal-scenic p { display: none; max-width: 80px; color: #fff; font-weight: bold; text-align: center; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mark-normal-scenic:hover p { display: block;}
+.mark-normal-scenic.mark-normal-focus p { display: block; }
+.mark-normal-scenic .normal-scenic-mark { display: block; width: 10px; height: 10px; background: rgba(0,0,0,.5); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000, endColorstr=#7F000000); border: 1px solid #fff; border-radius: 50%; }
+.normal-scenic-mark--scenic.mark-normal-focus .normal-scenic-mark { width: 5px; height: 5px; background: #fff; border: 4px solid; border-color: #22ac38; }
+.normal-scenic-mark--food.mark-normal-focus .normal-scenic-mark { width: 5px; height: 5px; background: #fff; border: 4px solid; border-color: #f34949; }

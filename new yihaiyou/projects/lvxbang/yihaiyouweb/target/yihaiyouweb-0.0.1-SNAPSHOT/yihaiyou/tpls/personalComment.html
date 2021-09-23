@@ -1,0 +1,53 @@
+<div class="personal_myWallet personal_myComment" ng-controller="personalCommentCtrl" screenheight>
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        我的评价
+    </div>
+    <div class="product">
+        <ul>
+            <li ng-repeat="com in commentTitleList" ng-class="{orange_true: state == com.index}"
+                ng-click="selComState(com.index)">{{com.contain}}
+            </li>
+        </ul>
+        <div class="sliderbar"></div>
+    </div>
+    <div class="commentList">
+        <div ng-show="commented == 1" infinite-scroll="listComment()" infinite-scroll-distance="1"
+             infinite-scroll-disabled='loading'>
+            <div class="comlistone clearfix" ng-repeat="comment in commentList" ng-click="detail(comment)">
+                <div class="list_left"><img bn-lazy-src="{{comment.targetCover}}"></div>
+                <div class="list_right">
+                    <p>{{comment.targetName}}</p>
+                    <span ng-click="deleteComment(comment.id, $event)">删除</span>
+                </div>
+                <div class="list_bottom">
+                    <p class="commentLevel{{comment.star}}" ng-if="comment.productType != 'recplan'"></p>
+                    <p>{{comment.content}}</p>
+                </div>
+            </div>
+        </div>
+        <div ng-show="commented == 2" infinite-scroll="listNoComment()" infinite-scroll-distance="1"
+             infinite-scroll-disabled='loading'>
+            <div class="comlistone clearfix" ng-repeat="order in orderList" ng-click="noDetail(order)">
+                <div class="list_left"><img bn-lazy-src="{{order.cover}}"></div>
+                <div class="list_right">
+                    <p>{{order.name}}</p>
+                    <span ng-click="showCommentArea(order, $event)">点评</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="commentArea" ng-show="commentArea" centerbox>
+        <div class="commentAreaTop">
+            <div class="starClick starLevel{{level}}">
+                <span ng-repeat="sclick in clicklist track by $index" ng-click="selStar($index)"></span>
+            </div>
+        </div>
+        <div class="commentAreaBottom">
+            <textarea ng-model="content" placeholder="请输入评论"></textarea>
+
+            <div class="commentAreaSub" ng-click="submitComment()">提交评论</div>
+        </div>
+    </div>
+    <div class="shadow" ng-show="shadow" ng-click="hideshadow()"></div>
+</div>

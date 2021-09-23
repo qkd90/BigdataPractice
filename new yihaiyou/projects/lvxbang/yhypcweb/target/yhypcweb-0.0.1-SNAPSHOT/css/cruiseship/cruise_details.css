@@ -1,0 +1,843 @@
+.wrap-box{
+    padding-bottom: 60px;
+}
+.wrap-box .wrap{
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap-box .wrap .bread-nav{
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+    line-height: 16px;
+}
+.wrap-box .wrap .bread-nav i{
+    font-style: normal;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.wrap-box .wrap .bread-nav a{
+    color: #333;
+    font-size: 14px;
+}
+.wrap-box .wrap .bread-nav a:hover{
+    color: #f80;
+}
+.banner-wrap{
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+}
+.banner-wrap .banner-swiper{
+    width: 1180px;
+    height: 460px;
+    overflow: hidden;
+}
+.banner-wrap .banner-swiper .swiper-slide a{
+    display: block;
+}
+.banner-wrap .banner-swiper .swiper-slide a img{
+    width: 1180px;
+    height: 460px;
+}
+.banner-wrap .banner-swiper .pagination{
+    position: absolute;
+    z-index: 20;
+    bottom: 104px;
+    width: 100%;
+    text-align: center;
+}
+.swiper-pagination-switch {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 8px;
+    background: #999;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.swiper-active-switch {
+    background: #3996fa;
+}
+.banner-wrap .banner-txt{
+    width: 1006px;
+    background: #fff;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: -100px;
+    z-index:1111111;
+    position: relative;
+    margin-left: 87px;
+    padding: 10px;
+}
+.banner-wrap .banner-txt .txt-header{
+    position: relative;
+    margin-bottom: 15px;
+}
+.banner-wrap .banner-txt .txt-header .logo{
+    position: absolute;
+    left: 0;
+    top:10px;
+    width: 239px;
+    height: 53px;
+}
+.banner-wrap .banner-txt .txt-header .txt-title{
+    margin: 0 auto;
+    text-align: center;
+}
+.banner-wrap .banner-txt .txt-header .txt-title p{
+    font-size: 12px;
+    color: #999;
+    line-height: 24px;
+}
+.banner-wrap .banner-txt .txt-header .txt-title h6{
+    font-weight: normal;
+    font-size: 24px;
+    color: #1a1a1a;
+}
+.banner-wrap .banner-txt .txt-header .txt-title h6 .details-btn{
+    font-size: 12px;
+    color: #3996fa;
+    line-height: 12px;
+    margin-left: 36px;
+}
+.banner-wrap .banner-txt .txt-header .txt-title h6 .details-btn i{
+    width: 10px;
+    height: 6px;
+    background: url(/image/icon_new_cabin_more_down.png) no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    margin-left: 4px;
+}
+.banner-wrap .banner-txt .txt-header .txt-title h6 .details-btn.active i{
+    background: url(/image/icon_new_cabin_more_up.png) no-repeat center;
+    background-size: contain;
+}
+.banner-wrap .banner-txt .txt-header .score{
+    position: absolute;
+    right: 10px;
+    top:10px;
+    text-align: right;
+}
+.banner-wrap .banner-txt .txt-header .score span{
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    line-height: 22px;
+}
+.banner-wrap .banner-txt .txt-header .score span sub{
+    color: #999;
+    font-size: 14px;
+    line-height: 14px;
+    vertical-align: baseline;
+    font-weight: normal;
+}
+.banner-wrap .banner-txt .txt-header .score p{
+    font-size: 12px;
+    color: #333;
+    line-height: 24px;
+}
+.banner-wrap .banner-txt .txt-content{
+    width: 960px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+    padding-bottom: 20px;
+}
+.banner-wrap .banner-txt .txt-tips{
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    text-align: center;
+}
+.banner-wrap .banner-txt .txt-tips span{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    line-height: 50px;
+    color: #333;
+}
+.banner-wrap .banner-txt .txt-tips span i{
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.banner-wrap .banner-txt .txt-tips span .icon01{
+    background: url(/image/cruise_details_banner_icon01.png) no-repeat center;
+    background-size: contain;
+}
+.banner-wrap .banner-txt .txt-tips span .icon02{
+    background: url(/image/cruise_details_banner_icon02.png) no-repeat center;
+    background-size: contain;
+}
+.banner-wrap .banner-txt .txt-tips span .icon03{
+    background: url(/image/cruise_details_banner_icon03.png) no-repeat center;
+    background-size: contain;
+}
+.banner-wrap .banner-txt .txt-tips span .icon04{
+    background: url(/image/cruise_details_banner_icon04.png) no-repeat center;
+    background-size: contain;
+}
+.banner-wrap .banner-txt .cruise-info{
+    text-align: center;
+}
+.banner-wrap .banner-txt .cruise-info span{
+    font-size: 14px;
+    color: #999;
+    line-height: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.banner-wrap .banner-txt .cruise-info i{
+    height: 15px;
+    width: 2px;
+    background: #eaeaea;
+    display: inline-block;
+    vertical-align: middle;
+}
+.cruise-nav{
+    width: 1180px;
+    margin: 0 auto;
+    background: #eaeaea;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.cruise-nav li a{
+    display: block;
+    font-size: 20px;
+    color: #333;
+    line-height: 80px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.cruise-nav li.active a{
+    background: #3996fa;
+    color: #fff;
+}
+.content-group{
+    width: 1180px;
+    margin: 0 auto;
+}
+.content-group h4{
+    font-size: 30px;
+    text-align: center;
+    color: #1a1a1a;
+    line-height: 88px;
+    font-weight: normal;
+}
+.content-group .cabin-nav-wrap{
+    text-align: center;
+    margin-bottom: 57px;
+}
+.content-group .cabin-nav-wrap .cabin-nav{
+    margin: 0 auto;
+}
+.content-group .cabin-nav-wrap .cabin-nav li{
+    margin-left: 27px;
+    margin-right: 27px;
+    display: inline-block;
+}
+.content-group .cabin-nav-wrap .cabin-nav .nav-li a{
+    display: block;
+    border-bottom: 2px solid #fff;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.content-group .cabin-nav-wrap .cabin-nav .nav-li.active a{
+    border-bottom: 2px solid #3996fa;
+}
+.content-group .cabin-nav-wrap .cabin-nav .nav-li a span{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    line-height: 34px;
+}
+.content-group .cabin-nav-wrap .cabin-nav .nav-li a .count{
+    font-size: 14px;
+    color: #3996fa;
+    text-align: center;
+}
+.content-group .cabin-nav-wrap .cabin-nav li{
+    vertical-align: middle;
+}
+.content-group .cabin-nav-wrap .cabin-nav li .cabin-more{
+    font-size: 18px;
+    line-height: 40px;
+    border-left: 1px solid #c2c2c2;
+    color: #333;
+    padding-left: 30px;
+    display: inline-block;
+}
+.content-group .cabin-nav-wrap .cabin-nav li .cabin-more i{
+    display: inline-block;
+    width: 12px;
+    height: 18px;
+    background: url(/image/cruise_details_icon_more_right.png) no-repeat center;
+    background-size: contain;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.content-group .cabin-group .cabin-header{
+    padding-left: 6px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #999;
+    line-height: 32px;
+    text-align: left;
+}
+.content-group .cabin-group .cabin-header .header-img{
+    width: 160px;
+}
+.content-group .cabin-group .cabin-header .header-name{
+    width: 340px;
+}
+.content-group .cabin-group .cabin-header .header-person{
+    width: 110px;
+}
+.content-group .cabin-group .cabin-header .heaer-floor{
+    width: 160px;
+}
+.content-group .cabin-group .cabin-header .header-area{
+    width: 140px;
+}
+.content-group .cabin-group .cabin-header .header-window{
+    width: 200px;
+}
+.content-group .cabin-group .cabin-body .cabin-body-group{
+    padding-left: 6px;
+    border-bottom: 1px dashed #dbdbdb;
+    margin-bottom: 34px;
+}
+.content-group .cabin-group .cabin-body .cabin-body-group .body-group li{
+    font-size: 16px;
+    color: #333;
+    line-height: 100px;
+    text-align: left;
+}
+.content-group .cabin-group .cabin-body .cabin-body-group .body-group .cabin-img{
+    width: 160px;
+}
+.content-group .cabin-group .cabin-body .cabin-body-group .body-group .cabin-img img{
+    width: 120px;
+    height: 80px;
+    margin-top: 10px;
+}
+.content-group .cabin-group .cabin-body .cabin-body-group .body-group .cabin-name{
+    width: 340px;
+}
+.content-group .cabin-group .cabin-body .cabin-body-group .body-group .cabin-person{
+    width: 110px;
+}
+.content-group .cabin-group .cabin-body .cabin-body-group .body-group .cabin-floor{
+    width: 160px;
+}
+.content-group .cabin-group .cabin-body .cabin-body-group .body-group .cabin-area{
+    width: 140px;
+}.content-group .cabin-group .cabin-body .cabin-body-group .body-group .cabin-area sup{
+     font-size: 12px;
+     line-height: 12px;
+ }
+
+.content-group .cabin-group .cabin-body .cabin-body-group .body-group .cabin-window{
+    width: 200px;
+}
+.content-group .cabin-group .cabin-body .cabin-body-group .body-group .cabin-operation{
+    width: 60px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #3996fa;
+    text-align: center;
+}
+.content-group .cabin-group .cabin-body .cabin-body-group .body-group .cabin-operation i{
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    background: url(/image/icon_new_cabin_more_down.png) no-repeat center;
+    background-size: contain;
+    vertical-align: baseline;
+    margin-left: 6px;
+}
+.content-group .cabin-group .cabin-body .cabin-body-group .body-group .cabin-operation.active i{
+    background: url(/image/icon_new_cabin_more_up.png) no-repeat center!important;
+    background-size: contain;
+}
+.content-group .cabin-group .cabin-body .cabin-body-group .cabin-txt{
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+    text-align: left;
+    width: 1000px;
+    margin-left: 160px;
+    margin-bottom: 10px;
+    margin-top: -40px;
+    display: none;
+}
+.content-group .cabin-group .cabin-body .cabin-body-group .cabin-txt .more{
+    color: #3996fa;
+    display: inline-block;
+    padding-left: 20px;
+    background: #fff;
+    opacity: 0.6;
+    filter:alpha(opacity=60);
+    margin-left: -10px;
+}
+.food-box{
+    width: 100%;
+    height: 590px;
+    position: relative;
+}
+.food-box .food-box-bg{
+    width: 100%;
+    height: 590px;
+}
+.food-box .food-wrap{
+    width: 100%;
+    height: 590px;
+    position: absolute;
+    left: 0;
+    top:0;
+    background: #2791a1;
+    background: rgba(39,145,161,0.8);
+}
+.food-box .food-wrap .food{
+    width: 1196px;
+    margin: 0 auto;
+}
+.food-box .food-wrap .food h4{
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    line-height: 88px;
+    font-weight: normal;
+}
+.food-box .food-wrap .food-nav-wrap{
+    text-align: center;
+    margin-bottom: 57px;
+}
+.food-box .food-wrap .food-nav-wrap .cabin-nav{
+    margin: 0 auto;
+}
+.food-box .food-wrap .food-nav-wrap .cabin-nav li{
+    margin-left: 27px;
+    margin-right: 27px;
+    display: inline-block;
+}
+.food-box .food-wrap .food-nav-wrap .cabin-nav .nav-li a{
+    display: block;
+    border-bottom: 2px solid transparent;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.food-box .food-wrap .food-nav-wrap .cabin-nav .nav-li.active a{
+    border-bottom: 2px solid #fff;
+}
+.food-box .food-wrap .food-nav-wrap .cabin-nav .nav-li a span{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    line-height: 34px;
+}
+.food-box .food-wrap .food-nav-wrap .cabin-nav .nav-li a .count{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+.food-box .food-wrap .food-nav-wrap .cabin-nav li{
+    vertical-align: middle;
+}
+.food-box .food-wrap .food-nav-wrap .cabin-nav li .cabin-more{
+    font-size: 18px;
+    line-height: 40px;
+    border-left: 1px solid #c2c2c2;
+    color: #fff;
+    padding-left: 30px;
+    display: inline-block;
+}
+.food-box .food-wrap .food-nav-wrap .cabin-nav li .cabin-more i{
+    display: inline-block;
+    width: 12px;
+    height: 18px;
+    background: url(/image/cruise_details_icon_more_right_white.png) no-repeat center;
+    background-size: contain;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.food-box .food-wrap .food .restaurant-group{
+    position: relative;
+    height: 385px;
+    overflow: hidden;
+    width: 1198px;
+}
+.food-box .food-wrap .food .restaurant-group .prev{
+    position: absolute;
+    left: 8px;
+    top:60px;
+    display: inline-block;
+    width: 20px;
+    height: 64px;
+    background: url(/image/cruise_details_icon_swiper_prev.png) no-repeat center;
+    background-size: contain;
+    z-index: 9999;
+}
+.food-box .food-wrap .food .restaurant-group .next{
+    position: absolute;
+    right: 5px;
+    top:60px;
+    display: inline-block;
+    width: 20px;
+    height: 64px;
+    background: url(/image/cruise_details_icon_swiper_next.png) no-repeat center;
+    background-size: contain;
+    z-index: 9999;
+}
+.food-box .food-wrap .food .restaurant-group .swiper-slide{
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.food-box .food-wrap .food .restaurant-group .swiper-slide img{
+    width: 100%;
+    height: 194px;
+    border: 2px solid #fff;
+}
+.food-box .food-wrap .food .restaurant-group .swiper-slide h6{
+    font-size: 18px;
+    color: #fff;
+    line-height: 36px;
+    text-align: left;
+    font-weight: normal;
+}
+.food-box .food-wrap .food .restaurant-group .swiper-slide .tips{
+    font-size: 14px;
+    color: #fff;
+    line-height: 28px;
+    margin-left: -9px;
+}
+.food-box .food-wrap .food .restaurant-group .swiper-slide .tips span{
+    margin-left: 9px;
+    margin-right: 9px;
+}
+.food-box .food-wrap .food .restaurant-group .swiper-slide .tips i{
+    font-style: normal;
+}
+.food-box .food-wrap .food .restaurant-group .swiper-slide .txt{
+    font-size: 14px;
+    color: #fff;
+    line-height: 24px;
+    height: 48px;
+    overflow: hidden;
+}
+.play{
+    width: 1196px;
+    margin:0 auto;
+}
+.play h4{
+    font-size: 30px;
+    text-align: center;
+    color: #1a1a1a;
+    line-height: 88px;
+    font-weight: normal;
+}
+.play .play-nav-wrap{
+    text-align: center;
+    margin-bottom: 57px;
+}
+.play .play-nav-wrap .cabin-nav{
+    margin: 0 auto;
+}
+.play .play-nav-wrap .cabin-nav li{
+    margin-left: 27px;
+    margin-right: 27px;
+    display: inline-block;
+}
+.play .play-nav-wrap .cabin-nav .nav-li a{
+    display: block;
+    border-bottom: 2px solid transparent;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.play .play-nav-wrap .cabin-nav .nav-li.active a{
+    border-bottom: 2px solid #3996fa;
+}
+.play .play-nav-wrap .cabin-nav .nav-li a span{
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    line-height: 34px;
+}
+.play .play-nav-wrap .cabin-nav .nav-li a .count{
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+.play .play-nav-wrap .cabin-nav li{
+    vertical-align: middle;
+}
+.play .play-nav-wrap .cabin-nav li .cabin-more{
+    font-size: 18px;
+    line-height: 40px;
+    border-left: 1px solid #c2c2c2;
+    color: #333;
+    padding-left: 30px;
+    display: inline-block;
+}
+.play .play-nav-wrap .cabin-nav li .cabin-more i{
+    display: inline-block;
+    width: 12px;
+    height: 18px;
+    background: url(/image/cruise_details_icon_more_right_white.png) no-repeat center;
+    background-size: contain;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+.play .play-group{
+    position: relative;
+    height: 385px;
+    overflow: hidden;
+    width: 1198px;
+}
+.play .play-group .prev{
+    position: absolute;
+    left: 8px;
+    top:60px;
+    display: inline-block;
+    width: 20px;
+    height: 64px;
+    background: url(/image/cruise_details_icon_swiper_prev.png) no-repeat center;
+    background-size: contain;
+    z-index: 9999;
+}
+.play .play-group .next{
+    position: absolute;
+    right: 5px;
+    top:60px;
+    display: inline-block;
+    width: 20px;
+    height: 64px;
+    background: url(/image/cruise_details_icon_swiper_next.png) no-repeat center;
+    background-size: contain;
+    z-index: 9999;
+}
+.play .play-group .swiper-slide{
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.play .play-group .swiper-slide img{
+    width: 100%;
+    height: 194px;
+    border: 2px solid #fff;
+}
+.play .play-group .swiper-slide h6{
+    font-size: 18px;
+    color: #333;
+    line-height: 36px;
+    text-align: left;
+    font-weight: normal;
+}
+.play .play-group .swiper-slide .tips{
+    font-size: 14px;
+    color: #333;
+    line-height: 28px;
+    margin-left: -9px;
+}
+.play .play-group .swiper-slide .tips span{
+    margin-left: 9px;
+    margin-right: 9px;
+}
+.play .play-group .swiper-slide .tips i{
+    font-style: normal;
+}
+.play .play-group .swiper-slide .txt{
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+    height: 48px;
+    overflow: hidden;
+}
+.server{
+    background: #5d85a8;
+    width: 100%;
+}
+.server .server-wrap{
+    width: 798px;
+    padding-top:13px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.server .server-wrap h4{
+    font-size: 20px;
+    line-height: 60px;
+    color: #fff;
+    text-align: center;
+}
+.server .server-wrap .server-group{
+    width: 798px;
+}
+.server .server-wrap .server-group li{
+    width: 25%;
+    box-sizing: border-box;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.server .server-wrap .server-group li a{
+    display: block;
+}
+.server .server-wrap .server-group li a img{
+    width: 100%;
+    height: 95px;
+    border: 1px solid #fff;
+}
+.server .server-wrap .server-group li a .title{
+    font-size: 12px;
+    line-height: 24px;
+    color: #fff;
+    text-align: left;
+    margin-bottom: 4px;
+}
+.server .server-wrap .server-group li a .tips span{
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    color: #fff;
+    text-align: left;
+}
+.server .server-wrap .server-more{
+    text-align: center;
+    margin-top: 20px;
+}
+.server .server-wrap .server-more a{
+    font-size: 14px;
+    color: #fff;
+}
+.server .server-wrap .server-more a i{
+    width: 7px;
+    height: 14px;
+    display: inline-block;
+    background: url(/image/cruise_details_icon_more_right_white_small.png) no-repeat center 2px;
+    background-size: 7px 12px;
+    margin-left: 6px;
+}
+.deck{
+    width: 786px;
+    margin: 0 auto;
+    padding-top: 27px;
+    text-align: center;
+}
+.deck h4{
+    font-size: 20px;
+    color: #333;
+    line-height: 84px;
+    text-align: center;
+}
+.deck .deck-img{
+    width: 786px;
+    height: 199px;
+    margin: 0 auto;
+}
+.deck .deck-img img{
+    width: 786px;
+    height: 199px;
+}
+.deck .more{
+    display: inline-block;
+    width: 178px;
+    height: 36px;
+    color: #fff;
+    background: #3996fa;
+    line-height: 36px;
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 33px;
+    margin-bottom: 60px;
+}
+.question-wrap{
+    background: #e6ecf2;
+    width: 100%;
+}
+.question-wrap .question{
+    width: 800px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.question-wrap .question h4{
+    font-size: 20px;
+    line-height: 100px;
+    text-align: center;
+    color: #333;
+    font-weight: normal;
+}
+.question-wrap .question .question-group{
+    margin-bottom: 30px;
+}
+.question-wrap .question .question-group .question-wrap{
+    margin-bottom: 10px;
+}
+.question-wrap .question .question-group .question-wrap i{
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #3996fa;
+    line-height: 16px;
+    font-style: normal;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.question-wrap .question .question-group .question-wrap .question-txt{
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+    width: 774px;
+}
+.question-wrap .question .question-group .answer-wrap i{
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #ff9813;
+    line-height: 16px;
+    font-style: normal;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.question-wrap .question .question-group .answer-wrap .answer-txt{
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    width: 774px;
+}
+.question-wrap .question .more{
+    display: inline-block;
+    width: 178px;
+    height: 36px;
+    color: #fff;
+    background: #3996fa;
+    line-height: 36px;
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 33px;
+}
+
+/*导航浮动*/
+.fixed{
+    position: fixed;
+    top:-30px;
+    left: 50%;
+    margin-left: -590px;
+    z-index: 99999999;
+}

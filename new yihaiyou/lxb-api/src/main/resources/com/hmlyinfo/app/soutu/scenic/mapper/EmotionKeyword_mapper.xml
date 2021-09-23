@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.EmotionKeywordMapper">
+	<insert id="insert" parameterType="EmotionKeyword">
+		insert into tb_emotion_keyword
+			(
+				id,
+				keyword,
+				count,
+				scenic_id,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{keyword},
+				#{count},
+				#{scenicIds},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="EmotionKeyword">
+		update tb_emotion_keyword
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="keyword != null and '' != keyword"> keyword = #{keyword},</if>
+			<if test="count != null and '' != count"> count = #{count},</if>
+			<if test="scenicIds != null and '' != scenicIds"> scenic_id = #{scenicIds},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="EmotionKeyword">
+		delete from
+			tb_emotion_keyword
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="EmotionKeyword">
+		select
+			id,
+			keyword,
+			count,
+			scenic_id,
+			modify_time,
+			create_time
+		from
+			tb_emotion_keyword
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="EmotionKeyword">
+		select 
+			 id,
+			keyword,
+			count,
+			scenic_id,
+			modify_time,
+			create_time
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_emotion_keyword
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="keyword != null and '' != keyword"> and keyword = #{keyword} </if>
+			<if test="count != null and '' != count"> and count = #{count} </if>
+			<if test="scenicIds != null and '' != scenicIds"> and scenic_id = #{scenicIds} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		</where>
+		order by count desc
+	</sql>
+</mapper>

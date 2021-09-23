@@ -1,0 +1,27 @@
+<div class="youlun clearfix" ng-controller="cruiseShipDateCtrl" id="tagHeight">
+    <header>
+        <div class="yl_header">
+            <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+            选择团期
+        </div>
+    </header>
+    <section id="calendar" style="margin-top: 45px;" full-calendar calendar-data="{{calendarData}}"
+             calendar-event-click="eventClick(calEvent)" calendar-day-click="dayClick(date)">
+    </section>
+    <section style="margin-bottom: 100px;">
+        <div class="Qdate_describe" style="width:100%">
+            <span>已选团期：{{selectedDate}}</span>
+        </div>
+    </section>
+    <div class="Qdate_footer">
+        <div ng-click="next()">
+            <p>下一步</p>
+
+            <p>选择资源</p>
+        </div>
+    </div>
+</div>
+<script>
+    var docHeight = $(window).height();
+    $('#tagHeight').css({'height': docHeight});
+</script>

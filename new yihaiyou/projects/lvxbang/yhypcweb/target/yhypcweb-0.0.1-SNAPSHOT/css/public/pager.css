@@ -1,0 +1,27 @@
+.m-pager {
+    text-align: right;
+    padding: 5px 0 45px 0;
+    margin-top: 20px;
+}
+.m-pager .total {
+    color: #666;
+    font-size: 14px;
+    margin-right: 20px;
+}
+.m-pager a.pageCurrent {
+    border: 1px solid #ff8800;
+    background: #ff8800;
+    color: #fff;
+}
+.m-pager a, .m-pager span {
+    margin-left: 2px;
+}
+.m-pager a, .m-pager span {
+    background: #fff;
+    border: 1px solid #fff;
+    color: #999;
+    padding: 7px 10px;
+    /*margin-left: -4px;*/
+    font-size: 14px;
+    font-weight: bold;
+}

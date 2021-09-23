@@ -1,0 +1,43 @@
+<div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+  <ul>
+    <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">写游记</a></li>
+    <li class="pull-right">
+      <button type="button" class="fabu btn" data-toggle="modal" data-target="#jinggao">发布</button>
+    </li>
+  </ul>
+</div>
+<div id="subcontainer" class="clearfix">
+  <div class="xie-title yjbox col-xs-12">
+    <p>
+      <input type="text" class="form-control" id="youjititle" placeholder="游记标题">
+    </p>
+    <div class="clearfix daynum"><span class="pull-left day">游玩天数</span>
+      <div class="spinner pull-right">
+        <input type="text" class="num" id="spinner"/>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 yjbox yjoneday">
+    <h2 class="title clearfix"><span class="pull-left">第一天</span><span class="pull-right trash"><a onclick="deleteRow($(this));" class="img-circle"><img src="images/ico/trash.png" /></a></span></h2>
+    <div class="clearfix youjicontent">
+      <input type="text" class="form-control" id="youjititle" placeholder="第一天感受和经历">
+    </div>
+    <div class="youjimore clearfix"><a href="" class="center-block text-center"><img src="images/ico/my-xie-jia.jpg" /></a></div>
+  </div>
+</div>
+<script src="libs/jquery/jquery.spinner.js"></script>
+<script type="text/javascript">
+$('#spinner').spinner();
+
+//删除
+function deleteRow(obj) {
+    obj.parents(".yjoneday").remove();
+}
+//增加减少天数
+$(".increase").click(function(){
+  $("#subcontainer").append("<div class='col-xs-12 yjbox yjoneday'><h2 class='title clearfix'><span class='pull-left'>第二天</span><span class='pull-right trash'><a onclick='deleteRow($(this));' class='img-circle'><img src='images/ico/trash.png' /></a></span></h2><div class='clearfix youjicontent'><input type='text' class='form-control' id='youjititle' placeholder='第一天感受和经历'></div><div class='youjimore clearfix'><a href='' class='center-block text-center'><img src='images/ico/my-xie-jia.jpg' /></a></div></div>");
+});
+$(".decrease").click(function(){
+  $(".yjoneday1").remove();
+});
+</script>

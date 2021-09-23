@@ -1,0 +1,19 @@
+<div class="personal_index" ng-controller="personalMarchListCtrl" screenheight>
+    <div class="header">
+        <a ui-sref="personalIndex"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        我的行程
+    </div>
+
+    <div class="marchlist" infinite-scroll="getPlanList()" infinite-scroll-distance="3" infinite-scroll-disabled='loading'>
+        <ul>
+            <li class="clearfix" ng-repeat="plan in planList" ui-sref="personalMarchDetail({planId: plan.id})">
+                <div class="march_left"><span class="marchLogo"><i class="yhyfont per_35font">&#xe65a;</i></span></div>
+                <div class="march_right">
+                    <p class="marchname">{{plan.name}}</p>
+                    <p class="marchtime">{{plan.playDate}} <span class="daytime">{{plan.planDays}}天</span> ¥{{plan.price}}</p>
+                    <span class="delete"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

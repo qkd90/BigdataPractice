@@ -1,0 +1,27 @@
+<style>
+    .waittingPage img {
+        width:300px;
+    }
+
+    .backout {
+        width:150px;
+        height:32px;
+        line-height:32px;
+        background:#3996fa;
+        color:#fff;
+        font-size:1.6rem;
+        text-align:Center;
+        position:fixed;
+        left:20px;
+        bottom:30px;
+        z-index: 100;
+        border-radius:30px;
+    }
+</style>
+<div class="waittingPage" ng-controller="timeOutCtrl">
+    <div class="header">
+        错误提示
+    </div>
+    <img class="img" src="/yihaiyou/image/timeout.png">
+    <div class="backout" ng-click="closeWindow()">关闭</div>
+</div>

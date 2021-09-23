@@ -1,0 +1,141 @@
+.roomPrice .messageList_header>div.dataTables_wrapper>table>thead>tr>th,
+.sailPrice .messageList_header>div.dataTables_wrapper>table>thead>tr>th,
+.financeList .financeTable>div.dataTables_wrapper>table>thead>tr>th {
+    text-align: center;
+}
+.roomPrice .messageList_header>div.dataTables_wrapper>div.dataTables_processing,
+.sailPrice .messageList_header>div.dataTables_wrapper>div.dataTables_processing,
+.financeList .financeTable>div.dataTables_wrapper>div.dataTables_processing{
+    width: 15%;
+    height: 50px;
+    padding: 0px;
+    margin-left: -6%;
+    margin-top: -38px;
+    line-height: 50px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(18, 18, 18, 0.7);
+    background: #121212\0;
+    *background: #121212;
+    color: #fff;
+}
+.roomPrice .messageList_header>div.dataTables_wrapper>div.dataTables_length,
+.sailPrice .messageList_header>div.dataTables_wrapper>div.dataTables_length,
+.financeList .financeTable>div.dataTables_wrapper>div.dataTables_length {
+    position: absolute;
+    bottom: 2px;
+    right: 0px;
+    width: 160px\0;
+    *width: 160px;
+}
+.roomPrice .messageList_header>div.dataTables_wrapper>div.dataTables_length label,
+.sailPrice .messageList_header>div.dataTables_wrapper>div.dataTables_length label,
+.financeList .financeTable>div.dataTables_wrapper>div.dataTables_length label {
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+.roomPrice .messageList_header>div.dataTables_wrapper>div.dataTables_info,
+.sailPrice .messageList_header>div.dataTables_wrapper>div.dataTables_info,
+.financeList .financeTable>div.dataTables_wrapper>div.dataTables_info {
+    padding-top: 0px;
+    float: right;
+}
+
+.price-calendar-info {
+    width: 100%;
+}
+.price-calendar-info input {
+    width: 100px;
+}
+.price-calendar-info input.readonly {
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+#valuationModels {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff5200;
+}
+.price-calendar-info .leftTitle {
+    display: block;
+    float: left;
+    line-height:30px;
+    color: #000;
+    font-size:14px;
+    font-weight:normal;
+    margin-bottom: 0px;
+    max-width: none;
+}
+.price-calendar-info .week-area {
+    width:500px;
+    height:30px;
+    float:left;
+    padding: 0 10px;
+}
+.price-calendar-info .week-area .checkbox-inline {
+    color: #333;
+    font-size:12px;
+    width:50px;
+    height: 30px;
+    line-height:30px;
+    font-family: SimSum;
+}
+.price-calendar-info .week-area .checkbox-inline + .checkbox-inline {
+    margin-left: 5px;
+}
+.price-calendar-info .week-area .checkbox-inline input {
+    width:16px;
+    height:16px;
+    margin-top: 7px;
+}
+.price-calendar-info .btn1 {
+    width: 100px;
+    height:40px;
+    font-size: 16px;
+    color: #333;
+    font-family: SimSum;
+    float:left;
+}
+
+.price-calendar-info .add-price-btn {
+    float: left;
+    padding: 0;
+    margin-left: 8px;
+    width: 54px;
+    height:30px;
+    color: #fff;
+    font-family: SimSum;
+    background-color: #4790ee;
+    border: none;
+    box-shadow: 0 2px 2px #ccc;
+}
+.price-calendar-info .clear-price-btn {
+    float: left;
+    padding: 0;
+    margin-left: 5px;
+    width: 54px;
+    height:30px;
+}
+.price-calendar-info .add-price-btn:hover {
+    background-color: #2681f0;
+    color: #fff;
+}
+#price_calendar {
+    width: 100%;
+    margin: 5px auto 0px;
+    text-align: center;
+}
+#price_calendar h2 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 29px;
+}
+#price_calendar .fc-toolbar {
+    margin-bottom: 0px;
+}
+
+.selectBar .selectBar_1 .dropdown .caret {
+    white-space: pre-wrap;
+}

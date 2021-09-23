@@ -1,0 +1,91 @@
+<div ng-controller="xingjiaotongCtrl" class="xing_jiaotong">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">添加交通</a></li>
+        </ul>
+    </div>
+    <div id="yjcontainer" class="clearfix">
+        <div ng-if="trafficList.length == 0 && !loaded"><div class="yuloading"><span>正在努力加载中...</span></div></div>
+        <div ng-if="trafficList.length == 0 && loaded" class="alert alert-danger text-center">找不到合适的交通数据哦</div>
+        <div ng-repeat="city in trafficList">
+            <div ng-repeat="traffics in city.traffics">
+                <div class="addjiaotong clearfix" ng-if="traffics.trafficHash != ''">
+                    <h4 ng-click="detail(this,city)" style="font-size:18px">
+                        <input isreturn="false" ng-if="traffics.selected" checked name="{{traffics.trafficHash}}{{traffics.trafficType}}" icheckgreen type="checkbox" value=""/>
+                        <input isreturn="false" ng-if="!traffics.selected" name="{{traffics.trafficHash}}{{traffics.trafficType}}" icheckgreen type="checkbox" value=""/>
+                        <span class="spanfont">{{city.fromCityName}}至{{city.toCityName}} {{city.startDate}}</span>
+                        <img src="images/ico/ico-qu.jpg"/></h4>
+                    <div class="banci clearfix" ng-click="detail(this,city)">
+                        <span class="time pull-left">{{traffics.startTime}}<small style="font-weight:300">{{traffics.startStation}}
+                        </small></span>
+                        <span class="jiantou pull-left"></span>
+                            <span class="time pull-left">{{traffics.endTime}}<small style="font-weight:300">{{traffics.endStation}}
+                            </small></span>
+                        <span class="price pull-right">￥{{traffics.selectPrice.price}}</span>
+                    </div>
+                    <!--<div class="clearfix  col-xs-12">-->
+                    <div class="clearfix  col-xs-12" id="iconinfo">
+                        <span class="ico-dc pull-left" ng-if="traffics.trafficType == 'TRAIN'">{{traffics.selectPrice.seatName}}{{traffics.trafficCode}}</span>
+                        <span class="pull-left banciNo jiaotongpic" ng-if="traffics.trafficType == 'AIRPLANE'"><img bn-lazy-src="images/airlines/{{traffics.companyCode}}.png" style="margin-right:5px">{{traffics.selectPrice.seatName}} {{traffics.trafficCode}}</span>
+                        <button type="button" class="genhuan pull-right col-xs-3" style="margin-right:-10px" ng-click="jiaotonglist(this,false)">更换
+                        </button>
+                    </div>
+                </div>
+                <div class="addjiaotong clearfix nojiaotong" ng-if="traffics.trafficHash == ''">
+                    <h4>
+                        <span class="spanfont">{{city.fromCityName}}至{{city.toCityName}} {{city.startDate}}</span>
+                        <img src="images/ico/ico-qu.jpg"/></h4></h2>
+                    <div class="banci clearfix">
+                        暂无去程<span ng-if="traffics.trafficType == 'TRAIN'">火车票</span><span ng-if="traffics.trafficType == 'AIRPLANE'">机票</span>信息
+                    </div>
+                </div>
+            </div>
+            <div ng-repeat="traffics in city.returnTraffics">
+                <div class="addjiaotong clearfix" ng-if="traffics.trafficHash != ''">
+                    <h4 ng-click="returndetail(this,city)">
+                        <input isreturn="true" ng-if="traffics.selected" checked name="{{traffics.trafficHash}}{{traffics.trafficType}}" icheckgreen type="checkbox" value=""/>
+                        <input isreturn="true" ng-if="!traffics.selected" name="{{traffics.trafficHash}}{{traffics.trafficType}}" icheckgreen type="checkbox" value=""/>
+                        <span class="spanfont">{{city.toCityName}}至{{fromCity.name}} {{traffics.leaveDate}}</span><img
+                            src="images/ico/ico-fan.jpg"/></h4>
+                    <div class="banci clearfix" ng-click="returndetail(this,city)">
+                        <span class="time pull-left">{{traffics.startTime}}<small style="font-weight:300">{{traffics.startStation}}
+                        </small></span>
+                        <span class="jiantou pull-left"></span>
+                        <span class="time pull-left">{{traffics.endTime}}<small style="font-weight:300">{{traffics.endStation}}</small></span>
+                        <span class="price pull-right">￥{{traffics.selectPrice.price}}</span>
+                    </div>
+                    <div class="clearfix col-xs-12">
+                        <span class="ico-dc pull-left" ng-if="traffics.trafficType == 'TRAIN'">{{traffics.selectPrice.seatName}}{{traffics.trafficCode}}</span>
+                        <span class="pull-left banciNo" ng-if="traffics.trafficType == 'AIRPLANE'"><img bn-lazy-src="images/airlines/{{traffics.companyCode}}.png">{{traffics.selectPrice.seatName}} {{traffics.trafficCode}}</span>
+                        <button type="button" class="genhuan pull-right" style="margin-right:-10px" ng-click="jiaotonglist(this,true)">更换
+                        </button>
+                    </div>
+                </div>
+                <div class="addjiaotong clearfix nojiaotong" ng-if="traffics.trafficHash == ''">
+                    <h4>
+                        <span class="spanfont">{{city.toCityName}}至{{fromCity.name}} {{traffics.leaveDate}}</span>
+                        <img src="images/ico/ico-fan.jpg"/></h4>
+                    <div class="banci clearfix">
+                        暂无返程<span ng-if="traffics.trafficType == 'TRAIN'">火车票</span><span ng-if="traffics.trafficType == 'AIRPLANE'">机票</span>信息
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mybottom xing-next text-center col-xs-12"><a ng-click="recommendJiudian()"><span style="width: 200px;">下一步添加酒店</span></a>
+    </div>
+    <!-- 线路编辑弹窗 -->
+    <div class="modal fade" id="genhuan" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="text-center">您要更换交通类型</h4>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="feiji btn-block">飞机</button>
+                    <button type="button" class="huoche btn-block">火车</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

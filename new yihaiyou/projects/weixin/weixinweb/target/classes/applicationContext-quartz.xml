@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+   http://www.springframework.org/schema/aop
+   http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+   http://www.springframework.org/schema/tx
+   http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+   http://www.springframework.org/schema/jee
+   http://www.springframework.org/schema/jee/spring-jee-4.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	<!-- <bean id="appendOrderTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="orderService" />
+		</property>
+		<property name="targetMethod">
+			<value>appendOrder</value>
+		</property>
+		<property name="concurrent">
+			<value>false</value>
+		</property>
+	</bean>
+	<bean id="appendOrderTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="appendOrderTaskJob" />
+		</property>
+		<property name="cronExpression">
+			<value>0 0/1 * * * ?</value>
+		</property>
+	</bean>
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list merge="default">
+				<ref bean="appendOrderTaskTrigger" />
+			</list>
+		</property>
+	</bean> -->
+
+	<!--<bean id="appendOrderTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+		<!--<property name="targetObject">-->
+			<!--<ref bean="sendingMsgService" />-->
+		<!--</property>-->
+		<!--<property name="targetMethod">-->
+			<!--<value>findSendingMsg</value>-->
+		<!--</property>-->
+		<!--<property name="concurrent">-->
+			<!--<value>false</value>-->
+		<!--</property>-->
+	<!--</bean>-->
+	<!--<bean id="buildTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">-->
+		<!--<property name="targetObject">-->
+			<!--<ref bean="buildService" />-->
+		<!--</property>-->
+		<!--<property name="targetMethod">-->
+			<!--<value>buildAll</value>-->
+		<!--</property>-->
+		<!--<property name="concurrent">-->
+			<!--<value>false</value>-->
+		<!--</property>-->
+	<!--</bean>-->
+	<!--&lt;!&ndash;<bean id="cronTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="jobDetail" ref="appendOrderTaskJob"></property>&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="cronExpression" value="0/10 * * * * ?"></property>&ndash;&gt;-->
+    <!--&lt;!&ndash;</bean>&ndash;&gt;-->
+	<!--<bean id="buildTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">-->
+        <!--<property name="jobDetail" ref="buildTask"></property>-->
+        <!--<property name="cronExpression" value="0 0 0 * * ?"></property>-->
+    <!--</bean>-->
+
+    <!--<bean id="trigger" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">-->
+        <!--<property name="triggers">-->
+            <!--<list>-->
+                <!--&lt;!&ndash;<ref bean="cronTriggerBean"/>&ndash;&gt;-->
+                <!--<ref bean="buildTriggerBean"/>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>  -->
+	<!---->
+
+</beans>

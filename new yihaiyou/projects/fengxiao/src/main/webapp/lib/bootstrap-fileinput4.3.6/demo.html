@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>图片上传</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/fileinput.css" media="all" rel="stylesheet" type="text/css" />	
+	<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/fileinput.js" type="text/javascript"></script>
+    <script src="js/locales/zh.js" type="text/javascript"></script>
+	<!-- bootstrap.js below is only needed if you wish to the feature of viewing details
+		 of text file preview via modal dialog -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <label class="control-label">Planets and Satellites</label>
+<input id="input-25" name="input25[]" type="file" multiple class="file-loading">
+	
+	
+	<script>
+	    $(document).ready(function() {
+			$("#input-25").fileinput({
+        		language: 'zh',
+    			uploadUrl: "/file-upload-batch/1",
+				deleteUrl: "/site/file-delete",
+			   initialPreview: [
+					'http://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/631px-FullMoon2010.jpg',
+					'http://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Earth_Eastern_Hemisphere.jpg/600px-Earth_Eastern_Hemisphere.jpg'
+				],
+				initialPreviewAsData: true,
+				initialPreviewConfig: [
+					{key: '/hotel/hotelDesc/1479113251043.jpg', showDelete: true, showZoom: true, homeflag:true},
+					{key: '/hotel/hotelDesc/1479113257278.jpg', showDelete: true, showZoom: true}
+				],
+				overwriteInitial: false,
+				allowedFileExtensions: ["jpg", "png", "gif"],
+				maxFileSize: 2000,	// KB
+				maxFileCount: 20,	// the maximum number of files allowed for each multiple upload
+				validateInitialCount: true,	// whether to include initial preview file count (server uploaded files) in validating
+				maxImageWidth: 2048,	// px
+				maxImageHeight: 2048,	// px
+				//initialCaption: "The Moon and the Earth",
+				showCaption: false,
+				showClose: false,
+				browseClass: "btn btn-success",
+				browseIcon: "<i class=\"glyphicon glyphicon-picture\"></i> ",
+				removeClass: "btn btn-danger",
+				removeIcon: "<i class=\"glyphicon glyphicon-trash\"></i> ",
+				uploadClass: "btn btn-info",
+				uploadIcon: "<i class=\"glyphicon glyphicon-upload\"></i> ",
+				previewSettings : {
+					image: {width: "160px", height: "140px"}
+				},
+				layoutTemplates: {
+					main2: '{preview}\n<div class="kv-upload-progress hide"></div>\n<div class="input-group-btn">\n{remove}\n{cancel}\n{upload}\n{browse}\n</div>\n',
+				    footer: '<div class="file-thumbnail-footer">\n' +
+						//'    <div class="file-caption-name" style="width:{width}">{caption}</div>\n' +
+						'    {progress} {actions}\n' +
+						'</div>',
+					actions: '<div class="file-actions">\n' +
+						'    <div class="file-footer-buttons">\n' +
+						'        {upload} {delete} {zoom} {other}' +
+						'    </div>\n' +
+        				'    {CUSTOM_TAG_HOME}\n' +
+        				//'    <div class="file-upload-indicator" title="{indicatorTitle}">{indicator}</div>\n' +
+						'    <div class="clearfix"></div>\n' +
+						'</div>'
+				},
+				customLayoutTags: {
+					'{CUSTOM_TAG_HOME}': '<span class="kv-img-home glyphicon glyphicon-home {homeClass}" title="设为/取消封面" {dataKey}></span>'
+				}
+			});
+	    });
+	</script>
+</body>
+</html>

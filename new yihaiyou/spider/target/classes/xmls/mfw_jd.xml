@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<var-def name="html">
+		<http url="${url}" charset="utf-8"></http>
+	</var-def>
+	<var-def name="content">
+		<html-to-xml>
+			<var name="html"></var>
+		</html-to-xml>
+	</var-def>
+	<var-def name="info">
+		<xquery>
+			<xq-param name="n" type="node()">
+				<var name="content" />
+			</xq-param>
+			<xq-expression><![CDATA[
+			                            declare variable $n as node() external;
+			                            let $intro := $n//dl[@class='intro']
+			                            let $introduction := $intro/dt
+				                        return 
+				                                <introduction>{data($introduction)}</introduction>				                                 		 				                                
+			                    ]]></xq-expression>
+		</xquery>
+	</var-def>
+	<var-def name="dds">
+		<xquery>
+			<xq-param name="n" type="node()">
+				<var name="content" />
+			</xq-param>
+			<xq-expression><![CDATA[
+			                            declare variable $n as node() external;
+			                            let $intro := $n//dl[@class='intro']
+			                            let $dds := $intro/dd
+			                            for $dd in $dds
+			                            let $label := $dd/span/text()
+			                            let $p := $dd/p
+			                            let $div := $dd/div
+				                        return 
+				                        	<dds>
+				                                <label>{data($label)}</label>
+				                                <p>{data($p)}</p> 
+				                                <div>{data($div)}</div> 				                                
+				                            </dds>			                           
+			                    ]]></xq-expression>
+		</xquery>
+	</var-def>
+	<var-def name="products">
+		<![CDATA[<mfw>]]>
+		<var name="info"></var>
+		<var name="dds"></var>
+		<![CDATA[</mfw>]]>
+	</var-def>
+	<!-- <var-def name="result"> <![CDATA[<root>]]> <var name="nextHref"></var> <var name="products"></var> <![CDATA[</root>]]> </var-def> -->
+	<!-- <file action="write" charset="utf-8" path="d:\jd.xml"> <var name="products"></var> </file> -->
+</config>

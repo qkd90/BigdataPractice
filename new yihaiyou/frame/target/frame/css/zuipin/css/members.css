@@ -1,0 +1,160 @@
+﻿
+.members .top{ background-color:#fafafa; position:relative; height:28px; border-top:solid 1px #fefefe;  position:relative; z-index:1; padding:5px 0;}
+.members .top .ui-select01{
+    width:98px;
+}
+.members .top .ui-btn04 {   
+    position:relative; top:1px;
+}
+.members .keyword{ position:relative; overflow:hidden; }
+.members .keyword .ui-ico-search{ position:absolute; top:50%; margin-top:-9px; right:3px;}
+.members .keyword input[type='text'] { padding-right:30px; padding-left:10px;width:218px; }
+.members .selectedNum { border-radius: 10px; display: inline-block; width: 20px; height: 20px; color: #fff; line-height: 20px; text-align: center; background-color: #129de0; }
+.members .hleft{
+    line-height:28px;
+}
+.members .mul-handle { position: absolute; right: 10px; top: 6px; }
+.members .top li{
+    position:relative; float:left;
+}
+.members .top .right{ float:right;}
+
+
+.members .content{height: 100%; position:relative; border-top:1px solid #d5d5d5; }
+.members .content .memberslist{
+    padding:5px 0px 5px 15px; position:relative; overflow:hidden;
+}
+.members .content .memberslist ul{
+    width:256px; margin:10px 14px; padding:4px 14px; border:1px solid #d3d3d3; float:left; position:relative;
+}
+.members .content .memberslist ul:hover, .members .content .memberslist ul.select{
+    border:1px solid #8ac1e6;
+}
+.members .content .memberslist ul:hover .check, .members .content .memberslist ul.select .check{
+    display:inline;
+}
+.members .content .memberslist li{
+    height:30px;line-height:30px;
+}
+.members .content .memberslist li label{
+    float:left;
+}
+.members .content .memberslist li span.membersName, .members .content .memberslist li span.membersCard , .members .content .memberslist li span.membersPhone, .members .content .memberslist li span.membersLevel{
+    width:150px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; display:block; float:left;
+}
+
+.members .content .memberslist .redact{
+    position:absolute; right:14px; top:13px; 
+}
+.members .content .memberslist .close, .members .content .memberslist .nonclose{
+    position:absolute; right:15px; bottom:24px; line-height:normal;
+}
+.members .content .memberslist a{
+    color:#2497d9;
+}
+.members .content .memberslist .check{
+    position:absolute; top:1px; left:1px; line-height:normal; display:none;
+}
+.members .content .multype .check{
+    display:inline;
+}
+.members .content .multype .redact, .members .content .multype .close, .members .content .multype .j-spendHis{ visibility:hidden;}
+
+.members .content .ui-page{ position:absolute; bottom:40px; left:1px; width:100%;right:1px;}
+
+.members .footerbar {
+    border:1px solid #fefefe; background:none scroll 0 0 rgba(250,250,250,1); overflow:hidden; font-size:14px;  
+}
+.members .footer-bg{
+    background: -webkit-linear-gradient(top,#eaeef1,#fefefe);
+}
+.members .footerbar .historyBar {
+    height:35px; line-height:35px; overflow:hidden; font-size:14px;
+}
+
+.members .footerbar .historyBar li{ float:left;}
+.members .footerbar .historyBar li.right{ float:right;}
+.members .footerbar .stagingBar {
+    height:29px; line-height:29px; overflow:hidden; font-size:14px;
+}
+
+/*添加会员*/
+.members .poptop{ background-color:#fafafa; position:relative; height:28px; border-top:solid 1px #fefefe; border-bottom:solid 1px #d5d5d5;  position:relative; z-index:1; padding:5px 0;}
+.members .poptop li{
+    position:relative; width: 139px; height: 31px;
+}
+.members .poptop li a{
+    width: 139px; height: 31px; background: url(../images/home.png) no-repeat scroll -173px -461px transparent; border: 0; cursor: pointer; position: absolute; top:2px; left:0px; text-align:center; line-height:32px;  color:#303030;
+}
+.members .poptop a.active{
+    height: 32px; background-position: -313px -461px; top:3px; color: #2497d9; font-weight: bold;
+
+}
+.members .mainContent {
+    padding:20px; position:relative;   background:#fff; height:400px;
+}
+.members .mainContent li {
+    padding:10px 0; position:relative;
+}
+.members .mainContent span {
+    display:inline-block;
+}
+.members .mainContent span.off ,.members .mainContent span.name {
+    text-indent:.5em;
+}
+.members .mainContent span.tit {
+    width:90px; text-align:right; line-height:20px;
+}
+.members .mainContent input{
+    width:180px; border:1px solid #d3d3d3; text-indent:.5em; line-height:20px;
+}
+.members .mainContent input:hover{
+    border:1px solid #3b9ad0;
+}
+.members .mainContent a{
+    color:#2497d9; line-height:20px;
+}
+.members .mainContent select{
+    width:100px; border:1px solid #d3d3d3; padding:2px;
+}
+.members .mainContent img{
+    width:140px; height:140px; border:1px solid #d3d3d3;
+}
+.members .mainContent li.pic{
+    position:absolute; top:20px; right:30px;
+}
+.members .mainContent li.pic a{
+    position:absolute; left:0px; bottom:14px; background:none scroll 0 0 rgba(0,192,245,0.4); text-align:center; color:#fff; width:100%;
+}
+.members .mainContent input.pick{
+    width:auto; height:auto; border:none; position:relative; top:2px;
+}
+.members .mainContent li.vipName {
+    position:absolute; right:10px; top:-40px; z-index:3;
+}
+.members .vipPop{
+    padding-bottom:40px;
+}
+.members .vipPop table{
+    width:100%; background:#fff; border-top:none; 
+}
+.members .vipPop th{
+    border-bottom:1px solid #cccccc;  text-align:center; line-height:30px;
+}
+.members .vipPop td{
+    text-align:center; line-height:30px; 
+}
+.members .vipPop h6{
+    height:30px; text-indent:.5em; background:#fafafa; box-shadow:rgba(255,255,255,1) 1px 1px 0px inset, rgba(255,255,255,1) -1px -1px 0px inset; border:1px solid #cccccc; line-height:30px; font-weight:normal;
+}
+.members .vipPop i.ui-btn-clos01{
+    position:absolute; top:-6px; right:-6px;
+}
+.members .vipPop td.add{
+    height:40px; line-height:40px; text-align:left;
+}
+.members .vipPop td.add .ui-btn04{ margin-left:35px;} 
+
+.members .levelcon tr:first-child .j-del{ visibility:hidden;}
+.members .levelcon .j-del{ color:#505050;}
+.members .levelcon .j-del:hover{ color:#0696da;}

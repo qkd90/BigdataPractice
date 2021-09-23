@@ -1,0 +1,23 @@
+*{margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;-webkit-overflow-scrolling:touch;-moz-overflow-scrolling:touch;-o-overflow-scrolling:touch;overflow-scrolling:touch;}
+ol,ul,li{list-style:none}
+.clear{clear: both;}
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both; }
+.clearfix { *zoom:1;}
+
+.fare_main{min-width:320px;max-width:640px;position:absolute;top:0;right:0;bottom:0;left:0;margin:0 auto;overflow:scroll;}
+.fare_header{width:100%;height:45px;text-align:center;line-height:45px;color:#333;font-size:16px;
+             position:relative;background-color:#f4f4f4;border-bottom:1px solid #ccc;}
+.fare_header span{display:block;width:45px;height:45px;position:absolute;left:0;top:0;}
+.fare_header span img{width:80%;height:80%;margin:10% 10%;}
+.fare_article{width:96%;padding:0 2%;}
+.fare_artdl{width:100%;}
+.fare_artdl dt{width:100%;border-bottom:1px solid #ccc}
+.fare_artdl dt span{display:block;margin:12px 5px 12px 5px;width:100px;height:17px;border-left:4px solid #34bd62;
+                    font-size:16px;line-height:17px;padding-left:10px;color:#34bd62;font-weight:900;}
+.fare_artdl dd{width:100%; font-family:"微软雅黑";}
+.fare_artdl dd h1{font-size:15px;margin:15px 0 5px 0;color:#222;}
+.fare_artdl dd p{font-size:14px;color:#777;font-weight:400;line-height:22px;}
+.fare_footer{width:100%;margin-top:10px;}
+.fare_footer a{color:#222;text-decoration:none;}
+.fare_footer span{width:100%;display:block;height:30px;line-height:30px;text-align:center;font-size:13px;}

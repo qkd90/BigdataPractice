@@ -1,0 +1,9 @@
+<div class="personal_changeName" ng-controller="personalChangeNameCtrl" screenheight>
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        更改昵称
+    </div>
+    <input class="newname" type="text" placeholder="请输入新的昵称" ng-model="user.nickName">
+    <div class="attention">昵称要求为1-16个字符,支持中文,英文,数字,"_"," "</div>
+    <div class="savechange" ng-click="update()">保存</div>
+</div>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.weixin.mapper.WxReplyMapper">
+	<insert id="insert" parameterType="WxReply" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_wx_reply
+			(
+				id,
+				keyword,
+				type,
+				content,
+				title,
+				description,
+				img,
+				url,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{keyword},
+				#{type},
+				#{content},
+				#{title},
+				#{description},
+				#{img},
+				#{url},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="WxReply">
+		update tb_wx_reply
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="keyword != null and '' != keyword"> keyword = #{keyword},</if>
+			<if test="type != null and '' != type"> type = #{type},</if>
+			<if test="content != null and '' != content"> content = #{content},</if>
+			<if test="title != null and '' != title"> title = #{title},</if>
+			<if test="description != null and '' != description"> description = #{description},</if>
+			<if test="img != null and '' != img"> img = #{img},</if>
+			<if test="url != null and '' != url"> url = #{url},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="WxReply">
+		delete from
+			tb_wx_reply
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="WxReply">
+		select
+			*
+		from
+			tb_wx_reply
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="WxReply">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_wx_reply
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="keyword != null and '' != keyword"> and keyword = #{keyword} </if>
+			<if test="likeKeyword != null and '' != likeKeyword"> and keyword like '%{likeKeyword}%' </if>
+			<if test="type != null and '' != type"> and type = #{type} </if>
+			<if test="content != null and '' != content"> and content = #{content} </if>
+			<if test="title != null and '' != title"> and title = #{title} </if>
+			<if test="description != null and '' != description"> and description = #{description} </if>
+			<if test="img != null and '' != img"> and img = #{img} </if>
+			<if test="url != null and '' != url"> and url = #{url} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				# {item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+</mapper>

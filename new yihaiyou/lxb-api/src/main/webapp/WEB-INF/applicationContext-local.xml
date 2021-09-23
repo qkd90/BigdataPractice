@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.1.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-3.1.xsd" default-autowire="byName">
+	
+	<context:annotation-config />
+	<context:component-scan base-package="com.hmlyinfo" />
+	
+	<mvc:resources mapping="/inc/**" location="/inc/"/>
+	<mvc:resources mapping="/static/**" location="/static/"/>
+	<mvc:resources mapping="/liebiao_files/**" location="/liebiao_files/"/>
+	
+	<mvc:annotation-driven>  
+        <!-- <mvc:message-converters>  
+            <bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">  
+                <property name="objectMapper" ref="customObjectMapper"></property>  
+            </bean>  
+        </mvc:message-converters>   -->
+    </mvc:annotation-driven>  
+
+	<mvc:default-servlet-handler/>
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />  -->
+	
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" >
+		<property name="messageConverters">
+			<list>
+				<ref bean="jsonMappingHttpMessageConverter" />
+			</list>
+		</property>
+	</bean>
+	<bean id="jsonMappingHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="10485760" />
+		<property name="maxInMemorySize" value="4096" />
+	</bean>
+	
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/" />
+		<property name="suffix" value=".jsp" />
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
+	</bean>
+
+    <bean id="performanceMonitor"
+          class="org.springframework.aop.interceptor.PerformanceMonitorInterceptor" />
+
+    <aop:config>
+        <aop:pointcut id="allServiceMethods" expression="execution(* com.hmlyinfo.base.persistent.*.*(..))"/>
+        <aop:advisor pointcut-ref="allServiceMethods" advice-ref="performanceMonitor" order="2"/>
+    </aop:config>
+
+	<bean id="exceptionResolver" class="com.hmlyinfo.app.soutu.base.SimpleExceptionHandler"/>
+
+	<bean id="dataSourceR"  class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" /> 
+		
+		<property name="url" value="jdbc:mysql://rdsalsz7vsi40n3ik2316o.mysql.rds.aliyuncs.com:3306/soutuu_server?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="soutuu_mgr" />
+		<property name="password" value="Hmlyabcmgr2015" />
+		<!-- <property name="url" value="jdbc:mysql://192.168.1.160:3306/soutuu_server?useUnicode=true&amp;characterEncoding=UTF-8" /> 
+		<property name="username" value="soutuu_server" /> 
+		<property name="password" value="Hmly2014" />  -->
+		<property name="maxWait" value="1000" /> 
+		<property name="initialSize" value="5" /> 
+		<property name="maxActive" value="20" /> 
+		<property name="maxIdle" value="5" /> 
+		<property name="testWhileIdle" value="true" /> 
+		<property name="timeBetweenEvictionRunsMillis" value="15000" /> 
+		<property name="numTestsPerEvictionRun" value="20" /> 
+		<property name="validationQuery" value="SELECT 1 FROM DUAL" /> 
+		<property name="removeAbandoned" value="true" /> 
+		<property name="removeAbandonedTimeout" value="180" /> 
+		
+	</bean>
+	
+	<bean id="sqlSessionFactoryR" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSourceR" />
+		<property name="configLocation" value="classpath:mybatis.xml" />
+		<property name="mapperLocations">
+			<list>
+				<value>classpath*:com/hmlyinfo/**/*_mapper.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryR"/>
+		<property name="basePackage" value="com.hmlyinfo.**.mapper" />
+		<property name="markerInterface" value="com.hmlyinfo.base.persistent.BaseMapper" />
+	</bean>
+	
+	<bean id="transactionManagerR" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
+		<property name="dataSource" ref="dataSourceR" />  
+		<qualifier value="red" />  
+	</bean>  
+	
+	<tx:annotation-driven transaction-manager="transactionManagerR" />
+	<aop:aspectj-autoproxy />
+	
+	 
+  	<mvc:interceptors>
+
+		<mvc:interceptor>
+			<mvc:mapping path="/api/auth/**"/>
+			<bean class="com.hmlyinfo.app.soutu.base.MemberInterceptor"></bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/api/**"/>
+			<bean class="com.hmlyinfo.app.soutu.base.LogInterceptor"></bean>
+		</mvc:interceptor>
+
+	</mvc:interceptors> 
+
+
+	<!-- <bean id="customObjectMapper" class="com.hmlyinfo.base.CustomObjectMapper"></bean>   -->
+
+	
+   
+</beans>
+

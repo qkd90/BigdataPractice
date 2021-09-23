@@ -1,0 +1,159 @@
+<div ng-controller="myTeamCtrl">
+    <div id="title">
+        <ul id="titile-ul" class="cf">
+            <li class="vip-level" level-click data-level="1">
+                <a href="javascript:void(0);" id="one-level" class="level " ng-class="{curr: level == 1}">一级会员</a>
+            </li>
+            <li class="vip-level" level-click data-level="2">
+                <a href="javascript:void(0);" id="two-level" class="level" ng-class="{curr: level == 2}">二级会员</a>
+            </li>
+            <li class="vip-level" level-click data-level="3">
+                <a href="javascript:void(0);" id="three-level" class="level" ng-class="{curr: level == 3}">三级会员</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="level-one" class="level-div " ng-show="level == 1">
+        <p class="vip-count">一级会员{{firstCount}}人</p>
+        <div infinite-scroll="listTeam(1)" infinite-scroll-distance='1' infinite-scroll-disabled='loading1'>
+            <div class="vip-member"  ng-repeat="data in teamList1">
+                <div class="team-info cf">
+                    <div class="header-face">
+                        <div class="face-div">
+                            <img class="face-img" bn-lazy-src="{{data.head}}">
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <p>会员ID：{{data.id}}</p>
+                        <p>昵称：{{data.nickName}}</p>
+                        <p>当月消费银两：
+                            <span class="orange-color">0</span>
+                        </p>
+                        <p class="cf">
+                            <span class="team">他的团队：</span>
+                            <span class="team-count">
+                                    {{data.teamCount}}
+                            </span>
+                            <a href="javascript:void(0);" class="his-team-btn his-team-bg" id="mT_down" level-detail-click></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="his-team display-none clearfix">
+                    <span class="mT_span">
+                        一级会员：
+                        <span class="orange-color team-team-count">{{data.teamCount1}}</span>
+                    </span>
+
+                    <span class="mT_span">
+                        二级会员：
+                        <span class="orange-color team-team-count">{{data.teamCount2}}</span>
+                    </span>
+
+                    <span class="mT_span">
+                        三级会员：
+                        <span class="orange-color team-team-count">{{data.teamCount3}}</span>
+                    </span>
+                </div>
+            </div>
+            <div ng-show="loading1"><div class="yuloading"><span>加载数据中...</span></div></div>
+            <div ng-show="nomore1" class="alert alert-danger text-center">没有更多数据了</div>
+        </div>
+    </div>
+
+    <div id="level-two" class="level-div" ng-show="level == 2">
+        <p class="vip-count">二级会员{{secondCount}}人</p>
+        <div infinite-scroll="listTeam(2)" infinite-scroll-distance='1' infinite-scroll-disabled='loading2'>
+            <div class="vip-member"  ng-repeat="data in teamList2">
+                <div class="team-info cf">
+                    <div class="header-face">
+                        <div class="face-div">
+                            <img class="face-img" bn-lazy-src="{{data.head}}">
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <p>会员ID：{{data.id}}</p>
+                        <p>昵称：{{data.nickName}}</p>
+                        <p>当月消费银两：
+                            <span class="orange-color">0</span>
+                        </p>
+                        <p class="cf">
+                            <span class="team">他的团队：</span>
+                            <span class="team-count">
+                                    {{data.teamCount}}
+                            </span>
+                            <a href="javascript:void(0);" class="his-team-btn his-team-bg" level-detail-click></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="his-team display-none clearfix">
+                    <span class="mT_span">
+                        一级会员：
+                        <span class="orange-color team-team-count">{{data.teamCount1}}</span>
+                    </span>
+
+                    <span class="mT_span">
+                        二级会员：
+                        <span class="orange-color team-team-count">{{data.teamCount2}}</span>
+                    </span>
+
+                    <span class="mT_span">
+                        三级会员：
+                        <span class="orange-color team-team-count">{{data.teamCount3}}</span>
+                    </span>
+                </div>
+            </div>
+
+            <div ng-show="loading2"><div class="yuloading"><span>加载数据中...</span></div></div>
+            <div ng-show="nomore2" class="alert alert-danger text-center">没有更多数据了</div>
+        </div>
+    </div>
+
+    <div id="level-three" class="level-div" ng-show="level == 3">
+        <p class="vip-count">三级会员{{thirdCount}}人</p>
+        <div infinite-scroll="listTeam(3)" infinite-scroll-distance='1' infinite-scroll-disabled='loading3'>
+            <div class="vip-member"  ng-repeat="data in teamList3">
+                <div class="team-info cf">
+                    <div class="header-face">
+                        <div class="face-div">
+                            <img class="face-img" bn-lazy-src="{{data.head}}">
+                        </div>
+                    </div>
+                    <div class="user-info">
+                        <p>会员ID：{{data.id}}</p>
+                        <p>昵称：{{data.nickName}}</p>
+                        <p>当月消费银两：
+                            <span class="orange-color">0</span>
+                        </p>
+                        <p class="cf">
+                            <span class="team">他的团队：</span>
+                            <span class="team-count">
+                                    {{data.teamCount}}
+                            </span>
+                            <a href="javascript:void(0);" class="his-team-btn his-team-bg" level-detail-click></a>
+                        </p>
+                    </div>
+                </div>
+                <div class="his-team display-none clearfix">
+                    <span class="mT_span">
+                        一级会员：
+                        <span class="orange-color team-team-count">{{data.teamCount1}}</span>
+                    </span>
+
+                    <span class="mT_span">
+                        二级会员：
+                        <span class="orange-color team-team-count">{{data.teamCount2}}</span>
+                    </span>
+
+                    <span class="mT_span">
+                        三级会员：
+                        <span class="orange-color team-team-count">{{data.teamCount3}}</span>
+                    </span>
+                </div>
+            </div>
+
+            <div ng-show="loading3"><div class="yuloading"><span>加载数据中...</span></div></div>
+            <div ng-show="nomore3" class="alert alert-danger text-center">没有更多数据了</div>
+        </div>
+    </div>
+
+</div>

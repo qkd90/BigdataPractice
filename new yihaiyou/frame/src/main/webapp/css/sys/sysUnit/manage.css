@@ -1,0 +1,22 @@
+#edit_panel td{
+	padding: 4px;
+}
+#show_panel td{
+	padding: 4px;
+}
+#edit_panel input{}
+#show_panel input{border: 0;}
+
+#edit_panel :radio{width: 20px;}
+
+#searchform td{
+	padding:3px 0;
+}
+
+.r_right{margin-left: 9px;margin-top: 3px;}
+.resourceUl li {width: 90px;float: left;border-right: 1px solid #ccc;color: blue;}
+#reloadBtn{
+	top: 20px;
+	right: 30px;
+	position: absolute;
+}

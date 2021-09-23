@@ -1,0 +1,156 @@
+<div class="header-box" id="header">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        填写订单
+    </div>
+</div>
+<div class="wrapper scenicTicketOrder" style="padding-top: 0;" ng-controller="orderTicketCtrl">
+    <div>
+        <style>#mask {
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+        }</style>
+        <div id="mask" class="">
+            <p id="maskWord">载入优惠信息中...</p>
+        </div>
+        <form action="/ticket/doAddOrder" method="post" id="form">
+            <div class="order_time" id="orderTime" style="height: auto;">
+                <!-- 门票信息 始 -->
+                <div class="tab">
+                    <div class="tab-title">
+                        <h3>门票信息</h3>
+                    </div>
+                    <div class="tab-content">
+                        <div class="row">
+                            <div class="span-head gray">门票名称：</div>
+                            <div class="span">
+                                <{{ticket.name}}>{{ticket.priceName}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span-head gray">门票单价：</div>
+                            <div class="span highlight" rel="950                        " id="price">
+                                {{ticket.price}}元
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="span-head gray">出游日期：</div>
+                            <div class="span">
+                                {{ticket.playDate}}
+                            </div>
+                        </div>
+                        <!--<div class="row">-->
+                            <!--<div class="span-head gray">购买张数：</div>-->
+                            <!--<div class="span">-->
+                                <!--{{num}}-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="row">
+                            <div class="span-head gray">购买张数：</div>
+                            <div class="span">
+                                {{num}}
+                                </p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="span-head gray">票价合计：</div>
+                            <div class="span highlight" id="summary">{{ticket.price * num}}元</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="tab-title">
+
+                        <div style="width: 200px;display: table-cell;"><h3>游客信息</h3></div>
+                        <div style="width: 200px;display: table-cell;text-align: right;color: #ff8800;"
+                             ng-click="toTouristList()">选择游客&gt;&gt;</div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="row" ng-repeat="tourist in selectedtourist">
+                            <div class="span-head gray">游客{{$index + 1}}：</div>
+                            <div class="span">{{tourist.name}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="tab-title">
+                        <h3>取票人信息</h3>
+                    </div>
+                    <div class="tab-content section">
+                        <div class="row">
+                            <div class="span-head"><span style="color:#ff8800;padding-right:5px;">*</span>取票人姓名：</div>
+                            <div class="span">
+                                <input type="text" class="input-middle verify" ng-model="contact.name"
+                                       placeholder="请输入取票人姓名">
+                            </div>
+                        </div>
+                        <!--<div class="row">-->
+                        <!--<div class="span-head">-->
+                        <!--<div class="select-gray">-->
+                        <!--<select name="contactInfo[psptType]" class="triggerVerify">-->
+                        <!--<option value="1">身份证</option>-->
+                        <!--<option value="2">护照</option>-->
+                        <!--</select>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="span form-input">-->
+                        <!--<input type="text" class="input-middle verify" placeholder="请输入取票人证件号">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <div class="row">
+                            <div class="span-head"><span style="color:#ff8800;padding-right:5px;">*</span>取票人电话：</div>
+                            <div class="span">
+                                <input type="tel" class="input-middle verify" ng-model="contact.telephone"
+                                       placeholder="请输入取票人手机号">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 取票人信息 终 -->
+                <!-- 取票人信息附加信息 始 -->
+                <!-- 取票人信息附加信息 终 -->
+                <!-- 出游人信息 始 -->
+                <!-- 出游人信息 终 -->
+                <!-- 取票方式 始 -->
+                <!--<div class="tab">-->
+                    <!--<div class="tab-title">-->
+                        <!--<h3>取票方式</h3>-->
+                    <!--</div>-->
+                    <!--<div class="tab-content">-->
+                        <!--<div class="row">-->
+                            <!--<div class="span-head">取票方式：</div>-->
+                            <!--<div class="span">{{ticket.getTicket}}</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="span-head">取票地址：</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="span">&ndash;&gt;-->
+                        <!--&lt;!&ndash;上海迪士尼乐园取票窗口&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!-- 取票方式 终 -->
+
+                <!-- 入园凭证 start-->
+                <!-- 入园凭证 end-->
+
+            </div>
+            <div class="order_btn active" id="orderBtn">
+                <p class="trans_bg"></p>
+
+                <div class="order_info" id="orderInfo" style="margin: 0;">
+                    <a ng-click="submitOrder()" class="submit">提交订单</a>
+
+                    <p>
+                        应付金额：
+                        <span class="highlight" id="priceElement">{{ticket.price * num}}元</span>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

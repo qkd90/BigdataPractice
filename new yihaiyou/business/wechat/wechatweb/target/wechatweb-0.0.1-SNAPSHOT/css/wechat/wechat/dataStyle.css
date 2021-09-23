@@ -1,0 +1,18 @@
+.father_div{
+ 	margin-left:10px;margin-top:10px;
+}
+.father_div div div label{
+	font-size:14px;
+	color: gray;
+}
+.first_class{
+	padding:4px;
+}
+.second_class1{
+	float: left;
+	margin-right:8px;
+	/*width:70px;*/
+}
+.second_class2 span{
+	
+}

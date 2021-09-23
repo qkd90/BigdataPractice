@@ -1,0 +1,459 @@
+.chosewant {
+    width: 100%;
+    margin-top:45px;
+}
+
+.chosewant .phone, .chosewant .takecar, .chosewant .selcar {
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+    background-color: #fff;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+    font-size:1.3rem;
+}
+
+.chosewant ul, .chosewant ul li {
+    width: 100%
+}
+
+.chosewant ul li {
+    height: 43px;
+    background-color: #fff;
+    border-bottom: 1px solid #e9e9e9;
+    font-size:1.2rem;
+}
+
+.chosewant ul li input {
+    width: 100%;
+    height: 43px;
+    text-indent: 4em;
+    border: none;
+    outline: 0;
+    font-family: "Microsoft YaHei", Arial, "Lucida Grande", Verdana;
+    font-weight: 500;
+}
+
+.chosewant .phone input {
+    color: #aaa;
+}
+.chosewant .phone input.pername{
+    background: url(/yihaiyou/image/perphone.png) no-repeat 5% center;
+    background-size: 25px 25px;
+}
+.chosewant .phone input.perphone{
+    background: url(/yihaiyou/image/login/icon-mobile.png) no-repeat 6% center;
+    background-size: 17px 22px;
+}
+.chosewant .fly input {
+    background: url(/yihaiyou/image/fly.png) no-repeat 5% center;
+    background-size: 25px 25px;
+    color: #343434
+}
+
+.chosewant .usetime input:first-child {
+    background: url(/yihaiyou/image/usetime.png) no-repeat 5% center;
+    background-size: 25px 25px;
+}
+.chosewant .bkcarstyle span{
+    display:block;
+    width:calc(50% - 1px);
+    height:23px;
+    text-align:center;
+    line-height:23px;
+    float:left;
+    margin-top:10px;
+}
+.chosewant .bkcarstyle span:nth-child(1){
+    border-right:1px solid #e0e0e0;
+}
+.chosewant .bkcarstyle .tagcolor{
+    color:#007eff;
+    font-weight:600;
+    font-size:13px;
+}
+.chosewant .staplace, .chosewant .tagplace {
+    width: 25%;
+    float: left;
+    text-align: left;
+    height: 43px;
+    font-size: 1rem;
+    line-height: 43px;
+    text-indent: 40px;
+    font-size:1.2rem;
+}
+
+.chosewant .tagplace {
+    background: url(/yihaiyou/image/leavecar.png) no-repeat 15% center;
+    background-size: 25px 25px;
+}
+
+.chosewant .staplace {
+    background: url(/yihaiyou/image/takecar.png) no-repeat 15% center;
+    background-size: 25px 25px;
+}
+
+.chosewant .takecar input {
+    width: 73%;
+    color: #999;
+    font-weight: 600;
+    float: right;
+    height: 43px;
+    border: none;
+    text-indent: 1em;
+    background: url(/yihaiyou/image/Tright.png) no-repeat right center;
+    background-size: 25px 25px;
+}
+
+.chosewant .selcar ul {
+    width: 100%
+}
+
+.chosewant .selcar ul li {
+    width: 33%;
+    height: 60px;
+    float: left
+}
+
+.chosewant .selcar ul li:nth-child(n+2) {
+    border-left: 1px solid #e9e9e9;
+}
+
+.chosewant .selcar ul li p {
+    line-height: 30px;
+    height: 30px;
+    clear: both;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    font-weight: 600
+}
+
+.chosewant .selcar ul li p img {
+    width: 72px;
+    height: 25px;
+    float: left;
+    margin: 5px 3px;
+}
+
+.bgp {
+    background: url(/yihaiyou/image/0.png) no-repeat right center;
+    background-size: 30px 30px
+}
+
+.bgpx {
+    background: url(/yihaiyou/image/1.png) no-repeat right center;
+    background-size: 30px 30px
+}
+
+.shadow {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+    top: 43px;
+    left: 0;
+    z-index: 10
+}
+
+.shadowbox {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 10
+}
+
+.shadowbox2 {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    z-index: 10
+}
+
+.car_off {
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 11;
+    display: none
+}
+
+.car_off1 {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+
+.car_offx {
+    width: 100%;
+    margin-top:45px;
+}
+
+.chosewant .car_off .selplaceoff {
+    width: 100%;
+    height: 40px;
+}
+
+.selplaceipt {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: 0;
+    line-height: 40px;
+    text-indent: 3em;
+    background:#fff url(/yihaiyou/image/leavecar.png) no-repeat 3% center;
+    background-size: 25px 25px;
+    font-size:1.4rem;
+}
+
+.tagplace, .tagplace ul {
+    width: 100%;
+    background-color: #fff
+}
+
+.tagbg {
+    background: url(/yihaiyou/image/00.png) no-repeat 95% 50%;
+}
+
+.tagbgx {
+    background: url(/yihaiyou/image/11.png) no-repeat 95% 50%;
+}
+
+.takecarbg {
+    background: url(/yihaiyou/image/0.png) no-repeat 95% 50%;
+}
+
+.takecarbgx {
+    background: url(/yihaiyou/image/1.png) no-repeat 95% 50%;
+}
+
+.tagplace ul li {
+    width: 94%;
+    height: 45px;
+    padding: 0 3%;
+    border-bottom: 1px solid #e9e9e9;
+    line-height: 45px;
+    font-size: 1rem;
+    background-size: 25px 25px;
+    font-size:1.2rem;
+}
+
+.tagplace .swiper-container .swiper-wrapper .swiper-slide ul li {
+    width: 100%;
+    height: 50px;
+    padding: 0 0%;
+    border-bottom: 1px solid #e9e9e9;
+    line-height: 50px;
+    font-size: 1.4rem;
+    background-size: 20px 20px;
+    color: #fff;
+    margin: 3px 0 3px 0;
+    text-indent: 15px;
+    background-position: 95% center
+}
+
+.xiache .tagplace .swiper-container .swiper-wrapper .swiper-slide ul li {
+    width: 33%;
+    height: 65px;
+    padding: 0 0%;
+    border-bottom: 1px solid #e9e9e9;
+    line-height: 65px;
+    font-size: 1.4rem;
+    background-size: 20px 20px;
+    color: #fff;
+    float:left;
+    margin: 1px 0 0 0;
+    background-position: 95% 10%
+}
+
+.tagplace .swiper-container .swiper-wrapper .swiper-slide ul li:nth-child(1) {
+    background-color: #82dedf;
+}
+
+.tagplace .swiper-container .swiper-wrapper .swiper-slide ul li:nth-child(2) {
+    background-color: #ec7c87;
+}
+
+.tagplace .swiper-container .swiper-wrapper .swiper-slide ul li:nth-child(3) {
+    background-color: #41caab;
+}
+
+.tagplace .swiper-container .swiper-wrapper .swiper-slide ul li:nth-child(4) {
+    background-color: #fdb941;
+}
+
+.tagplace .swiper-container .swiper-wrapper .swiper-slide ul li:nth-child(5) {
+    background-color: #82dedf;
+}
+
+.tagplace .swiper-container .swiper-wrapper .swiper-slide ul li:nth-child(6) {
+    background-color: #ec7c87;
+}
+
+.tagplace .swiper-container .swiper-wrapper .swiper-slide ul li:nth-child(7) {
+    background-color: #ec7c87;
+}
+
+.tagplace .swiper-container .swiper-wrapper .swiper-slide ul li:nth-child(8) {
+    background-color: #41caab;
+}
+
+.tagplace .swiper-container .swiper-wrapper .swiper-slide ul li:nth-child(9) {
+    background-color: #fdb941;
+}
+
+.tagplace h3 {
+    height: 45px;
+    font-size: 1.5rem;
+    line-height: 45px;
+    padding-left: 15px;
+    background-color: #f9f9f9;
+}
+
+.tagplace .swiper-container, .tagplace .swiper-wrapper, .tagplace .swiper-slide {
+    width: 100%;
+    height: auto
+}
+
+.tagplace .swiper-slide {
+
+}
+
+.searchhistory {
+    padding: 15px 0;
+    text-indent:15px;
+}
+
+.searchhistory h3 {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 10px;
+    text-indent:15px;
+    line-height:20px;
+}
+
+.searchhistory ul, .searchhistory ul li {
+    width: 100%;
+    background-color: #fff;
+}
+
+.searchhistory ul li {
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+}
+
+.searchhistory .history_p1 {
+    font-size: 1.4rem;
+    line-height: 30px;
+    color: #333
+}
+
+.searchhistory .history_p2 {
+    font-size: 14px;
+    color: #777;
+    line-height: 20px;
+    padding-left: 8px
+}
+
+.mysearch, .mysearch ul {
+    width: 100%
+}
+
+.mysearch {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    background: #fff;
+    z-index: 11
+}
+
+.mysearch ul li {
+    width: 94%;
+    height: 45px;
+    padding: 0 3%;
+    border-bottom: 1px solid #e9e9e9;
+    line-height: 45px;
+    font-size: 1.4rem;
+    background-size: 25px 25px
+}
+
+.tagwhite {
+    background: url(/yihaiyou/image/personal/icon-xuan.png) no-repeat 95% 70%;
+    background-size: 18px 18px
+}
+
+.tagorange {
+    background: url(/yihaiyou/image/personal/icon-xuanzhong.png) no-repeat 95% 70%;
+    background-size: 18px 18px
+}
+
+.car_detail {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.car_detail p {
+    line-height: 25px;
+    font-size: 1rem
+}
+
+.car_detail p:nth-child(1) {
+    color: #111;
+    font-size:1.2rem;
+}
+
+.car_detail p:nth-child(2) {
+    color: #666
+}
+
+.balanceLack {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-indent: 15px;
+    font-size: 16px;
+    color: red;
+    position:fixed;
+    bottom:45px;
+    left:0;
+    background: #fff url(/yihaiyou/image/Tright.png) no-repeat right center;
+    background-size: 25px 25px
+}
+.bk_main .shadowScreen{
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.6);
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:1000;
+}
+.bk_main .statement_recharge{
+    padding: 0 15px;
+    color:#fff;
+    position:fixed;
+    left:0;
+    top:130px;
+    z-index:1001;
+}
+.bk_main .statement_recharge h3{
+    font-size:1.6rem;
+    text-align:center;
+}
+.bk_main .statement_recharge p{
+    font-size:1.4rem;
+    margin-top:40px;
+}

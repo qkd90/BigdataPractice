@@ -1,0 +1,113 @@
+﻿.shop-setting{ background-color:#fff;}
+.shop-setting .ui-header{ height:177px; background:url(../images/shop-setting-header-bg.png) no-repeat;}
+.shop-setting .shop-pic{position:absolute; left:17px; top:37px; width:106px; height:99px; padding:5px; background:url(../images/home.png) no-repeat -265px -93px;}
+.shop-setting .shop-info{ position:absolute; left:145px; top:42px; color:#fff;}
+.shop-setting .shop-name{
+    width:280px; height:30px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.shop-setting .shop-addr{
+     width:auto; height:60px; overflow:hidden; text-overflow:ellipsis;
+}
+
+.shop-setting .shop-pic button{
+    width:108px; padding:3px 0; background:none scroll 0 0 rgba(0,192,245,0.4); border:0; position:absolute; left:4px; bottom:4px; color:#ffffff; cursor:pointer;
+}
+.shop-setting .tab{ background:url(../images/tab-bg.png) repeat-x; height:34px;}
+.shop-setting .tab a{ position:relative; cursor:pointer; display:inline-block;line-height:33px; height:33px; width:49%; text-align:center;}
+.shop-setting .tab a span{ display:none; position:absolute;bottom:-11px; left:100px; width:20px; height:11px; background:url(../images/home.png) no-repeat -233px -157px;}
+.shop-setting .tab .select{ background-color:#e2f2fd; width:217px;}
+.shop-setting .tab .select span{ display:block;}
+
+.shop-setting .progress-bg{ position:absolute; box-shadow:inset 1px 1px 4px 1px #1979b2; border-radius:5px; bottom:5px; left:17px;width:402px; background-color:#78bee6; height:7px; border:solid 1px #1979b2;}
+.shop-setting .progress{ background:url(../images/progress-bg.png) repeat-x; width:0; height:6px;margin: 1px 0 0 1px;border-radius:5px;}
+.shop-setting .progress-num-bg{position:absolute; top:-30px;}
+.shop-setting .progress-num{ position:absolute; font-size:12px; text-align:center; color:#fff; line-height:20px; width:35px; height:20px; left:-17.5px; padding-bottom:7px; background:url(../images/home.png) no-repeat -142px -217px;}
+
+.shop-setting .storeInfo{ margin-left:20px;}
+.shop-setting .storeInfo th{ padding:10px; text-align:right; width:80px;}
+.shop-setting .storeInfo td input.ui-txt01{
+    width:208px; text-indent:4px;
+}
+.shop-setting .storeInfo td select{
+    width:102px;
+}
+
+/*第一步添加设备*/
+.shop-setting .addbar{
+    padding-top:50px; color:#303030;
+}
+.shop-setting .addbar button{
+    border:0;
+}
+.shop-setting .addbar ul li{
+    display:block; width:50%; float:left;
+}
+.shop-setting .addbar ul li.leftside{
+    text-align:center;
+}
+.shop-setting .addbar ul li.rightside{
+    padding:5px; width:180px; height:110px; background:none scroll 0 0 #f3fafc; border:1px solid #dee5eb; font-size:14px; line-height:150%; letter-spacing:1px;
+}
+
+/*第二部选择设备*/
+.shop-setting .toolbar{
+    padding-top:50px; color:#303030;
+}
+
+.shop-setting .toolbar .floating{
+    float:left;
+}
+.shop-setting .toolbar ul {
+    display:block; height:325px;
+}
+.shop-setting .toolbar ul.mainside {
+    padding-left:28px;
+}
+.shop-setting .toolbar ul.footside {
+     clear:both; height:40px; background: -webkit-linear-gradient(top,#eaeef1,#fefefe); border-top:1px solid #d3d3d3; line-height:40px; text-align:right; overflow:hidden;
+}
+.shop-setting .toolbar ul.mainside button ,.shop-setting .toolbar ul.maincontent button{
+    border:0;
+}
+.shop-setting .toolbar ul.mainside li {
+    width:190px; height:58px; border:1px solid #dee5eb; background: -webkit-linear-gradient(top,#eaf4fd,#ebf5fd); line-height:58px; position:relative;
+}
+.shop-setting .toolbar ul.mainside li.select {
+    background:none scroll 0 0 #f3fafc;
+}
+.shop-setting .toolbar ul.mainside li.pos{
+    left:-1px;
+}
+.shop-setting .toolbar ul.mainside li.cashbox{
+    top:-1px;
+}
+.shop-setting .toolbar ul.mainside li.add{
+    border:0; background:none 0 0 transparent; text-align:center;
+}
+.shop-setting .toolbar ul.mainside li label {
+    width:38px; height:32px; display:block; float:left; position:relative; left:12px; top:12px; background:url(../images/home.png) no-repeat;
+}
+/*.shop-setting .toolbar ul.mainside li.printer label{
+    background-position:-448px -102px;
+}
+.shop-setting .toolbar ul.mainside li.pos label{
+    background-position:-487px -102px;
+}
+.shop-setting .toolbar ul.mainside li.cashbox label{
+    background-position:-525px -102px;
+}*/
+.shop-setting .toolbar ul.maincontent{
+    position:relative; left:-1px;
+}
+.shop-setting .toolbar ul.maincontent li{
+    width:190px; height:176px; border:1px solid #dee5eb; background:none scroll 0 0 #f3fafc; left:-1px; top:-120px; text-align:center;
+}
+.shop-setting .toolbar ul.maincontent li span{
+    width:6px; height:11px; background:url(../images/home.png) no-repeat scroll -449px -134px; position:absolute; left:-5px;
+}
+.shop-setting .toolbar ul.maincontent li p{
+    text-align:left; padding:0 8px; line-height:18px;
+}
+.shop-setting .toolbar ul.maincontent li p input{
+    position:relative; top:1px;
+}

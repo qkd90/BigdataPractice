@@ -1,0 +1,69 @@
+.mt10{margin-top: 10px;}
+.mt15{margin-top: 15px;}
+.mt20{margin-top: 20px;}
+.ml15{margin-left: 15px;}
+.disa{display: none;}
+.cf { *zoom: 1 }
+.cf:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* { color: #555; font-family: "Microsoft Yahei", "Sans-Serif", "simsun", "Serif";-webkit-transition: color .2s ease,background-color .2s ease; font-size: 16px;}
+.orange { color: #f60 }
+.main-wrap { width: 100%; height: 100% }
+.success {color: #44ab42}
+.cancel {color: #ccc}
+/*hack for the fit height of easyui-tabs*/
+.main-wrap .tabs-header { position: absolute; z-index: 1; }
+.main-wrap .tabs-tab-label { height: 100%; }
+.main-wrap .tabs-tab-label .table-panel { height: 100%; }
+#detail-panel { padding: 10px 20px; }
+#detail-panel .detail-panel { border-top: 1px dashed #ddd; padding: 20px 0; }
+#detail-panel .title { font-size: 16px; }
+#detail-panel .order-status { padding-bottom: 12px; }
+#detail-panel .addition-description { border: 1px solid #ddd; background: #f3f3f3; padding: 5px; }
+#detail-panel table td { padding: 12px 0; }
+.order-detail-table { }
+.order-detail-table thead { background-color: #f8f8f8; color: #999; }
+.order-detail-table td { border: 1px solid #ddd }
+.order-detail-table .product { }
+.order-detail-table .product img { float: left; }
+.order-detail-table .product .product-title { float: left; /*width: 172px;*/ text-align: left; margin-left: 7px; display: inline; }
+.order-detail-table .product .product-title a { color: #0082cc; display: block; line-height: 20px; height: 40px; overflow: hidden; }
+.order-detail-table .product .product-title em { color: #999; display: block; margin-top: 3px; }
+#detail-panel .order-detail-table td { padding: 12px 14px; text-align: center }
+
+.main-wrap .order-table {width: 100%; height: 100%;}
+.main-wrap .order-table  table td{    padding: 6px 0;
+    color: #444;
+    word-break: break-all;
+}
+.main-wrap .order-table  .datagrid-pager table td { padding: 0; }
+.main-wrap .order-table  table td .datagrid-cell {
+    text-align: center;
+}
+.label-td {
+    width: 120px;
+    /*text-align: right;*/
+}
+.lucheng-td {
+    /*width: 150px;*/
+    border:solid #CDD0CE; border-width:0px 1px 1px 0px; padding-left:5px; padding-right: 5px;
+}
+
+
+.detail-panel {
+    margin-bottom: 15px;
+}
+
+
+/*.main-wrap .nav-panel { }*/
+
+/*.main-wrap .nav-panel ul { border: 1px solid #ddd; margin: 0; height: 40px; padding: 0; }*/
+
+/*.main-wrap .nav-panel ul li { list-style: none; float: left; height: 40px; line-height: 41px; padding: 0 10px; border-right: 1px solid #ddd; }*/
+
+/*.main-wrap .nav-panel ul li.active { border-bottom: 1px solid #fff; color: #0091c8; }*/
+
+/*.main-wrap .search-panel { }*/
+
+/*.main-wrap .main-panel { }*/
+
+/*.main-wrap .page-panel { }*/

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.recplan.mapper.RecplanMapper">
+	<insert id="insert" parameterType="Recplan" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_recplan
+			(
+				user_id,
+				scenic_id,
+				city_id,
+				city_ids,
+				province,
+				share_num,
+				quote_num,
+				collect_num,
+				plan_name,
+				description,
+				cover_path,
+				cover_small,
+				phone_cover_path,
+				phone_cover_small,
+				create_time,
+				modify_time,
+				days,
+				scenics,
+				hotel_cost,
+				travel_cost,
+				valid,
+				tags,
+				weight,
+				selected,
+				cost,
+				include_seasonticket_cost,
+				ticket_cost,
+				seasonticket_cost,
+				rec_loc,
+				best_time,
+				adv_clothes,
+				necessity,
+				attention,
+				status,
+				delete_flag,
+				mark
+			)
+		values
+			(
+				#{userId},
+				#{scenicIds},
+				#{cityId},
+				#{cityIds},
+				#{province},
+				#{shareNum},
+				#{quoteNum},
+				#{collectNum},
+				#{planName},
+				#{description},
+				#{coverPath},
+				#{coverSmall},
+				#{phoneCoverPath},
+				#{phoneCoverSmall},
+				#{createTime},
+				#{modifyTime},
+				#{days},
+				#{scenics},
+				#{hotelCost},
+				#{travelCost},
+				#{valid},
+				#{tags},
+				#{weight},
+				#{selected},
+				#{cost},
+				#{includeSeasonticketCost},
+				#{ticketCost},
+				#{seasonticketCost},
+				#{recLoc},
+				#{bestTime},
+				#{advClothes},
+				#{necessity},
+				#{attention},
+				#{status},
+				#{deleteFlag},
+				${mark}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="Recplan">
+		update tb_recplan
+		<set>
+			<if test="userId != null"> user_id = #{userId},</if>
+			<if test="scenicIds != null"> scenic_id = #{scenicIds},</if>
+			<if test="cityId != null"> city_id = #{cityId},</if>
+			<if test="cityIds != null"> city_ids = #{cityIds},</if>
+			<if test="province != null"> province = #{province},</if>
+			<if test="shareNum != null"> share_num = #{shareNum},</if>
+			<if test="quoteNum != null"> quote_num = #{quoteNum},</if>
+			<if test="collectNum != null"> collect_num = #{collectNum},</if>
+			<if test="planName != null"> plan_name = #{planName},</if>
+			<if test="description != null"> description = #{description},</if>
+			<if test="coverPath != null"> cover_path = #{coverPath},</if>
+			<if test="coverSmall != null"> cover_small = #{coverSmall},</if>
+			<if test="phoneCoverPath != null"> phone_cover_path = #{phoneCoverPath},</if>
+			<if test="phoneCoverSmall != null"> phone_cover_small = #{phoneCoverSmall},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="days != null"> days = #{days},</if>
+			<if test="scenics != null"> scenics = #{scenics},</if>
+			<if test="hotelCost != null"> hotel_cost = #{hotelCost},</if>
+			<if test="travelCost != null"> travel_cost = #{travelCost},</if>
+			<if test="valid != null"> valid = #{valid},</if>
+			<if test="tags != null"> tags = #{tags},</if>
+			<if test="weight != null"> weight = #{weight},</if>
+			<if test="selected != null"> selected = #{selected},</if>
+			<if test="cost != null"> cost = #{cost},</if>
+			<if test="includeSeasonticketCost != null"> include_seasonticket_cost = #{includeSeasonticketCost},</if>
+			<if test="ticketCost != null"> ticket_cost = #{ticketCost},</if>
+			<if test="seasonticketCost != null"> seasonticket_cost = #{seasonticketCost},</if>
+			<if test="recLoc != null"> rec_loc = #{recLoc},</if>
+			<if test="bestTime != null"> best_time = #{bestTime},</if>
+			<if test="advClothes != null"> adv_clothes = #{advClothes},</if>
+			<if test="necessity != null"> necessity = #{necessity},</if>
+			<if test="attention != null"> attention = #{attention},</if>
+			<if test="status != null"> status = #{status},</if>
+			<if test="deleteFlag != null"> delete_flag = #{deleteFlag},</if>
+			<if test="mark != null"> mark = #{mark}</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="Recplan">
+		delete from
+			tb_recplan
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="Recplan">
+		select
+			*
+		from
+			tb_recplan
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="Recplan">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_recplan
+		<where>
+			status = 2 and delete_flag = 2
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="scenicIds != null and '' != scenicIds"> and scenic_id = #{scenicIds} </if>
+			<if test="cityId != null and '' != cityId"> and city_id = #{cityId} </if>
+			<if test="cityIds != null and '' != cityIds"> and city_ids = #{cityIds} </if>
+			<if test="cityCode != null and '' != cityCode"> and city_ids like '%${cityCode}%' </if>
+			<if test="province != null and '' != province"> and province = #{province} </if>
+			<if test="shareNum != null and '' != shareNum"> and share_num = #{shareNum} </if>
+			<if test="quoteNum != null and '' != quoteNum"> and quote_num = #{quoteNum} </if>
+			<if test="collectNum != null and '' != collectNum"> and collect_num = #{collectNum} </if>
+			<if test="planName != null and '' != planName"> and plan_name = #{planName} </if>
+			<if test="description != null and '' != description"> and description = #{description} </if>
+			<if test="coverPath != null and '' != coverPath"> and cover_path = #{coverPath} </if>
+			<if test="coverSmall != null and '' != coverSmall"> and cover_small = #{coverSmall} </if>
+			<if test="phoneCoverPath != null and '' != phoneCoverPath"> and phone_cover_path = #{phoneCoverPath} </if>
+			<if test="phoneCoverSmall != null and '' != phoneCoverSmall"> and phone_cover_small = #{phoneCoverSmall} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="days != null and '' != days"> and days = #{days} </if>
+			<if test="scenics != null and '' != scenics"> and scenics = #{scenics} </if>
+			<if test="hotelCost != null and '' != hotelCost"> and hotel_cost = #{hotelCost} </if>
+			<if test="travelCost != null and '' != travelCost"> and travel_cost = #{travelCost} </if>
+			<if test="valid != null and '' != valid"> and valid = #{valid} </if>
+			<if test="tags != null and '' != tags"> and tags = #{tags} </if>
+			<if test="weight != null and '' != weight"> and weight = #{weight} </if>
+			<if test="selected != null and '' != selected"> and selected = #{selected} </if>
+			<if test="cost != null and '' != cost"> and cost = #{cost} </if>
+			<if test="includeSeasonticketCost != null and '' != includeSeasonticketCost"> and include_seasonticket_cost = #{includeSeasonticketCost} </if>
+			<if test="ticketCost != null and '' != ticketCost"> and ticket_cost = #{ticketCost} </if>
+			<if test="seasonticketCost != null and '' != seasonticketCost"> and seasonticket_cost = #{seasonticketCost} </if>
+			<if test="recLoc != null and '' != recLoc"> and rec_loc = #{recLoc} </if>
+			<if test="bestTime != null and '' != bestTime"> and best_time = #{bestTime} </if>
+			<if test="advClothes != null and '' != advClothes"> and adv_clothes = #{advClothes} </if>
+			<if test="necessity != null and '' != necessity"> and necessity = #{necessity} </if>
+			<if test="attention != null and '' != attention"> and attention = #{attention} </if>
+			<if test="status != null and '' != status"> and status = #{status} </if>
+			<if test="mark != null and '' != mark"> and mark = #{mark} </if>
+			<if test="deleteFlag != null and '' != deleteFlag"> and delete_flag = #{deleteFlag} </if>
+			<if test="costL != null and '' != costL"> and include_seasonticket_cost &gt; #{costL} </if>
+			<if test="costU != null and '' != costU"> and include_seasonticket_cost &lt;= #{costU} </if>
+			<if test="daysL != null and '' != daysL"> and days &gt; #{daysL} </if>
+			<if test="daysU != null and '' != daysU"> and days &lt;= #{daysU} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; # {ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; # {tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+		
+		<choose>
+			<when test="orderColumn != null and '' != orderColumn">
+                order by ${orderColumn} ${orderType}, rec_loc asc, quote_num desc, share_num desc, selected desc
+			</when>
+            <otherwise>
+                order by rec_loc asc, quote_num desc, share_num desc, selected desc
+            </otherwise>
+		</choose>
+	</sql>
+</mapper>

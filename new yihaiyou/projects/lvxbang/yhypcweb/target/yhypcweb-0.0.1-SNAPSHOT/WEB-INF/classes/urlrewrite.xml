@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN" "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+<urlrewrite>
+    <!-- 景点详情页-->
+    <rule>
+        <from>/scenic_detail_([1-9][0-9]*).html</from>
+        <to>/yhypc/scenic/detail.jhtml?scenicId=$1</to>
+    </rule>
+    <!--游艇帆船详情-->
+    <rule>
+        <from>/sailboat_detail_([0-9][0-9]*).html</from>
+        <to>/yhypc/sailboat/detail.jhtml?ticketId=$1</to>
+    </rule>
+    <!-- 游记详情页-->
+    <rule>
+        <from>/recommendplan_detail_([1-9][0-9]*).html</from>
+        <to>/yhypc/recommendPlan/detail.jhtml?recommendPlanId=$1</to>
+    </rule>
+    <rule>
+        <from>/recplan_detail_([1-9][0-9]*).html</from>
+        <to>/yhypc/recommendPlan/detail.jhtml?recommendPlanId=$1</to>
+    </rule>
+    <!-- 游轮详情页-->
+    <rule>
+        <from>/cruiseship_detail_([1-9][0-9]*).html</from>
+        <to>/yhypc/cruiseShip/detail.jhtml?dateId=$1</to>
+    </rule>
+    <!-- 酒店详情页-->
+    <rule>
+        <from>/hotel_detail_([1-9][0-9]*).html</from>
+        <to>/yhypc/hotel/detail.jhtml?hotelId=$1</to>
+    </rule>
+    <!-- 行程详情页 -->
+    <rule>
+        <from>/plan_detail_([1-9][0-9]*).html</from>
+        <to>/yhypc/plan/myPlanDetail.jhtml?planId=$1</to>
+    </rule>
+    <!-- 海上休闲列表页-->
+    <rule>
+        <from>/sailboat_list.html</from>
+        <to>/yhypc/sailboat/list.jhtml</to>
+    </rule>
+    <!-- 游轮列表页-->
+    <rule>
+        <from>/cruiseship_list.html</from>
+        <to>/yhypc/cruiseShip/list.jhtml</to>
+    </rule>
+    <!-- 游记列表页-->
+    <rule>
+        <from>/recommendplan_list.html</from>
+        <to>/yhypc/recommendPlan/list.jhtml</to>
+    </rule>
+</urlrewrite>

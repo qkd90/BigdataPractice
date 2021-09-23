@@ -1,0 +1,180 @@
+<div ng-controller="xingaddlvkeCtrl" class="addlvkeinfo" >
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">填写旅客信息</a></li>
+        </ul>
+    </div>
+    <div id="yjcontainer" class="clearfix">
+        <!--<div class="lknum clearfix"><span class="pull-left">旅客数量</span>
+            <div class="spinner pull-right">
+                <input type="text" class="num" id="spinner1"/>
+            </div>
+        </div>-->
+
+        <div class="panel panel-default addlvke">
+            <div class="panel-heading new_position">旅客信息<button id="addnew" class="addnew" ui-sref="youke-chang" style="height:28px;">添加旅客信息</button></div>
+            <div class="panel-body lvkelist">
+                <a href="" ng-repeat="tourist in selectedtourist">{{tourist.name}}</a>
+
+            </div>
+        </div>
+        <form name="orderForm" class="form-horizontal">
+            <div class="panel panel-default addlvke">
+                <div class="panel-heading">联系人</div>
+                <div class="panel-body" id="newlvke">
+                    <div class="form-group">
+                        <label for="name" class="col-xs-3 control-label formleft">姓 名<span class="red">*</span></label>
+                        <div class="col-xs-9 formright">
+                            <input type="text" class="form-control" placeholder="" name="name" required
+                                   ng-model='contact.name'>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="col-xs-3 control-label formleft">手 机<span class="red">*</span></label>
+                        <div class="col-xs-9 formright">
+                            <input type="text" class="form-control" placeholder="" required name="telephone"
+                                   ng-model='contact.telephone' ng-pattern="/^((1[3,5,8,7,4]{1})\d{9})$/">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="panel panel-default addlvke" ng-if="withDanBao">-->
+                <!--<div class="panel-heading">酒店担保信息</div>-->
+                <!--<div class="panel-body" id="newlvke">-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="kaNo" class="col-xs-4 control-label">信用卡号<span class="red">*</span></label>-->
+                        <!--<div class="col-xs-8">-->
+                            <!--<input type="text" class="form-control" placeholder="" name="cardNum" required-->
+                                   <!--ng-model='creditCard.cardNum'>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="kaname" class="col-xs-4 control-label">持卡人<span class="red">*</span></label>-->
+                        <!--<div class="col-xs-8">-->
+                            <!--<input type="text" class="form-control" placeholder="" required name="holderName"-->
+                                   <!--ng-model='creditCard.holderName'>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="kadate" class="col-xs-4 control-label">有效期至<span class="red">*</span></label>-->
+                        <!--<div class="col-xs-8">-->
+                            <!--<input ng-model="validDay" class="form-control" id="appDate" required placeholder="点此选择有效期时间" name="validDay"/>-->
+                                <!--&lt;!&ndash;<input ng-model="validDay" class="form-control" id="appDate" required mobiscroll-date="settings" mobiscroll-instance="demo" placeholder="点此选择有效期时间"  name="validDay"/>&ndash;&gt;-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="kasfz" class="col-xs-4 control-label">身份证<span class="red">*</span></label>-->
+                        <!--<div class="col-xs-8">-->
+                            <!--<input type="text" class="form-control" placeholder="" required name="idNo" ng-pattern="/^[1-9]{1}[0-9]{14}$|^[1-9]{1}[0-9]{16}([0-9]|[xX])$/"-->
+                                   <!--ng-model='creditCard.idNo'>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="kayzm" class="col-xs-4 control-label">验证码<span class="red">*</span></label>-->
+                        <!--<div class="col-xs-8">-->
+                            <!--<input type="number" class="form-control" placeholder="" required name="cvv"-->
+                                   <!--ng-model='creditCard.cvv'>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--修改酒店担保信息：将4 8布局修改成3 9布局-->
+            <div class="panel panel-default addlvke" ng-if="withDanBao">
+                <div class="panel-heading">酒店担保信息</div>
+                <div class="panel-body" id="newlvke">
+                    <div class="form-group">
+                        <label for="kaNo" class="col-xs-3 control-label formleft">信用卡号<span class="red">*</span></label>
+                        <div class="col-xs-9 formright">
+                            <input type="text" class="form-control" placeholder="" name="cardNum" required
+                                   ng-model='creditCard.cardNum'>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="kaname" class="col-xs-3 control-label formleft">持卡人<span class="red">*</span></label>
+                        <div class="col-xs-9 formright">
+                            <input type="text" class="form-control" placeholder="" required name="holderName"
+                                   ng-model='creditCard.holderName'>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="kadate" class="col-xs-3 control-label formleft">有效期至<span class="red">*</span></label>
+                        <div class="col-xs-9 formright">
+                            <input ng-model="validDay" class="form-control" id="appDate" required placeholder="点此选择有效期时间" name="validDay"/>
+                            <!--<input ng-model="validDay" class="form-control" id="appDate" required mobiscroll-date="settings" mobiscroll-instance="demo" placeholder="点此选择有效期时间"  name="validDay"/>-->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="kasfz" class="col-xs-3 control-label formleft">身份证<span class="red">*</span></label>
+                        <div class="col-xs-9 formright">
+                            <input type="text" class="form-control" placeholder="" required name="idNo" ng-pattern="/^[1-9]{1}[0-9]{14}$|^[1-9]{1}[0-9]{16}([0-9]|[xX])$/"
+                                   ng-model='creditCard.idNo'>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="kayzm" class="col-xs-3 control-label formleft">验证码<span class="red">*</span></label>
+                        <div class="col-xs-9 formright">
+                            <input type="number" class="form-control" placeholder="" required name="cvv"
+                                   ng-model='creditCard.cvv'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="panel panel-default addlvke">
+                <div class="panel-heading">报销凭证
+                    <div class="switch pull-right" style="padding-right: 5px;"><input type="checkbox" showandhide target="#baoxiao"/></div>
+                </div>
+                <div class="panel-body" id="baoxiao" style="display: none;">
+                    <div class="form-group">
+                        <label for="name" class="col-xs-3 control-label">收件人<span class="red">*</span></label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" id="name" placeholder="" required
+                                   ng-model='invoice.name' name="invoicename">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="col-xs-3 control-label">手 机<span class="red">*</span></label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" placeholder="" name="invoicetelephone" required
+                                   ng-pattern="/^((1[3,5,8,7,4]{1})\d{9})$/"
+                                   ng-model='invoice.telephone'>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="col-xs-3 control-label">地 址<span class="red">*</span></label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" placeholder="" ng-model='invoice.address' required
+                                   name="invoiceaddress" ng-minlength="3">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="col-xs-3 control-label">发票抬头<span class="red">*</span></label>
+                        <div class="col-xs-9">
+                            <input type="text" class="form-control" placeholder="" ng-model='invoice.title' required
+                                   name="invoicetitle">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default addlvke" ng-if="coupons.length > 0">
+                <div class="panel-body">
+                    <div class="youhuiquan clearfix">
+                        <button ng-if="usecoupon.id == null" type="button" class="btn-block" ui-sref="xing-hb">使用优惠券
+                        </button>
+                        <button ng-if="usecoupon.id != null" type="button" class="btn-block" ui-sref="xing-hb">
+                            红包立减-<span class="red">￥{{usecoupon.faceValue}}</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <div class="mybottom text-center col-xs-12 orderpay">
+        <a class="totalprice col-xs-8" style="width:58%">总价：￥{{productcost * (selectedtourist.length == 0?1:selectedtourist.length)}}
+        <small>（优惠￥{{usecoupon.faceValue}}）</small>
+    </a><a class="col-xs-4" ng-click="orderOk()">提交订单</a></div>
+</div>

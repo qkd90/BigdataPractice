@@ -1,0 +1,327 @@
+
+*{
+	padding:0;
+	margin:0;
+}
+
+ol, ul, li {
+    list-style: none
+}
+
+.clear {
+	clear: both;
+}
+
+.clearfix:after {
+	content:"\200B"; display:block; height:0; clear:both; 
+}
+
+.clearfix { 
+	*zoom:1;
+}
+
+.hotelIndex {
+	min-width: 1200px;
+	width: 100%;
+}
+
+/*头部*/
+
+.header {
+	width: 1200px;
+	margin:auto;
+	font-family: '微软雅黑';
+}
+
+.headBar {
+	width: 100%;
+	height: 40px;
+	border-bottom:1px solid #e5e5e5;
+}
+
+.headBarLeft {
+	float: left;
+}
+
+.headBarRight {
+	float: right;
+}
+
+.headBarLeft li,.headBarRight li {
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	font-size: 12px;
+}
+
+.headBarLeft li.slogan {
+	width: 136px;
+	padding-left: 30px;
+	color: #333;
+	border-right:1px solid #e5e5e5;
+	background:url(/image/icon-home.png) no-repeat left 40%;
+}
+
+.headBarLeft li.login {
+	
+}
+
+.headBarLeft li.login span {
+	width: 4em;
+	margin-left: 15px;
+	cursor: pointer;
+}
+
+.headBarLeft li.login span.loginbt {
+	background:url(/image/icon-login.png) no-repeat left center;
+	padding: 2px 13px 2px 25px;
+	color: #ff8800;
+}
+
+.headBarRight li {
+	border-right:1px solid #e5e5e5; 
+	padding: 0 15px;
+	position:relative;
+	cursor: pointer;
+}
+
+.headBarRight li.listdown {
+	padding-right:28px;
+	background:url(/image/icon-down.png) no-repeat calc(100% - 14px) center;
+}
+
+.headBarRight li.listdown:hover,.headBarRight li.headlastli:hover,.headBarRight li span.mys_l:hover,.register:hover,.headBarRight li.listdown ul li:hover {
+	color: #ff8800;
+}
+
+.headBarRight li.headlastli {
+	border-right:none;
+	padding-left:28px;
+	background:url(/image/icon-menu.png) no-repeat 15px center;
+}
+
+.headBarRight li span.mys_l:first-child {
+	margin-right:20px;
+}
+
+.headBarRight li.listdown ul {
+	width: 103px;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	top: 40px;
+	z-index: 10;
+	background-color: #fff;
+	box-shadow: 0 1px 2px #ccc;
+}
+
+.headBarRight li.listdown ul li {
+	border:none;
+	width: 100%;
+	padding:0;
+	color: #333;
+}
+
+.customService,.myyihaiyou {
+	display: none;
+}
+
+.selectBar {
+	width: 100%;
+	height: 100px;
+	background:url(/image/logo.png) no-repeat left 75%;
+	background-size:235px auto;
+}
+
+.selectBar .nav {
+	height: 55px;
+	margin-top: 45px;
+	float: right;
+}
+
+.selectBar .nav ul li {
+	width: 91px;
+	height: 55px;
+	float: left;
+	font-size: 14px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+
+/*尾部*/
+
+.footer {
+	width: 100%;
+	background-color: #414d5b;
+	font-family: '微软雅黑';
+}
+
+.moreInfomation {
+	width: 1200px;
+	height: 230px;
+	margin:auto;
+	background:url(/image/icon-weixin.png) no-repeat 93% 40%;
+}
+
+.infoLeft {
+	width: 750px;
+	float: left;
+}
+
+.infoLeft .infoTitle {
+	color: #c2c5c8;
+	font-size: 13px;
+	padding:30px 6px 10px 6px;
+}
+
+.infoLeft .infoTitle span.part {
+	padding: 0 54px;
+}
+
+.infoLeft .infoContain {
+	color: #7a838d;
+	font-size: 12px;
+	padding-left: 6px;
+}
+
+.infoLeft .infoContain ul {
+	width: 55px;
+	float: left;
+	margin-right:116px;
+}
+
+.infoLeft .infoContain ul:last-child {
+	margin-right:0;
+}
+
+.infoLeft .infoContain ul li {
+	line-height: 28px;
+}
+
+.infoRight {
+	float: right;
+	width: 450px;
+}
+
+.infoRight .contact {
+	margin-left: 50px;
+	margin-top:32px;
+	color: #a8adb2;
+}
+
+.infoRight .phone {
+	background:url(/image/icon-mobile.png) no-repeat left center;
+}
+
+.infoRight .qq {
+	background:url(/image/icon-qq.png) no-repeat left center;
+}
+
+.infoRight .contact p {
+	padding-left: 43px;
+}
+
+.infoRight .contact p.con_type {
+	font-size: 12px;
+}
+
+.infoRight .contact p.con_code {
+	font-size: 19px;
+}
+
+.infoRight .contact p.con_Mcode {
+	font-size: 18px;
+}
+
+.copyright {
+	width: 100%;
+	height: 65px;
+	margin:auto;
+	background-color: #243241;
+}
+
+.copyright p {
+	text-align: center;
+}
+
+.copyright p.copyright1 {
+	font-size: 15px;
+	color: #c2c5c8;
+	line-height: 40px;
+}
+
+.copyright p.copyright2 {
+	font-size: 13px;
+	color: #7a838d;
+	line-height: 16px;
+}
+
+
+/*侧栏*/
+
+.rightBar {
+	width: 50px;
+	background-color: #2f2f2f;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 101;
+}
+
+.rightBar ul {
+	margin-top: 280px;
+	position:relative;
+}
+
+.rightBar ul li {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	right:0;
+	line-height:50px;
+	text-indent: 8px;
+	cursor: pointer;
+}
+
+.rightBar ul li span {
+	opacity: 0;
+	filter:alpha(opacity=0);
+}
+
+.rightBar .myOrder {
+	background:url(/image/icon-me.png) no-repeat calc(100% - 9px) center;
+	top:0;
+}
+
+.rightBar .mySelected {
+	background:url(/image/icon-seleted.png) no-repeat calc(100% - 9px) center;
+	top:50px;
+}
+
+.rightBar .myEditor {
+	background:url(/image/icon-editor.png) no-repeat calc(100% - 9px) center;
+	top:100px;
+}
+
+.rightBar .service {
+	background:url(/image/icon-service.png) no-repeat calc(100% - 9px) center;
+	top:150px;
+}
+
+.rightBar .toTop {
+	background:url(/image/icon-up.png) no-repeat calc(100% - 9px) center;
+	top:200px;
+}
+
+
+.NavList {
+	background-color: #3996fa;
+	color: #fff;
+}
+
+.rightBar .active {
+	background-color: #ff8800;
+	color: #fff;
+}

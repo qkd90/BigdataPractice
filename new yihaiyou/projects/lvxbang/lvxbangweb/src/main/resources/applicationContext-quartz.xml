@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <!-- 生成静态页面 -->
+    <!--<bean id="buildTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="lvXBangBuildService"/>
+        </property>
+        <property name="targetMethod">
+            <value>buildAll</value>
+        </property>
+    </bean>
+    <bean id="buildTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="buildTask"></property>
+        <property name="cronExpression" value="0 0 0 * * ?"></property>
+    </bean>-->
+
+    <!-- <bean id="trigger" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+         <property name="triggers">
+             <list>
+                 <ref bean="buildTriggerBean"/>
+             </list>
+         </property>
+     </bean>-->
+
+    <!-- <bean id="buildTask" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+         <property name="durability" value="true"></property>
+         <property name="jobClass">
+             <value>com.zuipin.util.MyDetailQuartzJobBean</value>
+         </property>
+         <property name="jobDataAsMap">
+             <map>
+                 &lt;!&ndash;<entry key="targetObject" value="lvXBangBuildService"/>&ndash;&gt;
+                 <entry key="quartzJob" value="lvXBangBuildService"/>
+                 <entry key="targetMethod" value="buildAll"/>
+             </map>
+         </property>
+     </bean>
+     <bean id="buildTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+         <property name="jobDetail" ref="buildTask"></property>
+         <property name="cronExpression" value="0 0/5 * * * ?"></property>
+     </bean>
+
+     <bean name="quartzScheduler"
+           class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+         <property name="applicationContextSchedulerContextKey" value="applicationContextKey"/>
+         <property name="configLocation" value="classpath:quartz.properties"/>
+         <property name="triggers">
+             <list>
+                 <ref bean="buildTriggerBean"/>
+             </list>
+         </property>
+     </bean>-->
+
+
+</beans>

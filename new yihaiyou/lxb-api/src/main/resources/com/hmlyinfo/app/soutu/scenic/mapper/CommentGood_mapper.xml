@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.CommentGoodMapper">
+	<insert id="insert" parameterType="CommentGood" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_comment_good
+			(
+				id,
+				comment_user_id,
+				comment_id,
+				user_id,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{commentUserId},
+				#{commentId},
+				#{userId},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	
+	<update id="update" parameterType="CommentGood">
+		update tb_comment_good
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="commentUserId != null and '' != commentUserId"> comment_user_id = #{commentUserId},</if>
+			<if test="commentId != null and '' != commentId"> comment_id = #{commentId},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="CommentGood">
+		delete from
+			tb_comment_good
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="CommentGood">
+		select
+			id,
+			comment_user_id,
+			comment_id,
+			user_id,
+			modify_time,
+			create_time
+		from
+			tb_comment_good
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="CommentGood">
+		select 
+			id,
+			comment_user_id,
+			comment_id,
+			user_id,
+			modify_time,
+			create_time
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_comment_good
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="commentUserId != null and '' != commentUserId"> and comment_user_id = #{commentUserId}</if>
+			<if test="commentId != null and '' != commentId"> and comment_id = #{commentId} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		</where>
+	</sql>
+</mapper>

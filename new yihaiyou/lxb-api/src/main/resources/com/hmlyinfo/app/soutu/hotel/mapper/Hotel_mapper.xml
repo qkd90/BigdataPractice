@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.hotel.mapper.HotelMapper">
+	<insert id="insert" parameterType="Hotel" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_hotel
+			(
+				id,
+				user_id,
+				hotel_comment,
+				comment_num,
+				share_num,
+				score,
+				collection_num,
+				recommend_num,
+				longitude,
+				latitude,
+				create_time,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{userId},
+				#{hotelComment},
+				#{commentNum},
+				#{shareNum},
+				#{score},
+				#{collectionNum},
+				#{recommendNum},
+				#{longitude},
+				#{latitude},
+				#{createTime},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="Hotel">
+		update tb_hotel
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="hotelComment != null and '' != hotelComment"> hotel_comment = #{hotelComment},</if>
+			<if test="commentNum != null and '' != commentNum"> comment_num = #{commentNum},</if>
+			<if test="shareNum != null and '' != shareNum"> share_num = #{shareNum},</if>
+			<if test="score != null and '' != score"> score = #{score},</if>
+			<if test="collectionNum != null and '' != collectionNum"> collection_num = #{collectionNum},</if>
+			<if test="recommendNum != null and '' != recommendNum"> recommend_num = #{recommendNum},</if>
+			<if test="longitude != null and '' != longitude"> longitude = #{longitude},</if>
+			<if test="latitude != null and '' != latitude"> latitude = #{latitude},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="Hotel">
+		delete from
+			tb_hotel
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="Hotel">
+		select
+			*
+		from
+			tb_hotel
+		where
+			id = #{id}
+	</select>
+
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="map">
+		select 
+			hotel.*,
+            user.nickname,
+            user.userface
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+        from
+        tb_hotel hotel inner join tb_user user on user.id = hotel.user_id
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="hotelComment != null and '' != hotelComment"> and hotel_comment = #{hotelComment} </if>
+			<if test="commentNum != null and '' != commentNum"> and comment_num = #{commentNum} </if>
+			<if test="shareNum != null and '' != shareNum"> and share_num = #{shareNum} </if>
+			<if test="score != null and '' != score"> and score = #{score} </if>
+			<if test="collectionNum != null and '' != collectionNum"> and collection_num = #{collectionNum} </if>
+			<if test="recommendNum != null and '' != recommendNum"> and recommend_num = #{recommendNum} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+            <if test="ids != null">
+                hotel.id in (<if test="ids.size() == 0">-1</if>
+                <foreach item="item" index="index" collection="ids"
+                         separator=",">
+                    #{item}
+                </foreach>)
+            </if>
+		</where>
+	</sql>
+</mapper>

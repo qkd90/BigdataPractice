@@ -1,0 +1,946 @@
+* {
+  font-family: "微软雅黑";
+}
+h3,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+/*工具类*/
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+/*内容*/
+/*所在位置*/
+.title-box {
+  width: 100%;
+  border-top: 3px solid #3996fa;
+}
+.title-box .title-wrap {
+  width: 1180px;
+  margin: 0 auto;
+}
+.title-box .title-wrap h3 {
+  font-size: 15px;
+  text-align: left;
+  line-height: 48px;
+  color: #333;
+}
+.title-box .title-wrap h3 a {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #ff8800;
+}
+
+.title-box .title-wrap h3 a:hover {
+  text-decoration:underline;
+}
+.title-box .title-wrap h3 span {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #333;
+}
+/*产品图*/
+.product-box {
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+.product-box .product-wrap {
+  width: 1146px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px 16px;
+  border: 1px solid #e0e0e0;
+}
+.product-box .product-wrap .product-carousel {
+  float: left;
+  margin-right: 20px;
+  width: 646px;
+  position: relative;
+}
+.product-box .product-wrap .product-carousel .view {
+  width: 646px;
+  height: 378px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.product-box .product-wrap .product-carousel .view .swiper-container{
+  width: 646px;
+  height: 378px;
+  overflow: hidden;
+}
+.product-box .product-wrap .product-carousel .view .swiper-container .swiper-wrapper .swiper-slide img {
+  width: 646px;
+}
+
+.product-box .product-wrap .product-carousel .preview {
+  width: 646px;
+  height: 60px;
+}
+.product-box .product-wrap .product-carousel .preview .arrow-left {
+  float: left;
+  width: 22px;
+  height: 60px;
+  background: url("/image/details-collapse-icon-prev.png") no-repeat center, #b0d5fd;
+}
+.product-box .product-wrap .product-carousel .preview .arrow-left:hover {
+  background: url("/image/details-collapse-icon-prev.png") no-repeat center, #3996fa;
+}
+.product-box .product-wrap .product-carousel .preview .arrow-right {
+  float: right;
+  width: 22px;
+  height: 60px;
+  background: #b0d5fd;
+  background: url("/image/details-collapse-icon-next.png") no-repeat center, #b0d5fd;
+}
+.product-box .product-wrap .product-carousel .preview .arrow-right:hover {
+  float: right;
+  width: 22px;
+  height: 60px;
+  background: #b0d5fd;
+  background: url("/image/details-collapse-icon-next.png") no-repeat center, #3996fa;
+}
+.product-box .product-wrap .product-carousel .preview .swiper-container {
+  float: left;
+  width: 595px;
+}
+.product-box .product-wrap .product-carousel .preview .swiper-container .swiper-wrapper {
+  margin: 0 9px;
+}
+.product-box .product-wrap .product-carousel .preview .swiper-container .swiper-wrapper .swiper-slide {
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+}
+.product-box .product-wrap .product-carousel .preview .swiper-container .swiper-wrapper .swiper-slide span{
+  display: block;
+  width: 117px;
+  height: 60px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,0.6);
+}
+.product-box .product-wrap .product-carousel .preview .swiper-container .swiper-wrapper .swiper-slide img {
+  width: 117px;
+}
+
+.product-box .product-wrap .product-carousel .preview .swiper-container .swiper-wrapper .swiper-slide-active span{
+  background: rgba(0,0,0,0);
+}
+.product-box .product-wrap .product-info {
+  float: left;
+  width: 455px;
+  margin-left:20px;
+}
+.product-box .product-wrap .product-info h2 {
+  font-size: 20px;
+  color: #737373;
+  text-align: left;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+.product-box .product-wrap .product-info p {
+  font-size: 14px;
+  color: #555;
+  line-height: 20px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.product-box .product-wrap .product-info p mark {
+  background-color: #fff;
+  color: #333;
+  font-family: "黑体";
+  font-size: 15px;
+}
+.product-box .product-wrap .product-info .product-info-content {
+  padding-left: 10px;
+  padding-top: 16px;
+  background: #f3f8fe;
+  padding-bottom: 30px;
+  height: 331px;
+  max-height: 331px;
+  position: relative;
+}
+.product-box .product-wrap .product-info .product-info-content .grade {
+  margin-bottom: 35px;
+  font-size: 12px;
+  color: #555;
+}
+.product-box .product-wrap .product-info .product-info-content .grade em {
+  font-size: 24px;
+  color: #3996fa;
+  font-style: normal;
+}
+.product-box .product-wrap .product-info .product-info-content .grade sub {
+  font-size: 12px;
+  color: #3996fa;
+  vertical-align: baseline;
+}
+.product-box .product-wrap .product-info .product-info-content .grade i {
+  font-style: normal;
+  font-size: 14px;
+  color: #ff8800;
+  margin-right: 4px;
+}
+.product-box .product-wrap .product-info .product-info-content .grade a {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background: url("/image/details-product-icon-heart.png") no-repeat center;
+  vertical-align: baseline;
+}
+.product-box .product-wrap .product-info .product-info-content .grade .active {
+  background: url("/image/details-product-icon-heart-active.png") no-repeat center;
+}
+.product-box .product-wrap .product-info .product-info-content .product-info-group {
+  margin-bottom: 30px;
+  font-size: 13px;
+  color: #737373;
+}
+.product-box .product-wrap .product-info .product-info-content .product-info-group i {
+  float: left;
+  width: 68px;
+  text-align: right;
+  font-style: normal;
+  line-height: 13px;
+}
+.product-box .product-wrap .product-info .product-info-content .product-info-group .price {
+  padding-top: 29px;
+}
+.product-box .product-wrap .product-info .product-info-content .product-info-group input {
+  float: left;
+  width: 215px;
+  height: 38px;
+  border: 1px solid #e0e0e0;
+  box-shadow: inset 0px 3px 7px #f1f1f1;
+  -webkit-box-shadow: inset 0px 3px 7px #f1f1f1;
+  -moz-box-shadow:  inset 0px 3px 7px #f1f1f1;
+  padding-left: 14px;
+  padding-right: 30px;
+  background: url("/image/cruises-details-icon-calendar.png") no-repeat 226px center,#fff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.product-box .product-wrap .product-info .product-info-content .product-info-group span {
+  float: left;
+  line-height: 13px;
+}
+.product-box .product-wrap .product-info .product-info-content .product-info-group em {
+  float: left;
+  font-style: normal;
+  color: #f80;
+  font-size: 50px;
+  line-height: 42px;
+}
+.product-box .product-wrap .product-info .product-info-content .product-info-group em sub {
+  vertical-align: baseline;
+  font-size: 24px;
+}
+.product-box .product-wrap .product-info .product-info-content .product-info-group em sub:first-of-type {
+  font-size: 20px;
+}
+.product-box .product-wrap .product-info .product-info-content .product-info-group:last-of-type {
+  margin-bottom: 16px;
+}
+.product-box .product-wrap .product-info .product-info-content .buynow {
+  width: 164px;
+  height: 40px;
+  display: block;
+  border: 1px solid #3996fa;
+  border-radius: 6px;
+  text-align: center;
+  color: #3996fa;
+  line-height: 40px;
+  position: absolute;
+  left: 64px;
+  bottom: 42px;
+  font-size: 22px;
+}
+.product-box .product-wrap .product-info .product-info-content .buynow:hover {
+  background-color: #3996fa;
+  color: #fff;
+}
+/*产品详情*/
+.details-title {
+  width: 1180px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+  color: #565656;
+}
+.details-title h3 {
+  float: left;
+  width: 115px;
+  height: 60px;
+  background: #3996fa;
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  line-height: 60px;
+}
+.details-title .details-nav {
+  float: left;
+  width: 1178px;
+  border: 1px solid #e0e0e0;
+  border-bottom: 3px solid #3996fa;
+  height: 56px;
+  line-height: 56px;
+}
+.details-title .details-nav li {
+  float: left;
+  border-right: 1px solid #e0e0e0;
+  cursor: pointer;
+  text-align: center;
+}
+.details-title .details-nav #routeBtn {
+  width: 116px;
+  margin-left: -1px;
+}
+.details-title .details-nav #orderBtn {
+  width: 114px;
+}
+.details-title .details-nav #commentBtn {
+  width: 124px;
+}
+.details-title .details-nav #trafficBtn {
+  width: 124px;
+}
+.details-title .details-nav .active {
+  background: #3996fa;
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  line-height: 60px;
+  margin-top: -1px;
+  border: none;
+}
+.details-wrap {
+  width: 1100px;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  margin: 0 auto;
+  padding: 0 39px;
+  margin-bottom: 30px;
+}
+.details-wrap .route {
+  padding-left: 46px;
+  padding-top: 40px;
+  background: url("/image/cruises-details-route-intro-icon.png") no-repeat left 40px;
+}
+.details-wrap .route .route-header {
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+.details-wrap .route .route-header h3 {
+  float: left;
+  font-size: 20px;
+  line-height: 34px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.details-wrap .route .route-header p {
+  float: right;
+  padding-left: 20px;
+  font-size: 12px;
+  color: #8d8d8d;
+  margin-top: 10px;
+  background: url("/image/cruises-details-route-time-tips.png") no-repeat left center;
+}
+.details-wrap .route .route-content-img img {
+  float: left;
+}
+.details-wrap .route .route-content-img table {
+  float: right;
+  width: 100%;
+  text-align: center;
+  margin-right: 22px;
+  border-collapse: collapse;
+}
+.details-wrap .route .route-content-img table thead tr th {
+  width: 25%;
+  background: #f0f0f0;
+  font-size: 13px;
+  color: #5e5e5e;
+  font-weight: normal;
+  line-height: 36px;
+}
+.details-wrap .route .route-content-img table tbody tr td {
+  font-size: 13px;
+  color: #000;
+  line-height: 40px;
+}
+.details-wrap .route .route-content-img table tbody tr td i {
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: #aaa;
+}
+.details-wrap .route .route-content-img table tbody tr:nth-of-type(even) {
+  background: #f7f7f7;
+}
+.details-wrap .route .route-content-text {
+  padding-top: 40px;
+}
+.details-wrap .route .route-content-text .route-text-aside {
+  float: left;
+  width: 106px;
+  margin-right: 40px;
+}
+.details-wrap .route .route-content-text .route-text-aside a {
+  display: block;
+  width: 104px;
+  height: 28px;
+  text-align: center;
+  border: 1px solid #ababab;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  line-height: 28px;
+  font-size: 14px;
+  color: #ababab;
+}
+.details-wrap .route .route-content-text .route-text-aside a:hover {
+  background: #f80;
+  border: 1px solid #f80;
+  color: #fff;
+}
+.details-wrap .route .route-content-text .route-text-aside .active {
+  background: #f80;
+  border: 1px solid #f80;
+  color: #fff;
+}
+.details-wrap .route .route-content-text .route-text-section {
+  float: left;
+  width: 890px;
+}
+.details-wrap .route .route-content-text .route-text-section h3 {
+  height: 37px;
+  font-size: 18px;
+  color: #737373;
+  line-height: 30px;
+}
+.details-wrap .route .route-content-text .route-text-section h3 a {
+  float: left;
+  display: inline-block;
+  background: url("/image/cruises-details-route-text-icon.png") no-repeat left center;
+  width: 27px;
+  height: 37px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial;
+  color: #3996fa;
+  font-weight: bold;
+  line-height: 26px;
+  margin-right: 20px;
+}
+.details-wrap .route .route-content-text .route-text-section .route-text-body {
+  margin-left: 13px;
+  border-left: 1px solid #e0e0e0;
+  position: relative;
+  padding: 17px 0px 40px 20px;
+}
+.details-wrap .route .route-content-text .route-text-section .route-text-body .circle {
+  display: block;
+  width: 9px;
+  height: 9px;
+  background: #ababab;
+  border-radius: 50%;
+  position: absolute;
+  left: -5px;
+  top: 24px;
+}
+.details-wrap .route .route-content-text .route-text-section .route-text-body h4 {
+  padding-left: 32px;
+  background: url("/image/cruises-details-route-text-icon-route.png") no-repeat left center;
+  line-height: 24px;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 13px;
+}
+.details-wrap .route .route-content-text .route-text-section .route-text-body h4 i {
+  display: inline-block;
+  width: 2px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 15px;
+  vertical-align: middle;
+}
+.details-wrap .route .route-content-text .route-text-section .route-text-body p {
+  font-size: 14px;
+  line-height: 30px;
+  color: #888;
+}
+.details-wrap .route .route-content-text .route-text-section .route-text-body .route-text-tips {
+  background: #f7f7f7;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #888;
+  line-height: 30px;
+  padding: 12px 0px 12px 40px;
+}
+.details-wrap .route .route-content-text .route-text-section .route-text-body .route-text-tips .route-text-tips-group i {
+  font-style: normal;
+  color: #737373;
+}
+.details-wrap .order-must {
+  padding-left: 46px;
+  padding-top: 40px;
+  background: url("/image/cruises-details-order-must-icon-header.png") no-repeat left 40px;
+}
+.details-wrap .order-must .order-header {
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+.details-wrap .order-must .order-header h3 {
+  font-size: 20px;
+  line-height: 34px;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: left;
+}
+.details-wrap .order-must .order-body .order-aside {
+  float: left;
+  width: 104px;
+}
+.details-wrap .order-must .order-body .order-aside li a {
+  display: block;
+  height: 42px;
+  line-height: 42px;
+  color: #000;
+  font-size: 13px;
+  text-align: right;
+  padding-right: 16px;
+}
+.details-wrap .order-must .order-body .order-aside .active a {
+  background: #f3f8fe;
+  color: #3996fa;
+  border-left: 4px solid #3996fa;
+}
+.details-wrap .order-must .order-body .order-aside li:hover a {
+  background: #f3f8fe;
+  color: #3996fa;
+  border-left: 4px solid #3996fa;
+}
+.details-wrap .order-must .order-body .order-section {
+  float: left;
+  width: 844px;
+  background: #f6fafe;
+  font-size: 12px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 18px 44px 30px 40px;
+}
+.details-wrap .order-must .order-body .order-section ol li {
+  list-style: decimal;
+  margin-left: 30px;
+}
+.details-wrap .comment {
+  padding-left: 46px;
+  padding-top: 40px;
+  background: url("/image/cruises-details-route-intro-icon.png") no-repeat left 40px;
+}
+.details-wrap .comment .comment-header {
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+.details-wrap .comment .comment-header h3 {
+  float: left;
+  font-size: 20px;
+  line-height: 34px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.details-wrap .comment .comment-header .comment-header-info {
+  float: right;
+  font-size: 12px;
+  color: #8d8d8d;
+  margin-top: 3px;
+}
+.details-wrap .comment .comment-header .comment-header-info span {
+  float: left;
+  font-size: 24px;
+  color: #3996fa;
+  margin-right: 9px;
+  line-height: 28px;
+}
+.details-wrap .comment .comment-header .comment-header-info span sub {
+  font-size: 12px;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  margin-left: 2px;
+}
+.details-wrap .comment .comment-header .comment-header-info .icon-star-0 {
+  float: left;
+  width: 92px;
+  height: 24px;
+  background: url("/image/star00.png") no-repeat bottom center;
+  margin-right: 15px;
+}
+
+.details-wrap .comment .comment-header .comment-header-info .icon-star-1 {
+  float: left;
+  width: 92px;
+  height: 24px;
+  background: url("/image/star01.png") no-repeat bottom center;
+  margin-right: 15px;
+}
+.details-wrap .comment .comment-header .comment-header-info .icon-star-1 {
+  float: left;
+  width: 92px;
+  height: 24px;
+  background: url("/image/star02.png") no-repeat bottom center;
+  margin-right: 15px;
+}
+.details-wrap .comment .comment-header .comment-header-info .icon-star-3 {
+  float: left;
+  width: 92px;
+  height: 24px;
+  background: url("/image/star03.png") no-repeat bottom center;
+  margin-right: 15px;
+}
+.details-wrap .comment .comment-header .comment-header-info .icon-star-4 {
+  float: left;
+  width: 92px;
+  height: 24px;
+  background: url("/image/star04.png") no-repeat bottom center;
+  margin-right: 15px;
+}
+.details-wrap .comment .comment-header .comment-header-info .icon-star-5 {
+  float: left;
+  width: 92px;
+  height: 24px;
+  background: url("/image/star05.png") no-repeat bottom center;
+  margin-right: 15px;
+}
+
+.details-wrap .comment .comment-header .comment-header-info .hand {
+  float: left;
+  width: 24px;
+  height: 24px;
+  background: url("/image/details-icon-hand.png") no-repeat center;
+  margin-right: 10px;
+}
+.details-wrap .comment .comment-header .comment-header-info em {
+  float: left;
+  font-size: 18px;
+  line-height: 28px;
+  font-style: normal;
+  color: #555;
+}
+.details-wrap .comment .comment-header .comment-header-info em mark {
+  color: #f80;
+  background: #fff;
+  margin: 0 6px;
+  font-size: 20px;
+}
+.details-wrap .comment .comment-body {
+  border: 1px solid #e0e0e0;
+  border-top: 4px solid #e0e0e0;
+  padding: 0 14px;
+}
+.details-wrap .comment .comment-body li {
+  padding: 0 17px;
+  cursor: pointer;
+}
+.details-wrap .comment .comment-body li .comment-details-aside {
+  float: left;
+  height: 187px;
+  text-align: center;
+  width: 76px;
+  padding-right: 16px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+.details-wrap .comment .comment-body li .comment-details-aside .comment-person-img {
+  width: 72px;
+  height: 72px;
+  border: 1px solid #3996fa;
+  margin-top: 30px;
+  border-radius: 50%;
+}
+.details-wrap .comment .comment-body li .comment-details-aside .comment-customer-name {
+  font-size: 12px;
+  line-height: 32px;
+  color: #8d8d8d;
+  font-family: "宋体";
+}
+.details-wrap .comment .comment-body li .comment-details-article {
+  float: left;
+  width: 898px;
+  height: 187px;
+  font-family: "宋体";
+  border-bottom: 1px dashed #e0e0e0;
+}
+.details-wrap .comment .comment-body li .comment-details-article h5 {
+  margin-top: 20px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.details-wrap .comment .comment-body li .comment-details-article h5 span {
+  font-size: 12px;
+  color: #8d8d8d;
+  line-height: 32px;
+  font-family: "宋体";
+}
+.details-wrap .comment .comment-body li .comment-details-article h5 .comment-customer {
+  width: 100px;
+  height: 32px;
+  display: inline-block;
+  /*background: url("/image/details-commer-customer-star.png") no-repeat center;*/
+}
+
+.details-wrap .comment .comment-body li .comment-details-article h5 .star-00 {
+  background-size: 70px!important;
+  background: url("/image/star00.png") no-repeat center right;
+}
+.details-wrap .comment .comment-body li .comment-details-article h5 .star-01 {
+  background-size: 70px!important;
+  background: url("/image/star01.png") no-repeat center right;
+}
+.details-wrap .comment .comment-body li .comment-details-article h5 .star-02 {
+  background-size: 70px!important;
+  background: url("/image/star02.png") no-repeat center right;
+}
+.details-wrap .comment .comment-body li .comment-details-article h5 .star-03 {
+  background-size: 70px!important;
+  background: url("/image/star03.png") no-repeat center right;
+}
+.details-wrap .comment .comment-body li .comment-details-article h5 .star-04 {
+  background-size: 70px!important;
+  background: url("/image/star04.png") no-repeat center right;
+}
+.details-wrap .comment .comment-body li .comment-details-article h5 .star-05 {
+  background-size: 70px!important;
+  background: url("/image/star05.png") no-repeat center right;
+}
+
+.details-wrap .comment .comment-body li .comment-details-article .comment-aritcle {
+  font-size: 14px;
+  color: #8d8d8d;
+  line-height: 26px;
+  font-family: "宋体";
+  margin: 0;
+}
+.details-wrap .comment .comment-body li:last-of-type .comment-details-aside {
+  border: none;
+}
+.details-wrap .comment .comment-body li:last-of-type .comment-details-article {
+  border: none;
+}
+.details-wrap .comment .comment-body li:hover {
+  background-color: #f3f8fe;
+}
+.details-wrap .comment .comment-body li:hover .comment-customer-star {
+  background: url("/image/details-commer-customer-star-hover.png") no-repeat center !important;
+}
+.details-wrap .comment .comment-body li:hover .comment-aritcle {
+  color: #f80;
+}
+.details-wrap .comment .comment-footer {
+  margin-top: 32px;
+}
+.details-wrap .comment .comment-footer .paging {
+  width: 100%;
+  text-align: center;
+}
+.details-wrap .comment .comment-footer .paging li {
+  display: inline-block;
+  margin: 0 2px;
+}
+.details-wrap .comment .comment-footer .paging li a {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e0e0e0;
+  color: #8d8d8d;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  font-family: AdobeInvisFont;
+}
+.details-wrap .comment .comment-footer .paging li:last-of-type a {
+  width: 50px;
+  border-color: #3996fa;
+  color: #3996fa;
+}
+.details-wrap .comment .comment-footer .paging .active a {
+  border-color: #3996fa;
+  color: #fff;
+  background: #3996fa;
+}
+.details-wrap .comment .comment-footer .paging li:hover a {
+  border-color: #3996fa;
+  color: #fff;
+  background: #3996fa;
+}
+.details-wrap .traffic {
+  padding-left: 46px;
+  padding-top: 40px;
+  background: url("/image/cruises-details-traffic-icon-header.png") no-repeat left 40px;
+}
+.details-wrap .traffic .traffic-header {
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+.details-wrap .traffic .traffic-header h3 {
+  font-size: 20px;
+  line-height: 34px;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: left;
+}
+.details-wrap .traffic .traffic-body {
+  width: 1048px;
+  height: 398px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+
+
+/*相册*/
+
+.pictrue {
+  float:left;
+  width:670px;
+}
+
+
+.pictrue .pic_max {
+  width: 100%;
+  float: left;
+  height: 366px;
+  overflow: hidden;
+  position: relative;
+}
+
+.pictrue .pic_max img {
+  width: 670px;
+  height: 366px;
+  float: left;
+}
+
+.pictrue .pic_min {
+  width: 100%;
+  height: 75px;
+  clear:both;
+  overflow: hidden;
+  position: relative;
+}
+
+.pictrue .pic_min img {
+  width: 100%;
+  height: 100%;
+}
+
+.pictrue .pic_min label {
+  display: inline-block;
+  width: 26px;
+  color: white;
+  line-height: 68px;
+  text-align: center;
+  top: 8px;
+  z-index: 10;
+  position: absolute;
+  font-size: 30px;
+}
+
+.pictrue .pic_min label.t_left {
+  background: #b0d5fd;
+  background-size: 10px;
+  left: 0;
+}
+.pictrue .pic_min label.t_left:hover {
+  background: #3996fa!important;
+
+}
+
+
+.pictrue .pic_min label.t_right {
+  right: 0;
+  background: #b0d5fd;
+}
+.pictrue .pic_min label.t_right:hover {
+  background: #3996fa!important;
+
+}
+
+
+.pictrue .pic_min ul {
+  float: left;
+  display: inline-block;
+  position: absolute;
+  left: 25px;
+  top: 10px;
+}
+
+.pictrue .pic_min ul li {
+  height: 62px;
+  width: 112px;
+  float: left;
+  cursor: pointer;
+  margin-left: 10px;
+  line-height: 62px;
+  text-align: center;
+}
+
+.pictrue .pic_min ul li.on {
+  box-shadow: 0 0 13px #3996fa;
+}
+
+
+
+
+
+.details-wrap .comment .comment-body li .comment-details-article .busiReply {
+  width:100%;
+  min-height:50px;
+  background:#f3f8fe;
+  margin-top:5px;
+}
+
+.details-wrap .comment .comment-body li .comment-details-article .busiReply .replylineone {
+  padding:10px 10px 5px 10px;
+  line-height:18px;
+  font-size:14px;
+  color: #8d8d8d;
+}
+
+.details-wrap .comment .comment-body li .comment-details-article .busiReply .replylinetwo {
+  font-size:13px;
+}
+
+.details-wrap .comment .comment-body li .comment-details-article .busiReply .replylineone span {
+  color:#333;
+}

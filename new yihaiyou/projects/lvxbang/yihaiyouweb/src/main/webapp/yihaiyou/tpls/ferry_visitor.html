@@ -1,0 +1,31 @@
+<div class="diymarch_addTour personal_addTour" ng-controller="ferryVisitorCtrl">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        选择常用联系人
+        <!--<span class="save"><a ng-click="subVisitor()">完成</a></span>-->
+        <span class="save pic2 pic2_1" ui-sref="personalIndex"></span>
+        <span class="save pic2  pic3"></span>
+    </div>
+    <div class="blank"></div>
+    <div class="ticketAttention">微信单次限购5张船票，一个账号存在5张未使用的船票则无法再次购票</div>
+    <div class="searchbox clearfix">
+        <input type="text" placeholder="输入常用联系人" ng-model="keyword" ng-keyup="search()" />
+        <label class="editor" ui-sref="personalWriteTourMess">
+            <label>＋</label>
+        </label>
+        <span ng-click="syncTourist()" class="refresh"></span>
+    </div>
+    <div class="seltour">
+        <ul>
+            <li ng-repeat="tourist in touristList" ng-class="{true:tourist.selected,false:!tourist.selected}"
+                ng-click="selectTourist(tourist)" ng-if="tourist.show">
+                <!--<span>{{tourist.name}}</span>
+                <span class="adult">{{tourist.showType}}</span>
+                <span class="phone">{{tourist.telephone}}</span>-->
+                <h3>{{tourist.name}}<sub>{{tourist.telephone}}</sub></h3>
+                <p>二代身份证:{{tourist.idNumber}}</p>
+            </li>
+        </ul>
+    </div>
+    <div class="synchronize" ng-click="subVisitor()" ng-if="showSync">完成</div>
+</div>

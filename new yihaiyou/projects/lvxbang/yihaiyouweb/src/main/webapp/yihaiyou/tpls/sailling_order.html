@@ -1,0 +1,94 @@
+<div class="ticket_main" ng-controller="orderSailboatYachtCtrl">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        提交订单
+        <!--<span class="save pic1"></span>-->
+        <span class="save pic2" ui-sref="personalIndex"></span>
+    </div>
+    <div class="dingdanbody">
+        <div class="dingdanxinxi">
+
+            <p class="youluninfo"><span> {{ticket.priceName}}</span></p>
+            <p class="paymentinfo"> <span>需游玩前一天的23:00前下单</span></p>
+            <!--<span class="danjia"><span class="rmbfuhao">￥</span><span class="price">{{ticket.price}}</span>/张</span>-->
+            <p class="buyinfo clearfix" style="line-height:17px">
+                <span class="rebook" ng-class="{false:rebook,true:rebook}" ng-click="selrebook()"
+                      ng-if="ticket.isConditionRefund">条件退</span>
+                <span class="beknow" ng-class="{down:beknow,up:!beknow}" ng-click="showknow()">预订须知</span>
+            </p>
+        </div>
+        <div class="beknowdetail" ng-show="beknowdetail">
+            <div class="rline" ng-repeat="orderKnow in ticket.orderKnowList">
+                <p class="pFir">{{orderKnow.secondTitle}}</p>
+                <p class="pSec" ng-bind-html="orderKnow.content | trustHtml"></p>
+            </div>
+        </div>
+
+        <div class="startdate">
+            <p class="chufatime"> <span>出发日期：</span>  <span class="datechoose">{{ticket.endDate}}</span></p>
+
+            <p class="chufatime"><span>单价：</span><span class="aprice">{{ticket.price}}</span></p>
+
+            <p class="chufatime"><span>数量：</span><span class="datechoose">{{num}}</span></p>
+
+        </div>
+
+        <div class="tab">
+            <div class="tab-title">
+                <div style="width: 200px;display: table-cell;"><h3>游客信息</h3></div>
+                <div style="width: 200px;display: table-cell;text-align: right;color: #ff8800;padding-right:10px;"
+                     ng-click="toTouristList()">选择游客&gt;&gt;</div>
+            </div>
+            <div class="tab-content">
+                <div class="row" ng-repeat="tourist in selectedtourist">
+                    <div class="span-head gray">游客{{$index + 1}}：</div>
+                    <div class="span">{{tourist.name}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="tab">
+            <div class="tab-title">
+                <h3>取票人信息</h3>
+            </div>
+            <div class="tab-content section" style="background:#fff">
+                <div class="row">
+                    <div class="span-head"><span style="color:#ff8800;font-weight: 500;padding-right:3px">*</span>取票人姓名：</div>
+                    <div class="span">
+                        <input type="text" class="input-middle verify" ng-model="contact.name"
+                               placeholder="请输入取票人姓名">
+                    </div>
+                </div>
+                <hr>
+                <!--<div class="row">-->
+                <!--<div class="span-head">-->
+                <!--<div class="select-gray">-->
+                <!--<select name="contactInfo[psptType]" class="triggerVerify">-->
+                <!--<option value="1">身份证</option>-->
+                <!--<option value="2">护照</option>-->
+                <!--</select>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="span form-input">-->
+                <!--<input type="text" class="input-middle verify" placeholder="请输入取票人证件号">-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="row">
+                    <div class="span-head"><span style="color:#ff8800;font-weight: 500;padding-right:3px">*</span>取票人电话：</div>
+                    <div class="span">
+                        <input type="tel" class="input-middle verify" ng-model="contact.telephone"
+                               placeholder="请输入取票人手机号">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <ul>
+            <li class="zhifujine"> 订单金额:<span>¥{{num * ticket.price}}</span></li>
+            <li class="paybutton" ng-click="submitOrder()">提交订单</li>
+        </ul>
+    </div>
+    <div class="shadowbox" ng-show="shadow" ng-click="hideAll()"></div>
+</div>
+

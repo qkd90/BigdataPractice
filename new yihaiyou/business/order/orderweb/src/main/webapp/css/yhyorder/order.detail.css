@@ -1,0 +1,15 @@
+#detail-panel { padding: 10px 20px; }
+#detail-panel .detail-panel { border-bottom: 1px solid #ddd; padding: 10px 0; }
+#detail-panel .title { font-size: 16px; }
+#detail-panel .order-status { padding-bottom: 12px; }
+#detail-panel .addition-description { border: 1px solid #ddd; background: #f3f3f3; padding: 5px; }
+#detail-panel table td { padding: 6px 0; }
+.order-detail-table { margin-top: 10px; }
+.order-detail-table thead { background-color: #f8f8f8; color: #999; }
+.order-detail-table td { border: 1px solid #ddd }
+.order-detail-table .product { }
+.order-detail-table .product img { float: left; }
+.order-detail-table .product .product-title { float: left; /*width: 172px;*/ text-align: left; margin-left: 7px; display: inline; }
+.order-detail-table .product .product-title a { color: #0082cc; display: block; line-height: 20px; height: 40px; overflow: hidden; }
+.order-detail-table .product .product-title em { color: #999; display: block; margin-top: 3px; }
+#detail-panel .order-detail-table td { padding: 5px; text-align: center }

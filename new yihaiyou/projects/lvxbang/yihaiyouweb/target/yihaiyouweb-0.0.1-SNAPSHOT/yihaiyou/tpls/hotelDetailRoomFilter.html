@@ -1,0 +1,103 @@
+<div class="hotelDetailRoomFilter" ng-controller="hotelDetailFilterCtrl">
+    <div class="produ_lis_header header">
+        <a ng-click="back()"><span><img
+                src="/yihaiyou/image/historyback.png"></span></a>
+        <span>房型筛选</span>
+    </div>
+    <!--<header class="produ_lis_header">-->
+        <!--<div class="pro_header_main">-->
+            <!--<span class="gty_left"><i class="icon icon-title-back" ng-click="back()"></i></span>-->
+            <!--<span class="gty_center">房型筛选</span><span class="gty_right"></span>-->
+        <!--</div>-->
+    <!--</header>-->
+    <!-- contain start -->
+    <div class="wrapper" style="position: static;">
+        <div id="detailFilter">
+            <!--
+            <div class="first-choose">
+                <ul class="tabs">
+                    <li id="bntBookChoose"  class="main" room-filter-btn ng-class="{on: bntBookChoose}">可订</li>
+                    <li id="bntConfirmChoose" class="main" room-filter-btn ng-class="{on: bntConfirmChoose}">立即确认</li>
+                    <li id="bntHourRoom" class="main hide" room-filter-btn ng-class="{on: bntHourRoom}">钟点房</li>
+                    <li id="bntCancelChoose" class="main" room-filter-btn ng-class="{on: bntCancelChoose}">免费取消</li>
+                    <li id="bntAddBed" class="" room-filter-btn ng-class="{on: bntAddBed}">可加床</li>
+                </ul>
+            </div>
+            -->
+            <div class="area filter-block" style="height: 429px;">
+                <ul class="filter-nav">
+                    <!--<li data-tabname="bntBedType" room-filter-tab-->
+                        <!--ng-class="{active: tabname == 'bntBedType', light:bntBedType}">床型<em></em></li>-->
+                    <li data-tabname="bntBreakfast" room-filter-tab
+                        ng-class="{active: tabname == 'bntBreakfast', light:bntBreakfast}">早餐<em></em></li>
+                    <li data-tabname="bntPayWay" room-filter-tab
+                        ng-class="{active: tabname == 'bntPayWay', light:bntPayWay}">支付方式<em></em></li>
+                    <li data-tabname="bntPrice" room-filter-tab
+                        ng-class="{active: tabname == 'bntPrice', light:bntPrice}">价格范围<em></em></li>
+                </ul>
+                <div class="filter-content" id="filter-content">
+                    <!--<div class="filter-panel scrollbar_set single" id="bntBedType"-->
+                         <!--ng-class="{active: tabname == 'bntBedType'}">-->
+                        <!--<ul>-->
+                            <!--<li data-code="" class="active" room-filter-select>不限<label class="icon-checkbox"></label>-->
+                            <!--</li>-->
+                            <!--<li data-code="1" class="" room-filter-select>大床<label class="icon-checkbox hide"></label>-->
+                            <!--</li>-->
+                            <!--<li data-code="2" class="" room-filter-select>双床<label class="icon-checkbox hide"></label>-->
+                            <!--</li>-->
+                            <!--<li data-code="3" class="" room-filter-select>圆床<label class="icon-checkbox hide"></label>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <div class="filter-panel scrollbar_set single" id="bntBreakfast"
+                         ng-class="{active: tabname == 'bntBreakfast'}">
+                        <ul>
+                            <li data-code="" class="active" room-filter-select>不限 <label class="icon-checkbox"></label>
+                            </li>
+                            <li data-code="true" class="" room-filter-select>含早<label
+                                    class="icon-checkbox hide"></label></li>
+                            <li data-code="false" class="" room-filter-select>不含早<label
+                                    class="icon-checkbox hide"></label></li>
+                        </ul>
+                    </div>
+                    <div class="filter-panel scrollbar_set single" id="bntPayWay"
+                         ng-class="{active: tabname == 'bntPayWay'}">
+                        <ul>
+                            <li data-code="" class="active" room-filter-select>不限 <label class="icon-checkbox"></label>
+                            </li>
+                            <li data-code="GUARANTEE" class="" room-filter-select>担保<label
+                                    class="icon-checkbox hide"></label></li>
+                            <li data-code="UP" class="" room-filter-select>到付<label class="icon-checkbox hide"></label>
+                            <li data-code="PAY" class="" room-filter-select>在线付<label class="icon-checkbox hide"></label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="filter-panel scrollbar_set single" id="bntPrice"
+                         ng-class="{active: tabname == 'bntPrice'}">
+                        <ul>
+                            <li data-code="" data-low="" data-high="" class="active" room-filter-select>不限 <label
+                                    class="icon-checkbox"></label></li>
+                            <li data-code="149" data-low="0" data-high="149" class="" room-filter-select>¥150以下<label
+                                    class="icon-checkbox hide"></label></li>
+                            <li data-code="300" data-low="150" data-high="300" class="" room-filter-select>
+                                ¥150-¥300<label class="icon-checkbox hide"></label></li>
+                            <li data-code="450" data-low="301" data-high="450" class="" room-filter-select>
+                                ¥301-¥450<label class="icon-checkbox hide"></label></li>
+                            <li data-code="600" data-low="451" data-high="600" class="" room-filter-select>
+                                ¥451-¥600<label class="icon-checkbox hide"></label></li>
+                            <li data-code="1000" data-low="601" data-high="1000" class="" room-filter-select>
+                                ¥601-¥1000<label class="icon-checkbox hide"></label></li>
+                            <li data-code="50000" data-low="1001" data-high="50000" class="" room-filter-select>
+                                ¥1000以上<label class="icon-checkbox hide"></label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="foot">
+                <div class="reset" ng-click="resetFilter()">恢复默认</div>
+                <div class="confirm-btn filter_confirm" ng-click="cfmFilter()">确定</div>
+            </div>
+        </div>
+    </div>
+
+</div>

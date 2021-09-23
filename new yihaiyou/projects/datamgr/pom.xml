@@ -1,0 +1,129 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.data.data</groupId>
+		<artifactId>projects</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>datamgr</artifactId>
+	<packaging>war</packaging>
+	<name>datamgr</name>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+
+        <dependency>
+            <groupId>com.data.data</groupId>
+            <artifactId>builder</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.data.data</groupId>
+            <artifactId>builder</artifactId>
+            <version>${project.version}</version>
+            <classifier>classes</classifier>
+        </dependency>
+
+		<dependency>
+			<groupId>com.data.data</groupId>
+			<artifactId>frame</artifactId>
+			<version>${project.version}</version>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>com.data.data</groupId>
+			<artifactId>frame</artifactId>
+			<version>${project.version}</version>
+			<classifier>classes</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>com.data.data</groupId>
+			<artifactId>scenicservice</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.data.data</groupId>
+			<artifactId>restaurantservice</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.data.data</groupId>
+			<artifactId>areaservice</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.data.data</groupId>
+			<artifactId>ticketservice</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.data.data</groupId>
+			<artifactId>planservice</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>datamgr</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<attachClasses>true</attachClasses>
+					<archiveClasses>true</archiveClasses>
+				</configuration>
+			</plugin>
+			<!--<plugin>-->
+				<!--<artifactId>maven-antrun-plugin</artifactId>-->
+				<!--<version>1.7</version>-->
+				<!--<executions>-->
+					<!--<execution>-->
+						<!--<id>copy project</id>-->
+						<!--<phase>package</phase>-->
+						<!--<configuration>-->
+							<!--<tasks>-->
+								<!--<copy todir="${basedir}/target/me">-->
+									<!--<fileset dir="${basedir}/target/hmly">-->
+										<!--<include name="**/*" />-->
+									<!--</fileset>-->
+								<!--</copy>-->
+								<!--<copy todir="${basedir}/target/me/WEB-INF/classes">-->
+									<!--<fileset dir="${basedir}/target/classes">-->
+										<!--<include name="**/*" />-->
+										<!--<exclude name="*log4j.properties" />-->
+										<!--<exclude name="*deploy.properties" />-->
+									<!--</fileset>-->
+								<!--</copy>-->
+							<!--</tasks>-->
+						<!--</configuration>-->
+						<!--<goals>-->
+							<!--<goal>run</goal>-->
+						<!--</goals>-->
+					<!--</execution>-->
+				<!--</executions>-->
+			<!--</plugin>-->
+		</plugins>
+	</build>
+</project>

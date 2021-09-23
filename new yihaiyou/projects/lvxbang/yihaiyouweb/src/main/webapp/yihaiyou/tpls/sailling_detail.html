@@ -1,0 +1,271 @@
+<div class="product_infomation" ng-controller="sailboatYachtDetailCtrl" style=" background-color: white;">
+	<div class="header">
+		<a ng-click="goBackIndex()" href=""><span><img src="/yihaiyou/image/historyback.png"></span></a>
+		产品详情
+		<!--<span class="save pic1"></span>-->
+		<span class="save pic2" ui-sref="personalIndex"></span>
+	</div>
+	<div class="infoimg">
+		<img bn-lazy-src="{{productImg}}">
+		<div class="collect-bar">
+			<a class="collect" ng-class="{true: 'collected', false: ''}[favorite]" id="J_collcet" ng-click="doFavorite()"></a>
+			<!--icon-star1-->
+		</div>
+		<div class="bottomcontent">
+			<p>{{ticketName}}</p>
+			<p class="dianpinginfo" ng-class="dianpingstar"><span class="dianping"><!--3条点评--></span> <span class="pingfen">{{productScore}}分</span> <span class="zhangshu"><!--6张--></span></p>
+		</div>
+
+		<div class="picchuangkou1" ng-click="openpichuangkou()" style="height:60px;width: 70px;  right: 10px;  bottom: 3px;  position: absolute;border: 1px solid white;" >
+			<img bn-lazy-src="{{productImg}}" style="width: 100%;height: 100%;">
+		</div>
+
+		<div class="picchuangkou" ng-click="openpichuangkou()" style="height:60px;width: 70px;  right: 13px;  bottom: 0;  position: absolute;border: 1px solid white;" >
+			<img bn-lazy-src="{{productImg}}" style="width: 100%;height: 100%;">
+			<div  class="xiangceshuliang" style=" " ><span> {{initImageCount}}</span> </div>
+		</div>
+
+
+	</div>
+
+	<div class="infobody">
+		<div class="dizhitese">
+
+				<div class="jdaddress" style="float: left"> <span class="dizhititle">{{address}}</span> <span class="dizhicall"></span></div>
+				<a href="tel:{{telephone}}"><div  class="callicon"> </div></a>
+				<div style="clear: both"></div>
+			<div class="jdspecial" ng-click="goFeature()"> <span>产品特色</span><img class="jiantou" src="/yihaiyou/image/sailling/icon-jiantou.png"></div>
+		</div>
+
+		<div class="ticket_qiehuan">
+			<!--<div class="ticket_qiehuan" sail-scroll-tabs list-length="ticketTypeList.length">-->
+			<div class="yekaqiehuan">
+				 <ul class="clickbutton">
+						<li ng-class="{true: 'active_green', false: ''}[tabIndex == 1]" ng-click="changeTab(1, $event)">
+							票型
+						</li>
+						<li ng-class="{true: 'active_green', false: ''}[tabIndex == 2]" ng-click="changeTab(2, $event)">
+							<div style="width:1px;height: 20px;border: 1px solid #eaeaea;float: left;margin-top:10px"></div>
+							简介
+							<div style="width:1px;height: 20px;border: 1px solid #eaeaea;float: right;margin-top:10px"></div>
+						</li>
+					    <li ng-class="{true: 'active_green', false: ''}[tabIndex == 3]" ng-click="changeTab(3, $event)">
+							评价
+						</li>
+				  </ul>
+			</div>
+		</div>
+		<div class="qiehuan-tabcontent">
+			<div class="xuzhineirong" style="display: none;">隐藏内容块</div>
+			<div class="ticket_content">
+
+					<div id="ticketTab_1" infinite-scroll="listTicketType()" infinite-scroll-disabled='loading' infinite-scroll-distance='1'  ng-show="tabIndex == 1"  >
+
+
+
+
+
+						<div class="no-ticket-bar" ng-show="noTicket">
+							<img src="/yihaiyou/image/ticket_noticket.png">
+
+							<p style="font-size: 1.2em">暂无可售门票</p>
+						</div>
+						<div ng-class="{'kongzhigaodu':ticketTypeList.length > 3,huifugaodu:jjj <= 3}">
+							<div class="ticketbuy" ng-repeat="ticketPrice in ticketTypeList"
+								 ui-sref="sailling/ticketDetail({priceId: ticketPrice.id})">
+								<div class="ticketbuy_left">
+									<div class="ticketleft1">{{ticketPrice.name}}</div>
+									<div class="ticketleft2" ng-if="ticketPrice.isConditionRefund">
+										<!--<span class="ticketdate">可定{{ticketPrice.priceDate|fmtDate:'mm月dd日'}}票</span>-->
+
+										<span class="tiaojiantui">有条件退</span></div>
+									  	<p ng-if="ticketType == 'huanguyou'" style="height: 20px;line-height: 20px;margin: 5px 0px 0px 0px!important;color: #8b8b8b;font-size:1.2rem;"> 需换票，凭短信验证码换票使用</p>
+										<p ng-if="ticketType != 'huanguyou'" style="height: 20px;line-height: 20px;margin: 5px 0px 0px 0px!important;color: #8b8b8b;font-size:1.2rem;"> 无需换票，凭短信验证码直接使用</p>
+									<div class="ticketshuoming">
+                                        <!--<a ng-click="showTicketPriceDesc(ticketPrice.id)">门票说明></a>-->
+                                        <a>预订说明></a>
+                                    </div>
+
+								</div>
+								<div class="ticketbuy_right">
+									<div class="mens
+									hijia">
+
+										<p class="changecolor">¥<span class="trueprice">{{ticketPrice.minDiscountPrice + ticketPrice.rebate}}</span></p>
+										<p class="oldprice"></p>
+
+									</div>
+									<!--<div class="ticketprice">￥<span class="trueprice">399</span></div>-->
+
+									<div class="yudingbox" ng-click="goOrder(ticketPrice.id, $event)">
+										<ul>
+											<li class="yuding">在线预定</li>
+											<!--<li class="zaixinapay">在线支付</li>-->
+										</ul>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+						<!--查看更多-->
+
+						<div class="reviewmore" ng-if="ticketTypeList.length > 3" ng-click="opendiv(0,$event)">
+							查看剩余门票
+							<img style="height: 20px;" ng-src="/yihaiyou/image/ico/down.png" ng-class="{true: 'pic-roate', false: ''}[roateIndex == 0]">
+
+						</div>
+						<!--热门推荐-->
+						<!--<div class="rementuijian">-->
+							<!--<p class="rementitle"> 热门推荐</p>-->
+
+							<!--<div class="tuijianfanchuan">-->
+								<!--<div style="padding: 10px;  border-bottom: 2px solid #eaeaea;">-->
+									<!--<div class="boatpic" >-->
+										<!--<img bn-lazy-src="{{productImg}}" style="width: 100%;height: 100%;">-->
+									<!--</div>-->
+									<!--<div class="boatinfo">-->
+										<!--<p class="boatinfotitle"> 厦门游艇出海体验</p>-->
+										<!--<p  class="yudingrenshu"><span>65213513人</span>预订</p>-->
+										<!--<p  class="price-pingfen"><span class="danjia">¥<span class="rmbprice">60</span></span>/人-->
+											<!--<span style="padding-left: 40px;  font-size:1.2rem;"> 5分（<span>2人</span>）</span>-->
+										<!--</p>-->
+
+									<!--</div>-->
+								  <!--<div class="clear"></div>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+
+					</div>
+
+
+				<div id="ticketTab_2" ng-show="tabIndex == 2">
+
+					<!--修改内容（静态）-->
+					<div class="yingyetime" ng-if="openTime != null && openTime.length > 0">
+						<p class="yingyedate">营业时间</p>
+						<p class="shijian" ng-bind-html="openTime | trustHtml"></p>
+					</div>
+
+					<div class="xiaotieshi" ng-if="tips != null && openTime.length > 0">
+						<p class="tieshi">小贴士</p>
+						<p class="youwanshijian" ng-bind-html="tips | trustHtml"></p>
+					</div>
+
+					<div class="jingdianintruo" ng-if="proInfo != null && openTime.length > 0">
+						<p class="jdjieshao">产品描述</p>
+						<!--<p class="jieshao" style="color:black;margin-bottom: 5px;">备受国际帆船爱好者青睐</p>-->
+
+						<div class="jdjs-content">
+							<div class="jdimg">
+								<img bn-lazy-src="{{productImg}}">
+							</div>
+							<div class="jdjsneirong" ng-bind-html="proInfo | trustHtml">
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<!--下面为原来修改前代码-->
+
+					<!--<div class="opentime" ng-if="openTime != null && openTime.length > 0" >-->
+						<!--<p class="kaifangtime">开放时间</p>-->
+						<!--<p class="timechoose" style=" font-size: 14px;color: #5c5c5c;"><span ng-bind-html="openTime | trustHtml"></span></p>-->
+					<!--</div>-->
+					<!--<div class="opentime">-->
+						<!--<p class="youhui">特惠政策</p>-->
+						<!--<p class="youhuishuomin" style=" font-size: 13px;color: #5c5c5c;"><span ng-bind-html="privilege | trustHtml" ></span></p>-->
+					<!--</div>-->
+					<!--<div class="tishi">-->
+						<!--<p class="wenxintishi">温馨提示</p>-->
+						<!--<p class="youhuishuomin" style=" font-size: 13px;color: #5c5c5c;"><span ng-bind-html="enterDesc | trustHtml"></span></p>-->
+					<!--</div>-->
+				</div>
+
+				<div  ng-show="tabIndex == 3"  class="pingjia-content" infinite-scroll="getCommentList()" infinite-scroll-distance="1" infinite-scroll-disabled='loading'>
+					<div class="pigjiatop">
+						<div class="pingjia" ng-class="star">
+							评价
+						</div>
+						<div class="pingfen">
+							{{productScore}}分
+						</div>
+
+					</div>
+					<div class="neironginfo" ng-repeat="comment in commentList">
+						<p class="username">{{comment.userName}}</p>
+
+						<p class="xingjidate" ng-class="'xing' + comment.star">{{comment.commentDate}}</p>
+
+						<div class="pignlunwenzi">{{comment.content}}</div>
+						<div class="recommend" ng-if="comment.reply != null && comment.reply.content != null && comment.reply.content.length > 0">
+							<h3>商家回复：</h3>
+							<p>{{comment.reply.content}}</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!--票型说明-->
+	<div class="book-popup" ng-show="ticketDescFlag">
+		<div class="popup-box">
+			<div class="head">
+				<p class="name"><span class="name-content">{{showTicketPrice.name}}</span></p>
+
+				<p class="close-popup" ng-click="closeTicketDesc()"><img src="/yihaiyou/image/ticket_close.png"></p>
+			</div>
+			<div class="body" style="top: 72px;">
+
+				<div class="bookNotice popup-block">
+					<div class="title">
+						预定须知
+					</div>
+					<div class="content">
+						<div>
+							<div ng-bind-html="showTicketPrice.orderKnow | trustHtml"></div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!--<div class="guaranteedInfo popup-block">
+                    <div class="guaranteed-bar">
+                        <div class="img-title">
+                            <img src="/lxb/images/ticket_guaranteedInfo.png">
+                        </div>
+                        <div class="img-content">
+                            预订此门票无法入园且途牛10分钟内未解决完，可买门市价入园，途牛赔偿门市价与途牛价的差价
+                        </div>
+                    </div>
+                </div>-->
+			</div>
+
+
+			<!--               点击出相册弹框。弹框部分            -->
+
+
+
+			<div class="foot">
+				<p class="new-price">¥<span class="new-price-num">{{showTicketPrice.minDiscountPrice + showTicketPrice.rebate}}</span><span
+						class="tips">起</span></p>
+
+				<p class="old-price">¥{{showTicketPrice.maketPrice}}</p>
+
+				<div class="book_btn" ng-click="doDescBook()">立即预订</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+</div>

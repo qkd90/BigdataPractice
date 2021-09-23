@@ -1,0 +1,36 @@
+.ad-wrap { height: 200px; background: #123456; }
+.searcher-wrap { padding: 10px 20px; }
+.searcher-wrap .searcher-input { width: 70%; height: 30px; }
+.searcher-wrap .searcher-input input { height: 30px; line-height: 30px; width: 100%; padding: 0 20px; }
+.searcher-wrap .searcher-button { width: 25%; height: 30px; }
+.searcher-wrap .searcher-button input { padding: 0 20px; height: 30px; background-color: #33ad36; border: none; color: #fff; }
+.type-select-wrap { height: 160px; padding: 10px 6%; }
+.type-select-wrap .type-button { width: 30%; margin-right: 5%; border-radius: 5px;overflow: hidden}
+.type-select-wrap .type-button:last-child { margin-right: 0; }
+
+/*banner*/
+#banner { height: 200px; }
+#banner .carousel-indicators { margin-bottom: 0; bottom: 5px; position: absolute; left: 50%; z-index: 15; width: 60%; padding-left: 0; margin-left: -30%; text-align: center; list-style: none; }
+#banner .carousel-indicators li { width: 30px; height: 3px; background: #99a9ab; border: none; border-radius: 0; display: inline-block; margin: 1px; text-indent: -999px; cursor: pointer; }
+#banner .carousel-indicators .active { background: #f0884a; }
+#banner .carousel-inner .item img { height: 200px; }
+
+.top-line-wrap {border-radius: 5px;overflow: hidden;margin: 0 20px;box-shadow: 0 0 5px 0px #333;}
+.top-line-wrap .first-line{ position: relative;}
+.top-line-wrap .first-line .cover{ height: 200px; background-color: #553981;}
+.top-line-wrap .first-line .label{ position: absolute; top: 20px; background-color: #FF3235; padding: 2px 5px; color: #fff; font-size: 12px;}
+.top-line-wrap .first-line .label .price{ font-size: 16px; }
+.top-line-wrap .first-line .title{ position: absolute; bottom: 0; background: rgba(0,0,0,0.6); color: #ddd; width: 100%; padding: 0 5px; font-size: 10px; line-height: 20px;;;}
+.top-line-wrap .top-line{ padding: 0 10px; font-size: 14px; line-height: 30px;;}
+.top-line-wrap .top-line .title{ max-width: 200px; display: inline-block; color: #333;}
+.top-line-wrap .top-line .label{ display: inline-block; max-width: 80px; float: right; color: #333;}
+.top-line-wrap .top-line .label .price{ color: #ff9226;}
+
+.city-wrap { overflow: hidden; margin: 0 20px; margin-top: 20px; background-color: #fff;}
+.city-wrap .city-type{}
+.city-wrap .city-type .city-type-name{ float: left; width: 33.3%; background-color: #6ED371; color: #fff; line-height: 30px; text-align: center;}
+.city-wrap .city-type .city-type-name.active{ background-color: #29AD2C; }
+.city-wrap .city-list{ border-bottom: 1px solid #eee; box-sizing: border-box;}
+.city-wrap .city-list .city{ float: left; width: 33.3%; text-align: center; font-size: 12px; border-bottom: 1px solid #eee; line-height: 40px; padding: 8px 0;}
+.city-wrap .city-list .city.recommended{}
+.city-wrap .city-list .city a{ display: inline-block; text-align: center; border-right: 2px solid #eee; width: 100%; line-height: 24px; margin-left: 2px; color: #666;}

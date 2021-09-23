@@ -1,0 +1,216 @@
+<div class="newCruiseDetail" ng-controller="cruiseDetails">
+    <div class="y-list-header">
+        <i class="back" ui-sref="shipList"></i>
+        产品详情
+    </div>
+    <!--data  返回的是轮播图片列表-->
+    <swiper url="IMG_DOMAIN" data="ship.pathList"></swiper>
+    <div class="product-info">
+        <h4 class="product-title">{{ship.name}}</h4>
+        <p class="product-price"><sup>￥</sup>{{ship.date.minSalePrice}}<sub>起/人</sub></p>
+        <div class="product-schedule clearBoth">
+            <div class="product-schedule-left pull-left">
+                <i class="schedule-time-icon"></i>
+                <span>{{ship.date.date}}</span>
+                <span>  </span>
+                <span>|</span>
+                <span>{{ship.startCity}}</span>
+            </div>
+            <div class="product-schedule-right pull-right">
+                <span>  </span>
+                <!--<i class="schedule-more-icon"></i>-->
+            </div>
+        </div>
+    </div>
+    <div class="cabin-info">
+        <div class="cabin-info-header clearBoth">
+            <span class="cabin-header-left pull-left">
+                舱房信息<i></i>
+            </span>
+            <span class="cabin-header-right pull-right">费用与价格说明</span>
+        </div>
+        <!--舱房类型-->
+        <div class="cabin-classify" ng-repeat="roomType in roomTypes">
+            <div class="cabin-classify-header clearBoth" ng-click="method.listSwitch($index)">
+                <div class="classify-header-left pull-left">
+                    <h4>{{roomType.roomTypeDesc}}</h4>
+                    <p>共{{roomType.roomList.length}}种房型</p>
+                </div>
+                <div class="classify-header-price pull-right">
+                    <sup>￥</sup>{{roomType.price}}<sub>起/人</sub>
+                </div>
+                <i ng-class="{true:'detail-list-up',false:'detail-list-down'}[roomType.cabinListStatus]"></i>
+            </div>
+            <ul class="cabin-classify-list" ng-show="roomType.cabinListStatus">
+                <li ng-repeat="room in roomType.roomList">
+                    <div class="classify-info clearBoth">
+                        <div class="classify-img pull-left">
+                            <img src={{room.coverImage}}>
+                        </div>
+                        <div class="classify-txt pull-left">
+                            <h5>{{room.name}}</h5>
+                            <p>{{room.peopleNum}} {{room.deck}} {{room.area}}</p>
+                        </div>
+                    </div>
+                    <div class="classify-cost">
+                        <sup>￥</sup>{{room.price}}<sub>起/人</sub>
+                    </div>
+                    <div class="cabin-details">
+                        <span class="cabin-pop-btn" ng-click="method.popSwitch(room.roomId)">查看详情></span>
+                        <div class="cabin-details-pop" ng-show="room.roomPopStatus">
+                            <div class="cabin-pop-wrap">
+                                <div class="details-pop-header">
+                                    <img src="{{room.coverImage}}">
+                                    <i class="pop-close" ng-click="method.popSwitch(room.roomId)"></i>
+                                </div>
+                                <div class="details-info clearBoth">
+                                    <div class="details-info-group pull-left">
+                                        <label>面积：</label>
+                                        <span>{{room.area}}</span>
+                                    </div>
+                                    <div class="details-info-group pull-left">
+                                        <label>可住：</label>
+                                        <span>{{room.peopleNum}}人</span>
+                                    </div>
+                                    <div class="details-info-group pull-left">
+                                        <label>楼层：</label>
+                                        <span>{{room.deck}}层</span>
+                                    </div>
+                                    <div class="details-info-group pull-left">
+                                        <label>窗型：</label>
+                                        <span>无窗</span>
+                                    </div>
+                                    <div class="details-info-group pull-left">
+                                        <label>床型：</label>
+                                        <span>大/双床、上格床</span>
+                                    </div>
+                                </div>
+                                <div class="details-txt">
+                                    <div class="details-txt-wrap clearBoth">
+                                        <label class="pull-left">*</label>
+                                        <span class="pull-left">{{room.facilities}}</span>
+                                    </div>
+                                    <span class="details-txt-btn"></span>
+                                </div>
+                                <!--<div class="details-tips clearBoth">
+                                    <span class="tips pull-left">
+                                        入住2名成人时，即可享受此起价
+                                    </span>
+                                    <span class="price pull-right">
+                                        <sup>￥</sup>4576<sub>起/人</sub>
+                                    </span>
+                                    </div>-->
+                                <div class="details-price clearBoth">
+                                    <label class="pull-left">  </label>
+                                    <div class="details-price-wrap pull-left">
+                                        <div class="details-price-group clearBoth">
+                                            <span class="price-title pull-left">人均价格</span>
+                                            <span class="price-number pull-right"><sub>￥</sub>{{room.price}}</span>
+                                        </div>
+                                        <!--<div class="details-price-group clearBoth">
+                                            <span class="price-title pull-left">单人差价</span>
+                                            <span class="price-number pull-right"><sub>￥</sub>1699</span>
+                                        </div>-->
+                                    </div>
+                                </div>
+                                <div class="details-price-tips clearBoth">
+                                    <label class="pull-left">*</label>
+                                    <span class="tips-txt pull-left">
+                                        以上价格均包含邮轮船票费，港务费，日本免签船舶观光上陆许可证（适合邮轮，上海送签）费用
+                                    </span>
+                                </div>
+                                <div class="details-price-count clearBoth">
+                                    <div class="price-count-wrap pull-left">
+                                        <i class="cabin-minus pull-left" ng-click="method.minisNum(room.roomId)"></i>
+                                        <span class="cabin-count pull-left"><i class="count">{{room.selectNum}}</i>人</span>
+                                        <i class="cabin-plus pull-left" ng-click="method.addNum(room.roomId)"></i>
+                                        <!--<span class="tips">最多可订5间</span>-->
+                                    </div>
+                                    <span class="cabin-sure pull-right">确定</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cabin-count-wrap clearBoth">
+                        <i class="cabin-minus pull-left" ng-click="method.minsNum(room.roomId)"></i>
+                        <div class="cabin-count pull-left"><span>{{room.selectNum}}</span>人</div>
+                        <i class="cabin-plus pull-left" ng-click="method.addNum(room.roomId)"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--舱房类型ending-->
+    </div>
+    <div class="router-info">
+        <h5>行程介绍</h5>
+        <p>以下行程日期合时间均为当地时间，可能会因为天气、路况等原因做相应调整，请以最终的行程安排为准。</p>
+        <ul class="router-info-wrap">
+            <li class="clearBoth" ng-repeat="planDay in planDays" ng-if="$index < 2">
+                <span class="router-date pull-left">{{planDay.beginDate}}</span>
+                <div class="router-details pull-left">
+                    <h5>港口：{{planDay.dayDesc}} 启航：{{planDay.leaveTime}}<i class="boat-icon"></i></h5>
+                    <p> {{planDay.arrange}}</p>
+                </div>
+            </li>
+        </ul>
+        <span class="router-scan" ui-sref="cruiseShipRouteDetail({dateId : ship.date.id})">查看详情行程说明</span>
+    </div>
+
+    <div class="order-mustKnow">
+        <div class="mustKnow-header" >
+            <i class="bg-line"></i>
+            <span>预定须知</span>
+            <i class="bg-line"></i>
+        </div>
+        <div class="mustKnow-body">
+            <span class="border-B" ui-sref="orderMustKnow({dateId: dateId + '-1'})">预定限制/退改说明/出行说明</span>
+            <span ui-sref="orderMustKnow({dateId: dateId + '-2'})">支付方式</span>
+        </div>
+    </div>
+
+    <div class="normal-question">
+        <div class="question-header">
+            <i class="bg-line"></i>
+            <span>常见问题</span>
+            <i class="bg-line"></i>
+        </div>
+        <div class="question-body">
+            <ul>
+                <li>
+                    <div class="question-group-q clearBoth">
+                        <label class="pull-left">问</label>
+                        <span class="pull-left">多大的儿童可以乘坐邮轮？如何选择舱房？</span>
+                    </div>
+                    <div class="question-group-a clearBoth">
+                        <label class="pull-left">答</label>
+                        <span class="pull-left">6个月以上的儿童都可以乘坐邮轮旅行（运营极地、跨大洋等航线的邮轮可能会对年龄有更高要求）。根据邮轮公司的规定，儿童必须占一张床，如您一大一小出行，需订双人房，两大一小出行，需订三人房。一般儿童价格与大人一致，部分产品会有儿童优惠、同房第三人优惠，请留意具体产品的优惠说明。</span>
+                    </div>
+                </li>
+            </ul>
+            <!--<span class="question-scan">查看全部问题</span>-->
+        </div>
+    </div>
+
+    <div class="cruise-details-footer clearBoth">
+        <div class="cruiseDetails-footer-left pull-left clearBoth">
+            <div class="footer-count pull-left">
+                <i class="footer-icon-cart"></i>
+                <span class="room-count">{{totalPeopleNum}}</span>
+                <span>人</span>
+            </div>
+            <div class="footer-count-tips pull-left" ng-if="totalPeopleNum == 0">
+                请先选择舱房
+            </div>
+            <div class="footer-count-tips pull-left" ng-if="totalPeopleNum != 0">
+                {{totalCost}}元
+            </div>
+        </div>
+        <div class="cruiseDetails-footer-right pull-right clearBoth">
+            <!--<div class="footer-server pull-left">
+                <i class="footer-server-icon"></i>
+                &lt;!&ndash;<span>客服</span>&ndash;&gt;
+            </div>-->
+            <a href="javascript:;" class="footer-order-btn pull-left" ng-click="method.startOrder()">开始预订</a>
+        </div>
+    </div>
+</div>

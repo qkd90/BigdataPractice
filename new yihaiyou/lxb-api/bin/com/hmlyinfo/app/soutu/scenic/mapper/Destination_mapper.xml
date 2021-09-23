@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.DestinationMapper">
+    <insert id="insert" parameterType="Destination" useGeneratedKeys="true" keyProperty="id">
+        insert into tb_destination (
+          scenic_id,
+          name,
+          code_name,
+          city_code,
+          area,
+          survey,
+          days,
+          scenics,
+          months,
+          styles,
+          language,
+          days_recommend,
+          consumer,
+          seasons,
+          longitude,
+          latitude,
+          map_level,
+          hd_min_level,
+          hd_max_level,
+          modify_time,
+          create_time
+        ) values (
+          #{scenicIds},
+          #{name},
+          #{codeName},
+          #{cityCode},
+          #{area},
+          #{survey},
+          #{days},
+          #{scenics},
+          #{months},
+          #{styles},
+          #{language},
+          #{days_recommend},
+          #{consumer},
+          #{seasons},
+          #{longitude},
+          #{latitude},
+          #{mapLevel},
+          #{hdMinLevel},
+          #{hdMaxLevel},
+          #{modifyTime},
+          #{createTime}
+        )
+    </insert>
+
+    <update id="update" parameterType="Destination">
+        update tb_destination
+        <set>
+            <if test="name != null and '' != name">name = #{name},</if>
+            <if test="codeName != null and '' != codeName">code_name = #{codeName},</if>
+            <if test="cityCode != null and '' != cityCode">city_code = #{cityCode},</if>
+            <if test="area != null and '' != area">area = #{area},</if>
+            <if test="survey != null and '' != survey">survey = #{survey},</if>
+            <if test="days != null and '' != days">days = #{days},</if>
+            <if test="scenics != null and '' != scenics">scenics = #{scenics},</if>
+            <if test="months != null and '' != months">months = #{months},</if>
+            <if test="styles != null and '' != styles">styles = #{styles},</if>
+            <if test="language != null and '' != language">language = #{language},</if>
+            <if test="daysRecommend != null and '' != daysRecommend">days_recommend = #{daysRecommend},</if>
+            <if test="consumer != null and '' != consumer">consumer = #{consumer},</if>
+            <if test="seasons != null and '' != seasons">seasons = #{seasons},</if>
+            <if test="longitude != null and '' != longitude">longitude = #{longitude},</if>
+            <if test="latitude != null and '' != latitude">latitude = #{latitude},</if>
+            <if test="mapLevel != null and '' != mapLevel">map_level = #{mapLevel},</if>
+            <if test="hdMinLevel != null and '' != hdMinLevel">hd_min_level = #{hdMinLevel},</if>
+            <if test="hdMaxLevel != null and '' != hdMaxLevel">hd_max_level = #{hdMaxLevel},</if>
+            <if test="modifyTime != null and '' != modifyTime">modify_time = #{modifyTime},</if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <delete id="del" parameterType="Destination">
+        delete from
+        tb_destination
+        where
+        id = #{id}
+    </delete>
+
+    <select id="selById" resultType="Destination">
+        select
+	        *
+        from
+        	tb_destination
+      	where 
+      		id = #{id}
+    </select>
+
+     <select id="selByIds" resultType="Destination">
+        select
+	        *
+        from
+        	tb_destination
+    	<where>
+           <if test="id != null and '' != id">and id = #{id}</if>
+           <if test="scenicIds != null and '' != scenicIds">and scenic_id = #{scenicIds}</if>
+        </where>
+    </select>
+
+    <select id="count" resultType="int">
+        select
+        count(1)
+        <include refid="byProperty"/>
+    </select>
+
+    <select id="list" resultType="Destination">
+        select
+        *
+        <include refid="byProperty"/>
+    </select>
+
+    <sql id="byProperty">
+        from
+        tb_destination
+        <where>
+            <if test="scenicIds != null and '' != scenicIds">and scenic_id = #{scenicIds}</if>
+            <if test="name != null and '' != name">and name = #{name}</if>
+            <if test="codeName != null and '' != codeName">and code_name = #{codeName}</if>
+            <if test="cityCode != null and '' != cityCode">and city_code = #{cityCode}</if>
+            <if test="area != null and '' != area">and area = #{area}</if>
+            <if test="survey != null and '' != survey">and survey = #{survey}</if>
+            <if test="days != null and '' != days">and days = #{days}</if>
+            <if test="scenics != null and '' != scenics">and scenics = #{scenics}</if>
+            <if test="months != null and months != ''">and months like '%${months}%'</if>
+            <if test="styles != null and styles != ''">and styles like '%${styles}%'</if>
+            <if test="language != null and language != ''">and language = #{language}</if>
+            <if test="daysRecommend != null and daysRecommend != ''">and days_recommend = #{daysRecommend}</if>
+            <if test="consumer != null and consumer != ''">and consumer = #{consumer}</if>
+            <if test="seasons != null and seasons != ''">and seasons like '%${seasons}%'</if>
+            <if test="modifyTime != null and '' != modifyTime">and modify_time = #{modifyTime}</if>
+            <if test="key != null and '' != key">and (code_name like '${key}%' or name like '${key}%') </if>
+        </where>
+    </sql>
+</mapper>

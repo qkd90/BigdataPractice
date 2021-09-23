@@ -1,0 +1,98 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<version>0.0.1-SNAPSHOT</version>
+		<groupId>com.data.data</groupId>
+		<artifactId>data</artifactId>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<artifactId>frame</artifactId>
+	<packaging>war</packaging>
+	<name>frame Maven Webapp</name>
+	<url>http://www.zuipin.cn</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.belerweb</groupId>
+			<artifactId>pinyin4j</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.29</version>
+		</dependency>
+		<dependency>
+			<groupId>com.data.data</groupId>
+			<artifactId>coressh4</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.data.data</groupId>
+			<artifactId>solr</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>frame</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<attachClasses>true</attachClasses>
+					<archiveClasses>true</archiveClasses>
+				</configuration>
+			</plugin>
+<!--
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>copy project</id>
+						<phase>package</phase>
+						<configuration>
+							<tasks>
+								<copy todir="${basedir}/target/me">
+									<fileset dir="${basedir}/target/frame">
+										<include name="**/*" />
+									</fileset>
+								</copy>
+								<copy todir="${basedir}/target/me/WEB-INF/classes">
+									<fileset dir="${basedir}/target/classes">
+										<include name="**/*" />
+										<exclude name="*log4j.properties" />
+										<exclude name="*deploy.properties" />
+									</fileset>
+								</copy>
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+-->
+		</plugins>
+	</build>
+</project>

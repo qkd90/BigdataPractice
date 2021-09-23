@@ -1,0 +1,279 @@
+<!-- contain start -->
+<div class="hotelList_wrapper" id="hotel_list" ng-controller="HotelListCtrl">
+    <div class="hotelList_header-box hotelList_fixed header">
+        <a class="go_to_home_hotel" ui-sref="hotel/index"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        <!-- 距离开始 -->
+        <div class="hotelList_topSearch" style="z-index: 5" id="topSearch" placeholder="关键字">
+            <div class="checkInOut" select-hotel-date is-first="true" hotel-date-range="hotelDateRange">
+                <p class="check-in" style="line-height: 1.3"><span>入</span><span class="date listpage-date-format"
+                                                                                 style="white-space: nowrap;">{{startDateStr}}</span>
+                </p>
+                <p class="check-out" style="line-height: 1.3"><span>离</span><span class="date listpage-date-format"
+                                                                                  style="white-space: nowrap;">{{endDateStr}}</span>
+                </p>
+            </div>
+            <div class="hold">
+                <input type="text" ng-click="clickShowFootBar(5)" ng-model="keyword" placeholder="关键字/位置/品牌/酒店名">
+            </div>
+        </div>
+        <!-- 距离结束 -->
+    </div>
+    <!--<header class="hotelList_header-box hotelList_fixed">-->
+	<!--<span class="hotelList_header-back" ui-sref="hotel/index">-->
+		<!--<i class="icon icon-title-back"></i>-->
+	<!--</span>-->
+        <!--<h1></h1>-->
+    <!--</header>-->
+    <!-- 主体内容开始 -->
+    <div class="main" id="main">
+
+        <!-- 酒店信息开始 -->
+        <div id="HotelListBox" class="hotel-list" infinite-scroll="getHotelList()" infinite-scroll-distance='1'
+             infinite-scroll-disabled='loading'>
+            <a class="hotel_item" ng-repeat="hotel in hotelList" style="display:block;position: relative"
+               ui-sref="hotelDetail({hotelId:{{hotel.id}}})">
+                <section class="hotelList_hotel-info hotelList_clearfix">
+                    <div class="hoteList_img">
+                        <img bn-lazy-src="{{hotel.cover | getImgUrl}}" alt="">
+                    </div>
+                    <div class="hotelList_info">
+                        <div class="hotelList_price">
+                            <span class="unit">¥</span>
+                            <span class="digit">{{hotel.price}}</span>
+                            <span class="text">起</span>
+                        </div>
+                        <div class="hotelList_name">{{hotel.name}}</div>
+                        <div class="score-service-price overflow-hidden">
+                            <div class="score">
+                                <span class="digit">{{hotel.productScore/20}}</span>
+                                <span class="unit">分</span>
+                            </div>
+                        </div>
+                        <div class="type-benifit overflow-hidden">
+                            <span class="source" ng-if="hotel.source == 'ELONG'">艺龙网</span>
+                        </div>
+                        <div class="addr-howfar overflow-hidden">
+                            <div class="howfar">
+                                {{hotel.address | cutByLength:14 }}
+                            </div>
+                            <div class="addr">
+                                <!--浦东机场核心区-->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </a>
+            <!--<div ng-show="loading">-->
+            <!--<div class="yuloading">-->
+            <!--<span>加载数据中...</span>-->
+            <!--</div>-->
+            <!--</div>-->
+            <div ng-show="nomore" class="alert alert-danger text-center bg_loading">没有更多了...</div>
+        </div>
+        <!-- 酒店信息结束 -->
+        <!--入住/离店开始-->
+        <div id="calendarArea" class="hide">
+            <!--<header class="header-box fixed" style=" background-color: #3d98ff;">-->
+            <!--<span class="header-back" hotel-date-back hotel-date-range="hotelDateRange"><i class="icon-title-back effect-active"></i></span>-->
+                <!--<h1>选择入住/离店日期</h1>-->
+            <!--</header>-->
+            <div class="header-box header">
+                <a><span hotel-date-back hotel-date-range="hotelDateRange"><img src="/yihaiyou/image/historyback.png"></span></a>
+                <span>选择入住/离店日期</span>
+            </div>
+            <div id="calendar"></div>
+        </div>
+        <!--入住/离店结束-->
+        <!-- 底部筛选开始 -->
+        <div class="filter-bar j_filterBar" id="FilterBar">
+            <div class="filter-btn j_filterBtn" ng-click="clickShowFootBar(1)" id="FilterBtn">
+                <i class="icon icon-sift"></i>
+                <div class="status">
+                    <span class="text">筛选</span>
+                    <span class="digit filter_count hide"></span>
+                </div>
+            </div>
+            <div class="filter-btn j_filterBtn" ng-click="clickShowFootBar(2)" data-status="2" id="RegionBtn">
+                <i class="icon icon-destination2"></i>
+                <div class="status">
+                    <span class="text region_text status-2">位置区域</span>
+                </div>
+            </div>
+            <div class="filter-btn j_filterBtn" ng-click="clickShowFootBar(3)" data-status="1" id="PriceStarBtn">
+                <i class="icon icon-price2"></i>
+                <div class="status">
+                    <span class="text status-1 j_status1">价格/星级</span>
+                    <span class="text status-2 j_status2"></span>
+                </div>
+            </div>
+            <div class="filter-btn j_filterBtn" ng-click="clickShowFootBar(4)" data-status="1"
+                 id="RecommendScorePriceDistanceBtn">
+                <i class="icon icon-sequence icon-1"></i>
+                <i class="icon icon-down3 icon-2"></i>
+                <i class="icon icon-up2 icon-3"></i>
+                <i class="icon icon-down3 icon-4"></i>
+                <i class="icon icon-up2 icon-5"></i>
+                <div class="status">
+                    <span class="text status-1">推荐排序</span>
+                    <span class="text status-2">评分 高-&gt;低</span>
+                    <span class="text status-3">价格 低-&gt;高</span>
+                    <span class="text status-4">价格 高-&gt;低</span>
+                    <span class="text status-5">距离 近-&gt;远</span>
+                </div>
+            </div>
+        </div>
+        <!-- 底部筛选开始 -->
+        <div class="shaixuan" ng-show="shaixuanShow" id="filterArea">
+            <!--<header class="shaixuan_header-box shaixuan_fixed">-->
+            <!--<span class="shaixuan_header-back" ng-click="clickHideFootBar()"><i class="icon-title-back effect-active"></i></span>-->
+                <!--<h1>筛选&lt;!&ndash;<span class="shaixuan_reset">恢复默认</span>&ndash;&gt;</h1>-->
+            <!--</header>-->
+            <div class="shaixuan_fixed header">
+                <a ng-click="clickHideFootBar()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+                <span>筛选</span>
+            </div>
+            <div class="shaixuan_area shaixuan_filter-block">
+                <ul class="shaixuan_filter-nav" style="position:fixed">
+                    <li id="shai_1" type="hotelLabels" class="active" ng-click="selectShaixuan(1)">品牌<em></em></li>
+                    <li id="shai_2" type="brands" ng-click="selectShaixuan(2)">服务<em></em></li>
+                </ul>
+                <div class="shaixuan_filter-content">
+                    <div id="shaixuan_1" class="shaixuan_filter-panel shaixuan_scrollbar_set active"
+                         style="width:73%;height:450px;">
+                        <ul class="brand-ul">
+                            <li ng-repeat="brand in brandList" hotel-shai-xuan sel-id="brand.brandId" type="'brand'">
+                                {{brand.brandName}}<label id="brand_{{brand.brandId}}"
+                                                          class="{{brand.classStyle}}"></label></li>
+                        </ul>
+                    </div>
+                    <div id="shaixuan_2" class="shaixuan_filter-panel shaixuan_scrollbar_set active hide"
+                         style="width:73%;height:450px;">
+                        <ul class="service-ul">
+                            <li ng-repeat="service in serviceList" hotel-shai-xuan sel-id="service.serviceId"
+                                type="'service'">{{service.serviceName}}<label id="service_{{service.serviceId}}"
+                                                                               class="{{service.classStyle}}"></label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="shaixuan_foot">
+                <div class="shaixuan_confirm-btn filter_confirm" ng-click="searchHotelList()">确定</div>
+            </div>
+        </div>
+        <!-- 底部筛选结束 -->
+        <!-- 底部区域开始 -->
+        <div class="shaixuan" ng-show="xuanAreaShow" id="">
+            <!--<header class="shaixuan_header-box shaixuan_fixed"><span class="shaixuan_header-back" ng-click="clickHideFootBar()"><i class="icon-title-back effect-active"></i></span>-->
+                <!--<h1>区域位置&lt;!&ndash;<span class="shaixuan_reset">恢复默认</span>&ndash;&gt;</h1>-->
+            <!--</header>-->
+            <div class="shaixuan_fixed header">
+                <a ng-click="clickHideFootBar()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+                <span>区域位置</span>
+            </div>
+            <div class="shaixuan_area shaixuan_filter-block">
+                <ul class="shaixuan_filter-nav" style="position:fixed">
+                    <li id="regin_1" type="hotelLabels" class="active" ng-click="selectRegion(1)">商圈<em></em></li>
+                </ul>
+                <div class="shaixuan_filter-content">
+                    <div id="selRegin_1" class="shaixuan_filter-panel shaixuan_scrollbar_set active"
+                         style="height: 450px;width:73%">
+                        <ul class="regin-ul">
+                            <li ng-repeat="regin in regionList" hotel-shai-xuan sel-id="regin.id" type="'regin'">
+                                {{regin.name}}<label id="regin_{{regin.id}}" class="{{regin.classStyle}}"></label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="shaixuan_foot">
+                <div class="shaixuan_confirm-btn filter_confirm" ng-click="searchHotelList()">确定</div>
+            </div>
+        </div>
+        <!-- 底部区域结束 -->
+        <!-- 价格星级开始 -->
+        <div class="hotelList_price-star-area" id="PriceStarArea" ng-show="priceStarShow">
+            <div class="hotelList_price-star">
+                <div class="hotelList_price">
+                    <div class="des">价格（单选）</div>
+                    <ul class="list j_priceList">
+                        <li ng-repeat="selprice in hotelPriceList"  ng-class="{'item-last':$index==3}"  hotel-price-dir low-price="selprice.lowPrice"
+                            high-price="selprice.highPrice" class="{{selprice.priceClass}} {{selprice.brClass}}">
+                            {{selprice.title}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="star">
+                    <div class="des">星级（单选）</div>
+                    <ul class="list j_starsList">
+                        <li ng-repeat="selStar in hotelStarList"   ng-class="{'item-last':$index==2}"   id="star_{{selStar.star}}" hotel-star-dir
+                            star="selStar.star" class="{{selStar.starClass}} {{selStar.brClass}}">{{selStar.title}}
+                        </li>
+                    </ul>
+                </div>
+                <a href="javascript:void(0);" class="confirm j_confirm" ng-click="searchHotelList()">确定</a>
+            </div>
+            <div ng-click="clickHideFootBar()" class="hotelList_darkDiv"></div>
+        </div>
+        <!-- 价格星级结束 -->
+        <!-- 推荐排序、评分、价格、距离 开始-->
+        <div class="hotelList_recommend-score-price-distance-area" ng-show="tuijianShow"
+             id="RecommendScorePriceDistanceArea">
+            <div class="hotelList_recommend-score-price-distance" id="RecommendScorePriceDistance">
+                <ul class="order_ul">
+                    <!--<li ng-repeat="order in hotelOrderList" id="order_li_{{order.label}}" class="{{order.onClass}}" hotel-order-dir="searchHotelList()" order-column="order.orderColumn" order-type="order.orderType" label="order.label">-->
+                    <li ng-repeat="order in hotelOrderList" id="order_li_{{order.label}}" class="{{order.onClass}}"
+                        ng-click="selOrderLi(order.label, order.orderColumn, order.orderType)" label="order.label">
+                        <span class="hotelList_order_span">{{order.title}}</span>
+                        <label class="hotelList_order_label {{order.selClass}}"></label>
+                    </li>
+                </ul>
+            </div>
+            <div ng-click="clickHideFootBar()" class="hotelList_darkDiv"></div>
+        </div>
+        <!-- 推荐排序、评分、价格、距离 结束-->
+        <div class="" id="keywordsArea" ng-show="keywordShow"
+             style="position: fixed;width: 100%;height: 100%;z-index: 100;">
+            <div class="header">
+                <a ng-click="backKeyword()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+                <span class="header-back">关键字</span>
+            </div>
+            <!--<header class="header-box fixed" style="background-color: #3d98ff;">-->
+                <!--<span class="header-back" ng-click="backKeyword()">-->
+                    <!--<i class="icon-title-back effect-active"></i>-->
+                <!--</span>-->
+                <!--<h1>关键字</h1>-->
+            <!--</header>-->
+            <div class="keywords">
+                <!-- <p class="search-placeholder"><i class="icon-search"></i><span>关键字/位置/品牌/酒店名</span></p> -->
+                <div class="input-search focus">
+                    <i class="icon-search"></i>
+                    <input id="hotelKeyword" type="text" ng-model="keyword" placeholder="关键字/位置/品牌/酒店名">
+                    <i class="icon-delete" ng-click="deleteKeyword()"></i>
+                </div>
+                <div class="confirm-btn" ng-click="searchHotelListBykeyword()">确定</div>
+                <div class="cancel-btn hide">取消</div>
+            </div>
+            <ul class="suggest-list" style="top: 48px;">
+                <li ng-repeat="keyword in hotelKeywordList" ng-click="searchHotelListBykeyword(keyword)">{{keyword}}
+                </li>
+                <li class="clear" ng-click="clearKeywordList()">清除历史记录</li>
+            </ul>
+        </div>
+        <!-- return button-->
+        <!--<a href="javascript:;" class="toTop J_toTop hidden"></a>-->
+    </div>
+    <!-- 主体内容结束 -->
+    <div class="loading" id="loading" style="display:none;">
+        <div class="spinner">
+            <div class="spinner-inner">
+            </div>
+            <div class="cutout"></div>
+            <div class="s-circle"></div>
+        </div>
+        <div class="loading-logo"><span class="icon-logo"></span></div>
+    </div>
+    <!-- 底部加载信息的显示 -->
+    <!--<div id="totalCount" style="display: none;">6168家酒店</div>-->
+    <div id="loadingWat" style="display: none;">加载中，请稍候</div>
+    <div id="loadingDoneWat" style="display: none;">已全部加载完成</div>
+</div>

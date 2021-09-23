@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+
+	<var-def name="html">
+		<http url="${url}" charset="utf-8"></http>
+	</var-def>
+
+	<var-def name="content">
+		<html-to-xml>
+			<var name="html"></var>
+		</html-to-xml>
+	</var-def>
+
+	<var-def name="products">
+		<![CDATA[<jd>]]>
+		<xquery>
+			<xq-param name="n" type="node()">
+				<var name="content" />
+			</xq-param>
+			<xq-expression><![CDATA[
+			                            declare variable $n as node() external;
+			                            let $href := $n//div[@class='dest_toptitle detail_tt']//h1/a/@href
+			                           	let $title := $n//div[@class='dest_toptitle detail_tt']//h1/a/text()			
+			                           		
+			                           	let $info := $n//div[@class='s_sight_infor']
+										let $address := $info/p
+										let $level := $info/ul/li[1]
+										let $type := $info/ul/li[1]/span[@class='s_sight_classic']
+										let $typevalue := $info/ul/li[1]/span[@class='s_sight_con']																				
+				                        return 
+				                        	<product>
+				                                <jdHref>{data($href)}</jdHref>
+				                                <jdTitle>{data($title)}</jdTitle>
+				                                <address>{data($address)}</address>	
+				                                <level>{data($level)}</level>      
+				                                <type>{data($type)}</type>
+				                                <typevalue>{data($typevalue)}</typevalue>                          		 				                                
+				                            </product>			                           
+			                    ]]></xq-expression>
+		</xquery>
+		<![CDATA[</jd>]]>
+	</var-def>
+	<!-- <var-def name="result"> <![CDATA[<root>]]> <var name="nextHref"></var> 
+		<var name="products"></var> <![CDATA[</root>]]> </var-def> -->
+	<!-- <file action="write" charset="utf-8" path="d:\jd.xml">
+		<var name="products"></var>
+	</file> -->
+
+</config>

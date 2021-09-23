@@ -1,0 +1,23 @@
+<div ng-controller="xingjingdiansearchCtrl">
+    <div class="searchform topbg col-xs-12 fixtop">
+        <form class="form-inline">
+            <div class="input-group">
+                <input type="text" class="form-control" id="project" placeholder="景点搜索" ng-change="scenicList()"
+                       ng-model="key">
+      <span class="input-group-btn">
+          <a href="javascript:history.go(-1);">
+              <button class="btn btn-default" type="button">取消</button>
+          </a>
+      </span>
+            </div>
+        </form>
+    </div>
+    <div id="yjcontainer" class="clearfix">
+        <div class="search-fujin-list" id="search-city">
+            <ul>
+                <li class="col-xs-12" ng-repeat="scenic in scenics"><a ui-sref="xing-jingdian-info({id: scenic.id})"
+                                                                       ng-bind-html="scenic.html | trustHtml"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>

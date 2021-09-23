@@ -1,0 +1,35 @@
+<div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+  <ul>
+    <li class="pull-left"><a href="javascript:history.go(-1)" class="goback"></a></li>
+    <li class="pull-right">
+      <button type="button" class="fabu btn" data-toggle="modal" data-target="#jinggao">发布</button>
+    </li>
+  </ul>
+</div>
+<div id="subcontainer" class="clearfix xieganxiang" ng-controller="YxCtrl">
+  <div class="col-xs-12">
+    <div class="clearfix">
+      <textarea class="form-control" rows="3">旅游感想游记旅游感想游记旅游感想游记旅游感旅游感想游记旅游感想游记</textarea>
+    </div>
+    <div class="gxpiclist clearfix">
+      <li><a ui-sref="xieganxiang-pic"><img src="images/ganxiang/pic1.png" class="img-responsive" /></a></li>
+      <li><a ui-sref="xieganxiang-pic"><img src="images/ganxiang/pic2.png" class="img-responsive" /></a></li>
+      <li><a ui-sref="xieganxiang-pic"><img src="images/ganxiang/jia.png" class="img-responsive" /></a></li>
+    </div>
+    <div class="gxnow clearfix"><span class="pull-left gxjd">鼓浪屿</span><a href="" class="pull-right glyphicon glyphicon-remove"></a></div>
+  <div class="clearfix tags">
+    <ul>
+    <li class="col-xs-4"><a href="" class="img-circle"><img src="images/ganxiang/gx1.png" class="center-block" /></a></li>
+    <li class="col-xs-4"><a href="" class="img-circle"><img src="images/ganxiang/gx2.png" class="center-block" /></a></li>
+    <li class="col-xs-4"><a href="" class="img-circle"><img src="images/ganxiang/gx3.png" class="center-block" /></a></li>
+    </ul>
+  </div>
+  </div>
+</div>
+<div class="modal fade" id="jinggao" tabindex="-1" role="dialog" aria-labelledby="jinggao">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content text-center">
+      您未选择景点、酒店、美食
+    </div>
+  </div>
+</div>

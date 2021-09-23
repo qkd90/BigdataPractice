@@ -1,0 +1,1708 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset, img {
+    border: 0
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal
+}
+
+ol, ul, li {
+    list-style: none
+}
+
+caption, th {
+    text-align: left
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+q:before, q:after {
+    content: ''
+}
+
+abbr, acronym {
+    border: 0
+}
+
+a {
+    color: #000;
+    text-decoration: none
+}
+
+a:active {
+    color: #000
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.clear {
+    clear: both
+}
+
+.icon-essence:before {
+    content: "\e92c"
+}
+
+.icon-fire2:before {
+    content: "\e92d"
+}
+
+.icon-interest:before {
+    content: "\e92e"
+}
+
+.icon-player:before {
+    content: "\e92f"
+}
+
+.icon-tag:before {
+    content: "\e930"
+}
+
+.icon-human:before {
+    content: "\e92b"
+}
+
+.icon-refresh2:before {
+    content: "\e92a"
+}
+
+.icon-share3:before {
+    content: "\e926"
+}
+
+.icon-fire:before {
+    content: "\e927"
+}
+
+.icon-like:before {
+    content: "\e928"
+}
+
+.icon-comment3:before {
+    content: "\e929"
+}
+
+.icon-mine:before {
+    content: "\e91e"
+}
+
+.icon-phone2:before {
+    content: "\e924"
+}
+
+.icon-top2:before {
+    content: "\e925"
+}
+
+.icon-checkbox_bg:before {
+    content: "\e921"
+}
+
+.icon-checkbox:before {
+    content: "\e922"
+}
+
+.icon-select3:before {
+    content: "\e923"
+}
+
+.icon-home3:before {
+    content: "\e91d"
+}
+
+.icon-search_list:before {
+    content: "\e91f"
+}
+
+.icon-search5:before {
+    content: "\e920"
+}
+
+.icon-doc:before {
+    content: "\e919"
+}
+
+.icon-jpg:before {
+    content: "\e91a"
+}
+
+.icon-pdf:before {
+    content: "\e91b"
+}
+
+.icon-warn:before {
+    content: "\e91c"
+}
+
+.icon-QEcode:before {
+    content: "\e915"
+}
+
+.icon-search4:before {
+    content: "\e916"
+}
+
+.icon-news:before {
+    content: "\e917"
+}
+
+.icon-phone:before {
+    content: "\e918"
+}
+
+.icon-drive:before {
+    content: "\e90b"
+}
+
+.icon-finance:before {
+    content: "\e90c"
+}
+
+.icon-hotel4:before {
+    content: "\e90d"
+}
+
+.icon-liner:before {
+    content: "\e90e"
+}
+
+.icon-pkg:before {
+    content: "\e90f"
+}
+
+.icon-plane3:before {
+    content: "\e910"
+}
+
+.icon-ticket3:before {
+    content: "\e911"
+}
+
+.icon-tours:before {
+    content: "\e912"
+}
+
+.icon-train3:before {
+    content: "\e913"
+}
+
+.icon-visa5:before {
+    content: "\e914"
+}
+
+.icon-top:before {
+    content: "\e90a"
+}
+
+.icon-alarm2:before {
+    content: "\e908"
+}
+
+.icon-link:before {
+    content: "\e909"
+}
+
+.icon-more2:before {
+    content: "\e907"
+}
+
+.icon-good:before {
+    content: "\e904"
+}
+
+.icon-tip:before {
+    content: "\e905"
+}
+
+.icon-nogood:before {
+    content: "\e906"
+}
+
+.icon-iphone:before {
+    content: "\e903"
+}
+
+.icon-bus2:before {
+    content: "\e902"
+}
+
+.icon-place4:before {
+    content: "\e901"
+}
+
+.icon-down4:before {
+    content: "\e900"
+}
+
+.icon-raiders:before {
+    content: "\e801"
+}
+
+.icon-logo:before {
+    content: "\e800"
+}
+
+.icon-replay-line:before {
+    content: "\e702"
+}
+
+.icon-replay:before {
+    content: "\e707"
+}
+
+.icon-share2:before {
+    content: "\e706"
+}
+
+.icon-coupon:before {
+    content: "\e632"
+}
+
+.icon-delete-btn:before {
+    content: "\e638"
+}
+
+.icon-font-cash:before {
+    content: "\e65b"
+}
+
+.icon-font-early:before {
+    content: "\e65e"
+}
+
+.icon-font-fan:before {
+    content: "\e65f"
+}
+
+.icon-font-mortgage:before {
+    content: "\e660"
+}
+
+.icon-font-sale:before {
+    content: "\e704"
+}
+
+.icon-gift:before {
+    content: "\e705"
+}
+
+.icon-coupon2:before {
+    content: "\e6fe"
+}
+
+.icon-supplier:before {
+    content: "\e6ff"
+}
+
+.icon-trip3:before {
+    content: "\e700"
+}
+
+.icon-Article:before {
+    content: "\e701"
+}
+
+.icon-Travel:before {
+    content: "\e703"
+}
+
+.icon-introduction:before {
+    content: "\e6f7"
+}
+
+.icon-map:before {
+    content: "\e6f8"
+}
+
+.icon-native:before {
+    content: "\e6f9"
+}
+
+.icon-pic:before {
+    content: "\e6fa"
+}
+
+.icon-shop2:before {
+    content: "\e6fb"
+}
+
+.icon-trip2:before {
+    content: "\e6fc"
+}
+
+.icon-view:before {
+    content: "\e6fd"
+}
+
+.icon-hourshotwater:before {
+    content: "\e6db"
+}
+
+.icon-airportbus:before {
+    content: "\e6dc"
+}
+
+.icon-area:before {
+    content: "\e6dd"
+}
+
+.icon-bedtype:before {
+    content: "\e6de"
+}
+
+.icon-bottledwater:before {
+    content: "\e6df"
+}
+
+.icon-businesscenter:before {
+    content: "\e6e0"
+}
+
+.icon-cancel:before {
+    content: "\e6e1"
+}
+
+.icon-conferencehall:before {
+    content: "\e6e2"
+}
+
+.icon-exhibitionhall:before {
+    content: "\e6e3"
+}
+
+.icon-floor:before {
+    content: "\e6e4"
+}
+
+.icon-freeIntel:before {
+    content: "\e6e5"
+}
+
+.icon-freemaps:before {
+    content: "\e6e6"
+}
+
+.icon-freetoiletries:before {
+    content: "\e6e7"
+}
+
+.icon-gymnasium:before {
+    content: "\e6e8"
+}
+
+.icon-hairdryer:before {
+    content: "\e6e9"
+}
+
+.icon-haveIntel:before {
+    content: "\e6ea"
+}
+
+.icon-housetype:before {
+    content: "\e6eb"
+}
+
+.icon-Intel:before {
+    content: "\e6ec"
+}
+
+.icon-luggageservice:before {
+    content: "\e6ed"
+}
+
+.icon-morningcall:before {
+    content: "\e6ee"
+}
+
+.icon-Non-smokingroom:before {
+    content: "\e6ef"
+}
+
+.icon-parking:before {
+    content: "\e6f0"
+}
+
+.icon-partIntel:before {
+    content: "\e6f1"
+}
+
+.icon-pick-upservice:before {
+    content: "\e6f2"
+}
+
+.icon-restaurant:before {
+    content: "\e6f3"
+}
+
+.icon-safebox:before {
+    content: "\e6f4"
+}
+
+.icon-swimmingpool:before {
+    content: "\e6f5"
+}
+
+.icon-tolivein:before {
+    content: "\e6f6"
+}
+
+.icon-delete2:before {
+    content: "\e6d8"
+}
+
+.icon-edit1:before {
+    content: "\e6d9"
+}
+
+.icon-user1:before {
+    content: "\e6da"
+}
+
+.icon-hotel3:before {
+    content: "\e6cb"
+}
+
+.icon-hotelplane:before {
+    content: "\e6cd"
+}
+
+.icon-line2:before {
+    content: "\e6d7"
+}
+
+.icon-refresh:before {
+    content: "\e6cc"
+}
+
+.icon-gou:before {
+    content: "\e6d6"
+}
+
+.icon-destination2:before {
+    content: "\e686"
+}
+
+.icon-down3:before {
+    content: "\e687"
+}
+
+.icon-line:before {
+    content: "\e688"
+}
+
+.icon-price2:before {
+    content: "\e689"
+}
+
+.icon-sequence:before {
+    content: "\e699"
+}
+
+.icon-setout:before {
+    content: "\e69a"
+}
+
+.icon-sift:before {
+    content: "\e6ce"
+}
+
+.icon-subject:before {
+    content: "\e6cf"
+}
+
+.icon-take:before {
+    content: "\e6d0"
+}
+
+.icon-time2:before {
+    content: "\e6d1"
+}
+
+.icon-tourist:before {
+    content: "\e6d2"
+}
+
+.icon-up2:before {
+    content: "\e6d3"
+}
+
+.icon-visa4:before {
+    content: "\e6d4"
+}
+
+.icon-wifi3:before {
+    content: "\e6d5"
+}
+
+.icon-man:before {
+    content: "\e6c9"
+}
+
+.icon-woman:before {
+    content: "\e6ca"
+}
+
+.icon-computer:before {
+    content: "\e6c7"
+}
+
+.icon-exit:before {
+    content: "\e6c8"
+}
+
+.icon-quit:before {
+    content: "\e6c6"
+}
+
+.icon-airport:before {
+    content: "\e6c5"
+}
+
+.icon-call2:before {
+    content: "\e6bc"
+}
+
+.icon-category:before {
+    content: "\e6bd"
+}
+
+.icon-home2:before {
+    content: "\e6be"
+}
+
+.icon-order3:before {
+    content: "\e6bf"
+}
+
+.icon-place3:before {
+    content: "\e6c0"
+}
+
+.icon-register:before {
+    content: "\e6c1"
+}
+
+.icon-search3:before {
+    content: "\e6c2"
+}
+
+.icon-shop:before {
+    content: "\e6c3"
+}
+
+.icon-user:before {
+    content: "\e6c4"
+}
+
+.icon-around:before {
+    content: "\e6b8"
+}
+
+.icon-cowboy:before {
+    content: "\e6b9"
+}
+
+.icon-island:before {
+    content: "\e6ba"
+}
+
+.icon-overseas:before {
+    content: "\e6bb"
+}
+
+.icon-foot:before {
+    content: "\e6b6"
+}
+
+.icon-intro:before {
+    content: "\e6b7"
+}
+
+.icon-money:before {
+    content: "\e6b5"
+}
+
+.icon-close:before {
+    content: "\e6b0"
+}
+
+.icon-sure:before {
+    content: "\e6b1"
+}
+
+.icon-alarm:before {
+    content: "\e6b2"
+}
+
+.icon-camera:before {
+    content: "\e6b3"
+}
+
+.icon-comment2:before {
+    content: "\e6b4"
+}
+
+.icon-interationalhotel:before {
+    content: "\e6af"
+}
+
+.icon-location:before {
+    content: "\e6ad"
+}
+
+.icon-tel:before {
+    content: "\e6ae"
+}
+
+.icon-IDcard:before {
+    content: "\e6ab"
+}
+
+.icon-visa3:before {
+    content: "\e6ac"
+}
+
+.icon-photo2:before {
+    content: "\e6aa"
+}
+
+.icon-flighticon:before {
+    content: "\e6a9"
+}
+
+.icon-seat11:before {
+    content: "\e6a7"
+}
+
+.icon-flight:before {
+    content: "\e6a8"
+}
+
+.icon-item1:before {
+    content: "\e6a4"
+}
+
+.icon-rule1:before {
+    content: "\e6a5"
+}
+
+.icon-spot1:before {
+    content: "\e6a6"
+}
+
+.icon-edit:before {
+    content: "\e6a2"
+}
+
+.icon-friends:before {
+    content: "\e6a3"
+}
+
+.icon-presell:before {
+    content: "\e6a0"
+}
+
+.icon-trainticket:before {
+    content: "\e6a1"
+}
+
+.icon-clock:before {
+    content: "\e69b"
+}
+
+.icon-order2:before {
+    content: "\e69c"
+}
+
+.icon-star1:before {
+    content: "\e69d"
+}
+
+.icon-ticket2:before {
+    content: "\e69e"
+}
+
+.icon-wechat:before {
+    content: "\e69f"
+}
+
+.icon-share:before {
+    content: "\e698"
+}
+
+.icon-dropdown1:before {
+    content: "\e695"
+}
+
+.icon-dropdown2:before {
+    content: "\e696"
+}
+
+.icon-select2:before {
+    content: "\e697"
+}
+
+.icon-search2:before {
+    content: "\e694"
+}
+
+.icon-comment:before {
+    content: "\e68e"
+}
+
+.icon-eye:before {
+    content: "\e68f"
+}
+
+.icon-like_nor:before {
+    content: "\e690"
+}
+
+.icon-like_select:before {
+    content: "\e691"
+}
+
+.icon-photo:before {
+    content: "\e692"
+}
+
+.icon-reply:before {
+    content: "\e693"
+}
+
+.icon-train2:before {
+    content: "\e68d"
+}
+
+.icon-arrow2:before {
+    content: "\e68a"
+}
+
+.icon-travel1:before {
+    content: "\e68b"
+}
+
+.icon-travel2:before {
+    content: "\e68c"
+}
+
+.icon-down2:before {
+    content: "\e685"
+}
+
+.icon-visa:before {
+    content: "\e684"
+}
+
+.icon-spot:before {
+    content: "\e675"
+}
+
+.icon-transform:before {
+    content: "\e680"
+}
+
+.icon-pub:before {
+    content: "\e683"
+}
+
+.icon-rule:before {
+    content: "\e681"
+}
+
+.icon-item:before {
+    content: "\e682"
+}
+
+.icon-australia:before {
+    content: "\e677"
+}
+
+.icon-hongkong:before {
+    content: "\e678"
+}
+
+.icon-japanandsouthkorea:before {
+    content: "\e679"
+}
+
+.icon-southeastasia:before {
+    content: "\e67a"
+}
+
+.icon-theamericas:before {
+    content: "\e67b"
+}
+
+.icon-theeuropean:before {
+    content: "\e67c"
+}
+
+.icon-themaldives:before {
+    content: "\e67d"
+}
+
+.icon-travelaround:before {
+    content: "\e67e"
+}
+
+.icon-traveldomestic:before {
+    content: "\e67f"
+}
+
+.icon-company:before {
+    content: "\e676"
+}
+
+.icon-add:before {
+    content: "\e62c"
+}
+
+.icon-caution:before {
+    content: "\e671"
+}
+
+.icon-direct:before {
+    content: "\e672"
+}
+
+.icon-port:before {
+    content: "\e673"
+}
+
+.icon-subtraction:before {
+    content: "\e674"
+}
+
+.icon-hotel2:before {
+    content: "\e66a"
+}
+
+.icon-independent:before {
+    content: "\e66b"
+}
+
+.icon-mailboat:before {
+    content: "\e66c"
+}
+
+.icon-road:before {
+    content: "\e66d"
+}
+
+.icon-team:before {
+    content: "\e66e"
+}
+
+.icon-ticket:before {
+    content: "\e66f"
+}
+
+.icon-wifi:before {
+    content: "\e670"
+}
+
+.icon-visa2:before {
+    content: "\e669"
+}
+
+.icon-support:before {
+    content: "\e63a"
+}
+
+.icon-security:before {
+    content: "\e668"
+}
+
+.icon-businessvista:before {
+    content: "\e647"
+}
+
+.icon-fridentsvista:before {
+    content: "\e65a"
+}
+
+.icon-monthvista:before {
+    content: "\e663"
+}
+
+.icon-personvista:before {
+    content: "\e666"
+}
+
+.icon-processvista:before {
+    content: "\e667"
+}
+
+.icon-account:before {
+    content: "\e63b"
+}
+
+.icon-calendar:before {
+    content: "\e63c"
+}
+
+.icon-call:before {
+    content: "\e63d"
+}
+
+.icon-cellphone:before {
+    content: "\e63e"
+}
+
+.icon-email:before {
+    content: "\e63f"
+}
+
+.icon-pass:before {
+    content: "\e640"
+}
+
+.icon-password:before {
+    content: "\e641"
+}
+
+.icon-pencil:before {
+    content: "\e642"
+}
+
+.icon-read:before {
+    content: "\e643"
+}
+
+.icon-remind:before {
+    content: "\e644"
+}
+
+.icon-search:before {
+    content: "\e645"
+}
+
+.icon-write:before {
+    content: "\e646"
+}
+
+.icon-iPhone:before {
+    content: "\e639"
+}
+
+.icon-choice:before {
+    content: "\e630"
+}
+
+.icon-no-choice:before {
+    content: "\e633"
+}
+
+.icon-plane:before {
+    content: "\e635"
+}
+
+.icon-ship:before {
+    content: "\e636"
+}
+
+.icon-train:before {
+    content: "\e637"
+}
+
+.icon-collect:before {
+    content: "\e631"
+}
+
+.icon-telephone:before {
+    content: "\e634"
+}
+
+.icon-slip:before {
+    content: "\e623"
+}
+
+.icon-place2:before {
+    content: "\e62f"
+}
+
+.icon-group:before {
+    content: "\e622"
+}
+
+.icon-love:before {
+    content: "\e62d"
+}
+
+.icon-star:before {
+    content: "\e62e"
+}
+
+.icon-prompt:before {
+    content: "\e605"
+}
+
+.icon-book:before {
+    content: "\e620"
+}
+
+.icon-chart:before {
+    content: "\e621"
+}
+
+.icon-preferential:before {
+    content: "\e624"
+}
+
+.icon-questions:before {
+    content: "\e625"
+}
+
+.icon-shopping:before {
+    content: "\e626"
+}
+
+.icon-traffic:before {
+    content: "\e627"
+}
+
+.icon-trip:before {
+    content: "\e628"
+}
+
+.icon-bus:before {
+    content: "\e62a"
+}
+
+.icon-feature:before {
+    content: "\e62b"
+}
+
+.icon-more1:before {
+    content: "\e61f"
+}
+
+.icon-zoomout:before {
+    content: "\e61d"
+}
+
+.icon-more:before {
+    content: "\e61e"
+}
+
+.icon-password2:before {
+    content: "\e61c"
+}
+
+.icon-arrow-left:before {
+    content: "\e619"
+}
+
+.icon-arrow-down:before {
+    content: "\e61a"
+}
+
+.icon-arrow-up:before {
+    content: "\e61b"
+}
+
+.icon-down:before {
+    content: "\e616"
+}
+
+.icon-up:before {
+    content: "\e617"
+}
+
+.icon-back:before {
+    content: "\e600"
+}
+
+.icon-destination:before {
+    content: "\e611"
+}
+
+.icon-choose:before {
+    content: "\e612"
+}
+
+.icon-arrow:before {
+    content: "\e613"
+}
+
+.icon-plane2:before {
+    content: "\e614"
+}
+
+.icon-price:before {
+    content: "\e615"
+}
+
+.icon-order:before {
+    content: "\e609"
+}
+
+.icon-opinion:before {
+    content: "\e60a"
+}
+
+.icon-luck:before {
+    content: "\e60b"
+}
+
+.icon-home:before {
+    content: "\e60c"
+}
+
+.icon-history:before {
+    content: "\e60d"
+}
+
+.icon-delete:before {
+    content: "\e60e"
+}
+
+.icon-coupons:before {
+    content: "\e60f"
+}
+
+.icon-Collection:before {
+    content: "\e610"
+}
+
+.icon-time:before {
+    content: "\e601"
+}
+
+.icon-place:before {
+    content: "\e602"
+}
+
+.icon-hamburger:before {
+    content: "\e603"
+}
+
+.icon-search-small:before {
+    content: "\e604"
+}
+
+.icon-new:before {
+    content: "\e606"
+}
+
+.icon-people:before {
+    content: "\e607"
+}
+
+.icon-search-big:before {
+    content: "\e608"
+}
+
+.icon-book-help:before {
+    content: "\e664"
+}
+
+.icon-popup-closed:before {
+    content: "\e665"
+}
+
+.icon-title-back:before {
+    content: "\e65d"
+}
+
+.icon-no-select:before {
+    content: "\e661"
+}
+
+.icon-select:before {
+    content: "\e662"
+}
+
+.icon-addcard:before {
+    content: "\e659"
+}
+
+.icon-card:before {
+    content: "\e65c"
+}
+
+.icon-hotel:before {
+    content: "\e658"
+}
+
+.icon-go:before {
+    content: "\e657"
+}
+
+.icon-back2:before {
+    content: "\e655"
+}
+
+.icon-return:before {
+    content: "\e656"
+}
+
+.icon-exercise:before {
+    content: "\e64a"
+}
+
+.icon-massage:before {
+    content: "\e64b"
+}
+
+.icon-meet:before {
+    content: "\e64c"
+}
+
+.icon-park:before {
+    content: "\e64d"
+}
+
+.icon-plane22:before {
+    content: "\e64e"
+}
+
+.icon-playground:before {
+    content: "\e64f"
+}
+
+.icon-spa:before {
+    content: "\e650"
+}
+
+.icon-swimming:before {
+    content: "\e651"
+}
+
+.icon-water:before {
+    content: "\e652"
+}
+
+.icon-westernfood:before {
+    content: "\e653"
+}
+
+.icon-wifi2:before {
+    content: "\e654"
+}
+
+.icon-popup-help:before {
+    content: "\e648"
+}
+
+.icon-popup-info:before {
+    content: "\e649"
+}
+
+.icon-route:before {
+    content: "\e629"
+}
+
+.wrapper {
+    background: #fff
+}
+
+.journey-detail {
+    padding: 0 15px;
+    line-height: 19px
+}
+
+.journey-detail .journey-content {
+    clear: both
+}
+
+.journey-detail .journey-content .tab-content {
+    clear: both;
+    font-size: 1.0rem;
+    color: #666
+}
+
+.journey-detail .journey-content .tab-content
+.desc {
+    width: 100%;
+    border-bottom: 1px solid #d8d8d8
+}
+
+.journey-detail .journey-content .tab-content .desc tr > td:first-child {
+    width: 65px
+}
+
+.journey-detail .journey-content .tab-content .desc tr > td {
+    padding-bottom: 15px
+}
+
+.journey-detail .journey-content .tab-content .journey-line {
+    margin-top: 15px
+}
+
+.journey-detail .journey-content .tab-content .journey-line
+.tips {
+    color: #f99d1c;
+    margin: 10px
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-title {
+    position: relative;
+    border-left: 1px solid #33bd61;
+    padding-left: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    font-size: 1.4rem;
+    color: #33bd61;
+    line-height: 2
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-title
+.traffic {
+    font-size: 1.3rem;
+    padding: 2px 3px 3px 2px;
+    border-radius: 16px
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-title .traffic .icon-bus, .journey-detail .journey-content .tab-content .journey-line .day-title .traffic .icon-plane, .journey-detail .journey-content .tab-content .journey-line .day-title .traffic .icon-ship, .journey-detail .journey-content .tab-content .journey-line .day-title .traffic .icon-train {
+    font-size: 1.4rem
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-title
+.ball {
+    position: absolute;
+    top: -2px;
+    left: -13px;
+    width: 30px;
+    height: 36px;
+    background: url("http://img4.tuniucdn.com/site/wap/img/productInfo/paopao-1125.png") 0 0 no-repeat;
+    background-size: 100%
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-title .ball
+span {
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    width: 100%
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-title.teens .ball
+span {
+    transform: scale(0.8)
+}
+
+.journey-detail .journey-content .tab-content .journey-line
+.label {
+    position: relative;
+    border-left: 1px solid #33bd61;
+    padding-left: 20px;
+    margin-left: 12px;
+    font-size: 1.4rem;
+    padding-top: 15px
+}
+
+.journey-detail .journey-content .tab-content .journey-line .label .time-place {
+    line-height: 34px;
+    height: 33px;
+    display: inline-block;
+    color: #fff;
+    background: #33bd61;
+    padding-left: 5px;
+    border-radius: 4px;
+}
+
+.journey-detail .journey-content .tab-content .journey-line .label .time-place
+.icon {
+    margin-right: 3px;
+    position: relative;
+    top: 1px
+}
+
+.journey-detail .journey-content .tab-content .journey-line .label .time-place .icon-place2 {
+    font-size: 1.6rem
+}
+
+.journey-detail .journey-content .tab-content .journey-line .label .time-place
+.text {
+    margin-right: 15px
+}
+
+.journey-detail .journey-content .tab-content .journey-line .label
+.arrow {
+    position: absolute;
+    display: inline-block;
+    background: url("../images/label-arrow-1125.png") 0 0 no-repeat;
+    background-size: 20px 33px;
+    width: 20px;
+    height: 33px;
+    left: 0;
+    transform: rotate(0deg);
+    top: 8px;
+}
+
+.journey-detail .journey-content .tab-content .journey-line .label
+.dott {
+    position: absolute;
+    top: 34px;
+    left: -3px;
+    width: 5px;
+    height: 10px;
+    border-radius: 5px;
+    background: #33bd61;
+    border: 2px solid #fff
+}
+
+.journey-detail .journey-content .tab-content .journey-line .label .border-box {
+    position: absolute;
+    top: 13px;
+    left: -5px;
+    width: 5px;
+    height: 20px;
+    background: #fff
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-content {
+    position: relative;
+    border-left: 1px solid #33bd61;
+    padding-left: 15px;
+    margin-left: 12px;
+    padding-top: 15px;
+    margin-right: 20px;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-content
+.place {
+    background: #33bd61;
+    border-radius: 4px;
+    color: #fff;
+    padding: 5px;
+    display: inline-block;
+    margin: 15px 0
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-content
+.imgs {
+    overflow: hidden
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-content .img-box {
+    position: relative
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-content .img-box
+img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-content .img-box .img-label {
+    position: absolute;
+    font-size: 1.6rem;
+    bottom: 15px;
+    color: #fff;
+    margin: 0 20px
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-footer {
+    clear: both;
+    position: relative;
+    border-left: 1px solid #33bd61;
+    padding-left: 15px;
+    margin-left: 12px;
+    margin-right: 20px;
+    padding-bottom: 20px
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-footer
+.tips {
+    margin-top: 15px
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-footer .tips
+.titlex {
+    font-size: 1.5rem;
+    color: #333
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-footer .tips
+.text {
+    margin-top: 10px
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-footer .fan-zhu {
+    padding: 15px;
+    color: #33bd61;
+    background: #eefaf7;
+    line-height: 2.5;
+    border-radius: 4px
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-footer .fan-zhu
+.min {
+    display: block
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-footer .fan-zhu
+.max {
+    display: none
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-footer
+.shop {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    color: #666
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-footer .shop table
+td {
+    padding-bottom: 10px
+}
+
+.journey-detail .journey-content .tab-content .journey-line .day-footer .shop table tr td:first-child {
+    width: 65px
+}
+
+.journey-detail .journey-content .tab-content .journey-line.more-itinerary .loading-journey {
+    margin: 0 auto;
+    display: block
+}
+
+.journey-detail .journey-content .tab-content .journey-line.more-itinerary
+img {
+    max-width: 100%
+}
+
+.header-box {
+    background-color: #f4f4f4;
+    height: 44px;
+    border-bottom: #d4d4d4 1px solid;
+    line-height: 44px
+}
+
+.header-box.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%
+}
+
+.header-box.fixed
+i {
+    color: #33bd61
+}
+
+.header-box .header-back {
+    position: absolute;
+    padding: 0 10px;
+    font-size: 1.6rem
+}
+
+.header-box .header-action {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 1.6rem;
+    color: #33bd61
+}
+
+.header-box
+h1 {
+    text-align: center;
+    font-size: 1.6rem
+}
+
+.wrapper {
+    padding-top: 45px
+}
+
+footer {
+    margin: 20px 0px
+}
+
+footer
+.links {
+    text-align: center
+}
+
+footer .links
+a {
+    display: inline-block;
+    width: 78px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 1.4rem;
+    color: #666;
+    border-right: 1px solid #ccc
+}
+
+footer .links a:last-child {
+    border-right: none
+}
+
+footer
+.icp {
+    height: 50px;
+    line-height: 50px;
+    color: #999;
+    font-size: 1.2rem;
+    text-align: center
+}
+
+footer
+.app_download {
+    margin-top: 8px;
+    overflow: hidden;
+    height: 30px;
+    background: url(/site/m2015/images/common/logo.png) no-repeat 29px center;
+    background-size: 30px 30px;
+    padding: 0px 33px 0px 75px
+}
+
+footer .app_download
+span.txt {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    font-size: 1.2rem
+}
+
+footer .app_download
+a {
+    float: right;
+    padding: 0px 15px;
+    border: 1px solid #cecece;
+    border-radius: 3px;
+    height: 28px;
+    line-height: 28px;
+    color: #666;
+    font-size: 1.2rem
+}
+
+.daymar_back {
+    display: block;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.daymar_back img {
+    width: 35px;
+    height: 35px;
+    margin: 5px 5px;
+}

@@ -1,0 +1,81 @@
+<div ng-controller="xingxlbianjiCtrl" class="xlbianji">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a ng-click="goBack()" class="goback">线路编辑</a></li>
+            <li class="pull-right">
+
+                <button type="button" class="ico-topsetting shezhigl" data-toggle="modal" data-target="#xianlumodal"></button>
+                <button type="button" class="ico-topmap shezhi" ng-click="toMap()"></button>
+            </li>
+        </ul>
+    </div>
+    <div id="subcontainer" class="clearfix bodybg">
+        <div id="xianludays" class="owl-carousel" day="{{day}}" owlcarousel>
+            <div class="bianjixianlu clearfix" ng-repeat="day in optimizeScenics">
+                <h2 class="numday">第{{day.day}}日 </h2>
+                <div class="media col-xs-12 pl0pr0 topborder" ng-repeat="scenic in day.tripList">
+                    <div class="media-left col-xs-6 pl0pr0 picwidth"><img src="{{scenic.cover}}?imageView2/1/w/260/h/160/q/75" style="width:100%;height:100px;"/></div>
+                    <div class="col-xs-4 pl0pr0 picinfo"><h5>{{scenic.name}}</h5></div>
+                    <div class="media-right col-xs-2 pl0pr0 delbutton">
+                        <button type="button" ng-click="deleteScenic(this)"><img src="images/ico/xl-remove.jpg"/>
+                        </button>
+                    </div>
+                </div>
+                <div ng-if="day.tripList.length == 0">该日没有景点</div>
+            </div>
+        </div>
+    </div>
+    <!-- 线路编辑弹窗 -->
+    <div class="modal fade xlbjtotal" id="xianlumodal" tabindex="-1" role="dialog" style="margin-top: 50px;">
+        <div class="modal-dialog delparent" role="document">
+            <div class="modal-content">
+                <!--<div class="modal-header xlbjdelete">-->
+                    <!--添加的景点-->
+                    <!--&lt;!&ndash;<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span&ndash;&gt;-->
+                            <!--&lt;!&ndash;aria-hidden="true">&times;</span></button>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="modal-body bianjixianlu">-->
+                    <!--<div ng-if="removeNodes.length > 0" class="clearfix">-->
+                        <!--&lt;!&ndash;<h2 class="poptitlejian"><span>删除的景点</span></h2>&ndash;&gt;-->
+                        <!--<div class="media col-xs-12 pl0pr0 topborder iknow" ng-repeat="scenic in removeNodes">-->
+                            <!--<div class="media-left col-xs-6 pl0pr0 jingdianpics"><img src="{{scenic.cover}}?imageView2/1/w/260/h/160/q/75" style="width:130px;height:100px;"/></div>-->
+                            <!--<div class="col-xs-4 pl0pr0 jingdiantitle"><h3>{{scenic.name}}</h3></div>-->
+                            <!--<div class="media-right col-xs-2 pl0pr0 jingdiandels">-->
+                                <!--<button type="button" ng-click="addScenic(this);"><img src="images/ico/xl-back.jpg"/></button>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<div ng-if="addNodes.length > 0" class="clearfix">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<h2 class="poptitleadd"><span>添加的景点</span></h2>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="media col-xs-12 pl0pr0" ng-repeat="scenic in addNodes">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="media-left col-xs-6 pl0pr0"><img src="{{scenic.cover}}?imageView2/1/w/260/h/160/q/75" style="width:130px;height:100px;"/></div>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="col-xs-4 pl0pr0"><h3>{{scenic.name}}</h3></div>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="media-right col-xs-2 pl0pr0">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<button type="button" ng-click="deleteScenic(this);"><img src="images/ico/xl-remove.jpg"/>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</button>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</div>-->
+                <div class="modal-header xlbjdelete">
+                    删除的景点
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
+                    <!--aria-hidden="true">&times;</span></button>-->
+                </div>
+                <div class="modal-body bianjixianlu">
+                    <div ng-if="removeNodes.length > 0" class="clearfix">
+                        <!--<h2 class="poptitlejian"><span>删除的景点</span></h2>-->
+                        <div class="media col-xs-12 pl0pr0 topborder iknow" ng-repeat="scenic in removeNodes">
+                            <div class="media-left col-xs-6 pl0pr0 jingdianpics"><img src="{{scenic.cover}}?imageView2/1/w/260/h/160/q/75" style="width:130px;height:100px;"/></div>
+                            <div class="col-xs-4 pl0pr0 jingdiantitle"><h3>{{scenic.name}}</h3></div>
+                            <div class="media-right col-xs-2 pl0pr0 jingdiandels">
+                                <button type="button" ng-click="addScenic(this);"><img src="images/ico/xl-back.jpg" style="width:24px;height:24px;" /></button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="addmore center-block tianjiagengduo" ng-click="toScenicList()">添加更多景点</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenicTicket.qunar.mapper.QunarOrderMapper">
+	<insert id="insert" parameterType="QunarOrder" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_order_qunar
+			(
+				order_num,
+				sub_order_id,
+				scenic_id,
+				qunar_order_id,
+				contact_mobile,
+				contact_user,
+				contact_email,
+				contact_user_pinyin,
+				contact_post_code,
+				contact_post_address,
+				quantity,
+				use_date,
+				product_id,
+				qunar_price,
+				order_status,
+				pay_status,
+				ticketing_status,
+				pay_amount,
+				fail_reason,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{orderNum},
+				#{subOrderId},
+				#{scenicIds},
+				#{qunarOrderId},
+				#{contactMobile},
+				#{contactUser},
+				#{contactEmail},
+				#{contactUserPinyin},
+				#{contactPostCode},
+				#{contactPostAddress},
+				#{quantity},
+				#{useDate},
+				#{productId},
+				#{qunarPrice},
+				#{orderStatus},
+				#{payStatus},
+				#{ticketingStatus},
+				#{payAmount},
+				#{failReason},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="QunarOrder">
+		update tb_order_qunar
+		<set>
+			<if test="orderNum != null"> order_num = #{orderNum},</if>
+			<if test="subOrderId != null"> sub_order_id = #{subOrderId},</if>
+			<if test="scenicIds != null"> scenic_id = #{scenicIds},</if>
+			<if test="qunarOrderId != null"> qunar_order_id = #{qunarOrderId},</if>
+			<if test="contactMobile != null"> contact_mobile = #{contactMobile},</if>
+			<if test="contactUser != null"> contact_user = #{contactUser},</if>
+			<if test="contactEmail != null"> contact_email = #{contactEmail},</if>
+			<if test="contactUserPinyin != null"> contact_user_pinyin = #{contactUserPinyin},</if>
+			<if test="contactPostCode != null"> contact_post_code = #{contactPostCode},</if>
+			<if test="contactPostAddress != null"> contact_post_address = #{contactPostAddress},</if>
+			<if test="quantity != null"> quantity = #{quantity},</if>
+			<if test="useDate != null"> use_date = #{useDate},</if>
+			<if test="productId != null"> product_id = #{productId},</if>
+			<if test="qunarPrice != null"> qunar_price = #{qunarPrice},</if>
+			<if test="orderStatus != null"> order_status = #{orderStatus},</if>
+			<if test="payStatus != null"> pay_status = #{payStatus},</if>
+			<if test="ticketingStatus != null"> ticketing_status = #{ticketingStatus},</if>
+			<if test="payAmount != null"> pay_amount = #{payAmount},</if>
+			<if test="failReason != null"> fail_reason = #{failReason},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="QunarOrder">
+		delete from
+			tb_order_qunar
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="QunarOrder">
+		select
+			*
+		from
+			tb_order_qunar
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="QunarOrder">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_order_qunar
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="orderNum != null"> order_num = #{orderNum} </if>
+			<if test="subOrderId != null"> sub_order_id = #{subOrderId} </if>
+			<if test="scenicIds != null"> scenic_id = #{scenicIds} </if>
+			<if test="qunarOrderId != null and '' != qunarOrderId"> and qunar_order_id = #{qunarOrderId} </if>
+			<if test="contactMobile != null and '' != contactMobile"> and contact_mobile = #{contactMobile} </if>
+			<if test="contactUser != null and '' != contactUser"> and contact_user = #{contactUser} </if>
+			<if test="contactEmail != null and '' != contactEmail"> and contact_email = #{contactEmail} </if>
+			<if test="contactUserPinyin != null and '' != contactUserPinyin"> and contact_user_pinyin = #{contactUserPinyin} </if>
+			<if test="contactPostCode != null and '' != contactPostCode"> and contact_post_code = #{contactPostCode} </if>
+			<if test="contactPostAddress != null and '' != contactPostAddress"> and contact_post_address = #{contactPostAddress} </if>
+			<if test="quantity != null and '' != quantity"> and quantity = #{quantity} </if>
+			<if test="useDate != null and '' != useDate"> and use_date = #{useDate} </if>
+			<if test="productId != null and '' != productId"> and product_id = #{productId} </if>
+			<if test="qunarPrice != null and '' != qunarPrice"> and qunar_price = #{qunarPrice} </if>
+			<if test="orderStatus != null and '' != orderStatus"> and order_status = #{orderStatus} </if>
+			<if test="payStatus != null and '' != payStatus"> and pay_status = #{payStatus} </if>
+			<if test="ticketingStatus != null and '' != ticketingStatus"> and ticketing_status = #{ticketingStatus} </if>
+			<if test="payAmount != null"> pay_amount = #{payAmount} </if>
+			<if test="failReason != null"> fail_reason = #{failReason} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; # {ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; # {tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+	</sql>
+</mapper>

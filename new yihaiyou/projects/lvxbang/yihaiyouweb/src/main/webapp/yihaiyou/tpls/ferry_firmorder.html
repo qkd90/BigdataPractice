@@ -1,0 +1,46 @@
+<div class="ticket_main personal_pay" ng-controller="ferryfirmOrderCtrl">
+    <div class="header">
+        <a ng-click="back()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        确认订单
+        <span class="save pic2 pic2_1" ui-sref="personalIndex"></span>
+        <span class="save pic2  pic3"></span>
+    </div>
+    <div class="blank"></div>
+    <div class="firmorderMessage">
+        <h3>订单信息</h3>
+        <p><span class="firm_l">航线：</span>{{order.name}}</p>
+        <P><span class="firm_l">航班号：</span>{{order.flightNumber}}</P>
+        <p><span class="firm_l">出发时间：</span>{{order.startDate}}</p>
+        <p><span class="firm_l">票数：</span>{{order.touristList.length}}</p>
+        <p><span class="firm_l">乘客：</span><span ng-repeat="tourist in order.touristList">{{tourist.name}} </span></p>
+        <p><span class="firm_l">订单状态：</span>{{order.status}}</p>
+        <p><span class="firm_l">订单总价：</span><span class="price"><label>¥</label>{{order.price}}</span></p>
+    </div>
+    <div class="payattention">座位已成功锁定，请在<span>{{minute}}分{{second}}秒</span>网上支付，否则系统自动取消本次交易（购买儿童半价票和残军票，购票完成后。需要凭购票证件到窗口打印登船凭证，方可登船。）
+    </div>
+    <div class="walletBalance" ng-click="get(1)">我的钱包余额：<label class="rmb">¥</label><label
+            class="rmbnum">{{balance}}</label><label class="recharge" ui-sref="personalRecharge">充值</label><span
+            class="checkbox" ng-class="{checkboxTrue: selectedType == 1}"></span></div>
+    <div class="walletBalance pay_wechat" ng-click="get(2)">微信支付<span class="checkbox"
+                                                                      ng-class="{checkboxTrue: selectedType == 2}"></span>
+    </div>
+    <div class="bottom_button clearfix">
+        <span class="cancle" ng-click="cancel()">取消订单</span>
+        <span class="pay" ng-click="pay()">确认支付</span>
+    </div>
+    <div class="pay_shadow" ng-show="isBalancePay"></div>
+    <div class="passwordBox" centerbox ng-show="isBalancePay">
+        <div class="pas_close clearfix"><span ng-click="closePWinput()"></span></div>
+        <h3>请输入密码</h3>
+        <input type="password" class="password" ng-model="payPassword">
+        <div class="p_bottom">
+            <span class="no" ng-click="balanceCancel()">取消</span>
+            <span class="yes" ng-click="payBalance()">确定</span>
+        </div>
+    </div>
+    <style>
+        .bootbox .modal-footer .btn.confirmBoxBtn {
+            width: 50%;
+        }
+    </style>
+</div>

@@ -1,0 +1,20 @@
+<div class="fare_main" ng-controller="lineFareDetailCtrl">
+    <div class="fare_header">
+        <a href="javascript:history.go(-1)"><span><img src="lxb/images/fare_back.png"></span></a>
+        费用说明
+    </div>
+    <div class="fare_article">
+        <dl class="fare_artdl" ng-if="quoteContainDesc != ''">
+            <dt><span>费用包含</span></dt>
+            <dd ng-bind-html="quoteContainDesc | trustHtml"></dd>
+        </dl>
+        <dl class="fare_artdl" ng-if="quoteNoContainDesc != ''">
+            <dt><span>费用不包含</span></dt>
+            <dd ng-bind-html="quoteNoContainDesc | trustHtml"></dd>
+        </dl>
+    </div>
+    <div class="fare_footer">
+        <div class="scroll_toTop" id="scrolltoTop"><p>回到</p><p>顶部</p></div>
+        <span style="background-color:#f5f5f5;">预订后请保持电话畅通</span>
+    </div>
+</div>

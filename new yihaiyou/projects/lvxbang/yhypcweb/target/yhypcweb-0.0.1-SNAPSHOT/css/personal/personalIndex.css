@@ -1,0 +1,193 @@
+
+.headbox {
+	height: 88px;
+	width: 1180px;
+	background: #fff; 
+	margin: 25px auto;
+	font-family: '微软雅黑';
+	border:1px solid #e0e0e0;
+}
+
+.headbox ul {
+	margin-left: 77px;
+}
+
+.headbox ul li {
+	float: left;
+	width: 165px;
+	height: 40px;
+	color: #5a5a5a;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 22px;
+	line-height: 40px;
+	border-radius: 6px;
+	text-align: center;
+}
+
+.headbox .li_active {
+	color: #fff;
+	background: #ff8800;
+}
+
+.mainBox {
+	width: 1103px;
+	background: #fff;
+	margin: 25px auto;
+	padding: 0 38px 66px;
+	font-family: '微软雅黑';
+	border:1px solid #e0e0e0;
+}
+
+.mainBox .mainbox_nav {
+	height: 68px;
+	color: #5a5a5a;
+	font-size: 14px;
+	line-height: 68px;
+}
+
+.mainbox_nav p span {
+	padding: 0 23px;
+	cursor: pointer;
+}
+
+.mainbox_nav p span.s_active {
+	color: #ff8800;
+}
+
+.mainbox_nav p label.le_title {
+	color: #878787;
+	margin-right: 5px;
+}
+
+.table_header {
+	height: 40px;
+	width: 1100px;
+	color: #626262;
+	font-size: 14px;
+	background: #f7f7f7;
+	border:1px solid #e0e0e0;
+}
+
+.table_body {
+	width: 1100px;
+	color: #626262;
+	font-size: 14px;
+	line-height: 66px;
+}
+
+.table_header ul li {
+	float: left;
+	line-height: 40px;
+    text-align: center;
+	/*text-indent: 40px;*/
+}
+
+.pro_mess {
+	width: 250px;
+}
+
+.table_body .pro_mess {
+	color: #3996fa;
+}
+
+.pro_code {
+	width: 205px;
+}
+
+.table_body .pro_code {
+	font-family: AriaL;
+}
+
+.pro_pri {
+	width: 170px;
+}
+
+.table_body .pro_pri {
+	color: #ff8800;
+}
+
+.table_body .pro_pri span {
+	font-size: 16px;
+	font-family: AriaL;
+}
+
+.pro_time {
+	width: 195px;
+}
+
+.table_body .pro_time {
+	font-family: AriaL;
+}
+
+.pro_state {
+	width: 140px;
+}
+
+.pro_opera {
+	width: 140px;
+}
+
+.table_body .pro_opera {
+	color: #3996fa;
+	cursor: pointer;
+}
+
+.table_body .pro_opera a {
+	/*display: block;*/
+	color: #3996fa;
+}
+
+.table_body .pro_opera a:hover{
+    color: #ff8800;
+}
+
+.table_body .fir_ul {
+	border-bottom: 1px dashed #e0e0e0;
+}
+
+.table_body .fir_ul li {
+	float: left;
+	/*text-indent: 40px;*/
+	text-align: center;
+}
+
+.page {
+	width: 1180px;
+	margin: 40px 0;
+	font-size: 20px;
+	text-align: center;
+}
+
+
+
+.shadow {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 6;
+	display: none;
+}
+
+.shadow span {
+	display: block;
+	margin:20px auto;
+	border-radius: 100%;
+	border: 2px solid #fff;
+	font-size: 20px;
+	width: 2.5em;
+	height: 2.5em;
+	padding:43px;
+	letter-spacing: 2px;
+	text-align: center;
+	cursor: pointer;
+	font-family: '微软雅黑';
+}
+
+.shadow span a {
+	display: block;
+	color: #fff;
+}

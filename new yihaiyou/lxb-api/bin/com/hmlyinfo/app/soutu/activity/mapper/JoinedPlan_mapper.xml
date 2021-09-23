@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.activity.mapper.JoinedPlanMapper">
+	<insert id="insert" parameterType="JoinedPlan">
+		insert into tb_joined_plan
+			(
+				id,
+				user_id,
+				plan_id,
+				activity_id,
+				poll_count,
+				create_time,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{userId},
+				#{planId},
+				#{activityId},
+				#{pollCount},
+				#{createTime},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="JoinedPlan">
+		update tb_joined_plan
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="planId != null and '' != planId"> plan_id = #{planId},</if>
+			<if test="activityId != null and '' != activityId"> activity_id = #{activityId},</if>
+			<if test="pollCount != null and '' != pollCount"> poll_count = #{pollCount},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="JoinedPlan">
+		delete from
+			tb_joined_plan
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="JoinedPlan">
+		select
+			*
+		from
+			tb_joined_plan
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="JoinedPlan">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	
+	<select id="planRanking"  resultType="map">
+		SELECT 
+					c.plan_id as planId,
+					c.rowno as ranking
+					FROM 
+					(
+						select 
+							(@rowNO := @rowNo+1) AS rowno,
+							a.plan_id as plan_id,
+							a.poll_count
+						from
+							 (
+							 	SELECT 
+							 		p.plan_id,
+							 		p.activity_id,
+							 		p.id,
+							 		p.poll_count 
+							 	FROM tb_joined_plan p  
+							 	where
+							 		p.activity_id=#{activityId}
+							 	order by p.poll_count desc
+							 ) as a,
+							 (select @rowNO :=0) b
+			 ) AS c
+		  <where>
+				<if test="planId != null and '' != planId"> and c.plan_id = #{planId} </if>
+		</where>
+	</select>
+	
+	
+	<sql id="byProperty">
+		from
+			tb_joined_plan
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="planId != null and '' != planId"> and plan_id = #{planId} </if>
+			<if test="activityId != null and '' != activityId"> and activity_id = #{activityId} </if>
+			<if test="pollCount != null and '' != pollCount"> and poll_count = #{pollCount} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		<if test="planIds != null and planIds.size() > 0">
+			and  plan_id in
+			<foreach item="item" index="index" collection="planIds" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+		<choose>
+			<when test="orderColumn != null and '' != orderColumn">
+				ORDER BY ${orderColumn}
+				<if test="orderType != null and '' != orderType">
+					${orderType}
+				</if>
+			</when>
+			<otherwise>
+				order by poll_count DESC
+			</otherwise>
+		</choose>
+	</sql>
+</mapper>

@@ -1,0 +1,28 @@
+@import '../sys/ui.css';
+/*公共*/
+@import '../sys/util.css';
+
+.textbox{border-color: #d0d0d0;}
+.imgbox{
+	width: 103px;
+	height: 103px;
+	border:1px dotted #d0d0d0;
+	padding: 3px; 
+}
+#imgshow{
+	margin: 0 auto;
+}
+.radio{
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
+.filechoice{
+	
+}
+.comparePanel{
+	width:366px;
+	margin-right: 10px;
+	height: 238px; 
+	display: table;
+	float: left;
+}

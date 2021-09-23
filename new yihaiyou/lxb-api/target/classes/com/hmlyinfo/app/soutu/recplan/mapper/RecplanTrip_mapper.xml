@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.recplan.mapper.RecplanTripMapper">
+	<insert id="insert" parameterType="RecplanTrip" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_recplan_trip
+			(
+				recplan_id,
+				user_id,
+				recday_id,
+				scenic_id,
+				travel_type,
+				trip_type,
+				start_time,
+				order_num,
+				trip_desc,
+				modify_time,
+				create_time,
+				taxi_cost,
+				taxi_detail,
+				taxi_time,
+				taxi_hour,
+				taxi_milleage,
+				walk_detail,
+				walk_time,
+				walk_hour,
+				walk_milleage,
+				bus_cost,
+				bus_detail,
+				bus_time,
+				bus_hour,
+				bus_milleage,
+				exa,
+				line_dis,
+				delicacy_id,
+				cover_img,
+				img_width,
+				img_height
+			)
+		values
+			(
+				#{recplanId},
+				#{userId},
+				#{recdayId},
+				#{scenicIds},
+				#{trafficType},
+				#{tripType},
+				#{startTime},
+				#{orderNum},
+				#{tripDesc},
+				#{modifyTime},
+				#{createTime},
+				#{taxiCost},
+				#{taxiDetail},
+				#{taxiTime},
+				#{taxiHour},
+				#{taxiMilleage},
+				#{walkDetail},
+				#{walkTime},
+				#{walkHour},
+				#{walkMilleage},
+				#{busCost},
+				#{busDetail},
+				#{busTime},
+				#{busHour},
+				#{busMilleage},
+				#{exa},
+				#{lineDis},
+				#{delicacyIds},
+				#{coverImg},
+				#{imgWidth},
+				#{imgHeight}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="RecplanTrip">
+		update tb_recplan_trip
+		<set>
+			<if test="recplanId != null"> recplan_id = #{recplanId},</if>
+			<if test="userId != null"> user_id = #{userId},</if>
+			<if test="recdayId != null"> recday_id = #{recdayId},</if>
+			<if test="scenicIds != null"> scenic_id = #{scenicIds},</if>
+			<if test="trafficType != null"> travel_type = #{trafficType},</if>
+			<if test="tripType != null"> trip_type = #{tripType},</if>
+			<if test="startTime != null"> start_time = #{startTime},</if>
+			<if test="orderNum != null"> order_num = #{orderNum},</if>
+			<if test="tripDesc != null"> trip_desc = #{tripDesc},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+			<if test="taxiCost != null"> taxi_cost = #{taxiCost},</if>
+			<if test="taxiDetail != null"> taxi_detail = #{taxiDetail},</if>
+			<if test="taxiTime != null"> taxi_time = #{taxiTime},</if>
+			<if test="taxiHour != null"> taxi_hour = #{taxiHour},</if>
+			<if test="taxiMilleage != null"> taxi_milleage = #{taxiMilleage},</if>
+			<if test="walkDetail != null"> walk_detail = #{walkDetail},</if>
+			<if test="walkTime != null"> walk_time = #{walkTime},</if>
+			<if test="walkHour != null"> walk_hour = #{walkHour},</if>
+			<if test="walkMilleage != null"> walk_milleage = #{walkMilleage},</if>
+			<if test="busCost != null"> bus_cost = #{busCost},</if>
+			<if test="busDetail != null"> bus_detail = #{busDetail},</if>
+			<if test="busTime != null"> bus_time = #{busTime},</if>
+			<if test="busHour != null"> bus_hour = #{busHour},</if>
+			<if test="busMilleage != null"> bus_milleage = #{busMilleage},</if>
+			<if test="exa != null"> exa = #{exa},</if>
+			<if test="lineDis != null"> line_dis = #{lineDis},</if>
+			<if test="delicacyIds != null"> delicacy_id = #{delicacyIds},</if>
+			<if test="coverImg != null"> cover_img = #{coverImg},</if>
+			<if test="imgWidth != null"> img_width = #{imgWidth},</if>
+			<if test="imgHeight != null"> img_height = #{imgHeight},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="RecplanTrip">
+		delete from
+			tb_recplan_trip
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="RecplanTrip">
+		select
+			*
+		from
+			tb_recplan_trip
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="RecplanTrip">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_recplan_trip
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="recplanId != null and '' != recplanId"> and recplan_id = #{recplanId} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="recdayId != null and '' != recdayId"> and recday_id = #{recdayId} </if>
+			<if test="scenicIds != null and '' != scenicIds"> and scenic_id = #{scenicIds} </if>
+			<if test="trafficType != null and '' != trafficType"> and travel_type = #{trafficType} </if>
+			<if test="tripType != null and '' != tripType"> and trip_type = #{tripType} </if>
+			<if test="startTime != null and '' != startTime"> and start_time = #{startTime} </if>
+			<if test="orderNum != null and '' != orderNum"> and order_num = #{orderNum} </if>
+			<if test="tripDesc != null and '' != tripDesc"> and trip_desc = #{tripDesc} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="taxiCost != null and '' != taxiCost"> and taxi_cost = #{taxiCost} </if>
+			<if test="taxiDetail != null and '' != taxiDetail"> and taxi_detail = #{taxiDetail} </if>
+			<if test="taxiTime != null and '' != taxiTime"> and taxi_time = #{taxiTime} </if>
+			<if test="taxiHour != null and '' != taxiHour"> and taxi_hour = #{taxiHour} </if>
+			<if test="taxiMilleage != null and '' != taxiMilleage"> and taxi_milleage = #{taxiMilleage} </if>
+			<if test="walkDetail != null and '' != walkDetail"> and walk_detail = #{walkDetail} </if>
+			<if test="walkTime != null and '' != walkTime"> and walk_time = #{walkTime} </if>
+			<if test="walkHour != null and '' != walkHour"> and walk_hour = #{walkHour} </if>
+			<if test="walkMilleage != null and '' != walkMilleage"> and walk_milleage = #{walkMilleage} </if>
+			<if test="busCost != null and '' != busCost"> and bus_cost = #{busCost} </if>
+			<if test="busDetail != null and '' != busDetail"> and bus_detail = #{busDetail} </if>
+			<if test="busTime != null and '' != busTime"> and bus_time = #{busTime} </if>
+			<if test="busHour != null and '' != busHour"> and bus_hour = #{busHour} </if>
+			<if test="busMilleage != null and '' != busMilleage"> and bus_milleage = #{busMilleage} </if>
+			<if test="exa != null and '' != exa"> and exa = #{exa} </if>
+			<if test="lineDis != null and '' != lineDis"> and line_dis = #{lineDis} </if>
+			<if test="delicacyIds != null and '' != delicacyIds"> and delicacy_id = #{delicacyIds} </if>
+			<if test="coverImg != null and '' != coverImg"> and cover_img = #{coverImg} </if>
+			<if test="imgWidth != null and '' != imgWidth"> and img_width = #{imgWidth} </if>
+			<if test="imgHeight != null and '' != imgHeight"> and img_height = #{imgHeight} </if>
+		<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; # {ta} </if>
+        <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; # {tb} </if>
+		<if test="ids != null">
+			and id in
+			<if test="ids.size() == 0">(-1)</if>
+			<if test="ids.size() > 0">
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+			</if>
+			</if>
+		</where>
+		order by recday_id, order_num
+	</sql>
+</mapper>

@@ -1,0 +1,70 @@
+.youjigonglve .infoimg{height: 150px;width: 100%;margin-top:45px;}
+.youjigonglve .infoimg img {
+    /*MAX-HIGHT: 150px!important;
+    width: 100%!important;width:expression(this.height > document.body.clientHeight ? document.body.clientHeight : this.height)!important;*/
+  width: 100%;
+  height: 150px;
+}
+.youjigonglve .ticket_qiehuan{height: 60px;width: 100%;line-height: 40px;padding-left: 10px;padding-right: 10px;font-size: 13px;border-bottom: 1px solid #e3e3e3;}
+.youjigonglve .ticket_qiehuan .date{font-size: 12px; color: #8b8b8b;}
+.youjigonglve .ticket_qiehuan .iconright{float: right;}
+.youjigonglve .ticket_qiehuan .yuedulaing{ padding-right: 10px;background:url(/yihaiyou/image/sailling/icon-visual.png) no-repeat  left; background-size: 14px;padding-left: 20px;}
+.youjigonglve .ticket_qiehuan .shoucang{ padding-right: 5px;background:url(/yihaiyou/image/sailling/icon-star.png) no-repeat  left; background-size: 14px;padding-left: 20px;}
+.youjigonglve .jingdianlist{background-color: #f0f0f0;padding: 10px;}
+.youjigonglve .jingdianlist .jingdianinfo{  margin-bottom: 10px;  background-color: white;}
+.youjigonglve .jingdianlist .jingdianinfo .jingdianming{  font-size:2em;color:#3f3f3f; height: 30px;line-height: 30px;background:url(/yihaiyou/image/sailling/icon-youji.png) no-repeat  left; background-size: 14px;  margin-left: 5px;padding-left: 20px;}
+.youjigonglve .jingdianlist .jingdianinfo .jingdianpic img{
+    MAX-HIGHT: 130px!important;
+    width: 100%!important;width:expression(this.height > document.body.clientHeight ? document.body.clientHeight : this.height)!important;
+    height: 150px;
+}
+.youjigonglve .jingdianlist .jingdianinfo .ingdianjieshao{  padding: 5px;}
+.youjigonglve .jingdianlist .jingdianinfo .pinglunshoucang{float: right;  height: 20px; }
+.youjigonglve .jingdianlist .jingdianinfo .pinglunshoucang img{height: 16px;  padding-left: 10px;}
+
+.youjigonglve .jingdianlist p.playdijitian{  font-size: 15px;
+    background-size: 20px;
+    padding-left: 25px;
+    margin-left: 3px;
+    background: url(/yihaiyou/image/sailling/icon-date02.png) no-repeat left;
+    background-size: 20px;
+    margin-bottom: 5px;}
+
+.youjigonglve .jingdianlist .jingdianinfoend{width: 300px;height: 160px;margin-bottom: 10px;  background-color: white;}
+.youjigonglve .jingdianlist .jingdianinfoend .jingdianming{color:#3f3f3f; height: 30px;line-height: 30px;background:url(/yihaiyou/image/sailling/icon-youji.png) no-repeat  left; background-size: 14px;padding-left: 20px;}
+.youjigonglve .jingdianlist .jingdianinfoend .jingdianpic img{height: 130px;width: 100%;}
+
+.collect-bar{width: 35px;height: 35px;z-index: 10;position: fixed; bottom: 20px;right: 10px;}
+.youjigonglve .collect-bar{border-radius: 50%;  background-color: rgba(0, 0, 0, 0.5);}
+.collect-bar1{width: 35px;height: 35px;z-index: 10;position: fixed; bottom: 20px;right: 55px;border-radius: 50%;  background-color: rgba(0, 0, 0, 0.5);}
+.collect-bar2{min-width: 15px;height: 15px;z-index: 110;position: fixed; bottom: 40px;right: 50px;border-radius: 50%;  background-color: #61aefd;color: white;  text-align: center;}
+
+
+.youjigonglve .totop{width:40px;height:40px;position:fixed;right:10px;bottom:40px;}
+.youjigonglve .totop_dark{width:35px;height:35px;position:fixed;right:100px;bottom:20px;background-color:rgba(0,0,0,0.5);border-radius:50%;text-align:center;line-height:35px;font-size:16px;font-weight:600;color:#fff;}
+.youjigonglve .guid_fixed{position:fixed;top:50px;left:0;background-color:#f0f0f0;}
+
+/*.collect-bar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+.collect {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 35px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2.0rem;
+    text-align: center;
+    text-indent: -2px;
+    cursor: pointer;
+    margin-right: -50px;
+    margin-top: 40px;
+}*/

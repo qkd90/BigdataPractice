@@ -1,0 +1,22 @@
+<div>
+    <div class="searchform topbg col-xs-12 fixtop">
+        <form class="form-inline">
+            <div class="input-group">
+                <input type="text" id="xingcitysearch" class="form-control" ng-change="selectCitys()" ng-model="searchkey" placeholder="搜索目的地城市" style="width:90%;margin:3px 0 0 10px;border-radius:20px">
+      <span class="input-group-btn">
+          <a href="" ui-sref="selectCity({fromQuote:true})">
+              <button class="btn btn-default" type="button" style="height:30px;margin-right:5px;">取消</button>
+          </a>
+      </span>
+            </div>
+        </form>
+    </div>
+    <div id="subcontainer" class="clearfix">
+
+        <div class="search-fujin-list">
+            <ul>
+                <li class="col-xs-12" ng-repeat="city in citys"><a href="javascript:;" ng-click="selectCity(city)" ng-bind-html="city.html | trustHtml"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>

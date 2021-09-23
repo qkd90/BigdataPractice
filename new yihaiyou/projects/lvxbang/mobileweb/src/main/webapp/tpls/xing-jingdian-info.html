@@ -1,0 +1,42 @@
+<div ng-controller="xingjingdianinfoCtrl" class="xing-jingdian-info">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">景点详情</a></li>
+            <li class="pull-right search">
+                <a ui-sref="xing-jingdian-map" class="ico-map"></a>
+            </li>
+        </ul>
+    </div>
+    <div id="yjcontainer" class="clearfix boxbg">
+        <div class="jdinfo clearfix">
+            <div class="jdthumb clearfix"><img bn-lazy-src="{{scenic.cover}}" class="img-responsive"/></div>
+            <div class="jdbox clearfix jingdianpic">
+                <h5>{{scenic.name}}</h5>
+                <p><b class="lefttitle">地址：</b>{{scenic.address}}</p>
+                <p><b class="lefttitle">时间：</b>{{scenic.openTime}}</p>
+                <p><b class="lefttitle">建议：</b>{{scenic.adviceTime}}</p>
+                <p><b class="lefttitle">评分：</b>{{scenic.score}}/5分</p>
+                <p><b class="lefttitle">价格：</b><span class="price">{{scenic.price}}元起</span></p>
+            </div>
+            <div class="jdbox clearfix jingdianintrod" id="jingdianintrod">
+                <h5>景点简介</h5>
+                <div id="moreinfo" class="moreinfo clearfix" ng-bind-html="scenic.introduction | trustHtml">
+                </div>
+                <div id="viewMore">更多详情<img src="../images/ico/down.png"></div>
+                <div id="viewMoreclose" class="hidden">收起<img src="../images/ico/down.png"></div>
+            </div>
+            <div class="jdbox clearfix last zijingdian" ng-if="scenic.child.length > 0">
+                <h5>子景点</h5>
+                <div class="morejdlist row smallpic">
+                    <a ng-repeat="child in scenic.child" ui-sref="xing-jingdian-info({id:child.id})" class="col-xs-4">
+                        <img bn-lazy-src="{{child.cover}}" class="img-responsive center-block"/>
+                        <p class="clearfix picintro">{{child.name}}</p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mybottom sirendz text-center col-xs-12">
+        <a ng-if="!added" ng-click="addToPlan()"><span>加入线路</span></a>
+        <a ng-if="added" ng-click="removeFromPlan()" class="remove"><span>取消加入</span></a>
+    </div>
+</div>

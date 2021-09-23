@@ -1,0 +1,103 @@
+<div ng-controller="mTicketIndexCtrl" class="ticket-index">
+    <div class="header">
+        <a ui-sref="index"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        <span call-back-select-city city-code-key="'ticketCityCode'" city-name-key="'ticketCityName'">{{ticketCityName}}</span>
+        <span search-dir pre-url="'scenicList'" class="save picSearch"></span>
+    </div>
+    <div class="blank"></div>
+    <div class="wrapper-ticket">
+        <!--<div class="search" search-dir pre-url="'scenicList'">-->
+            <!--<div class="search-container"><i class="icon-search5"></i>-->
+                <!--<input type="search" class="search-input" placeholder="">-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="content-container-ticket swiper-container">
+
+            <div class="i-swipe-banner swiper-container ads-area" id="tkei-top-slider-container">
+                <ul class="swiper-wrapper ads-slider" id="slide">
+                    <li class="swiper-slide" ng-repeat="ad in result.topBannerAds" is-over="finish.over">
+                        <a ng-href="{{ad.url}}"><img ng-src="{{ad.imgPath | getImgUrl}}?imageView2/1/w/400/h/123/q/75"></a>
+                        <!--<a ng-href="{{ad.url}}"><img src="/yihaiyou/image/fc{{$index + 1}}.jpg"></a>-->
+                    </li>
+                </ul>
+                <div class="swipe-pagenavi swiper-pagination" id="tkei-top-slide-page"></div>
+            </div>
+
+            <!--<div class="swiper-container" id="tkei-top-slider-container">-->
+                <!--<div class="swipe-items-wrap swiper-wrapper swipe">-->
+                    <!--<a class="swiper-slide" ng-repeat="ad in result.topBannerAds"-->
+                       <!--ng-href="{{ad.url}}" is-over="finish.over">-->
+                        <!--<img src="http://7u2inn.com2.z0.glb.qiniucdn.com/{{ad.imgPath}}?imageView2/1/w/640/h/480/q/75">-->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<div class="swipe-pagenavi swiper-pagination" id="tkei-top-slide-page"></div>-->
+            <!--</div>-->
+            <!--<div class="swipe-container">-->
+            <!--<div class="swipe">-->
+            <!--<div class="swipe-items-wrap" id="tkei-top-slider-container">-->
+            <!--<div ng-repeat="ad in result.topBannerAds" is-over="finish.over" class="swipe-item">-->
+            <!--<a ng-href="{{ad.url}}">-->
+            <!--<img src="/static/{{ad.imgPath}}">-->
+            <!--</a>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="swipe-pagenavi swiper-pagination" id="tkei-top-slide-page"></div>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <div class="tab-ticket">
+                <ul class="tab-item-ticket clearfix-ticket">
+                    <li>
+                        <p go-scenic-list city-code="ticketCityCode" sort="'ranking'" sort-order="'asc'">
+                            <img class="tab-img" src="/yihaiyou/image/jd_ico.png">
+                            <span class="tab-desc"><span class="dest-city">{{ticketCityName}}</span>景点</span>
+                        </p>
+                    </li>
+                    <li>
+                        <p ng-click="goNearTicketList()">
+                            <img class="tab-img" src="/yihaiyou/image/fj_jd.png">
+                            <span class="tab-desc">附近景点</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <!--<section class="hot-themes-ticket">-->
+                <!--<ul>-->
+                    <!--<li ng-repeat="label in result.themeLabels"-->
+                        <!--go-scenic-list label="label.name" label-id="label.id" city-code="ticketCityCode">-->
+                        <!--<a href="">{{label.name}}</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</section>-->
+
+            <section class="hot-scenic">
+                <h4 class="hot-scenic-city"><span class="city">{{ticketCityName}}</span>热门景点</h4>
+
+                <div class="hot-scenic-content">
+                    <ul class="clearfix-ticket">
+                        <li ng-repeat="scenic in result.scenicList">
+                            <a ui-sref="scenicDetail({scenicId: scenic.id})">
+                                <img bn-lazy-src="{{scenic.cover | getImgUrl}}?imageView2/1/w/320/h/180/q/80">
+
+                                <div class="des-content-ticket">
+                                    <h4 class="name">{{scenic.name}}</h4>
+
+                                    <p class="price">
+                                        <span class="rmb-symbol">￥</span><span class="money">{{scenic.price}}</span>起
+                                    </p>
+
+                                    <p class="distance_ticket">满意度{{scenic.score}}%</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="check-more">
+                        <a go-scenic-list city-code="ticketCityCode" sort="'ranking'" sort-order="asc"
+                           class="check-more-link">查看更多<i></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

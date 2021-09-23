@@ -1,0 +1,143 @@
+line
+option = {
+			    title : {
+			        text: '客户分析',
+			        subtext: 'frm'
+			    },
+			    tooltip : {
+			        //trigger: 'axis'
+			        trigger: 'item'
+			    },
+			    legend: {
+			        data:['R-F']
+			    },
+			    toolbox: {
+			        show : true,
+			        feature : {
+			            mark : {show: true},
+			            dataView : {show: true, readOnly: false},
+			            magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+			            restore : {show: true},
+			            saveAsImage : {show: true}
+			        }
+			    },
+			    calculable : true,
+			    xAxis : [
+			        {
+			        	boundaryGap : false,
+			            type : 'category',
+			            data : ['周一','周二','周三','周四','周五','周六','周日']
+			        }
+			    ],
+			    yAxis : [
+			        {	
+			        	          // 坐标轴两端空白策略，数组内数值代表百分比
+			        	scale:true,
+			            splitNumber: 5,
+			            type : 'value'
+			        }
+			    ],
+			    series : [
+			        {
+			            name:'成交',
+			            type:'line',
+			            smooth:true,
+			            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+			            data:[50, 60, 70, 80, 90, 100, 50]
+			        },
+			        {
+			            name:'预购',
+			            type:'line',
+			            smooth:true,
+			            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+			            data:[50, 60, 70, 80, 90, 100, 50]
+			        },
+			        {
+			            name:'意向',
+			            type:'line',
+			            smooth:true,
+			            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+			            data:[50, 60, 70, 80, 90, 100, 50]
+			        }
+			    ]
+			};
+			
+large line
+option = {
+    tooltip : {
+        trigger: 'item'
+    },
+    legend: {
+        data:['sin','cos']
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataZoom : {show: true},
+            dataView : {show: true, readOnly: false},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    xAxis : [
+        {
+            type : 'value',
+            power: 1,
+            precision: 2,
+            scale:true
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            power: 1,
+            precision: 2,
+            scale:true,
+            splitArea : {show : true}
+        }
+    ],
+    series : [
+        {
+            name:'sin',
+            type:'scatter',
+            large: false,
+            data: (function() {
+                var d = [];
+                var len = 10000;
+                var x = 0;
+                while (len--) {
+                    x = (Math.random() * 10).toFixed(3) - 0;
+                    d.push([
+                        x,
+                        //Math.random() * 10
+                        (Math.sin(x) - x * (len % 2 ? 0.1 : -0.1) * Math.random()).toFixed(3) - 0
+                    ]);
+                }
+                //console.log(d)
+                return d;
+            })()
+        },
+        {
+            name:'cos',
+            type:'scatter',
+            large: true,
+            data: (function() {
+                var d = [];
+                var len = 10000;
+                var x = 0;
+                while (len--) {
+                    x = (Math.random() * 10).toFixed(3) - 0;
+                    d.push([
+                        x,
+                        //Math.random() * 10
+                        (Math.cos(x) - x * (len % 2 ? 0.1 : -0.1) * Math.random()).toFixed(3) - 0
+                    ]);
+                }
+                //console.log(d)
+                return d;
+            })()
+        }
+    ]
+};
+                    			

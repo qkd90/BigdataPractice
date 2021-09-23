@@ -1,0 +1,48 @@
+.j_sale_sum{
+	float:left;margin-left: 30px;
+}
+.j_sale_sum ul{
+	border: 1px solid #bdbdbd;border-bottom: none;min-width: 188px;
+}
+.j_sale_sum ul li{
+	display: block;border-bottom: 1px solid #bdbdbd;box-shadow: 0px 0px 1px rgba(250,250,250,1) inset;line-height: 36px;
+}
+.j_sale_discount{
+	padding-top: 10px;margin-left: 30px;
+}
+.j_sale_discount ul li{
+	padding-top: 10px;
+}
+.j_sale_discount ul li label{
+	width: 80px;
+	display: block;
+	float: left;
+	text-align: right;
+}
+.j_sale_discount ul li input{
+	width: 105px;
+	height: 25px;
+}
+.j_sale_account{
+	float:right
+}
+.j_sale_account ul{
+	min-width: 238px;
+	margin-top: -100px;
+}
+.j_sale_account ul li{
+	position: relative;
+}
+
+.searchbox-text {
+	font-size: 12px;
+	border: 0px;
+	line-height: 20px;
+	height: 20px;
+	padding: 0px;
+	_height: 18px;
+	_line-height: 18px;
+}
+.j_saleReturn_discount{
+	padding-top: 120px;
+}

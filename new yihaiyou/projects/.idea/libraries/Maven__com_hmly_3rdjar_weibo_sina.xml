@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.hmly.3rdjar:weibo:sina">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hmly/3rdjar/weibo/sina/weibo-sina.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hmly/3rdjar/weibo/sina/weibo-sina-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hmly/3rdjar/weibo/sina/weibo-sina-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

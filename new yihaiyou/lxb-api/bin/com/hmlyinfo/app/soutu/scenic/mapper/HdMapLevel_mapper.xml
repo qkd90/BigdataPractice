@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenic.mapper.HdMapLevelMapper">
+	<insert id="insert" parameterType="HdMapLevel">
+		insert into tb_hd_map_level
+			(
+				id,
+				destination_id,
+				level,
+				north,
+				south,
+				west,
+				east,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{destinationId},
+				#{level},
+				#{north},
+				#{south},
+				#{west},
+				#{east},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="HdMapLevel">
+		update tb_hd_map_level
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="destinationId != null and '' != destinationId"> destination_id = #{destinationId},</if>
+			<if test="level != null and '' != level"> level = #{level},</if>
+			<if test="north != null and '' != north"> north = #{north},</if>
+			<if test="south != null and '' != south"> south = #{south},</if>
+			<if test="west != null and '' != west"> west = #{west},</if>
+			<if test="east != null and '' != east"> east = #{east},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="HdMapLevel">
+		delete from
+			tb_hd_map_level
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="HdMapLevel">
+		select
+			*
+		from
+			tb_hd_map_level
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="HdMapLevel">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_hd_map_level
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="destinationId != null and '' != destinationId"> and destination_id = #{destinationId} </if>
+			<if test="level != null and '' != level"> and level = #{level} </if>
+			<if test="north != null and '' != north"> and north = #{north} </if>
+			<if test="south != null and '' != south"> and south = #{south} </if>
+			<if test="west != null and '' != west"> and west = #{west} </if>
+			<if test="east != null and '' != east"> and east = #{east} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+</mapper>

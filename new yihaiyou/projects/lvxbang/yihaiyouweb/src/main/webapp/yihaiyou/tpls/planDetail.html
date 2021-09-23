@@ -1,0 +1,117 @@
+<div class="diymarch_detail" ng-controller="planDetailCtrl">
+    <div class="header">
+        <a ui-sref="planSelectScenic"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        {{plan.name}}
+    </div>
+    <div class="diymar_mainmessage">
+        <p>行程共<span class="num">{{plan.days.length}}</span>天<span class="apart">|</span><span class="num">{{plan.scenicNum}}</span>个景点<span
+                class="apart">|</span>大约花费<span class="fare"> ¥{{plan.price}}</span><span class="chageticket" ng-click="doSavePlan()">保存行程</span></p>
+    </div>
+    <div class="apart_detail"></div>
+    <section class="aday" ng-repeat="day in plan.days">
+        <div class="aday_mainmess">
+            <h3>第{{day.day}}天</h3>
+
+            <p style="border-bottom:1px solid #e0e0e0">游玩<span class="num">{{day.playTime}}</span>小时<span class="apart">|</span><span
+                    class="num">{{day.scenics.length}}</span>个景点<span
+                    class="apart">|</span>大约花费<span class="fare"> ¥{{day.price}}</span></p>
+
+            <div ng-if="day.needShip && day.ferry != null">
+                <h3 class="h3_second clearfix"><span class="boatName">{{day.ferry.line.name}}</span><span class="chageticket" ng-click="changeFerry(day)">更换船票</span></h3>
+
+                <div class="boatTicket">
+                    <ul class="clearfix">
+                        <li>航班时间：{{day.ferry.startTime}}</li>
+                        <li>往返船票：¥ {{day.ferry.price}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--<div class="addTicket" ng-if="day.needShip"><img src="/yihaiyou/image/plan/icon-add.png">还没添加船票，点击添加</div>-->
+        <div class="apart_detail"></div>
+        <div class="hotelpart" ng-if="planDemand.needHotel && !day.deleteHotel">
+            <h3 class="clearfix"><span class="hotelName">{{day.hotel.name}}</span><span class="chageticket" ng-click="changeHotel(day)" ng-if="day.hotel != null && day.hotel.id != null">更换酒店</span><span class="chageticket" ng-click="changeHotel(day)" ng-if="day.hotel == null || day.hotel.id == null">添加酒店</span></h3>
+
+            <div class="hotelpic" ng-if="day.hotel != null && day.hotel.id != null"><img bn-lazy-src="{{day.hotel.cover | getImgUrl}}"><span>{{day.hotel.address}}</span></div>
+            <div class="hotelpic" ng-if="day.hotel == null || day.hotel.id == null"><img src="/yihaiyou/image/plan/no-hotel.png"></div>
+        </div>
+        <div class="hotelpart_sel" ng-if="planDemand.needHotel && !day.deleteHotel && day.hotel != null && day.hotel.id != null">
+            <ul>
+                <li ng-click="hotelDetail(day)"><img src="/yihaiyou/image/plan/icon-detail.png">酒店详情</li>
+                <li ng-click="morefun(day.hotel)"><img src="/yihaiyou/image/plan/icon-sdf.png">更多功能</li>
+            </ul>
+            <div class="distance" ng-if="day.hotel != null">
+                <span>距离<span class="colorOrange">{{day.hotel.distance}}</span>公里</span>
+                <!--<span>的士约<span class="colorOrange">10</span>分钟</span>-->
+                <!--<span>公交约<span class="colorOrange">30</span>分钟</span>-->
+            </div>
+            <img class="jk" src="/yihaiyou/image/plan/icon-distance.png" ng-if="day.hotel != null">
+
+            <div class="morefun" ng-show="day.hotel.morefun">
+                <div class="morefuntran"></div>
+                <div class="morefunbody">
+                    <ul>
+                        <li ng-click="deleteHotel(day)">删除酒店</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div ng-repeat="scenic in day.scenics">
+            <div class="submarienpart">
+                <div class="sub_title clearfix">
+                    <div class="left">{{$index + 1}}</div>
+                    <div class="right"><p>{{scenic.name}}</p></div>
+                    <!--<p>9:00</p>-->
+                </div>
+                <div class="hotelpic"><img
+                        bn-lazy-src="{{scenic.cover}}"><span>建议游玩{{scenic.adviceDate}}小时</span></div>
+            </div>
+            <div class="hotelpart_sel">
+                <ul>
+                    <li ui-sref="planScenicDetail({params: scenic.id + '-2'})"><img
+                            src="/yihaiyou/image/plan/icon-detail.png">景点详情
+                    </li>
+                    <li ng-click="morefun(scenic)"><img src="/yihaiyou/image/plan/icon-sdf.png">更多功能</li>
+                </ul>
+                <div class="distance" ng-if="scenic.distance > 0">距离{{scenic.distance}}公里</div>
+                <img class="jk" src="/yihaiyou/image/plan/icon-distance.png" ng-if="scenic.distance > 0">
+
+                <div class="morefun" ng-show="scenic.morefun">
+                    <div class="morefuntran"></div>
+                    <div class="morefunbody">
+                        <ul>
+                            <li ng-click="deleteScenic(day, scenic, $index)">删除景点</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="buying">
+        <ul>
+            <li ng-click="showfareDetail(-1)">大约花费 <span>¥{{plan.price}}</span></li>
+            <li ng-click="toOrder()">立即购买></li>
+        </ul>
+    </div>
+    <div class="fare_detail" ng-show="fareDetail == 1">
+        <ul>
+            <li ng-if="plan.ferryPrice > 0">船票：<span class="count">¥{{plan.ferryPrice}}</span></li>
+            <li ng-if="planDemand.needHotel">住宿：<span class="count">¥{{plan.hotelPrice}}</span></li>
+            <li>门票：<span class="count">¥{{plan.ticketPrice}}</span></li>
+            <li>总计：<span class="count">¥{{plan.price}}</span></li>
+        </ul>
+    </div>
+    <div class="mytravel" ng-show="mytravel" ng-click="showMytravel()">行程单</div>
+    <div style="position: relative;">
+        <div class="travelList">
+            <h3>行程总览</h3>
+            <ul ng-repeat="day in plan.days">
+                <li>第{{day.day}}天</li>
+                <li ng-if="planDemand.needHotel && day.hotel != null">{{day.hotel.name}}</li>
+                <li ng-repeat="scenic in day.scenics">{{scenic.name}}</li>
+            </ul>
+            <div class="hidetravelList" ng-show="hidebutton" ng-click="hidetravelList()">>></div>
+        </div>
+    </div>
+    <div class="shadowbox" ng-show="shadowbox == 1" ng-click="clearshow(-1)"></div>
+</div>

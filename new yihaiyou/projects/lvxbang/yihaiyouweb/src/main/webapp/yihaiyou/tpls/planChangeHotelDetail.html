@@ -1,0 +1,243 @@
+<div class="hotelDetail planHotelDetail" ng-controller="planChangeHotelDetailCtrl">
+    <div class="header">
+        <a ng-click="back()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        酒店详情
+        <span class="save" ng-click="complete()">完成</span>
+    </div>
+    <!-- contain start -->
+    <div class="wrapper" style="position: static;">
+
+        <div class="main" ng-class="{hide:showAlbumFlag}" id="main"><!-- hotel-base-info start -->
+            <a href="javascript:void(0);">
+                <div class="hotel-base-info">
+                    <img bn-lazy-src="{{hotelCover}}"
+                         alt="酒店图片" ng-click="openAlbum()">
+
+                    <div class="base-info">
+                        <style>
+                            .base-info .collect {
+                                position: fixed;
+                                top: 55px;
+                                right: 10px;
+                                z-index: 10;
+                                width: 35px;
+                                height: 35px;
+                                cursor: pointer;
+                                display: block;
+                                line-height: 35px;
+                                border-radius: 50%;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                background-image: none;
+                                color: #fff;
+                                font-size: 2.0rem;
+                                text-align: center;
+                                text-indent: -2px;
+                            }
+
+                            .collect.collected {
+                                color: #33bd61;
+                            }
+                        </style>
+                        <a class="collect" ng-class="{true: 'icon-star collected', false: 'icon-star1'}[favorite]"
+                           ng-click="doFavorite()"></a>
+
+                        <p class="name">{{hotelName}}</p>
+
+                        <p class="star">{{starDesc}}</p>
+
+                        <p class="degree">
+                            <span class="degree-point"><em>{{score/20}}</em>分</span>
+                            <span class="degree-count" ng-click="goHotelComments()"><i class="icon-reply"></i>{{commentCount}}人点评</span>
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- hotel-base-info end -->
+
+            <!-- 地址、开业、装修、设施 开始 -->
+            <ul class="address-feature">
+
+                <li class="address">
+                    <div class="local">
+                        <i class="diy img-local"></i>
+                    </div>
+
+                    <div class="text">
+                        {{address}}
+                    </div>
+                </li>
+
+            </ul>
+            <div class="filter-bar" scroll-fixed>
+                <div class="calender">
+                    <p class="days">
+                        <span class="date checkin-date detail-date-format">{{tipInDateDispaly}}</span>
+                        <span class="date checkout-date detail-date-format">{{tipOutDateDispaly}}</span>
+                        <!-- <span class="total-days total_days">入住<em>-</em>晚</span> -->
+                    </p>
+
+                    <p class="modified" id="ModifyInOutTime"><span>1</span>晚
+                    </p>
+                </div>
+                <div class="choose" ng-class="{light:hasRoomFilter}" ng-click="filterPanel()">筛选<em></em>
+
+                    <div class="arrow arrow-down"></div>
+                </div>
+            </div>
+            <div class="filter-standing hide" style="height:46px;visibilty:hidden;"></div>
+            <!--- filter-bar end --->
+
+            <!-- room-type start -->
+            <div class="type-lists" id="typeLists">
+
+                <section class="card" infinite-scroll="listHotelPrice()" infinite-scroll-distance='1'
+                         infinite-scroll-disabled='loading'>
+                    <div class="room-lists">
+                        <div class="room-box">
+
+                            <div class="unit" ng-repeat="itemData in hotelPriceList" data-id="{{itemData.id}}">
+                                <div class="info room-info">
+                                    <p class="title">{{itemData.roomName}}</p>
+
+                                    <p class="service">{{itemData.roomDescription}}</p>
+                                </div>
+                                <div class="info book-info bookstate">
+                                    <div class="book-price" style="margin-left:0%;">
+                                        <p class="detail-price" style="position:relative;left: 12%;">￥{{itemData.price}}<span>均</span>
+                                        </p>
+                                    </div>
+
+                                    <!--<div class="book-btn-pre book-common " ng-click="change(itemData)">-->
+                                        <!--<p ng-if="!itemData.selected">加入行程</p>-->
+
+                                        <!--<p ng-if="itemData.selected">放弃行程</p>-->
+
+                                        <!--<p ng-if="itemData.status == 'UP'">到付</p>-->
+
+                                        <!--<p ng-if="itemData.status == 'GUARANTEE'">担保</p>-->
+
+                                        <!--<p ng-if="!itemData.status"></p>-->
+                                    <!--</div>-->
+                                    <div ng-click="change(itemData)"
+                                         ng-class="{ticketBtn: !itemData.selected,ticketBtn2: itemData.selected}">
+                                        <p class="book" ng-if="!itemData.selected">更换</p>
+                                        <p class="book" ng-if="itemData.selected">取消</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!--<div ng-show="loading">-->
+            <!--<div class="yuloading"><span>加载数据中...</span></div>-->
+            <!--</div>-->
+
+            <div class="list-empty" ng-class="{hide:!noHotelPrice}">
+                <div class="img"></div>
+                <p>抱歉，暂无房型</p>
+            </div>
+            <div class="filter-mask hide">
+            </div>
+            <ul class="choose-pannel hide" name="price">
+                <li>价格显示方式</li>
+                <li class="select" data-value="1">显示为返现前价格<i></i></li>
+                <li class="select spec active" data-value="2">显示为<em>返现后</em>价格<br><span>（帮您计算返现优惠后的价格）</span><i></i>
+                </li>
+                <li class="cancel price-cancel">取消</li>
+            </ul>
+            <ul class="choose-pannel hide" name="fold">
+                <li>房型列表查看方式</li>
+                <li class="select" data-value="3">按价格从低到高展开<i></i></li>
+                <li class="select active" data-value="4">按同类房型分组折叠<i></i></li>
+                <li class="cancel fold-cancel">取消</li>
+            </ul>
+            <!-- room-list end -->
+
+            <!-- policy start -->
+
+            <div class="hotel-policy">
+                <a href="javascript:;">
+                    <!--
+                    <div class="arrow"><i></i></div>
+                    -->
+                    <div class="policy-base-info">
+
+                        <h2>酒店简介</h2>
+
+                        <p class="cancel-policy" ng-bind-html="description | trustHtml">
+                        </p>
+
+                    </div>
+                </a>
+            </div>
+            <div class="policy-template">
+            </div>
+
+            <!-- policy end -->
+            <!-- 附近热卖酒店 开始 -->
+            <a id="NearbyHotHotel"
+               href="http://m.tuniu.com/m2015/hotel/hotelDefault/nearbyHotHotel?hotelId=91138&amp;cityCode=414&amp;checkInDate=2016-08-10&amp;checkOutDate=2016-08-11&amp;lat=24.44938&amp;lng=118.08045"
+               class="hide">
+                <div class="nearby-hotsale">
+                    <span class="text">附近热卖酒店（<em>-</em>）家</span>
+                    <span class="arrow-right"></span>
+                </div>
+            </a>
+            <!-- 附近热卖酒店 结束 -->
+            <!-- 首付出发须知 -->
+
+            <!-- 首付出发须知 --></div>
+
+        <div id="HotelInfo">
+
+        </div>
+
+
+        <!-- 酒店相册 start-->
+        <div id="hotelAlbum" style="height: 100%;" ng-class="{hide:!showAlbumFlag}">
+            <header class="produ_lis_header">
+                <div class="pro_header_main">
+                    <span class="gty_left">
+                        <i class="icon icon-title-back" ng-click="closeAlbum()"></i>
+                    </span>
+                    <span class="gty_center">
+                       酒店图片
+                    </span>
+                    <span class="gty_right"></span>
+                </div>
+            </header>
+            <div class="hotel-album-container">
+                <section class="active all">
+                    <div class="album-category">
+                        <div class="img-list">
+                            <div class="img-box" ng-repeat="imageItem in images" ng-click="viewAlbumImg($index)">
+                                <div class="img-content"
+                                     style="background-image: url(&quot;{{imageItem}}&quot;);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tip" ng-show="images.length == 0">暂无相关图片</div>
+                    <div class="tip" ng-show="images.length > 0">图片仅供参考，具体情况，以门店实际为准。</div>
+                </section>
+            </div>
+            <div class="swiper-container popup-img-layer" style="display: none;" ng-click="cancelAlbumImg()">
+                <div class="swiper-wrapper">
+                    <div id="hotelImgView" class="owl-carousel">
+                        <div class="swiper-slide" ng-repeat="imageItem in images">
+                            <img alt="" src="{{imageItem}}">
+
+                            <div class="img-info"><span class="type-name"></span><span class="index">{{$index+1}}</span><span
+                                    class="total-num">/{{imageCount}}</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 酒店相册 end-->
+
+    </div>
+
+</div>

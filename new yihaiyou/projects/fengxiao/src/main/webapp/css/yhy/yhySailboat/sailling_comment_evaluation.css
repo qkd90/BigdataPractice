@@ -1,0 +1,303 @@
+﻿/************
+ * 页面样式
+ ************/
+/*===========
+基本设置
+============*/
+html{
+    color:#666;
+    font-size: 12px;
+}
+
+*{
+    font-family: "Hiragino Sans GB", Tahoma, arial, "宋体", sans-serif;
+}
+
+
+::selection{
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+.messageList_header>div.dataTables_wrapper>div.dataTables_length, .sailPrice .messageList_header>div.dataTables_wrapper>div.dataTables_length, .financeList .financeTable>div.dataTables_wrapper>div.dataTables_length {
+    position: absolute;
+    bottom: 2px;
+    right: 0px;
+    width: 160px;
+}
+.messageList_header>div.dataTables_wrapper>div.dataTables_length label, .sailPrice .messageList_header>div.dataTables_wrapper>div.dataTables_length label, .financeList .financeTable>div.dataTables_wrapper>div.dataTables_length label {
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+.messageList_header>div.dataTables_wrapper>div.dataTables_processing, .sailPrice .messageList_header>div.dataTables_wrapper>div.dataTables_processing, .financeList .financeTable>div.dataTables_wrapper>div.dataTables_processing {
+    width: 15%;
+    height: 50px;
+    padding: 0px;
+    margin-left: -6%;
+    margin-top: -38px;
+    line-height: 50px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(18, 18, 18, 0.7);
+    background: #121212\0;
+    color: #fff;
+}
+li{
+    list-style: none;
+}
+
+button{
+    outline: none !important;
+    box-shadow:0px 3px 6px #eaeaea;
+}
+
+input[type='text']{
+    box-shadow:0px 3px 6px #eaeaea;
+}
+
+/*===========
+工具样式
+============*/
+.center-block{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.pull-left{
+    float: left !important;
+}
+
+.text-right{
+    text-align: right !important;
+}
+
+.text-left{
+    text-align: left !important;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.hide{
+    display: none !important;
+}
+
+.show{
+    display: block !important;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.text-hide{
+    font:0/0 a;
+    color:transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border:0;
+}
+
+.clearfix:before,
+.clearfix:after{
+    content: "";
+    display: table;
+}
+
+.clearfix:after{
+    clear: both;
+}
+
+/*===========
+自定义页面样式
+============*/
+body{
+    font-size: 12px;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+}
+
+a{
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover,a:active{
+    color: #0ae;
+    text-decoration: underline;
+}
+
+/*主体部分*/
+/*搜索*/
+.container{
+    margin:0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+.search{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.search .form-group{
+    float: left;
+    margin-right: 20px;
+}
+
+.search .form-group:nth-of-type(1) input{
+    width: 200px;
+    height: 30px;
+    color: #666;
+    border-radius: 6px;
+    border:1px solid #d1d1d1;
+    outline: 0px;
+    padding:0 16px;
+}
+
+.search .form-group:nth-of-type(1) input::-webkit-input-placeholder{
+    color: #000;
+}
+
+.search .form-group:nth-of-type(1) input::-moz-placeholder{
+    color: #000;
+}
+
+.search .form-group:nth-of-type(1) input:-ms-input-placeholder{
+    color: #000;
+}
+
+.search .form-group:nth-of-type(2) button{
+    width: 100px;
+    height: 30px;
+    background: url(/images/yhy/button-02.png) no-repeat center;
+    background-size: contain;
+    color: #fff;
+    border-radius: 6px;
+    line-height: 30px;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.search .form-group:nth-of-type(2) .click{
+    background-image: url(/images/yhy/button-022.png);
+}
+
+/*table*/
+.table-list{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    background: url(/images/yhy/background.png) repeat 0 0;
+    background-size: 1px 1px;
+}
+
+.table-list .table{
+    margin-bottom: 0;
+}
+
+.table-list thead{
+    text-align: center;
+    font-family: SimSun-ExtB;
+    color: #5a5a5a;
+    background-image: -webkit-linear-gradient(top,#f9f9f9,#f0f0f0);
+    background-image: linear-gradient(top,#f9f9f9,#f0f0f0);
+    height: 50px;
+}
+
+
+.table-list thead tr th{
+    height: 35px;
+    line-height:35px!important;
+    text-align:center;
+    border:none!important;
+    width: 346px;
+}
+
+
+.table-list thead tr th:first-child{
+    width: 138px;
+}
+
+.table-list tbody tr:nth-of-type(odd){
+    background-color: #f9f9f9;
+}
+
+.table-list tbody tr:nth-of-type(even){
+    background-color: #ffffff;
+}
+
+.table-list tbody tr td{
+    vertical-align: middle;
+    display: table-cell;
+    height: 80px;
+    box-sizing: border-box;
+    border-left:none;
+    border-bottom:none;
+    text-align: center;
+}
+
+.table-list tbody tr td:first-child{
+    width: 94px;
+    text-align: center;
+}
+
+.table-list tbody tr td:first-child .star{
+    display: inline-block;
+    width: 92px;
+    height: 20px;
+}
+
+.table-list tbody tr td:first-child .star0{
+    background: url(/images/yhy/icon-star0.png) no-repeat center;
+    background-size: contain;
+}
+
+.table-list tbody tr td:first-child .star1{
+    background: url(/images/yhy/icon-star1.png) no-repeat center;
+    background-size: contain;
+}
+
+.table-list tbody tr td:first-child .star2{
+    background: url(/images/yhy/icon-star2.png) no-repeat center;
+    background-size: contain;
+}
+
+.table-list tbody tr td:first-child .star3{
+    background: url(/images/yhy/icon-star3.png) no-repeat center;
+    background-size: contain;
+}
+
+.table-list tbody tr td:first-child .star4{
+    background: url(/images/yhy/icon-star4.png) no-repeat center;
+    background-size: contain;
+}
+
+.table-list tbody tr td:first-child .star5{
+    background: url(/images/yhy/icon-star5.png) no-repeat center;
+    background-size: contain;
+}
+
+.table-list tbody tr td:last-child a{
+    color: #118ed1;
+}
+
+
+
+
+
+
+

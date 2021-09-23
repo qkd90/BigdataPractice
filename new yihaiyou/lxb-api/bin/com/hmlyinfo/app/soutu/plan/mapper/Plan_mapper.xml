@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.PlanMapper">
+	<insert id="insert" parameterType="Plan" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_plan
+			(
+				
+				<if test="id != null ">
+				id,
+				</if>
+				user_id,
+				city_id,
+				city_ids,
+				scenic_id,
+				province,
+				collect_num,
+				comment_num,
+				quote_num,
+				share_num,
+                view_num,
+				tips_content,
+				plan_name,
+				start_time,
+				return_time,
+				public_flag,
+				recommend_flag,
+				cover_path,
+				cover_small,
+				modify_time,
+				create_time,
+				plan_days,
+				status,
+				plan_cost,
+				include_seasonticket_cost,
+				plan_hotel_cost,
+				plan_travel_cost,
+				plan_ticket_cost,
+				plan_food_cost,
+				plan_seasonticket_cost,
+				source,
+				source_id,
+				tag,
+				description,
+				platform,
+				start_city,
+				push_flag
+			)
+		values
+			(
+				<if test="id != null ">
+				#{id},
+				</if>
+				#{userId},
+				#{cityId},
+				#{cityIds},
+				#{scenicIds},
+				#{province},
+				#{collectNum},
+				#{commentNum},
+				#{quoteNum},
+				#{shareNum},
+                #{viewNum},
+				#{tipsContent},
+				#{planName},
+				#{startTime},
+				#{returnTime},
+				#{publicFlag},
+				#{recommendFlag},
+				#{coverPath},
+				#{coverSmall},
+				#{modifyTime},
+				#{createTime},
+				#{planDays},
+				#{status},
+				#{planCost},
+				#{includeSeasonticketCost},
+				#{planHotelCost},
+				#{planTravelCost},
+				#{planTicketCost},
+				#{planFoodCost},
+				#{planSeasonticketCost},
+				#{source},
+				#{sourceId},
+				#{tag},
+				#{description},
+				#{platform},
+				#{startCity},
+				#{pushFlag}
+			)	
+	</insert>
+	
+	<update id="updateAllNum" parameterType="Plan">
+		update tb_plan
+		<set>
+			<if test="collectNum != null and '' != collectNum"> collect_num = collect_num + 1,</if>
+			<if test="quoteNum != null and '' != quoteNum"> quote_num = quote_num + 1,</if>
+			<if test="commentNum != null and '' != commentNum"> comment_num = comment_num + 1,</if>
+			<if test="shareNum != null and '' != shareNum"> share_num = share_num + 1,</if>
+			<if test="viewNum != null and '' != viewNum"> view_num = view_num + 1,</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<update id="delAllNum" parameterType="Plan">
+		update tb_plan
+		<set>
+			<if test="collectNum != null and '' != collectNum"> collect_num = collect_num - 1,</if>
+			<if test="quoteNum != null and '' != quoteNum"> quote_num = quote_num - 1,</if>
+			<if test="commentNum != null and '' != commentNum"> comment_num = comment_num - 1,</if>
+			<if test="shareNum != null and '' != shareNum"> share_num = share_num - 1,</if>
+			<if test="viewNum != null and '' != viewNum"> view_num = view_num - 1,</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<update id="update" parameterType="Plan">
+		update tb_plan
+		<set>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="cityId != null and '' != cityId"> city_id = #{cityId},</if>
+			<if test="cityIds != null and '' != cityIds"> city_ids = #{cityIds},</if>
+			<if test="scenicIds != null and '' != scenicIds"> scenic_id = #{scenicIds},</if>
+			<if test="province != null and '' != province"> province = #{province},</if>
+			<if test="collectNum != null and '' != collectNum"> collect_num = #{collectNum},</if>
+			<if test="quoteNum != null and '' != quoteNum"> quote_num = #{quoteNum},</if>
+			<if test="commentNum != null and '' != commentNum"> comment_num = #{commentNum},</if>
+			<if test="shareNum != null and '' != shareNum"> share_num = #{shareNum},</if>
+			<if test="viewNum != null and '' != viewNum"> view_num = #{viewNum},</if>
+			<if test="tipsContent != null and '' != tipsContent"> tips_content = #{tipsContent},</if>
+			<if test="planName != null and '' != planName"> plan_name = #{planName},</if>
+			<if test="startTime != null and '' != startTime"> start_time = #{startTime},</if>
+			<if test="returnTime != null and '' != returnTime"> return_time = #{returnTime},</if>
+			<if test="publicFlag != null and '' != publicFlag"> public_flag = #{publicFlag},</if>
+			<if test="recommendFlag != null and '' != recommendFlag"> recommend_flag = #{recommendFlag},</if>
+			<if test="coverPath != null and '' != coverPath"> cover_path = #{coverPath},</if>
+			<if test="coverSmall != null and '' != coverSmall"> cover_small = #{coverSmall},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="status != null and '' != status"> status = #{status},</if>
+			<if test="planCost != null"> plan_cost = #{planCost},</if>
+			<if test="includeSeasonticketCost != null"> include_seasonticket_cost = #{includeSeasonticketCost},</if>
+			<if test="planHotelCost != null"> plan_hotel_cost = #{planHotelCost},</if>
+			<if test="planTravelCost != null"> plan_travel_cost = #{planTravelCost},</if>
+			<if test="planTicketCost != null"> plan_ticket_cost = #{planTicketCost},</if>
+			<if test="planFoodCost != null"> plan_food_cost = #{planFoodCost},</if>
+			<if test="planSeasonticketCost != null"> plan_seasonticket_cost = #{planSeasonticketCost},</if>
+			<if test="planDays != null"> plan_days = #{planDays},</if>
+			<if test="source != null"> source = #{source},</if>
+			<if test="sourceId != null"> source_id = #{sourceId},</if>
+			<if test="tag != null"> tag = #{tag},</if>
+			<if test="description != null"> description = #{description},</if>
+			<if test="platform != null"> platform = #{platform},</if>
+			<if test="startCity != null"> start_city = #{startCity},</if>
+			<if test="pushFlag != null"> push_flag = #{pushFlag}</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<update id="updateStartTime" parameterType="Plan">
+		update tb_plan
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="cityId != null and '' != cityId"> city_id = #{cityId},</if>
+			<if test="cityIds != null and '' != cityIds"> city_ids = #{cityIds},</if>
+			<if test="scenicIds != null and '' != scenicIds"> scenic_id = #{scenicIds},</if>
+			<if test="province != null and '' != province"> province = #{province},</if>
+			<if test="collectNum != null and '' != collectNum"> collect_num = #{collectNum},</if>
+			<if test="quoteNum != null and '' != quoteNum"> quote_num = #{quoteNum},</if>
+			<if test="commentNum != null and '' != commentNum"> comment_num = #{commentNum},</if>
+			<if test="shareNum != null and '' != shareNum"> share_num = #{shareNum},</if>
+			<if test="viewNum != null and '' != viewNum"> view_num = #{viewNum},</if>
+			<if test="tipsContent != null and '' != tipsContent"> tips_content = #{tipsContent},</if>
+			<if test="planName != null and '' != planName"> plan_name = #{planName},</if>
+			start_time = #{startTime},
+			<if test="returnTime != null and '' != returnTime"> return_time = #{returnTime},</if>
+			<if test="publicFlag != null and '' != publicFlag"> public_flag = #{publicFlag},</if>
+			<if test="recommendFlag != null and '' != recommendFlag"> recommend_flag = #{recommendFlag},</if>
+			<if test="coverPath != null and '' != coverPath"> cover_path = #{coverPath},</if>
+			<if test="coverSmall != null and '' != coverSmall"> cover_small = #{coverSmall},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="status != null and '' != status"> status = #{status},</if>
+			<if test="planCost != null"> plan_cost = #{planCost},</if>
+			<if test="includeSeasonticketCost != null"> include_seasonticket_cost = #{includeSeasonticketCost},</if>
+			<if test="planHotelCost != null"> plan_hotel_cost = #{planHotelCost},</if>
+			<if test="planTravelCost != null"> plan_travel_cost = #{planTravelCost},</if>
+			<if test="planTicketCost != null"> plan_ticket_cost = #{planTicketCost},</if>
+			<if test="planFoodCost != null"> plan_food_cost = #{planFoodCost},</if>
+			<if test="planSeasonticketCost != null"> plan_seasonticket_cost = #{planSeasonticketCost},</if>
+			<if test="planDays != null"> plan_days = #{planDays},</if>
+			<if test="source != null"> source = #{source},</if>
+			<if test="sourceId != null"> source_id = #{sourceId},</if>
+			<if test="tag != null"> tag = #{tag},</if>
+			<if test="description != null"> description = #{description},</if>
+			<if test="platform != null"> platform = #{platform},</if>
+			<if test="startCity != null"> start_city = #{startCity},</if>
+			<if test="pushFlag != null"> push_flag = #{pushFlag}</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="Plan">
+		delete from
+			tb_plan
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="Plan">
+		select
+			*
+		from
+			tb_plan
+		where
+			id = #{id}
+	</select>
+	
+	
+	<select id="count" resultType="int">
+		select
+                count(1)
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="listids" resultType="map">
+		select id, create_time, user_id
+		from tb_plan
+		where city_ids like '%${singleCityId}%' and valid = 1;
+	</select>
+	
+	<select id="list" resultType="Plan">
+		select
+			 	*
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_plan plan 
+		<where>
+		    status = 1
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="userId != null"> and user_id = #{userId}</if>
+			<if test="cityId != null and '' != cityId"> and city_id = #{cityId} </if>
+			<if test="singleCityId != null and '' != singleCityId"> and city_ids like '%${singleCityId}%' </if>
+			<if test="scenicIds != null and '' != scenicIds"> and plan.scenic_id = #{scenicIds} </if>
+			<if test="province != null and '' != province"> and province = #{province} </if>
+			<if test="collectNum != null and '' != collectNum"> and collect_num = #{collectNum}</if>
+			<if test="shareNum != null and '' != shareNum"> and share_num = #{shareNum}</if>
+			<if test="commentNum != null and '' != commentNum"> and comment_num = #{commentNum}</if>
+			<if test="viewNum != null and '' != viewNum"> and view_num = #{viewNum}</if>
+			<if test="tipsContent != null and '' != tipsContent"> and tips_content = #{tipsContent}</if>
+			<if test="planName != null and '' != planName"> and plan_name like "%"#{planName}"%" </if>
+			<if test="startTime != null and '' != startTime"> and start_time = #{startTime} </if>
+			<if test="startTimeL != null and '' != startTimeL">and unix_timestamp(start_time) * 1000 &gt; #{startTimeL} </if>
+			<if test="startTimeU != null and '' != startTimeU"> and unix_timestamp(start_time) * 1000 &lt; #{startTimeU} </if>
+			<if test="returnTime != null and '' != returnTime"> and return_time = #{returnTime} </if>
+			<if test="publicFlag != null and '' != publicFlag"> and public_flag = #{publicFlag}</if>
+			<if test="recommendFlag != null and '' != recommendFlag"> and recommend_flag = #{recommendFlag}</if>
+			<if test="coverPath != null and '' != coverPath"> and cover_path = #{coverPath}</if>
+			<if test="coverSmall != null and '' != coverSmall"> and cover_small = #{coverSmall}</if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="status!=null and ''!=status"> and plan.status = #{status}</if>
+			<if test="planDays != null"> and plan_days = #{plan_days} </if>
+			<if test="dayL != null"> and plan_days &gt;= #{dayL} </if>
+			<if test="dayU != null"> and plan_days &lt;= #{dayU} </if>
+			<if test="planCostL != null"> and plan_cost &gt;= #{planCostL} </if>
+			<if test="planCostU != null"> and plan_cost &lt;= #{planCostU} </if>
+			<if test="source != null"> and source = #{source} </if>
+			<if test="sourceId != null"> and source_id = #{sourceId} </if>
+			<if test="tag != null"> and tag = #{tag} </if>
+			<if test="description != null"> and description = #{description} </if>
+			<if test="platform != null"> and platform = #{platform} </if>
+			<if test="startCity != null"> and start_city = #{startCity} </if>
+			<if test="pushFlag != null"> and push_flag = #{pushFlag} </if>
+            <if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; #{ta} </if>
+            <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; #{tb} </if>
+            <if test="plan != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; #{tb} </if>
+            <if test="ids != null">
+                and id in ( <if test="ids.size() == 0">-1</if>
+                <foreach collection="ids" item="item" index="index" separator=",">#{item}
+                </foreach>
+                )
+            </if>
+		</where>
+		<choose>
+            <when test="orderColumn != null and '' != orderColumn">
+                ORDER BY plan.${orderColumn}
+                <if test="orderType != null and '' != orderType">
+                    ${orderType}
+                </if>
+            </when>
+			<otherwise>
+					order by plan.id DESC
+			</otherwise>
+		</choose>
+	</sql>
+	<select id="listColumns" resultType="Plan">
+		select
+		<if test="needColumns!=null and needColumns.size()!=0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}</foreach>
+		</if>
+		from
+		tb_plan plan
+		<where>
+		    status = 1
+			<if test="id != null and '' != id"> and plan.id = #{id} </if>
+			<if test="userId != null"> and plan.user_id = #{userId}</if>
+			<if test="cityId != null and '' != cityId"> and plan.city_id = #{cityId} </if>
+			<if test="scenicIds != null and '' != scenicIds"> and plan.scenic_id = #{scenicIds} </if>
+			<if test="province != null and '' != province"> and province = #{province} </if>
+			<if test="collectNum != null and '' != collectNum"> and collect_num = #{collectNum}</if>
+			<if test="shareNum != null and '' != shareNum"> and share_num = #{shareNum}</if>
+			<if test="commentNum != null and '' != commentNum"> and comment_num = #{commentNum}</if>
+			<if test="viewNum != null and '' != viewNum"> and view_num = #{viewNum}</if>
+			<if test="tipsContent != null and '' != tipsContent"> and tips_content = #{tipsContent}</if>
+			<if test="planName != null and '' != planName"> and plan_name like "%"#{planName}"%" </if>
+			<if test="startTime != null and '' != startTime"> and start_time = #{startTime} </if>
+			<if test="returnTime != null and '' != returnTime"> and return_time = #{returnTime} </if>
+			<if test="publicFlag != null and '' != publicFlag"> and public_flag = #{publicFlag}</if>
+			<if test="recommendFlag != null and '' != recommendFlag"> and recommend_flag = #{recommendFlag}</if>
+			<if test="coverPath != null and '' != coverPath"> and cover_path = #{coverPath}</if>
+			<if test="coverSmall != null and '' != coverSmall"> and cover_small = #{coverSmall}</if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="daycounts != null and '' != daycounts"> and daycounts = #{daycounts} </if>
+			<if test="days != null and '' != days"> and note.days = #{days} </if>
+			<if test="status!=null and ''!=status"> and plan.status = #{status}</if>
+			<if test="planDays != null"> and plan_days = #{plan_days} </if>
+			<if test="dayL != null and '' != dayL"> and plan_days &gt;= #{dayL} </if>
+			<if test="dayU != null and '' != dayU"> and plan_days &lt;= #{dayU} </if>
+			<if test="planCostL != null and '' != planCostL"> and plan_cost &gt;= #{planCostL} </if>
+			<if test="planCostU != null and '' != planCostU"> and plan_cost &lt;= #{planCostU} </if>
+			<if test="collectUserId != null and '' != collectUserId"> and collection.user_id = #{collectUserId} </if>
+			<if test="ta != null and '' != ta"> and unix_timestamp(plan.create_time) * 1000 &gt; #{ta} </if>
+			<if test="tb != null and '' != tb"> and unix_timestamp(plan.create_time) * 1000 &lt; #{tb} </if>
+			<if test="source != null and '' != source"> and source = #{source} </if>
+			<if test="sourceId != null and '' != sourceId"> and source_id = #{sourceId} </if>
+			<if test="tag != null and '' != tag"> and tag = #{tag} </if>
+			<if test="description != null and '' != description"> and description = #{description} </if>
+			<if test="platform != null and '' != platform"> and platform = #{platform} </if>
+			<if test="startCity != null and '' != startCity"> and start_city = #{startCity} </if>
+			<if test="pushFlag != null and '' != pushFlag"> and push_flag = #{pushFlag} </if>
+			<if test="ids != null">
+				and plan.id in ( <if test="ids.size() == 0">-1</if>
+				<foreach collection="ids" item="item" index="index" separator=",">#{item}
+				</foreach>
+				)
+			</if>
+		</where>
+		<choose>
+			<when test="orderColumn != null and '' != orderColumn">
+				ORDER BY plan.${orderColumn}
+				<if test="orderType != null and '' != orderType">
+					${orderType}
+				</if>
+			</when>
+			<when test="recomFlag != null and '' != recomFlag">
+				ORDER BY recommend.recommend_weight
+			</when>
+			<when test="homepageFlag != null and '' != homepageFlag">
+				ORDER BY homepage.recommend_weight
+			</when>
+			<otherwise>
+				order by plan.id DESC
+			</otherwise>
+		</choose>
+	</select>
+
+
+    <update id="addView" parameterType="java.lang.Long">
+        update tb_plan set view_num = view_num + 1 where id = #{id}
+    </update>
+</mapper>

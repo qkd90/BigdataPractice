@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/datamgr/datamgr.iml" filepath="$PROJECT_DIR$/datamgr/datamgr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fengxiao/fengxiao.iml" filepath="$PROJECT_DIR$/fengxiao/fengxiao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lvxbang/lvxbang.iml" filepath="$PROJECT_DIR$/lvxbang/lvxbang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lvxbang/lvxbangservice/lvxbangservice.iml" filepath="$PROJECT_DIR$/lvxbang/lvxbangservice/lvxbangservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lvxbang/lvxbangweb/lvxbangweb.iml" filepath="$PROJECT_DIR$/lvxbang/lvxbangweb/lvxbangweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/projects.iml" filepath="$PROJECT_DIR$/projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scheduler/scheduler.iml" filepath="$PROJECT_DIR$/scheduler/scheduler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weixin/weixin.iml" filepath="$PROJECT_DIR$/weixin/weixin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weixin/weixinservice/weixinservice.iml" filepath="$PROJECT_DIR$/weixin/weixinservice/weixinservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/weixin/weixinweb/weixinweb.iml" filepath="$PROJECT_DIR$/weixin/weixinweb/weixinweb.iml" />
+    </modules>
+  </component>
+</project>

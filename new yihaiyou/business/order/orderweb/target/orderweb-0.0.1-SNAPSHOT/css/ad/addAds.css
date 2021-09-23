@@ -1,0 +1,20 @@
+h1 {
+    padding-top: 20px;
+    font-size: 20px;
+}
+form {
+    font-size: 30px;
+    /*padding-top: 20px;*/
+}
+
+li {
+    padding-left: 30px;
+}
+
+.valuezone {
+    display:inline
+}
+
+li {
+    margin-bottom: 10px
+}

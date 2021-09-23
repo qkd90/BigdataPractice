@@ -1,0 +1,35 @@
+.feedback_dialog {
+    padding: 0 10px;
+    background: #f9f9f9;
+}
+.feedback_dialog .fl{
+    float: left;
+}
+.feedback_dialog input{
+    width: 150px;
+    font-size: 13px;
+}
+.feedback_dialog textarea{
+    width: 350px;
+    padding: 3px;
+}
+.feedback_dialog li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.feedback_dialog .disa{
+    background: none;
+    border: none;
+}
+.feedback_dialog .vam{
+    vertical-align: middle;
+}
+.opt a.ena{
+    color: #0000cc;
+    text-decoration: underline;
+}
+.opt a.disa{
+    color: #8F8F8F;
+    text-decoration: none;
+    cursor: not-allowed;
+}

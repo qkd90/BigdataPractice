@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.delicacy.mapper.DelicacyMapper">
+	<insert id="insert" parameterType="Delicacy" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_delicacy
+			(
+				id,
+				city_id,
+				food_name,
+				price,
+				cuisine,
+				taste,
+				bussiness_circle,
+				sign,
+				efficacy,
+				introduction,
+				must_eat,
+				recommend_count,
+				local_num,
+				tourist_num,
+				recommend_reson,
+				share_num,
+				good_num,
+				delicacy_comment,
+				food_picture,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{cityId},
+				#{foodName},
+				#{price},
+				#{cuisine},
+				#{taste},
+				#{bussinessCircle},
+				#{sign},
+				#{efficacy},
+				#{introduction},
+				#{mustEat},
+				#{recommendCount},
+				#{localNum},
+				#{touristNum},
+				#{recommendReson},
+				#{shareNum},
+				#{goodNum},
+				#{delicacyComment},
+				#{foodPicture},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="updateAllNum" parameterType="Delicacy">
+		update tb_delicacy
+		<set>
+			<if test="recommendCount != null and '' != recommendCount"> recommend_count = recommend_count + 1,</if>
+			<if test="localNum != null and '' != localNum"> local_num = local_num + 1,</if>
+			<if test="touristNum != null and '' != touristNum"> tourist_num = tourist_num + 1,</if>
+			<if test="shareNum != null and '' != shareNum"> share_num = share_num + 1,</if>
+			<if test="goodNum != null and '' != goodNum"> good_num = good_num + 1,</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<update id="update" parameterType="Delicacy">
+		update tb_delicacy
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="cityId != null and '' != cityId"> city_id = #{cityId},</if>
+			<if test="foodName != null and '' != foodName"> food_name = #{foodName},</if>
+			<if test="price != null and '' != price"> price = #{price},</if>
+			<if test="cuisine != null and '' != cuisine"> cuisine = #{cuisine},</if>
+			<if test="taste != null and '' != taste"> taste = #{taste},</if>
+			<if test="bussinessCircle != null and '' != bussinessCircle"> bussiness_circle = #{bussinessCircle},</if>
+			<if test="sign != null and '' != sign"> sign = #{sign},</if>
+			<if test="efficacy != null and '' != efficacy"> efficacy = #{efficacy},</if>
+			<if test="introduction != null and '' != introduction"> introduction = #{introduction},</if>
+			<if test="mustEat != null and '' != mustEat"> must_eat = #{mustEat},</if>
+			<if test="recommendCount != null and '' != recommendCount"> recommend_count = #{recommendCount},</if>
+			<if test="localNum != null and '' != localNum"> local_num = #{localNum},</if>
+			<if test="touristNum != null and '' != touristNum"> tourist_num = #{touristNum},</if>
+			<if test="recommendReson != null and '' != recommendReson"> recommend_reson = #{recommendReson},</if>
+			<if test="shareNum != null and '' != shareNum"> share_num = #{shareNum},</if>
+			<if test="goodNum != null and '' != goodNum"> good_num = #{goodNum},</if>
+			<if test="delicacyComment != null and '' != delicacyComment"> delicacy_comment = #{delicacyComment},</if>
+			<if test="foodPicture != null and '' != foodPicture"> food_picture = #{foodPicture},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="Delicacy">
+		delete from
+			tb_delicacy
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="map">
+		select
+			delicacy.*,
+			user.nickname,
+			user.userface
+		from
+			tb_delicacy delicacy left join tb_user user on delicacy.user_id = user.id
+		where
+			delicacy.id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="listPrice" resultType="Delicacy">
+	   select price
+	   from tb_delicacy
+	   where id in
+	           (<if test="ids.size() == 0">-1</if>
+                <foreach item="item" index="index" collection="ids"
+                         separator=",">
+                    #{item}
+                </foreach>)
+    </select>
+	
+	<select id="list" resultType="map">
+		select 
+				delicacy.id,
+				city_id,
+				food_name,
+				price,
+				cuisine,
+				taste,
+				bussiness_circle,
+				sign,
+				efficacy,
+				introduction,
+				must_eat,
+				recommend_count,
+				local_num,
+				tourist_num,
+				recommend_reson,
+				share_num,
+				good_num,
+				delicacy_comment,
+				food_picture,
+				delicacy.modify_time,
+				delicacy.create_time,
+				(select count(1) from tb_delicacy_res where delicacy_id = delicacy.id) rescounts
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_delicacy delicacy
+		<where>
+			<if test="id != null and '' != id"> and delicacy.id = #{id} </if>
+			<if test="cityId != null and '' != cityId"> and city_id = #{cityId} </if>
+			<if test="foodName != null and '' != foodName"> and food_name like "%"#{foodName}"%" </if>
+			<if test="price != null and '' != price"> and <![CDATA[price > #{lowPrice}]]> 
+				<if test="highPrice != null">
+					and <![CDATA[price < #{highPrice}]]> 
+				</if>
+			</if>
+			<if test="cuisine != null and '' != cuisine"> and cuisine = #{cuisine} </if>
+			<if test="taste != null and '' != taste"> and taste = #{taste} </if>
+			<if test="bussinessCircle != null and '' != bussinessCircle"> and bussiness_circle = #{bussinessCircle} </if>
+			<if test="sign != null and '' != sign"> and sign = #{sign} </if>
+			<if test="efficacy != null and '' != efficacy"> and efficacy = #{efficacy} </if>
+			<if test="introduction != null and '' != introduction"> and introduction = #{introduction} </if>
+			<if test="mustEat != null and '' != mustEat"> and must_eat = #{mustEat} </if>
+			<if test="recommendCount != null and '' != recommendCount"> and recommend_count = #{recommendCount} </if>
+			<if test="localNum != null and '' != localNum"> and local_num = #{localNum} </if>
+			<if test="touristNum != null and '' != touristNum"> and tourist_num = #{touristNum} </if>
+			<if test="recommendReson != null and '' != recommendReson"> and recommend_reson = #{recommendReson} </if>
+			<if test="shareNum != null and '' != shareNum"> and share_num = #{shareNum} </if>
+			<if test="goodNum != null and '' != goodNum"> and good_num = #{goodNum} </if>
+			<if test="delicacyComment != null and '' != delicacyComment"> and delicacy_comment = #{delicacyComment} </if>
+			<if test="foodPicture != null and '' != foodPicture"> and food_picture = #{foodPicture} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			 <if test="key != null and '' != key">and (code_name like '${key}%' or food_name like '${key}%') </if>
+			<if test="ids != null">
+                delicacy.id in (<if test="ids.size() == 0">-1</if>
+                <foreach item="item" index="index" collection="ids"
+                         separator=",">
+                    #{item}
+                </foreach>)
+            </if>
+		</where>
+		<choose>
+			<when test="orderColumn != null and '' != orderColumn">
+						ORDER BY ${orderColumn}
+					<if test="orderType != null and '' != orderType">
+						${orderType}
+					</if>
+			</when>
+			<otherwise>
+					order by recommend_count desc
+			</otherwise>
+		</choose>
+	</sql>
+</mapper>

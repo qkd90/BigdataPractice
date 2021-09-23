@@ -1,0 +1,93 @@
+<div ng-controller="orderDetailCtrl">
+<header class="header-box fixed" id="header">
+            <a href="javascript:history.go(-1)"><span class="header-back">
+                <i class="icon-title-back effect-active"></i>
+            </span></a>
+    <h1>订单详情</h1>
+</header>
+<div class="wrapper">
+
+    <div class="afterLoaded">
+        <a class="title-detail" ui-sref="lineDetail({id: order.lineOrderDetail.lineId})">{{order.name}}<i class="arrow-title icon-arrow"></i></a>
+        <div class="section-detail">
+            <div class="title-section"><span class="separator-title"></span><span>订单信息</span></div>
+            <div class="content-section">
+                <div class="info-content">
+                    <p>订单编号：{{order.orderNo}}</p>
+                    <p>出发城市：{{order.lineOrderDetail.startCity}}</p>
+                    <p>出发时间：{{order.startDate}}</p>
+                    <p>归来时间：{{order.arriveDate}}</p>
+                    <p>出游人数：{{order.lineOrderDetail.adultNum}}成人<span ng-if="order.lineOrderDetail.childNum > 0">{{order.lineOrderDetail.childNum}}儿童</span></p>
+                    <p>订单状态：{{order.status}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="person_fare">
+            <span class="person_fare_title">费用详情</span>
+            <div class="person_fare_p">
+                <p>出游团费：￥{{order.price - order.insurancePrice}}<span ng-if="order.insurancePrice > 0" style="margin-left: 25px;"> 保险费用：￥{{order.insurancePrice}}</span></p>
+                <p>
+                    <span class="totalfare">订单总额：<span>￥{{order.price}}</span></span>
+                    <span class="totalfare">待付总额：<span>￥{{order.price}}</span></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="section-detail hide" id="journey-helper">
+            <a class="journey-helper" href="">
+                <div class="helper-title">行程助手</div>
+                <div class="helper-desc">提供行程管理、天气提醒、附近地图等服务</div>
+                <i class="arrow-title icon-arrow"></i>
+            </a>
+        </div>
+        <div class="section-detail">
+            <div class="title-section"><span class="separator-title"></span><span>联系人信息</span></div>
+            <div class="content-section">
+                <div class="info-content">
+                    <p>姓名：{{order.contact.name}}</p>
+                    <p>手机：
+                        <span class="interCode">+86</span>
+                        {{order.contact.telephone}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-detail">
+            <div class="title-section"><span class="separator-title"></span><span>出游人信息</span>
+
+            </div>
+
+            <div class="content-section">
+                <div class="info-content tourist">
+
+
+                    <div class="cell-info" ng-repeat="tourist in order.tourists">
+                        <p>姓<span class="separator-tourist"></span>名：{{tourist.name}}</p>
+                        <p>证件号：{{tourist.idNumber}}</p>
+                        <p>手机号：<span class="interCode">+86</span>
+                            {{tourist.telephone}}</p>
+                    </div>
+                    <div class="cell-info" ng-repeat="tourist in order.childTourists">
+                        <p>姓<span class="separator-tourist"></span>名：{{tourist.name}}</p>
+                        <p>证件号：{{tourist.idNumber}}</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="section-detail invoice-wrapper">
+            <div class="title-section"><span class="separator-title"></span><span>发票信息</span></div>
+            <div class="caution">
+                <i class="invoice-caution"></i><span>如需发票请联系客服人员：400-0131-770</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="footer_pay" ng-if="order.orderStatus == 'WAIT'" ng-click="toPay()">去支付</div>
+<div class="footer_pay" ng-if="order.orderStatus != 'WAIT'" style="background-color: #BEBEBE;">去支付</div>
+</div>

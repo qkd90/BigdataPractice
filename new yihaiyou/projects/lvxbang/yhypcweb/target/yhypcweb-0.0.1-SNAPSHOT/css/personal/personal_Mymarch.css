@@ -1,0 +1,106 @@
+
+.mainBox {
+	width: 1198px;
+	background: #fff;
+	margin: 25px auto;
+	padding: 15px;
+	font-family: '微软雅黑';
+	border:1px solid #e0e0e0;
+}
+
+.createMarch {
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+	background: #ff8800;
+	font-size: 18px;
+	float: right;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.product {
+	width: 1160px;
+	height: 200px;
+	margin: 20px auto;
+	clear:both;
+	border: 1px solid #eee;
+}
+
+.product:hover {
+	background:#f3f8fe;
+}
+
+.product .picture {
+	width: 238px;
+	height: 174px;
+	float: left;
+	margin: 13px;
+}
+
+.product .picture img {
+	width: 100%;
+	height: 100%;
+}
+
+.product .pic_message {
+	float: left;
+	margin: 13px;
+	height: 174px;
+	width: 870px;
+}
+
+.product .pic_message .name {
+	color: #333;
+	font-size: 18px;
+	padding: 13px 0 0 0;
+}
+
+.product .pic_message .name:hover {
+	color:#3996fa;
+	cursor: pointer;
+}
+
+.product .pic_message .datetime {
+	font-size: 14px;
+	color: #999;
+	padding: 20px 0 0 18px;
+	background: url(/image/icon-datetime.png) no-repeat left 23px;
+}
+
+.product .pic_message .address {
+	font-size: 12px;
+	color: #3996fa;
+	padding-top: 15px;
+	height: 20px;
+}
+
+.product .pic_message .address label {
+	padding: 0 8px;
+}
+
+.product .pic_message .price_daytime {
+	color: #666;
+	font-size:14px;
+	padding-top: 46px;
+	text-align: right;
+}
+
+.price_daytime .day {
+	padding: 0 20px 0 40px;
+	border-right: 1px solid #e0e0e0;
+	background: url(/image/icon-day.png) no-repeat 20px center;
+}
+
+.price_daytime .price {
+	padding: 0 30px 0 40px;
+	background: url(/image/icon-cash.png) no-repeat 23px center;
+}
+
+.mainBox .page {
+	width: 1200px;
+	font-size: 20px;
+	text-align: center;
+}

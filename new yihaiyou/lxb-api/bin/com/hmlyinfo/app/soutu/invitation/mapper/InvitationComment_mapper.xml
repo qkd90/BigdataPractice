@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.invitation.mapper.InvitationCommentMapper">
+	<insert id="insert" parameterType="InvitationComment">
+		insert into tb_invitation_comment
+			(
+				id,
+				invitation_id,
+				user_id,
+				invitation_user_id,
+				ex_uid,
+				comment,
+				is_readed,
+				is_replied,
+				is_invitation_readed,
+				is_invitation_replied,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{invitationId},
+				#{userId},
+				#{invitationUserId},
+				#{exUid},
+				#{comment},
+				#{isReaded},
+				#{isReplied},
+				#{isInvitationReaded},
+				#{isInvitationReplied},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="InvitationComment">
+		update tb_invitation_comment
+		<set>
+			<if test="invitationId != null and '' != invitationId"> invitation_id = #{invitationId},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="invitationUserId != null and '' != invitationUserId"> invitation_user_id = #{invitationUserId},</if>
+			<if test="exUid != null and '' != exUid"> ex_uid = #{exUid},</if>
+			<if test="comment != null and '' != comment"> comment = #{comment},</if>
+			<if test="isReaded != null and '' != isReaded"> is_readed = #{isReaded},</if>
+			<if test="isReplied != null and '' != isReplied"> is_replied = #{isReplied},</if>
+			<if test="isInvitationReaded != null and '' != isInvitationReaded"> is_invitation_readed = #{isInvitationReaded},</if>
+			<if test="isInvitationReplied != null and '' != isInvitationReplied"> is_invitation_replied = #{isInvitationReplied},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="InvitationComment">
+		delete from
+			tb_invitation_comment
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="InvitationComment">
+		select
+			*
+		from
+			tb_invitation_comment
+		where
+			id = #{id}
+	</select>
+	
+	<select id="listcomment" resultType="InvitationComment">
+		select
+			*
+		from
+			tb_invitation_comment
+		where
+			(invitation_user_id = #{userId} and user_id &lt;&gt; #{userId}) or (ex_uid = #{userId} and user_id &lt;&gt; #{userId})
+		order by create_time desc
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="InvitationComment">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_invitation_comment
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="invitationId != null and '' != invitationId"> and invitation_id = #{invitationId} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="invitationUserId != null and '' != invitationUserId"> and invitation_user_id = #{invitationUserId} </if>
+			<if test="exUid != null and '' != exUid"> and ex_uid = #{exUid} </if>
+			<if test="comment != null and '' != comment"> and comment = #{comment} </if>
+			<if test="isReaded != null and '' != isReaded"> and is_readed = #{isReaded} </if>
+			<if test="isReplied != null and '' != isReplied"> and is_replied = #{isReplied} </if>
+			<if test="isInvitationReaded != null and '' != isInvitationReaded"> and is_invitation_readed = #{isInvitationReaded} </if>
+			<if test="isInvitationReplied != null and '' != isInvitationReplied"> and is_invitation_replied = #{isInvitationReplied} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="ta != null and '' != ta"> and unix_timestamp(tb_invitation_comment.create_time) * 1000 &gt; #{ta} </if>
+            <if test="tb != null and '' != tb"> and unix_timestamp(tb_invitation_comment.create_time) * 1000 &lt; #{tb} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+		order by create_time desc
+	</sql>
+</mapper>

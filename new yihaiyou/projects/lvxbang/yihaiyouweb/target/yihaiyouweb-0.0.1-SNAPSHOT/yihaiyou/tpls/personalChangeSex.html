@@ -1,0 +1,12 @@
+<div class="personal_changeName personal_changePassword" ng-controller="personalChangeSexCtrl" screenheight>
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        性别
+    </div>
+    <div class="sexSelBox">
+        <p ng-class="{selSex: sex == 1}" ng-click="selthis(1)">男</p>
+
+        <p ng-class="{selSex: sex == 2}" ng-click="selthis(2)">女</p>
+    </div>
+    <div class="savechange" ng-click="update()">保存</div>
+</div>

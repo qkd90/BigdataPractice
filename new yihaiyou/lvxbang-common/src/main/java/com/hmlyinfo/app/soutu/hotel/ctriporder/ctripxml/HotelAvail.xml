@@ -1,0 +1,59 @@
+<!--版本信息:2013年8月-->
+<!--可订检查OTA_HotelAvail -->
+<!--接口提供方：携程；调用方：合作方-->
+<Request>
+    <!--AllianceID:分销商ID;SID:站点ID;TimeStamp:响应时间戳（从1970年到现在的秒数）;RequestType:请求接口的类型;Signature:MD5加密串-->
+    <Header AllianceID="#AllianceID" SID="#SID" TimeStamp="#TimeStamp" RequestType="OTA_HotelAvail"
+            Signature="#Signature"/>
+    <HotelRequest>
+        <RequestBody xmlns:ns="http://www.opentravel.org/OTA/2003/05">
+            <ns:OTA_HotelAvailRQ Version="1.0" TimeStamp="2012-04-20T00:00:00.000+08:00">
+                <!--可订性查询根节点，必填-->
+                <ns:AvailRequestSegments>
+                    <ns:AvailRequestSegment>
+                        <!--酒店可订性查询条件列表，必填-->
+                        <ns:HotelSearchCriteria>
+                            <!--搜索条件，必填-->
+                            <ns:Criterion>
+                                <!--酒店信息-->
+                                <!-- HotelCode属性：酒店代码；string类型；必填 -->
+                                <ns:HotelRef HotelCode="#HotelCode"/>
+                                <!--入住和离店日期-->
+                                <!-- Start属性：入住日期；DateTime类型；必填 -->
+                                <!-- End属性：离店日期；DateTime类型；必填 -->
+                                <!-- <ns:StayDateRange Start="2013-06-27T13:00:00.000+08:00" End="2013-06-28T15:00:00.000+08:00" /> -->
+                                <ns:StayDateRange Start="#Start" End="#End"/>
+                                <!--指定价格计划列表，可空-->
+                                <ns:RatePlanCandidates>
+                                    <!--指定价格计划-->
+                                    <!-- RatePlanCode属性：价格计划代码；string类型；必填 -->
+                                    <ns:RatePlanCandidate RatePlanCode="#RatePlanCode"/>
+                                </ns:RatePlanCandidates>
+                                <!--指定房型列表，最多1个-->
+                                <ns:RoomStayCandidates>
+                                    <!--指定房型-->
+                                    <!-- Quantity属性：将要预订的房间数量；int类型；必填 -->
+                                    <ns:RoomStayCandidate Quantity="#Quantity">
+                                        <!--客人数量信息-->
+                                        <!-- IsPerRoom属性：客人数量是否对应每间房，False 表示所有房间加起来一共住这么多客人；bool类型；可空 -->
+                                        <ns:GuestCounts IsPerRoom="false">
+                                            <!--客人数量-->
+                                            <!-- Count属性：客人数量；int类型；必填 -->
+                                            <ns:GuestCount Count="#Count"/>
+                                        </ns:GuestCounts>
+                                    </ns:RoomStayCandidate>
+                                </ns:RoomStayCandidates>
+                                <!--附加信息-->
+                                <ns:TPA_Extensions>
+                                    <!--入住人最晚到店时间，有可能最晚到店日期为第二天凌晨，格式为 yyyy-MM-dd hh:mm:ss，必填 -->
+                                    <!--<ns:LateArrivalTime>2013-06-27T15:00:00.000+08:00</ns:LateArrivalTime>  -->
+                                    <ns:LateArrivalTime>#LateArrivalTime</ns:LateArrivalTime>
+                                </ns:TPA_Extensions>
+                            </ns:Criterion>
+                        </ns:HotelSearchCriteria>
+                    </ns:AvailRequestSegment>
+                </ns:AvailRequestSegments>
+            </ns:OTA_HotelAvailRQ>
+        </RequestBody>
+    </HotelRequest>
+</Request>

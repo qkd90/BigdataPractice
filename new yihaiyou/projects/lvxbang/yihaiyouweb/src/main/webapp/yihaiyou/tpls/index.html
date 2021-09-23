@@ -1,0 +1,145 @@
+<div class="yhyIndex" ng-controller="indexCtrl">
+    <div class="header_index header_bar clearfix header">
+        <a class="header_left" ui-sref="index"><span>
+            <img class="logo" src="/yihaiyou/image/logo.png"></span></a>
+        <div class="header_center">
+            <input class="search_holder" search-dir pre-url="'scenicList'" type="text" placeholder="鼓浪屿" />
+        </div>
+        <!--<div class="header_right" ui-sref="personalIndex">-->
+            <!--<img src="/yihaiyou/image/icon-me.png">-->
+        <!--</div>-->
+        <span class="save pic2" ui-sref="personalIndex"></span>
+    </div>
+    <div class="indexPic">
+
+        <div class="i-swipe-banner swiper-container ads-area" style="height: 125px;" id="home-top-slider-container">
+            <ul class="swiper-wrapper ads-slider" id="slide">
+                <li class="swiper-slide" ng-repeat="ad in topBannerAds" is-over="finish.over">
+                    <a ng-href="{{ad.url}}"><img ng-src="{{ad.imgPath | getImgUrl}}"></a>
+                    <!--<a ng-href="{{ad.url}}"><img src="/yihaiyou/image/fc{{$index + 1}}.jpg"></a>-->
+                </li>
+            </ul>
+            <div class="swipe-pagenavi swiper-pagination" id="home-top-slide-page"></div>
+        </div>
+    </div>
+    <div class="main yi_main" id="index" is_default="1">
+        <div class="top-sections">
+            <section class="windowlist">
+                <div class="win_first" ui-sref="planDemand"><span class="outspan_1"><span class="icon_index in_diy"><i class="yhyfont index_font">&#xe65a</i></span>DIY智能行程</span></div>
+                <div class="win_second">
+                    <ul>
+                        <li class="boatticket" ng-click="goFerryIndex()">
+                            <span class="outspan_2"><span class="icon_index_sec in_boatticket"><i class="yhyfont index_font">&#xe654</i></span>船票</span>
+                        </li>
+                        <li class="gu_jin overpic">
+                            <div class="a_p" ng-click="goFerryIndex()"><span class="outspan_3"><span class="icon_index in_gu"><i class="yhyfont index_font">&#xe65f</i></span>厦鼓</span></div>
+                            <div class="a_p" ui-sref="ihaitai"><span class="outspan_3"><span class="icon_index in_jin"><i class="yhyfont index_font">&#xe660</i></span>厦金</span></div>
+                        </li>
+                        <li class="huan_zang overpic">
+                            <div class="a_p" ng-click="goHuanguyouList()"><span class="outspan_3 treeword"><span class="icon_index in_ludao"><i class="yhyfont index_font">&#xe65d</i></span>鹭岛游</span></div>
+                            <div class="a_p" ui-sref="xiazhang"><span class="outspan_3"><span class="icon_index in_zhang"><i class="yhyfont index_font">&#xe65e</i></span>厦漳</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="win_second win_third">
+                    <ul>
+                        <li class="boatticket seaFund">
+                            <span class="outspan_2"><span class="icon_index_sec in_seaFund"><i class="yhyfont index_font">&#xe661</i></span>海上游</span>
+                        </li>
+                        <li class="sail_cruise overpic">
+                            <div class="a_p" ng-click="goSailboatList()"><span class="outspan_3"><span class="icon_index in_sail"><i class="yhyfont index_font">&#xe659</i></span>帆船</span></div>
+                            <div class="a_p" ng-click="goCruiseShipIndex()"><span class="outspan_3"><span class="icon_index in_cruis"><i class="yhyfont index_font">&#xe65c</i></span>邮轮</span></div>
+                        </li>
+                        <li class="sail_around overpic">
+                            <div class="a_p" ng-click="goYachtList()"><span class="outspan_3"><span class="icon_index in_youtin"><i class="yhyfont index_font">&#xe662</i></span>游艇</span></div>
+                            <div class="a_p" ui-sref="waittingPage"><span class="outspan_3 treeword"><span class="icon_index in_tra_around"><i class="yhyfont index_font">&#xe663</i></span>串岛游</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <div class="thot findhot">
+                <div class="ttile finding">
+                    发现精彩
+                </div>
+            </div>
+            <section class="indexMainList">
+
+                <div class="mainlist">
+                    <ul class="clearfix">
+                        <li ui-sref="ticket/index"><span class="index_S in_scenic"><i class="yhyfont icon-certer_attrction per_35font"></i></span><p>景点门票</p></li>
+                        <li ui-sref="hotel/index"><span class="index_S in_hotel"><i class="yhyfont icon-certer_hotel per_35font"></i></span><p>酒店民宿</p></li>
+                        <!--<li><a href="http://m.jryghq.com/guide/xiamen/"><span class="main_pic pic_guider"><img src="/yihaiyou/image/icon_indexS.png"></span><p>预约导游</p></a></li>-->
+                        <li ui-sref="waittingPage"><span class="index_S in_guider"><i class="yhyfont icon-certer_people1 per_35font"></i></span><p>预约导游</p></li>
+                        <li ui-sref="guide/index"><span class="index_S in_guide"><i class="yhyfont icon-icon-travel per_35font"></i></span><p>游记攻略</p></li>
+                        <li ng-click="toBookingCar()"><span class="index_S in_car"><i class="yhyfont icon-certer_car per_35font"></i></span><p>专车预约</p></li>
+                        <li ui-sref="foodList"><span class="index_S in_food"><i class="yhyfont icon-icon-food per_35font"></i></span><p>美食</p></li>
+                        <!--<li><a href="http://m.shouliwang.com/AllCategory.html"><span class="main_pic pic_present"><img src="/yihaiyou/image/icon_indexS.png"></span><p>礼品</p></a></li>-->
+                        <li ui-sref="waittingPage"><span class="index_S in_present"><i class="yhyfont icon-icon-gift per_35font"></i></span><p>礼品</p></li>
+                        <li ui-sref="lvjiList"><span class="index_S in_electriguide"><i class="yhyfont icon-icon-tour per_35font"></i></span><p>电子导览</p></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="sec_thot">
+                <div class="thot">
+                    <div class="ttile">
+                        <span>热门邮轮旅游<label class="tuijian">推荐</label></span>
+                        <span ui-sref="cruiseShipIndex">更多></span>
+                    </div>
+                </div>
+                <!--<div class="con_pic" ng-click="goCruiseShipDetail(cruiseShip.id)"><img bn-lazy-src="{{cruiseShip.coverImage}}?imageView2/1/w/640/h/480/q/75"></div>-->
+                <!--<div class="con_nei" ng-click="goCruiseShipDetail(cruiseShip.id)">-->
+                    <!--<div class="con_nei_left">-->
+                        <!--<p><span><span class="yuan12">¥</span>{{cruiseShip.price}}</span>起</p>-->
+                        <!--<p class="chufa">{{cruiseShip.startDate | date:'yyyy-MM-dd'}}</p>-->
+                    <!--</div>-->
+                    <!--<div class="con_nei_right">-->
+                        <!--<p>{{cruiseShip.name}}</p>-->
+                        <!--<p>航线介绍>></p>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="hotlinelist">
+                    <div ng-click="goCruiseShipDetail(tempCruseShip.id)" class="listone" ng-repeat="tempCruseShip in cruiseShipList">
+                        <div class="list_left"><img bn-lazy-src="{{tempCruseShip.coverImage}}?imageView2/1/w/640/h/480/q/75"></div>
+                        <div class="list_right">
+                            <ul>
+                                <li>{{tempCruseShip.name}}</li>
+                                <li><span><span class="yuan12">¥</span>{{tempCruseShip.price}}</span>起</li>
+                                <li>{{tempCruseShip.startDate | date:'yyyy-MM-dd'}} 出发</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="thot">
+                    <div class="ttile">
+                        <span>热门海上休闲<label class="tuijian">推荐</label></span>
+                        <span ng-click="goYachtList()">更多></span>
+                    </div>
+                </div>
+                <div class="hotlinesec">
+                    <div class="listone" ng-repeat="sailboat in ticketList" ng-click="goSailboatYachtDetail(sailboat.id)">
+                        <div class="list_left">
+                            <img bn-lazy-src="{{sailboat.productImg | getImgUrl}}?imageView2/1/w/640/h/480/q/75">
+                            <!--<img ng-if="sailboat.productImg = null || sailboat.productImg == ''" src="/yihaiyou/image/pic2.jpg">-->
+                        </div>
+                        <div class="list_right">
+                            <ul>
+                                <li>{{sailboat.name}}</li>
+                                <li><span><span class="yuan12">¥</span>{{sailboat.disCountPrice}}</span>起</li>
+                                <li>{{sailboat.productScore}}分</li>
+                                <li>地址：{{sailboat.address}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!--<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=641231092&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1073740620:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>-->
+    <!--<div class="combottom">-->
+        <!--<ul>-->
+            <!--<li>客服</li>-->
+            <!--<li>电脑版</li>-->
+            <!--<li ui-sref="personalIndex">我的</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+</div>

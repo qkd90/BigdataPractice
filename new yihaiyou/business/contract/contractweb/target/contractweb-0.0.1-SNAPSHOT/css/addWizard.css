@@ -1,0 +1,118 @@
+table td {padding-top:20px;}
+table td.label {padding-right: 10px; text-align: right; width: 120px;line-height:18px;}
+table td .tip {padding-left: 10px;color: #999;}
+table td table thead td {padding-top:0px;line-height: 24px;border: 1px #E0E0E0 solid; background-color:#E9E9E9; text-align: center;vertical-align: middle;}
+table td table tbody td {padding:0px 5px;line-height: 36px;border: 1px #E0E0E0 solid;}
+.clear{clear: both;}
+.clearfix:after {content:"\200B"; display:block; height:0; clear:both; }
+.clearfix { *zoom:1;}
+.red {color: red !important;}
+.bold-size18 {font-weight:bold !important;font-size:18px !important;}
+.green-bold {color: green !important;font-weight: bold;}
+.orange-bold {color: orange !important;font-weight: bold;}
+.remark{background-color:#F7F7F7;padding:10px 10px 0px 20px;}
+.remark div{padding-bottom:10px;}
+.width100{width: 110px !important;}
+.width150{width: 176px !important;}
+.rdo-div{float: left;width:88px;vertical-align: middle; margin-top: 3px;}
+.rdo-label{float: left;display: block;line-height: 28px;margin-left: 5px;}
+.ck-div{float: left;width: 80px;height: 20px;vertical-align: middle;padding-top: 3px;}
+.ck-label{float: left;display: block;line-height: 12px;margin-left: 5px;}
+.left-block{float: left;display: block;}
+.line-scenic {padding-left: 5px;color: #999;}
+.clr-float{clear: both;}
+.pub h2 {font-size: 24px;font-weight: bold;}
+.pub h2 span{font-size: 24px;font-weight: bold;}
+.pub p {font-size: 16px;font-weight: bold;margin-top: 20px;margin-bottom: 20px;margin-left:15px;color: green;}
+.pub p span{font-size: 18px;color: orange;}
+.line-btn {border: 1px #E0E0E0 solid;color: orange;font-weight: bold;}
+.line-btn-add {border: 1px #E0E0E0 solid;color: green;font-weight: bold;}
+.price-set{background-color: #FFF6C3;border: 1px #E0E0E0 solid;padding: 6px;}
+.price-set > div{padding: 8px;}
+div fieldset.fieldset{float: left;border: 1px solid #E0E0E0;padding:5px; margin-right: 10px;}
+.row_hd {height: 27px;line-height: 27px;border-bottom: 1px solid #ddd;background: #f4f4f4;margin: 5px 15px 10px 5px;padding-left: 10px;font-weight: 700;color: #666;}
+tr.odd {background-color:#FFF;}
+tr.even {background-color:#F7F7F7;}
+
+.editDivClass { height: 23px; line-height: 23px; border-bottom: 1px dotted #c2c6c9;}
+.editDivClass:focus {border:1px solid #7ccbcc}
+.label-name {
+    float: left;
+    width: 13%;
+    text-align: right;
+    margin-right: 10px;
+}
+.label-value {
+    width: 87%;
+    /*float: right;*/
+}
+.label-father{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 100%;
+    height: 22px;
+}
+.day-content-btn {
+    margin-left: 156px;
+}
+.day-content-label{
+    float: left;
+    width: 80px;
+    text-align: right;
+}
+.none-border {
+    border: none;
+}
+.iconfont-hover:hover {
+    cursor: pointer;
+    color: red;
+}
+.time-add-title{
+    border-bottom: 2px solid white; padding:10px; background-color: rgb(244, 244, 244);
+}
+
+.day-time-table {
+    width: 100%;
+}
+.day-time-table-td {
+    width: 85px;
+    text-align: right;
+}
+.day-table-td {
+    width: 85px;
+    text-align: right;
+}
+.div_img_level_1 {
+    float: left;
+    width: 40%;
+    padding: 10px;
+    height: 200px;
+}
+
+.table-time {
+    border: 1px solid #c2c6c9;
+    padding:5px;
+    margin-bottom: 10px;
+    width:97%;
+}
+
+.link-btn {
+    font-weight: 800;
+    width: 100%;
+    height: 100%;
+    color: blue;
+    text-decoration: none;
+}
+.link-btn:hover {
+    /*outline: #0000FF dotted thin;*/
+    text-decoration: none;
+    color: #fcff58;
+}
+.price-set .ck-div .left-block {
+    height: 12px;
+    line-height: 12px;
+}
+.rec-a {
+    cursor: hand;
+    color: #0000cc;
+}

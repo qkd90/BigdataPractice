@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.weixin.mapper.WxReplyLogMapper">
+	<insert id="insert" parameterType="WxReplyLog" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_wx_reply_log
+			(
+				id,
+				event,
+				event_key,
+				type,
+				open_id,
+				content,
+				status,
+				exception,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{event},
+				#{eventKey},
+				#{type},
+				#{openId},
+				#{content},
+				#{status},
+				#{exception},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="WxReplyLog">
+		update tb_wx_reply_log
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="event != null and '' != event"> event_key = #{event},</if>
+			<if test="eventKey != null and '' != eventKey"> eventKey = #{eventKey},</if>
+			<if test="type != null and '' != type"> type = #{type},</if>
+			<if test="openId != null and '' != openId"> open_id = #{openId},</if>
+			<if test="content != null and '' != content"> content = #{content},</if>
+			<if test="status != null and '' != status"> status = #{status},</if>
+			<if test="exception != null and '' != exception"> exception = #{exception},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="WxReplyLog">
+		delete from
+			tb_wx_reply_log
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="WxReplyLog">
+		select
+			*
+		from
+			tb_wx_reply_log
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="WxReplyLog">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_wx_reply_log
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="event != null and '' != event"> and event = #{event} </if>
+			<if test="eventKey != null and '' != eventKey"> and event_key = #{eventKey} </if>
+			<if test="type != null and '' != type"> and type = #{type} </if>
+			<if test="openId != null and '' != openId"> and open_id = #{openId} </if>
+			<if test="content != null and '' != content"> and content = #{content} </if>
+			<if test="status != null and '' != status"> and status = #{status} </if>
+			<if test="exception != null and '' != exception"> and exception = #{exception} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+</mapper>

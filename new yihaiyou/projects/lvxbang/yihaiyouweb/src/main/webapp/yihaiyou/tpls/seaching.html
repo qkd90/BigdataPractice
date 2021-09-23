@@ -1,0 +1,97 @@
+<!--<link rel="apple-touch-icon" sizes="72x72" href="http://m.tuniu.com/apple-touch-icon.png">-->
+<!--<link rel="apple-touch-icon" sizes="114x114" href="http://m.tuniu.com/apple-touch-icon-retina.png">-->
+<div class="fullpage-fixed" ng-controller="SearchCtrl">
+    <div class="header">
+        <a ng-click="backPage()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        一海游
+    </div>
+    <div class="blank"></div>
+    <div class="m_header sticky_head" id="J_header">
+        <div class="m_header_search yhy_headerSearch" id="J_header-search">
+            <div class="search_bar">
+                <!--<a ng-click="backPage()"><span><img src="/yihaiyou/image/historyback_blue.png"></span></a>-->
+                <div class="search_cancel" ng-click="backPage()">取消</div>
+                <div class="search_main">
+                    <input id="input_search" contenteditable="true" style="padding: 0px 5px;" ng-model="keyword"
+                           placeholder="鼓浪屿" id="searchId" ng-change="lisChange()" class="J_hs-input">
+                    <span class="search_clear icon-delete"></span>
+                    <span class="search_button icon-search4" ng-click="searchLine()"></span>
+                </div>
+            </div>
+            <div class="search_pop">
+
+                <!--<div class="search_hot J_hs-hotword" ng-show="hotShow">-->
+                    <!--&lt;!&ndash;<div class="search_hot J_hs-hotword hide">&ndash;&gt;-->
+                    <!--<div class="title">热门搜索</div>-->
+                    <!--<ul class="keys clearfix">-->
+                        <!--<li ng-repeat="hot in hotAreaList" ng-click="selectCityCode(hot.id, hot.name)">-->
+                            <!--<div class="item">{{hot.name}}</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+
+
+                <!--<div class="search_more_destinations"><a href="#" ui-sref="selectCity"><i-->
+                        <!--class="icon icon-overseas"></i>更多热门目的地</a></div>-->
+                <div class="search_history J_hs-history">
+                    <div class="title newtitle">历史搜索<span class="clearhistory" ng-click="clearHis()">清除搜索历史</span></div>
+                    <ul class="lr-list">
+                        <li class="ablock" ng-repeat="his in hisKeywordList" ng-click="selectKeyword(his.keyword)">{{his.keyword}}</li>
+                    </ul>
+                    <!--<div class="clear_history J_hs-clear-history">清空历史</div>-->
+                </div>
+            </div>
+            <!--<div class="searching_shade" ng-show="darkShow"></div>-->
+            <!--<div class="searching_shade" ng-show="false"></div>-->
+            <div class="search-result no-result J_hs-result hide"
+                 style="text-align: left;position:absolute;left:0;top:45px;z-index:101;background-color:white;width:100%"
+                 ng-show="searchShow" id="seachList">
+
+
+                <!--<ul class="lr-list">-->
+                <!--<li class="Qseaching_moreli"  ng-repeat="line in resultList" ui-sref="lineDetail({id:{{line.id}}})" ng-bind-html="line.name | cutByLength:38:keyword | to_trusted"></li>-->
+                <!--</ul>-->
+            </div>
+            <ul class="lxb_search_suggestion J_hs-suggestion" ng-show="searchShow && !isDiy">
+
+                <li class="link-li_parent J_suggest-link noneborder">
+                    <!--<h1>厦门</h1>-->
+                    <!--<span class="tip">约821个结果</span>-->
+                    <ul class="sub-ul" style="border-top: none;">
+                        <li class="link-li J_suggest-link" ng-show="lineShow">
+                            <div class="sub-title">
+                                <span class="title-icon bg-line2"><i class="icon-line2"></i></span>
+
+                                <h2 h-title keyword="keyword" pro-type="'lineList'"><em>{{keyword}}</em>的产品线路</h2>
+                                <!--<span class="tip">约821个结果</span>-->
+                            </div>
+                            <div class="tag-ctn">
+                                <ul class="lr-list">
+                                    <li class="Qseaching_moreli" ng-repeat="line in lineList"
+                                        ui-sref="lineDetail({id:{{line.id}}})"
+                                        ng-bind-html="line.name | cutByLength:38:keyword | to_trusted"></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="link-li J_suggest-link" ng-show="scenicShow">
+                            <div class="sub-title">
+                                <span class="title-icon bg-ticket"><i class="icon-ticket"></i></span>
+
+                                <h2 h-title keyword="keyword" pro-type="'scenicList'"><em>{{keyword}}</em>的景点</h2>
+                                <!--<span class="tip">约54个结果</span>-->
+                            </div>
+                            <div class="tag-ctn">
+                                <ul class="lr-list">
+                                    <li class="Qseaching_moreli" ng-repeat="scenic in scenicList"
+                                        ui-sref="scenicDetail({scenicId:{{scenic.id}}})"
+                                        ng-bind-html="scenic.name | cutByLength:38:keyword | to_trusted"></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>

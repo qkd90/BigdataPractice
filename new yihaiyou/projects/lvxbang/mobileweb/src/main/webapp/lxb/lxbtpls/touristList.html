@@ -1,0 +1,26 @@
+<div ng-controller="touristListCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">选择常用游客</a></li>
+            <li class="pull-right">
+                <button type="button" class="fabu btn" ng-click="submit()">确定</button>
+            </li>
+        </ul>
+    </div>
+    <div id="yjcontainer" class="clearfix">
+        <div ng-if="!loaded"><div class="yuloading"><span>数据加载中...</span></div></div>
+        <div class="youkelist clearfix" ng-if="touristList.length > 0">
+            <h3 class="text-center">已选择<span id="selectNum" ng-bind="selectedAdultTourist.length + selectedChildTourist.length"></span>/{{touristList.length}}游客</h3>
+            <ul>
+                <li ng-repeat="tourist in touristList" ng-click="edit(this)">
+                    <span class="pull-left">{{tourist.name}}</span>
+                    <span class="pull-right">
+                        <!--<input linetouristcheck type="checkbox" checked="checked" ng-show="tourist.check" value=""/>-->
+                        <input linetouristcheck type="checkbox" value=""/>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mybottom sirendz text-center col-xs-12"><a ng-click="addTourist()"><span>添加常用旅客</span></a></div>
+</div>

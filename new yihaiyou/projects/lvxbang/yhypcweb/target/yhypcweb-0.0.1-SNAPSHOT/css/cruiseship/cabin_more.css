@@ -1,0 +1,158 @@
+.wrap-box{
+    padding-bottom: 60px;
+}
+.wrap-box .wrap{
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrap-box .wrap .bread-nav{
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+    line-height: 16px;
+}
+.wrap-box .wrap .bread-nav i{
+    font-style: normal;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.wrap-box .wrap .bread-nav a{
+    color: #333;
+    font-size: 14px;
+}
+.wrap-box .wrap .bread-nav a:hover{
+    color: #f80;
+}
+.wrap-box .wrap .cabin-nav-wrap{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.wrap-box .wrap .cabin-nav-wrap label{
+    font-size: 16px;
+    color: #666;
+    line-height: 32px;
+    margin-right: 10px;
+}
+.wrap-box .wrap .cabin-nav-wrap .cabin-nav li{
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    line-height: 32px;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.wrap-box .wrap .cabin-nav-wrap .cabin-nav li.active{
+    background: #3996fa;
+    color: #fff;
+}
+.wrap-box .wrap .cabin-content .cabin-group h5{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 38px;
+    padding-left: 6px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-header{
+    padding-left: 6px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #999;
+    line-height: 32px;
+    text-align: left;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-header .header-img{
+    width: 160px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-header .header-name{
+    width: 340px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-header .header-person{
+    width: 110px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-header .heaer-floor{
+    width: 160px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-header .header-area{
+    width: 140px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-header .header-window{
+    width: 200px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group{
+    padding-left: 6px;
+    border-bottom: 1px dashed #dbdbdb;
+    margin-bottom: 34px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .body-group li{
+    font-size: 16px;
+    color: #333;
+    line-height: 100px;
+    text-align: left;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .body-group .cabin-img{
+    width: 160px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .body-group .cabin-img img{
+    width: 120px;
+    height: 80px;
+    margin-top: 10px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .body-group .cabin-name{
+    width: 340px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .body-group .cabin-person{
+    width: 110px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .body-group .cabin-floor{
+    width: 160px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .body-group .cabin-area{
+    width: 140px;
+}.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .body-group .cabin-area sup{
+    font-size: 12px;
+    line-height: 12px;
+ }
+
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .body-group .cabin-window{
+    width: 200px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .body-group .cabin-operation{
+    width: 60px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #3996fa;
+    text-align: center;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .body-group .cabin-operation i{
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    background: url(/image/icon_new_cabin_more_down.png) no-repeat center;
+    background-size: contain;
+    vertical-align: baseline;
+    margin-left: 6px;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .body-group .cabin-operation.active i{
+    background: url(/image/icon_new_cabin_more_up.png) no-repeat center!important;
+    background-size: contain;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .cabin-txt{
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+    text-align: left;
+    width: 1000px;
+    margin-left: 160px;
+    margin-bottom: 10px;
+    margin-top: -40px;
+    display: inline-block;
+}
+.wrap-box .wrap .cabin-content .cabin-group .cabin-body .cabin-body-group .cabin-txt a{
+    display: inline-block;
+    color: #3996fa;
+    padding-left: 20px;
+}

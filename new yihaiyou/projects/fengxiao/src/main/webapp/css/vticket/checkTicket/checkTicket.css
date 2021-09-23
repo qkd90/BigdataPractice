@@ -1,0 +1,193 @@
+*{
+	margin:0;
+	padding:0;
+}
+html{
+	font-size: 62.5%;
+}
+
+.clear {
+	clear: both;
+}
+.clearfix:after {
+	content:"\200B"; display:block; height:0; clear:both; 
+}
+.clearfix { 
+	*zoom:1;
+}
+
+.checkTicket {
+	width: 100%;
+	overflow: hidden;
+	background-color: #f0f0f0;
+}
+
+.checkTicket .checkTitle {
+	margin-top: 40%;
+	color: #2a8ffa;
+	font-size:2.5rem;
+	font-family: '苹方';
+	text-align: center;
+}
+
+.checkTicket .checkCode {
+	width: 78%;
+	max-width: 500px;
+	height: 48px;
+	margin:35px auto;
+}
+
+.checkTicket .checkcode2 {
+	margin-top: 30px;
+}
+
+.checkTicket .checkCode input {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border: 1px solid #999;
+    border-radius: 4px;
+    font-size:1.5rem;
+    color: #666;
+    font-family: '苹方';
+    text-indent: 20px;
+}
+
+.checkTicket .checkCode button {
+	background-color: #2a8ffa;
+	color: #fff;
+	font-size:1.7rem;
+	font-family: '苹方';
+	width: 100%;
+	height: 100%;
+	border-radius:4px;
+	line-height: 48px;
+	text-align:center;
+	border: none;
+    outline: none;
+}
+
+.checkTicket .checkshadow {
+	position:fixed;
+	left: 0;
+	top: 0;
+	z-index: 101;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(0,0,0,0.5);
+}
+
+.checkTicket .stateBox {
+	width: 80%;
+	max-width: 400px;
+	height: 38%;
+	max-height: 360px;
+	background-color: #fff;
+	position: fixed;
+	border-radius:5px;
+	z-index: 101;
+}
+
+
+
+
+.checkTicket .stateBox .pic {
+	width: 100%;
+	height: 60px;
+	background:url(../img/icon-success.png) no-repeat center center;
+	background-size: 40px;
+}
+
+.checkTicket .stateBox p.checkstate {
+	text-align: center;
+	font-size: 2.0rem;
+	color: #017eff;
+	font-family: '苹方';
+}
+
+.checkTicket .stateBox .checkBtn {
+	width: 70%;
+	height: 35px;
+	border:1px solid #5f9aff;
+	border-radius:5px;
+	margin: 15px auto;
+	box-shadow: 0 1px 1px #ccc;
+}
+
+.checkTicket .stateBox .checkBtn button {
+	font-size: 1.7rem;
+	text-align: center;
+	line-height: 35px;
+	width: 100%;
+	height: 100%;
+	border:none;
+	outline: none;
+	font-family: '苹方';
+}
+
+.checkTicket .stateBox .checkBtn button.continue {
+	background:none!important;
+	color: #999!important;
+}
+
+/*验票成功*/
+.checkTicket .successbox .pic {
+	background:url(../img/icon-success.png) no-repeat center center;
+	background-size: 40px;
+}
+
+.checkTicket .successbox p.checkstate {
+	color: #017eff;
+}
+
+.checkTicket .successbox .checkBtn {
+	border:1px solid #5f9aff;
+}
+
+.checkTicket .successbox .checkBtn button.stop {
+	background:linear-gradient( #089fff, #5795ff,#488cff);
+	color: #fff;
+	
+}
+
+/*验票失败*/
+.checkTicket .failbox .pic {
+	background:url(../img/icon-failurer.png) no-repeat center center;
+	background-size: 40px;
+}
+
+.checkTicket .failbox p.checkstate {
+	color: #ff4141;
+}
+
+.checkTicket .failbox .checkBtn {
+	border:1px solid #ffa1a1;
+}
+
+.checkTicket .failbox .checkBtn button.stop {
+	background:linear-gradient( #ff6868, #ff5151,#ff3b3b);
+	color: #fff;
+	
+}
+
+/*验票失败已验过*/
+.checkTicket .checkedbox .pic {
+	background:url(../img/icon-failurey.png) no-repeat center center;
+	background-size: 40px;
+}
+
+.checkTicket .checkedbox p.checkstate {
+	color: #ff4141;
+}
+
+.checkTicket .checkedbox .checkBtn {
+	border:1px solid #ffa1a1;
+}
+
+.checkTicket .checkedbox .checkBtn button.stop {
+	background:linear-gradient( #ffa031, #ff9924,#ff9318);
+	color: #fff;
+	
+}
+
+

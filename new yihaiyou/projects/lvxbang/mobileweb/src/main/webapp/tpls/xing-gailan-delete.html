@@ -1,0 +1,66 @@
+<div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+  <ul>
+    <li class="pull-left"><a href="javascript:history.go(-1)" class="goback-close"><img src="images/ico/close.png" /></a></li>
+    <li class="pull-right">
+     <button type="button" class="fabu ico-delete" data-toggle="modal" data-target="#deletemodal">删除</button>
+    </li>
+  </ul>
+</div>
+<div id="yjcontainer" class="clearfix bodybg">
+  <div class="xlgllist clearfix">
+    <ul id="addlist">
+      <li id="touchArea">
+        <a>
+          <span class="d pull-left">D1</span>
+          <h2 class="pull-left">厦门>上海</h2>
+        </a>
+      </li>
+      <li id="touchArea">
+        <a>
+          <span class="d pull-left">D2</span>
+          <h2 class="pull-left subtitle">厦门>上海<small>外滩>田子坊>田子坊</small></h2>
+        </a>
+      </li>
+      <li>
+        <a>
+          <span class="d pull-left">D3</span>
+          <h2 class="pull-left">厦门>上海</h2>
+        </a>
+      </li>
+      <li>
+        <a>
+          <span class="d pull-left">D4</span>
+          <h2 class="pull-left subtitle">厦门>上海<small>外滩>田子坊>田子坊</small></h2>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="xlgladd">
+        <button id="addday" class="center-block text-center"><span>增加一天</span></button>
+  </div>
+</div>
+<div class="mybottom xing-next text-center col-xs-12"><a href="#"><span>下一步添加交通</span></a></div>
+<!--删除弹窗-->
+<div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="addmodal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content text-center">
+      <div class="modal-header"><h4 class="modal-title text-left">提示</h4></div>
+      <div class="modal-body text-left">确定删除所选天的线路？</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-left" data-dismiss="modal" style="width: 49%">取消</button>
+        <button type="button" class="btn btn-primary" style="width: 49%">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="/libs/jquery/Sortable.min.js"></script>
+<script>
+$("#addday").click(function(){
+  $("#addlist").append("<li><a><span class='d pull-left'>D3</span><h2 class='pull-left'>厦门>上海</h2></a></li>");
+});
+//拖动排序
+var list = document.getElementById("addlist");
+new Sortable(list); // That's all.
+//长按
+  
+</script>

@@ -1,0 +1,173 @@
+body {
+    background: #f3f3f3;
+}
+
+.header-wrap {
+    background: #fff;
+    margin-bottom: 20px;
+}
+.header-wrap .header {
+    width: 1180px;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 22px;
+    background: #fff;
+}
+.header-wrap .header .logo-wrap {
+    float: left;
+    width: 376px;
+    padding-top: 7px;
+    padding-bottom: 4px;
+}
+.header-wrap .header .logo-wrap .logo {
+    float: left;
+    margin-right: 14px;
+}
+.header-wrap .header .logo-wrap .logo-link {
+    float: right;
+    border-left: 1px solid #e0e0e0;
+    width: 70px;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12px;
+    line-height: 24px;
+}
+.header-wrap .header .logo-wrap .logo-link a {
+    font-family: "宋体";
+}
+.header-wrap .header .logo-wrap .logo-link a:nth-of-type(1) {
+    color: #3488e2;
+}
+.header-wrap .header .logo-wrap .logo-link a:nth-of-type(2) {
+    color: #666;
+}
+.header-wrap .header .contact-info {
+    float: right;
+    width: 270px;
+    height: 45px;
+    background-color: #efefef;
+    border-radius: 30px;
+    padding-top: 15px;
+    font-size: 12px;
+}
+.header-wrap .header .contact-info .online-contact {
+    float: left;
+    width: 55px;
+    height: 32px;
+    background: url("/image/order-top-icon-online.png") no-repeat left center;
+    padding-left: 35px;
+    color: #f80;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+.header-wrap .header .contact-info .online-contact span {
+    font-size: 11px;
+    display: block;
+}
+.header-wrap .header .contact-info .online-contact a {
+    color: #f80;
+    font-size: 12px;
+    display: block;
+}
+.header-wrap .header .contact-info .tel-contact {
+    float: left;
+    width: 100px;
+    height: 32px;
+    background: url("/image/order-top-icon-tel.png") no-repeat left center;
+    padding-left: 35px;
+    color: #3996fa;
+}
+.header-wrap .header .contact-info .tel-contact span {
+    font-size: 11px;
+    display: block;
+}
+.header-wrap .header .contact-info .tel-contact a {
+    color: #3996fa;
+    font-size: 12px;
+    display: block;
+    font-weight: bold;
+    line-height: 20px;
+}
+/*.header_order {
+    width: 100%;
+    background-color: #fff;
+}
+
+.header_order .head_order {
+    width: 1200px;
+    height: 96px;
+    margin-bottom: 20px;
+    font-family: 'SimSun';
+}
+
+.header_order .head_order .logo {
+    width: 366px;
+    height: 48px;
+    margin-top: 24px;
+    float: left;
+    border-right: 1px solid #e0e0e0;
+}
+
+.head_order .logo img {
+    width: 90%;
+    margin: auto;
+    display: block;
+}
+
+.header_order .head_order .myonehaiyou {
+    float: left;
+    width: 70px;
+    height: 48px;
+    margin-top: 24px;
+    padding-left: 20px;
+}
+
+.head_order .myonehaiyou p {
+    line-height: 24px;
+}
+
+.head_order .myonehaiyou p.p1 {
+    color: #3996fa;
+}
+
+.header_order .head_order .service {
+    float: right;
+    width: 270px;
+    height: 45px;
+    font-size: 12px;
+    margin-top: 18px;
+    padding: 12px 20px;
+    border-radius: 60px;
+    background-color: #efefef;
+}
+
+.head_order .service .serve_line {
+    width: 88px;
+    float: left;
+    background: url(/image/serve.png) no-repeat left center;
+}
+
+.head_order .service .serve_phone {
+    width: 130px;
+    float: right;
+    background: url(/image/phone.png) no-repeat left center;
+}
+
+.service .serve_line p {
+    padding-left: 36px;
+    line-height: 18px;
+    color: #ff8800;
+}
+
+.service .serve_phone p {
+    padding-left: 36px;
+    line-height: 19px;
+    color: #3996fa;
+}
+
+.service .serve_phone p.code {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+}*/

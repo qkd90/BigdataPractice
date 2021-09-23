@@ -1,0 +1,80 @@
+﻿.import {
+}
+.import .data-box{ width:620px; height:480px; background:url(../images/all_bg.jpg) no-repeat; border:1px solid #d5d5d5; border-radius:3px; margin:0px auto; position:relative;}
+.import .data-box ul li{ position:absolute; z-index:999;}
+.import .data-box ul li.close{ width:15px; height:15px; display:block; top:6px; right:6px;}
+.import .data-box ul li.close button{ width:15px; height:15px; background:url(../images/close_icon.png) no-repeat scroll 0 0 transparent; display:block; cursor:pointer; border:0;}
+.import .data-box ul li.close button:hover{ background-position:0 -15px;}
+/*数据转移第一步*/
+.import .data-first{ width:620px; height:480px; background:url(../images/import_bg01.png) no-repeat scroll 0 0 transparent; position:relative; z-index:2;}
+.import .data-first input ,.import .data-first button {
+    border:0;
+}
+.import .data-first ul li{ position:absolute; z-index:999;}
+.import .data-first ul li.tit-text{ left:165px; top:125px;}
+.import .data-first ul li.tit-text h1{ width:400px; font-size:20px; line-height:30px; font-family:tahoma,arial,Microsoft Yahei,宋体; font-weight:600; text-align:center;}
+.import .data-first ul li.tit-text p{ width:300px; font-size:16px; line-height:25px; font-family:tahoma,arial,Microsoft Yahei,宋体; color:#bc0000; font-weight:600; text-align:center; padding:3px 50px;}
+.import .data-first ul li.transfer{ left:170px; top:250px;}
+.import .data-first ul li.transfer input.path{ width:228px; height:28px; text-indent:0.5em; color:#707070; border:1px solid #bdbdbd; border-radius:3px;}
+.import .data-first ul li.transfer input.path:focus {
+    border:1px solid #3b9ad0;
+}
+.import .data-first ul li.transfer input.path-into{ width:80px; height:30px; cursor:pointer; border:1px solid #bdbdbd; border-radius:3px; background: -webkit-linear-gradient(top,#f4f4f4,#fdfdfd); box-shadow:0px 0px 1px rgba(255,255,255,1) inset;}
+.import .data-first ul li.transfer input.path-into:hover{ border:1px solid #009ccf; box-shadow: 0px 0px 3px rgba(115,224,253,0.75) inset;}
+.import .data-first ul li.transfer span{ line-height:24px; padding-left:90px;}
+.import .data-first ul li.transfer span em{ font-style: normal; color:#ff0000;}
+.import .data-first ul li.guide-into{ left:420px; top:315px;}
+.import .data-first ul li.guide-into input{ width:150px; height:49px; background:url(../images/into_icon.png) no-repeat scroll 0 0 transparent; cursor:pointer;}
+.import .data-first ul li.guide-into input:hover{ background-position:0 -49px;}
+.import .data-first ul li.no-alert{ left:11px; bottom:10px;}
+.import .data-first ul li.no-alert input{ position:relative; top:3px; margin-right:6px;}
+.import .data-first ul li.import-choose{ top:310px; left:253px;}
+.import .data-first ul li.import-choose input{ position:relative; top:2px; margin-right:6px;}
+
+
+
+/*数据转移第二步*/
+.import .data-second{ width:620px; height:480px; background:url(../images/import_bg02.png) no-repeat scroll 0 0 transparent; position:relative; z-index:3;}
+.import .data-second input ,.import .data-second button {
+    border:0;
+}
+.import .data-second ul li{ position:absolute; z-index:999;}
+.import .data-second ul li.tit-text02{ left:90px; top:112px; font-size:18px; line-height:24px; font-family:tahoma,arial,Microsoft Yahei,宋体; color:#bc0000; font-weight:600;}
+.import .data-second ul li.progress-bar{ width:530px; left:45px; top:370px;}
+.import .data-second ul li.progress-bar dt{ height:30px; line-height:30px;}
+.import .data-second ul li.progress-bar dt span{ position:absolute;}
+.import .data-second ul li.progress-bar dt span.left{ left:0;}
+.import .data-second ul li.progress-bar dt span.right{ right:0;}
+.import .data-second ul li.progress-bar dd{ width:528px; height:13px; padding:1px; background:url(../images/progress_bg.png) no-repeat scroll 0 0 transparent;}
+.import .data-second ul li.progress-bar dd span{ display:block; height:12px; background:url(../images/progress_icon.png) no-repeat scroll 0 0 transparent;}
+
+/*数据转移第三步*/
+.import .data-third{ width:620px; height:480px; background:url(../images/import_bg03.png) no-repeat scroll 0 0 transparent; position:relative; z-index:4;}
+.import .data-third input ,.import .data-third button {
+    border:0;
+}
+.import .data-third ul li{ position:absolute; z-index:999;}
+.import .data-third ul li.tit-text03{ width:312px; left:225px; top:190px;}
+.import .data-third ul li.tit-text03 h1{ font-size:20px; line-height:30px; font-family:tahoma,arial,Microsoft Yahei,宋体; color:#bc0000; font-weight:600; text-align:center;}
+.import .data-third ul li.use-into{ left:306px; top:250px;}
+.import .data-third ul li.use-into input{ width:150px; height:49px; background:url(../images/use_icon.png) no-repeat scroll 0 0 transparent; cursor:pointer; }
+.import .data-third ul li.use-into input:hover{ background:url(../images/use_icon.png) no-repeat scroll 0 -49px transparent; }
+
+/*弹出窗口确认转移*/
+.import .prompt-bar{ width:380px; margin:0px auto; position:relative; z-index:1000;  top:-360px; background:none scroll 0 0 #ffffff;}
+.import .prompt-bar ul li{ position:relative; z-index:1001;}
+.import .prompt-bar ul li.headline{ height:30px; border-top:1px solid #09c1f2; border-bottom:1px solid #339bcc; border-radius:3px 3px 0 0; background:none scroll 0 0 #0f9cdf; width:100%;}
+.import .prompt-bar ul li.headline dt{ color:#ffffff; line-height:30px; text-indent:1em;}
+.import .prompt-bar ul li.headline dd{ position:absolute; right:-1px; top:-1px;}
+.import .prompt-bar ul li.headline dd input{ width:26px; height:21px; background:url(../images/btn_close_0.png) no-repeat scroll 0 0 transparent; cursor:pointer; border-radius:0 3px 0 0;}
+.import .prompt-bar ul li.headline dd input:hover{ background-position:-52px 0;}
+.import .prompt-bar ul li.text-state{ height:30px; width:100%; line-height:30px; text-align:center; border-top:3px solid #fcfcfc; border-bottom:1px solid #e1edf7;}
+.import .prompt-bar ul li.content{ padding:5px 15px;}
+.import .prompt-bar ul li.content h6{ height:20px; line-height:20px; font-style:normal; font-size:12px; font-weight:normal;}
+.import .prompt-bar ul li.content h6.fault{ color:#ff0000;}
+.import .prompt-bar ul li.content p{ padding-top:10px; line-height:25px; }
+.import .prompt-bar ul li.content p label{ width:70px; display:block; float:left; text-align:center;}
+.import .prompt-bar ul li.content p input{ width:245px; height:25px; border:1px solid #e3e9ef; border-radius:3px; border-top-color:#abadb3; text-indent:0.5em; color:#606060;}
+.import .prompt-bar ul li.ensure-bar{ padding:10px 20px;}
+.import .prompt-bar ul li.ensure-bar dt{ color:#909090; line-height:30px;}
+.import .prompt-bar ul li.ensure-bar dd{ position:absolute; right:20px; top:10px;}

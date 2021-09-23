@@ -1,0 +1,18 @@
+#edit_panel{
+	padding-left: 10px;
+}
+#edit_panel td{
+	padding: 4px;
+}
+#edit_dialog{
+	padding-left: 10px;
+}
+#edit_dialog td{
+	padding: 4px;
+}
+#show_panel td{
+	padding: 4px;
+}
+#show_panel input{border: 0;}
+.r_right{margin-left: 9px;margin-top: 3px;}
+.resourceUl li {width: 90px;float: left;border-right: 1px solid #ccc;color: blue;}

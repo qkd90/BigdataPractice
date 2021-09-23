@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.plan.mapper.HomepagePlanMapper">
+	<insert id="insert" parameterType="HomepagePlan" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_homepage_plan
+			(
+				id,
+				plan_id,
+				user_id,
+				city_id,
+				recommend_weight,
+				recommend_name,
+				recommend_reason,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{planId},
+				#{userId},
+				#{cityId},
+				#{recommendWeight},
+				#{recommendName},
+				#{recommendReason},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="HomepagePlan">
+		update tb_homepage_plan
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="planId != null and '' != planId"> plan_id = #{planId},</if>
+			<if test="userId != null and '' != userId"> user_id = #{userId},</if>
+			<if test="cityId != null and '' != cityId"> city_id = #{cityId},</if>
+			<if test="recommendWeight != null and '' != recommendWeight"> recommend_weight = #{recommendWeight},</if>
+			<if test="recommendName != null and '' != recommendName"> recommend_name = #{recommendName},</if>
+			<if test="recommendReason != null and '' != recommendReason"> recommend_reason = #{recommendReason},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="HomepagePlan">
+		delete from
+			tb_homepage_plan
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="HomepagePlan">
+		select
+			*
+		from
+			tb_homepage_plan
+		where
+			city_id = #{cityId}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="HomepagePlan">
+		select 
+			 	id,
+				plan_id,
+				user_id,
+				city_id,
+				recommend_weight,
+				recommend_name,
+				recommend_reason,
+				modify_time,
+				create_time
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+        tb_homepage_plan
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="planId != null and '' != planId"> and plan_id = #{planId} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="cityId != null and '' != cityId"> and city_id = #{cityId} </if>
+			<if test="recommendWeight != null and '' != recommendWeight"> and recommend_weight = #{recommendWeight} </if>
+			<if test="recommendName != null and '' != recommendName"> and recommend_name = #{recommendName} </if>
+			<if test="recommendReason != null and '' != recommendReason"> and recommend_reason = #{recommendReason} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		</where>
+	</sql>
+</mapper>

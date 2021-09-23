@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+div {
+	background-color: #ffffff;
+}
+
+.clearall {
+	clear: both;
+}
+.itemClose{
+	cursor:pointer;
+}
+#data-menu ul {
+	width: 100%
+}
+
+#data-menu ul li {
+	float: left;
+	width: 200px;
+}
+
+#aa .item div {
+	display: inline-block;
+	float: left;
+	width: 90px;
+	cursor:pointer;
+	height: 37px;
+	line-height: 37px;
+	background-color : #818c9d;
+	margin: 3px;
+	text-align: center;
+	font-size: 12px;
+}

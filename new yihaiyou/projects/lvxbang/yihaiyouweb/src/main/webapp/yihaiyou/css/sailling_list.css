@@ -1,0 +1,191 @@
+.sailling_fir,.sailling_selection{width: 100%;background-color:#fff;}
+.sailling_fir .saill_search{padding:5px 15px;height: 40px;}
+.sailling_fir .saill_search .sail_top_search{width:100%;height: 30px;line-height: 30px;border:none;background:#eff2f7 url(../image/icon-sousuo_gray.png) no-repeat 10px center;
+               background-size: 15px 15px;font-size: 12px;text-indent: 30px;border-radius: 5px;outline: none;}
+.sailling_fir .sailling_index-pic{width:100%;height: 155px;background-color:#f0f0f0;margin-top:50px;}
+.sailling_fir .sailling_index-pic img{width:100%;height: 150px;}
+.sailling_fir .sailling_index-pic2{height: 165px;clear:both;margin-top:15px;}
+.sailling_fir .sailling_index-pic2 img{margin-top:10px;}
+.sailling_fir section.yt_fc{padding:15px;border-bottom: 6px solid #f0f0f0;}
+.sailling_fir section.yt_fc .saill_yt,.sailling_fir section.yt_fc .saill_fc{width: calc(50% - 2px);height: 30px;line-height: 30px;color: #333;
+               text-align: center;background-color: #eff2f7}
+.sailling_fir section.yt_fc .saill_yt a{display: block;color: #333}
+.sailling_fir section.yt_fc .saill_yt{float: left;}
+.sailling_fir section.yt_fc .saill_fc{float: right;}
+.sailling_fir section.yt_fc .saill_yt img,.sailling_fir section.yt_fc .saill_fc img{width: 35px;height: 25px;margin:0 5px 13px 0;}
+.sailling_fir .yt_fc_list{padding-top:15px;clear: both;}
+.sailling_fir .yt_fc_list ul{width: 100%}
+.sailling_fir .yt_fc_list ul li{width: calc(25% - 6px);height: 30px;float: left;line-height: 30px;margin-left: 8px;text-align: center;background-color: #eff2f7;
+                 border-radius: 3px;font-size:12px;}
+.sailling_fir .yt_fc_list ul li:nth-child(1),.sailling_fir .yt_fc_list ul li:nth-child(5){margin-left: 0}
+.sailling_fir .yt_fc_list ul li:nth-child(n+5){margin-top: 6px;}
+.sailling_fir section.playing{padding: 0 10px;}
+.sailling_fir section.playing .playing_hot{width: 100%;clear: both}
+.sailling_fir section.playing .playing_hot h3{height:40px;line-height:40px;font-size: 15px;}
+.sailling_fir section.playing .playing_hot h3 span{display:block;font-weight: 600;margin-top:10px;}
+.sailling_fir section.playing .playing_hot h3 span:nth-child(1){float: left;height: 18px;border-left: 4px solid #1bb54d;line-height: 18px;text-indent: 8px;}
+.sailling_fir section.playing .playing_hot h3 span:nth-child(2){float: right;color:#ee810b;font-size:12px;line-height:18px;}
+.sailling_fir section.playing .playing_hot ul{width: 100%;}
+.sailling_fir section.playing .playing_hot ul li{width: calc(50%);}
+.sailling_fir section.playing .playing_hot ul li:nth-child(odd){float: left;padding-right: 5px;}
+.sailling_fir section.playing .playing_hot ul li:nth-child(even){float: right;padding-left: 5px;}
+.sailling_fir section.playing .playing_hot ul li:nth-child(n+3){padding-bottom: 15px;}
+.sailling_fir section.playing .playing_hot ul li .playing_hot_list{width: 100%;}
+.sailling_fir section.playing .playing_hot ul li .playing_hot_list li{width: 100%;font-size: 14px;line-height: 24px;font-size:12px;}
+.sailling_fir section.playing .playing_hot ul li .playing_hot_list li:nth-child(1) img{width: 100%;height: 90px;}
+.sailling_fir section.playing .playing_hot ul li .playing_hot_list li:nth-child(2){overflow: hidden;width: 100%;text-overflow:ellipsis;white-space: nowrap;}
+.sailling_fir section.playing .playing_hot ul li .playing_hot_list li:nth-child(3){color: #ccc;}
+.sailling_fir section.playing .playing_hot ul li .playing_hot_list li:nth-child(3) span{color: #ff8f11;font-size: 15px;font-weight: bold}
+.sailling_fir section.playing .playing_hot ul li .playing_hot_list li{padding:0}
+
+.sailling_selection .sailSelectInput{min-width:240px;height: 30px;line-height: 30px;border:none;background:#fff url(../image/icon-sousuo_gray.png) no-repeat 10px center;
+               background-size: 15px 15px;font-size: 12px;text-indent: 30px;border-radius: 5px;outline: none;color: #aaa;margin-top:10px;}
+.sailling_selection .selbar{padding:0 15px;position:fixed;left:0;top:45px;width:100%;background-color:#fff;z-index:5;border-bottom: 1px solid #e0e0e0;}
+.sailling_selection .selbar ul{width: 100%;height:40px;}
+.sailling_selection .selbar ul li{width: 33%;height: 40px;float: left;line-height: 40px;text-align: center;font-size: 14px;white-space: nowrap;color:#888;}
+
+.sailling_selection .selbar ul li i {
+    display:inline-block;
+    width:15px;
+    height:10px;
+    background:url(../image/icon-graydown.png) no-repeat center center;
+    background-size:12px 6px;
+}
+
+.sailling_selection .selbar ul li .blue_down {
+    background:url(../image/icon-blueup.png) no-repeat center center;
+    background-size:12px 6px;
+}
+
+.sailling_selection .selbar ul li:nth-child(2){border-left:1px solid #ededed;border-right:1px solid #e0e0e0;}
+.sailling_selection .selbar ul li img{width: 10px;height: 6px;margin-left: 4px;}
+.sailling_selection .selbar .titleColor{color: #007eff;}
+.sailling_selection .selbar2{position:fixed;left:0;top:86px;width:100%;background-color:#fff;z-index:5;height:40px;border-bottom: 1px solid #e0e0e0;}
+.sailling_selection .selbar2 ul li{border:1px solid #e0e0e0;width:50px;height:26px;float:left;margin:7px 0 0 10px;line-height:25px;text-align:center;border-radius:3px;font-size:14px;}
+.sailling_selection .selbar2 .selrange{color:#007eff}
+.sailling_selection .sailSelectList{padding: 10px 15px;width: 100%;margin-top:131px;}
+.sailling_selection .sailSelectList ul{width: 100%}
+.sailling_selection .sailSelectList ul li{width: 100%;border-bottom: 1px solid #f3f3f3;padding-bottom: 10px;padding-top:10px;}
+.sailling_selection .sailSelectList ul li:nth-child(1){padding-top:0;}
+.sailling_selection .sailSelectList ul li div.pic{width: 33%;height: 93px;float: left;position:relative;}
+.sailling_selection .sailSelectList ul li div.pic img{width: 100%;height: 100%}
+.sailling_selection .sailSelectList ul li div.pic span{width:55px;height:18px;display:block;position:absolute;top:5px;left:0;background:url(../image/icon-ke.png) no-repeat center center;background-size:100%;line-height:18px;color:#fff;text-align:center;font-size:1rem;}
+.sailling_selection .sailSelectList ul li .sailListContain{width: calc(67% - 10px);float: right;position: relative;}
+.sailling_selection .sailSelectList ul li .sailListContain .linebooking{width: 58px;height: 24px;position: absolute;right: 0;bottom: 28px;background-color:#ff8501;color:#fff;line-height:25px;text-align:center;border-radius:4px;font-size:1.2rem;}
+/*background: url(../image/yuding.png) no-repeat center center;background-size: 40px 32px;*/
+.sailling_selection .sailSelectList ul li .sailListContain li{width: 100%;border-bottom: none;padding-bottom: 0px;padding-top:0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(1){font-size: 14px;height:25px;line-height: 25px;}
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(2){height:25px;}
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(2) span{}
+/*.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(2) .star img{width:56px;height:13px;margin-right:6px;}*/
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(2) .star {width: 76px;
+    height: 18px;
+    margin-right: 6px;
+    float: left;}
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(2) .xing_0 {
+    background: url(/yihaiyou/image/ico/0xing.png) no-repeat left;
+    background-size: 70px;
+   }
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(2) .xing_1 {
+    background: url(/yihaiyou/image/ico/1xing.png) no-repeat left;
+    background-size: 70px;
+}
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(2) .xing_2 {
+     background: url(/yihaiyou/image/ico/2xing.png) no-repeat left;
+     background-size: 70px;
+ }
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(2) .xing_3 {
+    background: url(/yihaiyou/image/ico/3xing.png) no-repeat left;
+    background-size: 70px;
+}
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(2) .xing_4 {
+    background: url(/yihaiyou/image/ico/4xing.png) no-repeat left;
+    background-size: 70px;
+}
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(2) .xing_5 {
+    background: url(/yihaiyou/image/ico/5xing.png) no-repeat left;
+    background-size: 70px;
+}
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(2) .score{color: #999;
+    font-size: 13px;
+    margin-right: 15px;
+    float: left;}
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(2) .booking{color:#ccc;font-size:1.2rem;float:left;}
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(3){font-size: 12px;line-height: 20px;color: #ccc;}
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(3) span{color: #ff8501;font-size: 20px;font-weight: bold;}
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(4){font-size: 12px;color: #bbb;line-height: 25px}
+.sailling_selection .sailSelectList ul li .sailListContain li:nth-child(4) span{color:#333;}
+.sailling_selection .shadowbox{width: 100%;height: 664px;background-color: rgba(0,0,0,0.5);position: fixed;top: 90px;left: 0;z-index: 10;}
+.sailling_selection .all,.sailling_selection .expSel{width: 100%;position: fixed;top: 90px;left: 0;z-index: 100;background-color: #fff;font-size: 13px;border-top: 1px solid #f5f5f5;padding-bottom:40px}
+.sailling_selection .all .all_left{width: 33%;float: left;background-color: #f5f5f5;}
+.sailling_selection .all .all_left ul li{width: 100%;border-bottom: 1px solid #fff;height: 40px;line-height: 40px;text-align: center;color: #333;position: relative;}
+.sailling_selection .all .all_left ul li img{position: absolute;top: 50%;right: -3px;}
+.sailling_selection .all .all_right{width: 67%;float: left;overflow-y: scroll;height: 270px;}
+.sailling_selection .all .all_right ul{padding-right:15px;border-left: 1px solid #f5f5f5;}
+.sailling_selection .all .all_right ul li{text-indent: 20px;}
+.sailling_selection .all .all_left .firColor{color: #ff8501;}
+.sailling_selection .all .all_right .none{background: url(../image/none.png) no-repeat calc(100% - 15px) center;background-size: 15px 15px}
+.sailling_selection .all .all_right .gou{background: url(../image/gou.png) no-repeat calc(100% - 15px) center;background-size: 15px 15px}
+.sailling_selection .expSel,.sailling_selection .sorting{width: 100%;position: fixed;top: 90px;left: 0;z-index: 100;background-color: #fff;font-size: 13px;border-top: 1px solid #f5f5f5}
+.sailling_selection .expSel{}
+.sailling_selection .expSel ul,.sailling_selection .sorting ul{padding: 0 15px;}
+.sailling_selection .expSel ul li,.sailling_selection .sorting ul li,.sailling_selection .all .all_right ul li{width: 100%;height: 45px;line-height: 45px;color: #666;border-bottom: 1px solid #f5f5f5;text-align:center;}
+.sailling_selection .expSel ul li span{display: block;width: 33%;text-align: center;font-size: 14px;text-indent: -15px;}
+.sailling_selection .sorting{padding-bottom:40px}
+.sailling_selection .sorting ul li{text-align: center;}
+.sailling_selection_color{color: #007eff!important;}
+.bodyStopScroll{position: fixed;left: 0;top: 0;overflow: hidden;}
+.sailling_selection .all ul li{width: 100%;height: 45px;line-height:45px;color: #666;border-top: 1px solid #f5f5f5;text-align:center}
+
+/*箭头向上*/
+.sailling_selection .arrow-up {
+    width:0;
+    height:0;
+    border-left:15px solid transparent;
+    border-right:15px solid transparent;
+    border-bottom:15px solid #0066cc;
+}
+
+/*箭头向下*/
+.sailling_selection .arrow-down {
+    width:0;
+    height:0;
+    border-left:15px solid transparent;
+    border-right:15px solid transparent;
+    border-top:15px solid #0066cc;
+}
+.sailling_selection .sailSelectList .sailListContain .rmb1{
+    font-size:12px!important;
+    font-weight:500!important;
+}
+
+.saillingDate .fc-toolbar,.scenicDate .fc-toolbar {
+    margin-bottom:0;
+}
+
+.saillingDate .fc-center h2,.scenicDate .fc-center h2 {
+    font-size:1.5rem;
+    line-height:32px;
+}
+
+.saillingDate .fc-view-container table thead th,.scenicDate .fc-view-container table thead th {
+    font-size:1.4rem;
+}
+
+.saillingDate .fc-content span{
+    font-size:1.3rem;
+}
+
+.saillingDate thead tr td.fc-day-number {
+    font-size:1.2rem;
+}
+
+.scenicDate .fc button,.ferryData .fc button,.saillingDate .fc button {
+    font-size: 1.5em;
+    width:30px;
+}
+
+.saillingDate .fc-scroller {
+    overflow-y: visible;
+    overflow-x: visible;
+}

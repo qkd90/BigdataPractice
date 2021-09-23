@@ -1,0 +1,241 @@
+.hotelIndex img {
+	width: 100%;
+}
+
+.hotScenic img,.hotelHomestay img,.saillingboat img,.cruiseboat img,.travelNote img {
+	width: 100%;
+	transition: width 0.5s, left 0.5s, top 0.5s, transform 0.5s;
+    -webkit-transition: width 0.5s, left 0.5s, top 0.5s, -webkit-transform 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.hotScenic img:hover,.hotelHomestay img:hover,.saillingboat img:hover,.cruiseboat img:hover,.travelNote img:hover {
+	width: 120%;
+}
+
+
+.total {
+	width: 100%;
+	padding-bottom: 55px;
+	border-top: 2px solid #3996fa;
+	background: url(/image/diybg.jpg) no-repeat center;
+}
+
+.axis {
+	height: 20px;
+	width: 1220px;
+	overflow: hidden;
+	position: relative;
+	border-radius: 20px;
+	margin: 60px auto 0 auto;
+	background-color: #2d2d35;
+}
+
+.axis span {
+	height: 20px;
+	width: 1200px;
+	display: block;
+	margin:13px auto;
+	background-color: #fff;
+}
+
+.demandBox {
+	margin: auto;
+	width: 1080px;
+	padding:20px 60px;
+	background-color:#fff; 
+	font-family: '微软雅黑';
+}
+
+.ademand {
+	border-bottom: 1px solid #f3f8fe;
+}
+
+.ademand:nth-child(3) {
+	border-bottom: none;
+}
+
+.ademand h3 {
+	color: #3996fa;
+	font-size: 18px;
+	text-indent: 8px;
+	margin-top: 20px;
+	line-height: 25px;
+	border-left: 3px solid #3996fa;
+}
+
+.ademand .contain {
+	height: 150px;
+	margin:30px auto;
+	border:1px solid #0000ff;
+	background-color: #f3f8fe;
+}
+
+.ademand  .contain_sleep {
+	height: 20px;
+	padding:30px 0 30px 148px;
+}
+
+.ademand  .contain_progress {
+	height: 17px;
+	padding: 30px 0 30px 148px;
+}
+
+.ademand .dateline {
+	width: 423px;
+	line-height: 30px;
+	margin: 26px 0 26px 148px;
+}
+
+.ademand .dateline label,.ademand .needHotel label,.ademand .price label,.ademand .level label {
+	float: left;
+	color: #666;
+	font-size: 18px;
+	display: inline-block;
+}
+
+.ademand .dateline .datebox {
+	float: left;
+	color: #333;
+	width: 260px;
+	height: 30px;
+	font-size: 14px;
+	text-indent: 8px;	
+	background: #fff;
+	margin-left: 25px;
+	border:1px solid #b5b5b5;
+	box-shadow: inset 1px 1px 15px #e5e5e5;
+}
+
+.ademand .dateline .datebox input {
+	border: none;
+	width: 70px;
+}
+
+.ademand .datebox span {
+	margin-left: 20px;
+}
+
+.ademand .dateline .datebtn {
+	margin:3px;
+	width: 23px;
+	float: right;
+	height: 23px;
+	border:1px solid #b5b5b5;
+	background: url(/image/search_date.png) no-repeat center center;
+}
+
+.ademand .numCount {
+	width: 93px;
+	float: left;
+	height: 22px;
+	margin: 3px 0 0 25px;
+	border:1px solid #b5b5b5;
+}
+
+.ademand .numCount span {
+	float: left;
+	height: 100%;
+	font-size: 14px;
+	line-height: 22px;
+	text-align: center;
+	background-color: #fff;
+}
+
+.ademand .numCount .sub,.ademand .numCount .add {
+	width: 24px;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+.ademand .numCount .sub {
+	color: #bbb;
+}
+
+.ademand .numCount .add {
+	color: #ff8800;
+	line-height: 20px;
+}
+
+.ademand .numCount .num {
+	width: 42px;
+	color: #888;
+	background: #f5f5f5;
+	border-left: 1px solid #b5b5b5;
+	border-right: 1px solid #b5b5b5;
+}
+
+.num_gray {
+	color: #333!important;
+	background: #fff!important;
+}
+
+.ademand .simsun {
+	color: #666;
+	font-size: 14px;
+	line-height: 30px;
+	padding-left: 10px;
+	font-family: 'simsun';
+}
+
+.ademand .left {
+	float: left;
+	padding-left: 30px;
+}
+
+.ademand .secnum {
+	margin-left: 13px;
+}
+
+.ademand .needHotel,.ademand .price,.ademand .hour {
+	margin-bottom: 20px;
+}
+
+.ademand .price, .ademand .level {
+	display: none;
+}
+
+.ademand ul li {
+	 width: 90px;
+	 float: left;
+	 color: #666;
+	 cursor: pointer;
+	 font-size: 14px;
+	 text-indent: 18px;
+	 line-height: 26px;
+	 margin-left: 10px;
+	 display: inline-block;
+	 background:url(/image/normal.png) no-repeat left 43%;
+}
+
+.ademand ul li.li_selected {
+	background:url(/image/selected.png) no-repeat left 43%
+}
+
+.ademand ul li.firstli {
+	text-align: center;
+	background: none;
+}
+
+.ademand ul li.firstli.li_selected span {
+	color: #fff;
+	padding:0 5px;
+	background-color: #ff8800;
+}
+
+.nextstep {
+	width: 260px;
+	height: 50px;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 50px;
+	border-radius: 4px;
+	text-align: center;
+	font-family: '微软雅黑';
+	background-color: #3996fa;
+	margin:55px auto 140px auto;
+}
+
+.nextstep a {
+	display: block;
+	color: #fff;
+}

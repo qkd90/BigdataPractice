@@ -1,0 +1,23 @@
+<div class="ticket_main planferrylist" ng-controller="planferrylistCtrl">
+    <div class="header" >
+        <a href="" ui-sref="planDetail"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        更换船票（{{day.startDate}}）
+    </div>
+    <div class="section_day">
+        <ul>
+            <a ng-repeat="ferry in flightList" ng-click="changeFerry(ferry)">
+            <li class="sec_list">
+                <div class="list_left">
+                    <p>航班时间：{{ferry.startTime}}</p>
+                    <p>{{ferry.number}}</p>
+                </div>
+                <div class="list_right">
+                    <p>往返船票：<span>¥{{ferry.price}}</span></p>
+                    <p>剩余{{ferry.freeCount}}张</p>
+                </div>
+                <div class="checkdiv"></div>
+            </li>
+            </a>
+        </ul>
+    </div>
+</div>

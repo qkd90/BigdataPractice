@@ -1,0 +1,10 @@
+.display-none {
+    display: none;
+}
+.display-block {
+    display: block;
+}
+
+.success-account-name {
+    color: orange;
+}

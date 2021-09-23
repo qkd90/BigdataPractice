@@ -1,0 +1,364 @@
+.consolecar {
+    display: block;
+    width: 80px;
+    height: 40px;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.drivermes {
+    width: 100%;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.drivermes .face {
+    width: 80px;
+    height: 100px;
+    float: left;
+}
+
+.drivermes .face img {
+    width: 60px;
+    height: 60%;
+    border-radius: 50px;
+    margin: 20% 10px;
+}
+
+.drivermes .message {
+    width: 70%;
+    height: 100px;
+    float: left
+}
+
+.drivermes .message p {
+    margin-top: 15px;
+    padding-left: 5px
+}
+
+.drivermes .message p:nth-child(1) {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 15px
+}
+
+.drivermes .message p:nth-child(2) {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.drivermes .message p:nth-child(3) span {
+    margin-right: 5px;
+    display: block;
+    border: 1px solid #999;
+    width: 50px;
+    height: 20px;
+    float: left;
+    font-size: 7px;
+    padding: 0 2px;
+    color: #999;
+    line-height: 20px
+}
+
+.drivermes .message p:nth-child(3) span:first-child {
+    text-indent: 2em;
+    font-weight: 600;
+    border: 1px solid #faad18;
+    color: #fff;
+    background: url(../img/zan.png) no-repeat 10% center;
+    background-size: 20px 20px;
+    background-color: #faad18;
+}
+
+.drivermes .phone {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    right: 5%
+}
+
+.drivermes .phone img {
+    width: 100%;
+    height: 100%;
+}
+
+.shadow {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 10
+}
+
+.order {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 50px 0 30px 0;
+}
+
+.order h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3dc29b
+}
+
+.order p {
+    padding-left: 20px;
+    font-size: 1rem;
+    padding-bottom: 10px
+}
+
+.order .explain, .order .explain2 {
+    padding: 0 20px 0 20px;
+    margin-top: 30px;
+    font-size: 8px;
+    line-height: 22px;
+}
+
+.order .explain p {
+}
+
+.introd {
+    display: block;
+    font-size: 1rem;
+    width: 100%;
+    line-height: 15px;
+    margin-bottom: 10px
+}
+
+.forcans {
+    width: 80%;
+    height: auto;
+    background-color:#fff;
+    font-size: 1.1rem;
+    position: fixed;
+    top: 142px;
+    left: 10%;
+    z-index: 12;
+    max-width: 300px;
+    overflow:auto;
+    padding-bottom:20px;
+    border-radius:5px;
+}
+.forcans .consmid{
+    padding-top:15px;
+margin-top:40px;
+}
+.forcans .cansoleleft{
+    float:left;
+    width:35%;
+    text-align:center;
+    font-weight:600;
+    font-size:14px;
+}
+.forcans .cansoleright{
+    float:left;
+    width:65%;
+    text-align:left;
+
+}
+.forcans .cansoleright ul li{
+    line-height:25px;
+    padding-left:30px;
+    background-size:18px;
+    font-size:1.2rem;
+}
+.forcans .cansoleright .false{
+    background:url(../image/none.png) no-repeat left 2px;
+    background-size:18px;
+}
+.forcans .cansoleright .true{
+    background:url(../image/gou.png) no-repeat left 2px;
+    background-size:18px;
+}
+
+.forcans p {
+    text-align: center;
+}
+
+.forcans h3 {
+   line-height:40px;
+    font-size:14px;
+    background-color:#546aa4;
+    color:#fff;
+    width:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    text-align:center;
+}
+
+.forcans .consolebt {
+    padding-top: 10px;
+}
+
+.forcans p button {
+    width: 60px;
+    height: 25px;
+    display: block;
+    border:none;
+    border-radius:12px;
+}
+.forcans p button.no{
+    background-color:#3996fa;
+    color:#fff;
+    float:left;
+    margin-left:40px;
+}
+.forcans p button.yes{
+    background-color:#f2a127;
+    color:#fff;
+    float:right;
+    margin-right:40px;
+}
+
+.explain p, .explain2 p {
+    line-height: 25px;
+    font-size: 14px;
+    text-align: center;
+    padding: 0;
+}
+
+.explain p:nth-child(1) {
+    color: #111
+}
+
+.explain p:nth-child(2) {
+    color: #666
+}
+
+.explain2 span {
+    line-height: 25px;
+    font-size: 16px;
+    color: #111
+}
+
+.explain2 p {
+    font-weight: 600;
+    color: #555;
+}
+
+.explain2 p:nth-child(1) {
+    margin-top: 15px;
+}
+
+.orderpay .paytype{width:100%;font-size:15px;color:#333;margin-top:58px;border-top:1px solid #e0e0e0;}
+.orderpay .paytype li{border-bottom:1px solid #e0e0e0;padding:0 15px;}
+.orderpay .paytype li:nth-child(1){height:50px;line-height:50px;font-weight:600;background-color:#fff;}
+.orderpay .paytype li:nth-child(1) span{margin:0 5px 0 25px;color:#999;font-weight:500;font-size:14px;}
+.orderpay .paytype li:nth-child(2){margin-top:10px;border-top:1px solid #e0e0e0;}
+.orderpay .paytype li:nth-child(n+2){height:50px;line-height:50px;background-color:#fff;}
+
+.orderpay .paytype .paypic {
+    display: block;
+    width: 33px;
+    height: 33px;
+    margin-right: 8px;
+    float: left;
+    margin-top: 8px;
+}
+
+.orderpay .paytype .paypic.icon_wx {
+    background: url(/yihaiyou/image/icon-wei.png) no-repeat center center;
+    background-size: 33px 33px;
+}
+
+.orderpay .paytype .paypic.icon_zfb {
+    background: url(/yihaiyou/image/icon-zhifu.png) no-repeat center center;
+    background-size: 33px 33px;
+}
+.orderpay .paytype .true{background:url(../image/icon-gou.png) no-repeat calc(100% - 15px) center;background-size:20px;}
+.orderpay .paytype .false{background:url(../image/icon-czx.png) no-repeat calc(100% - 15px) center;background-size:20px;}
+.orderpay .bottompay{width:100%;height:40px;line-height:40px;text-align:center;position:fixed;bottom:0;left:0;border-top:1px solid #e0e0e0;}
+.orderpay .bottompay ul li{float:left;}
+.orderpay .bottompay ul li:nth-child(1){width:60%;background-color:#fff;color:#ff9900;font-size:16px;}
+.orderpay .bottompay ul li:nth-child(1) span{color:#333;}
+.orderpay .bottompay ul li:nth-child(2){width:40%;background-color:#ff9900;color:#fff;font-size:17px;}
+
+.personal_pay .pay_shadow,.orderpay .pay_shadow {
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.6);
+    position:fixed;
+    left:0;
+    top:0;
+    z-index: 100;
+}
+
+.personal_pay .passwordBox,.orderpay .passwordBox {
+    width:calc(100% - 40px);
+    max-width:320px;
+    height:190px;
+    background-color:#fff;
+    position:fixed;
+    z-index: 101;
+    border-radius:5px;
+    /*box-shadow: 0 1px 6px #fff;*/
+    border:1px solid #666;
+}
+
+ .passwordBox .pas_close {
+    height:30px;
+    width:100%;
+}
+
+.passwordBox .pas_close span {
+    width:20px;
+    height:20px;
+    float:right;
+    display: block;
+    margin:10px 10px 0 0;
+    background:url(../image/plan/icon-chak.png) no-repeat center center;
+    background-size:cover;
+}
+
+.personal_pay .passwordBox h3,.orderpay .passwordBox h3 {
+    text-align: center;
+    line-height: 42px;
+    font-size: 16px;
+    margin:0 10px;
+}
+
+.personal_pay .passwordBox .password,.orderpay .passwordBox .password {
+    width: calc(100% - 20px);
+    margin:10px 10px;
+    height:40px;;
+    padding:10px 15px;
+    font-size:16px;
+    color: #000;
+    border-radius:5px;
+    background: #f5f5f5;
+}
+
+.personal_pay .passwordBox .p_bottom,.orderpay .passwordBox .p_bottom {
+    width:calc(100% - 20px);
+    height:40px;
+    margin:10px 10px 0 10px;
+}
+
+.personal_pay .passwordBox .p_bottom span,.orderpay .passwordBox .p_bottom span {
+    width:120px;
+    height:40px;
+    text-align: center;
+    line-height:40px;
+    color:#fff;
+    font-size:20px;
+    border:1px solid #e0e0e0;
+    border-radius:5px;
+}
+
+.personal_pay .passwordBox .p_bottom span.no,.orderpay .passwordBox .p_bottom span.no {
+    float:left;
+    background-color:#ff8800;
+}
+
+.personal_pay .passwordBox .p_bottom span.yes,.orderpay .passwordBox .p_bottom span.yes {
+    float:right;
+    background-color:#3996fa;
+}

@@ -1,0 +1,434 @@
+.section,.section_day,.section_visitor{padding:10px;}
+.section .shortcut{width: 100%;height: 60px;background-color: #fff;}
+.section .shortcut:nth-child(2){margin-top:10px;}
+.section .shortcut p{line-height:30px;font-size: 15px;padding-left:15px;color: #ff7356}
+.section .sta_sto{width: 100%}
+.section .sta_sto li.fir_list{width: 100%;height: 60px;background-color: #fff;margin-top:10px;padding:10px 0;}
+.section .sta_sto li.fir_list .li_left,.section .sta_sto li.fir_list .li_right{width: 45%;height: 100%;float: left}
+.section .sta_sto li.fir_list .li_left p,.section .sta_sto li.fir_list .li_right p{font-size: 14px;line-height: 30px;padding-left:15px;}
+.section .sta_sto li.fir_list .li_left p:nth-child(1),.section .sta_sto li.fir_list .li_right p:nth-child(1){color: #97ceff;text-indent: 2em}
+.section .sta_sto li.fir_list .li_left p:nth-child(2),.section .sta_sto li.fir_list .li_right p:nth-child(2){color: #363636}
+.section .sta_sto li.fir_list .li_left p:nth-child(1){background: url(../image/ferry/icon-02.png) no-repeat 15px center;background-size:25px 25px;}
+.section .sta_sto li.fir_list .li_right p:nth-child(1){background: url(../image/ferry/icon-01.png) no-repeat 15px center;background-size:25px 25px;}
+.sel_day{width: 100%;height: 50px;background-color: #007eff;color: #fff;line-height: 50px;text-align: center;font-size:18px;margin-top:45px;}
+.sel_day span{display: block;width: 80px;height: 50px;font-size:14px;text-align: center;}
+.sel_day span:nth-child(1){float: left;}
+.sel_day span:nth-child(2){float: right;}
+.sel_day .sel_today{width: 140px;height: 30px;float: left;margin: 10px 0 0 10px;border-radius: 5px;color: #fff;line-height: 30px;font-size: 14px;}
+.section_day{padding:10px;}
+.section_day ul{width: 100%}
+.section_day ul li.sec_list{width: 100%;height: 60px;background:url(../image/ferry/ticketbg.png) no-repeat 97% center;background-size:100% 100%;}
+.section_day ul a:nth-child(n+2) li.sec_list{margin-top:10px;}
+.section_day ul li.sec_list .list_left,.section_day ul li.sec_list .list_right{width: 45%;height: 100%;float: left;}
+.section_day ul li.sec_list .list_left{}
+.section_day ul li.sec_list .list_left p,.section_day ul li.sec_list .list_right p{text-align: center}
+.section_day ul li.sec_list .list_left p:nth-child(1){color: orange;font-size: 14px;line-height: 30px;}
+.section_day ul li.sec_list .list_left p:nth-child(2){color: #363636;font-size: 12px;line-height: 20px;}
+.section_day ul li.sec_list .list_right p:nth-child(1){color: #2894ff;font-size: 14px;line-height: 30px;}
+.section_day ul li.sec_list .list_right p:nth-child(1) span{font-weight: 600;}
+.section_day ul li.sec_list .list_right p:nth-child(2){color: #ff5151;font-size: 12px;line-height: 20px;}
+
+.intro{width:calc(100% - 10px);height: 50px;background-color: #fff;line-height: 23px; color:#ff7356;font-size: 15px;padding:5px;}
+.intro p{background:url(../image/ferry/icon-map.png) no-repeat 10px center;background-size: 6px 10px;text-indent: 2em;}
+.visitormes{width: calc(100% - 10px);height: 50px;margin-top:10px;padding:5px;background: url(../image/ferry/none.png) no-repeat 10px center;background-size: 20px 20px;background-color: #fff;}
+.visitormesx{background: url(../image/ferry/gou.png) no-repeat 10px center;background-size: 20px 20px;background-color: #fff;}
+.visitormes p{margin-left:40px;}
+.visitormes p:nth-child(1){line-height: 25px;font-size: 16px}
+.visitormes p:nth-child(1) span{font-size: 15px;color: #aaaaff;}
+.visitormes p:nth-child(2){line-height: 20px;font-size: 13px;color:green;}
+.sub_btn{width: 60%;height: 40px;background-color: green;line-height: 40px;text-align: center;margin:25px auto;border-radius: 20px;font-size: 18px;}
+.sub_btn a{display: block;color: #fff;}
+.section_editor{width: 100%;margin-top: 15px;background-color: #fff;padding-bottom: 25px;}
+.section_editor .editormessage,.section_editor .editormessage ul{width: 100%;}
+.section_editor .editormessage ul li{width: 100%;height: 45px;border-bottom: 1px solid #ededed;line-height: 45px;}
+.section_editor .editormessage ul li label{width: 30%;display: block;height: 45px;text-align: right;font-size: 14px;float: left}
+.section_editor .editormessage ul li input{width: 60%;height: 45px;outline: none;border:none;float: left;color:#4f4f4f;font-size: 16px;text-indent: 10px;}
+.section_editor .save_btn{width: 60%;height: 40px;background-color: #ff7356;line-height: 40px;text-align: center;margin:25px auto;border-radius: 20px;font-size: 18px;}
+.section_editor .save_btn a{display: block;color: #fff;}
+
+.meshead{width: calc(100% - 20px);height: 40px;line-height: 20px;background-color: green;color: #fff;font-size: 14px;padding:5px 10px;}
+.section_order{width: 100%}
+.section_order .personmes{width: 100%;height: 40px;font-size: 15px;color: #333;line-height: 40px;border-bottom: 1px solid #e5e5e5;/* text-indent: 45px; */ background-color: rgb(109, 206, 109);
+	/* background: url(../image/ferry/boatmess.png) no-repeat 15px center; *//* background-size: 18px 18px; */}
+
+.section_order .personmes span{display: block;float: left;text-align: center;}
+.section_order .personmes span:nth-child(1){width: 35%;height: 100%;color:white}
+.section_order .personmes span:nth-child(2){width: 65%;height: 100%;}
+.section_order .ticket_type ul li span{width: calc(100% - 30px);margin: auto;}
+.section_order .ticket_type ul,.section_order .beknow ul{width: 100%;background-color: white;}
+.section_order .ticket_type ul li{width: calc(100%);line-height: 40px;border-bottom: 1px solid #cfcfcf;}
+.section_order .ticket_type ul li:nth-child(3){border-bottom: none;}
+
+/*.section_order .ticket_type ul li span{color:red;font-weight: 600;}*/
+.section_order .ticket_type ul li span.line{color: #333;font-size: 14px;float: right}
+.section_order .ticket_type ul li span.count{color: #333;font-size: 16px;float: right}
+.section_order .ticket_type ul li span.monney{color: red;font-size: 18px;float: right}
+.section_order .ticket_type .selticket{width: 200px;height: 30px;float: right;margin-top: 5px;border:1px solid #cfcfcf;border-radius: 3px;line-height: 30px;text-indent: 10px;position: relative;}
+.section_order .ticket_type .selticket span{display: block;position: absolute;right:0;top: 0;width: 30px;height: 30px;background: url(../image/ferry/showall.png) no-repeat center center;background-size: 20px 20px;}
+.section_order .ticket_type .selticket .alltype{width: 200px;position: absolute;top: 30px;left: 0;background-color: #fff}
+.section_order .ticket_type .selticket .alltype ul{width: 198px;border:1px solid #cfcfcf;}
+.section_order .ticket_type .selticket .alltype ul li{width: 100%;height: 30px;line-height: 30px;text-align: center;font-size: 15px;border-bottom:1px solid #cfcfcf;}
+/*.section_order .beknow ul li{height: 60px;line-height: 20px;font-size: 14px;color: #4f4f4f;padding: 10px;padding-left:30px;}*/
+.section_order .beknow ul li{height: 60px;line-height: 20px;font-size: 14px;color: #4f4f4f;padding-left:35px;}
+
+.section_order .beknow ul .agreebg{background: url(/yihaiyou/image/ferry/checkboxorange_1.png) no-repeat 15px center;background-size: 15px;border-bottom: 1px solid #e0e0e0}
+.section_order .beknow ul .agreebgx{background: url(/yihaiyou/image/ferry/checkbox_orange.png) no-repeat 15px center;background-size: 15px;}
+.section_order .beknow ul li a{color: #3d98ff}                           
+.section_order .over{width: 100%;height: 40px;line-height: 40px;color: #fff;font-size: 16px;text-align: center;position: fixed;bottom: 0;left: 0;}
+.section_order .over .sel_again{width: 62%;height: 40px;background-color: #e1e1e1;float: left;color: #333}
+.section_order .over .sel_again span{color: #ee810b;font-size: 18px;font-weight: bold}
+.section_order .over .sel_submit{width: 38%;height: 40px;background-color: #3d98ff;float: right}
+.section_order .over .sel_submit a{display: block;color:#fff;}
+
+
+.section_pay{width: 100%;}
+.section_pay .linename{padding: 10px 10px 0 10px;width: calc(100% - 20px);background-color: #fff;}
+.section_pay .linename ul{width: 100%;border-bottom: 1px solid #ccc;}
+.section_pay .linename ul li{width: 100%;min-height: 30px;line-height: 30px;color: #333;font-size: 15px;}
+.section_pay .linename ul li span{font-size: 16px;color: #333!important;font-weight: 600;}
+.section_pay .topay{width: calc(100% - 20px);padding: 10px;background-color: #fff;font-size: 15px;}
+.section_pay .topay p{border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;padding:10px 0;}
+.section_pay .topay span:nth-child(1){color: #aaaaff;font-size: 18px;}
+.section_pay .topay span:nth-child(2){color: red;}
+.section_pay  .pay_type{width: 100%;background-color: #fff;}
+.section_pay  .pay_type ul{width: calc(100% - 20px);padding: 10px;}
+.section_pay  .pay_type ul li{width: 100%;font-size: 16px;height: 35px;line-height: 35px;border-bottom: 1px solid #ccc;}
+.section_pay  .pay_type ul li:nth-child(n+2){text-indent: 85px;}
+.section_pay  .pay_type ul li span{color: red;margin-left: 20px;font-size: 18px;font-weight: 600;}
+.section_pay  .pay_type ul li img{width: 35px;height: 35px;margin-right: 20px;position: absolute;left:0;top: 0;}
+.section_pay .over{width: 260px;height: 40px;margin: 20px auto;line-height: 40px;color: #fff;font-size: 16px;text-align: center;}
+.section_pay .over .sel_again{width: 100px;height: 40px;background-color: green;border-radius: 20px;float: left}
+.section_pay .over .sel_submit{width: 100px;height: 40px;background-color: #aaaaff;border-radius: 20px;float: right}
+.section_pay .over .sel_submit a,.section_pay .over .sel_again a{display: block;color:#fff;}
+
+
+
+
+
+
+.liu #message1{padding-left:20px;padding-right:20px}
+.liu #message2{padding:20px}
+.liu #message ul li{list-style:none;font-size:15px;color:rgb(160,160,160);border-bottom:1px solid #ddd;height:45px;line-height:45px}
+.liu input{border:0;outline:medium;font-size:17px}
+.liu #savebutton input{width:90%;height:40px;background-color:rgba(0,126,255,0.8);border-radius:5px;color:white;margin:25% 5% 10%;}
+.liu #message1 ul li:nth-child(1){border:none;}
+.liu #message2 ul li:nth-child(1){border:none;}
+.liu .section_editor{margin-top: 0!important}
+
+.youlunsearch .yl_header{width:100%;height:50px;background-color: #007eff!important;line-height:50px;color: #fff;font-size: 20px;
+	               text-align: center;position: relative;}
+.youlunsearch .dar_shadow{width:100%;height:600px;background-color:rgba(0,0,0,0.7);position:absolute;left:0;top:0;z-index:900;}
+.youlunsearch .choseline{padding:0 15px;background:#f5f5f5;}
+
+.youlunsearch .lineOver {
+	width:90%;
+	max-width:320px;
+	margin:10px auto;
+	background:#ff8800;
+	height:32px;
+	line-height:32px;
+	color:#fff;
+	font-size:1.6rem;
+	text-align:center;
+	border-radius:5px;
+}
+
+.youlunsearch .choseline ul{width: 100%;}
+.youlunsearch .choseline ul li{
+	width: 100%;
+	padding:10px;
+	font-size: 16px;
+	border-radius:5px;
+	margin-top:10px;
+	border:1px solid #ddd;
+}
+.youlunsearch .choseline ul li img:nth-child(1){width: 16px;height:16px;margin-top: 13px;}
+.youlunsearch .choseline ul li img:nth-child(2){width: 20px;height:20px;margin-bottom: -8px;}
+.youlunsearch .choseline ul .forone{background:#fff url(../image/ferry/icon-no.png) no-repeat calc(100% - 15px) center;}
+.youlunsearch .choseline ul .foronex{background:#fff url(../image/ferry/icon-yes.png) no-repeat calc(100% - 15px) center;}
+.youlunsearch .baiduMap{width: 100%;height: 300px}
+.youlunsearch .choseline ul li div.ticketL{
+	width:45%;
+	float:left;
+}
+
+.youlunsearch .choseline ul li div.ticketR {
+	width:48%;
+}
+
+.youlunsearch .choseline ul li div.ticketL .ticket_h {
+	font-size:1.4rem;
+	color:#3996fa;
+	line-height:22px;
+}
+
+.youlunsearch .choseline ul li div.ticketL .ticketstation {
+	font-size:1.5rem;
+	color:#000;
+	margin-top:5px;
+}
+
+.youlunsearch .choseline ul li div.ticketL .ticket_loB {
+	background:#fecf2f;
+	border-radius:50%;
+	color:#fff;
+	width:24px;
+	height:24px;
+	line-height:24px;
+	text-align:center;
+	margin-right:5px;
+}
+
+.youlunsearch .choseline ul li div.ticketL .ticket_loE {
+	background:#ff9f22;
+}
+
+.youlunsearch .choseline ul li div.ticketL .ticket_loB i {
+	margin-left: -3px;
+	font-size: 3rem;
+	margin-top: -3px;
+	display: block;
+}
+.youlunsearch .choseline ul  span{display:block;height:45px;float:left;font-size:1.5rem;text-align:center;}
+.youlunsearch .choseline ul  span.pic{width:8%;}
+.youlunsearch .choseline ul  span.start{width:37%}
+.youlunsearch .choseline ul  span.pic .lineNum{width:16px;height:16px;border-radius:50%;margin:14px 0 0 0;line-height:18px;color:#fff;font-size:1.2rem;}
+.youlunsearch .choseline ul  span.pic .green{background-color:#b3d465}
+.youlunsearch .choseline ul  span.pic .red{background-color:#ff5a00}
+.youlunsearch .choseline ul  span.pic .purple{background-color:#ad6aff}
+.youlunsearch .choseline ul  span.pic .orange{background-color:#fd9500}
+.youlunsearch .choseline ul  span.pic .blue{background-color:#3996fa}
+.youlunsearch .GLYmap{
+	width:100%;
+	/*height:175px;*/
+	margin-top:10px;}
+.youlunsearch .GLYmap img{
+	width:100%;
+	/*height:100%;*/
+}
+.youlunsearch .explainbox {
+	height:40px;
+	line-height:20px;
+	margin-top:5px;
+	font-size:1.2rem;
+	padding: 0 15px;
+}
+
+.youlunsearch .ticketAttention span {
+	color: #3996fa;;
+}
+
+.youlunsearch .maxshow img {
+	position: absolute;
+	left:0px;
+	z-index:100;
+
+}
+
+.youlunsearch .shadow_map {
+	background:#000;
+	width:100%;
+	position: fixed;
+	top:0;
+	left:0;
+}
+
+.youlunsearch .maxshow img {
+	/*width:475px;*/
+	/*height:439px;*/
+	height:calc(100% - 45px);
+}
+
+
+.chaxunbody{margin-top:45px;background-color:#fff;}
+.chaxunbody .yi_search a{display: block;color: #222;}
+    	.chaxunbody .matouinfo .matoutime{border-bottom:1px solid #eaeaea!important;height: 45px;font-size: 1.5rem;background-size: 20px;line-height:45px;padding:0 15px;background:url(/yihaiyou/image/Tright_gray.png) no-repeat  calc(100% - 10px) center;background-size:20px 20px;}
+/*.		.chaxunbody .matouinfo .matoutime .yi_search{height:40px;}*/
+    	.chaxunbody .matouinfo .matoutime .matouover{float: right;width:45%;text-align:right;padding-right:20px;}
+    	.chaxunbody .matouinfo .matoutime .jiantou{}
+		.chaxunbody .matouinfo .matoutime span.midchange{display:block;width:10%;height:40px;float:left;}
+		.chaxunbody .matouinfo .matoutime span.midchange img{width:16px;height:16px;margin:14px auto;}
+    	.chaxunbody .matouinfo .matoutime span.matoustart {float:left;display:block;height:40px;}
+    	
+    	.chaxunbody .matouinfo .startime{border-bottom:1px solid #eaeaea!important;height: 40px;font-size: 15px;padding:0 15px;background:url(/yihaiyou/image/Tright_gray.png) no-repeat  calc(100% - 10px) center;background-size:20px 20px;}
+    	.chaxunbody .matouinfo .startime .matouover{float: right;  padding-top: 8px;padding-right:20px;font-size:1.4rem;}
+    	.chaxunbody .matouinfo .startime .matoustart{float:left; color: #b2b2b2;padding-top: 10px;font-size:1.3rem;}
+    	.chaxunbody .matouinfo .startime .jiantou{padding-left: 30px;width: 10px;}
+    	.chaxunbody .matouinfo .addlvke{height: 40px;font-size: 1.3rem;background:url(../image/ferry/addlvke.png) no-repeat  15px center;   background-size: 20px;padding:0 15px;border-bottom: 1px solid #eaeaea;}
+    	.chaxunbody .matouinfo .addlvke span{float:left; color: #b2b2b2;padding-top: 10px;  padding-left: 26px; }
+       
+        .ferryIndex .chaxunbutton{height: 35px;border-radius: 3px;background: #ee810b;width:92%;margin:60px auto 0 auto;}
+         .ferryIndex .chaxunbutton .cahxunziti {text-align: center;  color: white; font-size: 18px;padding-top: 6px;}
+         .ferryIndex .chaxunbutton .cahxunziti a{color: #fff;display:block;}
+         
+         .chaxunbody .footer{position: absolute; bottom:5px;  width: 94%;}
+         .chaxunbody .offten{font-size: 16px;margin-bottom: 10px;color:#606060;}
+         .chaxunbody ul li{color: #b7b7b7;font-size: 13px; border-bottom:2px solid #eaeaea;padding: 5px 15px 5px 15px}
+
+		 .header {position: static; !important;}
+
+
+
+.ticket_main .xingming{color:#8795c6!important;  font-size: 16px;  font-weight: 500; }
+.ticket_main .wangfanticket{color:white!important;background-color: #6c8feb;border-radius: 5px;  margin-left: 10px;  padding: 7px; }
+.ticket_main .kidinfo{  color: black!important;
+	padding-left: 12%;
+	background: url(../image/ferry/none.png) no-repeat left top;
+	background-size: 20px;
+	background-position: 10px;}
+.ticket_main .sel_kidinfo{  color: black!important;
+	padding-left: 12%;
+	background: url(../image/ferry/gou.png) no-repeat left top;
+	background-size: 20px;
+	background-position: 10px;}
+.ticket_main .idccard{color:black;}
+.ticket_main .ticket-price{padding-left: 20%;color: #e69194;}
+.ferryIndex .startTime{width: 240px;height:245px;position: fixed;z-index: 13;background-color: rgb(255, 255, 255); color: #808080;box-shadow:0 0 30px #3d98ff;border-radius:50%;overflow-y:auto;}
+.ferryIndex .startTime ul{box-shadow:inset 0 0 10px #3d98ff;position:relative;}
+.ferryIndex .startTime ul li{width:100%;height:35px;line-height:35px;font-size:18px;text-align:center;}
+.section_order .beknow ul .agreebg a{margin:7px 0;}
+
+.ticket_main .section_order .ticket_type ul{
+	background-color:#f0f0f0;
+}
+.ticket_main .section_order .ticket_type ul li{
+	margin-top:10px;
+	border-top:1px solid #e5e5e5;
+	background-color:#fff;
+}
+.ticket_main .section_order .ticket_type ul li .host{
+	padding:15px 0 0 15px;
+	border-bottom:1px solid #e5e5e5;
+}
+.ticket_main .section_order .ticket_type ul li .host .name{
+	height:25px;
+	line-height:15px;
+	font-size:1.5rem;
+	color:#ee810b;
+}
+.ticket_main .section_order .ticket_type ul li .host .personal{
+	line-height:20px;
+	color:#4f4f4f;
+	font-size:1.3rem;
+	height:25px;
+}
+.ticket_main .section_order .ticket_type ul li .host .personal .personalid{
+	width:48%;
+	display:block;
+	height:25px;
+	float:left;
+}
+.ticket_main .section_order .ticket_type ul li .host .personal .children{
+	width:48%;
+	display:block;
+	height:25px;
+	float:left;
+	text-indent:20px;
+	background: url(/yihaiyou/image/ferry/icon-falseBlue.png) no-repeat left 0;
+	background-size: 17px;
+}
+.ticket_main .section_order .ticket_type ul li .host .personal .true1{
+	background: url(/yihaiyou/image/ferry/icon-trueBlue.png) no-repeat left 0;
+	background-size: 17px;
+}
+.ticket_main .section_order .ticket_type ul li .tickettype{
+	padding:10px 0 0 15px;
+}
+.ticket_main .section_order .ticket_type ul li .tickettype .ticketlist li{
+	float:left;
+	line-height:20px;
+	height:30px;
+	text-indent:20px;
+	background: url(/yihaiyou/image/icon-czx.png) no-repeat left 0;
+	background-size: 17px;
+	border-bottom:none;
+	border-top:none;
+	margin-top:0;
+}
+
+.ticket_main .section_order .ticket_type ul li .tickettype .ticketlist li.true2{
+	background: url(/yihaiyou/image/icon-gou.png) no-repeat left 0;
+	background-size: 17px;
+}
+.ticket_main .section_order .ticket_type ul li .tickettype .ticketlist li span{
+	text-indent:0;
+	color:#ee810b;
+	font-size:1.5rem;
+}
+.ticket_main .section_order .ticket_type ul li .tickettype .ticketlist li:nth-child(odd){
+	width:98%;
+}
+.ticket_main .section_order .ticket_type ul li .tickettype .ticketlist li:nth-child(even){
+	width:98%;
+}
+
+.fc-basic-view td.fc-day-number {
+	font-size:1.5rem;
+}
+
+.ferryRealname .blank{
+	width: 100%;
+	height: 45px;
+}
+.ferryRealname .ticketAttention{
+	padding: 8px 35px;
+	font-size: 1.3rem;
+	color: #7a6416;
+	line-height: 18px;
+	border-bottom: 1px solid #e0e0e0;
+	background: #fefcdc url(/yihaiyou/image/ferry/icon-attention.png) no-repeat 15px 8px;
+	background-size: 17px;
+}
+
+.ferryRealname .form-group {
+	margin-bottom: 0px;
+	width:100%;
+	background-color:#fff;
+	border-bottom:1px solid #f0f0f0;
+}
+
+.ferryRealname .form-group label {
+	display:inline-block;
+	width:68px;
+	height:40px;
+	float:left;
+	line-height:40px;
+	font-size: 1.4rem;
+	color:#000;
+	font-weight:500;
+	text-indent:10px;
+	font-family: "苹方";
+}
+
+.ferryRealname .form-group label i {
+	color:#fff;
+}
+
+.ferryRealname .form-group input {
+	font-size: 1.4rem;
+	color: #333;
+	line-height:40px;
+	float:left;
+	height:40px;
+	width: calc(100% - 68px);
+	-webkit-box-shadow: none;
+	/*text-indent:15px;*/
+	letter-spacing: 1px;
+	color: #7e7c7c;
+}
+
+.ferryRealname .subbtn {
+	background-color: #ff8800;
+	color:#fff;
+	font-size:1.8rem;
+	width:calc(100% - 30px);
+	margin:30px auto;
+	float:none;
+	display:block;
+}
+
+.ferryLogin_attention {
+	padding:0 15px;
+	letter-spacing: 1px;
+	font-size: 1.2rem;
+}

@@ -1,0 +1,37 @@
+<div class="fare_main" ng-controller="lineBookingCtrl" id="fare_main">
+    <div class="fare_header" id="top" name="#F1">
+        <a href="javascript:history.go(-1)"><span><img src="lxb/images/fare_back.png"></span></a>
+        预订须知
+    </div>
+    <div class="fare_article" id="fare_article">
+        <dl class="fare_artdl" ng-if="lineExplain.orderContext != ''">
+            <dt><span>预订须知</span></dt>
+            <dd style="margin-top:15px;" ng-bind-html="lineExplain.orderContext | trustHtml">
+            </dd>
+        </dl>
+        <dl class="fare_artdl" ng-if="lineExplain.tripNotice != ''">
+            <dt><span>出行须知</span></dt>
+            <dd style="margin-top:15px;" ng-bind-html="lineExplain.tripNotice | trustHtml">
+        </dl>
+        <dl class="fare_artdl" ng-if="lineExplain.specialLimit != ''">
+            <dt><span>特殊限制</span></dt>
+            <dd style="margin-top:15px;" ng-bind-html="lineExplain.specialLimit | trustHtml">
+        </dl>
+        <dl class="fare_artdl" ng-if="lineExplain.signWay != ''">
+            <dt><span>签约方式</span></dt>
+            <dd style="margin-top:15px;" ng-bind-html="lineExplain.signWay | trustHtml">
+        </dl>
+        <dl class="fare_artdl" ng-if="lineExplain.payWay != ''">
+            <dt><span>付款方式</span></dt>
+            <dd style="margin-top:15px;" ng-bind-html="lineExplain.payWay | trustHtml">
+        </dl>
+        <dl class="fare_artdl" ng-if="lineExplain.breachTip != ''">
+            <dt><span>违约责任提示</span></dt>
+            <dd style="margin-top:15px;" ng-bind-html="lineExplain.breachTip | trustHtml">
+        </dl>
+    </div>
+    <div class="fare_footer">
+        <div class="scroll_toTop" id="scrolltoTop"><p>回到</p><p>顶部</p></div>
+        <span style="background-color:#f5f5f5;">预订后请保持电话畅通</span>
+    </div>
+</div>

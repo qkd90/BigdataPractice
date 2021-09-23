@@ -1,0 +1,28 @@
+<div ng-controller="xieganxiangpicCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">{{index + 1}}/{{gallery.length}}</a></li>
+            <li class="pull-right">
+                <button type="button" class="fabu btn" data-toggle="modal" data-target="#delete"><img
+                        src="images/ico/trash.png"/></button>
+            </li>
+        </ul>
+    </div>
+    <div id="subcontainer" class="clearfix xieganxiang">
+        <div id="gxpiclist" class="owl-carousel">
+            <a class="item" ng-repeat="photo in gallery" is-over="finish.over"><img src="{{photo.imgUrl}}" /></a>
+        </div>
+    </div>
+    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="delete">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content text-center">
+                <div class="modal-header"><h4 class="modal-title text-left">提示</h4></div>
+                <div class="modal-body text-left">删除当前图片？</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-left" data-dismiss="modal" style="width: 49%">取消</button>
+                    <button type="button" class="btn btn-primary" ng-click="delete()" style="width: 49%">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,210 @@
+<div ng-controller="sceneryDetailController" class="scenicDetail">
+    <header class="produ_lis_header">
+        <div class="pro_header_main">
+                <span class="gty_left">
+                    <a ui-sref="index" ng-click="home()"><i class="icon icon-home3"></i></a>
+                    <i class="icon icon-search5" style="top: -42px;margin-left: 55px;" ng-click="search()"></i>
+                </span>
+                <span class="gty_center">
+                    产品详情
+                </span>
+            <span class="gty_right"><i class="icon icon-mine" ng-click="personal()"></i></span>
+        </div>
+    </header>
+
+<!-- 主页面 s -->
+<div class="page">
+    <div class="header">
+        <div class="history-opration">
+            <a class="back icon-title-back" id="J_go_back" ng-click="back()"></a>
+        </div>
+        <div class="collect-bar">
+            <!--<a class="collect" ng-class="{true: 'icon-star collected', false: 'icon-star1'}[favorite]" id="J_collcet" ng-click="doFavorite()"></a>-->
+        </div>
+    </div>
+    <!--图片轮播-->
+    <div class="banner">
+        <div class="swipe" style="overflow: hidden; visibility: visible; list-style: none; position: relative;">
+            <ul id="slider"
+                style="position: relative; overflow: hidden; transition: left 0ms ease; width: 100%; left: 0px;margin-top: 0;">
+                <li style="float: left; display: block; width: 100%;">
+                    <img src="{{cover}}">
+                </li>
+            </ul>
+
+        </div>
+        <div class="banner-weather clearfix">
+        </div>
+        <div class="banner-info clearfix">
+            <span class="icon-ticket banner-info-icon"></span>
+            <span>{{name}}</span>
+            <span class="product-id">共1张</span>
+        </div>
+    </div>
+    <!--轮播结束-->
+    <!--产品基本信息-->
+    <div class="product-info">
+        <div class="block seperate-block" style="margin-bottom:0px;">
+            <ul class="link-block">
+                <li>
+                    <a ng-click="goTrafficGuide()">
+                        <span class="title">
+                            <i class="icon-destination"></i>
+                            {{address}}
+                        </span>
+                        <i class="icon-down4 right-arrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a ng-click="goFeatures()">
+                        <span class="title">
+                            <i class="icon-time2"></i>
+                            景点特色
+                        </span>
+                        <i class="icon-down4 right-arrow"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--产品基本信息结束-->
+    <!--tab-->
+    <div class="tab block">
+        <ul class="tab-title">
+            <li ng-class="{'tab-activity': tabIndex == 1}" scenery-detail-tab data-tabindex="1" style="width: 50%;">
+                <p>票型</p>
+            </li>
+            <li ng-class="{'tab-activity': tabIndex == 2}" scenery-detail-tab data-tabindex="2" style="width: 50%;">
+                <p>须知</p>
+            </li>
+        </ul>
+        <ul class="tab-content">
+            <li class="ticket-list" ng-show="tabIndex == 1" infinite-scroll="listTicket()" infinite-scroll-distance='1' infinite-scroll-disabled='loading'>
+                <div class="no-ticket-bar" ng-show="noTicket">
+                    <img src="/lxb/images/ticket_noticket.png">
+                    <p>暂无可售门票</p>
+                </div>
+
+                <div class="ticket-bar" ng-hide="noTicket" ng-repeat="priceType in typeList">
+                    <div class="ticket-bar-title">
+                        <span class="ticket-bar-tag"></span><span>{{priceType.typeName}}</span>
+                    </div>
+
+                    <div class="ticket-info" ng-repeat="itemData in priceType.list">
+                        <p class="ticket-name">
+                            {{itemData.name}}
+                        </p>
+
+                        <div class="ticket-price">
+                            <span class="new-price">￥<span class="new-price-num">{{itemData.discountPrice + itemData.commission}}
+                                <span class="tips">起</span></span></span>
+                            <span class="old-price">￥{{itemData.maketPrice}}</span>
+                            <span class="ticket-source" ng-show="itemData.ctripTicketId">携程网</span>
+
+                        </div>
+                        <div class="ticket-coupon">
+                            <span class="ticket-description J_bookTips" ng-click="showTicketDesc(itemData.id)">票型说明&gt;</span>
+                        </div>
+
+                        <div class="ticket-btn" ng-click="doBook(itemData.id)">
+                            <p class="book">预订</p>
+
+                            <p class="tips">
+                                网上支付
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="ticket-detail" ng-show="tabIndex == 2">
+                <div class="ticket-detail-li" ng-if="openTime != null && openTime.length > 0">
+                    <div class="block-title">
+                        <i class="icon-hotel2"></i>开放时间
+                    </div>
+                    <div class="block-content" style="padding: 10px 0px 10px 0px;">
+                        <div class="block-content" ng-bind-html="openTime | trustHtml"></div>
+                    </div>
+                </div>
+                <div class="ticket-detail-li" ng-if="proInfo != null && proInfo.length > 0">
+                    <div class="block-title">
+                        <i class="icon-hotel2"></i>产品详情
+                    </div>
+                    <div class="block-content" style="padding: 10px 0px 10px 0px;">
+                        <div class="block-content" ng-bind-html="proInfo | trustHtml"></div>
+                    </div>
+                </div>
+                <div class="ticket-detail-li" ng-if="privilege != null && privilege.length > 0">
+                    <div class="block-title">
+                        <i class="icon-hotel2"></i>优惠政策
+                    </div>
+                    <div class="block-content" style="padding: 10px 0px 10px 0px;">
+                        <div class="block-content" ng-bind-html="privilege | trustHtml"></div>
+                    </div>
+                </div>
+                <div class="ticket-detail-li" ng-if="enterDesc != null && enterDesc.length > 0">
+                    <div class="block-title">
+                        <i class="icon-hotel2"></i>入园说明
+                    </div>
+                    <div class="block-content" style="padding: 10px 0px 10px 0px;">
+                        <div class="block-content" ng-bind-html="enterDesc | trustHtml"></div>
+                    </div>
+                </div>
+                <div class="ticket-detail-li" ng-if="rule != null && rule.length > 0">
+                    <div class="block-title">
+                        <i class="icon-hotel2"></i>退改规则
+                    </div>
+                    <div class="block-content" style="padding: 10px 0px 10px 0px;">
+                        <div class="block-content" ng-bind-html="rule | trustHtml"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div ng-show="loading"><div class="yuloading"><span>加载数据中...</span></div></div>
+    </div>
+    <!--tab end-->
+</div>
+<!-- 主页面 e -->
+
+    <!-- 票型说明 s -->
+    <div class="book-popup" ng-show="ticketDescFlag">
+        <div class="popup-box">
+            <div class="head">
+            <p class="name"><span class="name-content">{{showTicketPrice.name}}</span></p>
+            <p class="close-popup" ng-click="closeTicketDesc()"><img src="/lxb/images/ticket_close.png"></p>
+        </div>
+            <div class="body" style="top: 72px; width: 100%;">
+
+                <div class="bookNotice popup-block" ng-repeat="addinfo in showTicketPrice.addinfoDetailList">
+                    <div class="title">
+                        {{addinfo.subTitle}}
+                    </div>
+                    <div class="content">
+                        <div ng-repeat="addinfoDetail in addinfo.descDetails">
+                            <div ng-bind-html="addinfoDetail | trustHtml"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class="guaranteedInfo popup-block">
+                    <div class="guaranteed-bar">
+                        <div class="img-title">
+                            <img src="/lxb/images/ticket_guaranteedInfo.png">
+                        </div>
+                        <div class="img-content">
+                            预订此门票无法入园且途牛10分钟内未解决完，可买门市价入园，途牛赔偿门市价与途牛价的差价
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            <div class="foot">
+                <p class="new-price">￥<span class="new-price-num">{{showTicketPrice.discountPrice}}</span><span class="tips">起</span></p>
+                <p class="old-price">￥{{showTicketPrice.maketPrice}}</p>
+                <div class="book_btn" ng-click="doDescBook()">立即预订</div>
+            </div>
+        </div>
+    </div>
+    <!-- 票型说明 e -->
+
+
+</div>

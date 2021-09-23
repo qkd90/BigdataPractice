@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<var-def name="content">
+			<!-- <var name="${xmls}"></var> -->
+	</var-def>
+	<file action="write" charset="GBK" path="d:\jd.xml"> <var name="content"></var> </file>
+	<var-def name="products">
+		<xquery>
+			<xq-param name="n" type="node()">
+				<var name="content" />
+			</xq-param>
+			<xq-expression><![CDATA[
+			                            declare variable $n as node() external;
+			                            let $name := $n//div[@class='ndwz']/span/text()
+										let $level := $n//div[@class='info_r']/b/text()
+										let $address := $n//div[@class='info_r']/p/text()
+										let $theme := $n//div[@class='info_type']/p[1]//em/text()
+										let $scenic_type := $n//div[@class='info_type']/p[2]//a/text()
+										let $open_time := $n//div[@class='info_type']/p[3]/span[2]/text()
+										let $price_str := $n//div[@class='info_type']/p[4]/span[2]/text()
+										let $introduce := $n//div[contains(@class,'simple')]
+				                        return 
+				                        	<scenic>
+				                                <name>{data($name)}</name>
+				                                <level>{data($level)}</level>
+				                                <address>{data($address)}</address>
+				                                <theme>{data($theme)}</theme>
+				                                <scenic_type>{data($scenic_type)}</scenic_type>
+				                                <open_time>{data($open_time)}</open_time>
+				                                <price_str>{data($price_str)}</price_str>
+				                                <introduce>{data($introduce)}</introduce>		                                
+				                            </scenic>			                           
+			                    ]]></xq-expression>
+		</xquery>
+	</var-def>
+	<!-- <var-def name="result"> <![CDATA[<root>]]> <var name="nextHref"></var> <var name="products"></var> <![CDATA[</root>]]> </var-def> -->
+	 <!-- <file action="write" charset="utf-8" path="d:\jd.xml">
+		<var name="products"></var>
+	</file> --> 
+</config>

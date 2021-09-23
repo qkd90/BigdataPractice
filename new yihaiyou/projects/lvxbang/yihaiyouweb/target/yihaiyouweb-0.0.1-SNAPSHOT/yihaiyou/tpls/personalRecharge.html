@@ -1,0 +1,17 @@
+<div class="personal_pay" ng-controller="personalRechargeCtrl">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        充值
+    </div>
+    <div class="drawals"><input type="number" placeholder="请输入充值金额" ng-model="price"/></div>
+    <div class="payment">
+        <ul>
+            <li ng-repeat="pay in payway" ng-class="{paytrue:check == pay.index,payfalse:check != pay.index}"
+                ng-click="changeSel(pay.index)" ng-if="pay.index != 2 || iftaobao"><span class="recharge_pic"
+                                                      ng-class="{icon_wx: pay.index == 1, icon_zfb: pay.index == 2}"></span><span>{{pay.name}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="surebtn" ng-click="recharge()">确定</div>
+</div>
+<!--<img src="/yihaiyou/image/personal/{{pay.logo}}">-->

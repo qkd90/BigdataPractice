@@ -1,0 +1,165 @@
+<div class="personal_myOrder" ng-controller="personalOrderCtrl" screenheight>
+    <div class="header">
+        <a ng-click="back()"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        我的订单
+    </div>
+    <div class="selbar clearfix">
+        <ul>
+            <li ng-click="showOrderList(1)" ng-class="{now:selcolor == 1}">{{selBarType}}</li>
+            <li ng-click="showOrderList(2)" ng-class="{now:selcolor == 2}">{{selBarStatus}}</li>
+        </ul>
+    </div>
+    <div class="sellist" ng-show="selNum == 2">
+        <ul>
+            <li ng-repeat="selBar in selBars1" ng-click="selTag(selBar)"><span class="selLogo {{selBar.pic}}"><i class="yhyfont {{selBar.logo}} per_font"></i></span>{{selBar.name}}
+            </li>
+        </ul>
+    </div>
+    <div class="sellist sellistall" ng-show="selNum == 1">
+        <ul class="clearfix">
+            <li ng-repeat="selBar in selBars3" ng-click="selStatus(selBar)"><span>{{selBar.name}}</span></li>
+        </ul>
+    </div>
+    <section class="scenic" infinite-scroll="searchPersonalOrder()" infinite-scroll-distance="1"
+             infinite-scroll-disabled='loading'>
+        <div class="orderdetail" ng-repeat="order in orderList"
+             ng-class="{orderdetail_secc: order.orderStatus != 'CANCELED'}">
+            <div ng-if="order.type == 'ticket'">
+                <div class="ticketmess" ng-click="detail(order)">
+                    <p>景点门票<span>|</span><span>{{order.status}}</span><i ng-click="deleteOrder(order.id, $event)"
+                                                                         ng-if="order.orderStatus == 'CANCELED'"></i><span
+                            class="codeNum">{{order.orderNo}}</span></p>
+
+                    <p>&lt;{{order.name}}&gt;</p>
+
+                    <p><span>{{order.num}}份</span><span>{{order.startDate}}出发</span></p>
+                </div>
+                <div class="checkorder" ng-if="order.orderStatus == 'CANCELED'">
+                    {{order.status}}<span ng-click="detail(order)">查看订单</span>
+                </div>
+                <div class="checkorder" ng-if="order.orderStatus != 'CANCELED'">
+                    ¥{{order.price}}<span ng-click="detail(order)"
+                                          ng-if="order.orderStatus != 'WAIT'">查看订单</span>
+                    <span ui-sref="orderPay({orderId: order.id})" ng-if="order.orderStatus == 'WAIT'">去支付</span>
+                </div>
+            </div>
+            <div ng-if="order.type == 'hotel'">
+                <div class="ticketmess" ng-click="detail(order)">
+                    <p>酒店<span>|</span><span>{{order.status}}</span><i ng-click="deleteOrder(order.id, $event)"
+                                                                       ng-if="order.orderStatus == 'CANCELED'"></i><span
+                            class="codeNum">{{order.orderNo}}</span></p>
+
+                    <p>&lt;{{order.name}}&gt;</p>
+
+                    <p>{{order.seatType}}{{order.num}}间</p>
+
+                    <p>{{order.startDate}}至{{order.endDate}}共{{order.day}}晚</p>
+                </div>
+                <div class="checkorder" ng-if="order.orderStatus == 'CANCELED'">
+                    {{order.status}}<span ng-click="detail(order)">查看订单</span>
+                </div>
+                <div class="checkorder" ng-if="order.orderStatus != 'CANCELED'">
+                    ¥{{order.price}}<span ng-if="order.orderStatus != 'WAIT'"
+                                          ng-click="detail(order)">查看订单</span>
+                    <span ng-if="order.orderStatus == 'WAIT'" ui-sref="orderPay({orderId: order.id})">去支付</span>
+                </div>
+            </div>
+            <div ng-if="order.type == 'cruiseship'">
+                <div class="ticketmess" ng-click="detail(order)">
+                    <p>邮轮旅游<span>|</span><span>{{order.status}}</span><i ng-click="deleteOrder(order.id, $event)"
+                                                                         ng-if="order.orderStatus == 'CANCELED'"></i><span
+                            class="codeNum">{{order.orderNo}}</span></p>
+
+                    <p>&lt;{{order.name}}&gt;</p>
+
+                    <p><span>{{order.num}}位成人</span><span>{{order.startDate}}出发</span></p>
+                </div>
+                <div class="checkorder" ng-if="order.orderStatus == 'CANCELED'">
+                    {{order.status}}<span ng-click="detail(order)">查看订单</span>
+                </div>
+                <div class="checkorder" ng-if="order.orderStatus != 'CANCELED'">
+                    ¥{{order.price}}<span ng-if="order.orderStatus != 'WAIT'"
+                                          ng-click="detail(order)">查看订单</span>
+                    <span ng-if="order.orderStatus == 'WAIT'" ui-sref="orderPay({orderId: order.id})">去支付</span>
+                </div>
+            </div>
+            <div ng-if="order.type == 'plan'">
+                <div class="ticketmess" ng-click="detail(order)">
+                    <p>智能行程<span>|</span><span>{{order.status}}</span><i ng-click="deleteOrder(order.id, $event)"
+                                                                         ng-if="order.orderStatus == 'CANCELED'"></i><span
+                            class="codeNum">{{order.orderNo}}</span></p>
+
+                    <p>&lt;{{order.name}}&gt;</p>
+
+                    <p><span>{{order.num}}人</span><span>{{order.startDate}}出发</span></p>
+                </div>
+                <div class="checkorder" ng-if="order.orderStatus == 'CANCELED'">
+                    {{order.status}}<span ng-click="detail(order)">查看订单</span>
+                </div>
+                <div class="checkorder" ng-if="order.orderStatus != 'CANCELED'">
+                    ¥{{order.price}}<span ng-if="order.orderStatus != 'WAIT'"
+                                          ng-click="detail(order)">查看订单</span>
+                    <span ng-if="order.orderStatus == 'WAIT'" ui-sref="orderPay({orderId: order.id})">去支付</span>
+                </div>
+            </div>
+            <div ng-if="order.type == 'sailboat' || order.type == 'yacht' || order.type == 'huanguyou'">
+                <div class="ticketmess" ng-click="detail(order)">
+                    <p>海上休闲<span>|</span><span>{{order.status}}</span><i ng-click="deleteOrder(order.id, $event)"
+                                                                         ng-if="order.orderStatus == 'CANCELED'"></i><span
+                            class="codeNum">{{order.orderNo}}</span></p>
+
+                    <p>&lt;{{order.name}}&gt;</p>
+
+                    <p><span>{{order.num}}人</span><span>{{order.startDate}}出发</span></p>
+                </div>
+                <div class="checkorder" ng-if="order.orderStatus == 'CANCELED'">
+                    {{order.status}}<span ng-click="detail(order)">查看订单</span>
+                </div>
+                <div class="checkorder" ng-if="order.orderStatus != 'CANCELED'">
+                    ¥{{order.price}}<span ng-if="order.orderStatus != 'WAIT'"
+                                          ng-click="detail(order)">查看订单</span>
+                    <span ng-if="order.orderStatus == 'WAIT'" ui-sref="orderPay({orderId: order.id})">去支付</span>
+                </div>
+            </div>
+            <div ng-if="order.type == 'ferry'">
+                <div class="ticketmess" ng-click="detail(order)">
+                    <p>轮渡船票<span>|</span><span>{{order.status}}</span><i ng-click="deleteFerry(order.id, $event)"
+                                                                         ng-if="order.orderStatus == 'CANCELED'"></i><span
+                            class="codeNum">{{order.orderNo}}</span></p>
+
+                    <p>&lt;{{order.name}}&gt;</p>
+
+                    <p><span>{{order.flightNumber}}</span><span>{{order.startDate}}</span></p>
+                </div>
+                <div class="checkorder">
+                    ¥{{order.price}}<span ng-if="order.orderStatus == 'WAIT'" ui-sref="ferry_firmorder({orderId: order.id})">去支付</span><span ng-if="order.orderStatus != 'WAIT'" ng-click="detail(order)">查看订单</span>
+                </div>
+            </div>
+            <div ng-if="order.type == 'shenzhou'">
+                <div class="shenzhou" ng-click="detail(order)">
+                    <p>神州专车<span>|</span><span>{{order.status}}</span>
+                        <span ng-click="deleteShenzhou(order.id, $event)" ng-show="order.orderStatus == 'CANCELED'"></span><span>{{order.orderNo}}</span>
+                    </p>
+
+                    <p ng-if="order.orderStatus != 'CANCELED' && order.orderStatus != 'INVALID'">{{order.startDate}}-{{order.endDate}}</p>
+
+                    <p ng-if="order.orderStatus == 'CANCELED' || order.orderStatus == 'INVALID'">{{order.orderDate}}</p>
+
+                    <p>{{order.startName}}</p>
+
+                    <p>{{order.endName}}</p>
+
+                    <p>{{order.mobile}}</p>
+
+                    <p>最终支付：<span class="finalpay">¥{{order.price}}</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="shadow" ng-show="shadow" ng-click="hideshadow()"></div>
+    <style>
+        .bootbox .modal-footer .btn.btn-confirm {
+            width: 50%;
+        }
+    </style>
+</div>

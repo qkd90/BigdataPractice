@@ -1,0 +1,62 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--foot-->
+<div class="foot">
+  <div class="font_t w1170">
+      <p class="fl w500 textC lh20">
+          <img src="../images/code.jpg" /><br/>
+          <br/>关注公众号，获取更多服务
+          <br/><span class="fs14">服务热线：0592-2583758</span>
+      </p>
+      <div class="foot_ul fl">
+          <dl>
+              <dt>加盟合作</dt>
+              <dd><a href="#">商家合作流程</a></dd>
+              <dd><a href="#">广告业务</a></dd>
+              <dd><a href="#">酒店、景点加盟</a></dd>
+              <dd><a href="#">旅游局及景区合作</a></dd>
+              <dd><a href="#">分销合作</a></dd>
+          </dl>
+          <dl>
+              <dt>用户帮助</dt>
+              <dd><a href="#">旅行帮功能简介</a></dd>
+              <dd><a href="#">FAQ</a></dd>
+              <dd><a href="#">免责声明</a></dd>
+              <dd><a href="#">意见反馈</a></dd>
+          </dl>
+           <dl>
+              <dt>关于旅行帮</dt>
+              <dd><a href="#">关于旅行帮</a></dd>
+              <dd><a href="#">联系旅行帮</a></dd>
+              <dd><a href="#">诚聘英才</a></dd>
+              <dd><a href="#">友情链接</a></dd>
+          </dl>
+      </div>
+      <p class="cl"></p>
+  </div>
+  
+  <div class="foot_c w1170">
+      <fieldset class="textC fs16"><legend>健康信息</legend></fieldset>
+      
+      <p class="cl line">
+          <a href="#"><img src="../images/l_img1.jpg" /></a>
+          <a href="#"><img src="../images/l_img2.jpg" /></a>
+          <a href="#"><img src="../images/l_img3.jpg" /></a>
+          <a href="#"><img src="../images/l_img4.jpg" /></a>
+          <a href="#"><img src="../images/l_img5.jpg" /></a>
+          <a href="#"><img src="../images/l_img6.jpg" /></a>
+          <a href="#"><img src="../images/l_img7.jpg" /></a>
+          <a href="#"><img src="../images/l_img8.jpg" /></a>
+          <a href="#" class="fr"><img src="../images/l_img9.jpg" /></a>
+      </p>
+      <p class="cl h30"></p>
+  </div>
+  
+  <div class="foot_b textC fs14 lh30">
+      <a href="#">关于旅行帮</a>&nbsp;|&nbsp;
+      <a href="#">联系旅行帮</a>&nbsp;|&nbsp;
+      <a href="#">诚聘英才</a>&nbsp;|&nbsp;
+      <a href="#">友情链接</a><br/>
+      Copyright 2011-2013 版权所有 厦门浩茫连宇信息技术有限公司闽ICP备 14006003号
+  </div>
+</div>
+<!--foot end-->

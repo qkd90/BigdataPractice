@@ -1,0 +1,26 @@
+.produc_main i.icon.icon-search5{
+    top: 0!important;
+    margin-left: 310px!important;
+    position: absolute;
+    color:white;
+}
+.produc_main .produc_under_ul {
+    padding-top: 5px;
+}
+
+.produc_main .tank .pro_desSel_bg input{display: none;}
+.produc_main .featurecheck1{display: none;}
+.produc_main .s_left1{  color: #ff7d13;}
+.produc_main .s_left2{  color: #ff7d13;}
+/*.produc_main input.pro_desCity_check.pro_desCity_radio.ng-pristine.ng-untouched.ng-valid.ng-not-empty{*/
+    /*display: none;*/
+/*}*/
+/*input.pro_desCity_check.pro_desCity_radio.ng-untouched.ng-valid.ng-not-empty.ng-dirty.ng-valid-parse{*/
+    /*display: none;*/
+/*}*/
+/*input.pro_desCity_check.pro_desCity_radio.ng-valid.ng-not-empty.ng-dirty.ng-touched{*/
+    /*display: none;*/
+/*}*/
+/*input.feature_check.ng-pristine.ng-untouched.ng-valid.ng-empty,input.feature_check.ng-pristine.ng-untouched.ng-valid.ng-not-empty{*/
+    /*display: none;*/
+/*}*/

@@ -1,0 +1,58 @@
+.clearBoth:before,
+.clearBoth:after {
+    content: "";
+    display: table;
+}
+.clearBoth:after {
+    clear: both;
+}
+.y-know-header{
+    width: 100%;
+    position: relative;
+    background: #007eff;
+    color: #fff;
+    line-height: 55px;
+    font-size: 18px;
+    text-align: center;
+}
+.y-know-header .back{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    left: 0;
+    top:0;
+    background: url("../image/historyback.png") no-repeat center;
+    background-size: 10px 15px;
+}
+.y-know-nav{
+    border-bottom: 1px solid #dbdbdb;
+}
+.y-know-nav span{
+    width: 50%;
+    line-height: 36px;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    color: #333;
+}
+.y-know-nav span.active{
+    color: #007eff;
+    border-color: #007eff;
+}
+.y-know-content{
+    width: 94%;
+    margin: 0 auto;
+}
+.y-know-content h4{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 40px;
+    margin-bottom: 6px;
+}
+.y-know-content .know-content{
+    font-size: 12px;
+    text-align: left;
+    color: #666;
+}

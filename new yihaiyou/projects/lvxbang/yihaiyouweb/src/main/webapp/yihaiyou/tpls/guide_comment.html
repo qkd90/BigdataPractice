@@ -1,0 +1,28 @@
+<div class="pingluninfo" ng-controller="guideCommentCtrl">
+	<div class="header">
+		<a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+			评论
+	</div>
+	<div class="pingliunlist" infinite-scroll="getCommentList()"
+		 infinite-scroll-disabled='loading' infinite-scroll-distance='1'>
+		<div ng-show="noComment" class="pingliuninfo" ng-repeat="comment in commentList">
+			<div class="touxiang">
+				<img ng-if="comment.user == null" bn-lazy-src="/yihaiyou/image/touxiang.png">
+				<img ng-if="comment.user != null" bn-lazy-src="{{comment.user.head}}">
+			</div>
+			<div class="content">
+				<div class="username"> <span>{{comment.nickName}}</span></div>
+				<div class="contentinfo">回复<span class="huifu-username">{{userName}}</span>：{{comment.content}}  <p> <a href=""><!--更多--></a> </p></div>
+				<div class="huifudate">{{comment.createTime}}</div>
+			</div>
+		</div>
+		<div ng-hide="noComment" class="pingliuninfo">
+			<p>暂无评论，快来评论吧！~~~~~</p>
+		</div>
+	</div>
+
+	<div class="footer">
+		<input type="text" class="lvkename" ng-model="content" placeholder="评论："><a href="" ng-click="saveComment()">提交</a>
+	</div>
+
+</div>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	<!-- <bean id="appendOrderTaskJob" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="orderService" />
+		</property>
+		<property name="targetMethod">
+			<value>appendOrder</value>
+		</property>
+		<property name="concurrent">
+			<value>false</value>
+		</property>
+	</bean>
+	<bean id="appendOrderTaskTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="appendOrderTaskJob" />
+		</property>
+		<property name="cronExpression">
+			<value>0 0/1 * * * ?</value>
+		</property>
+	</bean>
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list merge="default">
+				<ref bean="appendOrderTaskTrigger" />
+			</list>
+		</property>
+	</bean> -->
+	
+	<!--<bean id="buildTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="buildService" />
+		</property>
+		<property name="targetMethod">
+			<value>buildAll</value>
+		</property>
+		<property name="concurrent">
+			<value>false</value>
+		</property>
+	</bean>
+	<bean id="buildTriggerBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="buildTask"></property>
+        <property name="cronExpression" value="0 0 0 * * ?"></property>
+    </bean>-->
+
+    <bean id="trigger" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <!--<ref bean="buildTriggerBean"/>-->
+            </list>
+        </property>
+    </bean>
+	<bean id="buildService" class="com.data.data.hmly.service.build.MallBuildService"></bean>
+	
+</beans>

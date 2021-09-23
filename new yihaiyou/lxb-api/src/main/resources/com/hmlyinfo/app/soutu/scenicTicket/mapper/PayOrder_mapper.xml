@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenicTicket.mapper.PayOrderMapper">
+	<insert id="insert" parameterType="PayOrder" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_pay_order
+			(
+				id,
+				user_id,
+				pay_order_id,
+				body,
+				total_fee,
+				pay_type,
+				order_num,
+				ip,
+				pre_order_id,
+				open_id,
+				create_time,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{userId},
+				#{payOrderId},
+				#{body},
+				#{totalFee},
+				#{payType},
+				#{orderNum},
+				#{ip},
+				#{preOrderId},
+				#{openId},
+				#{createTime},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="PayOrder">
+		update tb_pay_order
+		<set>
+			<if test="id != null"> id = #{id},</if>
+			<if test="userId != null"> user_id = #{userId},</if>
+			<if test="payOrderId != null"> pay_order_id = #{payOrderId},</if>
+			<if test="body != null"> body = #{body},</if>
+			<if test="totalFee != null"> total_fee = #{totalFee},</if>
+			<if test="payType != null"> pay_type = #{payType},</if>
+			<if test="orderNum != null"> order_num = #{orderNum},</if>
+			<if test="ip != null"> ip = #{ip},</if>
+			<if test="preOrderId != null"> pre_order_id = #{preOrderId},</if>
+			<if test="openId != null"> open_id = #{openId},</if>
+			<if test="createTime != null"> create_time = #{createTime},</if>
+			<if test="modifyTime != null"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="PayOrder">
+		delete from
+			tb_pay_order
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="PayOrder">
+		select
+			*
+		from
+			tb_pay_order
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="PayOrder">
+		select 
+		<if test="needColumns != null and needColumns.size() != 0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">$ {item}
+			</foreach>
+		</if>
+		<if test="needColumns == null or needColumns.size() == 0">
+			 *
+		</if>	 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_pay_order
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="userId != null and '' != userId"> and user_id = #{userId} </if>
+			<if test="payOrderId != null and '' != payOrderId"> and pay_order_id = #{payOrderId} </if>
+			<if test="body != null and '' != body"> and body = #{body} </if>
+			<if test="totalFee != null and '' != totalFee"> and total_fee = #{totalFee} </if>
+			<if test="payType != null"> and pay_type = #{payType} </if>
+			<if test="orderNum != null"> and order_num = #{orderNum} </if>
+			<if test="ip != null and '' != ip"> and ip = #{ip} </if>
+			<if test="preOrderId != null and '' != preOrderId"> and pre_order_id = #{preOrderId} </if>
+			<if test="openId != null and '' != openId"> and open_id = #{openId} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+</mapper>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.weixin.mapper.WxGraphicMapper">
+	<insert id="insert" parameterType="WxGraphic" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_wx_graphic_list
+			(
+				id,
+				wx_reply_id,
+				title,
+				description,
+				img,
+				url,
+				order_num,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{wxReplyId},
+				#{title},
+				#{description},
+				#{img},
+				#{url},
+				#{orderNum},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="WxGraphic">
+		update tb_wx_graphic_list
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="wxReplyId != null and '' != wxReplyId"> wx_reply_id = #{wxReplyId},</if>
+			<if test="title != null and '' != title"> title = #{title},</if>
+			<if test="description != null and '' != description"> description = #{description},</if>
+			<if test="img != null and '' != img"> img = #{img},</if>
+			<if test="url != null and '' != url"> url = #{url},</if>
+			<if test="orderNum != null and '' != orderNum"> order_num = #{orderNum},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="WxGraphic">
+		delete from
+			tb_wx_graphic_list
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="WxGraphic">
+		select
+			*
+		from
+			tb_wx_graphic_list
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="WxGraphic">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_wx_graphic_list
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="wxReplyId != null and '' != wxReplyId"> and wx_reply_id = #{wxReplyId} </if>
+			<if test="title != null and '' != title"> and title = #{title} </if>
+			<if test="description != null and '' != description"> and description = #{description} </if>
+			<if test="img != null and '' != img"> and img = #{img} </if>
+			<if test="url != null and '' != url"> and url = #{url} </if>
+			<if test="orderNum != null and '' != orderNum"> and order_num = #{orderNum} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				# {item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+</mapper>

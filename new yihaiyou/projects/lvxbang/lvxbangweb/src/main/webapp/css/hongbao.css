@@ -1,0 +1,45 @@
+/* CSS Document */
+*{margin:0; padding:0;}
+body{font-family:"微软雅黑";}
+.w1000 {clear: both;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+/*首页左侧红包图标*/
+#pchongbao .home-hb{background:url(../images/huodong/home-hb.png) no-repeat; width:141px; height:171px; position:fixed; left:0; bottom:50px; cursor:pointer;}
+#pchongbao .hb-bg{position:fixed; left:0; right:0; bottom:0; height:170px;background-color:black;z-index: 999;opacity:0.5;filter:alpha(opacity=50);}
+#pchongbao .hb-pic{background:url(../images/huodong/home-hb-big.png) center center no-repeat; width:1000px; height:195px; display:block; margin:-25px auto 0 auto;}
+#pchongbao .hb-pic a{display:inline-block; height:195px;}
+#pchongbao .hb-pic a.hb-link{width:100%;}
+#pchongbao .hb-pic i.hb-close{width:40px; margin-left: 950px; display:inline-block; height:195px;}
+
+/*红包详情页*/
+.hbbanner{background:url(../images/huodong/hb-banner.jpg) center top no-repeat; height:773px; display:block;}
+.hb-info{background:#e2353a; color:#ffedbf; font-size:16px; line-height:180%; padding:63px 0 73px 0;}
+.hb-info h4{font-size:20px; font-weight:normal;}
+
+/*景点推荐*/
+.jdtj{background:url(../images/huodong/hb-jd-bg.jpg) center top no-repeat; height:1912px;}
+.jdtj a.more{float:right; display:inline-block; width:90px; height:40px; margin-top:40px; padding:0;}
+.jdtj a{display:inline-block; padding:20px; color:#be7b27; text-decoration:none;}
+.jdtj a h2{font-weight:bold; font-size:24px; margin-bottom: 5px;}
+.jdtj a img.thumb{width:205px; height:147px;}
+.jdtj a .price{font-size:30px; color:#fe0000; font-weight: bold;}
+.jdtj a .price small{font-size:14px;}
+.jdtj a.jd1{width:352px; height:137px; margin:292px 0 0 138px;}
+.jdtj a.jd1 .text{float:right; width:120px;}
+.jdtj a.jd1 .text .enter{margin-top:20px;}
+.jdtj a.jd2{width:251px; height:353px; margin:82px 190px 0 0; float:right;}
+.jdtj a.jd2 .enter{margin:15px auto;}
+.jdtj a.jd2 .thumb{margin-top:25px;}
+.jdtj a.jd3{width:209px; height:326px; margin:292px 0 0 0; float:left;}
+.jdtj a.jd3 h2{margin:20px auto 0 auto;}
+.jdtj a.jd3 p.enter{text-align:right;}
+.jdtj a.jd4{width:372px; height:148px; margin:120px 110px 0 0; float:right;}
+.jdtj a.jd4 .text .enter{margin-top: 30px; margin-left: 25px;}
+.jdtj a.jd4 .text,.jdtj a.jd5 .text{float:right; width:150px;}
+.jdtj a.jd5{width:377px; height:152px; margin:46px 0 0 62px; float:left;}
+.jdtj a.jd5 p.enter,.jdtj a.jd6 p.enter{margin-top:20px;}
+.jdtj a.jd6{width:412px; height:150px; margin:94px 120px 0 0; float:right;}
+.jdtj a.jd6 .text{float:left; width:181px; padding-right:10px;}

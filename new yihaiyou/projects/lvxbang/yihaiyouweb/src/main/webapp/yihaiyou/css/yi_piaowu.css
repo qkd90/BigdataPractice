@@ -1,0 +1,299 @@
+
+.section_visitor,.section_order{margin-top:45px;}
+.section .shortcut{width: 100%;height: 60px;background-color: #fff;}
+.section .shortcut:nth-child(2){margin-top:10px;}
+.section .shortcut p{line-height:30px;font-size: 15px;padding-left:15px;color: #ff7356}
+.section .sta_sto{width: 100%}
+.section .sta_sto li.fir_list{width: 100%;height: 60px;background-color: #fff;margin-top:10px;padding:10px 0;}
+.section .sta_sto li.fir_list .li_left,.section .sta_sto li.fir_list .li_right{width: 45%;height: 100%;float: left}
+.section .sta_sto li.fir_list .li_left p,.section .sta_sto li.fir_list .li_right p{font-size: 14px;line-height: 30px;padding-left:15px;}
+.section .sta_sto li.fir_list .li_left p:nth-child(1),.section .sta_sto li.fir_list .li_right p:nth-child(1){color: #97ceff;text-indent: 2em}
+.section .sta_sto li.fir_list .li_left p:nth-child(2),.section .sta_sto li.fir_list .li_right p:nth-child(2){color: #363636}
+.section .sta_sto li.fir_list .li_left p:nth-child(1){background: url(../image/ferry/icon-02.png) no-repeat 15px center;background-size:25px 25px;}
+.section .sta_sto li.fir_list .li_right p:nth-child(1){background: url(../image/ferry/icon-01.png) no-repeat 15px center;background-size:25px 25px;}
+.sel_day{width: 100%;height: 50px;background-color: #3996fa;color: #fff;line-height: 50px;text-align: center;font-size:18px;}
+.sel_day span{display: block;width: 80px;height: 50px;font-size:14px;text-align: center;}
+.sel_day span:nth-child(1){float: left;}
+.sel_day span:nth-child(2){float: right;}
+.sel_day .sel_today{width: calc(100% - 160px);height: 30px;float: left;margin: 10px auto 0 auto;border-radius: 5px;color: #fff;line-height: 30px;font-size: 1.6rem;text-align:center;}
+.sel_day .sel_today input{width:110px;background:#3996fa;color:#fff;padding-right:20px;background:url(/yihaiyou/image/icon-date.png) no-repeat right center;background-size:15px 15px;}
+.section_day{padding:10px;}
+.section_day ul{width: 100%}
+.section_day ul li.sec_list{width: 100%;height: 60px;background:url(../image/plan/icon-cp01.png) no-repeat 97% center;background-size:100% 100%;}
+.section_day ul a:nth-child(n+2) li.sec_list{margin-top:10px;}
+.section_day ul li.sec_list .list_left{width: 50%;height: 100%;float: left;}
+.section_day ul li.sec_list .list_right{width: 50%;height: 100%;float: right;}
+.section_day ul li.sec_list .list_left{}
+.section_day ul li.sec_list .list_left p,.section_day ul li.sec_list .list_right p{text-align: center}
+.section_day ul li.sec_list .list_left p:nth-child(1){color: orange;font-size: 14px;line-height: 30px;}
+.section_day ul li.sec_list .list_left p:nth-child(2){color: #363636;font-size: 12px;line-height: 20px;}
+.section_day ul li.sec_list .list_right p:nth-child(1){color: #2894ff;font-size: 14px;line-height: 30px;}
+.section_day ul li.sec_list .list_right p:nth-child(1) span{font-weight: 600;}
+.section_day ul li.sec_list .list_right p:nth-child(2){color: #ff5151;font-size: 12px;line-height: 20px;}
+
+.intro{width:calc(100% - 10px);height: 50px;background-color: #fff;line-height: 23px; color:#ff7356;font-size: 15px;padding:5px;}
+.intro p{background:url(../image/ferry/icon-map.png) no-repeat 10px center;background-size: 6px 10px;text-indent: 2em;}
+.visitormes{width: calc(100% - 10px);height: 50px;background-color: #fff;margin-top:10px;padding:5px;}
+.visitormes p{margin-left:40px;}
+.visitormes p:nth-child(1){line-height: 25px;font-size: 16px}
+.visitormes p:nth-child(1) span{font-size: 15px;color: #aaaaff;}
+.visitormes p:nth-child(2){line-height: 20px;font-size: 13px;color:green;}
+.sub_btn{width: 60%;height: 40px;background-color: green;line-height: 40px;text-align: center;margin:25px auto;border-radius: 20px;font-size: 18px;}
+.sub_btn a{display: block;color: #fff;}
+.section_editor{width: 100%;margin-top: 15px;background-color: #fff;padding-bottom: 25px;}
+.section_editor .editormessage,.section_editor .editormessage ul{width: 100%;}
+.section_editor .editormessage ul li{width: 100%;height: 45px;border-bottom: 1px solid #ededed;line-height: 45px;}
+.section_editor .editormessage ul li label{width: 30%;display: block;height: 45px;text-align: right;font-size: 14px;float: left}
+.section_editor .editormessage ul li input{width: 60%;height: 45px;outline: none;border:none;float: left;color:#4f4f4f;font-size: 16px;text-indent: 10px;}
+.section_editor .save_btn{width: 60%;height: 40px;background-color: #ff7356;line-height: 40px;text-align: center;margin:25px auto;border-radius: 20px;font-size: 18px;}
+.section_editor .save_btn a{display: block;color: #fff;}
+
+.meshead{width: calc(100% - 20px);height: 40px;line-height: 20px;background-color: green;color: #fff;font-size: 14px;padding:5px 10px;}
+.section_order .personmes{width: 100%;height: 45px;font-size: 1.6rem;color: #333;line-height: 45px;text-indent:40px;background: #fff url(/yihaiyou/image/ferry/icon-matou.png) no-repeat 15px center;background-size:18px 20px;}
+.section_order .personmes span{display: block;float: left;text-align: center;}
+.section_order .personmes span:nth-child(1){width: 35%;height: 100%;color: #fff}
+.section_order .personmes span:nth-child(2){width: 65%;height: 100%;}
+.section_order .ticket_type{background-color: #fff;}
+.section_order .beknow{background-color: #fff;margin-top: 8px;margin-bottom:40px;}
+.section_order .ticket_type h2{font-size: 15px;color: #333;}
+.section_order .ticket_type ul,.section_order .beknow ul{width: 100%;}
+.section_order .ticket_type ul li{font-size: 12px;color: #4f4f4f;}
+.section_order .ticket_type ul li p{line-height:30px;}
+.section_order .beknow ul li{height: 40px;line-height: 40px;font-size: 1.2rem;color: #4f4f4f;}
+.section_order .over{width: 100%;height: 40px;line-height: 40px;color: #fff;font-size: 16px;text-align: center;position:fixed;left:0;bottom:0;border-top:1px solid #e0e0e0;}
+.section_order .over .sel_again{width: 60%;height: 40px;background-color: #fff;float: left}
+.section_order .over .sel_submit{width: 40%;height: 40px;background-color: #ee810b;float: right}
+.section_order .over .sel_submit a,.section_order .over .sel_again a{display: block;color:#fff;}
+
+
+.section_order .aticket {
+    background-color: #fff;
+    padding:0 0 0 15px;
+    margin-top:15px;
+    border-top:1px solid #e0e0e0;
+    border-bottom:1px solid #e0e0e0;
+}
+
+.section_order .aticket .host {
+    border-bottom:1px solid #e0e0e0;
+    line-height:40px;
+}
+
+.section_order .aticket .host:last-child {
+    border-bottom:none;
+}
+
+.section_order .aticket .host span.name {
+    font-size: 17px;
+    color: #333;
+    font-weight: 600;
+    display:inline-block;
+    width: 4.3em;
+}
+
+.section_order .aticket .host span.carId {
+    font-size: 15px;
+    color: #aaa;
+    display:inline-block;
+}
+
+.section_order .aticket .host span.carId i {
+    display:inline-block;
+    width:15px;
+    height:10px;
+    margin-left:15px;
+    background: url(/yihaiyou/image/icon_down_e.png) no-repeat center center;
+}
+
+.section_order .beknow ul .beknow_atten {
+    padding: 15px 15px 0 15px;
+    line-height: 20px;
+    font-size: 1.4rem;
+    color: #aaa;
+    height:auto;
+    letter-spacing: 1px;
+    border-top: 1px solid #e0e0e0;
+}
+.section_order .beknow ul .beknow_atten span{
+    color: #3996fa;
+}
+
+.section_order .ticketList {
+    position:absolute;
+    left:4em;
+    top:200px;
+    background:#fff;
+    width:75%;
+    max-width:320px;
+    z-index: 100;
+    border-radius:8px;
+}
+
+.section_order .ticketList p {
+    line-height:40px;
+    border-bottom:1px solid #e0e0e0;
+    font-size:17px;
+    color: #777;
+    text-align:center;
+}
+
+.section_order .ticketList p:last-child {
+    border-bottom:none;
+}
+
+.section_order .ferryshadow {
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    position: fixed;
+    left:0;
+    top:0;
+    z-index:99;
+}
+
+.section_pay{width: 100%;}
+.section_pay .linename{padding: 10px 10px 0 10px;width: calc(100% - 20px);background-color: #fff;}
+.section_pay .linename ul{width: 100%;border-bottom: 1px solid #ccc;}
+.section_pay .linename ul li{width: 100%;min-height: 30px;line-height: 30px;color: #333;font-size: 15px;}
+.section_pay .linename ul li span{font-size: 16px;color: #333!important;font-weight: 600;}
+.section_pay .topay{width: calc(100% - 20px);padding: 10px;background-color: #fff;font-size: 15px;}
+.section_pay .topay p{border-bottom: 1px solid #ccc;border-top: 1px solid #ccc;padding:10px 0;}
+.section_pay .topay span:nth-child(1){color: #aaaaff;font-size: 18px;}
+.section_pay .topay span:nth-child(2){color: red;}
+.section_pay  .pay_type{width: 100%;background-color: #fff;}
+.section_pay  .pay_type ul{width: calc(100% - 20px);padding: 10px;}
+.section_pay  .pay_type ul li{width: 100%;font-size: 16px;height: 35px;line-height: 35px;border-bottom: 1px solid #ccc;}
+.section_pay  .pay_type ul li:nth-child(n+2){text-indent: 85px;}
+.section_pay  .pay_type ul li span{color: red;margin-left: 20px;font-size: 18px;font-weight: 600;}
+.section_pay  .pay_type ul li img{width: 35px;height: 35px;margin-right: 20px;position: absolute;left:0;top: 0;}
+.section_pay .over{width: 260px;height: 40px;margin: 20px auto;line-height: 40px;color: #fff;font-size: 16px;text-align: center;}
+.section_pay .over .sel_again{width: 100px;height: 40px;background-color: green;border-radius: 20px;float: left}
+.section_pay .over .sel_submit{width: 100px;height: 40px;background-color: #aaaaff;border-radius: 20px;float: right}
+.section_pay .over .sel_submit a,.section_pay .over .sel_again a{display: block;color:#fff;}
+
+.firmorderMessage {
+    background:#fff;
+    margin-top:10px;
+    padding:15px;
+    border-top:1px solid #e0e0e0;
+}
+
+.firmorderMessage h3 {
+    font-size:1.6rem;
+    font-weight:600;
+    padding-bottom:8px;
+}
+
+.firmorderMessage p {
+    padding-bottom:5px;
+    font-size:1.4rem;
+    color: #666;
+}
+
+.firmorderMessage p:last-child {
+    padding-bottom:0;
+}
+
+.firmorderMessage p .firm_l {
+    font-size:1.5rem;
+    color:#333;
+}
+
+.firmorderMessage p .price {
+    color:#ff8800;
+}
+
+.firmorderMessage p .price label {
+    font-size:1.3rem;
+}
+
+.payattention {
+    border-top:1px solid #e0e0e0;
+    border-bottom:1px solid #e0e0e0;
+    background:#fefcdc;
+    padding:10px 15px;
+    color:#7a6416;
+    font-size:1.5rem;
+}
+
+.payattention span {
+    color: #ff8800;
+}
+
+.walletBalance {
+    border-top:1px solid #e0e0e0;
+    border-bottom:1px solid #e0e0e0;
+    margin-top:15px;
+    padding:12px;
+    color:#000;
+    font-size:1.5rem;
+    background-color:#fff;
+}
+
+.walletBalance label.rmb {
+    font-size:1.2rem;
+    color:#ff8800;
+}
+
+.walletBalance label.rmbnum {
+    font-size:1.6rem;
+    color:#ff8800;
+    font-weight:600;
+    margin-right:5px;
+}
+
+.walletBalance label.recharge,.orderpay .paytype li .recharge {
+    font-size:1.4rem;
+    color:#3996fa;
+    text-decoration:underline;
+}
+
+.walletBalance .checkbox {
+    width:30px;
+    height:24px;
+    float:right;
+    margin:0;
+    background: url(/yihaiyou/image/0.png) no-repeat center center;
+    background-size:30px
+}
+
+.walletBalance .checkboxTrue {
+    background: url(/yihaiyou/image/plan/icon-xuanzhong.png) no-repeat center center;
+    background-size:22px
+}
+
+.pay_wechat {
+    background:#fff url(/yihaiyou/image/ico/icon-wei.png) no-repeat 15px center;
+    background-size:32px;
+    text-indent:50px;
+}
+
+.bottom_button {
+    padding:25px 15px;
+}
+
+.bottom_button span {
+    width:138px;
+    height:40px;
+    color:#fff;
+    font-size:1.6rem;
+    border-radius:5px;
+    text-align: center;
+    line-height:40px;
+}
+
+.bottom_button span.cancle {
+    float:left;
+    background:#ff8800;
+}
+
+.bottom_button span.pay {
+    float:right;
+    background:#3996fa;
+}
+
+.ticket_main .nothingPic {
+    width:100%;
+    height: calc(100% - 115px);
+    background: url(/yihaiyou/image/ferry/ticket_nothing.png) no-repeat center center;
+}

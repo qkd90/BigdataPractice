@@ -1,0 +1,14 @@
+.main-wrap {background-color: #fff}
+.price-type-wrap {padding: 10px 15px;}
+.price-type {width: 50%;}
+.price-type-content {border: 2px solid #999;border-radius: 5px;box-sizing: border-box;margin:5px;padding: 5px;}
+.price-type-content.active {border: 2px solid #18aaf2;}
+.price-type-content .name {text-align: center}
+
+.calendar-wrap {margin: 10px 15px;padding: 5px;border: 2px solid #18aaf2;border-radius: 5px;box-sizing: border-box;}
+#calendar {}
+#calendar .fc-event {
+    font-size: 14px;
+    color: #ff6a23!important;
+    border: none;
+}

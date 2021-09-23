@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="lxbApp">
+<head>
+    <meta charset="UTF-8">
+    <title>旅行帮</title>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <!--<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />-->
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="description" content="厦门旅游, 网上订购, 景点推荐, 路线规划">
+    <link rel="stylesheet" href="lxb/css/common.css">
+    <meta name="keywords" content="旅游, 厦门, 网上订票">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lxb/css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="/css/dateRange.css">
+    <link rel="stylesheet" href="lxb/css/team.css">
+    <link href="lxb/css/header_take_order.css" rel="stylesheet">
+    <link href="lxb/css/header_line_detail.css" rel="stylesheet">
+    <link href="lxb/css/faredetail_booking_visa.css" rel="stylesheet">
+    <link href="lxb/css/gentuanDate.css" rel="stylesheet">
+    <link href="lxb/css/header_personal_order.css" rel="stylesheet">
+    <link href="lxb/css/header_daymarch.css" rel="stylesheet">
+    <link href="lxb/css/header_booking_something.css" rel="stylesheet">
+    <link href="lxb/css/header_contract.css" rel="stylesheet">
+    <link href="lxb/css/header_limit_peaple.css" rel="stylesheet">
+    <link href="lxb/css/tab.css" rel="stylesheet">
+    <link href="lxb/css/ticket-detail.css" rel="stylesheet">
+    <link href="lxb/css/order-date.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lxb/css/header_seaching.css">
+    <link href="lxb/css/header_hotelDetail.css" rel="stylesheet">
+    <link href="lxb/css/header_scenicDetail.css" rel="stylesheet">
+    <link href="lxb/css/order-hotel-header.css" rel="stylesheet">
+    <link href="lxb/css/payNew.css" rel="stylesheet">
+    <link href="lxb/css/detail-hotel.css" rel="stylesheet">
+    <link href="lxb/css/scenicOrderKnow.css" rel="stylesheet">
+    <link href="lxb/css/products_list.css" rel="stylesheet" type="text/css">
+    <link href='fullcalendar-2.4.0/lib/cupertino/jquery-ui.min.css' rel='stylesheet'/>
+    <link href='fullcalendar-2.4.0/fullcalendar.css' rel='stylesheet'/>
+    <link href='fullcalendar-2.4.0/fullcalendar.print.css' rel='stylesheet' media='print'/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icheck/skins/flat/green.css">
+    <link rel="stylesheet" href="css/icheck/skins/square/green.css">
+    <link rel="stylesheet" href="/lxb/css/header.css">
+    <link rel="stylesheet" href="/lxb/css/header_gentuan.css">
+    <link rel="stylesheet" href="/lxb/css/header_ticket.css">
+    <link rel="stylesheet" href="lxb/css/header_ticket_near.css">
+    <link rel="stylesheet" href="/lxb/css/header_hotel.css">
+    <link rel="stylesheet" href="/lxb/css/header_hotelList.css">
+    <link rel="stylesheet" href="/lxb/css/sceneryDetail.css">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+</head>
+<body>
+<ajaxloading></ajaxloading>
+<div>
+    <div ui-view></div>
+</div>
+</body>
+<!-- loading js -->
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="libs/jquery/jquery.min.js"></script>
+<script src="libs/jquery/jquery.pin.js"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap/js/bootbox.min.js"></script>
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular/angular-animate.js"></script>
+<script src="libs/angular/angular-ui-router.js"></script>
+<script src="libs/angular/angular-cookies.min.js"></script>
+<script src="libs/angular/angularLocalStorage.min.js"></script>
+<script src="libs/angular/ng-infinite-scroll.min.js"></script>
+<script src="libs/jquery/icheck.min.js"></script>
+<script src="libs/jquery/swiper-3.3.1.min.js"></script>
+<script type="text/javascript" src="/js/dateRange.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="host.js"></script>
+<script type="text/javascript" src="config.js"></script>
+<script type="text/javascript"
+        src="http://api.map.baidu.com/getscript?v=2.0&ak=GKjVLKFYCjItmN8Ubcs22zea&services=&t=20151113040005"
+        class="ng-scope"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/RichMarker/1.2/src/RichMarker_min.js"></script>
+<!--<script type="text/javascript" src="tpls/demo.template.html.js"></script>-->
+<script type="text/javascript" src="lxb/js/lxbwebapp.js"></script>
+<!--<script type="text/javascript" src="lxb/lxbtpls/lxbApp.html.js"></script>-->
+<script type="text/javascript" src="lxb/js/index_controller.js"></script>
+<script type="text/javascript" src="lxb/js/group_tour_controller.js"></script>
+<script type="text/javascript" src="lxb/js/drive_tour_controller.js"></script>
+<script type="text/javascript" src="lxb/js/self_tour_controller.js"></script>
+<script type="text/javascript" src="lxb/js/custom_tour_controller.js"></script>
+<script type="text/javascript" src="lxb/js/around_tour_controller.js"></script>
+<script type="text/javascript" src="lxb/js/internal_tour_controller.js"></script>
+<script type="text/javascript" src="lxb/js/overseas_tour_controller.js"></script>
+<script type="text/javascript" src="lxb/js/ticket_controller.js"></script>
+<script type="text/javascript" src="lxb/js/ticket_near_controller.js"></script>
+<script type="text/javascript" src="lxb/js/hotel_controller.js"></script>
+<script type="text/javascript" src="lxb/js/myTeamControllers.js"></script>
+<script type="text/javascript" src="lxb/js/orderController.js"></script>
+<script type="text/javascript" src="lxb/js/lineList.js"></script>
+<script type="text/javascript" src="lxb/js/lineDetail.js"></script>
+<script type="text/javascript" src="lxb/js/scenicDetailControllers.js"></script>
+<script type="text/javascript" src="lxb/js/hotelDetailControllers.js"></script>
+<script type="text/javascript" src="js/directive.js"></script>
+<script type="text/javascript" src="js/services.js"></script>
+<script type="text/javascript" src="lxb/js/index_services.js"></script>
+<script type="text/javascript" src="lxb/js/searchController.js"></script>
+<script type="text/javascript" src="lxb/js/selectCityController.js"></script>
+<script type="text/javascript" src="lxb/js/hotelListController.js"></script>
+<script type="text/javascript" src="lxb/js/sceneryDetailControllers.js"></script>
+<script src="appfiles/src/js/products_list.js"></script>
+<script src="lxb/js/scenicListController.js" type="application/javascript"></script>
+<script src='fullcalendar-2.4.0/lib/moment.min.js'></script>
+<script src='fullcalendar-2.4.0/fullcalendar.min.js'></script>
+<script src="js/owl.carousel.min.js"></script>
+</html>

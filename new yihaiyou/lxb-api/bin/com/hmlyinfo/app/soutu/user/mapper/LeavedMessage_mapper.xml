@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.user.mapper.LeavedMessageMapper">
+	<insert id="insert" parameterType="LeavedMessage" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_leaved_message
+			(
+				id,
+				first_user,
+				second_user,
+				content,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{firstUser},
+				#{secondUser},
+				#{content},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="LeavedMessage">
+		update tb_leaved_message
+		<set>
+			<if test="firstUser != null and '' != firstUser"> first_user = #{firstUser},</if>
+			<if test="secondUser != null and '' != secondUser"> second_user = #{secondUser},</if>
+			<if test="content != null and '' != content"> content = #{content},</if>
+			<if test="readed != null and '' != readed"> readed = #{readed},</if>
+			<if test="replied != null and '' != replied"> replied = #{replied},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="LeavedMessage">
+		delete from
+			tb_leaved_message
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="LeavedMessage">
+		select
+			*
+		from
+			tb_leaved_message
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="listrecord" resultType="LeavedMessage">
+		select
+			* 
+		from
+			tb_leaved_message
+		where (first_user = #{firstUser} and second_user = #{secondUser}) or (first_user = #{secondUser} and second_user = #{firstUser})
+		order by create_time desc
+	</select>
+	
+	<select id="list" resultType="LeavedMessage">
+		select
+			* 
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_leaved_message
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="firstUser != null and '' != firstUser"> and first_user = #{firstUser}</if>
+			<if test="secondUser != null and '' != secondUser"> and second_user = #{secondUser}</if>
+			<if test="content != null and '' != content"> and content = #{content}</if>
+			<if test="readed != null and '' != readed"> and readed = #{readed}</if>
+			<if test="replied != null and '' != replied"> and replied = #{replied}</if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+		order by create_time desc
+	</sql>
+</mapper>

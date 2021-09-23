@@ -1,0 +1,59 @@
+
+    <div class="youlunsearch" ng-controller="ferrySearch">
+        <div class="header">
+            <a href="javascript:;" ui-sref="index"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+            航线选择
+            <span class="save pic2 pic2_1" ui-sref="personalIndex"></span>
+            <span class="save pic2  pic3"></span>
+        </div>
+        <div class="blank"></div>
+        <div class="ticketAttention" ng-show="ferryListParams.flightLine.id == 1">鼓浪屿景区手机语音导航，价格：<span>16</span>元</div>
+        <div class="ticketAttention" ng-show="ferryListParams.flightLine.id == 2">湖里山炮台手机语音导航，价格：<span>2</span>元</div>
+        <div class="ticketAttention" ng-show="ferryListParams.flightLine.id == 3">嘉庚公园景区手机语音导航，价格：<span>2</span>元</div>
+        <div class="choseline">
+            <ul>
+                <!--驴记模块-->
+                <li class="lj-group clearfix" ng-repeat="item in lvji.data" ng-click="passId(item.id)">
+                    <div class="lj-group-left pull-left">
+                        {{item.name}}<br>
+                        手机语音导航
+                    </div>
+                    <div class="lj-group-right pull-left" ng-click="lvji.method.popSwitch(item.id)">
+                        <i class="lj-color-blue">详情></i><br>
+                        <i class="lj-color-orange">价格：￥{{item.price}}</i>
+                    </div>
+                    <i ng-class="{true:'lj-group-active',false:'lj-group-icon'}[item.selectStatus]" ng-click="lvji.method.selectSwitch(item.id)"></i>
+                    <div class="lj-group-pop" ng-if="item.popStatus">
+                        <div class="lj-group-pop-wrap">
+                            <div class="lj-pop-header">
+                                详情
+                                <i class="lj-pop-close" ng-click="lvji.method.popSwitch(item.id)"></i>
+                            </div>
+                            <div class="lj-pop-body">
+                                预定时间：
+                                全天候均可预定。
+                                费用包含：
+                                厦门鼓浪屿景区手机语音导游讲解票（不含门票）1张。
+                                产品亮点：
+                                驴迹手机导游就是网页版的电子导游，以一张精美的卡通版景区地图为基础，为顾客提供景区内导航，播放语音讲解等服务，购买完成后可在电子导览页面输入授权码使用。1、超萌的景区卡通地图让您旅行不迷路。2、GPS导航定位为您实时自动播放景点讲解。3、真人播音级讲解还有多风格供您选择。
+                                使用方法：
+                                无需取票，凭供应商发送的授权码在电子导览页面验证成功即可使用（一个授权码只能使用1次，请妥善保管；并请于13天内使用，否则失效）。
+                                退改规则：
+                                1、	该产品支持随时退，经核实如未验证授权码，可免费取消（自下单之时起算，可退期为7天）。
+                                2、	1个订单多张票，不支持部分退票。
+                                3、	如需取消订单，请于我的订单页面选择该订单进行退票。
+                                4、	如需改期，请申请退票后重新预定。
+                                发票说明：
+                                如需发票，请直接联系一海游客服0592-5623592。
+                                使用时间：
+                                全天候均可使用。
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--驴记模块ending-->
+            </ul>
+        </div>
+        <div class="lineOver" ng-click="submit2(ljId)">完成</div>
+        <div class="shadow_map" ng-show="dark"></div>
+    </div>

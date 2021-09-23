@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.delicacy.mapper.DelicacyPictureMapper">
+	<insert id="insert" parameterType="DelicacyPicture">
+		insert into tb_delicacy_picture
+			(
+				id,
+				delicacy_id,
+				food_picture,
+				width,
+				height,
+				modify_time,
+				create_time
+			)
+		values
+			(
+				#{id},
+				#{delicacyIds},
+				#{foodPicture},
+				#{width},
+				#{height},
+				#{modifyTime},
+				#{createTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="DelicacyPicture">
+		update tb_delicacy_picture
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="delicacyIds != null and '' != delicacyIds"> delicacy_id = #{delicacyIds},</if>
+			<if test="foodPicture != null and '' != foodPicture"> food_picture = #{foodPicture},</if>
+			<if test="width != null and '' != width"> width = #{width},</if>
+			<if test="height != null and '' != height"> height = #{height},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="DelicacyPicture">
+		delete from
+			tb_delicacy_picture
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="DelicacyPicture">
+		select
+			*
+		from
+			tb_delicacy_picture
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="DelicacyPicture">
+		select 
+			 	id,
+				delicacy_id,
+				food_picture
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_delicacy_picture
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="delicacyIds != null and '' != delicacyIds"> and delicacy_id = #{delicacyIds} </if>
+			<if test="foodPicture != null and '' != foodPicture"> and food_picture = #{foodPicture} </if>
+			<if test="width != null and '' != width"> and width = #{width} </if>
+			<if test="height != null and '' != height"> and height = #{height} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+		</where>
+	</sql>
+</mapper>

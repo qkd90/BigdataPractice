@@ -1,0 +1,69 @@
+<style>
+    .form-group {
+        background-color: #fff;
+    }
+
+    .form-group input {
+        line-height: 50px;
+        height: 50px;
+        text-indent:40px;
+        font-size:1.6rem;
+        color:#333;
+    }
+
+    .form-group input::-webkit-input-placeholder {
+        font-szie:1.9rem;
+        color:#aaa;
+    }
+
+    .form-group input.host {
+        background:#fff url(/yihaiyou/image/ferry/host.png) no-repeat 15px center!important;
+        background-size:20px 22px;
+    }
+
+    .form-group input.password {
+        background:#fff url(/yihaiyou/image/ferry/password.png) no-repeat 15px center!important;
+        background-size:20px 22px;
+    }
+
+    .form-group input.cash {
+        background:#fff url(/yihaiyou/image/ferry/icon-cash.png) no-repeat 15px center!important;
+        background-size:20px 22px;
+    }
+
+    .btn {
+        width:calc(100% - 30px);
+        margin:30px auto;
+        display:block;
+        background:#ff8800;
+        color:#fff;
+        font-size:1.6rem;
+        float:none;
+    }
+
+    .ticketAttention {
+        padding:8px 35px;
+        font-size:1.3rem;
+        color:#777;
+        line-height:18px;
+        border-bottom:1px solid #e0e0e0;
+        background:#fefcdc url(/yihaiyou/image/ferry/icon-attention.png) no-repeat 15px 8px;
+        background-size:17px;
+    }
+</style>
+
+<div ng-controller="ferryRegisterCtrl">
+    <div class="header">
+        <a href="javascript:history.go(-2);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        轮渡账号注册
+    </div>
+    <div class="blank"></div>
+    <div class="ticketAttention">未检测到您在轮渡注册账号，已为您生成账号，请设定密码，并填写银行卡号进行实名认证。</div>
+    <div class="form-group" style="margin-top: 10px;">
+        <input type="text" class="form-control host" ng-model="member.name" disabled="disabled" style="opacity: 1;"/>
+        <input type="password" class="form-control password" ng-model="member.password" placeholder="请输入密码（6位以上英文或数字）"/>
+        <input type="password" class="form-control password" ng-model="rePassword" placeholder="再次输入密码"/>
+        <input type="text" class="form-control cash" ng-model="member.bankNo" placeholder="请输入银行卡号"/>
+    </div>
+    <button type="submit" class="btn col-xs-12" ng-click="register()">注册</button>
+</div>

@@ -1,0 +1,17 @@
+<div ng-controller="xingbiaotiCtrl">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">撰写线路标题</a></li>
+            <li class="pull-right" ng-click="updateName()">
+                <button type="button" class="fabu btn"><img src="images/ico/dagou.png"/></button>
+            </li>
+        </ul>
+    </div>
+    <div id="subcontainer" class="clearfix xieganxiang">
+        <div class="col-xs-12">
+            <div class="clearfix">
+                <textarea class="form-control" rows="3" ng-model="request.planName"></textarea>
+            </div>
+        </div>
+    </div>
+</div>

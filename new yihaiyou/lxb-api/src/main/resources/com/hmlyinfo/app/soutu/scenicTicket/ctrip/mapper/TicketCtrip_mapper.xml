@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.scenicTicket.mapper.TicketCtripMapper">
+	<insert id="insert" parameterType="TicketCtrip" useGeneratedKeys="true" keyProperty="id">
+		insert into tb_ticket_ctrip
+			(
+				id,
+				ctrip_id,
+				ctrip_resource_id,
+				name,
+				market_price,
+				price,
+				is_return_cash,
+				return_cash_amount,
+				ctrip_scenic_id,
+				scenic_id,
+				scenic_name,
+				ticket_type,
+				people_group,
+				country_id,
+				province_id,
+				district_id,
+				create_time,
+				modify_time
+			)
+		values
+			(
+				#{id},
+				#{ctripId},
+				#{ctripResourceId},
+				#{name},
+				#{marketPrice},
+				#{price},
+				#{isReturnCash},
+				#{returnCashAmount},
+				#{ctripScenicId},
+				#{scenicIds},
+				#{scenicName},
+				#{ticketType},
+				#{peopleGroup},
+				#{countryId},
+				#{provinceId},
+				#{districtId},
+				#{createTime},
+				#{modifyTime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="TicketCtrip">
+		update tb_ticket_ctrip
+		<set>
+			<if test="ctripId != null and '' != ctripId"> ctrip_id = #{ctripId},</if>
+			<if test="ctripResourceId != null and '' != ctripResourceId"> ctrip_resource_id = #{ctripResourceId},</if>
+			<if test="name != null and '' != name"> name = #{name},</if>
+			<if test="marketPrice != null and '' != marketPrice"> market_price = #{marketPrice},</if>
+			<if test="price != null and '' != price"> price = #{price},</if>
+			<if test="isReturnCash != null and '' != isReturnCash"> is_return_cash = #{isReturnCash},</if>
+			<if test="returnCashAmount != null and '' != returnCashAmount"> return_cash_amount = #{returnCashAmount},</if>
+			<if test="scenicName != null and '' != scenicName"> scenic_name = #{scenicName},</if>
+			<if test="ctripScenicId != null and '' != ctripScenicId"> ctrip_scenic_id = #{ctripScenicId},</if>
+			<if test="scenicIds != null and '' != scenicIds"> scenic_id = #{scenicIds},</if>
+			<if test="ticketType != null and '' != ticketType"> ticket_type = #{ticketType},</if>
+			<if test="peopleGroup != null and '' != peopleGroup"> people_group = #{peopleGroup},</if>
+			<if test="countryId != null and '' != countryId"> country_id = #{countryId},</if>
+			<if test="provinceId != null and '' != provinceId"> province_id = #{provinceId},</if>
+			<if test="districtId != null and '' != districtId"> district_id = #{districtId},</if>
+			<if test="createTime != null and '' != createTime"> create_time = #{createTime},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="TicketCtrip">
+		delete from
+			tb_ticket_ctrip
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="TicketCtrip">
+		select
+			*
+		from
+			tb_ticket_ctrip
+		where
+			id = #{id}
+	</select>
+	
+	<select id="selByResourceId" resultType="TicketCtrip">
+		select
+			*
+		from
+			tb_ticket_ctrip
+		where
+			resource_id = #{resourceId}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(*) 
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="TicketCtrip">
+		select 
+			 *
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="listColumns" resultType="TicketCtrip">
+		select
+		<if test="needColumns!=null and needColumns.size()!=0">
+			<foreach collection="needColumns" item="item" index="index" separator=",">${item}</foreach>
+		</if>
+		<include refid="byProperty"/>
+	</select>
+	
+	<sql id="byProperty">
+		from
+			tb_ticket_ctrip
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="ctripId != null and '' != ctripId"> ctrip_id = #{ctripId} </if>
+			<if test="ctripResourceId != null and '' != ctripResourceId"> ctrip_resource_id = #{ctripResourceId} </if>
+			<if test="name != null and '' != name"> name = #{name} </if>
+			<if test="marketPrice != null and '' != marketPrice"> market_price = #{marketPrice} </if>
+			<if test="price != null and '' != price"> price = #{price} </if>
+			<if test="isReturnCash != null and '' != isReturnCash"> is_return_cash = #{isReturnCash} </if>
+			<if test="returnCashAmount != null and '' != returnCashAmount"> return_cash_amount = #{returnCashAmount} </if>
+			<if test="ctripScenicId != null and '' != ctripScenicId"> ctrip_scenic_id = #{ctripScenicId} </if>
+			<if test="scenicIds != null and '' != scenicIds"> scenic_id = #{scenicIds} </if>
+			<if test="scenicName != null and '' != scenicName"> scenic_name = #{scenicName} </if>
+			<if test="ticketType != null and '' != ticketType"> ticket_type = #{ticketType} </if>
+			<if test="peopleGroup != null and '' != peopleGroup"> people_group = #{peopleGroup} </if>
+			<if test="countryId != null and '' != countryId"> country_id = #{countryId} </if>
+			<if test="provinceId != null and '' != provinceId"> province_id = #{provinceId} </if>
+			<if test="districtId != null and '' != districtId"> district_id = #{districtId} </if>
+			<if test="createTime != null and '' != createTime"> and create_time = #{createTime} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in
+			<foreach item="item" index="index" collection="ids" open="("
+				separator="," close=")">
+				#{item}
+			</foreach>
+		</if>
+		</where>
+	</sql>
+</mapper>

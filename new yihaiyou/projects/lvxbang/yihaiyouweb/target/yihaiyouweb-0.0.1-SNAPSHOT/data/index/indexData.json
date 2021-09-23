@@ -1,0 +1,263 @@
+{
+  "zhoubianAreas": [
+    {
+      "cityCode": "350200",
+      "count": 0,
+      "extension": {},
+      "fullPath": "福建省厦门市",
+      "id": 350200,
+      "level": 2,
+      "name": "厦门",
+      "pinyin": "shamen xiamen xm sm",
+      "proviceName": "",
+      "recommended": true
+    },
+    {
+      "cityCode": "350600",
+      "count": 0,
+      "extension": {},
+      "fullPath": "福建省漳州市",
+      "id": 350600,
+      "level": 2,
+      "name": "漳州",
+      "pinyin": "zhangzhou zz",
+      "proviceName": "",
+      "recommended": false
+    },
+    {
+      "cityCode": "350400",
+      "count": 0,
+      "extension": {},
+      "fullPath": "福建省三明市",
+      "id": 350400,
+      "level": 2,
+      "name": "三明",
+      "pinyin": "sanming sm",
+      "proviceName": "",
+      "recommended": false
+    },
+    {
+      "cityCode": "350782",
+      "count": 0,
+      "extension": {},
+      "fullPath": "福建省南平市武夷山市",
+      "id": 350782,
+      "level": 3,
+      "name": "武夷山市",
+      "pinyin": "wuyishanshi wyss",
+      "proviceName": "",
+      "recommended": false
+    },
+    {
+      "cityCode": "350300",
+      "count": 0,
+      "extension": {},
+      "fullPath": "福建省莆田市",
+      "id": 350300,
+      "level": 2,
+      "name": "莆田",
+      "pinyin": "putian pt",
+      "proviceName": "",
+      "recommended": false
+    },
+    {
+      "cityCode": "350900",
+      "count": 0,
+      "extension": {},
+      "fullPath": "福建省宁德市",
+      "id": 350900,
+      "level": 2,
+      "name": "宁德",
+      "pinyin": "ningde nd",
+      "proviceName": "",
+      "recommended": false
+    },
+    {
+      "cityCode": "350800",
+      "count": 0,
+      "extension": {},
+      "fullPath": "福建省龙岩市",
+      "id": 350800,
+      "level": 2,
+      "name": "龙岩",
+      "pinyin": "longyan ly",
+      "proviceName": "",
+      "recommended": false
+    },
+    {
+      "cityCode": "350100",
+      "count": 0,
+      "extension": {},
+      "fullPath": "福建省福州市",
+      "id": 350100,
+      "level": 2,
+      "name": "福州",
+      "pinyin": "fuzhou fz",
+      "proviceName": "",
+      "recommended": false
+    }
+  ],
+  "chujingAreas": [],
+  "guoneiAreas": [
+    {
+      "cityCode": "110100",
+      "count": 0,
+      "extension": {},
+      "fullPath": "北京市",
+      "id": 110100,
+      "level": 2,
+      "name": "北京",
+      "pinyin": "beijing bj",
+      "proviceName": "",
+      "recommended": true
+    },
+    {
+      "cityCode": "310000",
+      "count": 0,
+      "extension": {},
+      "fullPath": "上海市",
+      "id": 310000,
+      "level": 1,
+      "name": "上海",
+      "pinyin": "shanghai sh",
+      "proviceName": "",
+      "recommended": false
+    },
+    {
+      "cityCode": "330100",
+      "count": 0,
+      "extension": {},
+      "fullPath": "浙江省杭州市",
+      "id": 330100,
+      "level": 2,
+      "name": "杭州",
+      "pinyin": "hangzhou hz",
+      "proviceName": "",
+      "recommended": true
+    },
+    {
+      "cityCode": "350200",
+      "count": 0,
+      "extension": {},
+      "fullPath": "福建省厦门市",
+      "id": 350200,
+      "level": 2,
+      "name": "厦门",
+      "pinyin": "shamen xiamen xm sm",
+      "proviceName": "",
+      "recommended": true
+    },
+    {
+      "cityCode": "530700",
+      "count": 0,
+      "extension": {},
+      "fullPath": "云南省丽江市",
+      "id": 530700,
+      "level": 2,
+      "name": "丽江",
+      "pinyin": "lijiang lj",
+      "proviceName": "",
+      "recommended": false
+    },
+    {
+      "cityCode": "610100",
+      "count": 0,
+      "extension": {},
+      "fullPath": "陕西省西安市",
+      "id": 610100,
+      "level": 2,
+      "name": "西安",
+      "pinyin": "xian xa",
+      "proviceName": "",
+      "recommended": false
+    },
+    {
+      "cityCode": "450300",
+      "count": 0,
+      "extension": {},
+      "fullPath": "广西壮族自治区桂林市",
+      "id": 450300,
+      "level": 2,
+      "name": "桂林",
+      "pinyin": "guilin gl",
+      "proviceName": "",
+      "recommended": false
+    }
+  ],
+  "topBannerAds": [],
+  "success": true,
+  "middleAreas": [
+    {
+      "cityCode": "310100",
+      "count": 0,
+      "extension": {},
+      "fullPath": "上海市",
+      "id": 310100,
+      "level": 2,
+      "name": "上海",
+      "pinyin": "shanghai sh",
+      "proviceName": "",
+      "recommended": true
+    },
+    {
+      "cityCode": "110100",
+      "count": 0,
+      "extension": {},
+      "fullPath": "北京市",
+      "id": 110100,
+      "level": 2,
+      "name": "北京",
+      "pinyin": "beijing bj",
+      "proviceName": "",
+      "recommended": true
+    },
+    {
+      "cityCode": "350200",
+      "count": 0,
+      "extension": {},
+      "fullPath": "福建省厦门市",
+      "id": 350200,
+      "level": 2,
+      "name": "厦门",
+      "pinyin": "shamen xiamen xm sm",
+      "proviceName": "",
+      "recommended": true
+    },
+    {
+      "cityCode": "330100",
+      "count": 0,
+      "extension": {},
+      "fullPath": "浙江省杭州市",
+      "id": 330100,
+      "level": 2,
+      "name": "杭州",
+      "pinyin": "hangzhou hz",
+      "proviceName": "",
+      "recommended": true
+    },
+    {
+      "cityCode": "530700",
+      "count": 0,
+      "extension": {},
+      "fullPath": "云南省丽江市",
+      "id": 530700,
+      "level": 2,
+      "name": "丽江",
+      "pinyin": "lijiang lj",
+      "proviceName": "",
+      "recommended": false
+    },
+    {
+      "cityCode": "610100",
+      "count": 0,
+      "extension": {},
+      "fullPath": "陕西省西安市",
+      "id": 610100,
+      "level": 2,
+      "name": "西安",
+      "pinyin": "xian xa",
+      "proviceName": "",
+      "recommended": false
+    }
+  ]
+}

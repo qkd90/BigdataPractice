@@ -1,0 +1,68 @@
+<div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+  <ul>
+    <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">游记详情</a></li>
+    <li class="pull-right dropdown">
+    <a id="sd" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class=""></a>
+  <ul class="dropdown-menu" id="share" aria-labelledby="dropdownMenu1">
+    <li><a href="#" class="share">分享</a></li>
+    <li><a href="#" class="shouc">收藏</a></li>
+  </ul>
+    </li>
+  </ul>
+</div>
+<div id="yjcontainer" class="clearfix" ng-controller="YjdetailCtrl">
+ <div class="detail clearfix" ng-repeat="data in yjdetails.youji">
+   <div class="thumb">
+     <img src="{{data.image}}" class="img-responsive center-block" />
+        <div class="info">
+          <p class="other"><span class="pull-right"><span class="view">{{data.view}}</span><span class="time">{{data.time}}</span></span></p>
+        </div>
+   </div>
+   <div class="container">
+     <div class="row">
+       <h1 class="title col-xs-12">{{data.title}}</h1>
+       <div class="col-xs-12 oneday" ng-repeat="data in yjdetails.oneday">
+         <h2 class="subtitle"><span>{{data.day}}</span></h2>
+         <div class="content-text">{{data.shortinfo}}</div>
+         <h2 class="jingdian icobg"><a name="{{data.day}}d1"></a>{{data.jingdian}}</h2>
+         <div class="content-text">
+           <p>{{data.jingdianinfo}}</p>
+           <p><img src="{{data.jingdianpic}}" class="img-responsive" /></p>
+         </div>
+         <h2 class="jiudian icobg"><a name="{{data.day}}d2"></a>{{data.jiudian}}</h2>
+         <div class="content-text">
+           <p>{{data.jiudianinfo}}</p>
+           <p><img src="{{data.jiudianpic}}" class="img-responsive" /></p>
+         </div>
+         <h2 class="meishi icobg"><a name="{{data.day}}d3"></a>{{data.meishi}}</h2>
+         <div class="content-text">
+           <p>{{data.meishiinfo}}</p>
+           <p><img src="{{data.meishipic}}" class="img-responsive" /></p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+<div class="fuzhixl text-center col-xs-12"><a href="#"><span>复制线路</span></a></div>
+<button id="xianluyl" class="text-center"><span>线路概览</span></button>
+<div id="silder-right" ng-controller="YjdetailCtrl">
+ <h3>线路概览</h3>
+ <dl class="clearfix" ng-repeat="data in yjdetails.dayxl">
+   <dt><span class="daytitle">{{data.day}}</span><span class="dayxl">{{data.dayxltitle}}</span></dt>
+   <dd><a href="#/yjdetail#{{data.day}}d1">{{data.dayxl1}}</a></dd>
+   <dd><a href="#/yjdetail#{{data.day}}d2">{{data.dayxl2}}</a></dd>
+   <dd><a href="#/yjdetail#{{data.day}}d3">{{data.dayxl3}}</a></dd>
+ </dl>
+</div>
+<script type="text/javascript">
+$("#xianluyl").click(function(){
+  $("#silder-right").fadeToggle();
+});
+$("#yjcontainer").click(function(){
+  $("#silder-right").fadeOut();
+});
+$("#silder-right").click(function(){
+  $("#silder-right").fadeOut();
+});
+</script>

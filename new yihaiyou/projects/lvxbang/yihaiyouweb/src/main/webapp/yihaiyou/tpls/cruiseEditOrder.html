@@ -1,0 +1,93 @@
+<div id="yEditOrderWrap" ng-controller="editOrder">
+    <div class="y-editOrder-header">
+        <a href="javascript:;" class="back" ui-sref="cruiseDetails({dateId: date.id})" ></a>
+        订单填写
+    </div>
+    <div class="y-editOrder-port">
+        <div class="port-from port-group">
+            <span>{{ship.startCity}}</span>
+            <i>{{beginMonth}}月{{beginDay}}日</i>
+        </div>
+        <div class="cruise-name">
+            <i class="port-img"></i>
+            <span>{{ship.name}}</span>
+        </div>
+        <div class="port-to port-group">
+            <span>{{ship.arriveCity}}</span>
+            <i>{{endMonth}}月{{endDay}}日</i>
+        </div>
+    </div>
+    <div class="y-editOrder-customer">
+        <h5>联系人信息</h5>
+        <div class="input-group clearBoth">
+            <label class="pull-left">姓名</label>
+            <input class="pull-left" type="text" name="username" ng-model="contact.name" placeholder="方便和您联系">
+        </div>
+        <div class="input-group clearBoth">
+            <label class="pull-left">联系方式</label>
+            <input class="pull-left" type="text" name="mobile" ng-model="contact.telephone" maxlength="11">
+        </div>
+        <div class="input-group clearBoth">
+            <label class="pull-left">电子邮箱</label>
+            <input class="pull-left" type="email" ng-model="email" name="email" >
+        </div>
+    </div>
+
+    <div class="y-editOrder-cabin">
+        <!--<h5>随机内舱双人间<span>舱房详情</span></h5>-->
+        <div class="cabin-info">
+            <!--编辑舱房-->
+            <ul class="clearBoth" >
+                <!--舱房列表-->
+                <li class="edit-cabin pull-left" ng-repeat="tourist in selectedtourist">
+                    <span class="customer-name">{{tourist.name}}</span>
+                </li>
+                <!--<li class="edit-cabin pull-left">-->
+                    <!--<span class="cabin-number">第<i class="room-number">2</i>间舱房</span>-->
+                    <!--<span class="customer-name">车牌更炫</span>-->
+                <!--</li>&ndash;&gt;-->
+                <!--添加舱房按钮-->
+                <li class="add-cabin pull-left" ui-sref="ticketTouristList" ng-click="saveInfo()">
+                    <!--<span class="cabin-number">第<i class="room-number"> </i>间舱房</span>-->
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--<div class="y-editOrder-bill" ng-click="billClickFn()">-->
+        <!--发票说明<i class="y-icon-wenhao"></i>-->
+    <!--</div>-->
+
+    <div class="y-editOrder-mustKnow">
+        <div class="mustKnow-wrap">
+            <h5>预订限制</h5>
+            <div class="mustKnow-txt">
+                70周岁以上出行人需确保身体健康适宜旅游。本次旅游活动中，若由此造成任何人身以为及不良后果，均由出行人承担全部责任。
+                1、根据天海邮轮公司的规定，乘坐邮轮旅行的婴儿必须在邮轮启航第一天时至少满6个月。
+            </div>
+        </div>
+        <!--<span class="scan-mustKnow">查看详情说明<i class="mustKnow-icon"></i></span>-->
+    </div>
+
+    <div class="y-editOrder-agree">
+        点击去支付表示已阅读并同意<a>旅游合同</a>
+    </div>
+
+    <div class="y-editOrder-footer clearBoth">
+        <div class="y-final-cost pull-left"><sub>￥</sub><span class="y-final-money">{{price}}</span><i class="y-final-tips"></i></div>
+        <span class="y-go-pay pull-right" ng-click="submitOrder()">去支付</span>
+    </div>
+
+
+    <!--发票服务说明弹窗-->
+    <div id="billPop" ng-if="billPopStatus">
+        <div class="bill-popWrap">
+            <h4>发票服务说明<i id="popWrapClose" ng-click="billClickFn()"></i></h4>
+            <div class="bill-txt">
+                1、下单成功后，您可在携程网站/手机下单成功后，您可在携程网站/手机下单成功后，您可在携程网站/手机下单成功后，您可在携程网站/手机
+            </div>
+        </div>
+    </div>
+</div>
+
+

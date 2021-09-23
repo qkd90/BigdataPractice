@@ -1,0 +1,16 @@
+<form name="signup_form" novalidate ng-submit="signupForm()" ng-controller="yijianCtrl" >
+<div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+  <ul>
+    <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">意见反馈</a></li>
+    <li class="pull-right">
+      <button type="submit" class="fabu btn" >提交</button>
+    </li>
+  </ul>
+</div>
+<div id="subcontainer" class="clearfix">
+  <div class="my-yjfk clearfix">
+      <textarea class="form-control" name="content" ng-model="signup.content" ng-minlength="1" rows="10" placeholder="给旅行帮提意见" required></textarea>
+  </div>
+</div>
+
+</form>

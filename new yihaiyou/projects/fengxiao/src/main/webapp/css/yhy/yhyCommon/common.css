@@ -1,0 +1,99 @@
+.container{
+    width: 100%!important;
+    padding: 0;
+}
+.progress-shadow {
+    width: 188px;
+    height: 80px;
+    border-radius: 12px;
+    position: fixed;
+    top: 50%;
+    left: 45%;
+    background-color: #000;
+    opacity: 0.8;
+    z-index: 10001;
+}
+.progress-shadow .loading-img {
+    width: 48px;
+    height: 48px;
+    margin: 16px;
+    opacity: 1;
+}
+.progress-shadow .loading-text {
+    opacity: 1;
+    font-family: "Microsoft Yahei";
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+.yhy-modal-dialog {
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+.yhy-btn-close {
+    opacity: 0.6;
+}
+.yhy-modal-content {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+.yhy-modal-content.without-title {
+    border-top-style: solid;
+    border-top-width: 3px;
+}
+.yhy-modal-content.without-title.info {
+    border-top-color: #afafaf
+}
+.yhy-modal-content.without-title.success {
+    border-top-color: #38773d
+}
+.yhy-modal-content.without-title.warn {
+    border-top-color: #ff7c3d
+}
+.yhy-modal-content.without-title.error {
+    border-top-color: #ff5858
+}
+.yhy-modal-header {
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    padding: 10px;
+}
+.yhy-modal-header.info {
+    border-bottom-color: #afafaf;
+}
+.yhy-modal-header.success {
+    border-bottom-color: #38773d;
+}
+.yhy-modal-header.warn {
+    border-bottom-color: #ff7c3d;
+}
+.yhy-modal-header.error {
+    border-bottom-color: #ff5858;
+}
+.yhy-modal-title {
+    border-left-style: solid;
+    border-left-width: 3px;
+    padding-left: 10px;
+}
+.yhy-modal-title.info {
+    border-left-color: #afafaf;
+}
+.yhy-modal-title.success {
+    border-left-color: #38773d;
+}
+.yhy-modal-title.warn {
+    border-left-color: #ff7c3d;
+}
+.yhy-modal-title.error {
+    border-left-color: #ff5858;
+}
+.yhy-modal-footer {
+    /*border-top: none;*/
+    padding: 8px;
+}
+.yhy-modal-dialog {}
+.ke-statusbar {display: none}

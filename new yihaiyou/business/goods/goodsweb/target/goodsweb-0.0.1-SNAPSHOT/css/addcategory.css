@@ -1,0 +1,52 @@
+body {
+/*     font: 14px/1.5 Microsoft YaHei, tahoma, arial, \5b8b\4f53; */
+    background-color: white;
+}
+ul li {
+    list-style-type:none;
+}
+.title1 {
+    height: 46px;
+    line-height: 46px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #00acee;
+}
+#t2 {
+    padding-left: 34px;
+    font-size: 14px;
+}
+.greyblock {
+    color: #888;
+}
+.valuezone {
+    display:inline
+}
+em {
+    padding: 0 3px 0 0;
+    color: #ff7575;
+    font-size: 13px;
+    font-family: "宋体";
+}
+.leftpadding {
+    padding-left: 70px;
+}
+#submitbutton {
+    display: inline-block;
+    height: 34px;
+    padding: 0 18px;
+    border-radius: 3px;
+    border: none;
+    margin-left: 120px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 34px;
+    background: #ff8e00;
+    overflow: visible;
+    cursor: pointer;
+}
+li {
+    margin-bottom:20px
+}

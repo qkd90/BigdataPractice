@@ -1,0 +1,141 @@
+.vip-level {
+    float: left;
+    width: 33%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    border-left: 1px solid #aaaaaa;
+    list-style-type: none;
+}
+#one-level {
+    background-image: url("../images/crown_1.png");
+
+    background-size: 40px;
+}
+#two-level {
+    background-image: url("../images/crown_2.png");
+    background-size: 40px;
+}
+#three-level {
+    background-image: url("../images/crown_3.png");
+    background-size: 40px;
+}
+.level {
+    background: no-repeat 5px;
+    display: block;
+    padding-left: 40px;
+    text-align: center;
+}
+
+#titile-ul .vip-level:first-child { border-left: none; }
+
+.cf { *zoom: 1; }
+.cf:after { display: block; content: '\20'; height: 0; clear: both; }
+.orange-color { color: orange}
+
+.vip-count {
+    width: 100%;
+    height: 50px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.header-face {
+    width: 40%;
+    float: left;
+}
+
+.team-info {
+}
+
+.team-info p {margin-top: 10px;
+              margin-bottom: 10px;
+              width:15em;
+              white-space:nowrap;
+              overflow: hidden;
+              text-overflow:ellipsis;
+             }
+
+.user-info{
+    padding-left: 10px;
+    width:60%;
+    float: left;
+}
+
+.face-img {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius:50%
+}
+.team {
+    float: left;
+}
+.team-count {
+    margin-left: 20px;
+    float: left;
+    width: 40px;
+    height: 20px;
+    background-color: orange;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.his-team-btn {
+    margin-left: 40px;
+
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+.his-team-bg{
+    background: url("../images/plus.png") no-repeat 0;
+    background-size: 20px;
+}
+.his-team-bg-minus{
+    background: url("../images/minus.png") no-repeat 0;
+    background-size: 20px;
+}
+.his-team {
+
+}
+.team-team-count {
+    padding-left: 20px;
+}
+.his-team p {margin-top: 10px;margin-bottom: 10px;}
+
+.vip-member {
+    border-top: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    margin-top: 10px;
+    background-color: white;
+}
+
+
+
+.display-none {
+    display: none;
+}
+.display-block {
+    display: block;
+}
+.curr {
+    background-color: lightyellow;
+}
+
+.success-account-name {
+    color: orange;
+}
+.mT_span {
+    display:block;
+    width:33%;
+    height:40px;
+    float:left;
+    line-height:40px;
+   text-align:center;
+}

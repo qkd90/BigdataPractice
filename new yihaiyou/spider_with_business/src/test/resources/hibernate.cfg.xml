@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password"></property>
+        <!--         <property name="hibernate.connection.password">Hmly2013</property> -->
+        <property name="hibernate.connection.url">jdbc:mysql://192.168.0.222:3306/fenxiao</property>
+        <!--<property name="hibernate.connection.url">jdbc:mysql://localhost/fenxiao</property>-->
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.default_schema">fenxiao</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.CtripFlightInfo"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripticket.entity.CtripTicket"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.CtripInsuranceInfo"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.FlightRoute"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.FltCityInfo"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.FltOrderDeliverInfo"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.OrderContactInfo"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.OrderCreditCardInfo"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.OrderFlightInfo"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.OrderPJS"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.Passenger"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.AirlineInfo"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.CraftInfo"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.FltOrderFlight"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.OrderPJS"/> -->
+        <!-- 		<mapping class="com.data.data.hmly.service.ctripflight.entity.AirportInfo"/> -->
+        <mapping class="com.data.data.hmly.service.ctripflight.entity.FltOrderInfo"/>
+
+
+        <mapping class="com.data.data.hmly.service.ctripticket.entity.CtripTicketPreOrder"/>
+        <mapping class="com.data.data.hmly.service.ctripticket.entity.CtripTicketPreOrderClientInfo"/>
+        <mapping class="com.data.data.hmly.service.ctripticket.entity.CtripTicketPreOrderTicketInfo"/>
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hmlyinfo.app.soutu.hotel.mapper.CtripImageMapper">
+	<insert id="insert" parameterType="CtripImage">
+		insert into tb_ctrip_img
+			(
+				id,
+				hotel_id,
+				index_id,
+				img_big,
+				img_small,
+				type,
+				description,
+				width,
+				height,
+				modify_time,
+				createtime
+			)
+		values
+			(
+				#{id},
+				#{hotelId},
+				#{indexId},
+				#{imgBig},
+				#{imgSmall},
+				#{type},
+				#{description},
+				#{width},
+				#{height},
+				#{modifyTime},
+				#{createtime}
+			)	
+	</insert>
+	
+	<update id="update" parameterType="CtripImage">
+		update tb_ctrip_img
+		<set>
+			<if test="id != null and '' != id"> id = #{id},</if>
+			<if test="hotelId != null and '' != hotelId"> hotel_id = #{hotelId},</if>
+			<if test="indexId != null and '' != indexId"> index_id = #{indexId},</if>
+			<if test="imgBig != null and '' != imgBig"> img_big = #{imgBig},</if>
+			<if test="imgSmall != null and '' != imgSmall"> img_small = #{imgSmall},</if>
+			<if test="type != null and '' != type"> type = #{type},</if>
+			<if test="description != null and '' != description"> description = #{description},</if>
+			<if test="width != null and '' != width"> width = #{width},</if>
+			<if test="height != null and '' != height"> height = #{height},</if>
+			<if test="modifyTime != null and '' != modifyTime"> modify_time = #{modifyTime},</if>
+			<if test="createtime != null and '' != createtime"> createtime = #{createtime},</if>
+		</set>
+		where
+			id = #{id}
+	</update>
+	
+	<delete id="del" parameterType="CtripImage">
+		delete from
+			tb_ctrip_img
+		where
+			id = #{id}
+	</delete>
+	
+	<select id="selById" resultType="CtripImage">
+		select
+			*
+		from
+			tb_ctrip_img
+		where
+			id = #{id}
+	</select>
+	
+	<select id="count" resultType="int">
+		select 
+			count(1)
+		<include refid="byProperty"/>
+	</select>
+	
+	<select id="list" resultType="CtripImage">
+		select
+			 *
+		<include refid="byProperty"/>
+	</select>
+
+    <select id="countWithType" resultType="java.util.Map">
+        select
+        count(1) num, type type
+        <include refid="byProperty"/>
+    </select>
+	
+	<sql id="byProperty">
+		from
+			tb_ctrip_img
+		<where>
+			<if test="id != null and '' != id"> and id = #{id} </if>
+			<if test="hotelId != null and '' != hotelId"> and hotel_id = #{hotelId} </if>
+			<if test="indexId != null and '' != indexId"> and index_id = #{indexId} </if>
+			<if test="imgBig != null and '' != imgBig"> and img_big = #{imgBig} </if>
+			<if test="imgSmall != null and '' != imgSmall"> and img_small = #{imgSmall} </if>
+			<if test="type != null and '' != type"> and type = #{type} </if>
+			<if test="description != null and '' != description"> and description = #{description} </if>
+			<if test="width != null and '' != width"> and width = #{width} </if>
+			<if test="height != null and '' != height"> and height = #{height} </if>
+			<if test="modifyTime != null and '' != modifyTime"> and modify_time = #{modifyTime} </if>
+			<if test="createtime != null and '' != createtime"> and createtime = #{createtime} </if>
+			<if test="ta != null and '' != ta"> and unix_timestamp(create_time) * 1000 &gt; #{ta} </if>
+            <if test="tb != null and '' != tb"> and unix_timestamp(create_time) * 1000 &lt; #{tb} </if>
+		<if test="ids != null and ids.size() > 0">
+			and id in(
+            <if test="ids.size() == 0">-1</if>
+            <foreach item="item" index="index" collection="ids" separator=",">#{item}
+            </foreach>)
+		</if>
+		</where>
+		<if test="withType != null and '' != withType">
+            group by type
+        </if>
+		<choose>
+            <when test="orderColumn != null and '' != orderColumn">
+                order by ${orderColumn}
+                <if test="orderType != null and '' != orderType">
+                    ${orderType}
+                </if>
+            </when>
+			<otherwise>
+				order by create_time desc
+			</otherwise>
+		</choose>
+	</sql>
+</mapper>

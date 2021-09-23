@@ -1,0 +1,294 @@
+
+.mainBox {
+	width: 1198px;
+	background: #fff;
+	margin: 40px auto;
+	padding: 28px;
+	font-family: '微软雅黑';
+	border:1px solid #e0e0e0;
+}
+
+.mainBox h3 {
+	font-size: 18px;
+	padding-bottom: 10px;
+	color: #333;
+	border-bottom: 1px solid #eee;
+}
+
+.mainBox .setface {
+	padding: 0 60px;
+	height:358px;
+	border-bottom: 1px dashed #eee;
+}
+
+.setface p.p_top {
+	color: #8a8a8a;
+	font-size: 12px;
+	line-height: 50px;
+}
+
+
+.setface p span.tx {
+	color: #555;
+	font-size: 13px;
+    vertical-align: middle;
+}
+
+.setface p span.picBtn {
+
+}
+
+.webuploader-pick {
+    color: #666;
+    font-size: 13px;
+    padding: 2px 6px;
+    border: 1px solid #e0e0e0;
+    margin: 0 6px 0 18px;
+    border-radius: 3px;
+    line-height: 16px;
+    vertical-align: middle;
+    background: linear-gradient(#fff, #f7f7f7,#e5e5e5);
+}
+
+.webuploader-pick-hover {
+
+}
+
+.setface .facebox {
+	width: 200px;
+	height: 200px;
+    padding: 2px;
+	border: 1px dashed #6eafff;
+	background: #f3f8fe url(/image/face_none.png) no-repeat center center;
+}
+.setface .none-bg {
+	background: none;
+}
+
+.setface p.p_bottom {
+	color: #999;
+	font-size: 12px;
+	margin-top: 30px;
+	line-height: 30px;
+	/*background: url(/image/icon_attention.png) no-repeat 89px center;*/
+}
+.setface p.up-msg{
+    margin: 5px 0 0 15px;
+    color: #ff8800;
+}
+.usermessage p.save-msg {
+    margin: 0 0 0 100px;
+    color: #ff8800;
+}
+
+.setface p .saveface {
+	color: #808080;
+	font-size: 15px;
+	padding: 2px 12px;
+	border: 1px solid #86c0ea;
+	margin: 0 38px 0 18px;
+	border-radius: 3px;
+	background: linear-gradient(#def1fe,#aad4f1);
+    cursor: pointer;
+}
+
+.usermessage {
+	padding: 0 60px;
+}
+
+.usermessage ul li {
+	height: 30px;
+	line-height: 30px;
+	margin-top: 20px;
+}
+
+.usermessage ul li span.user_l {
+	width: 90px;
+	float: left;
+	text-align: right;
+	font-size: 14px;
+	color: #555;
+	letter-spacing: 1px;
+	margin-right: 15px;
+}
+
+.usermessage ul li span.dian {
+	color: #fff;
+}
+
+.usermessage ul li span.user_l label {
+	color: #ff8800;
+}
+
+.usermessage ul li input {
+	width: 227px;
+	height: 30px;
+	border: 1px solid #e0e0e0;
+	outline: none;
+	border-radius: 2px;
+	padding: 3px 10px;
+	font-size: 13px;
+	color: #333;
+	line-height: 30px;
+}
+
+.usermessage ul li .password,.usermessage ul li .divtext,.usermessage ul li .sex,.usermessage ul li button {
+	width: 227px;
+	height: 30px;
+	font-size: 14px;
+	color: #333;
+	float: left;
+	line-height: 30px;
+}
+
+.usermessage ul li .password span {
+	float: right;
+	color: #ff8000;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.usermessage ul li .sex span {
+	display: inline-block;
+	width: 16px;
+	padding-left: 18px;
+	margin-right: 32px;
+    cursor: pointer;
+	background: url(/image/icon-NO.png) no-repeat left center;
+} 
+
+.usermessage ul li .sex .checksex {
+	background: url(/image/icon-YES.png) no-repeat left center;
+}
+
+.usermessage ul li .button span.realname {
+	padding: 5px 30px;
+	background: #ff8800;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.usermessage ul li .button span.save {
+	color: #808080;
+	font-size: 15px;
+	padding: 2px 12px;
+	border: 1px solid #86c0ea;
+	margin: 0 38px 0 18px;
+	border-radius: 3px;
+	background: linear-gradient(#def1fe,#aad4f1);
+    cursor: pointer;
+}
+
+.shadow {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 6;
+	display: none;
+}
+
+.setpswordBox {
+	width: 358px;
+	height: 350px;
+	background: #fff;
+	position: fixed;
+	z-index: 7;
+	display: none;
+}
+
+.with_header {
+	width: 100%;
+	color: #333;
+	height: 40px;
+	font-size: 18px;
+	text-indent: 25px;
+	line-height: 40px;
+}
+
+.with_header span.closebtn {
+	width: 50px;
+	height: 50px;
+	float: right;
+	cursor: pointer;
+	background: url(/image/icon_close.png) no-repeat center center;
+}
+
+.with_body {
+	width: 260px;
+	margin: auto;
+	font-family: '微软雅黑';
+}
+
+.with_body .title {
+	display: block;
+	height: 30px;
+	color: #3996fa;
+	font-size: 16px;
+	text-align: center;
+}
+
+.with_body input {
+	width: 258px;
+	height: 34px;
+	padding: 3px 10px;
+	font-size: 14px;
+	color: #666;
+	outline: none;
+	 font-family: '微软雅黑';
+	border:1px solid #e0e0e0;
+	box-shadow: inset 0 1px 3px #ddd;
+}
+
+.with_body .attention {
+	line-height: 30px;
+	height: 30px;
+	color: #ff8800;
+	font-size: 12px;
+	display: block;
+}
+
+.with_body .attention .hidden {
+	display: none;
+}
+
+.with_body .attention label {
+	font-size: 14px;
+	margin: 3px 3px 0 10px;
+	float: left;
+}
+
+.with_body .submit {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	background: #ff8800;
+	font-size: 16px;
+	display: block;
+	text-align: center;
+	border-radius: 5px;
+	margin-top:5px;
+    cursor: pointer;
+}
+
+.with_body input:-ms-input-placeholder{
+    font-size: 12px;
+    color: #8d8d8d;
+    font-family: '微软雅黑'
+}
+
+.with_body input::-webkit-input-placeholder{
+    font-size: 12px;
+    color: #8d8d8d;
+    font-family: '微软雅黑'
+}
+
+.outline {
+	border:1px solid #3996fa!important;
+	box-shadow: inset 0px 1px 3px #3996fa!important;
+}

@@ -1,0 +1,24 @@
+<style>
+    body {
+        background:#000;
+    }
+    .waittingPage img {
+        width:100%;
+    }
+</style>
+<div class="waittingPage">
+    <div class="header">
+        <a href="javascript:history.go(-1);"><span><img src="/yihaiyou/image/historyback.png"></span></a>
+        电子导览
+        <span class="save pic2" ui-sref="personalIndex"></span>
+    </div>
+    <img class="img" src="/yihaiyou/image/electronicGuide.jpg">
+</div>
+
+<script>
+//    var m_top = (window.screen.height - $('.waittingPage .img').height())/2 - 30;
+//    var m_left = (window.screen.width - $('.waittingPage .img').width())/2;
+//    var height = window.screen.height;
+//    console.info($('.waittingPage .img').height());
+        $('.waittingPage .img').css({'marginTop':'200px'});
+</script>

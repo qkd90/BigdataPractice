@@ -1,0 +1,131 @@
+<div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+  <ul>
+    <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">行程详情</a></li>
+    <li class="pull-right dropdown">
+    <a id="sd" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class=""></a>
+  <ul class="dropdown-menu" id="share" aria-labelledby="dropdownMenu1">
+    <li><a href="#" class="share">分享</a></li>
+    <li><a href="#" class="shouc">收藏</a></li>
+  </ul>
+    </li>
+  </ul>
+</div>
+<div id="yjcontainer" class="clearfix" ng-controller="YjdetailCtrl">
+   <div id="xianluinfo" class="clearfix detail">
+     <h2 class="toptitle text-center"><a ui-sref="xing-biaoti"><span>厦门至上海5日游</span></a></h2>
+     <div class="clearfix fenmian">
+     <img class="img-responsive" src="images/youji/1.jpg">
+     <div class="info">
+       <h2 class="name clearfix">一个人的新加坡工作日志<small class="clearfix">2015-05-03出发/3天/￥1500</small></h2>
+       <p class="other"><span class="pull-right"><span class="view">963</span><span class="licheng">20000</span></span></p>
+     </div>
+     </div>
+     <div class="oneday col-xs-12">
+       <h2 class="subtitle"><span>第一天</span></h2>
+       <div class="feiji clearfix">
+         <h2 class="feiji icobg">厦门 >上海</h2>
+         <div class="content-text">
+         <p>航班：厦航CA8773</p>
+         <p>起降：厦门高崎机场<img src="images/ico/order-jt.jpg" />上海浦东机场</p>
+         <p>价格：¥1000</p>
+         </div>
+       </div>
+       <h2 class="jingdian icobg"><a name="第一天d1"></a>鼓浪屿</h2>
+       <div class="content-text" id="moreinfo1" style="height:420px; overflow:hidden;">
+           <p><img class="img-responsive" src="images/youji/d1.jpg"></p>
+           <p>建议：6小时<br />地址：厦门软件园二期<br />门票：¥100<br />简介：这是个宁静的小岛，虽然近几年游客多了，但是它依旧很美。</p>
+       </div>
+       <div id="more1" class="viewMore"></div><div id="more1close" class="viewMoreclose hidden"></div>
+       <h2 class="jiudian icobg"><a name="第一天d2"></a>如家酒店</h2>
+       <div class="content-text" id="moreinfo2" style="height:420px; overflow:hidden;">
+           <p><img class="img-responsive" src="images/youji/d2.jpg"></p>
+           <p>地址：厦门软件园二期<br />房型：豪华单人间<br />价格：¥100<br />简介：这是个宁静的小岛，虽然近几年游客多了，但是它依旧很美。</p>
+       </div>
+       <div id="more2" class="viewMore"></div><div id="more2close" class="viewMoreclose hidden"></div>
+     </div>
+     
+     <div class="oneday col-xs-12">
+       <h2 class="subtitle"><span>第二天</span></h2>
+       <div class="feiji clearfix">
+         <h2 class="feiji icobg">厦门 >上海</h2>
+         <div class="content-text">
+         <p>航班：厦航CA8773</p>
+         <p>起降：厦门高崎机场<img src="images/ico/order-jt.jpg" />上海浦东机场</p>
+         <p>价格：¥1000</p>
+         </div>
+       </div>
+       <h2 class="jingdian icobg"><a name="第一天d1"></a>鼓浪屿</h2>
+       <div class="content-text" id="moreinfo3" style="height:420px; overflow:hidden;">
+           <p><img class="img-responsive" src="images/youji/d1.jpg"></p>
+           <p>建议：6小时<br />地址：厦门软件园二期<br />门票：¥100<br />简介：这是个宁静的小岛，虽然近几年游客多了，但是它依旧很美。</p>
+       </div>
+       <div id="more3" class="viewMore"></div><div id="more3close" class="viewMoreclose hidden"></div>
+       <h2 class="jiudian icobg"><a name="第一天d2"></a>如家酒店</h2>
+       <div class="content-text" id="moreinfo4" style="height:420px; overflow:hidden;">
+           <p><img class="img-responsive" src="images/youji/d2.jpg"></p>
+           <p>地址：厦门软件园二期<br />房型：豪华单人间<br />价格：¥100<br />简介：这是个宁静的小岛，虽然近几年游客多了，但是它依旧很美。</p>
+       </div>
+       <div id="more4" class="viewMore"></div><div id="more4close" class="viewMoreclose hidden"></div>
+     </div>
+     
+   </div>
+</div>
+<div class="buyxianlu-new text-center col-xs-12"><a href="#"><span>购买线路</span></a></div>
+<button id="xianluyl" class="text-center"><span>线路概览</span></button>
+<div id="silder-right" ng-controller="YjdetailCtrl">
+ <h3>线路概览</h3>
+ <dl class="clearfix" ng-repeat="data in yjdetails.dayxl">
+   <dt><span class="daytitle">{{data.day}}</span><span class="dayxl">{{data.dayxltitle}}</span></dt>
+   <dd><a href="#/yjdetail#{{data.day}}d1">{{data.dayxl1}}</a></dd>
+   <dd><a href="#/yjdetail#{{data.day}}d2">{{data.dayxl2}}</a></dd>
+   <dd><a href="#/yjdetail#{{data.day}}d3">{{data.dayxl3}}</a></dd>
+ </dl>
+</div>
+<script type="text/javascript">
+$("#xianluyl").click(function(){
+  $("#silder-right").fadeToggle();
+});
+$("#yjcontainer").click(function(){
+  $("#silder-right").fadeOut();
+});
+$("#silder-right").click(function(){
+  $("#silder-right").fadeOut();
+});
+
+//先隐藏部分内容
+    $('#more1').click(function(){		
+        $('#moreinfo1').css( {'height' : 'auto','overflow': 'none' } );
+        $('#more1').toggle();
+		$('#more1close').removeClass("hidden");
+    });
+    $('#more1close').click(function(){		
+        $('#moreinfo1').css( {'height' : '420px','overflow': 'hidden' } );
+        $('#more1').show();
+		$('#more1close').addClass("hidden");
+    });
+    $('#more2').click(function(){		
+        $('#moreinfo1').css( {'height' : 'auto','overflow': 'none' } );
+        $('#more2').toggle();
+		$('#more2close').removeClass("hidden");
+    });
+    $('#more2close').click(function(){		
+        $('#moreinfo1').css( {'height' : '420px','overflow': 'hidden' } );
+        $('#more2').show();
+		$('#more2close').addClass("hidden");
+    });
+    $('#more3').click(function(){		
+        $('#moreinfo3').css( {'height' : 'auto','overflow': 'none' } );
+        $('#more3').toggle();
+		$('#more3close').removeClass("hidden");
+    });
+    $('#more3close').click(function(){		
+        $('#moreinfo3').css( {'height' : '420px','overflow': 'hidden' } );
+        $('#more3').show();
+		$('#more3close').addClass("hidden");
+    });
+    $('#more4').click(function(){		
+        $('#moreinfo4').css( {'height' : 'auto','overflow': 'none' } );
+        $('#more4').toggle();
+		$('#more4close').removeClass("hidden");
+    });
+</script>

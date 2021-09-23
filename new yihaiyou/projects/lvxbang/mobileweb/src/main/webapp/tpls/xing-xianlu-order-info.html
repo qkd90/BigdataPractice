@@ -1,0 +1,114 @@
+<div ng-controller="xingxianluorderinfoCtrl" class="xianludingdan">
+    <div class="fixtop topbg col-xs-12 backtop" id="fxtop">
+        <ul>
+            <li class="pull-left"><a href="javascript:history.go(-1)" class="goback">填写线路订单</a></li>
+        </ul>
+    </div>
+    <div id="yjcontainer" class="clearfix">
+        <div ng-if="!loaded">
+            <div class="yuloading"><span>正在加载数据中...</span></div>
+        </div>
+        <div id="orderdetail" class="clearfix xianluorderinfo">
+            <div class="panel panel-default" ng-if="order.planes.length > 0">
+                <div class="panel-heading"><input name="" type="checkbox" checked parentall parent="planes"/>机票</div>
+                <div class="panel-body">
+                    <div class="subpanel clearfix" ng-repeat="plane in order.planes">
+                        <div class="pull-left panel-body-left">
+                            <p><input name="" type="checkbox" value="" normalchild checked
+                                      parent="plane"/><span>班次：</span>{{plane.company}}{{plane.trafficCode}}
+                            </p>
+                            <p class="pl"><span>起降：</span>{{plane.startStation}} <img src="images/ico/order-jt.jpg"/>
+                                {{plane.endStation}}</p>
+                        </div>
+                        <!--<div class="pull-right panel-body-price">
+                            <h2 class="price"></h2>
+                            <p class="youhui"></p>
+                            <p class="youhui"></p>
+                        </div>-->
+                        <div class="col-xs-12 flydetail farex">
+                            <div class="col-xs-4 pl0pr0"><span style="color:#999;font-weight:600">价格：</span><span style="color:#ff6100;font-weight:600">￥{{plane.price}}</span></div>
+                            <div class="col-xs-4 pl0pr0"><span style="color:#aaa;">燃油：</span><span style="color:#ff6100;font-weight:600">￥{{plane.additionalFuelTax}}</span></div>
+                            <div class="col-xs-4 pl0pr0"><span style="color:#aaa;">机建：</span><span style="color:#ff6100;font-weight:600">￥{{plane.airportBuildFee}}</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default" ng-if="order.trains.length > 0">
+                <div class="panel-heading" style="margin-top:10px;"><input id="huocheall" type="checkbox" parentall
+                                                                           checked parent="trains"/>火车
+                </div>
+                <div class="panel-body">
+                    <div class="subpanel clearfix" ng-repeat="train in order.trains">
+                        <div class="pull-left panel-body-left">
+                            <p><input name="" type="checkbox" normalchild value="" parent="train"
+                                      checked/><span>车次：</span>{{train.trafficCode}}
+                            </p>
+                            <p class="pl"><span>起停：</span>{{train.startStation}} <img src="images/ico/order-jt.jpg"/>
+                                {{train.endStation}}</p>
+                        </div>
+                        <div class="pull-right panel-body-price">
+                            <h2 class="price">￥{{train.price}}</h2>
+                            <p class="youhui"></p>
+                            <p class="youhui"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default" ng-if="order.hotels.length > 0">
+                <div class="panel-heading"><input name="" type="checkbox" checked parentall parent="hotels"/>酒店</div>
+                <div class="panel-body">
+                    <div class="subpanel clearfix" ng-repeat="hotel in order.hotels">
+                        <div class="pull-left panel-body-left">
+                            <p class="jiudinajingdian"><input name="" type="checkbox" value="" normalchild parent="hotel" checked/>{{hotel.name}}
+                    </p>
+                        <p class="pl"><span>房型：</span>{{hotel.priceName}}</p>
+                        <p class="pl"><span>入离：</span>{{hotel.startDate}}至{{hotel.endDate}}</p>
+                            <p class="pl"><span>价格：</span>
+                    </div>
+
+                        <div class="pull-right panel-body-price danbaojiage">
+                            <h2 class="price">￥{{hotel.price}}</h2>
+                            <p class="youhui text-right textrightyouhui"><span class="daofu" ng-if="hotel.payType">{{hotel.payType}}</span></p>
+                        </div>
+                        <!--<div class="pull-left panel-body-left">-->
+                            <!--<p><input name="" type="checkbox" value="" normalchild parent="hotel" checked/>{{hotel.name}}-->
+                            <!--</p>-->
+                            <!--<p class="pl"><span>房型：</span>{{hotel.priceName}}</p>-->
+                            <!--<p class="pl"><span>入离：</span>{{hotel.startDate}}至{{hotel.endDate}}</p>-->
+                            <!--<p class="pl"><span>价格：</span>  <span class="pricefuhao">￥</span> <span class="hotelprice">{{hotel.price}}</span>  <span class="daofu">{{hotel.payType}}</span></p>-->
+                        <!--</div>-->
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default" ng-if="order.days.length > 0">
+                <div ng-repeat="day in order.days" ng-if="day.tickets.length > 0" class="daysxianlu">
+                    <div class="panel-heading"><input name="" type="checkbox" value="" checked dayall parent="days"/>{{day.cityName}}
+                        第{{day.day}}天
+                    </div>
+                    <div class="panel-body">
+                        <div class="subpanel clearfix" ng-repeat="ticket in day.tickets"
+                             ng-if="ticket.status == 'normal'">
+                            <div class="pull-left panel-body-left">
+                                <p class="jiudinajingdian"><input name="" type="checkbox" checked ticket parent="ticket"/>{{ticket.scenicName}}
+                                </p>
+                                <p class="pl">{{ticket.ticketName}}</p>
+                                <p class="pl"><span>游玩日期：</span>{{ticket.playDate}}</p>
+                            </div>
+                            <div class="pull-right panel-body-price pricebottom">
+                                <label>价格：</label>
+                                <h2 class="price">￥{{ticket.price}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mybottom text-center col-xs-12 orderpay">
+                <a ng-href="#/xing-add-lvke" class="col-xs-7 pl0pr0 totalprice " style="width:58%">订单总价：￥<span
+                        id="total" style="color:#fff;">{{total}}</span>
+                </a>
+                <a ng-href="#/xing-add-lvke" class="col-xs-5">填写旅客信息</a></div>
+        </div>
+    </div>
+</div>
