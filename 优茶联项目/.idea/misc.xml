@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/app-api/target/m2e-wtp/web-resources/META-INF/maven/pub.makers.shop/app-api/pom.xml" />
+        <option value="$PROJECT_DIR$/app-api/target/m2e-wtp/web-resources/META-INF/maven/pub.makers.shop/app-api/pom.properties" />
+        <option value="$PROJECT_DIR$/app-api/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/app-api/pom.xml" />
+        <option value="$PROJECT_DIR$/app-api/shanguo-b2b/pom.xml" />
+        <option value="$PROJECT_DIR$/shanguo-b2b/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/shanguo-b2b/pom.xml" />
+        <option value="$PROJECT_DIR$/shanguo-b2c/target/m2e-wtp/web-resources/META-INF/maven/pub.maker.shop/cweb/pom.xml" />
+        <option value="$PROJECT_DIR$/shanguo-b2c/target/m2e-wtp/web-resources/META-INF/maven/pub.maker.shop/cweb/pom.properties" />
+        <option value="$PROJECT_DIR$/shanguo-b2c/pom.xml" />
+        <option value="$PROJECT_DIR$/base-service/pom.xml" />
+        <option value="$PROJECT_DIR$/base-service/base-service-biz/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/base-service/base-service-base/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/user-service/user-service-biz/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/user-service/user-service-base/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/yaoming-common/target/classes/META-INF/maven/com.yaoming/yaoming-common/pom.xml" />
+        <option value="$PROJECT_DIR$/yaoming-common/target/classes/META-INF/maven/com.yaoming/yaoming-common/pom.properties" />
+        <option value="$PROJECT_DIR$/yaoming-common/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/yaoming-common/pom.xml" />
+        <option value="$PROJECT_DIR$/yaoming-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/yaoming-ueditor/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/yaoming-ueditor/pom.xml" />
+        <option value="$PROJECT_DIR$/yaoming-security/target/classes/META-INF/maven/com.yaoming/yaoming-security/pom.xml" />
+        <option value="$PROJECT_DIR$/yaoming-security/target/classes/META-INF/maven/com.yaoming/yaoming-security/pom.properties" />
+        <option value="$PROJECT_DIR$/yaoming-security/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/yaoming-security/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-service-admin/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/shop-service-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-service-define/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/shop-service-define/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

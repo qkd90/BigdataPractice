@@ -1,0 +1,7 @@
+G:\Eclipse-mars-workspace\JavaEE18\taotao-order\src\main\java\com\taotao\order\controller\OrderController.java
+G:\Eclipse-mars-workspace\JavaEE18\taotao-order\src\main\java\com\taotao\order\service\impl\OrderServiceImpl.java
+G:\Eclipse-mars-workspace\JavaEE18\taotao-order\src\main\java\com\taotao\order\component\JedisClient.java
+G:\Eclipse-mars-workspace\JavaEE18\taotao-order\src\main\java\com\taotao\order\service\OrderService.java
+G:\Eclipse-mars-workspace\JavaEE18\taotao-order\src\main\java\com\taotao\order\component\impl\JedisClientCluster.java
+G:\Eclipse-mars-workspace\JavaEE18\taotao-order\src\main\java\com\taotao\order\component\impl\JedisClientSingle.java
+G:\Eclipse-mars-workspace\JavaEE18\taotao-order\src\main\java\com\taotao\order\pojo\OrderInfo.java

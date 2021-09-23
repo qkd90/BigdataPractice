@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/taotao-sso/target/m2e-wtp/web-resources/META-INF/maven/com.taotao/taotao-sso/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-sso/target/m2e-wtp/web-resources/META-INF/maven/com.taotao/taotao-sso/pom.properties" />
+        <option value="$PROJECT_DIR$/taotao-sso/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-rest/target/m2e-wtp/web-resources/META-INF/maven/com.taotao/taotao-rest/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-rest/target/m2e-wtp/web-resources/META-INF/maven/com.taotao/taotao-rest/pom.properties" />
+        <option value="$PROJECT_DIR$/taotao-rest/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-order/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-common/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/taotao-common/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-portal/target/m2e-wtp/web-resources/META-INF/maven/com.taotao/taotao-portal/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-portal/target/m2e-wtp/web-resources/META-INF/maven/com.taotao/taotao-portal/pom.properties" />
+        <option value="$PROJECT_DIR$/taotao-portal/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-search/target/m2e-wtp/web-resources/META-INF/maven/com.taotao/taotao-search/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-search/target/m2e-wtp/web-resources/META-INF/maven/com.taotao/taotao-search/pom.properties" />
+        <option value="$PROJECT_DIR$/taotao-search/pom.xml" />
+        <option value="$PROJECT_DIR$/fastdfs_client/target/maven-archiver/pom.properties" />
+        <option value="$PROJECT_DIR$/fastdfs_client/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-manager/taotao-manager-dao/target/classes/META-INF/maven/com.taotao/taotao-manager-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-manager/taotao-manager-dao/target/classes/META-INF/maven/com.taotao/taotao-manager-dao/pom.properties" />
+        <option value="$PROJECT_DIR$/taotao-manager/taotao-manager-web/target/m2e-wtp/web-resources/META-INF/maven/com.taotao/taotao-manager-web/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-manager/taotao-manager-web/target/m2e-wtp/web-resources/META-INF/maven/com.taotao/taotao-manager-web/pom.properties" />
+        <option value="$PROJECT_DIR$/taotao-manager/taotao-manager-pojo/target/classes/META-INF/maven/com.taotao/taotao-manager-pojo/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-manager/taotao-manager-pojo/target/classes/META-INF/maven/com.taotao/taotao-manager-pojo/pom.properties" />
+        <option value="$PROJECT_DIR$/taotao-manager/taotao-manager-service/target/classes/META-INF/maven/com.taotao/taotao-manager-service/pom.xml" />
+        <option value="$PROJECT_DIR$/taotao-manager/taotao-manager-service/target/classes/META-INF/maven/com.taotao/taotao-manager-service/pom.properties" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.taotao.portal.controller.OrderCntroller&apos; to &apos;OrderController&apos;&#x0D;&#x0A;- Original project: &apos;taotao-portal&apos;&#x0D;&#x0A;- Original element: &apos;com.taotao.portal.controller.OrderCntroller&apos;&#x0D;&#x0A;- Renamed element: &apos;com.taotao.portal.controller.OrderController&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;OrderCntroller&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.taotao.portal.controller{OrderCntroller.java[OrderCntroller" matchStrategy="1" name="OrderController" qualified="false" references="true" similarDeclarations="false" stamp="1548082164648" textual="false" version="1.0"/>
+</session>

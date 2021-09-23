@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="base-service-base" />
+        <module name="cweb (2) (pub.maker.shop)" />
+        <module name="shanguo-b2b (2)" />
+        <module name="maven-archiver (10)" />
+        <module name="app-api (1)" />
+        <module name="maven-archiver (5)" />
+        <module name="cweb (1)" />
+        <module name="yaoming-common (2)" />
+        <module name="user-service-biz" />
+        <module name="app-api (3)" />
+        <module name="yaoming-security (1)" />
+        <module name="shanguo-b2c" />
+        <module name="maven-archiver (2)" />
+        <module name="shop-service-define" />
+        <module name="maven-archiver (7)" />
+        <module name="shop-service-admin" />
+        <module name="user-service-base" />
+        <module name="shanguo-b2b (1)" />
+        <module name="yaoming-security (3)" />
+        <module name="maven-archiver (4)" />
+        <module name="maven-archiver (9)" />
+        <module name="yaoming-common (1)" />
+        <module name="maven-archiver (11)" />
+        <module name="yaoming-ueditor" />
+        <module name="maven-archiver (1)" />
+        <module name="maven-archiver (6)" />
+        <module name="base-service-biz" />
+        <module name="app-api (2)" />
+        <module name="maven-archiver (8)" />
+        <module name="yaoming-common (3)" />
+        <module name="yaoming-security (2)" />
+        <module name="maven-archiver (3)" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

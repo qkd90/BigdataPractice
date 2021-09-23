@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="taotao-rest (3)" />
+        <module name="taotao-sso (3)" />
+        <module name="taotao-manager-service (3)" />
+        <module name="taotao-manager-dao (2)" />
+        <module name="taotao-portal (1)" />
+        <module name="fastdfs_client" />
+        <module name="taotao-manager-web (1)" />
+        <module name="taotao-manager-dao (1)" />
+        <module name="taotao-manager-dao (3)" />
+        <module name="taotao-portal (2)" />
+        <module name="taotao-manager-pojo (2)" />
+        <module name="taotao-manager-pojo (1)" />
+        <module name="maven-archiver (1)" />
+        <module name="taotao-order" />
+        <module name="maven-archiver (2)" />
+        <module name="taotao-rest (2)" />
+        <module name="taotao-manager-web (3)" />
+        <module name="taotao-portal (3)" />
+        <module name="taotao-manager-web (2)" />
+        <module name="taotao-search (1)" />
+        <module name="taotao-rest (1)" />
+        <module name="taotao-sso (1)" />
+        <module name="taotao-common" />
+        <module name="taotao-manager-service (1)" />
+        <module name="taotao-search (2)" />
+        <module name="taotao-manager-pojo (3)" />
+        <module name="taotao-sso (2)" />
+        <module name="taotao-manager-service (2)" />
+        <module name="taotao-search (3)" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
